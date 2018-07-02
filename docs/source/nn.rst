@@ -1,5 +1,5 @@
 .. role:: hidden
-    :class: hidden-section
+    :class: hidden-section col
 
 torch.nn
 ===================================
@@ -1291,3 +1291,8 @@ torch.nn.init
 .. autofunction:: kaiming_normal_
 .. autofunction:: orthogonal_
 .. autofunction:: sparse_
+
+
+
+.. contents:: :local:
+    :class: col-2
