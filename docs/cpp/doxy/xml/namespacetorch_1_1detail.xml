@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacetorch_1_1detail" kind="namespace" language="C++">
+    <compoundname>torch::detail</compoundname>
+    <innerclass refid="classtorch_1_1detail_1_1_cursor_base" prot="public">torch::detail::CursorBase</innerclass>
+    <innerclass refid="structtorch_1_1detail_1_1_cursor_collector" prot="public">torch::detail::CursorCollector</innerclass>
+    <innerclass refid="structtorch_1_1detail_1_1has__forward" prot="public">torch::detail::has_forward</innerclass>
+    <innerclass refid="structtorch_1_1detail_1_1_module_holder_indicator" prot="public">torch::detail::ModuleHolderIndicator</innerclass>
+    <innerclass refid="classtorch_1_1detail_1_1_ordered_dict" prot="public">torch::detail::OrderedDict</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="static_8h_1a688fc8bf662eeee021081eb59d2cf701" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename M</type>
+          </param>
+        </templateparamlist>
+        <type>std::is_base_of&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">torch::nn::Module</ref>, typename std::decay&lt; M &gt;::type &gt;</type>
+        <definition>using torch::detail::is_module = typedef std::is_base_of&lt;torch::nn::Module, typename std::decay&lt;M&gt;::type&gt;</definition>
+        <argsstring></argsstring>
+        <name>is_module</name>
+        <briefdescription>
+<para>A type trait whose <computeroutput>::value</computeroutput> member is true if <computeroutput>M</computeroutput> derives from <computeroutput>Module</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="static_8h_1a326fd2a39eb6915194cd53c057297358" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename M</type>
+          </param>
+          <param>
+            <type>typename T</type>
+            <defval>void</defval>
+          </param>
+        </templateparamlist>
+        <type>typename std::enable_if&lt; is_module&lt; M &gt;::value, T &gt;::type</type>
+        <definition>using torch::detail::enable_if_module_t = typedef typename std::enable_if&lt;is_module&lt;M&gt;::value, T&gt;::type</definition>
+        <argsstring></argsstring>
+        <name>enable_if_module_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pimpl_8h_1abed6945a5c20ab8983613a4ef9831517" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::is_base_of&lt; <ref refid="structtorch_1_1detail_1_1_module_holder_indicator" kindref="compound">ModuleHolderIndicator</ref>, decay_t&lt; T &gt; &gt;</type>
+        <definition>using torch::detail::is_module_holder = typedef std::is_base_of&lt;ModuleHolderIndicator, decay_t&lt;T&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>is_module_holder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="pimpl_8h_1ae60d551fe64129deca3ea8d2d6d8fe06" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>disable_if_t&lt; is_module_holder&lt; T &gt;::value &gt;</type>
+        <definition>using torch::detail::disable_if_module_holder_t = typedef disable_if_t&lt;is_module_holder&lt;T&gt;::value&gt;</definition>
+        <argsstring></argsstring>
+        <name>disable_if_module_holder_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="static_8h_1a396e268f24b381f94d9f71f64732dd84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Head</type>
+            <defval>void</defval>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Tail</declname>
+            <defname>Tail</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool torch::detail::check_not_lvalue_references</definition>
+        <argsstring>()</argsstring>
+        <name>check_not_lvalue_references</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="42" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="42" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="static_8h_1ab88ebd93f4086741edb9a1d1d52d2e33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+        </templateparamlist>
+        <type>constexpr bool</type>
+        <definition>constexpr bool torch::detail::check_not_lvalue_references&lt; void &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>check_not_lvalue_references&lt; void &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a34201cc9c3ac5487551f9fc71ba28539" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t torch::detail::scalarTypeId</definition>
+        <argsstring>(torch::Dtype type)</argsstring>
+        <name>scalarTypeId</name>
+        <param>
+          <type>torch::Dtype</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="55" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a835aa1b14654e4791ca8f687a05b5fe8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>torch::Dtype</type>
+        <definition>torch::Dtype torch::detail::scalarTypeFromId</definition>
+        <argsstring>(int32_t id)</argsstring>
+        <name>scalarTypeFromId</name>
+        <param>
+          <type>int32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="72" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="72" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a2b2996c3ef10af6de9a31b60df37d421" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t torch::detail::backendId</definition>
+        <argsstring>(at::Backend backend)</argsstring>
+        <name>backendId</name>
+        <param>
+          <type>at::Backend</type>
+          <declname>backend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="88" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="88" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a3c0071e366a130e618945be7c95f215b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>at::Backend</type>
+        <definition>at::Backend torch::detail::backendFromId</definition>
+        <argsstring>(int32_t id)</argsstring>
+        <name>backendFromId</name>
+        <param>
+          <type>int32_t</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="101" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="101" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="14" column="1"/>
+  </compounddef>
+</doxygen>

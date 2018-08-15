@@ -1,0 +1,595 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>torch::nn::detail::RNNImplBase</compoundname>
+    <basecompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Derived &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Derived</declname>
+        <defname>Derived</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cf" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>CuDNNMode</name>
+        <enumvalue id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cfadf2410c7f8f410a6e0d4014d0e5c7bc0" prot="public">
+          <name>RNN_RELU</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cfa276625e9a400a8a9617ad3d3f91a2e47" prot="public">
+          <name>RNN_TANH</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cfaeca9158c08600cd86442dfd1c18a3c86" prot="public">
+          <name>LSTM</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cfad4498e452a9ae23e25cbf77bbf826be2" prot="public">
+          <name>GRU</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="41" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="41" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a656449cfb2c417dd910ec4d5602abd5d" prot="public" static="no" mutable="no">
+        <type><ref refid="structtorch_1_1nn_1_1detail_1_1_r_n_n_options_base" kindref="compound">RNNOptionsBase</ref></type>
+        <definition>RNNOptionsBase torch::nn::detail::RNNImplBase&lt; Derived &gt;::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="68" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1abfc3f2889b77bf4869407481d8f749a3" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::w_ih</definition>
+        <argsstring></argsstring>
+        <name>w_ih</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="70" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4d439b3b50631ee467814f44736fc6ca" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::w_hh</definition>
+        <argsstring></argsstring>
+        <name>w_hh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a8a232debfdd7b96ecc7d4fec5107828c" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::b_ih</definition>
+        <argsstring></argsstring>
+        <name>b_ih</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="72" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a7970ac1436a81aecd15d6c37292df773" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::b_hh</definition>
+        <argsstring></argsstring>
+        <name>b_hh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="73" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ae107dc08cd6f8e10ebe3cc350658a6aa" prot="public" static="no" mutable="no">
+        <type>Dropout</type>
+        <definition>Dropout torch::nn::detail::RNNImplBase&lt; Derived &gt;::dropout</definition>
+        <argsstring></argsstring>
+        <name>dropout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="75" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a2d0c9d267944e9da1ddcc7011eb95fdd" prot="protected" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t torch::nn::detail::RNNImplBase&lt; Derived &gt;::number_of_gates_</definition>
+        <argsstring></argsstring>
+        <name>number_of_gates_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="87" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a65c142c57eb20d81b35f20df0f431e3d" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool torch::nn::detail::RNNImplBase&lt; Derived &gt;::has_cell_state_</definition>
+        <argsstring></argsstring>
+        <name>has_cell_state_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="88" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ae491b7ea474896e9aeef2f7c60ff5549" prot="protected" static="no" mutable="no">
+        <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; CuDNNMode &gt;</type>
+        <definition>at::optional&lt;CuDNNMode&gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::cudnn_mode_</definition>
+        <argsstring></argsstring>
+        <name>cudnn_mode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="89" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a87098e4873e94e5190c540e7c4e0fefb" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; void * &gt;</type>
+        <definition>std::vector&lt;void*&gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::data_ptrs_</definition>
+        <argsstring></argsstring>
+        <name>data_ptrs_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a3400dd3de4bd64cb37855748c9a1b697" prot="protected" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::detail::RNNImplBase&lt; Derived &gt;::flat_weights_</definition>
+        <argsstring></argsstring>
+        <name>flat_weights_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="98" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a568e30a8e5c2c19dbc4ca281a850073c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::detail::RNNImplBase&lt; Derived &gt;::RNNImplBase</definition>
+        <argsstring>(RNNOptionsBase options_, at::optional&lt; CuDNNMode &gt; cudnn_mode=at::nullopt, int64_t number_of_gates=1, bool has_cell_state=false)</argsstring>
+        <name>RNNImplBase</name>
+        <param>
+          <type><ref refid="structtorch_1_1nn_1_1detail_1_1_r_n_n_options_base" kindref="compound">RNNOptionsBase</ref></type>
+          <declname>options_</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; CuDNNMode &gt;</type>
+          <declname>cudnn_mode</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>number_of_gates</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>has_cell_state</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="49" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a41ccc6c8181dbb5ac47486b59c3aa8cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtorch_1_1nn_1_1_r_n_n_output" kindref="compound">RNNOutput</ref></type>
+        <definition>RNNOutput torch::nn::detail::RNNImplBase&lt; Derived &gt;::forward</definition>
+        <argsstring>(Tensor input, Tensor state={})</argsstring>
+        <name>forward</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>state</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="100" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::detail::RNNImplBase&lt; Derived &gt;::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <reimplements refid="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput><ref refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b" kindref="member">reset()</ref></computeroutput> must perform initialization of all members with reference semantics, most importantly parameters, buffers and submodules. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="63" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::detail::RNNImplBase&lt; Derived &gt;::to</definition>
+        <argsstring>(torch::Device device, torch::Dtype dtype, bool non_blocking=false) override</argsstring>
+        <name>to</name>
+        <reimplements refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f">to</reimplements>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">torch::Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>torch::Dtype</type>
+          <declname>dtype</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Recursively casts all parameters to the given device and dtype. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="54" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="277" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::detail::RNNImplBase&lt; Derived &gt;::to</definition>
+        <argsstring>(torch::Dtype dtype, bool non_blocking=false) override</argsstring>
+        <name>to</name>
+        <reimplements refid="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8">to</reimplements>
+        <param>
+          <type>torch::Dtype</type>
+          <declname>dtype</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Recursively casts all parameters to the given dtype. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="286" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::detail::RNNImplBase&lt; Derived &gt;::to</definition>
+        <argsstring>(torch::Device device, bool non_blocking=false) override</argsstring>
+        <name>to</name>
+        <reimplements refid="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828">to</reimplements>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">torch::Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Recursively moves all parameters to the given device. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="61" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="292" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1af757c92f1995cc66c61039af322eac83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::nn::detail::RNNImplBase&lt; Derived &gt;::flatten_parameters_for_cudnn</definition>
+        <argsstring>()</argsstring>
+        <name>flatten_parameters_for_cudnn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills the internal flattened parameter buffers passed to cuDNN. Call this method if you mess around with the variable storages and want to use cuDNN. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="66" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="180" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a14e8abde4c5534ee3765caee97998d30" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>virtual Tensor torch::nn::detail::RNNImplBase&lt; Derived &gt;::cell_forward</definition>
+        <argsstring>(Tensor input, Tensor state, int64_t layer)=0</argsstring>
+        <name>cell_forward</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1_r_n_n_impl_1abdca88edf31c7347ad14b577f8f1d9a0">cell_forward</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_l_s_t_m_impl_1a793388d7bf46c2e082fe9007303496ca">cell_forward</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_g_r_u_impl_1a930066c92365cc1ee161fe9e02775dde">cell_forward</reimplementedby>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a906a326fa48332456ba7ba368c00ede5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtorch_1_1nn_1_1_r_n_n_output" kindref="compound">RNNOutput</ref></type>
+        <definition>RNNOutput torch::nn::detail::RNNImplBase&lt; Derived &gt;::CUDNN_forward</definition>
+        <argsstring>(Tensor input, Tensor state)</argsstring>
+        <name>CUDNN_forward</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="218" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a35a2cc6614378ae44b4128d2ea6c5f85" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structtorch_1_1nn_1_1_r_n_n_output" kindref="compound">RNNOutput</ref></type>
+        <definition>RNNOutput torch::nn::detail::RNNImplBase&lt; Derived &gt;::autograd_forward</definition>
+        <argsstring>(Tensor input, Tensor state)</argsstring>
+        <name>autograd_forward</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="81" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="144" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aec58612cea64001695b31dd9cb60ae2e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt; Tensor &gt; torch::nn::detail::RNNImplBase&lt; Derived &gt;::flat_weights</definition>
+        <argsstring>() const</argsstring>
+        <name>flat_weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="83" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="109" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1abfa8005396e9ab0046a47db499ec2b3f" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool torch::nn::detail::RNNImplBase&lt; Derived &gt;::use_cudnn</definition>
+        <argsstring>(Tensor sample) const</argsstring>
+        <name>use_cudnn</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>sample</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="84" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab0d7a20ea09e6cb9be3e46bb072e90ff" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::detail::RNNImplBase&lt; Derived &gt;::create_dropout_state</definition>
+        <argsstring>(Tensor input) const</argsstring>
+        <name>create_dropout_state</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="85" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="129" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="554">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="552">
+        <label>torch::nn::detail::RNNImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="553" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="553">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="554" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="557">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="559">
+        <label>OptionalBase&lt; CuDNNMode  &gt;</label>
+      </node>
+      <node id="555">
+        <label>torch::nn::detail::RNNImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="556" relation="public-inheritance">
+        </childnode>
+        <childnode refid="558" relation="usage">
+          <edgelabel>cudnn_mode_</edgelabel>
+        </childnode>
+        <childnode refid="560" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+      </node>
+      <node id="560">
+        <label>torch::nn::detail::RNNOptionsBase</label>
+        <link refid="structtorch_1_1nn_1_1detail_1_1_r_n_n_options_base"/>
+      </node>
+      <node id="558">
+        <label>at::optional&lt; CuDNNMode &gt;</label>
+        <link refid="classat_1_1optional"/>
+        <childnode refid="559" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="556">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="557" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="37" bodyend="99"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a35a2cc6614378ae44b4128d2ea6c5f85" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>autograd_forward</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a7970ac1436a81aecd15d6c37292df773" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>b_hh</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a8a232debfdd7b96ecc7d4fec5107828c" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>b_ih</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a14e8abde4c5534ee3765caee97998d30" prot="protected" virt="pure-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>cell_forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab0d7a20ea09e6cb9be3e46bb072e90ff" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>create_dropout_state</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a906a326fa48332456ba7ba368c00ede5" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>CUDNN_forward</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ae491b7ea474896e9aeef2f7c60ff5549" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>cudnn_mode_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cf" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>CuDNNMode</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a87098e4873e94e5190c540e7c4e0fefb" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>data_ptrs_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ae107dc08cd6f8e10ebe3cc350658a6aa" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>dropout</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aec58612cea64001695b31dd9cb60ae2e" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>flat_weights</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a3400dd3de4bd64cb37855748c9a1b697" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>flat_weights_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1af757c92f1995cc66c61039af322eac83" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>flatten_parameters_for_cudnn</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a41ccc6c8181dbb5ac47486b59c3aa8cb" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>forward</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a65c142c57eb20d81b35f20df0f431e3d" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>has_cell_state_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::detail::RNNImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::detail::RNNImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a2d0c9d267944e9da1ddcc7011eb95fdd" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>number_of_gates_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a656449cfb2c417dd910ec4d5602abd5d" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>options</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>reset</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a568e30a8e5c2c19dbc4ca281a850073c" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>RNNImplBase</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1abfa8005396e9ab0046a47db499ec2b3f" prot="protected" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>use_cudnn</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4d439b3b50631ee467814f44736fc6ca" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>w_hh</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1abfc3f2889b77bf4869407481d8f749a3" prot="public" virt="non-virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>w_ih</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::detail::RNNImplBase</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_aligned_char_array" kind="struct" language="C++" prot="public">
+    <compoundname>at::AlignedCharArray</compoundname>
+    <includes refid="_align_of_8h" local="no">AlignOf.h</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>Alignment</declname>
+        <defname>Alignment</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>Size</declname>
+        <defname>Size</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1_aligned_char_array_1abfe4e53577069180cc5a2679de79c319" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char at::AlignedCharArray&lt; Alignment, Size &gt;::buffer[Size]</definition>
+        <argsstring>[Size]</argsstring>
+        <name>buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/AlignOf.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/AlignOf.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Helper for building an aligned character array type. </para>    </briefdescription>
+    <detaileddescription>
+<para>This template is used to explicitly build up a collection of aligned character array types. We have to build these up using a macro and explicit specialization to cope with MSVC (at least till 2015) where only an integer literal can be used to specify an alignment constraint. Once built up here, we can then begin to indirect between these using normal C++ template parameters. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/AlignOf.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/AlignOf.h" bodystart="37" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structat_1_1_aligned_char_array_1abfe4e53577069180cc5a2679de79c319" prot="public" virt="non-virtual"><scope>at::AlignedCharArray</scope><name>buffer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_device_guard" kind="struct" language="C++" prot="public">
+    <compoundname>at::DeviceGuard</compoundname>
+    <includes refid="_device_guard_8h" local="no">DeviceGuard.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structat_1_1_device_guard_1a54a30fea9b6f2d01b3f7da87cca38d31" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t at::DeviceGuard::original_index_</definition>
+        <argsstring></argsstring>
+        <name>original_index_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>The original device that was active at construction of this object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="121" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_device_guard_1ac0cfd813e186f07b9e1f6fad08ef75a2" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t at::DeviceGuard::last_index_</definition>
+        <argsstring></argsstring>
+        <name>last_index_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+<para>The last index that was set via <computeroutput>set_index</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="123" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_device_guard_1a18dd23cc17f813abc8443a9e64210a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>()=default</argsstring>
+        <name>DeviceGuard</name>
+        <briefdescription>
+<para>Default constructor, does nothing. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1ac492b9bae4e5a305dc16292d07c7a65d" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>(Device device)</argsstring>
+        <name>DeviceGuard</name>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Uses the given device&apos;s <computeroutput>index()</computeroutput> if it is a CUDA device, else does nothing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="25" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1aaeab6b8b84328c9bf41f3224fda9784a" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>(int32_t index)</argsstring>
+        <name>DeviceGuard</name>
+        <param>
+          <type>int32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Calls <computeroutput>set_index</computeroutput> with the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="32" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a934a782529f7b4706277c5a6cfcadd4f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>(const Tensor &amp;tensor)</argsstring>
+        <name>DeviceGuard</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+<para>Sets the device to the index on which the given tensor is located. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a3ac33e3877754135f368ff096c6f1735" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>(const TensorList &amp;tensors)</argsstring>
+        <name>DeviceGuard</name>
+        <param>
+          <type>const <ref refid="classat_1_1_array_ref" kindref="compound">TensorList</ref> &amp;</type>
+          <declname>tensors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the device to the index on which the first tensor in the list is located. If the list is empty, does nothing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a79048280219066eb5e8d2d8756a3d998" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>(const DeviceGuard &amp;)=delete</argsstring>
+        <name>DeviceGuard</name>
+        <param>
+          <type>const <ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Copy is disallowed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a85a3bdb635c0945a078954cce15505c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref> &amp;</type>
+        <definition>DeviceGuard&amp; at::DeviceGuard::operator=</definition>
+        <argsstring>(const DeviceGuard &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1aa73c59c5096c61c250e91173a1bd4b60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::DeviceGuard</definition>
+        <argsstring>(DeviceGuard &amp;&amp;other) noexcept</argsstring>
+        <name>DeviceGuard</name>
+        <param>
+          <type><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move-constructs this <computeroutput><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref></computeroutput> from another <computeroutput><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref></computeroutput>. The moved-from <computeroutput><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref></computeroutput> is modified such that its destruction has no effect (does not reset the device). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a47f4230945d9f4124a8f32d087ba2af3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref> &amp;</type>
+        <definition>DeviceGuard&amp; at::DeviceGuard::operator=</definition>
+        <argsstring>(DeviceGuard &amp;&amp;other) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move-assigns this <computeroutput><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref></computeroutput> from another <computeroutput><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref></computeroutput>. The moved-from <computeroutput><ref refid="structat_1_1_device_guard" kindref="compound">DeviceGuard</ref></computeroutput> is modified such that its destruction has no effect (does not reset the device). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="63" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a79d7241429cb3cb71c528c6fdf8a140c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DeviceGuard::~DeviceGuard</definition>
+        <argsstring>()</argsstring>
+        <name>~DeviceGuard</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resets the device to the index that was active at construction of the guard. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="74" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="74" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a3d165f7ac852e7ca5d9e0a4c3f7d43e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::DeviceGuard::set_index</definition>
+        <argsstring>(int32_t index)</argsstring>
+        <name>set_index</name>
+        <param>
+          <type>int32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Sets the device to the given one. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="83" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="83" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1af1e182c8f2771922b9ce380acc7d4be8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::DeviceGuard::set_index_from</definition>
+        <argsstring>(const Tensor &amp;tensor)</argsstring>
+        <name>set_index_from</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <computeroutput>set_index</computeroutput> with the <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></computeroutput>&apos;s current device, if it is a CUDA tensor. Does nothing if the <computeroutput>tensor</computeroutput> is not defined. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="103" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a783ae2d0f2d99996f950696c3beae2cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t at::DeviceGuard::original_index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>original_index</name>
+        <briefdescription>
+<para>Returns the device that was set upon construction of the guard. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="110" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_guard_1a8827b9d5d2a441b39e5668dc4d30af47" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t at::DeviceGuard::last_index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>last_index</name>
+        <briefdescription>
+<para>Returns the last device that was set via <computeroutput>set_index</computeroutput>, if any. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="115" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="115" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>RAII guard that sets a certain default GPU index in its constructor, and changes it back to the device that was originally active upon destruction.</para><para>The index is always reset to the one that was active at the time of construction of the guard. Even if you <computeroutput>set_index</computeroutput> after construction, the destructor will still reset the index to the one that was active at construction time. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h" bodystart="19" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structat_1_1_device_guard_1a18dd23cc17f813abc8443a9e64210a24" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1ac492b9bae4e5a305dc16292d07c7a65d" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1aaeab6b8b84328c9bf41f3224fda9784a" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1a934a782529f7b4706277c5a6cfcadd4f" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1a3ac33e3877754135f368ff096c6f1735" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1a79048280219066eb5e8d2d8756a3d998" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1aa73c59c5096c61c250e91173a1bd4b60" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>DeviceGuard</name></member>
+      <member refid="structat_1_1_device_guard_1a8827b9d5d2a441b39e5668dc4d30af47" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>last_index</name></member>
+      <member refid="structat_1_1_device_guard_1ac0cfd813e186f07b9e1f6fad08ef75a2" prot="private" virt="non-virtual"><scope>at::DeviceGuard</scope><name>last_index_</name></member>
+      <member refid="structat_1_1_device_guard_1a85a3bdb635c0945a078954cce15505c3" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>operator=</name></member>
+      <member refid="structat_1_1_device_guard_1a47f4230945d9f4124a8f32d087ba2af3" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>operator=</name></member>
+      <member refid="structat_1_1_device_guard_1a783ae2d0f2d99996f950696c3beae2cc" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>original_index</name></member>
+      <member refid="structat_1_1_device_guard_1a54a30fea9b6f2d01b3f7da87cca38d31" prot="private" virt="non-virtual"><scope>at::DeviceGuard</scope><name>original_index_</name></member>
+      <member refid="structat_1_1_device_guard_1a3d165f7ac852e7ca5d9e0a4c3f7d43e7" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>set_index</name></member>
+      <member refid="structat_1_1_device_guard_1af1e182c8f2771922b9ce380acc7d4be8" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>set_index_from</name></member>
+      <member refid="structat_1_1_device_guard_1a79d7241429cb3cb71c528c6fdf8a140c" prot="public" virt="non-virtual"><scope>at::DeviceGuard</scope><name>~DeviceGuard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

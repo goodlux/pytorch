@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="copy__wrapper_8py" kind="file" language="Python">
+    <compoundname>copy_wrapper.py</compoundname>
+    <innernamespace refid="namespacecopy__wrapper">copy_wrapper</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>code_template<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CodeTemplate</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>function_wrapper<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>nested_dict</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">FILE<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral">//<sp/>${generated_comment}</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral">#include<sp/>&quot;ATen/Config.h&quot;</highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral">#include<sp/>&quot;TH/TH.h&quot;</highlight></codeline>
+<codeline lineno="10"><highlight class="stringliteral">${cuda_includes}</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral">#include<sp/>&quot;ATen/Utils.h&quot;</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral">${copy_includes}</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral">namespace<sp/>at<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral">${copy_functions}</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">CUDA_INCLUDES<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral">#undef<sp/>THNN_</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral">#include<sp/>&quot;THC/THC.h&quot;</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">#<sp/>NB:<sp/>The<sp/>copy<sp/>templates<sp/>static_cast<sp/>both<sp/>dst<sp/>and<sp/>src,<sp/>even<sp/>though</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">#<sp/>technically<sp/>we<sp/>also<sp/>perform<sp/>a<sp/>checked_cast_tensor<sp/>in<sp/>the<sp/>prologue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">#<sp/>of<sp/>the<sp/>copy<sp/>(meaning<sp/>that<sp/>hypothetically,<sp/>an<sp/>already<sp/>casted<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">#<sp/>is<sp/>available.<sp/><sp/>However,<sp/>in<sp/>s_copy,<sp/>the<sp/>casted<sp/>tensor<sp/>is<sp/>dst,<sp/>while</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">#<sp/>in<sp/>_s_copy_from,<sp/>the<sp/>casted<sp/>tensor<sp/>is<sp/>src.<sp/><sp/>So<sp/>we<sp/>can<sp/>reuse<sp/>the<sp/>logic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">#<sp/>in<sp/>both<sp/>cases,<sp/>we<sp/>unconditionally<sp/>cast<sp/>both<sp/>tensors<sp/>(and<sp/>rely</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">#<sp/>on<sp/>the<sp/>surrounding<sp/>code<sp/>to<sp/>establish<sp/>the<sp/>necessary<sp/>invariants.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">COPY<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral">${THTensor}_copy${cuda}${src_scalar_name}(${state,}\</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral">static_cast&lt;${dst_tensor}*&gt;(dst.pImpl)-&gt;tensor,<sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral">static_cast&lt;${src_tensor}*&gt;(src.pImpl)-&gt;tensor);</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">COPY_ASYNC_CPU<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral">if<sp/>(non_blocking)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${THTensor}_copyAsyncCPU(${state,}\</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral">static_cast&lt;${dst_tensor}*&gt;(dst.pImpl)-&gt;tensor,<sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="stringliteral">static_cast&lt;${src_tensor}*&gt;(src.pImpl)-&gt;tensor);</highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">COPY_ASYNC_CUDA<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral">if<sp/>(non_blocking)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${THTensor}_copyAsyncCuda(${state,}\</highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral">static_cast&lt;${dst_tensor}*&gt;(dst.pImpl)-&gt;tensor,<sp/>\</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral">static_cast&lt;${src_tensor}*&gt;(src.pImpl)-&gt;tensor);</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">CASE<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral">case<sp/>${case_id}:</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${copies}</highlight></codeline>
+<codeline lineno="61"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="62"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">FUNCTION<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral">Tensor<sp/>&amp;<sp/>${Type}::s_copy_(Tensor<sp/>&amp;<sp/>dst,<sp/>const<sp/>Tensor<sp/>&amp;<sp/>src,<sp/>bool<sp/>non_blocking)<sp/>const<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"><sp/><sp/>//<sp/>code<sp/>generated<sp/>by<sp/>copy_wrapper</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral"><sp/><sp/>${checked_cast_dst}</highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"><sp/><sp/>switch<sp/>(src.type().ID())<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${copy_body}</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>default:</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>${function_fallthrough}</highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/>dst.pImpl-&gt;setScalar(src.pImpl-&gt;isScalar());</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/>return<sp/>dst;</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">FUNCTION_FALLTHROUGH_REDISPATCH<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;return<sp/>src.type()._s_copy_from(src,<sp/>dst,<sp/>non_blocking);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal">FUNCTION_FALLTHROUGH_ERROR<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="81"><highlight class="stringliteral">AT_ERROR(&quot;copy<sp/>does<sp/>not<sp/>support<sp/>&quot;,<sp/>src.type().toString(),<sp/>&quot;<sp/>to<sp/>&quot;,<sp/>toString(),<sp/>&quot;<sp/>copy.&quot;);</highlight></codeline>
+<codeline lineno="82"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">FUNCTION_FROM<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral">Tensor<sp/>&amp;<sp/>${Type}::_s_copy_from(const<sp/>Tensor<sp/>&amp;<sp/>src,<sp/>Tensor<sp/>&amp;<sp/>dst,<sp/>bool<sp/>non_blocking)<sp/>const<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral"><sp/><sp/>//<sp/>code<sp/>generated<sp/>by<sp/>copy_wrapper</highlight></codeline>
+<codeline lineno="87"><highlight class="stringliteral"><sp/><sp/>${checked_cast_src}</highlight></codeline>
+<codeline lineno="88"><highlight class="stringliteral"><sp/><sp/>switch<sp/>(dst.type().ID())<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>${copy_body}</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>default:</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>AT_ERROR(&quot;copy<sp/>does<sp/>not<sp/>support<sp/>&quot;,<sp/>toString(),<sp/>&quot;<sp/>to<sp/>&quot;,<sp/>dst.type().toString(),<sp/>&quot;<sp/>copy.&quot;);</highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="stringliteral"><sp/><sp/>dst.pImpl-&gt;setScalar(src.pImpl-&gt;isScalar());</highlight></codeline>
+<codeline lineno="95"><highlight class="stringliteral"><sp/><sp/>return<sp/>dst;<sp/>//<sp/>NB!<sp/>dst</highlight></codeline>
+<codeline lineno="96"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="97"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">#<sp/>NB:<sp/>Hypothetically,<sp/>someone<sp/>could<sp/>call<sp/>s_copy_from<sp/>directly<sp/>and<sp/>get<sp/>an<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">#<sp/>message<sp/>which<sp/>claims<sp/>something<sp/>is<sp/>not<sp/>supported,<sp/>when<sp/>it<sp/>actually<sp/>is.<sp/><sp/>But</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">#<sp/>the<sp/>correct<sp/>fix<sp/>in<sp/>this<sp/>case<sp/>was<sp/>to<sp/>NOT<sp/>call<sp/>copy_from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">FUNCTION_FROM_SWAP<sp/>=<sp/>CodeTemplate(</highlight><highlight class="stringliteral">&quot;&quot;&quot;\</highlight></codeline>
+<codeline lineno="103"><highlight class="stringliteral">Tensor<sp/>&amp;<sp/>${Type}::_s_copy_from(const<sp/>Tensor<sp/>&amp;<sp/>src,<sp/>Tensor<sp/>&amp;<sp/>dst,<sp/>bool<sp/>non_blocking)<sp/>const<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="stringliteral"><sp/><sp/>AT_ERROR(&quot;copy<sp/>does<sp/>not<sp/>support<sp/>&quot;,<sp/>src.type().toString(),<sp/>&quot;<sp/>to<sp/>&quot;,<sp/>dst.type().toString(),<sp/>&quot;<sp/>copy<sp/>(s_copy_from<sp/>case).&quot;);</highlight></codeline>
+<codeline lineno="105"><highlight class="stringliteral">}</highlight></codeline>
+<codeline lineno="106"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">create_one_copy(dst_type,<sp/>all_types):</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_body<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>src_type<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>all_types:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Sparse&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Sparse&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>skip<sp/>sparse<sp/>copies,<sp/>which<sp/>are<sp/>not<sp/>yet<sp/>implemented</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cuda<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.append(</highlight><highlight class="stringliteral">&apos;context-&gt;getTHCState()&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cuda<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Cuda&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>don&apos;t<sp/>attempt<sp/>to<sp/>process<sp/>CPU-CUDA;<sp/>this<sp/>is<sp/>handled<sp/>in<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>redispatch</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body_env<sp/>=<sp/>nested_dict({</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;src_scalar_name&apos;</highlight><highlight class="normal">:<sp/>src_type[</highlight><highlight class="stringliteral">&apos;ScalarName&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;case_id&apos;</highlight><highlight class="normal">:<sp/>src_type[</highlight><highlight class="stringliteral">&apos;TypeID&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;src_tensor&apos;</highlight><highlight class="normal">:<sp/>src_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;dst_tensor&apos;</highlight><highlight class="normal">:<sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cuda&apos;</highlight><highlight class="normal">:<sp/>cuda,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;state&apos;</highlight><highlight class="normal">:<sp/>state,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>dst_type)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copies<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;ScalarType&apos;</highlight><highlight class="normal">]<sp/>==<sp/>src_type[</highlight><highlight class="stringliteral">&apos;ScalarType&apos;</highlight><highlight class="normal">]:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CPU&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copies.append(COPY_ASYNC_CPU.substitute(body_env))</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copies.append(COPY.substitute(body_env))</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy_body.append(CASE.substitute(body_env,<sp/>copies=copies))</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CPU&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>CPU<sp/>fallthrough<sp/>needs<sp/>to<sp/>redispatch<sp/>to<sp/>_s_copy_from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>(Backend<sp/>==<sp/>CPU<sp/>implies<sp/>Dense)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Dense&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function_fallthrough<sp/>=<sp/>FUNCTION_FALLTHROUGH_REDISPATCH</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function_fallthrough<sp/>=<sp/>FUNCTION_FALLTHROUGH_ERROR</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Note<sp/>[checked_cast_tensor<sp/>is<sp/>for<sp/>dense<sp/>only]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>checked_cast_tensor<sp/>is<sp/>only<sp/>needed<sp/>for<sp/>backends<sp/>which<sp/>implement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>copy<sp/>and<sp/>thus<sp/>do<sp/>a<sp/>cast.<sp/><sp/>Sparse<sp/>does<sp/>not<sp/>support<sp/>copies,<sp/>so<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>is<sp/>no<sp/>need<sp/>to<sp/>do<sp/>a<sp/>checked<sp/>cast.<sp/><sp/>(Furthermore,<sp/>the<sp/>code<sp/>as<sp/>written</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>will<sp/>not<sp/>work,<sp/>as<sp/>it<sp/>will<sp/>try<sp/>to<sp/>there<sp/>is<sp/>no<sp/>derived<sp/>Tensor<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>for<sp/>sparse.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>checked_cast_dst<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Dense&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checked_cast_dst<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;checked_cast_tensor&lt;{}&gt;(dst.pImpl,<sp/>&quot;dst&quot;,<sp/>0,<sp/>false);&apos;</highlight><highlight class="normal">.format(dst_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>env<sp/>=<sp/>nested_dict({</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;function_fallthrough&apos;</highlight><highlight class="normal">:<sp/>function_fallthrough,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;checked_cast_dst&apos;</highlight><highlight class="normal">:<sp/>checked_cast_dst,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>},<sp/>dst_type)</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FUNCTION.substitute(env,<sp/>copy_body=copy_body)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">create_one_copy_from(src_type,<sp/>all_types):</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;DenseBackend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CPU&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FUNCTION_FROM_SWAP.substitute(src_type)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>copy_body<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>dst_type<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>all_types:</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Sparse&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;Sparse&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>skip<sp/>sparse<sp/>copies,<sp/>which<sp/>are<sp/>not<sp/>yet<sp/>implemented</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cuda<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cuda<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;Cuda&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">or</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>state.append(</highlight><highlight class="stringliteral">&apos;context-&gt;getTHCState()&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>body_env<sp/>=<sp/>nested_dict({</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;src_scalar_name&apos;</highlight><highlight class="normal">:<sp/>src_type[</highlight><highlight class="stringliteral">&apos;ScalarName&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;case_id&apos;</highlight><highlight class="normal">:<sp/>dst_type[</highlight><highlight class="stringliteral">&apos;TypeID&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;src_tensor&apos;</highlight><highlight class="normal">:<sp/>src_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;dst_tensor&apos;</highlight><highlight class="normal">:<sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">],</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cuda&apos;</highlight><highlight class="normal">:<sp/>cuda,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;state&apos;</highlight><highlight class="normal">:<sp/>state,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},<sp/>dst_type)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copies<sp/>=<sp/>[]</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;ScalarType&apos;</highlight><highlight class="normal">]<sp/>==<sp/>src_type[</highlight><highlight class="stringliteral">&apos;ScalarType&apos;</highlight><highlight class="normal">]:</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>NB:<sp/>Technically,<sp/>we<sp/>have<sp/>already<sp/>short-circuited<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>src_type[&apos;Backend&apos;]<sp/>==<sp/>&apos;CUDA&apos;<sp/>case<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dst_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CPU&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Backend&apos;</highlight><highlight class="normal">]<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copies.append(COPY_ASYNC_CUDA.substitute(body_env))</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copies.append(COPY.substitute(body_env))</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>copy_body.append(CASE.substitute(body_env,<sp/>copies=copies))</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>See<sp/>Note<sp/>[checked_cast_tensor<sp/>is<sp/>for<sp/>dense<sp/>only]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>checked_cast_src<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>src_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;Sparse&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checked_cast_src<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;checked_cast_tensor&lt;{}&gt;(src.pImpl,<sp/>&quot;src&quot;,<sp/>0,<sp/>false);&apos;</highlight><highlight class="normal">.format(src_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FUNCTION_FROM.substitute(src_type,<sp/>copy_body=copy_body,<sp/>checked_cast_src=checked_cast_src)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">create(all_types,<sp/>backend):</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>top_env<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;copy_includes&apos;</highlight><highlight class="normal">:<sp/>[],</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;copy_functions&apos;</highlight><highlight class="normal">:<sp/>[],</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cuda_includes&apos;</highlight><highlight class="normal">:<sp/>[],</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;generated_comment&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;@&apos;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="stringliteral">&apos;generated<sp/>by<sp/>aten/src/ATen/copy_wrapper.py&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>backend<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CUDA&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>top_env[</highlight><highlight class="stringliteral">&apos;cuda_includes&apos;</highlight><highlight class="normal">].append(CUDA_INCLUDES)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Headers<sp/>to<sp/>include</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>the_type<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>all_types:</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>CUDA<sp/>backend<sp/>requires<sp/>all<sp/>headers<sp/>(as<sp/>it<sp/>also<sp/>manages<sp/>CPU-CUDA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>conversions),<sp/>but<sp/>CPU<sp/>backend<sp/>should<sp/>only<sp/>have<sp/>CPU<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>backend<sp/>==<sp/></highlight><highlight class="stringliteral">&apos;CPU&apos;</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>the_type[</highlight><highlight class="stringliteral">&apos;DenseBackend&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;CPU&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>top_env[</highlight><highlight class="stringliteral">&apos;copy_includes&apos;</highlight><highlight class="normal">].append(</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#include<sp/>&quot;ATen/{}.h&quot;&apos;</highlight><highlight class="normal">.format(the_type[</highlight><highlight class="stringliteral">&apos;Type&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>the_type[</highlight><highlight class="stringliteral">&apos;Density&apos;</highlight><highlight class="normal">]<sp/>!=<sp/></highlight><highlight class="stringliteral">&apos;Sparse&apos;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>only<sp/>Dense<sp/>tensors<sp/>have<sp/>a<sp/>derived<sp/>Tensor<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>top_env[</highlight><highlight class="stringliteral">&apos;copy_includes&apos;</highlight><highlight class="normal">].append(</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;#include<sp/>&quot;ATen/{}.h&quot;&apos;</highlight><highlight class="normal">.format(the_type[</highlight><highlight class="stringliteral">&apos;Tensor&apos;</highlight><highlight class="normal">]))</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Code<sp/>generation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>the_type<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>all_types:</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Only<sp/>generate<sp/>code<sp/>for<sp/>the<sp/>requested<sp/>backend</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>the_type[</highlight><highlight class="stringliteral">&apos;DenseBackend&apos;</highlight><highlight class="normal">]<sp/>!=<sp/>backend:</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>top_env[</highlight><highlight class="stringliteral">&apos;copy_functions&apos;</highlight><highlight class="normal">].append(create_one_copy(the_type,<sp/>all_types))</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>top_env[</highlight><highlight class="stringliteral">&apos;copy_functions&apos;</highlight><highlight class="normal">].append(create_one_copy_from(the_type,<sp/>all_types))</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>FILE.substitute(top_env)</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/copy_wrapper.py"/>
+  </compounddef>
+</doxygen>

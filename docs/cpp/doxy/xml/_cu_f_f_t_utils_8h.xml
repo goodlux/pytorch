@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_cu_f_f_t_utils_8h" kind="file" language="C++">
+    <compoundname>CuFFTUtils.h</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="_config_8h" local="yes">ATen/Config.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">cufft.h</includes>
+    <includes local="no">cufftXt.h</includes>
+    <includedby refid="_cu_f_f_t_plan_cache_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</includedby>
+    <incdepgraph>
+      <node id="5538">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="5539" relation="include">
+        </childnode>
+        <childnode refid="5540" relation="include">
+        </childnode>
+        <childnode refid="5541" relation="include">
+        </childnode>
+        <childnode refid="5542" relation="include">
+        </childnode>
+        <childnode refid="5543" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5545" relation="include">
+        </childnode>
+      </node>
+      <node id="5584">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="5534" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5582" relation="include">
+        </childnode>
+        <childnode refid="5585" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5543" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+      </node>
+      <node id="5552">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5568" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5543" relation="include">
+        </childnode>
+      </node>
+      <node id="5551">
+        <label>atomic</label>
+      </node>
+      <node id="5543">
+        <label>functional</label>
+      </node>
+      <node id="5589">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5579" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+      </node>
+      <node id="5553">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+        <childnode refid="5566" relation="include">
+        </childnode>
+        <childnode refid="5570" relation="include">
+        </childnode>
+      </node>
+      <node id="5565">
+        <label>limits</label>
+      </node>
+      <node id="5573">
+        <label>assert.h</label>
+      </node>
+      <node id="5578">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5554" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5577" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5579" relation="include">
+        </childnode>
+        <childnode refid="5580" relation="include">
+        </childnode>
+      </node>
+      <node id="5560">
+        <label>iterator</label>
+      </node>
+      <node id="5572">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="5573" relation="include">
+        </childnode>
+        <childnode refid="5574" relation="include">
+        </childnode>
+        <childnode refid="5545" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5575" relation="include">
+        </childnode>
+        <childnode refid="5578" relation="include">
+        </childnode>
+      </node>
+      <node id="5592">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="5566">
+        <label>cstdint</label>
+      </node>
+      <node id="5530">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h"/>
+        <childnode refid="5531" relation="include">
+        </childnode>
+        <childnode refid="5612" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5545" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5613" relation="include">
+        </childnode>
+        <childnode refid="5614" relation="include">
+        </childnode>
+      </node>
+      <node id="5613">
+        <label>cufft.h</label>
+      </node>
+      <node id="5600">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="5574">
+        <label>stdint.h</label>
+      </node>
+      <node id="5611">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="5567">
+        <label>cmath</label>
+      </node>
+      <node id="5542">
+        <label>cassert</label>
+      </node>
+      <node id="5583">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5582" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5578" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5584" relation="include">
+        </childnode>
+        <childnode refid="5590" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5587" relation="include">
+        </childnode>
+        <childnode refid="5566" relation="include">
+        </childnode>
+      </node>
+      <node id="5569">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5559" relation="include">
+        </childnode>
+        <childnode refid="5565" relation="include">
+        </childnode>
+      </node>
+      <node id="5545">
+        <label>stdexcept</label>
+      </node>
+      <node id="5606">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5593" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5545" relation="include">
+        </childnode>
+      </node>
+      <node id="5580">
+        <label>numeric</label>
+      </node>
+      <node id="5576">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="5551" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5538" relation="include">
+        </childnode>
+      </node>
+      <node id="5564">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5565" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5566" relation="include">
+        </childnode>
+        <childnode refid="5545" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+        <childnode refid="5567" relation="include">
+        </childnode>
+        <childnode refid="5568" relation="include">
+        </childnode>
+        <childnode refid="5569" relation="include">
+        </childnode>
+      </node>
+      <node id="5550">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="5551" relation="include">
+        </childnode>
+      </node>
+      <node id="5575">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="5576" relation="include">
+        </childnode>
+        <childnode refid="5577" relation="include">
+        </childnode>
+      </node>
+      <node id="5544">
+        <label>string</label>
+      </node>
+      <node id="5609">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="5555" relation="include">
+        </childnode>
+        <childnode refid="5574" relation="include">
+        </childnode>
+      </node>
+      <node id="5610">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5596" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5603" relation="include">
+        </childnode>
+        <childnode refid="5538" relation="include">
+        </childnode>
+      </node>
+      <node id="5612">
+        <label>ATen/Config.h</label>
+        <link refid="_config_8h_source"/>
+      </node>
+      <node id="5534">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5536" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5550" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5571" relation="include">
+        </childnode>
+      </node>
+      <node id="5614">
+        <label>cufftXt.h</label>
+      </node>
+      <node id="5590">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="5602">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5593" relation="include">
+        </childnode>
+        <childnode refid="5584" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+      </node>
+      <node id="5547">
+        <label>exception</label>
+      </node>
+      <node id="5536">
+        <label>stddef.h</label>
+      </node>
+      <node id="5577">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="5576" relation="include">
+        </childnode>
+      </node>
+      <node id="5608">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5564" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+      </node>
+      <node id="5556">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="5546" relation="include">
+        </childnode>
+      </node>
+      <node id="5591">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5592" relation="include">
+        </childnode>
+      </node>
+      <node id="5548">
+        <label>ostream</label>
+      </node>
+      <node id="5533">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+      </node>
+      <node id="5581">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="5554">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5555" relation="include">
+        </childnode>
+        <childnode refid="5562" relation="include">
+        </childnode>
+        <childnode refid="5560" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+      </node>
+      <node id="5597">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5598" relation="include">
+        </childnode>
+      </node>
+      <node id="5594">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="5532">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="5598">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="5576" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+      </node>
+      <node id="5595">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5574" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+      </node>
+      <node id="5579">
+        <label>typeinfo</label>
+      </node>
+      <node id="5586">
+        <label>cstdio</label>
+      </node>
+      <node id="5571">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+      </node>
+      <node id="5563">
+        <label>vector</label>
+      </node>
+      <node id="5607">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="5604">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="5561">
+        <label>new</label>
+      </node>
+      <node id="5539">
+        <label>utility</label>
+      </node>
+      <node id="5562">
+        <label>array</label>
+      </node>
+      <node id="5549">
+        <label>sstream</label>
+      </node>
+      <node id="5599">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5593" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5582" relation="include">
+        </childnode>
+        <childnode refid="5600" relation="include">
+        </childnode>
+        <childnode refid="5601" relation="include">
+        </childnode>
+        <childnode refid="5602" relation="include">
+        </childnode>
+        <childnode refid="5603" relation="include">
+        </childnode>
+        <childnode refid="5604" relation="include">
+        </childnode>
+      </node>
+      <node id="5601">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="5568">
+        <label>iosfwd</label>
+      </node>
+      <node id="5558">
+        <label>cstdlib</label>
+      </node>
+      <node id="5570">
+        <label>iostream</label>
+      </node>
+      <node id="5546">
+        <label>cstddef</label>
+      </node>
+      <node id="5588">
+        <label>unordered_map</label>
+      </node>
+      <node id="5587">
+        <label>mutex</label>
+      </node>
+      <node id="5531">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5533" relation="include">
+        </childnode>
+        <childnode refid="5534" relation="include">
+        </childnode>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5582" relation="include">
+        </childnode>
+        <childnode refid="5583" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5593" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5597" relation="include">
+        </childnode>
+        <childnode refid="5599" relation="include">
+        </childnode>
+        <childnode refid="5605" relation="include">
+        </childnode>
+        <childnode refid="5606" relation="include">
+        </childnode>
+        <childnode refid="5607" relation="include">
+        </childnode>
+        <childnode refid="5608" relation="include">
+        </childnode>
+        <childnode refid="5609" relation="include">
+        </childnode>
+        <childnode refid="5602" relation="include">
+        </childnode>
+        <childnode refid="5603" relation="include">
+        </childnode>
+        <childnode refid="5596" relation="include">
+        </childnode>
+        <childnode refid="5610" relation="include">
+        </childnode>
+        <childnode refid="5611" relation="include">
+        </childnode>
+      </node>
+      <node id="5585">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="5557" relation="include">
+        </childnode>
+        <childnode refid="5586" relation="include">
+        </childnode>
+        <childnode refid="5558" relation="include">
+        </childnode>
+        <childnode refid="5543" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5587" relation="include">
+        </childnode>
+        <childnode refid="5588" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+        <childnode refid="5563" relation="include">
+        </childnode>
+        <childnode refid="5589" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+      </node>
+      <node id="5537">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="5532" relation="include">
+        </childnode>
+        <childnode refid="5538" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5547" relation="include">
+        </childnode>
+        <childnode refid="5548" relation="include">
+        </childnode>
+        <childnode refid="5549" relation="include">
+        </childnode>
+        <childnode refid="5544" relation="include">
+        </childnode>
+      </node>
+      <node id="5603">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="5583" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5602" relation="include">
+        </childnode>
+        <childnode refid="5596" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5593" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5568" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+      </node>
+      <node id="5593">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="5582" relation="include">
+        </childnode>
+        <childnode refid="5572" relation="include">
+        </childnode>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5594" relation="include">
+        </childnode>
+        <childnode refid="5591" relation="include">
+        </childnode>
+        <childnode refid="5595" relation="include">
+        </childnode>
+        <childnode refid="5575" relation="include">
+        </childnode>
+        <childnode refid="5576" relation="include">
+        </childnode>
+        <childnode refid="5578" relation="include">
+        </childnode>
+        <childnode refid="5552" relation="include">
+        </childnode>
+        <childnode refid="5596" relation="include">
+        </childnode>
+        <childnode refid="5538" relation="include">
+        </childnode>
+      </node>
+      <node id="5540">
+        <label>type_traits</label>
+      </node>
+      <node id="5596">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="5553" relation="include">
+        </childnode>
+        <childnode refid="5537" relation="include">
+        </childnode>
+        <childnode refid="5570" relation="include">
+        </childnode>
+      </node>
+      <node id="5555">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="5556" relation="include">
+        </childnode>
+        <childnode refid="5557" relation="include">
+        </childnode>
+        <childnode refid="5542" relation="include">
+        </childnode>
+        <childnode refid="5546" relation="include">
+        </childnode>
+        <childnode refid="5558" relation="include">
+        </childnode>
+        <childnode refid="5559" relation="include">
+        </childnode>
+        <childnode refid="5541" relation="include">
+        </childnode>
+        <childnode refid="5560" relation="include">
+        </childnode>
+        <childnode refid="5535" relation="include">
+        </childnode>
+        <childnode refid="5561" relation="include">
+        </childnode>
+        <childnode refid="5540" relation="include">
+        </childnode>
+        <childnode refid="5539" relation="include">
+        </childnode>
+        <childnode refid="5532" relation="include">
+        </childnode>
+      </node>
+      <node id="5557">
+        <label>algorithm</label>
+      </node>
+      <node id="5582">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="5574" relation="include">
+        </childnode>
+      </node>
+      <node id="5559">
+        <label>cstring</label>
+      </node>
+      <node id="5535">
+        <label>memory</label>
+      </node>
+      <node id="5541">
+        <label>initializer_list</label>
+      </node>
+      <node id="5605">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="5570" relation="include">
+        </childnode>
+        <childnode refid="5581" relation="include">
+        </childnode>
+        <childnode refid="5572" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5615">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h"/>
+        <childnode refid="5616" relation="include">
+        </childnode>
+      </node>
+      <node id="5616">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufft.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufftXt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>means<sp/>that<sp/>max<sp/>dim<sp/>is<sp/>3<sp/>+<sp/>2<sp/>=<sp/>5<sp/>with<sp/>batch<sp/>dimension<sp/>and<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>complex<sp/>dimension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_rank<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::string<sp/>_cudaGetErrorEnum(cufftResult<sp/>error)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(error)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_SUCCESS:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_SUCCESS&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INVALID_PLAN:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INVALID_PLAN&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_ALLOC_FAILED:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_ALLOC_FAILED&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INVALID_TYPE:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INVALID_TYPE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INVALID_VALUE:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INVALID_VALUE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INTERNAL_ERROR:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INTERNAL_ERROR&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_EXEC_FAILED:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_EXEC_FAILED&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_SETUP_FAILED:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_SETUP_FAILED&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INVALID_SIZE:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INVALID_SIZE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_UNALIGNED_DATA:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_UNALIGNED_DATA&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INCOMPLETE_PARAMETER_LIST:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INCOMPLETE_PARAMETER_LIST&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_INVALID_DEVICE:</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_INVALID_DEVICE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_PARSE_ERROR:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_PARSE_ERROR&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_NO_WORKSPACE:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_NO_WORKSPACE&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_NOT_IMPLEMENTED:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_NOT_IMPLEMENTED&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_LICENSE_ERROR:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_LICENSE_ERROR&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>CUFFT_NOT_SUPPORTED:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_NOT_SUPPORTED&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;unknown<sp/>error<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>error;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CUFFT_CHECK(cufftResult<sp/>error)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(error<sp/>!=<sp/>CUFFT_SUCCESS)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cuFFT<sp/>error:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_cudaGetErrorEnum(error);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ERROR(ss.str());</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h"/>
+  </compounddef>
+</doxygen>

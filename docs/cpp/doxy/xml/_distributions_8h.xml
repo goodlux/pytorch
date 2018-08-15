@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_distributions_8h" kind="file" language="C++">
+    <compoundname>Distributions.h</compoundname>
+    <includes local="yes">TH/THMath.h</includes>
+    <includedby refid="_distributions_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.cpp</includedby>
+    <incdepgraph>
+      <node id="6039">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h</label>
+        <link refid="_distributions_8h"/>
+        <childnode refid="6040" relation="include">
+        </childnode>
+      </node>
+      <node id="6040">
+        <label>TH/THMath.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_distributions_8h_1a3f78c515a02fc315e50b903989bae52f" prot="public" static="no">
+        <name>nvfunction_or_function</name>
+        <initializer>std::function</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h" line="12" column="10" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_distributions_8h_1a67f8e4c46e6fbe543b81f6fb2835390d" prot="public" static="no">
+        <name>deviceforcuda</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h" line="13" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_distributions_8h_1a075c8459d7e501109174c1a2fdc5cd7e" prot="public" static="no">
+        <name>isnan</name>
+        <initializer>std::isnan</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h" line="16" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;TH/THMath.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__CUDA_ARCH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;nvfunctional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__CUDA_ARCH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>nvfunction_or_function<sp/>nvstd::function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>deviceforcuda<sp/>__device__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>nvfunction_or_function<sp/>std::function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>deviceforcuda</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>we<sp/>cannot<sp/>use<sp/>std::isnan<sp/>directly<sp/>due<sp/>to<sp/>some<sp/>incompatibility<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>gcc<sp/>constexpr&apos;ing<sp/>and<sp/>nvcc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>isnan<sp/>std::isnan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t&gt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">BaseSampler<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>nvfunction_or_function&lt;scalar_t(void)&gt;<sp/>sampler;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>deviceforcuda<sp/>BaseSampler(nvfunction_or_function&lt;scalar_t(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)&gt;<sp/>sampler):<sp/>sampler(sampler)<sp/>{}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>deviceforcuda<sp/>scalar_t<sp/>sample()<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sampler();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>`sample_gamma`<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>adapted<sp/>from<sp/>Numpy&apos;s<sp/>distributions.c<sp/>implementation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>MIT<sp/>licensed,<sp/>so<sp/>here<sp/>is<sp/>the<sp/>copyright:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Copyright<sp/>2005<sp/>Robert<sp/>Kern<sp/>(robert.kern@gmail.com)</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/>*<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/>*<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="52"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>accscalar_t&gt;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">deviceforcuda<sp/>scalar_t<sp/>sample_gamma(scalar_t<sp/>alpha,<sp/>BaseSampler&lt;accscalar_t&gt;&amp;<sp/>standard_uniform,<sp/>BaseSampler&lt;accscalar_t&gt;&amp;<sp/>standard_normal)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>scale<sp/>=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Boost<sp/>alpha<sp/>for<sp/>higher<sp/>acceptance<sp/>probability.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(alpha<sp/>&lt;<sp/>1.0f)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>scale<sp/>*=<sp/>std::pow(1<sp/>-<sp/>standard_uniform.sample(),<sp/>1.0f<sp/>/<sp/>alpha);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>alpha<sp/>+=<sp/>1.0f;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>implements<sp/>the<sp/>acceptance-rejection<sp/>method<sp/>of<sp/>Marsaglia<sp/>and<sp/>Tsang<sp/>(2000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>doi:10.1145/358407.358414</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>d<sp/>=<sp/>alpha<sp/>-<sp/>1.0f<sp/>/<sp/>3.0f;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>c<sp/>=<sp/>1.0f<sp/>/<sp/>std::sqrt(9.0f<sp/>*<sp/>d);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;;)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>accscalar_t<sp/>x,<sp/>y;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>standard_normal.sample();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>1.0f<sp/>+<sp/>c<sp/>*<sp/>x;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(y<sp/>&lt;=<sp/>0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>v<sp/>=<sp/>y<sp/>*<sp/>y<sp/>*<sp/>y;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>u<sp/>=<sp/>1<sp/>-<sp/>standard_uniform.sample();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>xx<sp/>=<sp/>x<sp/>*<sp/>x;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(u<sp/>&lt;<sp/>1.0f<sp/>-<sp/>0.0331f<sp/>*<sp/>xx<sp/>*<sp/>xx)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(scale<sp/>*<sp/>d<sp/>*<sp/>v);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::log(u)<sp/>&lt;<sp/>0.5f<sp/>*<sp/>xx<sp/>+<sp/>d<sp/>*<sp/>(1.0f<sp/>-<sp/>v<sp/>+<sp/>std::log(v)))</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(scale<sp/>*<sp/>d<sp/>*<sp/>v);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t&gt;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">deviceforcuda<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>scalar_t<sp/>polevl(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t<sp/>x,<sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t<sp/>A[],<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>len)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>scalar_t<sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;=<sp/>len;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>result<sp/>*<sp/>x<sp/>+<sp/>A[i];</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/>*<sp/>The<sp/>following<sp/>function<sp/>comes<sp/>with<sp/>the<sp/>following<sp/>copyright<sp/>notice.</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/>*<sp/>It<sp/>has<sp/>been<sp/>released<sp/>under<sp/>the<sp/>BSD<sp/>license.</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="98"><highlight class="comment"><sp/>*<sp/>Cephes<sp/>Math<sp/>Library<sp/>Release<sp/>2.8:<sp/><sp/>June,<sp/>2000</highlight></codeline>
+<codeline lineno="99"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>1984,<sp/>1987,<sp/>1992,<sp/>2000<sp/>by<sp/>Stephen<sp/>L.<sp/>Moshier</highlight></codeline>
+<codeline lineno="100"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>accscalar_t&gt;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">deviceforcuda<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>scalar_t<sp/>digamma_one(scalar_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>constexpr<sp/>accscalar_t<sp/>PSI_10<sp/>=<sp/>2.25175258906672110764;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INFINITY;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>additional_summand<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x_is_integer<sp/>=<sp/>x<sp/>==<sp/>std::floor(x);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x_is_integer)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>INFINITY;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>is<sp/>more<sp/>standard<sp/>to<sp/>write<sp/>this<sp/>as<sp/>recursion,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>nvcc<sp/>does<sp/>not<sp/>like<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>additional_summand<sp/>=<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">accscalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(M_PI)<sp/>/<sp/>std::tan(static_cast&lt;accscalar_t&gt;(M_PI)<sp/>*<sp/>x);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>=<sp/>1<sp/>-<sp/>x;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Push<sp/>x<sp/>to<sp/>be<sp/>&gt;=<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>result<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(x<sp/>&lt;<sp/>10)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>-=<sp/>1<sp/>/<sp/>x;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>x<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>==<sp/>10)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result<sp/>+<sp/>PSI_10<sp/>+<sp/>additional_summand;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>asymptotic<sp/>digamma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>A[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>8.33333333333333333333E-2,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>-2.10927960927960927961E-2,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>7.57575757575757575758E-3,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>-4.16666666666666666667E-3,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>3.96825396825396825397E-3,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>-8.33333333333333333333E-3,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>8.33333333333333333333E-2,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>y<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>&lt;<sp/>1.0e17f)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>accscalar_t<sp/>z<sp/>=<sp/>1.0<sp/>/<sp/>(x<sp/>*<sp/>x);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>y<sp/>=<sp/>z<sp/>*<sp/>polevl&lt;accscalar_t&gt;(z,<sp/>A,<sp/>6);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(result<sp/>+<sp/>std::log(x)<sp/>-<sp/>(0.5f<sp/>/<sp/>x)<sp/>-<sp/>y<sp/>+<sp/>additional_summand);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>reparameterized<sp/>gradient<sp/>-(d/dalpha<sp/>cdf(x;alpha))<sp/>/<sp/>pdf(x;alpha)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>random<sp/>number<sp/>x<sp/>drawn<sp/>from<sp/>a<sp/>standard<sp/>Gamma<sp/>distribution<sp/>Gamma(alpha).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>accscalar_t&gt;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">deviceforcuda<sp/>scalar_t<sp/>standard_gamma_grad_one(scalar_t<sp/>alpha_,<sp/>scalar_t<sp/>x_)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>a<sp/>Taylor<sp/>series<sp/>expansion<sp/>for<sp/>small<sp/>x.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>x<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">accscalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(x_);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>alpha<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">accscalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(alpha_);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>&lt;<sp/>0.8f)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>accscalar_t<sp/>numer<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>accscalar_t<sp/>denom<sp/>=<sp/>alpha;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>series1<sp/>=<sp/>numer<sp/>/<sp/>denom;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>series2<sp/>=<sp/>numer<sp/>/<sp/>(denom<sp/>*<sp/>denom);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;=<sp/>5;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>numer<sp/>*=<sp/>-x<sp/>/<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">accscalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(i);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>denom<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>series1<sp/>+=<sp/>numer<sp/>/<sp/>denom;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>series2<sp/>+=<sp/>numer<sp/>/<sp/>(denom<sp/>*<sp/>denom);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pow_x_alpha<sp/>=<sp/>std::pow(x,<sp/>alpha);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>gamma_pdf<sp/>=<sp/>std::pow(x,<sp/>alpha<sp/>-<sp/>1)<sp/>*<sp/>std::exp(-x);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>gamma_cdf<sp/>=<sp/>pow_x_alpha<sp/>*<sp/>series1;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>gamma_cdf_alpha<sp/>=<sp/>(std::log(x)<sp/>-<sp/>digamma_one&lt;accscalar_t,accscalar_t&gt;(alpha))<sp/>*<sp/>gamma_cdf</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>pow_x_alpha<sp/>*<sp/>series2;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>-gamma_cdf_alpha<sp/>/<sp/>gamma_pdf;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>isnan(result)<sp/>?<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<sp/>0.f<sp/>)<sp/>:<sp/>static_cast&lt;scalar_t&gt;(result);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>a<sp/>Rice<sp/>saddle<sp/>point<sp/>expansion<sp/>for<sp/>large<sp/>alpha.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(alpha<sp/>&gt;<sp/>8.0f)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(0.9f<sp/>*<sp/>alpha<sp/>&lt;=<sp/>x<sp/>&amp;&amp;<sp/>x<sp/>&lt;=<sp/>1.1f<sp/>*<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>numer_1<sp/>=<sp/>1<sp/>+<sp/>24<sp/>*<sp/>alpha<sp/>*<sp/>(1<sp/>+<sp/>12<sp/>*<sp/>alpha);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>numer_2<sp/>=<sp/>1440<sp/>*<sp/>(alpha<sp/>*<sp/>alpha)<sp/>+<sp/>6<sp/>*<sp/>x<sp/>*<sp/>(53<sp/>-<sp/>120<sp/>*<sp/>x)</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>65<sp/>*<sp/>x<sp/>*<sp/>x<sp/>/<sp/>alpha<sp/>+<sp/>alpha<sp/>*<sp/>(107<sp/>+<sp/>3600<sp/>*<sp/>x);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>denom<sp/>=<sp/>1244160<sp/>*<sp/>(alpha<sp/>*<sp/>alpha)<sp/>*<sp/>(alpha<sp/>*<sp/>alpha);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(numer_1<sp/>*<sp/>numer_2<sp/>/<sp/>denom);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>denom<sp/>=<sp/>std::sqrt(8<sp/>*<sp/>alpha);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>term2<sp/>=<sp/>denom<sp/>/<sp/>(alpha<sp/>-<sp/>x);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>term3<sp/>=<sp/>std::pow(x<sp/>-<sp/>alpha<sp/>-<sp/>alpha<sp/>*<sp/>std::log(x<sp/>/<sp/>alpha),<sp/>static_cast&lt;accscalar_t&gt;(-1.5));</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>term23<sp/>=<sp/>(x<sp/>&lt;<sp/>alpha)<sp/>?<sp/>term2<sp/>-<sp/>term3<sp/>:<sp/>term2<sp/>+<sp/>term3;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>term1<sp/>=<sp/>std::log(x<sp/>/<sp/>alpha)<sp/>*<sp/>term23</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>std::sqrt(2<sp/>/<sp/>alpha)<sp/>*<sp/>(alpha<sp/>+<sp/>x)<sp/>/<sp/>((alpha<sp/>-<sp/>x)<sp/>*<sp/>(alpha<sp/>-<sp/>x));</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>stirling<sp/>=<sp/>1<sp/>+<sp/>1<sp/>/<sp/>(12<sp/>*<sp/>alpha)<sp/>*<sp/>(1<sp/>+<sp/>1<sp/>/<sp/>(24<sp/>*<sp/>alpha));</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>numer<sp/>=<sp/>x<sp/>*<sp/>term1;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(-stirling<sp/>*<sp/>numer<sp/>/<sp/>denom);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>a<sp/>bivariate<sp/>rational<sp/>approximation<sp/>to<sp/>the<sp/>reparameterized<sp/>gradient.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>u<sp/>=<sp/>std::log(x<sp/>/<sp/>alpha);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>std::log(alpha);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>accscalar_t<sp/>coef_uv[3][8]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>{0.16009398,<sp/>-0.094634809,<sp/>0.025146376,<sp/>-0.0030648343,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>1,<sp/>0.32668115,<sp/>0.10406089,<sp/>0.0014179084},</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{0.53487893,<sp/>0.1298071,<sp/>0.065735949,<sp/>-0.0015649758,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0.16639465,<sp/>0.020070113,<sp/>-0.0035938915,<sp/>-0.00058392623},</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>{0.040121004,<sp/>-0.0065914022,<sp/>-0.0026286047,<sp/>-0.0013441777,</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>0.017050642,<sp/>-0.0021309326,<sp/>0.00085092367,<sp/>-1.5247877e-07},</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>accscalar_t<sp/>coef_v[8];</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>8;<sp/>++<sp/>i)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>coef_v[i]<sp/>=<sp/>coef_uv[0][i]<sp/>+<sp/>u<sp/>*<sp/>(coef_uv[1][i]<sp/>+<sp/>u<sp/>*<sp/>coef_uv[2][i]);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>p<sp/>=<sp/>coef_v[0]<sp/>+<sp/>v<sp/>*<sp/>(coef_v[1]<sp/>+<sp/>v<sp/>*<sp/>(coef_v[2]<sp/>+<sp/>v<sp/>*<sp/>coef_v[3]));</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>q<sp/>=<sp/>coef_v[4]<sp/>+<sp/>v<sp/>*<sp/>(coef_v[5]<sp/>+<sp/>v<sp/>*<sp/>(coef_v[6]<sp/>+<sp/>v<sp/>*<sp/>coef_v[7]));</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::exp(p<sp/>/<sp/>q));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.h"/>
+  </compounddef>
+</doxygen>

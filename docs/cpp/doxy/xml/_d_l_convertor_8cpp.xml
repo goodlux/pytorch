@@ -1,0 +1,938 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_d_l_convertor_8cpp" kind="file" language="C++">
+    <compoundname>DLConvertor.cpp</compoundname>
+    <includes refid="_d_l_convertor_8h" local="yes">ATen/DLConvertor.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">sstream</includes>
+    <incdepgraph>
+      <node id="3400">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3401" relation="include">
+        </childnode>
+        <childnode refid="3402" relation="include">
+        </childnode>
+        <childnode refid="3403" relation="include">
+        </childnode>
+        <childnode refid="3404" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3386" relation="include">
+        </childnode>
+      </node>
+      <node id="3440">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3441" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3404" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+      </node>
+      <node id="3431">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3394" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3404" relation="include">
+        </childnode>
+      </node>
+      <node id="3421">
+        <label>atomic</label>
+      </node>
+      <node id="3404">
+        <label>functional</label>
+      </node>
+      <node id="3445">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3425" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3397">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3390" relation="include">
+        </childnode>
+        <childnode refid="3392" relation="include">
+        </childnode>
+        <childnode refid="3418" relation="include">
+        </childnode>
+      </node>
+      <node id="3391">
+        <label>limits</label>
+      </node>
+      <node id="3385">
+        <label>assert.h</label>
+      </node>
+      <node id="3424">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3398" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3423" relation="include">
+        </childnode>
+        <childnode refid="3411" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+        <childnode refid="3425" relation="include">
+        </childnode>
+        <childnode refid="3426" relation="include">
+        </childnode>
+      </node>
+      <node id="3413">
+        <label>iterator</label>
+      </node>
+      <node id="3384">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="3385" relation="include">
+        </childnode>
+        <childnode refid="3383" relation="include">
+        </childnode>
+        <childnode refid="3386" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3390" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3419" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+      </node>
+      <node id="3429">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="3392">
+        <label>cstdint</label>
+      </node>
+      <node id="3450">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="3383">
+        <label>stdint.h</label>
+      </node>
+      <node id="3461">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="3393">
+        <label>cmath</label>
+      </node>
+      <node id="3403">
+        <label>cassert</label>
+      </node>
+      <node id="3439">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3434" relation="include">
+        </childnode>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+        <childnode refid="3446" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+        <childnode refid="3392" relation="include">
+        </childnode>
+      </node>
+      <node id="3395">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3391" relation="include">
+        </childnode>
+      </node>
+      <node id="3386">
+        <label>stdexcept</label>
+      </node>
+      <node id="3456">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3386" relation="include">
+        </childnode>
+      </node>
+      <node id="3426">
+        <label>numeric</label>
+      </node>
+      <node id="3420">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="3421" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3422" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+      </node>
+      <node id="3422">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="3421" relation="include">
+        </childnode>
+      </node>
+      <node id="3390">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3391" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3392" relation="include">
+        </childnode>
+        <childnode refid="3386" relation="include">
+        </childnode>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3393" relation="include">
+        </childnode>
+        <childnode refid="3394" relation="include">
+        </childnode>
+        <childnode refid="3395" relation="include">
+        </childnode>
+      </node>
+      <node id="3419">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="3420" relation="include">
+        </childnode>
+        <childnode refid="3423" relation="include">
+        </childnode>
+      </node>
+      <node id="3387">
+        <label>string</label>
+      </node>
+      <node id="3459">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3383" relation="include">
+        </childnode>
+      </node>
+      <node id="3460">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3453" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+      </node>
+      <node id="3435">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3436" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3422" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3437" relation="include">
+        </childnode>
+      </node>
+      <node id="3446">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="3452">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3440" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+      </node>
+      <node id="3406">
+        <label>exception</label>
+      </node>
+      <node id="3436">
+        <label>stddef.h</label>
+      </node>
+      <node id="3423">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="3420" relation="include">
+        </childnode>
+      </node>
+      <node id="3458">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3390" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+      </node>
+      <node id="3410">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="3405" relation="include">
+        </childnode>
+      </node>
+      <node id="3428">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3429" relation="include">
+        </childnode>
+      </node>
+      <node id="3407">
+        <label>ostream</label>
+      </node>
+      <node id="3434">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3438">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="3398">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3409" relation="include">
+        </childnode>
+        <childnode refid="3416" relation="include">
+        </childnode>
+        <childnode refid="3413" relation="include">
+        </childnode>
+        <childnode refid="3417" relation="include">
+        </childnode>
+      </node>
+      <node id="3447">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3448" relation="include">
+        </childnode>
+      </node>
+      <node id="3427">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="3389">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="3448">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="3420" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+      </node>
+      <node id="3430">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3383" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+      </node>
+      <node id="3425">
+        <label>typeinfo</label>
+      </node>
+      <node id="3442">
+        <label>cstdio</label>
+      </node>
+      <node id="3437">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3417">
+        <label>vector</label>
+      </node>
+      <node id="3457">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="3454">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="3415">
+        <label>new</label>
+      </node>
+      <node id="3388">
+        <label>utility</label>
+      </node>
+      <node id="3416">
+        <label>array</label>
+      </node>
+      <node id="3408">
+        <label>sstream</label>
+      </node>
+      <node id="3380">
+        <label>ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+        <childnode refid="3462" relation="include">
+        </childnode>
+      </node>
+      <node id="3449">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3450" relation="include">
+        </childnode>
+        <childnode refid="3451" relation="include">
+        </childnode>
+        <childnode refid="3452" relation="include">
+        </childnode>
+        <childnode refid="3453" relation="include">
+        </childnode>
+        <childnode refid="3454" relation="include">
+        </childnode>
+      </node>
+      <node id="3451">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="3462">
+        <label>ATen/dlpack.h</label>
+        <link refid="dlpack_8h"/>
+        <childnode refid="3383" relation="include">
+        </childnode>
+        <childnode refid="3436" relation="include">
+        </childnode>
+      </node>
+      <node id="3394">
+        <label>iosfwd</label>
+      </node>
+      <node id="3412">
+        <label>cstdlib</label>
+      </node>
+      <node id="3418">
+        <label>iostream</label>
+      </node>
+      <node id="3405">
+        <label>cstddef</label>
+      </node>
+      <node id="3444">
+        <label>unordered_map</label>
+      </node>
+      <node id="3443">
+        <label>mutex</label>
+      </node>
+      <node id="3433">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3434" relation="include">
+        </childnode>
+        <childnode refid="3435" relation="include">
+        </childnode>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3439" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3447" relation="include">
+        </childnode>
+        <childnode refid="3449" relation="include">
+        </childnode>
+        <childnode refid="3455" relation="include">
+        </childnode>
+        <childnode refid="3456" relation="include">
+        </childnode>
+        <childnode refid="3457" relation="include">
+        </childnode>
+        <childnode refid="3458" relation="include">
+        </childnode>
+        <childnode refid="3459" relation="include">
+        </childnode>
+        <childnode refid="3452" relation="include">
+        </childnode>
+        <childnode refid="3453" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3460" relation="include">
+        </childnode>
+        <childnode refid="3461" relation="include">
+        </childnode>
+      </node>
+      <node id="3441">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="3411" relation="include">
+        </childnode>
+        <childnode refid="3442" relation="include">
+        </childnode>
+        <childnode refid="3412" relation="include">
+        </childnode>
+        <childnode refid="3404" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3443" relation="include">
+        </childnode>
+        <childnode refid="3444" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+        <childnode refid="3417" relation="include">
+        </childnode>
+        <childnode refid="3445" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3399">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="3389" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3406" relation="include">
+        </childnode>
+        <childnode refid="3407" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+        <childnode refid="3387" relation="include">
+        </childnode>
+      </node>
+      <node id="3453">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="3439" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3452" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3394" relation="include">
+        </childnode>
+        <childnode refid="3388" relation="include">
+        </childnode>
+      </node>
+      <node id="3381">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3384" relation="include">
+        </childnode>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3427" relation="include">
+        </childnode>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3430" relation="include">
+        </childnode>
+        <childnode refid="3419" relation="include">
+        </childnode>
+        <childnode refid="3420" relation="include">
+        </childnode>
+        <childnode refid="3424" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+        <childnode refid="3400" relation="include">
+        </childnode>
+      </node>
+      <node id="3401">
+        <label>type_traits</label>
+      </node>
+      <node id="3432">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="3397" relation="include">
+        </childnode>
+        <childnode refid="3399" relation="include">
+        </childnode>
+        <childnode refid="3418" relation="include">
+        </childnode>
+      </node>
+      <node id="3379">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp</label>
+        <link refid="_d_l_convertor_8cpp"/>
+        <childnode refid="3380" relation="include">
+        </childnode>
+        <childnode refid="3418" relation="include">
+        </childnode>
+        <childnode refid="3408" relation="include">
+        </childnode>
+      </node>
+      <node id="3409">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="3410" relation="include">
+        </childnode>
+        <childnode refid="3411" relation="include">
+        </childnode>
+        <childnode refid="3403" relation="include">
+        </childnode>
+        <childnode refid="3405" relation="include">
+        </childnode>
+        <childnode refid="3412" relation="include">
+        </childnode>
+        <childnode refid="3396" relation="include">
+        </childnode>
+        <childnode refid="3402" relation="include">
+        </childnode>
+        <childnode refid="3413" relation="include">
+        </childnode>
+        <childnode refid="3414" relation="include">
+        </childnode>
+        <childnode refid="3415" relation="include">
+        </childnode>
+        <childnode refid="3401" relation="include">
+        </childnode>
+        <childnode refid="3388" relation="include">
+        </childnode>
+        <childnode refid="3389" relation="include">
+        </childnode>
+      </node>
+      <node id="3411">
+        <label>algorithm</label>
+      </node>
+      <node id="3382">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="3383" relation="include">
+        </childnode>
+      </node>
+      <node id="3396">
+        <label>cstring</label>
+      </node>
+      <node id="3414">
+        <label>memory</label>
+      </node>
+      <node id="3402">
+        <label>initializer_list</label>
+      </node>
+      <node id="3455">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="3418" relation="include">
+        </childnode>
+        <childnode refid="3438" relation="include">
+        </childnode>
+        <childnode refid="3384" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structat_1_1_a_ten_d_l_m_tensor" prot="public">at::ATenDLMTensor</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/DLConvertor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_d_l_data_type" kindref="compound">DLDataType</ref><sp/>getDLDataType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Type&amp;<sp/>type)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="struct_d_l_data_type" kindref="compound">DLDataType</ref><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.lanes<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits<sp/>=<sp/>type.elementSizeInBytes()<sp/>*<sp/>8;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type.scalarType())<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Byte:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLUInt;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Char:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLInt;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Double:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLFloat;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Float:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLFloat;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Int:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLInt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Long:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLInt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Short:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLInt;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Half:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code<sp/>=<sp/>DLDataTypeCode::kDLFloat;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::Undefined:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Undefined<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>ScalarType&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>ScalarType::NumOptions:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;NumOptions<sp/>is<sp/>not<sp/>a<sp/>valid<sp/>ScalarType&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_d_l_context" kindref="compound">DLContext</ref><sp/>getDLContext(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Type&amp;<sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t&amp;<sp/>device_id)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><ref refid="struct_d_l_context" kindref="compound">DLContext</ref><sp/>ctx;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>ctx.<ref refid="struct_d_l_context_1a7cd00ca96ac03a1f8ea2b2b3a565794d" kindref="member">device_id</ref><sp/>=<sp/>device_id;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type.is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>ctx.<ref refid="struct_d_l_context_1a9e7b666f60b074a4f48943da69cee9ce" kindref="member">device_type</ref><sp/>=<sp/>DLDeviceType::kDLGPU;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>ctx.<ref refid="struct_d_l_context_1a9e7b666f60b074a4f48943da69cee9ce" kindref="member">device_type</ref><sp/>=<sp/>DLDeviceType::kDLCPU;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ctx;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Backend<sp/>getATenBackend(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_d_l_context" kindref="compound">DLContext</ref>&amp;<sp/>ctx)<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>Backend<sp/>backend;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(ctx.<ref refid="struct_d_l_context_1a9e7b666f60b074a4f48943da69cee9ce" kindref="member">device_type</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLDeviceType::kDLCPU:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>backend<sp/>=<sp/>Backend::CPU;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLDeviceType::kDLGPU:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>backend<sp/>=<sp/>Backend::CUDA;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Unsupported<sp/>device_type:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(ctx.<ref refid="struct_d_l_context_1a9e7b666f60b074a4f48943da69cee9ce" kindref="member">device_type</ref>));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>backend;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">ScalarType<sp/>toScalarType(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_d_l_data_type" kindref="compound">DLDataType</ref>&amp;<sp/>dtype)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>ScalarType<sp/>stype;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.lanes<sp/>!=<sp/>1)<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;ATen<sp/>does<sp/>not<sp/>support<sp/>lanes<sp/>!=<sp/>1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLDataTypeCode::kDLUInt:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>8:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Byte;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Unsupported<sp/>kUInt<sp/>bits<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLDataTypeCode::kDLInt:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>8:</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Char;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>16:</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Short;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>32:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Int;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>64:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Long;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Unsupported<sp/>kInt<sp/>bits<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>DLDataTypeCode::kDLFloat:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>16:</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Half;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>32:</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Float;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>64:</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stype<sp/>=<sp/>ScalarType::Double;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Unsupported<sp/>kFloat<sp/>bits<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.bits));</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;Unsupported<sp/>code<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::to_string(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.code));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stype;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="structat_1_1_a_ten_d_l_m_tensor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structat_1_1_a_ten_d_l_m_tensor" kindref="compound">ATenDLMTensor</ref><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>handle;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><ref refid="struct_d_l_managed_tensor" kindref="compound">DLManagedTensor</ref><sp/>tensor;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>deleter(<ref refid="struct_d_l_managed_tensor" kindref="compound">DLManagedTensor</ref><sp/>*<sp/>arg)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal"><ref refid="structat_1_1_a_ten_d_l_m_tensor" kindref="compound">ATenDLMTensor</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(arg-&gt;<ref refid="struct_d_l_managed_tensor_1af9bfa572555bd0b7855c5ae74ff96929" kindref="member">manager_ctx</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>returns<sp/>a<sp/>shared_ptr<sp/>to<sp/>memory<sp/>managed<sp/>DLpack<sp/>tensor<sp/>constructed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//<sp/>out<sp/>of<sp/>ATen<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><ref refid="struct_d_l_managed_tensor" kindref="compound">DLManagedTensor</ref>*<sp/>toDLPack(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>ATenDLMTensor<sp/>*<sp/>atDLMTensor(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ATenDLMTensor);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;handle<sp/>=<sp/>src;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.manager_ctx<sp/>=<sp/>atDLMTensor;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.deleter<sp/>=<sp/>&amp;deleter;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.data<sp/>=<sp/>src.data_ptr();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>int64_t<sp/>device_id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(src.type().is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>device_id<sp/>=<sp/>src.get_device();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.ctx<sp/>=<sp/>getDLContext(src.type(),<sp/>device_id);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.ndim<sp/>=<sp/>src.dim();</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.dtype<sp/>=<sp/>getDLDataType(src.type());</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.shape<sp/>=<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">int64_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(src.sizes().data());</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.strides<sp/>=<sp/></highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="normal">int64_t*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(src.strides().data());</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>atDLMTensor-&gt;tensor.dl_tensor.byte_offset<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;(atDLMTensor-&gt;tensor);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">Tensor<sp/>fromDLPack(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_d_l_managed_tensor" kindref="compound">DLManagedTensor</ref>*<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>Backend<sp/>backend<sp/>=<sp/>getATenBackend(src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1a552ca85f7d04138c876c636e25b3c484" kindref="member">ctx</ref>);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>ScalarType<sp/>stype<sp/>=<sp/>toScalarType(src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1ae0cf02d1a8b19118838670b3b3d857f5" kindref="member">dtype</ref>);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>deleter<sp/>=<sp/>[src](</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>src-&gt;<ref refid="struct_d_l_managed_tensor_1a3b5ac9adc40f2dbaf072531eb957d7ea" kindref="member">deleter</ref>(const_cast&lt;DLManagedTensor*&gt;(src));</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getType(backend,<sp/>stype).tensorFromBlob(</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1a6af4539ae2c74d60e8dbc4c6047ed805" kindref="member">data</ref>,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>IntList(src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1a6e33904029ec8a18658b6bd62be28688" kindref="member">shape</ref>,<sp/>src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1a8b28a3876c4d157ccea80956f3ec18f5" kindref="member">ndim</ref>),</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>IntList(src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1a0ad3b8079e712f711b716d34d418d44e" kindref="member">strides</ref>,<sp/>src-&gt;<ref refid="struct_d_l_managed_tensor_1a568171e573aca5ba30f2cbae9fd2489b" kindref="member">dl_tensor</ref>.<ref refid="struct_d_l_tensor_1a8b28a3876c4d157ccea80956f3ec18f5" kindref="member">ndim</ref>),</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>deleter);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}<sp/></highlight><highlight class="comment">//namespace<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp"/>
+  </compounddef>
+</doxygen>

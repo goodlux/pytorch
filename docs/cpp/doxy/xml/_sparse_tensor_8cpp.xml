@@ -1,0 +1,1170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_sparse_tensor_8cpp" kind="file" language="C++">
+    <compoundname>SparseTensor.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="no">ATen/ATen.h</includes>
+    <includes refid="_sparse_tensor_impl_8h" local="no">ATen/SparseTensorImpl.h</includes>
+    <includes local="no">ATen/NativeFunctions.h</includes>
+    <includes refid="_sparse_utils_8h" local="no">ATen/native/sparse/SparseUtils.h</includes>
+    <includes local="no">TH/THBlasUtils.h</includes>
+    <incdepgraph>
+      <node id="7504">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="7505" relation="include">
+        </childnode>
+        <childnode refid="7506" relation="include">
+        </childnode>
+        <childnode refid="7507" relation="include">
+        </childnode>
+        <childnode refid="7508" relation="include">
+        </childnode>
+        <childnode refid="7509" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7511" relation="include">
+        </childnode>
+      </node>
+      <node id="7550">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="7500" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7548" relation="include">
+        </childnode>
+        <childnode refid="7551" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7509" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+      </node>
+      <node id="7518">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7534" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7509" relation="include">
+        </childnode>
+      </node>
+      <node id="7517">
+        <label>atomic</label>
+      </node>
+      <node id="7509">
+        <label>functional</label>
+      </node>
+      <node id="7555">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7545" relation="include">
+        </childnode>
+        <childnode refid="7498" relation="include">
+        </childnode>
+      </node>
+      <node id="7519">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="7520" relation="include">
+        </childnode>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7530" relation="include">
+        </childnode>
+        <childnode refid="7532" relation="include">
+        </childnode>
+        <childnode refid="7536" relation="include">
+        </childnode>
+      </node>
+      <node id="7531">
+        <label>limits</label>
+      </node>
+      <node id="7578">
+        <label>ATen/SparseTensorImpl.h</label>
+        <link refid="_sparse_tensor_impl_8h_source"/>
+        <childnode refid="7559" relation="include">
+        </childnode>
+        <childnode refid="7542" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+      </node>
+      <node id="7539">
+        <label>assert.h</label>
+      </node>
+      <node id="7544">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7520" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7543" relation="include">
+        </childnode>
+        <childnode refid="7523" relation="include">
+        </childnode>
+        <childnode refid="7515" relation="include">
+        </childnode>
+        <childnode refid="7545" relation="include">
+        </childnode>
+        <childnode refid="7546" relation="include">
+        </childnode>
+      </node>
+      <node id="7526">
+        <label>iterator</label>
+      </node>
+      <node id="7538">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="7539" relation="include">
+        </childnode>
+        <childnode refid="7540" relation="include">
+        </childnode>
+        <childnode refid="7511" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7505" relation="include">
+        </childnode>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7530" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7541" relation="include">
+        </childnode>
+        <childnode refid="7544" relation="include">
+        </childnode>
+      </node>
+      <node id="7558">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="7532">
+        <label>cstdint</label>
+      </node>
+      <node id="7566">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="7540">
+        <label>stdint.h</label>
+      </node>
+      <node id="7577">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="7533">
+        <label>cmath</label>
+      </node>
+      <node id="7508">
+        <label>cassert</label>
+      </node>
+      <node id="7549">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7499" relation="include">
+        </childnode>
+        <childnode refid="7548" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7544" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7550" relation="include">
+        </childnode>
+        <childnode refid="7556" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7553" relation="include">
+        </childnode>
+        <childnode refid="7532" relation="include">
+        </childnode>
+      </node>
+      <node id="7535">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7525" relation="include">
+        </childnode>
+        <childnode refid="7531" relation="include">
+        </childnode>
+      </node>
+      <node id="7511">
+        <label>stdexcept</label>
+      </node>
+      <node id="7572">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="7538" relation="include">
+        </childnode>
+        <childnode refid="7559" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7511" relation="include">
+        </childnode>
+      </node>
+      <node id="7546">
+        <label>numeric</label>
+      </node>
+      <node id="7542">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="7517" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7516" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7504" relation="include">
+        </childnode>
+      </node>
+      <node id="7530">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7531" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7532" relation="include">
+        </childnode>
+        <childnode refid="7511" relation="include">
+        </childnode>
+        <childnode refid="7505" relation="include">
+        </childnode>
+        <childnode refid="7533" relation="include">
+        </childnode>
+        <childnode refid="7534" relation="include">
+        </childnode>
+        <childnode refid="7535" relation="include">
+        </childnode>
+      </node>
+      <node id="7516">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="7517" relation="include">
+        </childnode>
+      </node>
+      <node id="7541">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="7542" relation="include">
+        </childnode>
+        <childnode refid="7543" relation="include">
+        </childnode>
+      </node>
+      <node id="7510">
+        <label>string</label>
+      </node>
+      <node id="7575">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="7521" relation="include">
+        </childnode>
+        <childnode refid="7540" relation="include">
+        </childnode>
+      </node>
+      <node id="7576">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7562" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7569" relation="include">
+        </childnode>
+        <childnode refid="7504" relation="include">
+        </childnode>
+      </node>
+      <node id="7500">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7502" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7516" relation="include">
+        </childnode>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7537" relation="include">
+        </childnode>
+      </node>
+      <node id="7556">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="7568">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7559" relation="include">
+        </childnode>
+        <childnode refid="7550" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+      </node>
+      <node id="7513">
+        <label>exception</label>
+      </node>
+      <node id="7502">
+        <label>stddef.h</label>
+      </node>
+      <node id="7543">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="7542" relation="include">
+        </childnode>
+      </node>
+      <node id="7574">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7530" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+      </node>
+      <node id="7522">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="7512" relation="include">
+        </childnode>
+      </node>
+      <node id="7557">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="7538" relation="include">
+        </childnode>
+        <childnode refid="7558" relation="include">
+        </childnode>
+      </node>
+      <node id="7514">
+        <label>ostream</label>
+      </node>
+      <node id="7499">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+      </node>
+      <node id="7547">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="7520">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7521" relation="include">
+        </childnode>
+        <childnode refid="7528" relation="include">
+        </childnode>
+        <childnode refid="7526" relation="include">
+        </childnode>
+        <childnode refid="7529" relation="include">
+        </childnode>
+      </node>
+      <node id="7563">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7564" relation="include">
+        </childnode>
+      </node>
+      <node id="7560">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="7498">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="7564">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="7542" relation="include">
+        </childnode>
+        <childnode refid="7515" relation="include">
+        </childnode>
+      </node>
+      <node id="7561">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7540" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+      </node>
+      <node id="7545">
+        <label>typeinfo</label>
+      </node>
+      <node id="7552">
+        <label>cstdio</label>
+      </node>
+      <node id="7537">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7498" relation="include">
+        </childnode>
+      </node>
+      <node id="7529">
+        <label>vector</label>
+      </node>
+      <node id="7573">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="7570">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="7527">
+        <label>new</label>
+      </node>
+      <node id="7505">
+        <label>utility</label>
+      </node>
+      <node id="7528">
+        <label>array</label>
+      </node>
+      <node id="7515">
+        <label>sstream</label>
+      </node>
+      <node id="7579">
+        <label>ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+        <childnode refid="7497" relation="include">
+        </childnode>
+        <childnode refid="7578" relation="include">
+        </childnode>
+        <childnode refid="7580" relation="include">
+        </childnode>
+      </node>
+      <node id="7565">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="7538" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7559" relation="include">
+        </childnode>
+        <childnode refid="7557" relation="include">
+        </childnode>
+        <childnode refid="7548" relation="include">
+        </childnode>
+        <childnode refid="7566" relation="include">
+        </childnode>
+        <childnode refid="7567" relation="include">
+        </childnode>
+        <childnode refid="7568" relation="include">
+        </childnode>
+        <childnode refid="7569" relation="include">
+        </childnode>
+        <childnode refid="7570" relation="include">
+        </childnode>
+      </node>
+      <node id="7567">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="7534">
+        <label>iosfwd</label>
+      </node>
+      <node id="7524">
+        <label>cstdlib</label>
+      </node>
+      <node id="7580">
+        <label>TH/THGeneral.h</label>
+      </node>
+      <node id="7536">
+        <label>iostream</label>
+      </node>
+      <node id="7512">
+        <label>cstddef</label>
+      </node>
+      <node id="7554">
+        <label>unordered_map</label>
+      </node>
+      <node id="7496">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseTensor.cpp</label>
+        <link refid="_sparse_tensor_8cpp"/>
+        <childnode refid="7497" relation="include">
+        </childnode>
+        <childnode refid="7578" relation="include">
+        </childnode>
+        <childnode refid="7567" relation="include">
+        </childnode>
+        <childnode refid="7579" relation="include">
+        </childnode>
+        <childnode refid="7581" relation="include">
+        </childnode>
+      </node>
+      <node id="7553">
+        <label>mutex</label>
+      </node>
+      <node id="7497">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7499" relation="include">
+        </childnode>
+        <childnode refid="7500" relation="include">
+        </childnode>
+        <childnode refid="7538" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7548" relation="include">
+        </childnode>
+        <childnode refid="7549" relation="include">
+        </childnode>
+        <childnode refid="7557" relation="include">
+        </childnode>
+        <childnode refid="7559" relation="include">
+        </childnode>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7563" relation="include">
+        </childnode>
+        <childnode refid="7565" relation="include">
+        </childnode>
+        <childnode refid="7571" relation="include">
+        </childnode>
+        <childnode refid="7572" relation="include">
+        </childnode>
+        <childnode refid="7573" relation="include">
+        </childnode>
+        <childnode refid="7574" relation="include">
+        </childnode>
+        <childnode refid="7575" relation="include">
+        </childnode>
+        <childnode refid="7568" relation="include">
+        </childnode>
+        <childnode refid="7569" relation="include">
+        </childnode>
+        <childnode refid="7562" relation="include">
+        </childnode>
+        <childnode refid="7576" relation="include">
+        </childnode>
+        <childnode refid="7577" relation="include">
+        </childnode>
+      </node>
+      <node id="7551">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="7523" relation="include">
+        </childnode>
+        <childnode refid="7552" relation="include">
+        </childnode>
+        <childnode refid="7524" relation="include">
+        </childnode>
+        <childnode refid="7509" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7553" relation="include">
+        </childnode>
+        <childnode refid="7554" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+        <childnode refid="7529" relation="include">
+        </childnode>
+        <childnode refid="7555" relation="include">
+        </childnode>
+        <childnode refid="7498" relation="include">
+        </childnode>
+      </node>
+      <node id="7503">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="7498" relation="include">
+        </childnode>
+        <childnode refid="7504" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7513" relation="include">
+        </childnode>
+        <childnode refid="7514" relation="include">
+        </childnode>
+        <childnode refid="7515" relation="include">
+        </childnode>
+        <childnode refid="7510" relation="include">
+        </childnode>
+      </node>
+      <node id="7569">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="7549" relation="include">
+        </childnode>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7568" relation="include">
+        </childnode>
+        <childnode refid="7562" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7559" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7534" relation="include">
+        </childnode>
+        <childnode refid="7505" relation="include">
+        </childnode>
+      </node>
+      <node id="7559">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="7548" relation="include">
+        </childnode>
+        <childnode refid="7538" relation="include">
+        </childnode>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7560" relation="include">
+        </childnode>
+        <childnode refid="7557" relation="include">
+        </childnode>
+        <childnode refid="7561" relation="include">
+        </childnode>
+        <childnode refid="7541" relation="include">
+        </childnode>
+        <childnode refid="7542" relation="include">
+        </childnode>
+        <childnode refid="7544" relation="include">
+        </childnode>
+        <childnode refid="7518" relation="include">
+        </childnode>
+        <childnode refid="7562" relation="include">
+        </childnode>
+        <childnode refid="7504" relation="include">
+        </childnode>
+      </node>
+      <node id="7506">
+        <label>type_traits</label>
+      </node>
+      <node id="7562">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="7519" relation="include">
+        </childnode>
+        <childnode refid="7503" relation="include">
+        </childnode>
+        <childnode refid="7536" relation="include">
+        </childnode>
+      </node>
+      <node id="7521">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="7522" relation="include">
+        </childnode>
+        <childnode refid="7523" relation="include">
+        </childnode>
+        <childnode refid="7508" relation="include">
+        </childnode>
+        <childnode refid="7512" relation="include">
+        </childnode>
+        <childnode refid="7524" relation="include">
+        </childnode>
+        <childnode refid="7525" relation="include">
+        </childnode>
+        <childnode refid="7507" relation="include">
+        </childnode>
+        <childnode refid="7526" relation="include">
+        </childnode>
+        <childnode refid="7501" relation="include">
+        </childnode>
+        <childnode refid="7527" relation="include">
+        </childnode>
+        <childnode refid="7506" relation="include">
+        </childnode>
+        <childnode refid="7505" relation="include">
+        </childnode>
+        <childnode refid="7498" relation="include">
+        </childnode>
+      </node>
+      <node id="7523">
+        <label>algorithm</label>
+      </node>
+      <node id="7548">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="7540" relation="include">
+        </childnode>
+      </node>
+      <node id="7525">
+        <label>cstring</label>
+      </node>
+      <node id="7581">
+        <label>TH/THBlasUtils.h</label>
+      </node>
+      <node id="7501">
+        <label>memory</label>
+      </node>
+      <node id="7507">
+        <label>initializer_list</label>
+      </node>
+      <node id="7571">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="7536" relation="include">
+        </childnode>
+        <childnode refid="7547" relation="include">
+        </childnode>
+        <childnode refid="7538" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Basic<sp/>functions<sp/>on<sp/>sparse<sp/>tensors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/ATen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/SparseTensorImpl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/NativeFunctions.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/native/sparse/SparseUtils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH/THBlasUtils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>access<sp/>methods</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">int64_t<sp/>_sparseDims_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;sparseDims();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">int64_t<sp/>_denseDims_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;denseDims();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_coalesced_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;coalesced();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">int64_t<sp/>_nnz_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;nnz();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>This<sp/>is<sp/>wrong:<sp/>if<sp/>nnz<sp/>==<sp/>0<sp/>but<sp/>indices/values<sp/>is<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>empty<sp/>then<sp/>we&apos;ll<sp/>return<sp/>all<sp/>the<sp/>values,<sp/>even<sp/>the<sp/>ones<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>are<sp/>&quot;masked<sp/>out&quot;<sp/>by<sp/>nnz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">Tensor<sp/>_indices_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>nnz<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._nnz();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nnz<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Narrows<sp/>don&apos;t<sp/>work<sp/>on<sp/>0-length<sp/>tensors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>When<sp/>we<sp/>handle<sp/>zero-size<sp/>dims<sp/>correctly,<sp/>this<sp/>will<sp/>work<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>can<sp/>remove<sp/>the<sp/>special<sp/>case.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;indices();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;indices().narrow(1,<sp/>0,<sp/>nnz);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">Tensor<sp/>_values_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>indices<sp/>for<sp/>some<sp/>relevant<sp/>notes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>nnz<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._nnz();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nnz<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;values();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;values().narrow(0,<sp/>0,<sp/>nnz);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/>*<sp/>creation<sp/>methods</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Empty<sp/>init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">SparseTensor<sp/>new_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseType&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>AT_ASSERT(!<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.is_undefined());</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>AT_ASSERT(!<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.is_variable());</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>AT_ASSERT(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.is_sparse());</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Hmm...<sp/>this<sp/>const_cast<sp/>business<sp/>seems<sp/>a<sp/>bit<sp/>dodgy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>SparseTensor(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SparseTensorImpl(const_cast&lt;SparseType*&gt;(&amp;<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)),<sp/></highlight><highlight class="comment">/*<sp/>retain<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">/***<sp/>Helper<sp/>methods<sp/>***/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Pointer-copy<sp/>init<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">SparseTensor<sp/>new_with_tensor_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LongTensor&amp;<sp/>indices,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>values_)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>Tensor<sp/>values;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(values_.dim()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mimic<sp/>Numpy<sp/>behavior<sp/>here<sp/>and<sp/>treat<sp/>it<sp/>as<sp/>a<sp/>1D<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>values<sp/>=<sp/>values_.expand({1});</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>values<sp/>=<sp/>values_;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>This<sp/>is<sp/>a<sp/>temporary<sp/>test<sp/>until<sp/>we<sp/>support<sp/>zero-size<sp/>dims.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>I&apos;m<sp/>NOT<sp/>adding<sp/>the<sp/>&quot;obvious&quot;<sp/>bypass<sp/>code,<sp/>because<sp/>it<sp/>wasn&apos;t<sp/>supported</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>previously</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>AT_CHECK(indices.numel()<sp/>!=<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;cannot<sp/>construct<sp/>sparse<sp/>tensor<sp/>with<sp/>empty<sp/>indices;<sp/>use<sp/>the<sp/>nullary<sp/>constructor<sp/>instead&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseType&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref><sp/>=<sp/>values.type().toSparse();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>sizes<sp/>are<sp/>not<sp/>given,<sp/>it<sp/>is<sp/>inferred<sp/>as<sp/>max<sp/>index<sp/>of<sp/>each<sp/>dim.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>int64_t<sp/>sparseDims<sp/>=<sp/>indices.size(0);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>int64_t<sp/>denseDims<sp/>=<sp/>values.dim()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>computed_sizes(sparseDims<sp/>+<sp/>denseDims);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>It<sp/>used<sp/>to<sp/>keepdim.<sp/>I<sp/>think<sp/>that<sp/>was<sp/>wrong.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>LongTensor<sp/>computed_indices_sizes<sp/>=<sp/>std::get&lt;</highlight><highlight class="comment">/*<sp/>values<sp/>*/</highlight><highlight class="normal"><sp/>0&gt;(indices.max(</highlight><highlight class="comment">/*<sp/>dim<sp/>*/</highlight><highlight class="normal"><sp/>1,<sp/></highlight><highlight class="comment">/*<sp/>keepdim<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>computed_indices_sizes.add_(1);<sp/></highlight><highlight class="comment">//<sp/>len<sp/>=<sp/>max_index<sp/>+<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>LongTensor<sp/>cpu_computed_indices_sizes;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(computed_indices_sizes.is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu_computed_indices_sizes<sp/>=<sp/>at::CPU(kLong).tensor(computed_indices_sizes.sizes());</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu_computed_indices_sizes.copy_(computed_indices_sizes);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu_computed_indices_sizes<sp/>=<sp/>computed_indices_sizes;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cpu_computed_indices_sizes_accessor<sp/>=<sp/>cpu_computed_indices_sizes.accessor&lt;int64_t,<sp/>1&gt;();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>sparseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>computed_sizes[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(d)]<sp/>=<sp/>cpu_computed_indices_sizes_accessor[d];</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>denseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>computed_sizes[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sparseDims<sp/>+<sp/>d)]<sp/>=<sp/>values.size(d+1);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_new_with_dims_and_tensor_sparse(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>sparseDims,<sp/>denseDims,<sp/>computed_sizes,<sp/>indices,<sp/>values);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">SparseTensor<sp/>new_with_size_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseType&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>ArrayRef&lt;int64_t&gt;<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>SparseTensor<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>=<sp/>new_sparse(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>_raw_resize_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>size.size(),<sp/>0,<sp/>size);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>Got<sp/>rid<sp/>of<sp/>the<sp/>sizes<sp/>==<sp/>NULL<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">SparseTensor<sp/>new_with_tensor_and_size_unsafe_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LongTensor&amp;<sp/>indices,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>values_,<sp/>ArrayRef&lt;int64_t&gt;<sp/>sizes)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>Tensor<sp/>values;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(values_.dim()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mimic<sp/>Numpy<sp/>behavior<sp/>here<sp/>and<sp/>treat<sp/>it<sp/>as<sp/>a<sp/>1D<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>values<sp/>=<sp/>values_.expand({1});</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>values<sp/>=<sp/>values_;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseType&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref><sp/>=<sp/>values.type().toSparse();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>used<sp/>to<sp/>be<sp/>a<sp/>dim()<sp/>==<sp/>0<sp/>test,<sp/>but<sp/>that&apos;s<sp/>legacy<sp/>TH<sp/>semantics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indices.numel()<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>values.numel()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>new_with_size_sparse(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>sizes);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>int64_t<sp/>sparseDims<sp/>=<sp/>indices.size(0);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>int64_t<sp/>denseDims<sp/>=<sp/>values.dim()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_new_with_dims_and_tensor_sparse(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>sparseDims,<sp/>denseDims,<sp/>sizes,<sp/>indices,<sp/>values);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>Got<sp/>rid<sp/>of<sp/>the<sp/>sizes<sp/>==<sp/>NULL<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">SparseTensor<sp/>new_with_tensor_and_size_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>LongTensor&amp;<sp/>indices,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>values_,<sp/>ArrayRef&lt;int64_t&gt;<sp/>sizes)<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>Tensor<sp/>values;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(values_.dim()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mimic<sp/>Numpy<sp/>behavior<sp/>here<sp/>and<sp/>treat<sp/>it<sp/>as<sp/>a<sp/>1D<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>values<sp/>=<sp/>values_.expand({1});</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>values<sp/>=<sp/>values_;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseType&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref><sp/>=<sp/>values.type().toSparse();</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>This<sp/>used<sp/>to<sp/>be<sp/>dims,<sp/>but<sp/>mumble<sp/>TH<sp/>handling<sp/>zero-sized<sp/>tensors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>incorrectly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indices.numel()<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>values.numel()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>new_with_size_sparse(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>sizes);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>int64_t<sp/>sparseDims<sp/>=<sp/>indices.size(0);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>int64_t<sp/>denseDims<sp/>=<sp/>values.dim()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>AT_CHECK(sizes.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>()<sp/>==<sp/>sparseDims<sp/>+<sp/>denseDims,<sp/></highlight><highlight class="stringliteral">&quot;number<sp/>of<sp/>dimensions<sp/>must<sp/>be<sp/>sparseDims<sp/>(&quot;</highlight><highlight class="normal">,<sp/>sparseDims,<sp/></highlight><highlight class="stringliteral">&quot;)<sp/>+<sp/>denseDims<sp/>(&quot;</highlight><highlight class="normal">,<sp/>denseDims,<sp/></highlight><highlight class="stringliteral">&quot;),<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>sizes);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>LongTensor<sp/>max_indices<sp/>=<sp/>std::get&lt;</highlight><highlight class="comment">/*<sp/>values<sp/>*/</highlight><highlight class="normal"><sp/>0&gt;(indices.max(</highlight><highlight class="comment">/*<sp/>dim<sp/>*/</highlight><highlight class="normal"><sp/>1,<sp/></highlight><highlight class="comment">/*<sp/>keepdim<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>LongTensor<sp/>cpu_max_indices;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(max_indices.is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu_max_indices<sp/>=<sp/>at::CPU(kLong).copy(max_indices);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>cpu_max_indices<sp/>=<sp/>max_indices;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cpu_max_indices_accessor<sp/>=<sp/>cpu_max_indices.accessor&lt;int64_t,<sp/>1&gt;();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>sparseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>This<sp/>used<sp/>to<sp/>sync<sp/>ndim<sp/>times<sp/>to<sp/>access<sp/>each<sp/>entry;<sp/>now<sp/>we<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>everything<sp/>to<sp/>CPU<sp/>first<sp/>and<sp/>then<sp/>access<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>max_index_in_dim<sp/>=<sp/>cpu_max_indices_accessor[d];</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_size<sp/>=<sp/>sizes[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(d)];</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(max_index_in_dim<sp/>&lt;<sp/>dim_size,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;sizes<sp/>is<sp/>inconsistent<sp/>with<sp/>indices:<sp/>for<sp/>dim<sp/>&quot;</highlight><highlight class="normal">,<sp/>d,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>size<sp/>is<sp/>&quot;</highlight><highlight class="normal">,<sp/>dim_size,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>found<sp/>index<sp/>&quot;</highlight><highlight class="normal">,<sp/>max_index_in_dim);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>denseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>values_size<sp/>=<sp/>values.size(d+1);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>specified_size<sp/>=<sp/>sizes[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sparseDims<sp/>+<sp/>d)];</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(values_size<sp/>&lt;=<sp/>specified_size,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;values<sp/>and<sp/>sizes<sp/>are<sp/>inconsistent:<sp/>sizes[&quot;</highlight><highlight class="normal">,<sp/>d<sp/>+<sp/>sparseDims,<sp/></highlight><highlight class="stringliteral">&quot;]<sp/>is<sp/>&quot;</highlight><highlight class="normal">,<sp/>specified_size,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>values.size(&quot;</highlight><highlight class="normal">,<sp/>d<sp/>+<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;)<sp/>is<sp/>&quot;</highlight><highlight class="normal">,<sp/>values_size);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_new_with_dims_and_tensor_sparse(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>sparseDims,<sp/>denseDims,<sp/>sizes,<sp/>indices,<sp/>values);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>Deleted<sp/>newWithSizeNd<sp/>variants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">SparseTensor<sp/>clone_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>SparseTensor<sp/>other<sp/>=<sp/>new_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type());</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>_raw_resize_sparse(other,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._sparseDims(),<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._denseDims(),<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes());</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>This<sp/>seems<sp/>to<sp/>preserve<sp/>the<sp/>size<sp/>of<sp/>the<sp/>UN-narrowed<sp/>indices<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>values.<sp/><sp/>Veeery<sp/>interesting.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>_copy_into_sparse(other,<sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;indices(),<sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;values());</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>_get_sparse_impl(other)-&gt;set_coalesced(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_coalesced());</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>_get_sparse_impl(other)-&gt;set_nnz(</highlight><highlight class="keyword">self</highlight><highlight class="normal">._nnz());</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>other;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="201"><highlight class="comment"><sp/>*<sp/>reshaping<sp/>methods</highlight></codeline>
+<codeline lineno="202"><highlight class="comment"><sp/>******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="205"><highlight class="comment">//<sp/>We<sp/>should<sp/>implement<sp/>a<sp/>utility<sp/>function<sp/>which:<sp/>(1)<sp/>sets<sp/>nnz<sp/>and<sp/>(2)<sp/>resizes</highlight></codeline>
+<codeline lineno="206"><highlight class="comment">//<sp/>indices/values<sp/>to<sp/>hold<sp/>enough<sp/>space<sp/>to<sp/>fit<sp/>nnz,<sp/>if<sp/>nnz<sp/>is<sp/>larger<sp/>than</highlight></codeline>
+<codeline lineno="207"><highlight class="comment">//<sp/>the<sp/>previous<sp/>amount.<sp/><sp/>This<sp/>ensures<sp/>that<sp/>we<sp/>maintain<sp/>the<sp/>nnz<sp/>invariant.</highlight></codeline>
+<codeline lineno="208"><highlight class="comment">void<sp/>_resize_nnz_(const<sp/>SparseTensor&amp;<sp/>self,<sp/>int64_t<sp/>nnz)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="210"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resize_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>ArrayRef&lt;int64_t&gt;<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>_raw_resize_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>size.size(),<sp/>0,<sp/>size);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">SparseTensor&amp;<sp/>raw_resize_sparse_(SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>ArrayRef&lt;int64_t&gt;<sp/>size,<sp/>int64_t<sp/>sparseDims,<sp/>int64_t<sp/>denseDims)<sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparseDims<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>sparseDims<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._indices().size(0);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(denseDims<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>denseDims<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._values().dim()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>_raw_resize_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>sparseDims,<sp/>denseDims,<sp/>size);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_is_same_size_as_sparse(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._sparseDims()<sp/>==<sp/>src._sparseDims()<sp/>&amp;&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._denseDims()<sp/>==<sp/>src._denseDims()<sp/>&amp;&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes().equals(src.sizes());</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">SparseTensor&amp;<sp/>resize_as_sparse_(SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_is_same_size_as_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>src))<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>_raw_resize_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>src._sparseDims(),<sp/>src._denseDims(),<sp/>src.sizes());</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>Dropped<sp/>the<sp/>resizeNd<sp/>variants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal">Tensor<sp/>sparse_to_dense(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/>Tensor<sp/>dst<sp/>=<sp/>at::zeros(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes(),<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type().toDense());</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dst.add_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal">SparseTensor&amp;<sp/>copy_sparse_(SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/>src)<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isSameTensor(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>src))<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>_raw_resize_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>src._sparseDims(),<sp/>src._denseDims(),<sp/>src.sizes());</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>This<sp/>seems<sp/>to<sp/>copy<sp/>the<sp/>underlying<sp/>full<sp/>indices/values<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>_copy_into_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>_get_sparse_impl(src)-&gt;indices(),<sp/>_get_sparse_impl(src)-&gt;values());</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;set_coalesced(src.is_coalesced());</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;set_nnz(src._nnz());</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">SparseTensor<sp/>coalesce_sparse_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/>AT_ASSERT(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.defined());</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>AT_ASSERT(!</highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_variable());</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>AT_ASSERT(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_sparse());</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">._nnz()<sp/>&lt;<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>_get_sparse_impl(</highlight><highlight class="keyword">self</highlight><highlight class="normal">)-&gt;set_coalesced(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_coalesced())<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/>LongTensor<sp/>indices<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._indices();</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>Tensor<sp/>values<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._values().contiguous();</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>int64_t<sp/>sparseDims<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._sparseDims();</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/>int64_t<sp/>denseDims<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._denseDims();</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>int64_t<sp/>nnz<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._nnz();</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>LongTensor<sp/>indices_scalar<sp/>=<sp/>at::zeros({nnz},<sp/>kLong);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>int64_t<sp/>factor<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>sparseDims<sp/>-<sp/>1;<sp/>d<sp/>&gt;=<sp/>0;<sp/>d--)<sp/>{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/>LongTensor<sp/>indices_slice<sp/>=<sp/>indices.select(0,<sp/>d);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/>indices_scalar.add_(indices_slice,<sp/>factor);<sp/></highlight><highlight class="comment">//<sp/>cadd<sp/>is<sp/>swapped<sp/>args</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>factor<sp/>*=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.size(d);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/>SparseTensor<sp/>dst<sp/>=<sp/>new_sparse(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type());</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/>_raw_resize_sparse(dst,<sp/>sparseDims,<sp/>denseDims,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes());</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>is<sp/>there<sp/>a<sp/>more<sp/>idiomatic<sp/>way<sp/>to<sp/>do<sp/>this?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/>LongTensor<sp/>newIndices<sp/>=<sp/>indices.type().tensor(indices.sizes());</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>Tensor<sp/>newValues<sp/>=<sp/>values.type().tensor(values.sizes());</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/>_alias_into_sparse(dst,<sp/>newIndices,<sp/>newValues);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/>LongTensor<sp/>indicesBuffer;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/>LongTensor<sp/>indicesPermutation;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/>std::tie(indicesBuffer,<sp/>indicesPermutation)<sp/>=<sp/>indices_scalar.sort(0);</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>The<sp/>accessor<sp/>accesses<sp/>here<sp/>rely<sp/>on<sp/>self._nnz()<sp/>&gt;<sp/>0<sp/>(tested<sp/>earlier<sp/>in<sp/>this<sp/>function)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newIndicesAccessor<sp/>=<sp/>newIndices.accessor&lt;int64_t,<sp/>2&gt;();</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indicesAccessor<sp/>=<sp/>indices.accessor&lt;int64_t,<sp/>2&gt;();</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indicesPermutationAccessor<sp/>=<sp/>indicesPermutation.accessor&lt;int64_t,<sp/>1&gt;();</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indicesBufferAccessor<sp/>=<sp/>indicesBuffer.accessor&lt;int64_t,<sp/>1&gt;();</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/>int64_t<sp/>i<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/>AT_DISPATCH_ALL_TYPES(</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>values.type(),<sp/></highlight><highlight class="stringliteral">&quot;coalesce&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>prev<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>blockSize<sp/>=<sp/>values.stride(0);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>values_ptr<sp/>=<sp/>values.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>newValues_ptr<sp/>=<sp/>newValues.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>nnz;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>pos<sp/>=<sp/>indicesPermutationAccessor[j];</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>curr<sp/>=<sp/>indicesBufferAccessor[j];</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(curr<sp/>==<sp/>prev)<sp/>{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>THBlas_axpy&lt;scalar_t&gt;(blockSize,<sp/>1,<sp/>values_ptr<sp/>+<sp/>pos<sp/>*<sp/>blockSize,<sp/>1,<sp/>newValues_ptr<sp/>+<sp/>i<sp/>*<sp/>blockSize,<sp/>1);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++i;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>sparseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>newIndicesAccessor[d][i]<sp/>=<sp/>indicesAccessor[d][pos];</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>THBlas_copy&lt;scalar_t&gt;(blockSize,<sp/>values_ptr<sp/>+<sp/>pos<sp/>*<sp/>blockSize,<sp/>1,<sp/>newValues_ptr<sp/>+<sp/>i<sp/>*<sp/>blockSize,<sp/>1);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>prev<sp/>=<sp/>curr;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/>_get_sparse_impl(dst)-&gt;set_coalesced(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/>_get_sparse_impl(dst)-&gt;set_nnz(i<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dst;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal">SparseTensor&amp;<sp/>sparse_mask_out_cpu(SparseTensor&amp;<sp/>r,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>t,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SparseTensor&amp;<sp/>mask)<sp/>{</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/>AT_CHECK(mask.is_coalesced(),<sp/></highlight><highlight class="stringliteral">&quot;sparse_mask:<sp/>mask<sp/>is<sp/>uncoalesced&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>AT_CHECK(mask.sizes().equals(t.sizes()),<sp/></highlight><highlight class="stringliteral">&quot;sparse_mask:<sp/>operands<sp/>have<sp/>incompatible<sp/>sizes;<sp/>self<sp/>has<sp/>size<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>t.sizes(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>mask<sp/>has<sp/>size<sp/>&quot;</highlight><highlight class="normal">,<sp/>mask.sizes());</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/>AT_ASSERT(!t.is_cuda());<sp/></highlight><highlight class="comment">//<sp/>we<sp/>were<sp/>supposed<sp/>to<sp/>have<sp/>dispatched<sp/>on<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/>AT_CHECK(!r.is_cuda(),<sp/></highlight><highlight class="stringliteral">&quot;sparse_mask:<sp/>expected<sp/>&apos;out&apos;<sp/>to<sp/>be<sp/>CPU,<sp/>but<sp/>got<sp/>CUDA&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/>AT_CHECK(!mask.is_cuda(),<sp/></highlight><highlight class="stringliteral">&quot;sparse_mask:<sp/>expected<sp/>&apos;mask&apos;<sp/>to<sp/>be<sp/>CPU,<sp/>but<sp/>got<sp/>CUDA&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/>resize_as_sparse_(r,<sp/>mask);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mask._nnz()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>r.zero_();</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>t.dim();</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/>int64_t<sp/>sparseDims<sp/>=<sp/>mask._sparseDims();</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/>LongTensor<sp/>mask_indices<sp/>=<sp/>mask._indices();</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/>Tensor<sp/>mask_values<sp/>=<sp/>mask._values();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/>Tensor<sp/>r_values<sp/>=<sp/>r._values().type().tensor(mask_values.sizes());</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/>_alias_into_sparse(r,<sp/>mask_indices.clone(),<sp/>r_values);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/>_get_sparse_impl(r)-&gt;set_coalesced(mask.is_coalesced());</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/>int64_t<sp/>r_nnz<sp/>=<sp/>mask._nnz();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>_get_sparse_impl(r)-&gt;set_nnz(r_nnz);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>Relies<sp/>on<sp/>mask._nnz()<sp/>==<sp/>0<sp/>test<sp/>above</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mask_indices_accessor<sp/>=<sp/>mask_indices.accessor&lt;int64_t,<sp/>2&gt;();</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"></highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dim<sp/>&gt;<sp/>sparseDims)<sp/>{</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>This<sp/>used<sp/>to<sp/>reuse<sp/>buffers,<sp/>but<sp/>I<sp/>deoptimized<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>r_nnz;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Tensor<sp/>srcBuffer<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>sparseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>srcBuffer<sp/>=<sp/>srcBuffer.select(0,<sp/>mask_indices_accessor[d][i]);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Tensor<sp/>dstBuffer<sp/>=<sp/>r_values.select(0,<sp/>i);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dstBuffer.copy_(srcBuffer);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_DISPATCH_ALL_TYPES(</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_values.type(),<sp/></highlight><highlight class="stringliteral">&quot;sparse_mask&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r_values_accessor<sp/>=<sp/>r_values.accessor&lt;scalar_t,<sp/>1&gt;();</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>The<sp/>old<sp/>code<sp/>did<sp/>this<sp/>pointer<sp/>access<sp/>in<sp/>a<sp/>weird<sp/>way<sp/>(going<sp/>straight</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>storage<sp/>+<sp/>storageOffset.)<sp/><sp/>Was<sp/>there<sp/>perhaps<sp/>a<sp/>method<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>madness?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>t_ptr<sp/>=<sp/>t.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>r_nnz;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>idx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>sparseDims;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx<sp/>+=<sp/>mask_indices_accessor[d][i]<sp/>*<sp/>t.stride(d);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>val<sp/>=<sp/>t_ptr[idx];</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r_values_accessor[i]<sp/>=<sp/>val;</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal">SparseTensor<sp/>sparse_mask_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>t,<sp/>SparseTensorRef<sp/>mask)<sp/>{</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>SparseTensor<sp/>r<sp/>=<sp/>t.type().toSparse().tensor();</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/>sparse_mask_out_cpu(r,<sp/>t,<sp/>mask.tref);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>r;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseTensor.cpp"/>
+  </compounddef>
+</doxygen>

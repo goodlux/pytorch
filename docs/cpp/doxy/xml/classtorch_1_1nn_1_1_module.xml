@@ -1,0 +1,1000 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_module" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::Module</compoundname>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; BatchNormImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Conv1dImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Conv2dImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Conv3dImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Dropout2dImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; DropoutImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; EmbeddingImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; FunctionalImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; GRUImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; LinearImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; LSTMImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; RNNImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; SequentialImpl &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Derived &gt;</derivedcompoundref>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classtorch_1_1nn_1_1_module_1a141b87afa7847d0886f7dafd2323cd64" prot="private" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">torch::detail::OrderedDict</ref>&lt; std::string, T &gt;</type>
+        <definition>using torch::nn::Module::OrderedDict =  torch::detail::OrderedDict&lt;std::string, T&gt;</definition>
+        <argsstring></argsstring>
+        <name>OrderedDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="143" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtorch_1_1nn_1_1_module_1a16ae4ef9b7318a77056d0f23eace8111" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Derived</type>
+          </param>
+        </templateparamlist>
+        <type>friend class</type>
+        <definition>friend class Cloneable</definition>
+        <argsstring></argsstring>
+        <name>Cloneable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="146" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classtorch_1_1nn_1_1_module_1a03766dfcc80e3bd3d1cf5ef4d587733d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>friend class</type>
+        <definition>friend class detail::CursorBase</definition>
+        <argsstring></argsstring>
+        <name>detail::CursorBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="148" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_module_1aa64aa38ce0413382ae8a159a26a9cf83" prot="private" static="no" mutable="no">
+        <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref>&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>OrderedDict&lt;Tensor&gt; torch::nn::Module::parameters_</definition>
+        <argsstring></argsstring>
+        <name>parameters_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="156" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_module_1a4c78a9d00c4193a4af0bf32117bd79f8" prot="private" static="no" mutable="no">
+        <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref>&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>OrderedDict&lt;Tensor&gt; torch::nn::Module::buffers_</definition>
+        <argsstring></argsstring>
+        <name>buffers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="157" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_module_1a4440b31ad8706394f57a8e4ab83586cf" prot="private" static="no" mutable="no">
+        <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref>&lt; std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt; &gt;</type>
+        <definition>OrderedDict&lt;std::shared_ptr&lt;Module&gt; &gt; torch::nn::Module::children_</definition>
+        <argsstring></argsstring>
+        <name>children_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="158" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_module_1aad6639346512cf961ca08f8cce153009" prot="private" static="no" mutable="yes">
+        <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; std::string &gt;</type>
+        <definition>at::optional&lt;std::string&gt; torch::nn::Module::name_</definition>
+        <argsstring></argsstring>
+        <name>name_</name>
+        <briefdescription>
+<para>The module&apos;s name (e.g. &quot;LSTM&quot;). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="161" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_module_1afe0db9f4a877af9af9bea818c75ed103" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool torch::nn::Module::is_training_</definition>
+        <argsstring></argsstring>
+        <name>is_training_</name>
+        <initializer>{true}</initializer>
+        <briefdescription>
+<para>Whether the module is in training mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="164" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::Module::Module</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>Module</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Tells the base <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> about the name of the submodule. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::Module::Module</definition>
+        <argsstring>()=default</argsstring>
+        <name>Module</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the base module without immediate knowledge of the submodule&apos;s name. The name of the submodule is inferred via RTTI the first time <computeroutput>.<ref refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" kindref="member">name()</ref></computeroutput> is invoked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual torch::nn::Module::~Module</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Module</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; torch::nn::Module::name</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Returns the name of the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="21" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1ac1f0c742f8b793a80797b62a490bbdc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Module &gt; torch::nn::Module::clone</definition>
+        <argsstring>(at::optional&lt; Device &gt; device=at::nullopt) const</argsstring>
+        <name>clone</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e">clone</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_sequential_impl_1ac1de5a466d4eafcd9d466efe8efd646c">clone</reimplementedby>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs a recursive deep copy of the module and all its registered parameters, buffers and submodules, optionally setting the current device to the one supplied before cloning. If no device is given, each parameter and buffer will be moved to the device of its source. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="46" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="38" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_module_cursor" kindref="compound">ModuleCursor</ref></type>
+        <definition>ModuleCursor torch::nn::Module::modules</definition>
+        <argsstring>()</argsstring>
+        <name>modules</name>
+        <briefdescription>
+<para>Provides a means to traverse the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="50" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_const_module_cursor" kindref="compound">ConstModuleCursor</ref></type>
+        <definition>ConstModuleCursor torch::nn::Module::modules</definition>
+        <argsstring>() const</argsstring>
+        <name>modules</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_module_cursor" kindref="compound">ModuleCursor</ref></type>
+        <definition>ModuleCursor torch::nn::Module::children</definition>
+        <argsstring>()</argsstring>
+        <name>children</name>
+        <briefdescription>
+<para>Traverses the (immediate) children of the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="54" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_const_module_cursor" kindref="compound">ConstModuleCursor</ref></type>
+        <definition>ConstModuleCursor torch::nn::Module::children</definition>
+        <argsstring>() const</argsstring>
+        <name>children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_parameter_cursor" kindref="compound">ParameterCursor</ref></type>
+        <definition>ParameterCursor torch::nn::Module::parameters</definition>
+        <argsstring>()</argsstring>
+        <name>parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Provides a means to recursively access the parameters of the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> tree. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="59" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_const_parameter_cursor" kindref="compound">ConstParameterCursor</ref></type>
+        <definition>ConstParameterCursor torch::nn::Module::parameters</definition>
+        <argsstring>() const</argsstring>
+        <name>parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="60" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_buffer_cursor" kindref="compound">BufferCursor</ref></type>
+        <definition>BufferCursor torch::nn::Module::buffers</definition>
+        <argsstring>()</argsstring>
+        <name>buffers</name>
+        <briefdescription>
+<para>Provides a means to recursively access the buffers of the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> tree. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_const_buffer_cursor" kindref="compound">ConstBufferCursor</ref></type>
+        <definition>ConstBufferCursor torch::nn::Module::buffers</definition>
+        <argsstring>() const</argsstring>
+        <name>buffers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::train</definition>
+        <argsstring>()</argsstring>
+        <name>train</name>
+        <briefdescription>
+<para>Enables training mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="67" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::eval</definition>
+        <argsstring>()</argsstring>
+        <name>eval</name>
+        <briefdescription>
+<para>Disables training mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="70" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool torch::nn::Module::is_training</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_training</name>
+        <briefdescription>
+<para>True if the module is in training mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="73" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::to</definition>
+        <argsstring>(torch::Device device, torch::Dtype dtype, bool non_blocking=false)</argsstring>
+        <name>to</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e">to</reimplementedby>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">torch::Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>torch::Dtype</type>
+          <declname>dtype</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively casts all parameters to the given dtype and device. If <computeroutput>non_blocking</computeroutput> is true and the source is in pinned memory and destination is on the GPU or vice versa, the copy is performed asynchronously with respect to the host. Otherwise, the argument has no effect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="93" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::to</definition>
+        <argsstring>(torch::Dtype dtype, bool non_blocking=false)</argsstring>
+        <name>to</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87">to</reimplementedby>
+        <param>
+          <type>torch::Dtype</type>
+          <declname>dtype</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively casts all parameters to the given dtype. If <computeroutput>non_blocking</computeroutput> is true and the source is in pinned memory and destination is on the GPU or vice versa, the copy is performed asynchronously with respect to the host. Otherwise, the argument has no effect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::to</definition>
+        <argsstring>(torch::Device device, bool non_blocking=false)</argsstring>
+        <name>to</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf">to</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf">to</reimplementedby>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">torch::Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Recursively moves all parameters to the given device. If <computeroutput>non_blocking</computeroutput> is true and the source is in pinned memory and destination is on the GPU or vice versa, the copy is performed asynchronously with respect to the host. Otherwise, the argument has no effect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="101" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::zero_grad</definition>
+        <argsstring>()</argsstring>
+        <name>zero_grad</name>
+        <briefdescription>
+<para>Recursively zeros out the <computeroutput>grad</computeroutput> values of all parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="100" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="109" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::Module::save</definition>
+        <argsstring>(Archive &amp;ar) const</argsstring>
+        <name>save</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+<para>Serializes the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="104" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="170" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::Module::load</definition>
+        <argsstring>(Archive &amp;ar)</argsstring>
+        <name>load</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+<para>Deserializes the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="108" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="180" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>ModuleType::ContainedType *</type>
+        <definition>ModuleType::ContainedType * torch::nn::Module::as</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>as</name>
+        <briefdescription>
+<para>Attempts to cast this <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> to the given <computeroutput>ModuleType</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="112" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="192" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::detail::disable_if_module_holder_t&lt;ModuleType&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>ModuleType *</type>
+        <definition>ModuleType * torch::nn::Module::as</definition>
+        <argsstring>() noexcept</argsstring>
+        <name>as</name>
+        <briefdescription>
+<para>Attempts to cast this <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> to the given <computeroutput>ModuleType</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="118" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="199" bodyend="201"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>Tensor &amp; torch::nn::Module::register_parameter</definition>
+        <argsstring>(std::string name, Tensor tensor, bool requires_grad=true)</argsstring>
+        <name>register_parameter</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>tensor</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>requires_grad</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Registers a parameter with this <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="122" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="122" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>Tensor &amp; torch::nn::Module::register_buffer</definition>
+        <argsstring>(std::string name, Tensor tensor)</argsstring>
+        <name>register_buffer</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+<para>Registers a buffer with this <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="127" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; ModuleType &gt;</type>
+        <definition>std::shared_ptr&lt; ModuleType &gt; torch::nn::Module::register_module</definition>
+        <argsstring>(std::string name, std::shared_ptr&lt; ModuleType &gt; module)</argsstring>
+        <name>register_module</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; ModuleType &gt;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Registers a submodule with this <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="131" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="204" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; ModuleType &gt;</type>
+        <definition>std::shared_ptr&lt; ModuleType &gt; torch::nn::Module::register_module</definition>
+        <argsstring>(std::string name, ModuleHolder&lt; ModuleType &gt; module_holder)</argsstring>
+        <name>register_module</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref>&lt; ModuleType &gt;</type>
+          <declname>module_holder</declname>
+        </param>
+        <briefdescription>
+<para>Registers a submodule with this <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="137" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="212" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a388d156f14536a3abf0cceb50a044a1a" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Module::clone_</definition>
+        <argsstring>(Module &amp;other, at::optional&lt; Device &gt; device)</argsstring>
+        <name>clone_</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427">clone_</reimplementedby>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="150" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_1a857cadcc45d8789e4d3b418e78ebba7a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::Module::to_impl</definition>
+        <argsstring>(Ts &amp;&amp;... ts)</argsstring>
+        <name>to_impl</name>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+<para>The implementation of the various <computeroutput><ref refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" kindref="member">to()</ref></computeroutput> methods. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="154" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="219" bodyend="232"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="416">
+        <label>torch::nn::DropoutImpl</label>
+        <link refid="classtorch_1_1nn_1_1_dropout_impl"/>
+        <childnode refid="415" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>torch::nn::Cloneable&lt; GRUImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>torch::nn::Cloneable&lt; RNNImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="409">
+        <label>torch::nn::ConvImpl&lt; 3, Conv3dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_conv_impl"/>
+        <childnode refid="408" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="415">
+        <label>torch::nn::detail::DropoutImplBase&lt; DropoutImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base"/>
+        <childnode refid="414" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="425">
+        <label>torch::nn::LinearImpl</label>
+        <link refid="classtorch_1_1nn_1_1_linear_impl"/>
+        <childnode refid="424" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>torch::nn::Cloneable&lt; BatchNormImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="411">
+        <label>torch::nn::Cloneable&lt; Dropout2dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="399">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="406">
+        <label>torch::nn::ConvImpl&lt; 2, Conv2dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_conv_impl"/>
+        <childnode refid="405" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="437">
+        <label>torch::nn::detail::RNNImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="434" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="427">
+        <label>torch::nn::detail::RNNImplBase&lt; LSTMImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="426" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="404">
+        <label>torch::nn::Conv1dImpl</label>
+        <link refid="classtorch_1_1nn_1_1_conv1d_impl"/>
+        <childnode refid="403" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="407">
+        <label>torch::nn::Conv2dImpl</label>
+        <link refid="classtorch_1_1nn_1_1_conv2d_impl"/>
+        <childnode refid="406" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>torch::nn::Cloneable&lt; LSTMImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="430">
+        <label>torch::nn::detail::RNNImplBase&lt; RNNImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="429" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="423">
+        <label>torch::nn::GRUImpl</label>
+        <link refid="classtorch_1_1nn_1_1_g_r_u_impl"/>
+        <childnode refid="422" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>torch::nn::EmbeddingImpl</label>
+        <link refid="classtorch_1_1nn_1_1_embedding_impl"/>
+        <childnode refid="417" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="422">
+        <label>torch::nn::detail::RNNImplBase&lt; GRUImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="421" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="417">
+        <label>torch::nn::Cloneable&lt; EmbeddingImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>torch::nn::Conv3dImpl</label>
+        <link refid="classtorch_1_1nn_1_1_conv3d_impl"/>
+        <childnode refid="409" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="434">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="401">
+        <label>torch::nn::BatchNormImpl</label>
+        <link refid="classtorch_1_1nn_1_1_batch_norm_impl"/>
+        <childnode refid="400" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="403">
+        <label>torch::nn::ConvImpl&lt; 1, Conv1dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_conv_impl"/>
+        <childnode refid="402" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="431">
+        <label>torch::nn::RNNImpl</label>
+        <link refid="classtorch_1_1nn_1_1_r_n_n_impl"/>
+        <childnode refid="430" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="433">
+        <label>torch::nn::SequentialImpl</label>
+        <link refid="classtorch_1_1nn_1_1_sequential_impl"/>
+        <childnode refid="432" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="412">
+        <label>torch::nn::detail::DropoutImplBase&lt; Dropout2dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base"/>
+        <childnode refid="411" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>torch::nn::Cloneable&lt; LinearImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="435">
+        <label>torch::nn::ConvImpl&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_conv_impl"/>
+        <childnode refid="434" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="419">
+        <label>torch::nn::Cloneable&lt; FunctionalImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>torch::nn::FunctionalImpl</label>
+        <link refid="classtorch_1_1nn_1_1_functional_impl"/>
+        <childnode refid="419" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>torch::nn::Cloneable&lt; DropoutImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="402">
+        <label>torch::nn::Cloneable&lt; Conv1dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="413">
+        <label>torch::nn::Dropout2dImpl</label>
+        <link refid="classtorch_1_1nn_1_1_dropout2d_impl"/>
+        <childnode refid="412" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="405">
+        <label>torch::nn::Cloneable&lt; Conv2dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="408">
+        <label>torch::nn::Cloneable&lt; Conv3dImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="436">
+        <label>torch::nn::detail::DropoutImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base"/>
+        <childnode refid="434" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="432">
+        <label>torch::nn::Cloneable&lt; SequentialImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="428">
+        <label>torch::nn::LSTMImpl</label>
+        <link refid="classtorch_1_1nn_1_1_l_s_t_m_impl"/>
+        <childnode refid="427" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h" bodystart="27" bodyend="165"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4c78a9d00c4193a4af0bf32117bd79f8" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>buffers_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4440b31ad8706394f57a8e4ab83586cf" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>children_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac1f0c742f8b793a80797b62a490bbdc5" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a388d156f14536a3abf0cceb50a044a1a" prot="private" virt="virtual"><scope>torch::nn::Module</scope><name>clone_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a16ae4ef9b7318a77056d0f23eace8111" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>Cloneable</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a03766dfcc80e3bd3d1cf5ef4d587733d" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>detail::CursorBase</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afe0db9f4a877af9af9bea818c75ed103" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>is_training_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aad6639346512cf961ca08f8cce153009" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>name_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a141b87afa7847d0886f7dafd2323cd64" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>OrderedDict</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa64aa38ce0413382ae8a159a26a9cf83" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>parameters_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::Module</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::Module</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::Module</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::Module</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::Module</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a857cadcc45d8789e4d3b418e78ebba7a" prot="private" virt="non-virtual"><scope>torch::nn::Module</scope><name>to_impl</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::Module</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

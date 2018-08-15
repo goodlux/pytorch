@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_g_r_u_impl" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::GRUImpl</compoundname>
+    <basecompoundref refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base" prot="public" virt="non-virtual">torch::nn::detail::RNNImplBase&lt; GRUImpl &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_g_r_u_impl_1a31b2dd82cedaeeef1eda1f156028a5d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::GRUImpl::GRUImpl</definition>
+        <argsstring>(int64_t input_size, int64_t hidden_size)</argsstring>
+        <name>GRUImpl</name>
+        <param>
+          <type>int64_t</type>
+          <declname>input_size</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>hidden_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="159" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="159" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_g_r_u_impl_1ad908009b9e7ab6efd44ae7e969e73ec7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::GRUImpl::GRUImpl</definition>
+        <argsstring>(GRUOptions options)</argsstring>
+        <name>GRUImpl</name>
+        <param>
+          <type><ref refid="structtorch_1_1nn_1_1detail_1_1_r_n_n_options_base" kindref="compound">GRUOptions</ref></type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="161" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="379" bodyend="383"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_g_r_u_impl_1a930066c92365cc1ee161fe9e02775dde" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::GRUImpl::cell_forward</definition>
+        <argsstring>(Tensor input, Tensor state, int64_t layer) override</argsstring>
+        <name>cell_forward</name>
+        <reimplements refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a14e8abde4c5534ee3765caee97998d30">cell_forward</reimplements>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>layer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="164" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp" bodystart="385" bodyend="401"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="317">
+        <label>torch::nn::Cloneable&lt; GRUImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="318" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="318">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="315">
+        <label>torch::nn::GRUImpl</label>
+        <link refid="classtorch_1_1nn_1_1_g_r_u_impl"/>
+        <childnode refid="316" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="316">
+        <label>torch::nn::detail::RNNImplBase&lt; GRUImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="317" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="321">
+        <label>torch::nn::Cloneable&lt; GRUImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="324">
+        <label>OptionalBase&lt; CuDNNMode  &gt;</label>
+      </node>
+      <node id="319">
+        <label>torch::nn::GRUImpl</label>
+        <link refid="classtorch_1_1nn_1_1_g_r_u_impl"/>
+        <childnode refid="320" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="320">
+        <label>torch::nn::detail::RNNImplBase&lt; GRUImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="321" relation="public-inheritance">
+        </childnode>
+        <childnode refid="323" relation="usage">
+          <edgelabel>cudnn_mode_</edgelabel>
+        </childnode>
+        <childnode refid="325" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+      </node>
+      <node id="325">
+        <label>torch::nn::detail::RNNOptionsBase</label>
+        <link refid="structtorch_1_1nn_1_1detail_1_1_r_n_n_options_base"/>
+      </node>
+      <node id="323">
+        <label>at::optional&lt; CuDNNMode &gt;</label>
+        <link refid="classat_1_1optional"/>
+        <childnode refid="324" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" line="157" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h" bodystart="157" bodyend="165"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a35a2cc6614378ae44b4128d2ea6c5f85" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>autograd_forward</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a7970ac1436a81aecd15d6c37292df773" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>b_hh</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a8a232debfdd7b96ecc7d4fec5107828c" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>b_ih</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_g_r_u_impl_1a930066c92365cc1ee161fe9e02775dde" prot="private" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>cell_forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab0d7a20ea09e6cb9be3e46bb072e90ff" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>create_dropout_state</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a906a326fa48332456ba7ba368c00ede5" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>CUDNN_forward</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ae491b7ea474896e9aeef2f7c60ff5549" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>cudnn_mode_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aea3b45b27c5cefa40cfee5c5a223a8cf" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>CuDNNMode</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a87098e4873e94e5190c540e7c4e0fefb" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>data_ptrs_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ae107dc08cd6f8e10ebe3cc350658a6aa" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>dropout</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aec58612cea64001695b31dd9cb60ae2e" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>flat_weights</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a3400dd3de4bd64cb37855748c9a1b697" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>flat_weights_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1af757c92f1995cc66c61039af322eac83" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>flatten_parameters_for_cudnn</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a41ccc6c8181dbb5ac47486b59c3aa8cb" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_g_r_u_impl_1a31b2dd82cedaeeef1eda1f156028a5d4" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>GRUImpl</name></member>
+      <member refid="classtorch_1_1nn_1_1_g_r_u_impl_1ad908009b9e7ab6efd44ae7e969e73ec7" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>GRUImpl</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a65c142c57eb20d81b35f20df0f431e3d" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>has_cell_state_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::GRUImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::GRUImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a2d0c9d267944e9da1ddcc7011eb95fdd" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>number_of_gates_</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a656449cfb2c417dd910ec4d5602abd5d" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>options</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>reset</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a568e30a8e5c2c19dbc4ca281a850073c" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>RNNImplBase</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1ab43e1c869ddbc2f08a947ace0651298e" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aa613dc592204256410bec59137b09d87" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1aba6d742c9c97af668cb661e5ee488bdf" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1abfa8005396e9ab0046a47db499ec2b3f" prot="protected" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>use_cudnn</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4d439b3b50631ee467814f44736fc6ca" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>w_hh</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1abfc3f2889b77bf4869407481d8f749a3" prot="public" virt="non-virtual"><scope>torch::nn::GRUImpl</scope><name>w_ih</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::GRUImpl</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1031 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_soft_max_8cpp" kind="file" language="C++">
+    <compoundname>SoftMax.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="_accumulate_type_8h" local="yes">ATen/AccumulateType.h</includes>
+    <includes local="yes">ATen/NativeFunctions.h</includes>
+    <includes refid="_parallel_8h" local="yes">ATen/Parallel.h</includes>
+    <includes refid="_tensor_utils_8h" local="yes">ATen/TensorUtils.h</includes>
+    <includes refid="_wrap_dim_utils_8h" local="yes">ATen/WrapDimUtils.h</includes>
+    <includes refid="_softmax_kernel_8h" local="yes">ATen/native/cpu/SoftmaxKernel.h</includes>
+    <incdepgraph>
+      <node id="7329">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="7330" relation="include">
+        </childnode>
+        <childnode refid="7331" relation="include">
+        </childnode>
+        <childnode refid="7332" relation="include">
+        </childnode>
+        <childnode refid="7333" relation="include">
+        </childnode>
+        <childnode refid="7334" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7336" relation="include">
+        </childnode>
+      </node>
+      <node id="7375">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="7325" relation="include">
+        </childnode>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7373" relation="include">
+        </childnode>
+        <childnode refid="7376" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7334" relation="include">
+        </childnode>
+        <childnode refid="7326" relation="include">
+        </childnode>
+      </node>
+      <node id="7343">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7359" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7334" relation="include">
+        </childnode>
+      </node>
+      <node id="7342">
+        <label>atomic</label>
+      </node>
+      <node id="7334">
+        <label>functional</label>
+      </node>
+      <node id="7380">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7370" relation="include">
+        </childnode>
+        <childnode refid="7323" relation="include">
+        </childnode>
+      </node>
+      <node id="7344">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="7345" relation="include">
+        </childnode>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7355" relation="include">
+        </childnode>
+        <childnode refid="7357" relation="include">
+        </childnode>
+        <childnode refid="7361" relation="include">
+        </childnode>
+      </node>
+      <node id="7356">
+        <label>limits</label>
+      </node>
+      <node id="7364">
+        <label>assert.h</label>
+      </node>
+      <node id="7369">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7345" relation="include">
+        </childnode>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7368" relation="include">
+        </childnode>
+        <childnode refid="7348" relation="include">
+        </childnode>
+        <childnode refid="7340" relation="include">
+        </childnode>
+        <childnode refid="7370" relation="include">
+        </childnode>
+        <childnode refid="7371" relation="include">
+        </childnode>
+      </node>
+      <node id="7351">
+        <label>iterator</label>
+      </node>
+      <node id="7363">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="7364" relation="include">
+        </childnode>
+        <childnode refid="7365" relation="include">
+        </childnode>
+        <childnode refid="7336" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7330" relation="include">
+        </childnode>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7355" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7366" relation="include">
+        </childnode>
+        <childnode refid="7369" relation="include">
+        </childnode>
+      </node>
+      <node id="7383">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="7357">
+        <label>cstdint</label>
+      </node>
+      <node id="7403">
+        <label>ATen/AccumulateType.h</label>
+        <link refid="_accumulate_type_8h_source"/>
+        <childnode refid="7404" relation="include">
+        </childnode>
+        <childnode refid="7355" relation="include">
+        </childnode>
+      </node>
+      <node id="7391">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="7365">
+        <label>stdint.h</label>
+      </node>
+      <node id="7402">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="7358">
+        <label>cmath</label>
+      </node>
+      <node id="7333">
+        <label>cassert</label>
+      </node>
+      <node id="7321">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/SoftMax.cpp</label>
+        <link refid="_soft_max_8cpp"/>
+        <childnode refid="7322" relation="include">
+        </childnode>
+        <childnode refid="7403" relation="include">
+        </childnode>
+        <childnode refid="7392" relation="include">
+        </childnode>
+        <childnode refid="7405" relation="include">
+        </childnode>
+        <childnode refid="7406" relation="include">
+        </childnode>
+        <childnode refid="7389" relation="include">
+        </childnode>
+        <childnode refid="7407" relation="include">
+        </childnode>
+      </node>
+      <node id="7374">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7324" relation="include">
+        </childnode>
+        <childnode refid="7373" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7369" relation="include">
+        </childnode>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7375" relation="include">
+        </childnode>
+        <childnode refid="7381" relation="include">
+        </childnode>
+        <childnode refid="7326" relation="include">
+        </childnode>
+        <childnode refid="7378" relation="include">
+        </childnode>
+        <childnode refid="7357" relation="include">
+        </childnode>
+      </node>
+      <node id="7360">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7350" relation="include">
+        </childnode>
+        <childnode refid="7356" relation="include">
+        </childnode>
+      </node>
+      <node id="7336">
+        <label>stdexcept</label>
+      </node>
+      <node id="7397">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="7363" relation="include">
+        </childnode>
+        <childnode refid="7384" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7336" relation="include">
+        </childnode>
+      </node>
+      <node id="7371">
+        <label>numeric</label>
+      </node>
+      <node id="7367">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="7342" relation="include">
+        </childnode>
+        <childnode refid="7326" relation="include">
+        </childnode>
+        <childnode refid="7341" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7329" relation="include">
+        </childnode>
+      </node>
+      <node id="7355">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7356" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7357" relation="include">
+        </childnode>
+        <childnode refid="7336" relation="include">
+        </childnode>
+        <childnode refid="7330" relation="include">
+        </childnode>
+        <childnode refid="7358" relation="include">
+        </childnode>
+        <childnode refid="7359" relation="include">
+        </childnode>
+        <childnode refid="7360" relation="include">
+        </childnode>
+      </node>
+      <node id="7341">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="7342" relation="include">
+        </childnode>
+      </node>
+      <node id="7366">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="7367" relation="include">
+        </childnode>
+        <childnode refid="7368" relation="include">
+        </childnode>
+      </node>
+      <node id="7335">
+        <label>string</label>
+      </node>
+      <node id="7400">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="7346" relation="include">
+        </childnode>
+        <childnode refid="7365" relation="include">
+        </childnode>
+      </node>
+      <node id="7401">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="7343" relation="include">
+        </childnode>
+        <childnode refid="7387" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7394" relation="include">
+        </childnode>
+        <childnode refid="7329" relation="include">
+        </childnode>
+      </node>
+      <node id="7404">
+        <label>ATen/Config.h</label>
+        <link refid="_config_8h_source"/>
+      </node>
+      <node id="7325">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="7326" relation="include">
+        </childnode>
+        <childnode refid="7327" relation="include">
+        </childnode>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7341" relation="include">
+        </childnode>
+        <childnode refid="7343" relation="include">
+        </childnode>
+        <childnode refid="7362" relation="include">
+        </childnode>
+      </node>
+      <node id="7381">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="7393">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="7343" relation="include">
+        </childnode>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7384" relation="include">
+        </childnode>
+        <childnode refid="7375" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+      </node>
+      <node id="7338">
+        <label>exception</label>
+      </node>
+      <node id="7327">
+        <label>stddef.h</label>
+      </node>
+      <node id="7368">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="7367" relation="include">
+        </childnode>
+      </node>
+      <node id="7399">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7355" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+      </node>
+      <node id="7347">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="7337" relation="include">
+        </childnode>
+      </node>
+      <node id="7382">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="7363" relation="include">
+        </childnode>
+        <childnode refid="7383" relation="include">
+        </childnode>
+      </node>
+      <node id="7339">
+        <label>ostream</label>
+      </node>
+      <node id="7324">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+      </node>
+      <node id="7372">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="7345">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7346" relation="include">
+        </childnode>
+        <childnode refid="7353" relation="include">
+        </childnode>
+        <childnode refid="7351" relation="include">
+        </childnode>
+        <childnode refid="7354" relation="include">
+        </childnode>
+      </node>
+      <node id="7388">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7389" relation="include">
+        </childnode>
+      </node>
+      <node id="7385">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="7406">
+        <label>ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="7384" relation="include">
+        </childnode>
+        <childnode refid="7388" relation="include">
+        </childnode>
+        <childnode refid="7369" relation="include">
+        </childnode>
+      </node>
+      <node id="7323">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="7389">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="7367" relation="include">
+        </childnode>
+        <childnode refid="7340" relation="include">
+        </childnode>
+      </node>
+      <node id="7386">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7365" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+      </node>
+      <node id="7408">
+        <label>ATen/native/DispatchStub.h</label>
+        <link refid="_dispatch_stub_8h_source"/>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7331" relation="include">
+        </childnode>
+      </node>
+      <node id="7370">
+        <label>typeinfo</label>
+      </node>
+      <node id="7377">
+        <label>cstdio</label>
+      </node>
+      <node id="7362">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="7326" relation="include">
+        </childnode>
+        <childnode refid="7323" relation="include">
+        </childnode>
+      </node>
+      <node id="7354">
+        <label>vector</label>
+      </node>
+      <node id="7398">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="7395">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="7352">
+        <label>new</label>
+      </node>
+      <node id="7330">
+        <label>utility</label>
+      </node>
+      <node id="7353">
+        <label>array</label>
+      </node>
+      <node id="7340">
+        <label>sstream</label>
+      </node>
+      <node id="7390">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="7363" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7384" relation="include">
+        </childnode>
+        <childnode refid="7382" relation="include">
+        </childnode>
+        <childnode refid="7373" relation="include">
+        </childnode>
+        <childnode refid="7391" relation="include">
+        </childnode>
+        <childnode refid="7392" relation="include">
+        </childnode>
+        <childnode refid="7393" relation="include">
+        </childnode>
+        <childnode refid="7394" relation="include">
+        </childnode>
+        <childnode refid="7395" relation="include">
+        </childnode>
+      </node>
+      <node id="7392">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="7359">
+        <label>iosfwd</label>
+      </node>
+      <node id="7349">
+        <label>cstdlib</label>
+      </node>
+      <node id="7361">
+        <label>iostream</label>
+      </node>
+      <node id="7337">
+        <label>cstddef</label>
+      </node>
+      <node id="7379">
+        <label>unordered_map</label>
+      </node>
+      <node id="7378">
+        <label>mutex</label>
+      </node>
+      <node id="7322">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7324" relation="include">
+        </childnode>
+        <childnode refid="7325" relation="include">
+        </childnode>
+        <childnode refid="7363" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7373" relation="include">
+        </childnode>
+        <childnode refid="7374" relation="include">
+        </childnode>
+        <childnode refid="7382" relation="include">
+        </childnode>
+        <childnode refid="7384" relation="include">
+        </childnode>
+        <childnode refid="7343" relation="include">
+        </childnode>
+        <childnode refid="7388" relation="include">
+        </childnode>
+        <childnode refid="7390" relation="include">
+        </childnode>
+        <childnode refid="7396" relation="include">
+        </childnode>
+        <childnode refid="7397" relation="include">
+        </childnode>
+        <childnode refid="7398" relation="include">
+        </childnode>
+        <childnode refid="7399" relation="include">
+        </childnode>
+        <childnode refid="7400" relation="include">
+        </childnode>
+        <childnode refid="7393" relation="include">
+        </childnode>
+        <childnode refid="7394" relation="include">
+        </childnode>
+        <childnode refid="7387" relation="include">
+        </childnode>
+        <childnode refid="7401" relation="include">
+        </childnode>
+        <childnode refid="7402" relation="include">
+        </childnode>
+      </node>
+      <node id="7376">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="7348" relation="include">
+        </childnode>
+        <childnode refid="7377" relation="include">
+        </childnode>
+        <childnode refid="7349" relation="include">
+        </childnode>
+        <childnode refid="7334" relation="include">
+        </childnode>
+        <childnode refid="7326" relation="include">
+        </childnode>
+        <childnode refid="7378" relation="include">
+        </childnode>
+        <childnode refid="7379" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+        <childnode refid="7354" relation="include">
+        </childnode>
+        <childnode refid="7380" relation="include">
+        </childnode>
+        <childnode refid="7323" relation="include">
+        </childnode>
+      </node>
+      <node id="7328">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="7323" relation="include">
+        </childnode>
+        <childnode refid="7329" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7338" relation="include">
+        </childnode>
+        <childnode refid="7339" relation="include">
+        </childnode>
+        <childnode refid="7340" relation="include">
+        </childnode>
+        <childnode refid="7335" relation="include">
+        </childnode>
+      </node>
+      <node id="7394">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="7374" relation="include">
+        </childnode>
+        <childnode refid="7343" relation="include">
+        </childnode>
+        <childnode refid="7393" relation="include">
+        </childnode>
+        <childnode refid="7387" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7384" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7359" relation="include">
+        </childnode>
+        <childnode refid="7330" relation="include">
+        </childnode>
+      </node>
+      <node id="7384">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="7373" relation="include">
+        </childnode>
+        <childnode refid="7363" relation="include">
+        </childnode>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7385" relation="include">
+        </childnode>
+        <childnode refid="7382" relation="include">
+        </childnode>
+        <childnode refid="7386" relation="include">
+        </childnode>
+        <childnode refid="7366" relation="include">
+        </childnode>
+        <childnode refid="7367" relation="include">
+        </childnode>
+        <childnode refid="7369" relation="include">
+        </childnode>
+        <childnode refid="7343" relation="include">
+        </childnode>
+        <childnode refid="7387" relation="include">
+        </childnode>
+        <childnode refid="7329" relation="include">
+        </childnode>
+      </node>
+      <node id="7331">
+        <label>type_traits</label>
+      </node>
+      <node id="7387">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="7344" relation="include">
+        </childnode>
+        <childnode refid="7328" relation="include">
+        </childnode>
+        <childnode refid="7361" relation="include">
+        </childnode>
+      </node>
+      <node id="7346">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="7347" relation="include">
+        </childnode>
+        <childnode refid="7348" relation="include">
+        </childnode>
+        <childnode refid="7333" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+        <childnode refid="7349" relation="include">
+        </childnode>
+        <childnode refid="7350" relation="include">
+        </childnode>
+        <childnode refid="7332" relation="include">
+        </childnode>
+        <childnode refid="7351" relation="include">
+        </childnode>
+        <childnode refid="7326" relation="include">
+        </childnode>
+        <childnode refid="7352" relation="include">
+        </childnode>
+        <childnode refid="7331" relation="include">
+        </childnode>
+        <childnode refid="7330" relation="include">
+        </childnode>
+        <childnode refid="7323" relation="include">
+        </childnode>
+      </node>
+      <node id="7348">
+        <label>algorithm</label>
+      </node>
+      <node id="7373">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="7365" relation="include">
+        </childnode>
+      </node>
+      <node id="7407">
+        <label>ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+        <childnode refid="7322" relation="include">
+        </childnode>
+        <childnode refid="7408" relation="include">
+        </childnode>
+      </node>
+      <node id="7350">
+        <label>cstring</label>
+      </node>
+      <node id="7326">
+        <label>memory</label>
+      </node>
+      <node id="7332">
+        <label>initializer_list</label>
+      </node>
+      <node id="7405">
+        <label>ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="7322" relation="include">
+        </childnode>
+        <childnode refid="7337" relation="include">
+        </childnode>
+      </node>
+      <node id="7396">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="7361" relation="include">
+        </childnode>
+        <childnode refid="7372" relation="include">
+        </childnode>
+        <childnode refid="7363" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/AccumulateType.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/NativeFunctions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Parallel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/TensorUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/WrapDimUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/native/cpu/SoftmaxKernel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogSoftMax&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>host_softmax(Tensor<sp/>output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t<sp/>dim)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>int64_t<sp/>outer_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim_size<sp/>=<sp/>input.size(dim);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.numel()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>int64_t<sp/>inner_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dim;<sp/>++i)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>outer_size<sp/>*=<sp/>input.size(i);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>dim<sp/>+<sp/>1;<sp/>i<sp/>&lt;<sp/>input.dim();<sp/>++i)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>inner_size<sp/>*=<sp/>input.size(i);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim_stride<sp/>=<sp/>inner_size;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>int64_t<sp/>outer_stride<sp/>=<sp/>dim_size<sp/>*<sp/>dim_stride;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>scalar_t*<sp/>input_data_base<sp/>=<sp/>input.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>scalar_t*<sp/>output_data_base<sp/>=<sp/>output.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>int64_t<sp/>grain_size<sp/>=<sp/>std::min(internal::GRAIN_SIZE<sp/>/<sp/>dim_size,<sp/>(int64_t)1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>parallel_for(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>outer_size<sp/>*<sp/>inner_size,<sp/>grain_size,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>begin;<sp/>i<sp/>&lt;<sp/>end;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>outer_idx<sp/>=<sp/>i<sp/>/<sp/>inner_size;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>inner_idx<sp/>=<sp/>i<sp/>%<sp/>inner_size;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data<sp/>=</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data_base<sp/>+<sp/>outer_idx<sp/>*<sp/>outer_stride<sp/>+<sp/>inner_idx;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data<sp/>=</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data_base<sp/>+<sp/>outer_idx<sp/>*<sp/>outer_stride<sp/>+<sp/>inner_idx;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>max_input<sp/>=<sp/>input_data[0];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>1;<sp/>d<sp/>&lt;<sp/>dim_size;<sp/>d++)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_input<sp/>=<sp/>std::max(max_input,<sp/>input_data[d<sp/>*<sp/>dim_stride]);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>tmpsum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>dim_size;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>z<sp/>=<sp/>std::exp(input_data[d<sp/>*<sp/>dim_stride]<sp/>-<sp/>max_input);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!LogSoftMax)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data[d<sp/>*<sp/>dim_stride]<sp/>=<sp/>z;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpsum<sp/>+=<sp/>z;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogSoftMax)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpsum<sp/>=<sp/>max_input<sp/>+<sp/>std::log(tmpsum);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmpsum<sp/>=<sp/>1<sp/>/<sp/>tmpsum;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>dim_size;<sp/>d++)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogSoftMax)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data[d<sp/>*<sp/>dim_stride]<sp/>=<sp/>input_data[d<sp/>*<sp/>dim_stride]<sp/>-<sp/>tmpsum;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data[d<sp/>*<sp/>dim_stride]<sp/>*=<sp/>tmpsum;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogSoftMax&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>host_softmax_backward(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor&amp;<sp/>gI,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>grad,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>int64_t<sp/>outer_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim_size<sp/>=<sp/>grad.size(dim);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>int64_t<sp/>inner_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dim;<sp/>++i)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>outer_size<sp/>*=<sp/>grad.size(i);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>dim<sp/>+<sp/>1;<sp/>i<sp/>&lt;<sp/>grad.dim();<sp/>++i)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>inner_size<sp/>*=<sp/>grad.size(i);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim_stride<sp/>=<sp/>inner_size;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>int64_t<sp/>outer_stride<sp/>=<sp/>dim_size<sp/>*<sp/>dim_stride;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>scalar_t*<sp/>gradInput_data_base<sp/>=<sp/>gI.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>scalar_t*<sp/>output_data_base<sp/>=<sp/>output.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>scalar_t*<sp/>gradOutput_data_base<sp/>=<sp/>grad.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>int64_t<sp/>grain_size<sp/>=<sp/>std::min(internal::GRAIN_SIZE<sp/>/<sp/>dim_size,<sp/>(int64_t)1);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>parallel_for(</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>outer_size<sp/>*<sp/>inner_size,<sp/>grain_size,<sp/>[&amp;](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>begin;<sp/>i<sp/>&lt;<sp/>end;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>outer_idx<sp/>=<sp/>i<sp/>/<sp/>inner_size;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>inner_idx<sp/>=<sp/>i<sp/>%<sp/>inner_size;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>gradInput_data<sp/>=</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradInput_data_base<sp/>+<sp/>outer_idx<sp/>*<sp/>outer_stride<sp/>+<sp/>inner_idx;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data<sp/>=</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data_base<sp/>+<sp/>outer_idx<sp/>*<sp/>outer_stride<sp/>+<sp/>inner_idx;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t*<sp/>gradOutput_data<sp/>=</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradOutput_data_base<sp/>+<sp/>outer_idx<sp/>*<sp/>outer_stride<sp/>+<sp/>inner_idx;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>sum<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>was<sp/>accreal<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>dim_size;<sp/>d++)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogSoftMax)</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=<sp/>gradOutput_data[d<sp/>*<sp/>dim_stride];</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>+=</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradOutput_data[d<sp/>*<sp/>dim_stride]<sp/>*<sp/>output_data[d<sp/>*<sp/>dim_stride];</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>dim_size;<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogSoftMax)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradInput_data[d<sp/>*<sp/>dim_stride]<sp/>=<sp/>gradOutput_data[d<sp/>*<sp/>dim_stride]<sp/>-</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::exp(output_data[d<sp/>*<sp/>dim_stride])<sp/>*<sp/>sum;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gradInput_data[d<sp/>*<sp/>dim_stride]<sp/>=<sp/>output_data[d<sp/>*<sp/>dim_stride]<sp/>*</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(gradOutput_data[d<sp/>*<sp/>dim_stride]<sp/>-<sp/>sum);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal">Tensor<sp/>softmax_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t<sp/>dim_)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>input<sp/>=<sp/>input_.contiguous();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>Tensor<sp/>output<sp/>=<sp/>at::native::empty_like(input);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>maybe_wrap_dim(dim_,<sp/>input.dim());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.dim()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>input<sp/>=<sp/>input.view(1);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dim<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>&lt;<sp/>input.dim(),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dim<sp/>must<sp/>be<sp/>non-negative<sp/>and<sp/>less<sp/>than<sp/>input<sp/>dimensions&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.ndimension()<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>==<sp/>input.ndimension()<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>softmax_lastdim_kernel(kCPU,<sp/>output,<sp/>input);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(input.type(),<sp/></highlight><highlight class="stringliteral">&quot;softmax&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>host_softmax&lt;scalar_t,<sp/>false&gt;(output,<sp/>input,<sp/>dim);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">Tensor<sp/>log_softmax_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>int64_t<sp/>dim_)<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>input<sp/>=<sp/>input_.contiguous();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>Tensor<sp/>output<sp/>=<sp/>at::native::empty_like(input);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>maybe_wrap_dim(dim_,<sp/>input.dim());</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.dim()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>input<sp/>=<sp/>input.view(1);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dim<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>&lt;<sp/>input.dim(),</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dim<sp/>must<sp/>be<sp/>non-negative<sp/>and<sp/>less<sp/>than<sp/>input<sp/>dimensions&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.ndimension()<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>==<sp/>input.ndimension()<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>log_softmax_lastdim_kernel(kCPU,<sp/>output,<sp/>input);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(input.type(),<sp/></highlight><highlight class="stringliteral">&quot;log_softmax&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>host_softmax&lt;scalar_t,<sp/>true&gt;(output,<sp/>input,<sp/>dim);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">Tensor<sp/>softmax_backward_cpu(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>grad_,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output_,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input_)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>TensorArg<sp/>grad_arg{grad_,<sp/></highlight><highlight class="stringliteral">&quot;grad&quot;</highlight><highlight class="normal">,<sp/>1},<sp/>output_arg{output_,<sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,<sp/>2};</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>checkSameSize(</highlight><highlight class="stringliteral">&quot;softmax_backward&quot;</highlight><highlight class="normal">,<sp/>grad_arg,<sp/>output_arg);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>maybe_wrap_dim(dim_,<sp/>grad_.dim());</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>grad<sp/>=<sp/>grad_.contiguous();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>output_.contiguous();</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/>Tensor<sp/>grad_input<sp/>=<sp/>at::native::empty_like(grad);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grad.dim()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>grad<sp/>=<sp/>grad.view(1);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(output.dim()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>=<sp/>output.view(1);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dim<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>&lt;<sp/>grad.dim(),</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dim<sp/>must<sp/>be<sp/>non-negative<sp/>and<sp/>less<sp/>than<sp/>input<sp/>dimensions&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grad.ndimension()<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>==<sp/>grad.ndimension()<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>softmax_backward_lastdim_kernel(kCPU,<sp/>grad_input,<sp/>grad,<sp/>output);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(grad.type(),<sp/></highlight><highlight class="stringliteral">&quot;softmax_backward&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>host_softmax_backward&lt;scalar_t,<sp/>false&gt;(grad_input,<sp/>grad,<sp/>output,<sp/>dim);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grad_input;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">Tensor<sp/>log_softmax_backward_cpu(</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>grad_,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output_,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input_)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>TensorArg<sp/>grad_arg{grad_,<sp/></highlight><highlight class="stringliteral">&quot;grad&quot;</highlight><highlight class="normal">,<sp/>1},<sp/>output_arg{output_,<sp/></highlight><highlight class="stringliteral">&quot;output&quot;</highlight><highlight class="normal">,<sp/>2};</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>checkSameSize(</highlight><highlight class="stringliteral">&quot;log_softmax_backward&quot;</highlight><highlight class="normal">,<sp/>grad_arg,<sp/>output_arg);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>maybe_wrap_dim(dim_,<sp/>grad_.dim());</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>grad<sp/>=<sp/>grad_.contiguous();</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>output_.contiguous();</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>Tensor<sp/>grad_input<sp/>=<sp/>at::native::empty_like(grad);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grad.dim()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>grad<sp/>=<sp/>grad.view(1);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(output.dim()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>=<sp/>output.view(1);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dim<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>&lt;<sp/>grad.dim(),</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;dim<sp/>must<sp/>be<sp/>non-negative<sp/>and<sp/>less<sp/>than<sp/>input<sp/>dimensions&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grad.ndimension()<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>dim<sp/>==<sp/>grad.ndimension()<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>log_softmax_backward_lastdim_kernel(kCPU,<sp/>grad_input,<sp/>grad,<sp/>output);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(grad.type(),<sp/></highlight><highlight class="stringliteral">&quot;log_softmax_backward&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>host_softmax_backward&lt;scalar_t,<sp/>true&gt;(grad_input,<sp/>grad,<sp/>output,<sp/>dim);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grad_input;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal">DEFINE_DISPATCH(softmax_lastdim_kernel);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">DEFINE_DISPATCH(log_softmax_lastdim_kernel);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">DEFINE_DISPATCH(softmax_backward_lastdim_kernel);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">DEFINE_DISPATCH(log_softmax_backward_lastdim_kernel);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/SoftMax.cpp"/>
+  </compounddef>
+</doxygen>

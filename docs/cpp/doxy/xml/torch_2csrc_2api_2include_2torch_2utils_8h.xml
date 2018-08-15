@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="torch_2csrc_2api_2include_2torch_2utils_8h" kind="file" language="C++">
+    <compoundname>utils.h</compoundname>
+    <includes local="no">torch/csrc/autograd/grad_mode.h</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="torch_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</includedby>
+    <includedby refid="init_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/init.cpp</includedby>
+    <includedby refid="torch_2csrc_2api_2src_2nn_2modules_2rnn_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/rnn.cpp</includedby>
+    <includedby refid="torch_2csrc_2api_2src_2utils_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/utils.cpp</includedby>
+    <incdepgraph>
+      <node id="17356">
+        <label>cstdint</label>
+      </node>
+      <node id="17354">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/utils.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2utils_8h"/>
+        <childnode refid="17355" relation="include">
+        </childnode>
+        <childnode refid="17356" relation="include">
+        </childnode>
+      </node>
+      <node id="17355">
+        <label>torch/csrc/autograd/grad_mode.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17358">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="17357">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/utils.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2utils_8h"/>
+        <childnode refid="17358" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structtorch_1_1_no_grad_guard" prot="public">torch::NoGradGuard</innerclass>
+    <innernamespace refid="namespacetorch">torch</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;torch/csrc/autograd/grad_mode.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetorch" kindref="compound">torch</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>autograd::AutoGradMode;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>RAII,<sp/>thread<sp/>local<sp/>(!)<sp/>guard<sp/>that<sp/>stops<sp/>future<sp/>operations<sp/>from<sp/>building</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>gradients.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="structtorch_1_1_no_grad_guard" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structtorch_1_1_no_grad_guard" kindref="compound">NoGradGuard</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>AutoGradMode<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="structtorch_1_1_no_grad_guard" kindref="compound">NoGradGuard</ref>()<sp/>:<sp/>AutoGradMode(</highlight><highlight class="comment">/*enabled=*/</highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>manual_seed(uint64_t<sp/>seed);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>torch</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/utils.h"/>
+  </compounddef>
+</doxygen>

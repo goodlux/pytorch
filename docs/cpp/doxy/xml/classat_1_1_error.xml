@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_error" kind="class" language="C++" prot="public">
+    <compoundname>at::Error</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">exception</basecompoundref>
+    <includes refid="_error_8h" local="no">Error.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classat_1_1_error_1a24ca81a1895deeb846d292e60c04c72a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string at::Error::what_without_backtrace_</definition>
+        <argsstring></argsstring>
+        <name>what_without_backtrace_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="70" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_error_1a03fa1162e52e4b49251f821bf002b0f7" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string at::Error::what_</definition>
+        <argsstring></argsstring>
+        <name>what_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_error_1a9e42259252fcaecb587d3f3328551cd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::Error::Error</definition>
+        <argsstring>(SourceLocation source_location, std::string err)</argsstring>
+        <name>Error</name>
+        <param>
+          <type><ref refid="structat_1_1_source_location" kindref="compound">SourceLocation</ref></type>
+          <declname>source_location</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="74" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_error_1a20228f91a1deb7e34deb819c4dfd28bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* at::Error::what</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>what</name>
+        <briefdescription>
+<para>Returns the complete error message, including the source location. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="77" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="77" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_error_1a153aa5639e2a4470384ddfffb06a7525" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* at::Error::what_without_backtrace</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>what_without_backtrace</name>
+        <briefdescription>
+<para>Returns only the error message string, without source location. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="82" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The primary ATen error class. Provides a complete error message with source location information via <computeroutput><ref refid="classat_1_1_error_1a20228f91a1deb7e34deb819c4dfd28bd" kindref="member">what()</ref></computeroutput>, and a more concise message via <computeroutput><ref refid="classat_1_1_error_1a153aa5639e2a4470384ddfffb06a7525" kindref="member">what_without_backtrace()</ref></computeroutput>. Should primarily be used with the <computeroutput>AT_ERROR</computeroutput> macro.</para><para>NB: <ref refid="classat_1_1_error" kindref="compound">at::Error</ref> is handled specially by the default torch to suppress the backtrace, see torch/csrc/Exceptions.h </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="281">
+        <label>at::Error</label>
+        <link refid="classat_1_1_error"/>
+        <childnode refid="282" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="282">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="283">
+        <label>at::Error</label>
+        <link refid="classat_1_1_error"/>
+        <childnode refid="284" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="284">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="69" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="69" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classat_1_1_error_1a9e42259252fcaecb587d3f3328551cd0" prot="public" virt="non-virtual"><scope>at::Error</scope><name>Error</name></member>
+      <member refid="classat_1_1_error_1a20228f91a1deb7e34deb819c4dfd28bd" prot="public" virt="non-virtual"><scope>at::Error</scope><name>what</name></member>
+      <member refid="classat_1_1_error_1a03fa1162e52e4b49251f821bf002b0f7" prot="private" virt="non-virtual"><scope>at::Error</scope><name>what_</name></member>
+      <member refid="classat_1_1_error_1a153aa5639e2a4470384ddfffb06a7525" prot="public" virt="non-virtual"><scope>at::Error</scope><name>what_without_backtrace</name></member>
+      <member refid="classat_1_1_error_1a24ca81a1895deeb846d292e60c04c72a" prot="private" virt="non-virtual"><scope>at::Error</scope><name>what_without_backtrace_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,855 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="weakref__test_8cpp" kind="file" language="C++">
+    <compoundname>weakref_test.cpp</compoundname>
+    <includes local="yes">catch.hpp</includes>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">chrono</includes>
+    <includes local="no">sstream</includes>
+    <incdepgraph>
+      <node id="13449">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="13450" relation="include">
+        </childnode>
+        <childnode refid="13451" relation="include">
+        </childnode>
+        <childnode refid="13452" relation="include">
+        </childnode>
+        <childnode refid="13453" relation="include">
+        </childnode>
+        <childnode refid="13454" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13456" relation="include">
+        </childnode>
+      </node>
+      <node id="13495">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="13445" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13493" relation="include">
+        </childnode>
+        <childnode refid="13496" relation="include">
+        </childnode>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13454" relation="include">
+        </childnode>
+        <childnode refid="13446" relation="include">
+        </childnode>
+      </node>
+      <node id="13463">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13479" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13454" relation="include">
+        </childnode>
+      </node>
+      <node id="13462">
+        <label>atomic</label>
+      </node>
+      <node id="13441">
+        <label>catch.hpp</label>
+      </node>
+      <node id="13454">
+        <label>functional</label>
+      </node>
+      <node id="13500">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13490" relation="include">
+        </childnode>
+        <childnode refid="13443" relation="include">
+        </childnode>
+      </node>
+      <node id="13464">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="13465" relation="include">
+        </childnode>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13475" relation="include">
+        </childnode>
+        <childnode refid="13477" relation="include">
+        </childnode>
+        <childnode refid="13481" relation="include">
+        </childnode>
+      </node>
+      <node id="13476">
+        <label>limits</label>
+      </node>
+      <node id="13484">
+        <label>assert.h</label>
+      </node>
+      <node id="13489">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13465" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13488" relation="include">
+        </childnode>
+        <childnode refid="13468" relation="include">
+        </childnode>
+        <childnode refid="13460" relation="include">
+        </childnode>
+        <childnode refid="13490" relation="include">
+        </childnode>
+        <childnode refid="13491" relation="include">
+        </childnode>
+      </node>
+      <node id="13471">
+        <label>iterator</label>
+      </node>
+      <node id="13483">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="13484" relation="include">
+        </childnode>
+        <childnode refid="13485" relation="include">
+        </childnode>
+        <childnode refid="13456" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13450" relation="include">
+        </childnode>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13475" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13486" relation="include">
+        </childnode>
+        <childnode refid="13489" relation="include">
+        </childnode>
+      </node>
+      <node id="13503">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="13477">
+        <label>cstdint</label>
+      </node>
+      <node id="13511">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="13485">
+        <label>stdint.h</label>
+      </node>
+      <node id="13522">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="13478">
+        <label>cmath</label>
+      </node>
+      <node id="13453">
+        <label>cassert</label>
+      </node>
+      <node id="13494">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13444" relation="include">
+        </childnode>
+        <childnode refid="13493" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13489" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13495" relation="include">
+        </childnode>
+        <childnode refid="13501" relation="include">
+        </childnode>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13498" relation="include">
+        </childnode>
+        <childnode refid="13477" relation="include">
+        </childnode>
+      </node>
+      <node id="13480">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13470" relation="include">
+        </childnode>
+        <childnode refid="13476" relation="include">
+        </childnode>
+      </node>
+      <node id="13456">
+        <label>stdexcept</label>
+      </node>
+      <node id="13517">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="13483" relation="include">
+        </childnode>
+        <childnode refid="13504" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13456" relation="include">
+        </childnode>
+      </node>
+      <node id="13491">
+        <label>numeric</label>
+      </node>
+      <node id="13487">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="13462" relation="include">
+        </childnode>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13461" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13449" relation="include">
+        </childnode>
+      </node>
+      <node id="13475">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13476" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13477" relation="include">
+        </childnode>
+        <childnode refid="13456" relation="include">
+        </childnode>
+        <childnode refid="13450" relation="include">
+        </childnode>
+        <childnode refid="13478" relation="include">
+        </childnode>
+        <childnode refid="13479" relation="include">
+        </childnode>
+        <childnode refid="13480" relation="include">
+        </childnode>
+      </node>
+      <node id="13461">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="13462" relation="include">
+        </childnode>
+      </node>
+      <node id="13486">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="13487" relation="include">
+        </childnode>
+        <childnode refid="13488" relation="include">
+        </childnode>
+      </node>
+      <node id="13455">
+        <label>string</label>
+      </node>
+      <node id="13520">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="13466" relation="include">
+        </childnode>
+        <childnode refid="13485" relation="include">
+        </childnode>
+      </node>
+      <node id="13521">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="13463" relation="include">
+        </childnode>
+        <childnode refid="13507" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13514" relation="include">
+        </childnode>
+        <childnode refid="13449" relation="include">
+        </childnode>
+      </node>
+      <node id="13445">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13447" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13461" relation="include">
+        </childnode>
+        <childnode refid="13463" relation="include">
+        </childnode>
+        <childnode refid="13482" relation="include">
+        </childnode>
+      </node>
+      <node id="13501">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="13513">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="13463" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13504" relation="include">
+        </childnode>
+        <childnode refid="13495" relation="include">
+        </childnode>
+        <childnode refid="13457" relation="include">
+        </childnode>
+      </node>
+      <node id="13458">
+        <label>exception</label>
+      </node>
+      <node id="13447">
+        <label>stddef.h</label>
+      </node>
+      <node id="13488">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="13487" relation="include">
+        </childnode>
+      </node>
+      <node id="13519">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13475" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+      </node>
+      <node id="13467">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="13457" relation="include">
+        </childnode>
+      </node>
+      <node id="13502">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="13483" relation="include">
+        </childnode>
+        <childnode refid="13503" relation="include">
+        </childnode>
+      </node>
+      <node id="13459">
+        <label>ostream</label>
+      </node>
+      <node id="13444">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+      </node>
+      <node id="13492">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="13465">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13466" relation="include">
+        </childnode>
+        <childnode refid="13473" relation="include">
+        </childnode>
+        <childnode refid="13471" relation="include">
+        </childnode>
+        <childnode refid="13474" relation="include">
+        </childnode>
+      </node>
+      <node id="13508">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13509" relation="include">
+        </childnode>
+      </node>
+      <node id="13505">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="13443">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="13509">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="13487" relation="include">
+        </childnode>
+        <childnode refid="13460" relation="include">
+        </childnode>
+      </node>
+      <node id="13506">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13485" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+      </node>
+      <node id="13490">
+        <label>typeinfo</label>
+      </node>
+      <node id="13497">
+        <label>cstdio</label>
+      </node>
+      <node id="13482">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13443" relation="include">
+        </childnode>
+      </node>
+      <node id="13474">
+        <label>vector</label>
+      </node>
+      <node id="13518">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="13515">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="13472">
+        <label>new</label>
+      </node>
+      <node id="13450">
+        <label>utility</label>
+      </node>
+      <node id="13473">
+        <label>array</label>
+      </node>
+      <node id="13460">
+        <label>sstream</label>
+      </node>
+      <node id="13510">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="13483" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13504" relation="include">
+        </childnode>
+        <childnode refid="13502" relation="include">
+        </childnode>
+        <childnode refid="13493" relation="include">
+        </childnode>
+        <childnode refid="13511" relation="include">
+        </childnode>
+        <childnode refid="13512" relation="include">
+        </childnode>
+        <childnode refid="13513" relation="include">
+        </childnode>
+        <childnode refid="13514" relation="include">
+        </childnode>
+        <childnode refid="13515" relation="include">
+        </childnode>
+      </node>
+      <node id="13512">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="13479">
+        <label>iosfwd</label>
+      </node>
+      <node id="13469">
+        <label>cstdlib</label>
+      </node>
+      <node id="13481">
+        <label>iostream</label>
+      </node>
+      <node id="13457">
+        <label>cstddef</label>
+      </node>
+      <node id="13499">
+        <label>unordered_map</label>
+      </node>
+      <node id="13498">
+        <label>mutex</label>
+      </node>
+      <node id="13523">
+        <label>chrono</label>
+      </node>
+      <node id="13442">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13444" relation="include">
+        </childnode>
+        <childnode refid="13445" relation="include">
+        </childnode>
+        <childnode refid="13483" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13493" relation="include">
+        </childnode>
+        <childnode refid="13494" relation="include">
+        </childnode>
+        <childnode refid="13502" relation="include">
+        </childnode>
+        <childnode refid="13504" relation="include">
+        </childnode>
+        <childnode refid="13463" relation="include">
+        </childnode>
+        <childnode refid="13508" relation="include">
+        </childnode>
+        <childnode refid="13510" relation="include">
+        </childnode>
+        <childnode refid="13516" relation="include">
+        </childnode>
+        <childnode refid="13517" relation="include">
+        </childnode>
+        <childnode refid="13518" relation="include">
+        </childnode>
+        <childnode refid="13519" relation="include">
+        </childnode>
+        <childnode refid="13520" relation="include">
+        </childnode>
+        <childnode refid="13513" relation="include">
+        </childnode>
+        <childnode refid="13514" relation="include">
+        </childnode>
+        <childnode refid="13507" relation="include">
+        </childnode>
+        <childnode refid="13521" relation="include">
+        </childnode>
+        <childnode refid="13522" relation="include">
+        </childnode>
+      </node>
+      <node id="13496">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="13468" relation="include">
+        </childnode>
+        <childnode refid="13497" relation="include">
+        </childnode>
+        <childnode refid="13469" relation="include">
+        </childnode>
+        <childnode refid="13454" relation="include">
+        </childnode>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13498" relation="include">
+        </childnode>
+        <childnode refid="13499" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+        <childnode refid="13474" relation="include">
+        </childnode>
+        <childnode refid="13500" relation="include">
+        </childnode>
+        <childnode refid="13443" relation="include">
+        </childnode>
+      </node>
+      <node id="13440">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/weakref_test.cpp</label>
+        <link refid="weakref__test_8cpp"/>
+        <childnode refid="13441" relation="include">
+        </childnode>
+        <childnode refid="13442" relation="include">
+        </childnode>
+        <childnode refid="13481" relation="include">
+        </childnode>
+        <childnode refid="13523" relation="include">
+        </childnode>
+        <childnode refid="13460" relation="include">
+        </childnode>
+      </node>
+      <node id="13448">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="13443" relation="include">
+        </childnode>
+        <childnode refid="13449" relation="include">
+        </childnode>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13458" relation="include">
+        </childnode>
+        <childnode refid="13459" relation="include">
+        </childnode>
+        <childnode refid="13460" relation="include">
+        </childnode>
+        <childnode refid="13455" relation="include">
+        </childnode>
+      </node>
+      <node id="13514">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="13494" relation="include">
+        </childnode>
+        <childnode refid="13463" relation="include">
+        </childnode>
+        <childnode refid="13513" relation="include">
+        </childnode>
+        <childnode refid="13507" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13504" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13479" relation="include">
+        </childnode>
+        <childnode refid="13450" relation="include">
+        </childnode>
+      </node>
+      <node id="13504">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="13493" relation="include">
+        </childnode>
+        <childnode refid="13483" relation="include">
+        </childnode>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13505" relation="include">
+        </childnode>
+        <childnode refid="13502" relation="include">
+        </childnode>
+        <childnode refid="13506" relation="include">
+        </childnode>
+        <childnode refid="13486" relation="include">
+        </childnode>
+        <childnode refid="13487" relation="include">
+        </childnode>
+        <childnode refid="13489" relation="include">
+        </childnode>
+        <childnode refid="13463" relation="include">
+        </childnode>
+        <childnode refid="13507" relation="include">
+        </childnode>
+        <childnode refid="13449" relation="include">
+        </childnode>
+      </node>
+      <node id="13451">
+        <label>type_traits</label>
+      </node>
+      <node id="13507">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="13464" relation="include">
+        </childnode>
+        <childnode refid="13448" relation="include">
+        </childnode>
+        <childnode refid="13481" relation="include">
+        </childnode>
+      </node>
+      <node id="13466">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="13467" relation="include">
+        </childnode>
+        <childnode refid="13468" relation="include">
+        </childnode>
+        <childnode refid="13453" relation="include">
+        </childnode>
+        <childnode refid="13457" relation="include">
+        </childnode>
+        <childnode refid="13469" relation="include">
+        </childnode>
+        <childnode refid="13470" relation="include">
+        </childnode>
+        <childnode refid="13452" relation="include">
+        </childnode>
+        <childnode refid="13471" relation="include">
+        </childnode>
+        <childnode refid="13446" relation="include">
+        </childnode>
+        <childnode refid="13472" relation="include">
+        </childnode>
+        <childnode refid="13451" relation="include">
+        </childnode>
+        <childnode refid="13450" relation="include">
+        </childnode>
+        <childnode refid="13443" relation="include">
+        </childnode>
+      </node>
+      <node id="13468">
+        <label>algorithm</label>
+      </node>
+      <node id="13493">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="13485" relation="include">
+        </childnode>
+      </node>
+      <node id="13470">
+        <label>cstring</label>
+      </node>
+      <node id="13446">
+        <label>memory</label>
+      </node>
+      <node id="13452">
+        <label>initializer_list</label>
+      </node>
+      <node id="13516">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="13481" relation="include">
+        </childnode>
+        <childnode refid="13492" relation="include">
+        </childnode>
+        <childnode refid="13483" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="weakref__test_8cpp_1a656eb5868e824d59f489f910db438420" prot="public" static="no">
+        <name>CATCH_CONFIG_MAIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/weakref_test.cpp" line="1" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/weakref_test.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="weakref__test_8cpp_1af25805fa15d19b10046f6cfed09d85ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;Weak pointer tests&quot;, &quot;&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;Weak pointer tests&quot;</type>
+        </param>
+        <param>
+          <type>&quot;&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/weakref_test.cpp" line="13" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/weakref_test.cpp" bodystart="13" bodyend="64"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CATCH_CONFIG_MAIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;catch.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_weak_tensor" kindref="compound">at::WeakTensor</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">TEST_CASE(<sp/></highlight><highlight class="stringliteral">&quot;Weak<sp/>pointer<sp/>tests&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>SECTION(</highlight><highlight class="stringliteral">&quot;gets<sp/>invalidated&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>a<sp/>=<sp/>at::ones({2,<sp/>2});</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structat_1_1_weak_tensor" kindref="compound">WeakTensor</ref><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>a.reset();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE_FALSE(b.lock().defined());</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>SECTION(</highlight><highlight class="stringliteral">&quot;can<sp/>successfully<sp/>lock&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>a<sp/>=<sp/>at::ones({2,<sp/>2});</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structat_1_1_weak_tensor" kindref="compound">WeakTensor</ref><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>b.lock();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(c.defined());</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>a.reset();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(b.lock().defined());</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>c.reset();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE_FALSE(b.lock().defined());</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>SECTION(</highlight><highlight class="stringliteral">&quot;updates<sp/>refcounts<sp/>correctly&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>a<sp/>=<sp/>at::ones({2,<sp/>2});</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ai<sp/>=<sp/>a.unsafeGetTensorImpl();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;weak_use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structat_1_1_weak_tensor" kindref="compound">WeakTensor</ref><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;weak_use_count()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;weak_use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structat_1_1_weak_tensor" kindref="compound">WeakTensor</ref><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>locked<sp/>=<sp/>b.lock();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(locked.defined());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;weak_use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structat_1_1_weak_tensor" kindref="compound">WeakTensor</ref><sp/>b<sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(ai-&gt;weak_use_count()<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>a.reset();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bi<sp/>=<sp/>b.unsafeGetTensorImpl();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(bi-&gt;use_count()<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(bi-&gt;weak_use_count()<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/weakref_test.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="aten_2src_2_a_ten_2native_2linear_8cpp" kind="file" language="C++">
+    <compoundname>Linear.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes local="yes">ATen/NativeFunctions.h</includes>
+    <includes refid="_wrap_dim_utils_multi_8h" local="yes">ATen/WrapDimUtilsMulti.h</includes>
+    <incdepgraph>
+      <node id="18816">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="18817" relation="include">
+        </childnode>
+        <childnode refid="18818" relation="include">
+        </childnode>
+        <childnode refid="18819" relation="include">
+        </childnode>
+        <childnode refid="18820" relation="include">
+        </childnode>
+        <childnode refid="18821" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18823" relation="include">
+        </childnode>
+      </node>
+      <node id="18862">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="18812" relation="include">
+        </childnode>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18860" relation="include">
+        </childnode>
+        <childnode refid="18863" relation="include">
+        </childnode>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18821" relation="include">
+        </childnode>
+        <childnode refid="18813" relation="include">
+        </childnode>
+      </node>
+      <node id="18830">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18846" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18821" relation="include">
+        </childnode>
+      </node>
+      <node id="18829">
+        <label>atomic</label>
+      </node>
+      <node id="18821">
+        <label>functional</label>
+      </node>
+      <node id="18867">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18857" relation="include">
+        </childnode>
+        <childnode refid="18810" relation="include">
+        </childnode>
+      </node>
+      <node id="18831">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="18832" relation="include">
+        </childnode>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18842" relation="include">
+        </childnode>
+        <childnode refid="18844" relation="include">
+        </childnode>
+        <childnode refid="18848" relation="include">
+        </childnode>
+      </node>
+      <node id="18843">
+        <label>limits</label>
+      </node>
+      <node id="18851">
+        <label>assert.h</label>
+      </node>
+      <node id="18856">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18832" relation="include">
+        </childnode>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18855" relation="include">
+        </childnode>
+        <childnode refid="18835" relation="include">
+        </childnode>
+        <childnode refid="18827" relation="include">
+        </childnode>
+        <childnode refid="18857" relation="include">
+        </childnode>
+        <childnode refid="18858" relation="include">
+        </childnode>
+      </node>
+      <node id="18838">
+        <label>iterator</label>
+      </node>
+      <node id="18850">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="18851" relation="include">
+        </childnode>
+        <childnode refid="18852" relation="include">
+        </childnode>
+        <childnode refid="18823" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18817" relation="include">
+        </childnode>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18842" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18853" relation="include">
+        </childnode>
+        <childnode refid="18856" relation="include">
+        </childnode>
+      </node>
+      <node id="18870">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="18844">
+        <label>cstdint</label>
+      </node>
+      <node id="18878">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="18852">
+        <label>stdint.h</label>
+      </node>
+      <node id="18808">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Linear.cpp</label>
+        <link refid="aten_2src_2_a_ten_2native_2linear_8cpp"/>
+        <childnode refid="18809" relation="include">
+        </childnode>
+        <childnode refid="18879" relation="include">
+        </childnode>
+        <childnode refid="18890" relation="include">
+        </childnode>
+      </node>
+      <node id="18889">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="18845">
+        <label>cmath</label>
+      </node>
+      <node id="18820">
+        <label>cassert</label>
+      </node>
+      <node id="18861">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18811" relation="include">
+        </childnode>
+        <childnode refid="18860" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18856" relation="include">
+        </childnode>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18862" relation="include">
+        </childnode>
+        <childnode refid="18868" relation="include">
+        </childnode>
+        <childnode refid="18813" relation="include">
+        </childnode>
+        <childnode refid="18865" relation="include">
+        </childnode>
+        <childnode refid="18844" relation="include">
+        </childnode>
+      </node>
+      <node id="18847">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18837" relation="include">
+        </childnode>
+        <childnode refid="18843" relation="include">
+        </childnode>
+      </node>
+      <node id="18823">
+        <label>stdexcept</label>
+      </node>
+      <node id="18884">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="18850" relation="include">
+        </childnode>
+        <childnode refid="18871" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18823" relation="include">
+        </childnode>
+      </node>
+      <node id="18858">
+        <label>numeric</label>
+      </node>
+      <node id="18854">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="18829" relation="include">
+        </childnode>
+        <childnode refid="18813" relation="include">
+        </childnode>
+        <childnode refid="18828" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18816" relation="include">
+        </childnode>
+      </node>
+      <node id="18842">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18843" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18844" relation="include">
+        </childnode>
+        <childnode refid="18823" relation="include">
+        </childnode>
+        <childnode refid="18817" relation="include">
+        </childnode>
+        <childnode refid="18845" relation="include">
+        </childnode>
+        <childnode refid="18846" relation="include">
+        </childnode>
+        <childnode refid="18847" relation="include">
+        </childnode>
+      </node>
+      <node id="18828">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="18829" relation="include">
+        </childnode>
+      </node>
+      <node id="18853">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="18854" relation="include">
+        </childnode>
+        <childnode refid="18855" relation="include">
+        </childnode>
+      </node>
+      <node id="18822">
+        <label>string</label>
+      </node>
+      <node id="18887">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="18833" relation="include">
+        </childnode>
+        <childnode refid="18852" relation="include">
+        </childnode>
+      </node>
+      <node id="18888">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="18830" relation="include">
+        </childnode>
+        <childnode refid="18874" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18881" relation="include">
+        </childnode>
+        <childnode refid="18816" relation="include">
+        </childnode>
+      </node>
+      <node id="18812">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="18813" relation="include">
+        </childnode>
+        <childnode refid="18814" relation="include">
+        </childnode>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18828" relation="include">
+        </childnode>
+        <childnode refid="18830" relation="include">
+        </childnode>
+        <childnode refid="18849" relation="include">
+        </childnode>
+      </node>
+      <node id="18868">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="18880">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="18830" relation="include">
+        </childnode>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18871" relation="include">
+        </childnode>
+        <childnode refid="18862" relation="include">
+        </childnode>
+        <childnode refid="18824" relation="include">
+        </childnode>
+      </node>
+      <node id="18825">
+        <label>exception</label>
+      </node>
+      <node id="18814">
+        <label>stddef.h</label>
+      </node>
+      <node id="18855">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="18854" relation="include">
+        </childnode>
+      </node>
+      <node id="18886">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18842" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+      </node>
+      <node id="18834">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="18824" relation="include">
+        </childnode>
+      </node>
+      <node id="18869">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="18850" relation="include">
+        </childnode>
+        <childnode refid="18870" relation="include">
+        </childnode>
+      </node>
+      <node id="18826">
+        <label>ostream</label>
+      </node>
+      <node id="18811">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+      </node>
+      <node id="18859">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="18832">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18833" relation="include">
+        </childnode>
+        <childnode refid="18840" relation="include">
+        </childnode>
+        <childnode refid="18838" relation="include">
+        </childnode>
+        <childnode refid="18841" relation="include">
+        </childnode>
+      </node>
+      <node id="18875">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18876" relation="include">
+        </childnode>
+      </node>
+      <node id="18872">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="18810">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="18876">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="18854" relation="include">
+        </childnode>
+        <childnode refid="18827" relation="include">
+        </childnode>
+      </node>
+      <node id="18873">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18852" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+      </node>
+      <node id="18857">
+        <label>typeinfo</label>
+      </node>
+      <node id="18890">
+        <label>ATen/WrapDimUtilsMulti.h</label>
+        <link refid="_wrap_dim_utils_multi_8h_source"/>
+        <childnode refid="18854" relation="include">
+        </childnode>
+        <childnode refid="18876" relation="include">
+        </childnode>
+        <childnode refid="18827" relation="include">
+        </childnode>
+        <childnode refid="18891" relation="include">
+        </childnode>
+      </node>
+      <node id="18864">
+        <label>cstdio</label>
+      </node>
+      <node id="18891">
+        <label>bitset</label>
+      </node>
+      <node id="18849">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="18813" relation="include">
+        </childnode>
+        <childnode refid="18810" relation="include">
+        </childnode>
+      </node>
+      <node id="18841">
+        <label>vector</label>
+      </node>
+      <node id="18885">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="18882">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="18839">
+        <label>new</label>
+      </node>
+      <node id="18817">
+        <label>utility</label>
+      </node>
+      <node id="18840">
+        <label>array</label>
+      </node>
+      <node id="18827">
+        <label>sstream</label>
+      </node>
+      <node id="18877">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="18850" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18871" relation="include">
+        </childnode>
+        <childnode refid="18869" relation="include">
+        </childnode>
+        <childnode refid="18860" relation="include">
+        </childnode>
+        <childnode refid="18878" relation="include">
+        </childnode>
+        <childnode refid="18879" relation="include">
+        </childnode>
+        <childnode refid="18880" relation="include">
+        </childnode>
+        <childnode refid="18881" relation="include">
+        </childnode>
+        <childnode refid="18882" relation="include">
+        </childnode>
+      </node>
+      <node id="18879">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="18846">
+        <label>iosfwd</label>
+      </node>
+      <node id="18836">
+        <label>cstdlib</label>
+      </node>
+      <node id="18848">
+        <label>iostream</label>
+      </node>
+      <node id="18824">
+        <label>cstddef</label>
+      </node>
+      <node id="18866">
+        <label>unordered_map</label>
+      </node>
+      <node id="18865">
+        <label>mutex</label>
+      </node>
+      <node id="18809">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18811" relation="include">
+        </childnode>
+        <childnode refid="18812" relation="include">
+        </childnode>
+        <childnode refid="18850" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18860" relation="include">
+        </childnode>
+        <childnode refid="18861" relation="include">
+        </childnode>
+        <childnode refid="18869" relation="include">
+        </childnode>
+        <childnode refid="18871" relation="include">
+        </childnode>
+        <childnode refid="18830" relation="include">
+        </childnode>
+        <childnode refid="18875" relation="include">
+        </childnode>
+        <childnode refid="18877" relation="include">
+        </childnode>
+        <childnode refid="18883" relation="include">
+        </childnode>
+        <childnode refid="18884" relation="include">
+        </childnode>
+        <childnode refid="18885" relation="include">
+        </childnode>
+        <childnode refid="18886" relation="include">
+        </childnode>
+        <childnode refid="18887" relation="include">
+        </childnode>
+        <childnode refid="18880" relation="include">
+        </childnode>
+        <childnode refid="18881" relation="include">
+        </childnode>
+        <childnode refid="18874" relation="include">
+        </childnode>
+        <childnode refid="18888" relation="include">
+        </childnode>
+        <childnode refid="18889" relation="include">
+        </childnode>
+      </node>
+      <node id="18863">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="18835" relation="include">
+        </childnode>
+        <childnode refid="18864" relation="include">
+        </childnode>
+        <childnode refid="18836" relation="include">
+        </childnode>
+        <childnode refid="18821" relation="include">
+        </childnode>
+        <childnode refid="18813" relation="include">
+        </childnode>
+        <childnode refid="18865" relation="include">
+        </childnode>
+        <childnode refid="18866" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+        <childnode refid="18841" relation="include">
+        </childnode>
+        <childnode refid="18867" relation="include">
+        </childnode>
+        <childnode refid="18810" relation="include">
+        </childnode>
+      </node>
+      <node id="18815">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="18810" relation="include">
+        </childnode>
+        <childnode refid="18816" relation="include">
+        </childnode>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18825" relation="include">
+        </childnode>
+        <childnode refid="18826" relation="include">
+        </childnode>
+        <childnode refid="18827" relation="include">
+        </childnode>
+        <childnode refid="18822" relation="include">
+        </childnode>
+      </node>
+      <node id="18881">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="18861" relation="include">
+        </childnode>
+        <childnode refid="18830" relation="include">
+        </childnode>
+        <childnode refid="18880" relation="include">
+        </childnode>
+        <childnode refid="18874" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18871" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18846" relation="include">
+        </childnode>
+        <childnode refid="18817" relation="include">
+        </childnode>
+      </node>
+      <node id="18871">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="18860" relation="include">
+        </childnode>
+        <childnode refid="18850" relation="include">
+        </childnode>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18872" relation="include">
+        </childnode>
+        <childnode refid="18869" relation="include">
+        </childnode>
+        <childnode refid="18873" relation="include">
+        </childnode>
+        <childnode refid="18853" relation="include">
+        </childnode>
+        <childnode refid="18854" relation="include">
+        </childnode>
+        <childnode refid="18856" relation="include">
+        </childnode>
+        <childnode refid="18830" relation="include">
+        </childnode>
+        <childnode refid="18874" relation="include">
+        </childnode>
+        <childnode refid="18816" relation="include">
+        </childnode>
+      </node>
+      <node id="18818">
+        <label>type_traits</label>
+      </node>
+      <node id="18874">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="18831" relation="include">
+        </childnode>
+        <childnode refid="18815" relation="include">
+        </childnode>
+        <childnode refid="18848" relation="include">
+        </childnode>
+      </node>
+      <node id="18833">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="18834" relation="include">
+        </childnode>
+        <childnode refid="18835" relation="include">
+        </childnode>
+        <childnode refid="18820" relation="include">
+        </childnode>
+        <childnode refid="18824" relation="include">
+        </childnode>
+        <childnode refid="18836" relation="include">
+        </childnode>
+        <childnode refid="18837" relation="include">
+        </childnode>
+        <childnode refid="18819" relation="include">
+        </childnode>
+        <childnode refid="18838" relation="include">
+        </childnode>
+        <childnode refid="18813" relation="include">
+        </childnode>
+        <childnode refid="18839" relation="include">
+        </childnode>
+        <childnode refid="18818" relation="include">
+        </childnode>
+        <childnode refid="18817" relation="include">
+        </childnode>
+        <childnode refid="18810" relation="include">
+        </childnode>
+      </node>
+      <node id="18835">
+        <label>algorithm</label>
+      </node>
+      <node id="18860">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="18852" relation="include">
+        </childnode>
+      </node>
+      <node id="18837">
+        <label>cstring</label>
+      </node>
+      <node id="18813">
+        <label>memory</label>
+      </node>
+      <node id="18819">
+        <label>initializer_list</label>
+      </node>
+      <node id="18883">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="18848" relation="include">
+        </childnode>
+        <childnode refid="18859" relation="include">
+        </childnode>
+        <childnode refid="18850" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/NativeFunctions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/WrapDimUtilsMulti.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sumproduct_pair<sp/>computes<sp/>`(left*right).sum(sumdims)`<sp/>by<sp/>means<sp/>of<sp/>permutation<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>batch<sp/>matrix<sp/>multiplication</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>its<sp/>main<sp/>purpose<sp/>is<sp/>to<sp/>provide<sp/>a<sp/>pairwise<sp/>reduction<sp/>for<sp/>einsum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Tensor<sp/>sumproduct_pair(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>left_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>right_,<sp/>IntList<sp/>sum_dims_,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>keepdim)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>assumes<sp/>that<sp/>tensors<sp/>have<sp/>been<sp/>pre-unsqueezed<sp/>(so<sp/>that<sp/>all<sp/>dimensions<sp/>match<sp/>-<sp/>after<sp/>broadcasting)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>but<sp/>makes<sp/>no<sp/>other<sp/>assumptions<sp/>on<sp/>the<sp/>order<sp/>of<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>AT_CHECK(left_.dim()==right_.dim(),<sp/></highlight><highlight class="stringliteral">&quot;number<sp/>of<sp/>dimensions<sp/>must<sp/>match&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum_dims_.size()<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>at::mul(left_,<sp/>right_);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>left_.dim();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sum_dims<sp/>=<sp/>dim_list_to_bitset(sum_dims_,<sp/>dim);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>dimensions<sp/>that<sp/>will<sp/>be<sp/>part<sp/>of<sp/>the<sp/>output<sp/>(i.e.<sp/>not<sp/>summed<sp/>over)<sp/>in<sp/>three<sp/>vectors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>dims<sp/>in<sp/>lro<sp/>appear<sp/>in<sp/>left,<sp/>right<sp/>and<sp/>output,<sp/>similarly<sp/>lo:<sp/>left<sp/>and<sp/>output,<sp/>ro:<sp/>right<sp/>and<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>also<sp/>the<sp/>sizes<sp/>are<sp/>kept<sp/>track<sp/>of<sp/>for<sp/>reshaping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>lro,<sp/>lo,<sp/>ro;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>int64_t<sp/>lro_size<sp/>=<sp/>1,<sp/>lo_size<sp/>=<sp/>1,<sp/>ro_size<sp/>=<sp/>1,<sp/>sum_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>Tensor<sp/>left<sp/>=<sp/>left_;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>Tensor<sp/>right<sp/>=<sp/>right_;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>dim;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sl<sp/>=<sp/>left.size(i)&gt;1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sr<sp/>=<sp/>right.size(i)&gt;1;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum_dims[i])<sp/>{<sp/></highlight><highlight class="comment">//<sp/>first<sp/>dimensions<sp/>that<sp/>will<sp/>be<sp/>summed<sp/>over<sp/>after<sp/>multiplication</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sl<sp/>&amp;&amp;<sp/>sr)<sp/>{<sp/><sp/></highlight><highlight class="comment">//<sp/>dimensions<sp/>nontrivially<sp/>in<sp/>both<sp/>left<sp/>and<sp/>right<sp/>must<sp/>be<sp/>of<sp/>the<sp/>same<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(left.size(i)==right.size(i),<sp/></highlight><highlight class="stringliteral">&quot;non-broadcast<sp/>dimensions<sp/>must<sp/>match&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>sum_size<sp/>*=<sp/>left.size(i);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sl)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>if<sp/>it<sp/>is<sp/>only<sp/>in<sp/>one<sp/>of<sp/>left<sp/>and<sp/>right,<sp/>we<sp/>can<sp/>sum<sp/>right<sp/>away</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>left<sp/>=<sp/>left.sum(i,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sr)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>right<sp/>=<sp/>right.sum(i,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sl<sp/>&amp;&amp;<sp/>sr)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>now<sp/>deal<sp/>with<sp/>dimensions<sp/><sp/>dimensions<sp/>that<sp/>will<sp/>be<sp/>in<sp/>the<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dimensions<sp/>nontrivially<sp/>in<sp/>both<sp/>left<sp/>and<sp/>right<sp/>must<sp/>be<sp/>of<sp/>the<sp/>same<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(left.size(i)==right.size(i),<sp/></highlight><highlight class="stringliteral">&quot;non-broadcast<sp/>dimensions<sp/>must<sp/>match&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lro.push_back(i);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lro_size<sp/>*=<sp/>left.size(i);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sl)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>keep<sp/>track<sp/>of<sp/>dimensions<sp/>appearing<sp/>only<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lo.push_back(i);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>lo_size<sp/>*=<sp/>left.size(i);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ro.push_back(i);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ro_size<sp/>*=<sp/>right.size(i);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>now<sp/>work<sp/>with<sp/>the<sp/>following<sp/>permutations<sp/>/<sp/>shapes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>pipeline<sp/>is<sp/>permute<sp/>inputs<sp/>-&gt;<sp/>reshape<sp/>inputs<sp/>-&gt;<sp/>batch<sp/>matrix<sp/>mul<sp/>-&gt;<sp/>reshape(view)<sp/>output<sp/>-&gt;<sp/>permute<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>output:<sp/>&quot;lro,<sp/>lo,<sp/>1-for-summed-dims,<sp/>ro&quot;<sp/>with<sp/>orgiginal<sp/>shape<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>left:<sp/><sp/><sp/>&quot;lro,<sp/>lo,<sp/>summed&quot;<sp/>permuted<sp/>with<sp/>lpermutation<sp/>and<sp/>the<sp/>three<sp/>flattened</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>right:<sp/><sp/>&quot;lro,<sp/>summed,<sp/>ro&quot;<sp/>permuted<sp/>with<sp/>rpermutation<sp/>and<sp/>the<sp/>three<sp/>flattened</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>the<sp/>permuted<sp/>output<sp/>is<sp/>a<sp/>view<sp/>of<sp/>bmm(left,<sp/>right)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>finally,<sp/>opermutation<sp/>reverts<sp/>the<sp/>permutation<sp/>to<sp/>the<sp/>original<sp/>order<sp/>of<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>out_size;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>d<sp/>:<sp/>lro)<sp/>out_size.push_back(left.size(d));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>d<sp/>:<sp/>lo)<sp/>out_size.push_back(left.size(d));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>d<sp/>:<sp/>sum_dims_)<sp/>{<sp/>out_size.push_back(1);<sp/>(void)(d);<sp/>};<sp/></highlight><highlight class="comment">//<sp/>avoid<sp/>warining<sp/>about<sp/>not<sp/>using<sp/>d</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>d<sp/>:<sp/>ro)<sp/>out_size.push_back(right.size(d));</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>lpermutation(lro);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>lpermutation.insert(lpermutation.end(),<sp/>lo.begin(),<sp/>lo.end());</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>lpermutation.insert(lpermutation.end(),<sp/>sum_dims_.begin(),<sp/>sum_dims_.end());</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>lpermutation.insert(lpermutation.end(),<sp/>ro.begin(),<sp/>ro.end());</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>rpermutation(lro);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>rpermutation.insert(rpermutation.end(),<sp/>sum_dims_.begin(),<sp/>sum_dims_.end());</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>rpermutation.insert(rpermutation.end(),<sp/>ro.begin(),<sp/>ro.end());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>rpermutation.insert(rpermutation.end(),<sp/>lo.begin(),<sp/>lo.end());</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>opermutation(lro.size()+lo.size()+sum_dims_.size()+ro.size(),<sp/>-1);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>int64_t<sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>lro.begin();<sp/>it<sp/>!=<sp/>lro.end();<sp/>i++,<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>opermutation[*it]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>lo.begin();<sp/>it<sp/>!=<sp/>lo.end();<sp/>i++,<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>opermutation[*it]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>sum_dims_.begin();<sp/>it<sp/>!=<sp/>sum_dims_.end();<sp/>i++,<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>opermutation[*it]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>ro.begin();<sp/>it<sp/>!=<sp/>ro.end();<sp/>i++,<sp/>it++)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>opermutation[*it]<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>we<sp/>can<sp/>execute<sp/>the<sp/>operations<sp/>above</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>left<sp/>=<sp/>left.permute(lpermutation).reshape({lro_size,<sp/>lo_size,<sp/>sum_size});</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>right<sp/>=<sp/>right.permute(rpermutation).reshape({lro_size,<sp/>sum_size,<sp/>ro_size});</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>Tensor<sp/>result<sp/>=<sp/>at::bmm(left,<sp/>right);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>result<sp/>=<sp/>result.view(out_size).permute(opermutation);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>finally<sp/>squeeze<sp/>summed<sp/>dimensions<sp/>if<sp/>desired</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>keepdim)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>dim-1;<sp/>i&gt;=0;<sp/>i--)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sum_dims[i])</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>result.squeeze_(i);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">Tensor<sp/>einsum(std::string<sp/>eqn,<sp/>TensorList<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>constexpr<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>number_of_letters<sp/>=<sp/>26;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>std::string<sp/>in_eqn;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>pos;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>equation<sp/>is<sp/>given<sp/>in<sp/>terms<sp/>of<sp/>single<sp/>lowercase<sp/>letters<sp/>(&apos;a&apos;..&apos;z&apos;)<sp/>and<sp/>potentially<sp/>an<sp/>ellipsis.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Internally,<sp/>we<sp/>represent<sp/>it<sp/>using<sp/>indices<sp/>from<sp/>0<sp/>to<sp/>num_total_dimensions,<sp/>with<sp/>each<sp/>letter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>mapped<sp/>to<sp/>an<sp/>index<sp/>and<sp/>the<sp/>ellipsis<sp/>(&apos;...&apos;)<sp/>being<sp/>mapped<sp/>to<sp/>a<sp/>number<sp/>of<sp/>consequtive<sp/>indices.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>mapping<sp/>of<sp/>letters<sp/>to<sp/>internal<sp/>indices<sp/>is<sp/>given<sp/>in<sp/>letter_mapping.<sp/>A<sp/>value<sp/>of<sp/>-1<sp/>means<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>letter<sp/>has<sp/>not<sp/>been<sp/>assigned<sp/>an<sp/>index<sp/>yet<sp/>(because<sp/>it<sp/>has<sp/>not<sp/>been<sp/>seen).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>ellipsis<sp/>is<sp/>defined<sp/>by<sp/>first_ell_idx<sp/>(the<sp/>first<sp/>index)<sp/>and<sp/>num_ell_idxes<sp/>(the<sp/>number<sp/>of<sp/>indices).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>value<sp/>of<sp/>-1<sp/>for<sp/>num_ell_idxes<sp/>specifies<sp/>that<sp/>we<sp/>have<sp/>not<sp/>seen<sp/>an<sp/>ellipsis<sp/>yet.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>The<sp/>internal<sp/>indices<sp/>are<sp/>NOT<sp/>the<sp/>dimensions<sp/>used<sp/>internally.<sp/>There<sp/>is<sp/>a<sp/>mapping<sp/>to<sp/>them<sp/>below.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>std::array&lt;std::int64_t,<sp/>number_of_letters&gt;<sp/>letter_mapping;<sp/></highlight><highlight class="comment">//<sp/>map<sp/>letter<sp/>to<sp/>internal<sp/>(numerical)<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>letter_mapping.fill(-1);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>int64_t<sp/>num_ell_idxes<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>int64_t<sp/>first_ell_idx<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>internal<sp/>representation<sp/>of<sp/>the<sp/>left<sp/>hand<sp/>side<sp/>fo<sp/>the<sp/>equation<sp/>(with<sp/>ellipsis<sp/>expanded)<sp/>is<sp/>stored<sp/>in<sp/>input_op_idxes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>each<sp/>operand,<sp/>we<sp/>have<sp/>a<sp/>vector<sp/>mapping<sp/>each<sp/>dimension<sp/>to<sp/>an<sp/>internal<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>also<sp/>keep<sp/>track<sp/>of<sp/>the<sp/>number<sp/>of<sp/>occurrences<sp/>for<sp/>each<sp/>letter<sp/>(to<sp/>infer<sp/>a<sp/>right<sp/>hand<sp/>side<sp/>if<sp/>not<sp/>given)<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>last<sp/>occurence<sp/>of<sp/>each<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;int64_t&gt;&gt;<sp/>input_op_idxes;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>parsed<sp/>operand<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>std::array&lt;std::int64_t,<sp/>number_of_letters&gt;<sp/>num_letter_occurrences;<sp/></highlight><highlight class="comment">//<sp/>number<sp/>of<sp/>occurrence<sp/>in<sp/>the<sp/>equation<sp/>of<sp/>this<sp/>letter</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>num_letter_occurrences.fill(0);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>std::vector&lt;std::int64_t&gt;<sp/>last_idx_occurrence;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>last<sp/>operator<sp/>(left<sp/>to<sp/>right)<sp/>using<sp/>this<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((pos<sp/>=<sp/>eqn.find(</highlight><highlight class="stringliteral">&quot;-&gt;&quot;</highlight><highlight class="normal">))<sp/>!=<sp/>std::string::npos)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>check<sp/>whether<sp/>we<sp/>have<sp/>a<sp/>right<sp/>hand<sp/>side.<sp/>in_eq<sp/>is<sp/>the<sp/>left<sp/>hand<sp/>side</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>in_eqn<sp/>=<sp/>eqn.substr(0,<sp/>pos);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>in_eqn<sp/>=<sp/>eqn;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>next<sp/>we<sp/>parse<sp/>in_eq<sp/>(the<sp/>left<sp/>hand<sp/>side)<sp/>by<sp/>iterating.<sp/>It<sp/>is<sp/>a<sp/>string<sp/>of<sp/>comma<sp/>separated<sp/>terms<sp/>per<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>int64_t<sp/>operand<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>std::stringstream<sp/>eqn_stream(in_eqn);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>std::string<sp/>term;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>int64_t<sp/>num_total_idxes<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<sp/>eqn_stream.eof())<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>std::getline(eqn_stream,<sp/>term,<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">);<sp/><sp/></highlight><highlight class="comment">//<sp/>term<sp/>=<sp/>string<sp/>with<sp/>indices<sp/>of<sp/>current<sp/>term</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK((int64_t)<sp/>tensors.size()&gt;operand,<sp/></highlight><highlight class="stringliteral">&quot;more<sp/>operands<sp/>in<sp/>equation<sp/>than<sp/>tensors&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//<sp/>we<sp/>cannot<sp/>have<sp/>a<sp/>longer<sp/>equation<sp/>than<sp/>operands.<sp/>We<sp/>need<sp/>to<sp/>check<sp/>here<sp/>before<sp/>we<sp/>use<sp/>the<sp/>dimension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>ell_char_count<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>handling<sp/>of<sp/>ellipsis<sp/>&apos;...&apos;<sp/>is<sp/>a<sp/>bit<sp/>tedious,<sp/>we<sp/>count<sp/>the<sp/>&apos;.&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>there<sp/>is<sp/>an<sp/>ellipsis,<sp/>the<sp/>number<sp/>of<sp/>dimensions<sp/>it<sp/>represents<sp/>must<sp/>be<sp/>total<sp/>dim<sp/>-<sp/>letter<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>candidate_num_ell_idxes<sp/>=<sp/>tensors[operand].dim()<sp/>-<sp/>term.size()<sp/>+<sp/>3;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dims_in_term<sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>dimensions<sp/>we<sp/>have<sp/>seen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>current_op_idxes;<sp/></highlight><highlight class="comment">//<sp/>mapping<sp/>of<sp/>operand<sp/>dimensions<sp/>to<sp/>indices<sp/>for<sp/>current<sp/>term</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;c<sp/>:<sp/>term)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>c<sp/>=<sp/>character<sp/>with<sp/>a<sp/>single<sp/>letter<sp/>or<sp/>&apos;.&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ell_char_count++;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(ell_char_count<sp/>&lt;=<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;can<sp/>only<sp/>have<sp/>&apos;.&apos;<sp/>in<sp/>one<sp/>ellispis<sp/>&apos;...&apos;<sp/>in<sp/>term<sp/>&quot;</highlight><highlight class="normal">,<sp/>operand,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>of<sp/>the<sp/>equation&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ell_char_count<sp/>==<sp/>3)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>completes<sp/>the<sp/>ellipsis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_ell_idxes<sp/>==<sp/>-1)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>we<sp/>have<sp/>not<sp/>seen<sp/>an<sp/>ellipsis<sp/>before,<sp/>keep<sp/>track<sp/>of<sp/>indices<sp/>and<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>first_ell_idx<sp/>=<sp/>num_total_idxes;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_ell_idxes<sp/>=<sp/>candidate_num_ell_idxes;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_total_idxes<sp/>+=<sp/>num_ell_idxes;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>have<sp/>seen<sp/>an<sp/>ellipsis<sp/>before,<sp/>so<sp/>we<sp/>check<sp/>compatibility</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(candidate_num_ell_idxes<sp/>==<sp/>num_ell_idxes,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ellipsis<sp/>must<sp/>represent<sp/>&quot;</highlight><highlight class="normal">,<sp/>num_ell_idxes,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>dimensions<sp/>in<sp/>all<sp/>terms&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num_ell_idxes;<sp/>++i)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>map<sp/>ellipsis<sp/>dimensions<sp/>in<sp/>operand<sp/>to<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_op_idxes.push_back(first_ell_idx<sp/>+<sp/>i);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_idx_occurrence.push_back(operand);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dims_in_term<sp/>+=<sp/>num_ell_idxes;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>keep<sp/>track<sp/>of<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>letter<sp/>(hopefully)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK((ell_char_count<sp/>==<sp/>0)<sp/>||<sp/>(ell_char_count<sp/>==<sp/>3),<sp/></highlight><highlight class="stringliteral">&quot;&apos;.&apos;<sp/>must<sp/>only<sp/>occur<sp/>in<sp/>ellipsis,<sp/>operand<sp/>&quot;</highlight><highlight class="normal">,<sp/>operand);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK((</highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>&lt;=<sp/>c)<sp/>&amp;&amp;<sp/>(c<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;only<sp/>lowercase<sp/>letters<sp/>a-z<sp/>allowed<sp/>as<sp/>indices&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>letter_num<sp/>=<sp/>c-</highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>letter_num<sp/><sp/>=<sp/>position<sp/>in<sp/>letter_mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(letter_mapping[letter_num]<sp/>==<sp/>-1)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>new<sp/>letter,<sp/>add<sp/>internal<sp/>index<sp/>and<sp/>mapping</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>letter_mapping[letter_num]<sp/>=<sp/>num_total_idxes;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_total_idxes++;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_idx_occurrence.push_back(operand);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>letter<sp/>we<sp/>have<sp/>already<sp/>seen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_idx_occurrence[letter_mapping[letter_num]]<sp/>=<sp/>operand;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_letter_occurrences[letter_num]++;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>current_op_idxes.push_back(letter_mapping[letter_num]);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dims_in_term++;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(dims_in_term<sp/>==<sp/>tensors[operand].dim(),<sp/></highlight><highlight class="stringliteral">&quot;dimension<sp/>mismatch<sp/>for<sp/>operand<sp/>&quot;</highlight><highlight class="normal">,<sp/>operand,<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>equation<sp/>&quot;</highlight><highlight class="normal">,<sp/>dims_in_term,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>tensor<sp/>&quot;</highlight><highlight class="normal">,<sp/>tensors[operand].dim());</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>input_op_idxes.push_back(std::move(current_op_idxes));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>operand++;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>check<sp/>below,<sp/>we<sp/>need<sp/>==,<sp/>but<sp/>&gt;<sp/>is<sp/>captured<sp/>above,<sp/>so<sp/>the<sp/>error<sp/>message<sp/>can<sp/>be<sp/>specific<sp/>that<sp/>it<sp/>is<sp/>&lt;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>AT_CHECK((int64_t)<sp/>tensors.size()==operand,<sp/></highlight><highlight class="stringliteral">&quot;more<sp/>tensors<sp/>than<sp/>operands<sp/>in<sp/>equation&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>following<sp/>parses<sp/>or<sp/>infers<sp/>output<sp/>(right<sp/>hand<sp/>side)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>also<sp/>assigns<sp/>the<sp/>idxes_to_preprocessed_dims<sp/>(index<sp/>-&gt;<sp/>dimension<sp/>in<sp/>preprocessed<sp/>/<sp/>output<sp/>tensors)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>output<sp/>indices.<sp/>-1<sp/>means<sp/>that<sp/>the<sp/>index<sp/>has<sp/>not<sp/>been<sp/>assigned<sp/>a<sp/>dimension<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>idxes_to_preprocessed_dims(num_total_idxes,<sp/>-1);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>position<sp/>of<sp/>the<sp/>index<sp/>in<sp/>the<sp/>tensor<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>int64_t<sp/>num_output_dims<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pos<sp/>!=<sp/>std::string::npos)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>parse<sp/>the<sp/>user<sp/>provided<sp/>right<sp/>hand<sp/>side</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>ell_char_count<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;c<sp/>:<sp/>eqn.substr(pos+2))<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(c<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&apos;.&apos;<sp/>as<sp/>part<sp/>of<sp/>ellipsis</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ell_char_count++;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(ell_char_count<sp/>&lt;=<sp/>3,<sp/></highlight><highlight class="stringliteral">&quot;can<sp/>only<sp/>have<sp/>&apos;.&apos;<sp/>in<sp/>one<sp/>ellispis<sp/>&apos;...&apos;<sp/>in<sp/>right<sp/>hand<sp/>side<sp/>of<sp/>the<sp/>equation&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ell_char_count<sp/>==<sp/>3)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ellipsis<sp/>complete</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(num_ell_idxes<sp/>&gt;=<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;ellipsis<sp/>&apos;...&apos;<sp/>may<sp/>only<sp/>appear<sp/>in<sp/>right<sp/>hand<sp/>side<sp/>if<sp/>it<sp/>does<sp/>in<sp/>left<sp/>hand<sp/>side&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num_ell_idxes;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idxes_to_preprocessed_dims[first_ell_idx<sp/>+<sp/>i]<sp/>=<sp/>num_output_dims;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_output_dims++;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>letter<sp/>(hopefully)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK((ell_char_count<sp/>==<sp/>0)<sp/>||<sp/>(ell_char_count<sp/>==<sp/>3),<sp/></highlight><highlight class="stringliteral">&quot;&apos;.&apos;<sp/>must<sp/>only<sp/>occur<sp/>in<sp/>ellipsis<sp/>in<sp/>the<sp/>right<sp/>hand<sp/>side&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK((</highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal"><sp/>&lt;=<sp/>c)<sp/>&amp;&amp;<sp/>(c<sp/>&lt;=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;only<sp/>lowercase<sp/>letters<sp/>a-z<sp/>allowed<sp/>as<sp/>indices&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>letter_num<sp/>=<sp/>c-</highlight><highlight class="charliteral">&apos;a&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(idxes_to_preprocessed_dims[letter_mapping[letter_num]]<sp/>==<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;index<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;occurs<sp/>twice<sp/>in<sp/>output&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idxes_to_preprocessed_dims[letter_mapping[letter_num]]<sp/>=<sp/>num_output_dims;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_output_dims++;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">//<sp/>create<sp/>an<sp/>inferred<sp/>right<sp/>hand<sp/>side</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>ellipsis<sp/>(if<sp/>in<sp/>the<sp/>lhs)<sp/>comes<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_ell_idxes<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num_ell_idxes;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idxes_to_preprocessed_dims[first_ell_idx<sp/>+<sp/>i]<sp/>=<sp/>num_output_dims;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_output_dims++;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>then<sp/>the<sp/>indices<sp/>that<sp/>occur<sp/>exactly<sp/>once<sp/>in<sp/>alphabetic<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>number_of_letters;<sp/>idx++)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_letter_occurrences[idx]<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idxes_to_preprocessed_dims[letter_mapping[idx]]<sp/>=<sp/>num_output_dims;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>num_output_dims++;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>we<sp/>assign<sp/>the<sp/>idxes_to_preprocessed_dims<sp/>(index<sp/>-&gt;<sp/>dimension<sp/>in<sp/>preprocessed<sp/>/<sp/>output<sp/>tensors)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>non-output<sp/>indices<sp/>-<sp/>those<sp/>that<sp/>are<sp/>eventually<sp/>summed<sp/>over</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>int64_t<sp/>position<sp/>=<sp/>num_output_dims;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num_total_idxes;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idxes_to_preprocessed_dims[i]==-1)<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>idxes_to_preprocessed_dims[i]<sp/>=<sp/>position;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>position++;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>now<sp/>&quot;homogenize<sp/>the<sp/>dimensions&quot;,<sp/>i.e.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>take<sp/>diagonals<sp/>for<sp/>duplicated<sp/>indices</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>permute<sp/>the<sp/>dimensions<sp/>to<sp/>match<sp/>the<sp/>order<sp/>given<sp/>by<sp/>idxes_to_preprocessed_dims</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>-<sp/>unsqueeze<sp/>to<sp/>create<sp/>all<sp/>dimensions<sp/>for<sp/>each<sp/>index<sp/>in<sp/>each<sp/>tensor<sp/>where<sp/>they<sp/>are<sp/>missing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>also<sp/>check<sp/>that<sp/>sizes<sp/>match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>after<sp/>this,<sp/>all<sp/>operands<sp/>will<sp/>have<sp/>compatible<sp/>shapes<sp/>(i.e.<sp/>all<sp/>dimensions<sp/>are<sp/>aligned<sp/>are<sp/>broadcastable)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/>std::vector&lt;Tensor&gt;<sp/>preprocessed_operands;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>std::vector&lt;std::int64_t&gt;<sp/>size_of_dims(num_total_idxes,<sp/>-1);<sp/></highlight><highlight class="comment">//<sp/>keep<sp/>track<sp/>of<sp/>sizes<sp/>for<sp/>each<sp/>index,<sp/>-1<sp/>means<sp/>we<sp/>have<sp/>not<sp/>seen<sp/>a<sp/>size<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>op<sp/>=<sp/>0;<sp/>op<sp/>&lt;<sp/>(int64_t)<sp/>tensors.size();<sp/>op++)<sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>preprocessed_op<sp/>=<sp/>tensors[op];</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>idx_to_dim(num_total_idxes,<sp/>-1);<sp/></highlight><highlight class="comment">//<sp/>the<sp/>dimension<sp/>which<sp/>the<sp/>index<sp/>refers<sp/>to<sp/>in<sp/>the<sp/>original<sp/>tensor,<sp/>-1<sp/>means<sp/>it<sp/>does<sp/>not<sp/>appear</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;&amp;<sp/>current_op_input_idxes<sp/>=<sp/>input_op_idxes[op];</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>there<sp/>are<sp/>two<sp/>dimension<sp/>indices:<sp/>dim<sp/>is<sp/>after<sp/>taking<sp/>diagonals,<sp/>i<sp/>is<sp/>in<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>current_op_input_idxes.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>current_op_input_idxes[i];</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dim_out<sp/>=<sp/>idxes_to_preprocessed_dims[idx];</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx_to_dim[dim_out]<sp/>==<sp/>-1)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>first<sp/>appearance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idx_to_dim[dim_out]<sp/>=<sp/>dim;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size_of_dims[idx]<sp/>==<sp/>-1)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>keep<sp/>track<sp/>of<sp/>sizes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_of_dims[idx]<sp/>=<sp/>preprocessed_op.size(dim);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(size_of_dims[idx]<sp/>==<sp/>preprocessed_op.size(dim),<sp/></highlight><highlight class="stringliteral">&quot;size<sp/>of<sp/>dimension<sp/>does<sp/>not<sp/>match<sp/>previous<sp/>size,<sp/>operand<sp/>&quot;</highlight><highlight class="normal">,<sp/>op,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>dim<sp/>&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim++;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="comment">//<sp/>duplicate<sp/>dimension<sp/>in<sp/>tensor<sp/>--&gt;<sp/>take<sp/>diagonal<sp/>of<sp/>idx_to_dim[dim_out]<sp/>and<sp/>dim<sp/>and<sp/>put<sp/>the<sp/>diagonal<sp/>dimension<sp/>to<sp/>idx_to_dim[dim_out]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(size_of_dims[idx]<sp/>==<sp/>preprocessed_op.size(dim),<sp/></highlight><highlight class="stringliteral">&quot;size<sp/>of<sp/>dimension<sp/>does<sp/>not<sp/>match<sp/>previous<sp/>size,<sp/>operand<sp/>&quot;</highlight><highlight class="normal">,<sp/>op,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>dim<sp/>&quot;</highlight><highlight class="normal">,<sp/>i);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>preprocessed_op<sp/>=<sp/>preprocessed_op.diagonal(0,<sp/>idx_to_dim[dim_out],<sp/>dim);</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>diagonal<sp/>moves<sp/>the<sp/>diagonal<sp/>dimension<sp/>to<sp/>the<sp/>back</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>we<sp/>permute<sp/>the<sp/>last<sp/>dim<sp/>back<sp/>to<sp/>idx_to_dim[dim_out]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>perm(preprocessed_op.dim(),<sp/>0);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>d<sp/>=<sp/>0;<sp/>d<sp/>&lt;<sp/>preprocessed_op.dim();<sp/>d++)<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d<sp/>==<sp/>idx_to_dim[dim_out])<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perm[d]<sp/>=<sp/>preprocessed_op.dim()<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>perm[d]<sp/>=<sp/>d<sp/>-<sp/>(d<sp/>&gt;<sp/>idx_to_dim[dim_out]);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>preprocessed_op<sp/>=<sp/>preprocessed_op.permute(perm);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>we<sp/>permute<sp/>the<sp/>dimensions<sp/>in<sp/>the<sp/>right<sp/>order</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>permutation;<sp/></highlight><highlight class="comment">//<sp/>permutation<sp/>for<sp/>this<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;d<sp/>:<sp/>idx_to_dim)<sp/>{</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(d<sp/>&gt;<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>permutation.push_back(d);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>preprocessed_op<sp/>=<sp/>preprocessed_op.permute(permutation);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>finally,<sp/>we<sp/>insert<sp/>dimensions<sp/>for<sp/>idxes<sp/>not<sp/>in<sp/>the<sp/>operand<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>dim<sp/>=<sp/>0;<sp/>dim<sp/>&lt;<sp/>idx_to_dim.size();<sp/>dim++)<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idx_to_dim[dim]<sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>preprocessed_op<sp/>=<sp/>preprocessed_op.unsqueeze(dim);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>preprocessed_operands.push_back(preprocessed_op);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>we<sp/>reduce<sp/>the<sp/>indices<sp/>from<sp/>left<sp/>to<sp/>right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>numpy<sp/>allows<sp/>to<sp/>optimize<sp/>the<sp/>path<sp/>using<sp/>various</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>algorithms<sp/>(see<sp/>eigen_path<sp/>in<sp/>numpy<sp/>docs)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>start<sp/>with<sp/>the<sp/>leftmost<sp/>operator<sp/>and<sp/>reduce<sp/>indices<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>appear<sp/>only<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>Tensor<sp/>result<sp/>=<sp/>preprocessed_operands[0];</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>num_total_idxes;<sp/>idx++)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((last_idx_occurrence[idx]<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(idxes_to_preprocessed_dims[idx]&gt;=num_output_dims))<sp/>{</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>result.sum(idxes_to_preprocessed_dims[idx],<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>we<sp/>process<sp/>each<sp/>tensor<sp/>using<sp/>sumproduct_pair</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>(int64_t)<sp/>preprocessed_operands.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>sum_dims;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>idx<sp/>=<sp/>0;<sp/>idx<sp/>&lt;<sp/>num_total_idxes;<sp/>idx++)<sp/>{</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((last_idx_occurrence[idx]<sp/>==<sp/>i)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;&amp;<sp/>(idxes_to_preprocessed_dims[idx]&gt;=num_output_dims))<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum_dims.push_back(idxes_to_preprocessed_dims[idx]);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>at::native::sumproduct_pair(result,<sp/>preprocessed_operands[i],<sp/>sum_dims,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>finally,<sp/>we<sp/>squeeze<sp/>out<sp/>all<sp/>non-result<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>dim<sp/>=<sp/>num_total_idxes-1;<sp/>dim<sp/>&gt;=<sp/>num_output_dims;<sp/>dim--)</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/>result.squeeze_(dim);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>result;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_trilinear<sp/>computes<sp/>a<sp/>trilinear<sp/>einstein<sp/>sum<sp/>with<sp/>an<sp/>unrolled<sp/>dimension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>result<sp/>is<sp/>`(i1.unsqueeze(expand1)*i2.unsqueeze(expand2)*i2.unsqueeze(expand3)).sum(sumdim)`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>computation<sp/>is<sp/>unrolled<sp/>in<sp/>the<sp/>unroll_dim<sp/>dimension</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="comment">//<sp/>its<sp/>main<sp/>purpose<sp/>is<sp/>to<sp/>unify<sp/>the<sp/>computations<sp/>in<sp/>bilinear<sp/>and<sp/>bilinear_backward</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal">Tensor<sp/>_trilinear(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>i1_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>i2_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>i3_,</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IntList<sp/>expand1_,<sp/>IntList<sp/>expand2_,<sp/>IntList<sp/>expand3_,</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IntList<sp/>sumdim_,<sp/>int64_t<sp/>unroll_dim)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/>int64_t<sp/>total_dim<sp/>=<sp/>i1_.dim()+expand1_.size();</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/>AT_CHECK((unroll_dim<sp/>&gt;=<sp/>0)<sp/>&amp;&amp;<sp/>(unroll_dim<sp/>&lt;<sp/>total_dim),<sp/></highlight><highlight class="stringliteral">&quot;unroll_dim<sp/>must<sp/>be<sp/>in<sp/>[0,&quot;</highlight><highlight class="normal">,<sp/>total_dim-1,<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>expand1<sp/>=<sp/>dim_list_to_bitset(expand1_,<sp/>total_dim);</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>expand2<sp/>=<sp/>dim_list_to_bitset(expand2_,<sp/>total_dim);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>expand3<sp/>=<sp/>dim_list_to_bitset(expand3_,<sp/>total_dim);</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sumdim<sp/><sp/>=<sp/>dim_list_to_bitset(sumdim_,<sp/><sp/>total_dim);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/>Tensor<sp/>i1<sp/>=<sp/>i1_;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/>Tensor<sp/>i2<sp/>=<sp/>i2_;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/>Tensor<sp/>i3<sp/>=<sp/>i3_;</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>output_size;</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>sum_dims_12,<sp/>sum_dims_23;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/>int64_t<sp/>unroll_size<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>asserts...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>total_dim;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>s<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expand1[i])<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i1<sp/>=<sp/>i1.unsqueeze(i);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>i1.size(i);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expand2[i])<sp/>{</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i2<sp/>=<sp/>i2.unsqueeze(i);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>i2.size(i);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(expand3[i])<sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i3<sp/>=<sp/>i3.unsqueeze(i);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sumdim[i]<sp/>&amp;&amp;<sp/>(i<sp/>!=<sp/>unroll_dim))</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/>sum_dims_12.push_back(i);</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>s<sp/>=<sp/>i3.size(i);</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sumdim[i]<sp/>&amp;&amp;<sp/>(i<sp/>!=<sp/>unroll_dim))</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>sum_dims_23.push_back(i);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>output_size.push_back(sumdim[i]<sp/>?<sp/>1<sp/>:<sp/>s);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>==<sp/>unroll_dim)</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>unroll_size<sp/>=<sp/>s;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/>int64_t<sp/>slicemul1<sp/>=<sp/>(expand1[unroll_dim]<sp/>?<sp/>0<sp/>:<sp/>1);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/>int64_t<sp/>slicemul2<sp/>=<sp/>(expand2[unroll_dim]<sp/>?<sp/>0<sp/>:<sp/>1);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>int64_t<sp/>slicemul3<sp/>=<sp/>(expand3[unroll_dim]<sp/>?<sp/>0<sp/>:<sp/>1);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>i1.type().tensor(output_size).zero_();</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>sumdim[unroll_dim])<sp/>{</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>unroll_size;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Tensor<sp/>buf<sp/>=<sp/>at::native::sumproduct_pair(i1.narrow(unroll_dim,<sp/>k<sp/>*<sp/>slicemul1,<sp/>1),</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2.narrow(unroll_dim,<sp/>k<sp/>*<sp/>slicemul2,<sp/>1),</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum_dims_12,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>at::native::sumproduct_pair(buf,<sp/>i3.narrow(unroll_dim,<sp/>k<sp/>*<sp/>slicemul3,<sp/>1),<sp/>sum_dims_23,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output.narrow(unroll_dim,<sp/>k,<sp/>1).add_(buf);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>k<sp/>=<sp/>0;<sp/>k<sp/>&lt;<sp/>unroll_size;<sp/>k++)<sp/>{</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Tensor<sp/>buf<sp/>=<sp/>at::native::sumproduct_pair(i1.narrow(unroll_dim,<sp/>k*slicemul1,<sp/>1),</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i2.narrow(unroll_dim,<sp/>k*slicemul2,<sp/>1),<sp/>sum_dims_12,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>buf<sp/>=<sp/>at::native::sumproduct_pair(buf,<sp/>i3.narrow(unroll_dim,<sp/>k*slicemul3,<sp/>1),<sp/>sum_dims_23,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output.add_(buf);</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>output.dim()-1;<sp/>i<sp/>&gt;=<sp/>0;<sp/>i--)</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sumdim[i])</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output.squeeze_(i);</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight></codeline>
+<codeline lineno="411"><highlight class="normal">Tensor<sp/>bilinear(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>weight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>bias)<sp/>{</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/>AT_CHECK(input1.dim()<sp/>==<sp/>input2.dim(),<sp/></highlight><highlight class="stringliteral">&quot;bilinear():<sp/>input<sp/>dimensions<sp/>do<sp/>not<sp/>match:<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>input1.dim(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>and<sp/>&quot;</highlight><highlight class="normal">,<sp/>input2.dim());</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>input1.dim()<sp/>-<sp/>1;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(input1.size(i)<sp/>==<sp/>input2.size(i),</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;bilinear():<sp/>input<sp/>batch<sp/>dimensions<sp/>do<sp/>not<sp/>match<sp/>at<sp/>dim<sp/>&quot;</highlight><highlight class="normal">,<sp/>i,<sp/></highlight><highlight class="stringliteral">&quot;:<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>input1.size(i),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>and<sp/>&quot;</highlight><highlight class="normal">,<sp/>input2.size(i));</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/>AT_CHECK(input1.size(input1.dim()<sp/>-<sp/>1)<sp/>==<sp/>weight.size(1),</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;bilinear():<sp/>input1<sp/>size<sp/>does<sp/>not<sp/>match<sp/>weight<sp/>size:<sp/>got<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input1.size(input1.dim()<sp/>-<sp/>1),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>expected<sp/>&quot;</highlight><highlight class="normal">,<sp/>weight.size(1));</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/>AT_CHECK(input2.size(input2.dim()<sp/>-<sp/>1)<sp/>==<sp/>weight.size(2),</highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;bilinear():<sp/>input2<sp/>size<sp/>does<sp/>not<sp/>match<sp/>weight<sp/>size:<sp/>got<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input2.size(input2.dim()<sp/>-<sp/>1),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>expected<sp/>&quot;</highlight><highlight class="normal">,<sp/>weight.size(2));</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/>AT_CHECK(!bias.defined()<sp/>||<sp/>bias.size(0)<sp/>==<sp/>weight.size(0),</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;bilinear():<sp/>bias<sp/>size<sp/>does<sp/>not<sp/>match<sp/>weight<sp/>size:<sp/>got<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bias.size(0),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>expected<sp/>&quot;</highlight><highlight class="normal">,<sp/>weight.size(0));</highlight></codeline>
+<codeline lineno="426"><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>output_size;</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size1<sp/>=<sp/>input1.sizes();</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/>output_size.insert(output_size.end(),<sp/>size1.begin(),<sp/>size1.end()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/>output_size.push_back(weight.size(0));</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>input1_flattened<sp/>=<sp/>input1.view({-1,<sp/>input1.size(-1)});</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>input2_flattened<sp/>=<sp/>input2.view({-1,<sp/>input2.size(-1)});</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/>Tensor<sp/>output<sp/>=<sp/>at::_trilinear(input1_flattened,<sp/>weight,<sp/>input2_flattened,<sp/>{1,3},<sp/>{0},<sp/>{1,2},<sp/>{2,3}).reshape(output_size);</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(bias.defined())<sp/>{</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/>output<sp/>=<sp/>output<sp/>+<sp/>bias;</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="438"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal">}}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Linear.cpp"/>
+  </compounddef>
+</doxygen>

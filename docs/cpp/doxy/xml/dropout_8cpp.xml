@@ -1,0 +1,937 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dropout_8cpp" kind="file" language="C++">
+    <compoundname>dropout.cpp</compoundname>
+    <includes refid="dropout_8h" local="no">torch/nn/modules/dropout.h</includes>
+    <includes refid="torch_2csrc_2api_2include_2torch_2tensor_8h" local="no">torch/tensor.h</includes>
+    <includes refid="_error_8h" local="no">ATen/Error.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="18355">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="18356" relation="include">
+        </childnode>
+        <childnode refid="18357" relation="include">
+        </childnode>
+        <childnode refid="18358" relation="include">
+        </childnode>
+        <childnode refid="18359" relation="include">
+        </childnode>
+        <childnode refid="18360" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18362" relation="include">
+        </childnode>
+      </node>
+      <node id="18409">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="18374" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18407" relation="include">
+        </childnode>
+        <childnode refid="18410" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18360" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+      </node>
+      <node id="18379">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18393" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18360" relation="include">
+        </childnode>
+      </node>
+      <node id="18378">
+        <label>atomic</label>
+      </node>
+      <node id="18436">
+        <label>torch/csrc/autograd/generated/variable_factories.h</label>
+      </node>
+      <node id="18360">
+        <label>functional</label>
+      </node>
+      <node id="18413">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18404" relation="include">
+        </childnode>
+        <childnode refid="18354" relation="include">
+        </childnode>
+      </node>
+      <node id="18380">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="18381" relation="include">
+        </childnode>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18390" relation="include">
+        </childnode>
+        <childnode refid="18367" relation="include">
+        </childnode>
+        <childnode refid="18395" relation="include">
+        </childnode>
+      </node>
+      <node id="18391">
+        <label>limits</label>
+      </node>
+      <node id="18371">
+        <label>torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="18372" relation="include">
+        </childnode>
+        <childnode refid="18436" relation="include">
+        </childnode>
+        <childnode refid="18437" relation="include">
+        </childnode>
+      </node>
+      <node id="18398">
+        <label>assert.h</label>
+      </node>
+      <node id="18403">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18381" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18402" relation="include">
+        </childnode>
+        <childnode refid="18384" relation="include">
+        </childnode>
+        <childnode refid="18366" relation="include">
+        </childnode>
+        <childnode refid="18404" relation="include">
+        </childnode>
+        <childnode refid="18405" relation="include">
+        </childnode>
+      </node>
+      <node id="18387">
+        <label>iterator</label>
+      </node>
+      <node id="18397">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="18398" relation="include">
+        </childnode>
+        <childnode refid="18399" relation="include">
+        </childnode>
+        <childnode refid="18362" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18390" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18400" relation="include">
+        </childnode>
+        <childnode refid="18403" relation="include">
+        </childnode>
+      </node>
+      <node id="18416">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="18367">
+        <label>cstdint</label>
+      </node>
+      <node id="18424">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="18399">
+        <label>stdint.h</label>
+      </node>
+      <node id="18435">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="18437">
+        <label>torch/csrc/autograd/variable.h</label>
+      </node>
+      <node id="18392">
+        <label>cmath</label>
+      </node>
+      <node id="18359">
+        <label>cassert</label>
+      </node>
+      <node id="18408">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18373" relation="include">
+        </childnode>
+        <childnode refid="18407" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18403" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18409" relation="include">
+        </childnode>
+        <childnode refid="18414" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18412" relation="include">
+        </childnode>
+        <childnode refid="18367" relation="include">
+        </childnode>
+      </node>
+      <node id="18394">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18386" relation="include">
+        </childnode>
+        <childnode refid="18391" relation="include">
+        </childnode>
+      </node>
+      <node id="18362">
+        <label>stdexcept</label>
+      </node>
+      <node id="18430">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="18397" relation="include">
+        </childnode>
+        <childnode refid="18417" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18362" relation="include">
+        </childnode>
+      </node>
+      <node id="18405">
+        <label>numeric</label>
+      </node>
+      <node id="18401">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="18378" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18377" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18355" relation="include">
+        </childnode>
+      </node>
+      <node id="18390">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18391" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18367" relation="include">
+        </childnode>
+        <childnode refid="18362" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+        <childnode refid="18392" relation="include">
+        </childnode>
+        <childnode refid="18393" relation="include">
+        </childnode>
+        <childnode refid="18394" relation="include">
+        </childnode>
+      </node>
+      <node id="18377">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="18378" relation="include">
+        </childnode>
+      </node>
+      <node id="18400">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="18401" relation="include">
+        </childnode>
+        <childnode refid="18402" relation="include">
+        </childnode>
+      </node>
+      <node id="18361">
+        <label>string</label>
+      </node>
+      <node id="18433">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="18382" relation="include">
+        </childnode>
+        <childnode refid="18399" relation="include">
+        </childnode>
+      </node>
+      <node id="18434">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="18379" relation="include">
+        </childnode>
+        <childnode refid="18420" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18427" relation="include">
+        </childnode>
+        <childnode refid="18355" relation="include">
+        </childnode>
+      </node>
+      <node id="18440">
+        <label>map</label>
+      </node>
+      <node id="18374">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18376" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18377" relation="include">
+        </childnode>
+        <childnode refid="18379" relation="include">
+        </childnode>
+        <childnode refid="18396" relation="include">
+        </childnode>
+      </node>
+      <node id="18370">
+        <label>torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="18371" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18387" relation="include">
+        </childnode>
+        <childnode refid="18391" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18357" relation="include">
+        </childnode>
+      </node>
+      <node id="18414">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="18426">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="18379" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18417" relation="include">
+        </childnode>
+        <childnode refid="18409" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+      </node>
+      <node id="18364">
+        <label>exception</label>
+      </node>
+      <node id="18376">
+        <label>stddef.h</label>
+      </node>
+      <node id="18402">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="18401" relation="include">
+        </childnode>
+      </node>
+      <node id="18432">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18390" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+      </node>
+      <node id="18383">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="18363" relation="include">
+        </childnode>
+      </node>
+      <node id="18415">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="18397" relation="include">
+        </childnode>
+        <childnode refid="18416" relation="include">
+        </childnode>
+      </node>
+      <node id="18365">
+        <label>ostream</label>
+      </node>
+      <node id="18373">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+      </node>
+      <node id="18406">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="18381">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18382" relation="include">
+        </childnode>
+        <childnode refid="18389" relation="include">
+        </childnode>
+        <childnode refid="18387" relation="include">
+        </childnode>
+        <childnode refid="18369" relation="include">
+        </childnode>
+      </node>
+      <node id="18421">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18422" relation="include">
+        </childnode>
+      </node>
+      <node id="18438">
+        <label>torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="18439" relation="include">
+        </childnode>
+        <childnode refid="18371" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18357" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+      </node>
+      <node id="18418">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="18354">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="18351">
+        <label>torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="18352" relation="include">
+        </childnode>
+        <childnode refid="18370" relation="include">
+        </childnode>
+        <childnode refid="18438" relation="include">
+        </childnode>
+        <childnode refid="18371" relation="include">
+        </childnode>
+        <childnode refid="18372" relation="include">
+        </childnode>
+        <childnode refid="18355" relation="include">
+        </childnode>
+        <childnode refid="18440" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18357" relation="include">
+        </childnode>
+        <childnode refid="18368" relation="include">
+        </childnode>
+      </node>
+      <node id="18422">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="18401" relation="include">
+        </childnode>
+        <childnode refid="18366" relation="include">
+        </childnode>
+      </node>
+      <node id="18419">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18399" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+      </node>
+      <node id="18404">
+        <label>typeinfo</label>
+      </node>
+      <node id="18411">
+        <label>cstdio</label>
+      </node>
+      <node id="18439">
+        <label>torch/csrc/utils/variadic.h</label>
+      </node>
+      <node id="18396">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18354" relation="include">
+        </childnode>
+      </node>
+      <node id="18352">
+        <label>torch/detail/ordered_dict.h</label>
+        <link refid="ordered__dict_8h_source"/>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18367" relation="include">
+        </childnode>
+        <childnode refid="18360" relation="include">
+        </childnode>
+        <childnode refid="18358" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18368" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+        <childnode refid="18369" relation="include">
+        </childnode>
+      </node>
+      <node id="18369">
+        <label>vector</label>
+      </node>
+      <node id="18431">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="18428">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="18388">
+        <label>new</label>
+      </node>
+      <node id="18356">
+        <label>utility</label>
+      </node>
+      <node id="18389">
+        <label>array</label>
+      </node>
+      <node id="18366">
+        <label>sstream</label>
+      </node>
+      <node id="18423">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="18397" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18417" relation="include">
+        </childnode>
+        <childnode refid="18415" relation="include">
+        </childnode>
+        <childnode refid="18407" relation="include">
+        </childnode>
+        <childnode refid="18424" relation="include">
+        </childnode>
+        <childnode refid="18425" relation="include">
+        </childnode>
+        <childnode refid="18426" relation="include">
+        </childnode>
+        <childnode refid="18427" relation="include">
+        </childnode>
+        <childnode refid="18428" relation="include">
+        </childnode>
+      </node>
+      <node id="18425">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="18393">
+        <label>iosfwd</label>
+      </node>
+      <node id="18385">
+        <label>cstdlib</label>
+      </node>
+      <node id="18349">
+        <label>torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="18350" relation="include">
+        </childnode>
+        <childnode refid="18438" relation="include">
+        </childnode>
+        <childnode refid="18371" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18369" relation="include">
+        </childnode>
+      </node>
+      <node id="18395">
+        <label>iostream</label>
+      </node>
+      <node id="18348">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/dropout.cpp</label>
+        <link refid="dropout_8cpp"/>
+        <childnode refid="18349" relation="include">
+        </childnode>
+        <childnode refid="18371" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18369" relation="include">
+        </childnode>
+      </node>
+      <node id="18363">
+        <label>cstddef</label>
+      </node>
+      <node id="18368">
+        <label>unordered_map</label>
+      </node>
+      <node id="18412">
+        <label>mutex</label>
+      </node>
+      <node id="18350">
+        <label>torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="18351" relation="include">
+        </childnode>
+        <childnode refid="18371" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18434" relation="include">
+        </childnode>
+        <childnode refid="18427" relation="include">
+        </childnode>
+        <childnode refid="18355" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+      </node>
+      <node id="18372">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18373" relation="include">
+        </childnode>
+        <childnode refid="18374" relation="include">
+        </childnode>
+        <childnode refid="18397" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18407" relation="include">
+        </childnode>
+        <childnode refid="18408" relation="include">
+        </childnode>
+        <childnode refid="18415" relation="include">
+        </childnode>
+        <childnode refid="18417" relation="include">
+        </childnode>
+        <childnode refid="18379" relation="include">
+        </childnode>
+        <childnode refid="18421" relation="include">
+        </childnode>
+        <childnode refid="18423" relation="include">
+        </childnode>
+        <childnode refid="18429" relation="include">
+        </childnode>
+        <childnode refid="18430" relation="include">
+        </childnode>
+        <childnode refid="18431" relation="include">
+        </childnode>
+        <childnode refid="18432" relation="include">
+        </childnode>
+        <childnode refid="18433" relation="include">
+        </childnode>
+        <childnode refid="18426" relation="include">
+        </childnode>
+        <childnode refid="18427" relation="include">
+        </childnode>
+        <childnode refid="18420" relation="include">
+        </childnode>
+        <childnode refid="18434" relation="include">
+        </childnode>
+        <childnode refid="18435" relation="include">
+        </childnode>
+      </node>
+      <node id="18410">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="18384" relation="include">
+        </childnode>
+        <childnode refid="18411" relation="include">
+        </childnode>
+        <childnode refid="18385" relation="include">
+        </childnode>
+        <childnode refid="18360" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18412" relation="include">
+        </childnode>
+        <childnode refid="18368" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+        <childnode refid="18369" relation="include">
+        </childnode>
+        <childnode refid="18413" relation="include">
+        </childnode>
+        <childnode refid="18354" relation="include">
+        </childnode>
+      </node>
+      <node id="18353">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="18354" relation="include">
+        </childnode>
+        <childnode refid="18355" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18364" relation="include">
+        </childnode>
+        <childnode refid="18365" relation="include">
+        </childnode>
+        <childnode refid="18366" relation="include">
+        </childnode>
+        <childnode refid="18361" relation="include">
+        </childnode>
+      </node>
+      <node id="18427">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="18408" relation="include">
+        </childnode>
+        <childnode refid="18379" relation="include">
+        </childnode>
+        <childnode refid="18426" relation="include">
+        </childnode>
+        <childnode refid="18420" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18417" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18393" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+      </node>
+      <node id="18417">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="18407" relation="include">
+        </childnode>
+        <childnode refid="18397" relation="include">
+        </childnode>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18418" relation="include">
+        </childnode>
+        <childnode refid="18415" relation="include">
+        </childnode>
+        <childnode refid="18419" relation="include">
+        </childnode>
+        <childnode refid="18400" relation="include">
+        </childnode>
+        <childnode refid="18401" relation="include">
+        </childnode>
+        <childnode refid="18403" relation="include">
+        </childnode>
+        <childnode refid="18379" relation="include">
+        </childnode>
+        <childnode refid="18420" relation="include">
+        </childnode>
+        <childnode refid="18355" relation="include">
+        </childnode>
+      </node>
+      <node id="18357">
+        <label>type_traits</label>
+      </node>
+      <node id="18420">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="18380" relation="include">
+        </childnode>
+        <childnode refid="18353" relation="include">
+        </childnode>
+        <childnode refid="18395" relation="include">
+        </childnode>
+      </node>
+      <node id="18382">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="18383" relation="include">
+        </childnode>
+        <childnode refid="18384" relation="include">
+        </childnode>
+        <childnode refid="18359" relation="include">
+        </childnode>
+        <childnode refid="18363" relation="include">
+        </childnode>
+        <childnode refid="18385" relation="include">
+        </childnode>
+        <childnode refid="18386" relation="include">
+        </childnode>
+        <childnode refid="18358" relation="include">
+        </childnode>
+        <childnode refid="18387" relation="include">
+        </childnode>
+        <childnode refid="18375" relation="include">
+        </childnode>
+        <childnode refid="18388" relation="include">
+        </childnode>
+        <childnode refid="18357" relation="include">
+        </childnode>
+        <childnode refid="18356" relation="include">
+        </childnode>
+        <childnode refid="18354" relation="include">
+        </childnode>
+      </node>
+      <node id="18384">
+        <label>algorithm</label>
+      </node>
+      <node id="18407">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="18399" relation="include">
+        </childnode>
+      </node>
+      <node id="18386">
+        <label>cstring</label>
+      </node>
+      <node id="18375">
+        <label>memory</label>
+      </node>
+      <node id="18358">
+        <label>initializer_list</label>
+      </node>
+      <node id="18429">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="18395" relation="include">
+        </childnode>
+        <childnode refid="18406" relation="include">
+        </childnode>
+        <childnode refid="18397" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetorch">torch</innernamespace>
+    <innernamespace refid="namespacetorch_1_1nn">torch::nn</innernamespace>
+    <innernamespace refid="namespacetorch_1_1nn_1_1detail">torch::nn::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;torch/nn/modules/dropout.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;torch/tensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Error.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetorch" kindref="compound">torch</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">nn<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">DropoutImplBase&lt;Derived&gt;::DropoutImplBase(DropoutOptions<sp/>options_)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>options(options_)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>AT_CHECK(options.rate_<sp/>&gt;=<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;Dropout<sp/>rate<sp/>must<sp/>not<sp/>be<sp/>less<sp/>than<sp/>zero&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>AT_CHECK(options.rate_<sp/>&lt;=<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;Dropout<sp/>rate<sp/>must<sp/>not<sp/>be<sp/>greater<sp/>than<sp/>one&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DropoutImplBase&lt;Derived&gt;::reset()<sp/>{}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">Tensor<sp/>DropoutImplBase&lt;Derived&gt;::forward(Tensor<sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.rate_<sp/>==<sp/>0<sp/>||<sp/>!this-&gt;is_training())<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>scale<sp/>=<sp/>1.0f<sp/>/<sp/>(1.0f<sp/>-<sp/>options.rate_);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>boolean_mask<sp/>=<sp/>noise_mask(input).uniform_(0,<sp/>1)<sp/>&gt;<sp/>options.rate_;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>noise<sp/>=<sp/>boolean_mask.to(input.dtype()).mul_(scale);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>input<sp/>*<sp/>noise;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DropoutImplBase&lt;DropoutImpl&gt;;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DropoutImplBase&lt;Dropout2dImpl&gt;;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">DropoutOptions::DropoutOptions(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rate)<sp/>:<sp/>rate_(rate)<sp/>{}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">Tensor<sp/>DropoutImpl::noise_mask(Tensor<sp/>input)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::empty_like(input);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">Tensor<sp/>Dropout2dImpl::noise_mask(Tensor<sp/>input)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::empty({input.size(0),<sp/>input.size(1),<sp/>1,<sp/>1},<sp/>input.options());</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>torch</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/dropout.cpp"/>
+  </compounddef>
+</doxygen>

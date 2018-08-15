@@ -1,0 +1,816 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_unary_ops_kernel_8h" kind="file" language="C++">
+    <compoundname>UnaryOpsKernel.h</compoundname>
+    <includes refid="_a_ten_8h" local="no">ATen/ATen.h</includes>
+    <includes refid="_dispatch_stub_8h" local="no">ATen/native/DispatchStub.h</includes>
+    <includes local="no">stdexcept</includes>
+    <includedby refid="_unary_ops_kernel_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.cpp</includedby>
+    <includedby refid="_unary_ops_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/UnaryOps.cpp</includedby>
+    <incdepgraph>
+      <node id="5193">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="5194" relation="include">
+        </childnode>
+        <childnode refid="5195" relation="include">
+        </childnode>
+        <childnode refid="5196" relation="include">
+        </childnode>
+        <childnode refid="5197" relation="include">
+        </childnode>
+        <childnode refid="5198" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+      </node>
+      <node id="5239">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="5189" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5237" relation="include">
+        </childnode>
+        <childnode refid="5240" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5198" relation="include">
+        </childnode>
+        <childnode refid="5190" relation="include">
+        </childnode>
+      </node>
+      <node id="5207">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5198" relation="include">
+        </childnode>
+      </node>
+      <node id="5206">
+        <label>atomic</label>
+      </node>
+      <node id="5185">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h"/>
+        <childnode refid="5186" relation="include">
+        </childnode>
+        <childnode refid="5267" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+      </node>
+      <node id="5198">
+        <label>functional</label>
+      </node>
+      <node id="5244">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5234" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+      </node>
+      <node id="5208">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="5209" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5225" relation="include">
+        </childnode>
+      </node>
+      <node id="5220">
+        <label>limits</label>
+      </node>
+      <node id="5228">
+        <label>assert.h</label>
+      </node>
+      <node id="5233">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5209" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5232" relation="include">
+        </childnode>
+        <childnode refid="5212" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5234" relation="include">
+        </childnode>
+        <childnode refid="5235" relation="include">
+        </childnode>
+      </node>
+      <node id="5215">
+        <label>iterator</label>
+      </node>
+      <node id="5227">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="5228" relation="include">
+        </childnode>
+        <childnode refid="5229" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5194" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+      </node>
+      <node id="5247">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="5221">
+        <label>cstdint</label>
+      </node>
+      <node id="5255">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="5229">
+        <label>stdint.h</label>
+      </node>
+      <node id="5266">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="5222">
+        <label>cmath</label>
+      </node>
+      <node id="5197">
+        <label>cassert</label>
+      </node>
+      <node id="5238">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5188" relation="include">
+        </childnode>
+        <childnode refid="5237" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5239" relation="include">
+        </childnode>
+        <childnode refid="5245" relation="include">
+        </childnode>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5242" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+      </node>
+      <node id="5224">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+      </node>
+      <node id="5200">
+        <label>stdexcept</label>
+      </node>
+      <node id="5261">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5248" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+      </node>
+      <node id="5235">
+        <label>numeric</label>
+      </node>
+      <node id="5231">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="5206" relation="include">
+        </childnode>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5205" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5193" relation="include">
+        </childnode>
+      </node>
+      <node id="5219">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5220" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5221" relation="include">
+        </childnode>
+        <childnode refid="5200" relation="include">
+        </childnode>
+        <childnode refid="5194" relation="include">
+        </childnode>
+        <childnode refid="5222" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5224" relation="include">
+        </childnode>
+      </node>
+      <node id="5205">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="5206" relation="include">
+        </childnode>
+      </node>
+      <node id="5230">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="5231" relation="include">
+        </childnode>
+        <childnode refid="5232" relation="include">
+        </childnode>
+      </node>
+      <node id="5199">
+        <label>string</label>
+      </node>
+      <node id="5264">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="5210" relation="include">
+        </childnode>
+        <childnode refid="5229" relation="include">
+        </childnode>
+      </node>
+      <node id="5265">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5251" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5258" relation="include">
+        </childnode>
+        <childnode refid="5193" relation="include">
+        </childnode>
+      </node>
+      <node id="5189">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5191" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5205" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5226" relation="include">
+        </childnode>
+      </node>
+      <node id="5245">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="5257">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5248" relation="include">
+        </childnode>
+        <childnode refid="5239" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+      </node>
+      <node id="5202">
+        <label>exception</label>
+      </node>
+      <node id="5191">
+        <label>stddef.h</label>
+      </node>
+      <node id="5232">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="5231" relation="include">
+        </childnode>
+      </node>
+      <node id="5263">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5219" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+      </node>
+      <node id="5211">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="5201" relation="include">
+        </childnode>
+      </node>
+      <node id="5246">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5247" relation="include">
+        </childnode>
+      </node>
+      <node id="5203">
+        <label>ostream</label>
+      </node>
+      <node id="5188">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+      </node>
+      <node id="5236">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="5209">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5210" relation="include">
+        </childnode>
+        <childnode refid="5217" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+      </node>
+      <node id="5252">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5253" relation="include">
+        </childnode>
+      </node>
+      <node id="5249">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="5187">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="5253">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="5231" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+      </node>
+      <node id="5250">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5229" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+      </node>
+      <node id="5267">
+        <label>ATen/native/DispatchStub.h</label>
+        <link refid="_dispatch_stub_8h_source"/>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5195" relation="include">
+        </childnode>
+      </node>
+      <node id="5234">
+        <label>typeinfo</label>
+      </node>
+      <node id="5241">
+        <label>cstdio</label>
+      </node>
+      <node id="5226">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+      </node>
+      <node id="5218">
+        <label>vector</label>
+      </node>
+      <node id="5262">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="5259">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="5216">
+        <label>new</label>
+      </node>
+      <node id="5194">
+        <label>utility</label>
+      </node>
+      <node id="5217">
+        <label>array</label>
+      </node>
+      <node id="5204">
+        <label>sstream</label>
+      </node>
+      <node id="5254">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5248" relation="include">
+        </childnode>
+        <childnode refid="5246" relation="include">
+        </childnode>
+        <childnode refid="5237" relation="include">
+        </childnode>
+        <childnode refid="5255" relation="include">
+        </childnode>
+        <childnode refid="5256" relation="include">
+        </childnode>
+        <childnode refid="5257" relation="include">
+        </childnode>
+        <childnode refid="5258" relation="include">
+        </childnode>
+        <childnode refid="5259" relation="include">
+        </childnode>
+      </node>
+      <node id="5256">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="5223">
+        <label>iosfwd</label>
+      </node>
+      <node id="5213">
+        <label>cstdlib</label>
+      </node>
+      <node id="5225">
+        <label>iostream</label>
+      </node>
+      <node id="5201">
+        <label>cstddef</label>
+      </node>
+      <node id="5243">
+        <label>unordered_map</label>
+      </node>
+      <node id="5242">
+        <label>mutex</label>
+      </node>
+      <node id="5186">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5188" relation="include">
+        </childnode>
+        <childnode refid="5189" relation="include">
+        </childnode>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5237" relation="include">
+        </childnode>
+        <childnode refid="5238" relation="include">
+        </childnode>
+        <childnode refid="5246" relation="include">
+        </childnode>
+        <childnode refid="5248" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5252" relation="include">
+        </childnode>
+        <childnode refid="5254" relation="include">
+        </childnode>
+        <childnode refid="5260" relation="include">
+        </childnode>
+        <childnode refid="5261" relation="include">
+        </childnode>
+        <childnode refid="5262" relation="include">
+        </childnode>
+        <childnode refid="5263" relation="include">
+        </childnode>
+        <childnode refid="5264" relation="include">
+        </childnode>
+        <childnode refid="5257" relation="include">
+        </childnode>
+        <childnode refid="5258" relation="include">
+        </childnode>
+        <childnode refid="5251" relation="include">
+        </childnode>
+        <childnode refid="5265" relation="include">
+        </childnode>
+        <childnode refid="5266" relation="include">
+        </childnode>
+      </node>
+      <node id="5240">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="5212" relation="include">
+        </childnode>
+        <childnode refid="5241" relation="include">
+        </childnode>
+        <childnode refid="5213" relation="include">
+        </childnode>
+        <childnode refid="5198" relation="include">
+        </childnode>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5242" relation="include">
+        </childnode>
+        <childnode refid="5243" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+        <childnode refid="5218" relation="include">
+        </childnode>
+        <childnode refid="5244" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+      </node>
+      <node id="5192">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="5187" relation="include">
+        </childnode>
+        <childnode refid="5193" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5202" relation="include">
+        </childnode>
+        <childnode refid="5203" relation="include">
+        </childnode>
+        <childnode refid="5204" relation="include">
+        </childnode>
+        <childnode refid="5199" relation="include">
+        </childnode>
+      </node>
+      <node id="5258">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="5238" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5257" relation="include">
+        </childnode>
+        <childnode refid="5251" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5248" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5223" relation="include">
+        </childnode>
+        <childnode refid="5194" relation="include">
+        </childnode>
+      </node>
+      <node id="5248">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="5237" relation="include">
+        </childnode>
+        <childnode refid="5227" relation="include">
+        </childnode>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5249" relation="include">
+        </childnode>
+        <childnode refid="5246" relation="include">
+        </childnode>
+        <childnode refid="5250" relation="include">
+        </childnode>
+        <childnode refid="5230" relation="include">
+        </childnode>
+        <childnode refid="5231" relation="include">
+        </childnode>
+        <childnode refid="5233" relation="include">
+        </childnode>
+        <childnode refid="5207" relation="include">
+        </childnode>
+        <childnode refid="5251" relation="include">
+        </childnode>
+        <childnode refid="5193" relation="include">
+        </childnode>
+      </node>
+      <node id="5195">
+        <label>type_traits</label>
+      </node>
+      <node id="5251">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="5208" relation="include">
+        </childnode>
+        <childnode refid="5192" relation="include">
+        </childnode>
+        <childnode refid="5225" relation="include">
+        </childnode>
+      </node>
+      <node id="5210">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="5211" relation="include">
+        </childnode>
+        <childnode refid="5212" relation="include">
+        </childnode>
+        <childnode refid="5197" relation="include">
+        </childnode>
+        <childnode refid="5201" relation="include">
+        </childnode>
+        <childnode refid="5213" relation="include">
+        </childnode>
+        <childnode refid="5214" relation="include">
+        </childnode>
+        <childnode refid="5196" relation="include">
+        </childnode>
+        <childnode refid="5215" relation="include">
+        </childnode>
+        <childnode refid="5190" relation="include">
+        </childnode>
+        <childnode refid="5216" relation="include">
+        </childnode>
+        <childnode refid="5195" relation="include">
+        </childnode>
+        <childnode refid="5194" relation="include">
+        </childnode>
+        <childnode refid="5187" relation="include">
+        </childnode>
+      </node>
+      <node id="5212">
+        <label>algorithm</label>
+      </node>
+      <node id="5237">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="5229" relation="include">
+        </childnode>
+      </node>
+      <node id="5214">
+        <label>cstring</label>
+      </node>
+      <node id="5190">
+        <label>memory</label>
+      </node>
+      <node id="5196">
+        <label>initializer_list</label>
+      </node>
+      <node id="5260">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="5225" relation="include">
+        </childnode>
+        <childnode refid="5236" relation="include">
+        </childnode>
+        <childnode refid="5227" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/ATen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/native/DispatchStub.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>unary_fn<sp/>=<sp/>void(*)(Tensor&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>absImpl);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>acosImpl);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>asinImpl);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>atanImpl);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>ceilImpl);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>cosImpl);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DECLARE_DISPATCH(unary_fn,<sp/>coshImpl);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>erfImpl);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>erfcImpl);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>expImpl);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>expm1Impl);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>floorImpl);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>logImpl);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>log10Impl);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>log1pImpl);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>log2Impl);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>roundImpl);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>rsqrtImpl);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>sigmoidImpl);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>sinImpl);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//<sp/>DECLARE_DISPATCH(unary_fn,<sp/>sinhImpl);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>sqrtImpl);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>tanImpl);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>tanhImpl);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">DECLARE_DISPATCH(unary_fn,<sp/>truncImpl);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Missing<sp/>unary<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>digamma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>lgamma</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>See<sp/>below</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">//<sp/>erfinv</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>fill</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//<sp/>frac</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>contiguous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>clamp/_min/_max</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//<sp/>neg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reciprocal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sigmoid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sign</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">//<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h"/>
+  </compounddef>
+</doxygen>

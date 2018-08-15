@@ -1,0 +1,700 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="cuda_2_c_u_d_a_stream_8cpp" kind="file" language="C++">
+    <compoundname>CUDAStream.cpp</compoundname>
+    <includes refid="cuda_2_c_u_d_a_stream_8h" local="yes">ATen/cuda/CUDAStream.h</includes>
+    <includes refid="_c_u_d_a_context_8h" local="yes">ATen/cuda/CUDAContext.h</includes>
+    <includes refid="cuda_2_exceptions_8h" local="yes">ATen/cuda/Exceptions.h</includes>
+    <includes refid="_error_8h" local="yes">ATen/Error.h</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">atomic</includes>
+    <incdepgraph>
+      <node id="1791">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1792" relation="include">
+        </childnode>
+        <childnode refid="1793" relation="include">
+        </childnode>
+        <childnode refid="1794" relation="include">
+        </childnode>
+        <childnode refid="1795" relation="include">
+        </childnode>
+        <childnode refid="1796" relation="include">
+        </childnode>
+        <childnode refid="1797" relation="include">
+        </childnode>
+      </node>
+      <node id="1828">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1816" relation="include">
+        </childnode>
+        <childnode refid="1798" relation="include">
+        </childnode>
+        <childnode refid="1820" relation="include">
+        </childnode>
+        <childnode refid="1796" relation="include">
+        </childnode>
+        <childnode refid="1795" relation="include">
+        </childnode>
+      </node>
+      <node id="1825">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="1826" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1830" relation="include">
+        </childnode>
+        <childnode refid="1798" relation="include">
+        </childnode>
+        <childnode refid="1795" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+      </node>
+      <node id="1814">
+        <label>atomic</label>
+      </node>
+      <node id="1776">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.cpp</label>
+        <link refid="cuda_2_c_u_d_a_stream_8cpp"/>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+        <childnode refid="1836" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+        <childnode refid="1814" relation="include">
+        </childnode>
+      </node>
+      <node id="1795">
+        <label>functional</label>
+      </node>
+      <node id="1834">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="1798" relation="include">
+        </childnode>
+        <childnode refid="1796" relation="include">
+        </childnode>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1816">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="1789" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1817" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1822" relation="include">
+        </childnode>
+      </node>
+      <node id="1818">
+        <label>limits</label>
+      </node>
+      <node id="1807">
+        <label>iterator</label>
+      </node>
+      <node id="1788">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1789" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1812" relation="include">
+        </childnode>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1801" relation="include">
+        </childnode>
+        <childnode refid="1823" relation="include">
+        </childnode>
+        <childnode refid="1824" relation="include">
+        </childnode>
+      </node>
+      <node id="1778">
+        <label>cstdint</label>
+      </node>
+      <node id="1786">
+        <label>stdint.h</label>
+      </node>
+      <node id="1819">
+        <label>cmath</label>
+      </node>
+      <node id="1794">
+        <label>cassert</label>
+      </node>
+      <node id="1783">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1784" relation="include">
+        </childnode>
+        <childnode refid="1785" relation="include">
+        </childnode>
+        <childnode refid="1787" relation="include">
+        </childnode>
+        <childnode refid="1788" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1825" relation="include">
+        </childnode>
+        <childnode refid="1835" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+      </node>
+      <node id="1821">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1806" relation="include">
+        </childnode>
+        <childnode refid="1818" relation="include">
+        </childnode>
+      </node>
+      <node id="1797">
+        <label>stdexcept</label>
+      </node>
+      <node id="1824">
+        <label>numeric</label>
+      </node>
+      <node id="1782">
+        <label>ATen/cuda/CUDAContext.h</label>
+        <link refid="_c_u_d_a_context_8h_source"/>
+        <childnode refid="1783" relation="include">
+        </childnode>
+        <childnode refid="1777" relation="include">
+        </childnode>
+        <childnode refid="1836" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+        <childnode refid="1837" relation="include">
+        </childnode>
+      </node>
+      <node id="1813">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="1814" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1815" relation="include">
+        </childnode>
+        <childnode refid="1816" relation="include">
+        </childnode>
+        <childnode refid="1791" relation="include">
+        </childnode>
+      </node>
+      <node id="1817">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1818" relation="include">
+        </childnode>
+        <childnode refid="1796" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1797" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1819" relation="include">
+        </childnode>
+        <childnode refid="1820" relation="include">
+        </childnode>
+        <childnode refid="1821" relation="include">
+        </childnode>
+      </node>
+      <node id="1815">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="1814" relation="include">
+        </childnode>
+      </node>
+      <node id="1796">
+        <label>string</label>
+      </node>
+      <node id="1836">
+        <label>ATen/cuda/Exceptions.h</label>
+        <link refid="cuda_2_exceptions_8h_source"/>
+        <childnode refid="1790" relation="include">
+        </childnode>
+      </node>
+      <node id="1826">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1827" relation="include">
+        </childnode>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1815" relation="include">
+        </childnode>
+        <childnode refid="1828" relation="include">
+        </childnode>
+        <childnode refid="1829" relation="include">
+        </childnode>
+      </node>
+      <node id="1835">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="1799">
+        <label>exception</label>
+      </node>
+      <node id="1827">
+        <label>stddef.h</label>
+      </node>
+      <node id="1812">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="1813" relation="include">
+        </childnode>
+      </node>
+      <node id="1803">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="1798" relation="include">
+        </childnode>
+      </node>
+      <node id="1800">
+        <label>ostream</label>
+      </node>
+      <node id="1784">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1787">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="1789">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="1790" relation="include">
+        </childnode>
+        <childnode refid="1802" relation="include">
+        </childnode>
+        <childnode refid="1810" relation="include">
+        </childnode>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1811" relation="include">
+        </childnode>
+      </node>
+      <node id="1781">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="1823">
+        <label>typeinfo</label>
+      </node>
+      <node id="1831">
+        <label>cstdio</label>
+      </node>
+      <node id="1829">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1811">
+        <label>vector</label>
+      </node>
+      <node id="1809">
+        <label>new</label>
+      </node>
+      <node id="1779">
+        <label>utility</label>
+      </node>
+      <node id="1810">
+        <label>array</label>
+      </node>
+      <node id="1801">
+        <label>sstream</label>
+      </node>
+      <node id="1820">
+        <label>iosfwd</label>
+      </node>
+      <node id="1805">
+        <label>cstdlib</label>
+      </node>
+      <node id="1822">
+        <label>iostream</label>
+      </node>
+      <node id="1798">
+        <label>cstddef</label>
+      </node>
+      <node id="1777">
+        <label>ATen/cuda/CUDAStream.h</label>
+        <link refid="cuda_2_c_u_d_a_stream_8h_source"/>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1780" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1833">
+        <label>unordered_map</label>
+      </node>
+      <node id="1832">
+        <label>mutex</label>
+      </node>
+      <node id="1780">
+        <label>cuda_runtime_api.h</label>
+      </node>
+      <node id="1830">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1831" relation="include">
+        </childnode>
+        <childnode refid="1805" relation="include">
+        </childnode>
+        <childnode refid="1795" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1832" relation="include">
+        </childnode>
+        <childnode refid="1833" relation="include">
+        </childnode>
+        <childnode refid="1796" relation="include">
+        </childnode>
+        <childnode refid="1811" relation="include">
+        </childnode>
+        <childnode refid="1834" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1790">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1791" relation="include">
+        </childnode>
+        <childnode refid="1798" relation="include">
+        </childnode>
+        <childnode refid="1799" relation="include">
+        </childnode>
+        <childnode refid="1800" relation="include">
+        </childnode>
+        <childnode refid="1801" relation="include">
+        </childnode>
+        <childnode refid="1796" relation="include">
+        </childnode>
+      </node>
+      <node id="1792">
+        <label>type_traits</label>
+      </node>
+      <node id="1837">
+        <label>cusparse.h</label>
+      </node>
+      <node id="1802">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="1803" relation="include">
+        </childnode>
+        <childnode refid="1804" relation="include">
+        </childnode>
+        <childnode refid="1794" relation="include">
+        </childnode>
+        <childnode refid="1798" relation="include">
+        </childnode>
+        <childnode refid="1805" relation="include">
+        </childnode>
+        <childnode refid="1806" relation="include">
+        </childnode>
+        <childnode refid="1793" relation="include">
+        </childnode>
+        <childnode refid="1807" relation="include">
+        </childnode>
+        <childnode refid="1808" relation="include">
+        </childnode>
+        <childnode refid="1809" relation="include">
+        </childnode>
+        <childnode refid="1792" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+      </node>
+      <node id="1804">
+        <label>algorithm</label>
+      </node>
+      <node id="1785">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="1786" relation="include">
+        </childnode>
+      </node>
+      <node id="1806">
+        <label>cstring</label>
+      </node>
+      <node id="1808">
+        <label>memory</label>
+      </node>
+      <node id="1793">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_c_u_d_a_stream_internals" prot="public">CUDAStreamInternals</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1cuda">at::cuda</innernamespace>
+    <innernamespace refid="namespaceat_1_1cuda_1_1detail">at::cuda::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/cuda/CUDAStream.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cuda/CUDAContext.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cuda/Exceptions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;atomic&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Internal<sp/>implementation<sp/>is<sp/>entirely<sp/>hidden</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="struct_c_u_d_a_stream_internals" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_destructible;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>std::atomic&lt;int&gt;<sp/>refcount;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>int64_t<sp/>device;<sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>cudaGetDevice<sp/>works<sp/>with<sp/>int32_t,<sp/>not<sp/>int64_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>cudaStream_t<sp/>stream;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cuda<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/>*<sp/>Stream<sp/>state</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>cudaStream_t<sp/>DEFAULT_STREAM<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::once_flag<sp/>init_flag;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>int64_t<sp/>num_gpus;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>default_streams;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>thread_local<sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>**<sp/>current_streams<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Creates<sp/>a(n<sp/>indestructible)<sp/>default<sp/>stream<sp/>for<sp/>each<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>the<sp/>default<sp/>stream<sp/>on<sp/>each<sp/>device<sp/>is<sp/>signified<sp/>by<sp/>a<sp/>zero</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>value<sp/>for<sp/>the<sp/>pointer,<sp/>and<sp/>so<sp/>is<sp/>not<sp/>actually<sp/>created<sp/>as<sp/>usual.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>particular,<sp/>we<sp/>don&apos;t<sp/>need<sp/>to<sp/>switch<sp/>devices<sp/>when<sp/>creating<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>streams.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initDefaultCUDAStreams()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>num_gpus<sp/>=<sp/>getNumGPUs();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>default_streams<sp/>=<sp/>(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*)<sp/>malloc(num_gpus<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>decltype(num_gpus){0};<sp/>i<sp/>&lt;<sp/>num_gpus;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>default_streams[i].is_destructible<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>default_streams[i].refcount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>default_streams[i].device<sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>default_streams[i].stream<sp/>=<sp/>DEFAULT_STREAM;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Init<sp/>front-end<sp/>to<sp/>ensure<sp/>initialization<sp/>only<sp/>occurs<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initCUDAStreamsOnce()<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inits<sp/>default<sp/>streams<sp/>(once,<sp/>globally)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>std::call_once(init_flag,<sp/>initDefaultCUDAStreams);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Inits<sp/>current<sp/>streams<sp/>(thread<sp/>local)<sp/>to<sp/>default<sp/>streams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current_streams)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>current_streams<sp/>=<sp/>(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>**)<sp/>malloc(num_gpus<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>decltype(num_gpus){0};<sp/>i<sp/>&lt;<sp/>num_gpus;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>current_streams[i]<sp/>=<sp/>&amp;default_streams[i];</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/>*<sp/>Pointer-based<sp/>stream<sp/>API</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Helper<sp/>to<sp/>verify<sp/>the<sp/>GPU<sp/>index<sp/>is<sp/>valid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>check_gpu(int64_t<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref><sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref><sp/>&lt;<sp/>num_gpus);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_getDefaultStreamOnDevice(int64_t<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>initCUDAStreamsOnce();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>check_gpu(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;default_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_getDefaultStream()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CUDAStream_getDefaultStreamOnDevice(current_device());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Creates<sp/>(and<sp/>retains)<sp/>and<sp/>new<sp/>cuda<sp/>stream</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_createAndRetainWithOptions(int32_t<sp/>flags,<sp/>int32_t<sp/>priority)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>internals<sp/>=<sp/>(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>internals-&gt;is_destructible<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>internals-&gt;refcount<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>internals-&gt;device<sp/>=<sp/>current_device();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifndef<sp/>__HIP_PLATFORM_HCC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_CUDA_CHECK(cudaStreamCreateWithPriority(&amp;internals-&gt;stream,<sp/>flags,<sp/>priority));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#else<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_CUDA_CHECK(cudaStreamCreateWithFlags(&amp;internals-&gt;stream,<sp/>flags));</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif<sp/>//<sp/>__HIP_PLATFORM_HCC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>internals;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>despite<sp/>not<sp/>being<sp/>&quot;unsafe,&quot;<sp/>is<sp/>using<sp/>these<sp/>methods<sp/>in<sp/>a<sp/>multithreaded</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>environment<sp/>then<sp/>the<sp/>caller<sp/>must<sp/>be<sp/>sure<sp/>that<sp/>streams<sp/>are<sp/>valid</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>when<sp/>they&apos;re<sp/>requested.<sp/>These<sp/>methods<sp/>will<sp/>throw<sp/>an<sp/>error<sp/>if<sp/>an</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>invalid<sp/>stream<sp/>is<sp/>requested.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_getAndRetainCurrentStreamOnDevice(int64_t<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>initCUDAStreamsOnce();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>check_gpu(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cur<sp/>=<sp/>current_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>];</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(CUDAStream_retain(cur));</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cur;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_getAndRetainCurrentStream()<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CUDAStream_getAndRetainCurrentStreamOnDevice(current_device());</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>these<sp/>unsafe<sp/>methods<sp/>do<sp/>not<sp/>retain<sp/>the<sp/>stream<sp/>before<sp/>returning<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>unsafe<sp/>behavior<sp/>and<sp/>these<sp/>methods<sp/>SHOULD<sp/>NOT<sp/>BE<sp/>USED.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>They<sp/>are<sp/>here<sp/>only<sp/>for<sp/>legacy<sp/>compatibility.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_getCurrentStreamOnDeviceUnsafe(int64_t<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>initCUDAStreamsOnce();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>check_gpu(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>current_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>CUDAStream_getCurrentStreamUnsafe()<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>CUDAStream_getCurrentStreamOnDeviceUnsafe(current_device());</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CUDAStream_setStreamOnDevice(int64_t<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>,<sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>initCUDAStreamsOnce();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>check_gpu(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(ptr);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(ptr-&gt;device<sp/>==<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(CUDAStream_retain(ptr));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDAStream_free(current_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>]);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>current_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>]<sp/>=<sp/>ptr;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CUDAStream_uncheckedSetStreamOnDevice(int64_t<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>,<sp/><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>initCUDAStreamsOnce();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDAStream_uncheckedFree(current_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>]);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>current_streams[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>]<sp/>=<sp/>ptr;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CUDAStream_setStream(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>CUDAStream_setStreamOnDevice(current_device(),<sp/>ptr);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>cudaStream_t<sp/>CUDAStream_stream(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(ptr);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;stream;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>int64_t<sp/>CUDAStream_device(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(ptr);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ptr-&gt;device;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Memory<sp/>management</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Note:<sp/>only<sp/>destructible<sp/>(non-default)<sp/>streams<sp/>are<sp/>ref<sp/>counted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>CUDAStream_retain(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(ptr);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr-&gt;is_destructible)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">(++ptr-&gt;refcount<sp/>&gt;<sp/>1);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CUDAStream_free(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*&amp;<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>&amp;&amp;<sp/>ptr-&gt;stream<sp/>&amp;&amp;<sp/>ptr-&gt;is_destructible<sp/>&amp;&amp;<sp/>--ptr-&gt;refcount<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_ASSERT(ptr-&gt;refcount<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_CUDA_CHECK(cudaStreamDestroy(ptr-&gt;stream));</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>free(ptr);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CUDAStream_uncheckedFree(<ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref>*&amp;<sp/>ptr)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ptr<sp/>&amp;&amp;<sp/>ptr-&gt;stream<sp/>&amp;&amp;<sp/>ptr-&gt;is_destructible<sp/>&amp;&amp;<sp/>--ptr-&gt;refcount<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cudaStreamDestroy(ptr-&gt;stream);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>free(ptr);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ptr<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="179"><highlight class="comment"><sp/><sp/>*<sp/>CUDAStream<sp/>functions</highlight></codeline>
+<codeline lineno="180"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>CUDAStream::CUDAStream(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>CUDAStream&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(other.internals_);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(detail::CUDAStream_retain(other.internals_));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>internals_<sp/>=<sp/>other.internals_;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/>CUDAStream::CUDAStream(CUDAStream&amp;&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(other.internals_);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>std::swap(internals_,<sp/>other.internals_);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cuda</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.cpp"/>
+  </compounddef>
+</doxygen>

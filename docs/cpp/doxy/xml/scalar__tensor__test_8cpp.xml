@@ -1,0 +1,1188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="scalar__tensor__test_8cpp" kind="file" language="C++">
+    <compoundname>scalar_tensor_test.cpp</compoundname>
+    <includes local="yes">catch.hpp</includes>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="test__seed_8h" local="yes">test_seed.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">numeric</includes>
+    <incdepgraph>
+      <node id="12688">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="12689" relation="include">
+        </childnode>
+        <childnode refid="12690" relation="include">
+        </childnode>
+        <childnode refid="12691" relation="include">
+        </childnode>
+        <childnode refid="12692" relation="include">
+        </childnode>
+        <childnode refid="12693" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12695" relation="include">
+        </childnode>
+      </node>
+      <node id="12734">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="12684" relation="include">
+        </childnode>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12732" relation="include">
+        </childnode>
+        <childnode refid="12735" relation="include">
+        </childnode>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12693" relation="include">
+        </childnode>
+        <childnode refid="12685" relation="include">
+        </childnode>
+      </node>
+      <node id="12702">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12718" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12693" relation="include">
+        </childnode>
+      </node>
+      <node id="12701">
+        <label>atomic</label>
+      </node>
+      <node id="12680">
+        <label>catch.hpp</label>
+      </node>
+      <node id="12693">
+        <label>functional</label>
+      </node>
+      <node id="12739">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12729" relation="include">
+        </childnode>
+        <childnode refid="12682" relation="include">
+        </childnode>
+      </node>
+      <node id="12703">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="12704" relation="include">
+        </childnode>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12714" relation="include">
+        </childnode>
+        <childnode refid="12716" relation="include">
+        </childnode>
+        <childnode refid="12720" relation="include">
+        </childnode>
+      </node>
+      <node id="12715">
+        <label>limits</label>
+      </node>
+      <node id="12723">
+        <label>assert.h</label>
+      </node>
+      <node id="12728">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12704" relation="include">
+        </childnode>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12727" relation="include">
+        </childnode>
+        <childnode refid="12707" relation="include">
+        </childnode>
+        <childnode refid="12699" relation="include">
+        </childnode>
+        <childnode refid="12729" relation="include">
+        </childnode>
+        <childnode refid="12730" relation="include">
+        </childnode>
+      </node>
+      <node id="12710">
+        <label>iterator</label>
+      </node>
+      <node id="12722">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="12723" relation="include">
+        </childnode>
+        <childnode refid="12724" relation="include">
+        </childnode>
+        <childnode refid="12695" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12689" relation="include">
+        </childnode>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12714" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12725" relation="include">
+        </childnode>
+        <childnode refid="12728" relation="include">
+        </childnode>
+      </node>
+      <node id="12742">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="12716">
+        <label>cstdint</label>
+      </node>
+      <node id="12750">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="12724">
+        <label>stdint.h</label>
+      </node>
+      <node id="12761">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="12717">
+        <label>cmath</label>
+      </node>
+      <node id="12692">
+        <label>cassert</label>
+      </node>
+      <node id="12733">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12683" relation="include">
+        </childnode>
+        <childnode refid="12732" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12728" relation="include">
+        </childnode>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12740" relation="include">
+        </childnode>
+        <childnode refid="12685" relation="include">
+        </childnode>
+        <childnode refid="12737" relation="include">
+        </childnode>
+        <childnode refid="12716" relation="include">
+        </childnode>
+      </node>
+      <node id="12719">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12709" relation="include">
+        </childnode>
+        <childnode refid="12715" relation="include">
+        </childnode>
+      </node>
+      <node id="12695">
+        <label>stdexcept</label>
+      </node>
+      <node id="12756">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="12722" relation="include">
+        </childnode>
+        <childnode refid="12743" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12695" relation="include">
+        </childnode>
+      </node>
+      <node id="12730">
+        <label>numeric</label>
+      </node>
+      <node id="12726">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="12701" relation="include">
+        </childnode>
+        <childnode refid="12685" relation="include">
+        </childnode>
+        <childnode refid="12700" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12688" relation="include">
+        </childnode>
+      </node>
+      <node id="12714">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12715" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12716" relation="include">
+        </childnode>
+        <childnode refid="12695" relation="include">
+        </childnode>
+        <childnode refid="12689" relation="include">
+        </childnode>
+        <childnode refid="12717" relation="include">
+        </childnode>
+        <childnode refid="12718" relation="include">
+        </childnode>
+        <childnode refid="12719" relation="include">
+        </childnode>
+      </node>
+      <node id="12700">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="12701" relation="include">
+        </childnode>
+      </node>
+      <node id="12725">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="12726" relation="include">
+        </childnode>
+        <childnode refid="12727" relation="include">
+        </childnode>
+      </node>
+      <node id="12694">
+        <label>string</label>
+      </node>
+      <node id="12759">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="12705" relation="include">
+        </childnode>
+        <childnode refid="12724" relation="include">
+        </childnode>
+      </node>
+      <node id="12760">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="12702" relation="include">
+        </childnode>
+        <childnode refid="12746" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12753" relation="include">
+        </childnode>
+        <childnode refid="12688" relation="include">
+        </childnode>
+      </node>
+      <node id="12684">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="12685" relation="include">
+        </childnode>
+        <childnode refid="12686" relation="include">
+        </childnode>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12700" relation="include">
+        </childnode>
+        <childnode refid="12702" relation="include">
+        </childnode>
+        <childnode refid="12721" relation="include">
+        </childnode>
+      </node>
+      <node id="12740">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="12752">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="12702" relation="include">
+        </childnode>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12743" relation="include">
+        </childnode>
+        <childnode refid="12734" relation="include">
+        </childnode>
+        <childnode refid="12696" relation="include">
+        </childnode>
+      </node>
+      <node id="12697">
+        <label>exception</label>
+      </node>
+      <node id="12686">
+        <label>stddef.h</label>
+      </node>
+      <node id="12727">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="12726" relation="include">
+        </childnode>
+      </node>
+      <node id="12758">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12714" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+      </node>
+      <node id="12706">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="12696" relation="include">
+        </childnode>
+      </node>
+      <node id="12741">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="12722" relation="include">
+        </childnode>
+        <childnode refid="12742" relation="include">
+        </childnode>
+      </node>
+      <node id="12698">
+        <label>ostream</label>
+      </node>
+      <node id="12683">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+      </node>
+      <node id="12731">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="12704">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12705" relation="include">
+        </childnode>
+        <childnode refid="12712" relation="include">
+        </childnode>
+        <childnode refid="12710" relation="include">
+        </childnode>
+        <childnode refid="12713" relation="include">
+        </childnode>
+      </node>
+      <node id="12747">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12748" relation="include">
+        </childnode>
+      </node>
+      <node id="12744">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="12682">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="12748">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="12726" relation="include">
+        </childnode>
+        <childnode refid="12699" relation="include">
+        </childnode>
+      </node>
+      <node id="12745">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12724" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+      </node>
+      <node id="12729">
+        <label>typeinfo</label>
+      </node>
+      <node id="12736">
+        <label>cstdio</label>
+      </node>
+      <node id="12721">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="12685" relation="include">
+        </childnode>
+        <childnode refid="12682" relation="include">
+        </childnode>
+      </node>
+      <node id="12713">
+        <label>vector</label>
+      </node>
+      <node id="12762">
+        <label>test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+        <childnode refid="12681" relation="include">
+        </childnode>
+      </node>
+      <node id="12757">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="12754">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="12711">
+        <label>new</label>
+      </node>
+      <node id="12689">
+        <label>utility</label>
+      </node>
+      <node id="12712">
+        <label>array</label>
+      </node>
+      <node id="12699">
+        <label>sstream</label>
+      </node>
+      <node id="12749">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="12722" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12743" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+        <childnode refid="12732" relation="include">
+        </childnode>
+        <childnode refid="12750" relation="include">
+        </childnode>
+        <childnode refid="12751" relation="include">
+        </childnode>
+        <childnode refid="12752" relation="include">
+        </childnode>
+        <childnode refid="12753" relation="include">
+        </childnode>
+        <childnode refid="12754" relation="include">
+        </childnode>
+      </node>
+      <node id="12751">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="12718">
+        <label>iosfwd</label>
+      </node>
+      <node id="12708">
+        <label>cstdlib</label>
+      </node>
+      <node id="12720">
+        <label>iostream</label>
+      </node>
+      <node id="12696">
+        <label>cstddef</label>
+      </node>
+      <node id="12738">
+        <label>unordered_map</label>
+      </node>
+      <node id="12737">
+        <label>mutex</label>
+      </node>
+      <node id="12681">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12683" relation="include">
+        </childnode>
+        <childnode refid="12684" relation="include">
+        </childnode>
+        <childnode refid="12722" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12732" relation="include">
+        </childnode>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+        <childnode refid="12743" relation="include">
+        </childnode>
+        <childnode refid="12702" relation="include">
+        </childnode>
+        <childnode refid="12747" relation="include">
+        </childnode>
+        <childnode refid="12749" relation="include">
+        </childnode>
+        <childnode refid="12755" relation="include">
+        </childnode>
+        <childnode refid="12756" relation="include">
+        </childnode>
+        <childnode refid="12757" relation="include">
+        </childnode>
+        <childnode refid="12758" relation="include">
+        </childnode>
+        <childnode refid="12759" relation="include">
+        </childnode>
+        <childnode refid="12752" relation="include">
+        </childnode>
+        <childnode refid="12753" relation="include">
+        </childnode>
+        <childnode refid="12746" relation="include">
+        </childnode>
+        <childnode refid="12760" relation="include">
+        </childnode>
+        <childnode refid="12761" relation="include">
+        </childnode>
+      </node>
+      <node id="12735">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="12707" relation="include">
+        </childnode>
+        <childnode refid="12736" relation="include">
+        </childnode>
+        <childnode refid="12708" relation="include">
+        </childnode>
+        <childnode refid="12693" relation="include">
+        </childnode>
+        <childnode refid="12685" relation="include">
+        </childnode>
+        <childnode refid="12737" relation="include">
+        </childnode>
+        <childnode refid="12738" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+        <childnode refid="12713" relation="include">
+        </childnode>
+        <childnode refid="12739" relation="include">
+        </childnode>
+        <childnode refid="12682" relation="include">
+        </childnode>
+      </node>
+      <node id="12687">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="12682" relation="include">
+        </childnode>
+        <childnode refid="12688" relation="include">
+        </childnode>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12697" relation="include">
+        </childnode>
+        <childnode refid="12698" relation="include">
+        </childnode>
+        <childnode refid="12699" relation="include">
+        </childnode>
+        <childnode refid="12694" relation="include">
+        </childnode>
+      </node>
+      <node id="12753">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="12733" relation="include">
+        </childnode>
+        <childnode refid="12702" relation="include">
+        </childnode>
+        <childnode refid="12752" relation="include">
+        </childnode>
+        <childnode refid="12746" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12743" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12718" relation="include">
+        </childnode>
+        <childnode refid="12689" relation="include">
+        </childnode>
+      </node>
+      <node id="12743">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="12732" relation="include">
+        </childnode>
+        <childnode refid="12722" relation="include">
+        </childnode>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12744" relation="include">
+        </childnode>
+        <childnode refid="12741" relation="include">
+        </childnode>
+        <childnode refid="12745" relation="include">
+        </childnode>
+        <childnode refid="12725" relation="include">
+        </childnode>
+        <childnode refid="12726" relation="include">
+        </childnode>
+        <childnode refid="12728" relation="include">
+        </childnode>
+        <childnode refid="12702" relation="include">
+        </childnode>
+        <childnode refid="12746" relation="include">
+        </childnode>
+        <childnode refid="12688" relation="include">
+        </childnode>
+      </node>
+      <node id="12690">
+        <label>type_traits</label>
+      </node>
+      <node id="12746">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="12703" relation="include">
+        </childnode>
+        <childnode refid="12687" relation="include">
+        </childnode>
+        <childnode refid="12720" relation="include">
+        </childnode>
+      </node>
+      <node id="12705">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="12706" relation="include">
+        </childnode>
+        <childnode refid="12707" relation="include">
+        </childnode>
+        <childnode refid="12692" relation="include">
+        </childnode>
+        <childnode refid="12696" relation="include">
+        </childnode>
+        <childnode refid="12708" relation="include">
+        </childnode>
+        <childnode refid="12709" relation="include">
+        </childnode>
+        <childnode refid="12691" relation="include">
+        </childnode>
+        <childnode refid="12710" relation="include">
+        </childnode>
+        <childnode refid="12685" relation="include">
+        </childnode>
+        <childnode refid="12711" relation="include">
+        </childnode>
+        <childnode refid="12690" relation="include">
+        </childnode>
+        <childnode refid="12689" relation="include">
+        </childnode>
+        <childnode refid="12682" relation="include">
+        </childnode>
+      </node>
+      <node id="12707">
+        <label>algorithm</label>
+      </node>
+      <node id="12732">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="12724" relation="include">
+        </childnode>
+      </node>
+      <node id="12709">
+        <label>cstring</label>
+      </node>
+      <node id="12685">
+        <label>memory</label>
+      </node>
+      <node id="12691">
+        <label>initializer_list</label>
+      </node>
+      <node id="12679">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp</label>
+        <link refid="scalar__tensor__test_8cpp"/>
+        <childnode refid="12680" relation="include">
+        </childnode>
+        <childnode refid="12681" relation="include">
+        </childnode>
+        <childnode refid="12762" relation="include">
+        </childnode>
+        <childnode refid="12707" relation="include">
+        </childnode>
+        <childnode refid="12720" relation="include">
+        </childnode>
+        <childnode refid="12730" relation="include">
+        </childnode>
+      </node>
+      <node id="12755">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="12720" relation="include">
+        </childnode>
+        <childnode refid="12731" relation="include">
+        </childnode>
+        <childnode refid="12722" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="scalar__tensor__test_8cpp_1a656eb5868e824d59f489f910db438420" prot="public" static="no">
+        <name>CATCH_CONFIG_MAIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="1" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="scalar__tensor__test_8cpp_1aded94964ba27d06d662931d24706dc8e" prot="public" static="no">
+        <name>TRY_CATCH_ELSE</name>
+        <param><defname>fn</defname></param>
+        <param><defname>catc</defname></param>
+        <param><defname>els</defname></param>
+        <initializer>{                                                             \
+    /* avoid mistakenly passing if els code throws exception*/  \
+    bool _passed = false;                                       \
+    try {                                                       \
+      fn;                                                       \
+      _passed = true;                                           \
+      els;                                                      \
+    } catch (std::exception &amp;e) {                               \
+      REQUIRE(!_passed);                                        \
+      catc;                                                     \
+    }                                                           \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="12" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="scalar__tensor__test_8cpp_1a6eddfca13ff3b93f03463027d5c7e4c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void require_equal_size_dim</definition>
+        <argsstring>(const Tensor &amp;lhs, const Tensor &amp;rhs)</argsstring>
+        <name>require_equal_size_dim</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="scalar__tensor__test_8cpp_1a5a4d62030d10408fe3c5de250defe56b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool should_expand</definition>
+        <argsstring>(const IntList &amp;from_size, const IntList &amp;to_size)</argsstring>
+        <name>should_expand</name>
+        <param>
+          <type>const <ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref> &amp;</type>
+          <declname>from_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref> &amp;</type>
+          <declname>to_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="31" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="31" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="scalar__tensor__test_8cpp_1a496f33b189c4faa3a37b4fae617805db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void test</definition>
+        <argsstring>(Type &amp;T)</argsstring>
+        <name>test</name>
+        <param>
+          <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+          <declname>T</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="45" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="45" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="scalar__tensor__test_8cpp_1aec994892182ec855b9b56198640ab66c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;scalar tensor test CPU&quot;, &quot;[cpu]&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;scalar tensor test CPU&quot;</type>
+        </param>
+        <param>
+          <type>&quot;&quot;</type>
+          <array>[cpu]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="274" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="274" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="scalar__tensor__test_8cpp_1a1d66b156cfb78bff69c6cd0ed10c8f75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;scalar tensor test CUDA&quot;, &quot;[cuda]&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;scalar tensor test CUDA&quot;</type>
+        </param>
+        <param>
+          <type>&quot;&quot;</type>
+          <array>[cuda]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" line="280" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp" bodystart="280" bodyend="286"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CATCH_CONFIG_MAIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;catch.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;test_seed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRY_CATCH_ELSE(fn,<sp/>catc,<sp/>els)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>avoid<sp/>mistakenly<sp/>passing<sp/>if<sp/>els<sp/>code<sp/>throws<sp/>exception*/</highlight><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>bool<sp/>_passed<sp/>=<sp/>false;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>try<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>fn;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>_passed<sp/>=<sp/>true;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>els;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>catch<sp/>(std::exception<sp/>&amp;e)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(!_passed);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>catc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="23"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="24"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>require_equal_size_dim(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>&amp;lhs,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>&amp;rhs)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>REQUIRE(lhs.dim()<sp/>==<sp/>rhs.dim());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>REQUIRE(lhs.sizes().<ref refid="classat_1_1_array_ref_1a0feda741d9a2e73f563a67028827f6fa" kindref="member">equals</ref>(rhs.sizes()));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>should_expand(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref><sp/>&amp;from_size,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref><sp/>&amp;to_size)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(from_size.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>()<sp/>&gt;<sp/>to_size.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>from_dim_it<sp/>=<sp/>from_size.rbegin();<sp/>from_dim_it<sp/>!=<sp/>from_size.rend();<sp/>++from_dim_it)<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>to_dim_it<sp/>=<sp/>to_size.rbegin();<sp/>to_dim_it<sp/>!=<sp/>to_size.rend();<sp/>++to_dim_it)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(*from_dim_it<sp/>!=<sp/>1<sp/>&amp;&amp;<sp/>*from_dim_it<sp/>!=<sp/>*to_dim_it)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test(<ref refid="structat_1_1_type" kindref="compound">Type</ref><sp/>&amp;T)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::vector&lt;std::vector&lt;int64_t&gt;<sp/>&gt;<sp/>sizes<sp/>=<sp/>{<sp/>{},<sp/>{0},<sp/>{1},<sp/>{1,<sp/>1},<sp/>{2}};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>single-tensor/size<sp/>tests</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>s<sp/>=<sp/>sizes.begin();<sp/>s<sp/>!=<sp/>sizes.end();<sp/>++s)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>verify<sp/>that<sp/>the<sp/>dim,<sp/>sizes,<sp/>strides,<sp/>etc<sp/>match<sp/>what<sp/>was<sp/>requested.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t<sp/>=<sp/>ones(*s,<sp/>T);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)t.dim()<sp/>==<sp/>s-&gt;size());</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE((</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal">)t.ndimension()<sp/>==<sp/>s-&gt;size());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(t.sizes().<ref refid="classat_1_1_array_ref_1a0feda741d9a2e73f563a67028827f6fa" kindref="member">equals</ref>(*s));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(t.strides().<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>()<sp/>==<sp/>s-&gt;size());</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>numel<sp/>=<sp/>std::accumulate(s-&gt;begin(),<sp/>s-&gt;end(),<sp/>1,<sp/>std::multiplies&lt;int64_t&gt;());</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(t.numel()<sp/>==<sp/>numel);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>verify<sp/>we<sp/>can<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE_NOTHROW(ss<sp/>&lt;&lt;<sp/>t<sp/>&lt;&lt;<sp/>std::endl);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t2<sp/>=<sp/>ones(*s,<sp/>T);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>t2.set_();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>require_equal_size_dim(t2,<sp/>ones({0},<sp/>T));</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unsqueeze</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.numel()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.unsqueeze(0).dim()<sp/>==<sp/>t.dim()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(t.unsqueeze(0));</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>unsqueeze_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t2<sp/>=<sp/>ones(*s,<sp/>T);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t2.numel()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>t2.unsqueeze_(0);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(r.dim()<sp/>==<sp/>t.dim()<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(t2.unsqueeze_(0));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>squeeze<sp/>(with<sp/>dimension<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.dim()<sp/>==<sp/>0<sp/>||<sp/>t.sizes()[0]<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.squeeze(0).dim()<sp/>==<sp/>std::max&lt;int64_t&gt;(t.dim()<sp/>-<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>PyTorch,<sp/>it<sp/>is<sp/>a<sp/>no-op<sp/>to<sp/>try<sp/>to<sp/>squeeze<sp/>a<sp/>dimension<sp/>that<sp/>has<sp/>size<sp/>!=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>NumPy<sp/>this<sp/>is<sp/>an<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.squeeze(0).dim()<sp/>==<sp/>t.dim());</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>squeeze<sp/>(with<sp/>no<sp/>dimension<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>size_without_ones;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>:<sp/>*s)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_without_ones.push_back(size);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>t.squeeze();</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(result,<sp/>ones(size_without_ones,<sp/>T));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>squeeze_<sp/>(with<sp/>dimension<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t2<sp/>=<sp/>ones(*s,<sp/>T);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t2.dim()<sp/>==<sp/>0<sp/>||<sp/><sp/>t2.sizes()[0]<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t2.squeeze_(0).dim()<sp/>==<sp/>std::max&lt;int64_t&gt;(t.dim()<sp/>-<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>PyTorch,<sp/>it<sp/>is<sp/>a<sp/>no-op<sp/>to<sp/>try<sp/>to<sp/>squeeze<sp/>a<sp/>dimension<sp/>that<sp/>has<sp/>size<sp/>!=<sp/>1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>NumPy<sp/>this<sp/>is<sp/>an<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t2.squeeze_(0).dim()<sp/>==<sp/>t.dim());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>squeeze_<sp/>(with<sp/>no<sp/>dimension<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t2<sp/>=<sp/>ones(*s,<sp/>T);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>size_without_ones;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>:<sp/>*s)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>size_without_ones.push_back(size);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>t2.squeeze_();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(t2,<sp/>ones(size_without_ones,<sp/>T));</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reduce<sp/>(with<sp/>dimension<sp/>argument<sp/>and<sp/>with<sp/>1<sp/>return<sp/>argument)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.numel()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.sum(0).dim()<sp/>==<sp/>std::max&lt;int64_t&gt;(t.dim()<sp/>-<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.sum(0).equal(at::zeros({},<sp/>T)));</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reduce<sp/>(with<sp/>dimension<sp/>argument<sp/>and<sp/>with<sp/>2<sp/>return<sp/>arguments)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.numel()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>t.min(0);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(std::get&lt;0&gt;(ret).dim()<sp/>==<sp/>std::max&lt;int64_t&gt;(t.dim()<sp/>-<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(std::get&lt;1&gt;(ret).dim()<sp/>==<sp/>std::max&lt;int64_t&gt;(t.dim()<sp/>-<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(t.min(0));</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>simple<sp/>indexing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.dim()<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>t.numel()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t[0].dim()<sp/>==<sp/>std::max&lt;int64_t&gt;(t.dim()<sp/>-<sp/>1,<sp/>0));</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(t[0]);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fill_<sp/>(argument<sp/>to<sp/>fill_<sp/>can<sp/>only<sp/>be<sp/>a<sp/>0-dim<sp/>tensor)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>TRY_CATCH_ELSE(t.fill_(t.sum(0)),</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.dim()<sp/>&gt;<sp/>1),</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(t.dim()<sp/>&lt;=<sp/>1));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs_it<sp/>=<sp/>sizes.begin();<sp/>lhs_it<sp/>!=<sp/>sizes.end();<sp/>++lhs_it)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs_it<sp/>=<sp/>sizes.begin();<sp/>rhs_it<sp/>!=<sp/>sizes.end();<sp/>++rhs_it)<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is_same_size<sp/>should<sp/>only<sp/>match<sp/>if<sp/>they<sp/>are<sp/>the<sp/>same<sp/>shape</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(*lhs_it<sp/>!=<sp/>*rhs_it)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(!lhs.is_same_size(rhs));</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(!rhs.is_same_size(lhs));</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>forced<sp/>size<sp/>functions<sp/>(resize_,<sp/>resize_as,<sp/>set_)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>resize_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lhs.resize_(*rhs_it);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(lhs,<sp/>rhs);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>resize_as_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lhs.resize_as_(rhs);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(lhs,<sp/>rhs);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lhs.set_(rhs);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(lhs,<sp/>rhs);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>storage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>storage<sp/>=<sp/>T.storage(rhs.numel());</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lhs.set_(*storage);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>should<sp/>not<sp/>be<sp/>dim<sp/>0<sp/>because<sp/>an<sp/>empty<sp/>storage<sp/>is<sp/>dim<sp/>1;<sp/>all<sp/>other<sp/>storages<sp/>aren&apos;t<sp/>scalars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(lhs.dim()<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>storage,<sp/>offset,<sp/>sizes,<sp/>strides</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>storage<sp/>=<sp/>T.storage(rhs.numel());</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lhs.set_(*storage,<sp/>rhs.storage_offset(),<sp/>rhs.sizes(),<sp/>rhs.strides());</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(lhs,<sp/>rhs);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>view</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs_size<sp/>=<sp/>*rhs_it;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRY_CATCH_ELSE(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>lhs.view(rhs_size),</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(lhs.numel()<sp/>!=<sp/>rhs.numel()),</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(lhs.numel()<sp/>==<sp/>rhs.numel());<sp/>require_equal_size_dim(result,<sp/>rhs););</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>take</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>zeros(*rhs_it,<sp/>T).toType(ScalarType::Long);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRY_CATCH_ELSE(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>lhs.take(rhs),</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(lhs.numel()<sp/>==<sp/>0);<sp/>REQUIRE(rhs.numel()<sp/>!=<sp/>0),</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(result,<sp/>rhs));</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ger</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRY_CATCH_ELSE(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>lhs.ger(rhs),</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE((lhs.numel()<sp/>==<sp/>0<sp/>||<sp/>rhs.numel()<sp/>==<sp/>0<sp/>||<sp/>lhs.dim()<sp/>!=<sp/>1<sp/>||<sp/>rhs.dim()<sp/>!=<sp/>1)),</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;]()<sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>dim0<sp/>=<sp/>lhs.dim()<sp/>==<sp/>0<sp/>?<sp/>1<sp/>:<sp/>lhs.size(0);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>dim1<sp/>=<sp/>rhs.dim()<sp/>==<sp/>0<sp/>?<sp/>1<sp/>:<sp/>rhs.size(0);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>require_equal_size_dim(result,<sp/>result.type().tensor({dim0,<sp/>dim1}));</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}(););</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>expand</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs<sp/>=<sp/>ones(*lhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lhs_size<sp/>=<sp/>*lhs_it;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs<sp/>=<sp/>ones(*rhs_it,<sp/>T);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rhs_size<sp/>=<sp/>*rhs_it;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>should_pass<sp/>=<sp/>should_expand(lhs_size,<sp/>rhs_size);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRY_CATCH_ELSE(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/>lhs.expand(rhs_size),</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(!should_pass),</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(should_pass);<sp/>require_equal_size_dim(result,<sp/>rhs););</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>in-place<sp/>functions<sp/>(would<sp/>be<sp/>good<sp/>if<sp/>we<sp/>can<sp/>also<sp/>do<sp/>a<sp/>non-broadcasting<sp/>one,<sp/>b/c</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>broadcasting<sp/>functions<sp/>will<sp/>always<sp/>end<sp/>up<sp/>operating<sp/>on<sp/>tensors<sp/>of<sp/>same<sp/>size;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>is<sp/>there<sp/>an<sp/>example<sp/>of<sp/>this<sp/>outside<sp/>of<sp/>assign_<sp/>?)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>should_pass_inplace<sp/>=<sp/>should_expand(rhs_size,<sp/>lhs_size);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TRY_CATCH_ELSE(lhs.add_(rhs),</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(!should_pass_inplace),</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(should_pass_inplace);<sp/>require_equal_size_dim(lhs,<sp/>ones(*lhs_it,<sp/>T)););</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal">TEST_CASE(<sp/></highlight><highlight class="stringliteral">&quot;scalar<sp/>tensor<sp/>test<sp/>CPU&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;[cpu]&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/>manual_seed(123,<sp/>at::Backend::CPU);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>test(CPU(kFloat));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal">TEST_CASE(<sp/></highlight><highlight class="stringliteral">&quot;scalar<sp/>tensor<sp/>test<sp/>CUDA&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;[cuda]&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/>manual_seed(123,<sp/>at::Backend::CUDA);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(at::hasCUDA())<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>test(CUDA(kFloat));</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/scalar_tensor_test.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacetorch_1_1nn_1_1parallel" kind="namespace" language="C++">
+    <compoundname>torch::nn::parallel</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="data__parallel_8h_1a3fb9b74758c39b577bbaf9c9444922ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; std::shared_ptr&lt; ModuleType &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;ModuleType&gt; &gt; torch::nn::parallel::replicate</definition>
+        <argsstring>(const std::shared_ptr&lt; ModuleType &gt; &amp;module, const std::vector&lt; Device &gt; &amp;devices)</argsstring>
+        <name>replicate</name>
+        <param>
+          <type>const std::shared_ptr&lt; ModuleType &gt; &amp;</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt; &amp;</type>
+          <declname>devices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replicates a module on the given list of devices. A replica is created by calling <computeroutput>clone()</computeroutput> on the module. For this, the module must inherit from <computeroutput><ref refid="classtorch_1_1nn_1_1_cloneable" kindref="compound">nn::Cloneable</ref></computeroutput>, or define its own <computeroutput>clone()</computeroutput> method, which is expected to perform a deep copy of the module. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" line="33" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" bodystart="33" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="data__parallel_8h_1a78d09f760ffa82af211c7658d4eee806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref>&lt; ModuleType &gt; &gt;</type>
+        <definition>std::vector&lt;ModuleHolder&lt;ModuleType&gt; &gt; torch::nn::parallel::replicate</definition>
+        <argsstring>(const ModuleHolder&lt; ModuleType &gt; &amp;module, const std::vector&lt; Device &gt; &amp;devices)</argsstring>
+        <name>replicate</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref>&lt; ModuleType &gt; &amp;</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt; &amp;</type>
+          <declname>devices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replicates a module holder on the given list of devices. This method allows calling <computeroutput>replicate()</computeroutput> with a module holder, such as <computeroutput>Linear</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" bodystart="49" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="data__parallel_8h_1a2d1ca8a32ab74f67b9152295264014e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::nn::parallel::parallel_apply</definition>
+        <argsstring>(std::vector&lt; ModuleType &gt; &amp;modules, const std::vector&lt; Tensor &gt; &amp;inputs, const at::optional&lt; std::vector&lt; Device &gt;&gt; &amp;devices=at::nullopt)</argsstring>
+        <name>parallel_apply</name>
+        <param>
+          <type>std::vector&lt; ModuleType &gt; &amp;</type>
+          <declname>modules</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt; &amp;</type>
+          <declname>inputs</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; std::vector&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;&gt; &amp;</type>
+          <declname>devices</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies the given inputs to the given modules in a parallel fashion. Conceptually, a thread is spawned for each <computeroutput>(module, input)</computeroutput> pair, in which <computeroutput>forward()</computeroutput> is called on the module with its corresponding input. The outputs of the individual calls are stored in a vector and returned.</para><para>The first exception caught by any thread is stashed and rethrown after all threads have completed their operation.</para><para>Further remarks:<orderedlist>
+<listitem><para>The length of the module container must match the length of the inputs.</para></listitem><listitem><para>If a list of devices is supplied, it must match the list of modules in length. Each device will be set to the current default device during the invocation of the respective module. This means any tensors allocated on the default device inside the module will be constructed on this device. </para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" bodystart="71" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="data__parallel_8h_1ac02c6f48854e0d662033e3a0a997a904" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::parallel::data_parallel</definition>
+        <argsstring>(ModuleType module, Tensor input, at::optional&lt; std::vector&lt; Device &gt;&gt; devices=at::nullopt, at::optional&lt; Device &gt; output_device=at::nullopt, int64_t dim=0)</argsstring>
+        <name>data_parallel</name>
+        <param>
+          <type>ModuleType</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; std::vector&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;&gt;</type>
+          <declname>devices</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>output_device</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>dim</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Evaluates <computeroutput>module(input)</computeroutput> in parallel across the given <computeroutput>devices</computeroutput>. If <computeroutput>devices</computeroutput> is not supplied, the invocation is parallelized across all available CUDA devices. If <computeroutput>output_device</computeroutput> is supplied, the final, combined tensor will be placed on this device. If not, it defaults to the first device in <computeroutput>devices</computeroutput>.</para><para>In detail, this method performs the following four distinct steps:<orderedlist>
+<listitem><para><emphasis>Scatter</emphasis> the input to the given devices,</para></listitem><listitem><para><emphasis>Replicate</emphasis> (deep clone) the model on each device,</para></listitem><listitem><para><emphasis>Evaluate</emphasis> each module with its input on its device,</para></listitem><listitem><para><emphasis>Gather</emphasis> the outputs of each replica into a single output tensor, located on the <computeroutput>output_device</computeroutput>. </para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" line="134" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" bodystart="134" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h" line="26" column="1"/>
+  </compounddef>
+</doxygen>

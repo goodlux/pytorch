@@ -1,0 +1,787 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_wrap_dim_utils_8h" kind="file" language="C++">
+    <compoundname>WrapDimUtils.h</compoundname>
+    <includes refid="_tensor_impl_8h" local="yes">ATen/TensorImpl.h</includes>
+    <includes local="no">sstream</includes>
+    <includedby refid="_reduce_ops_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/ReduceOps.cpp</includedby>
+    <includedby refid="_soft_max_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/SoftMax.cpp</includedby>
+    <includedby refid="_tensor_properties_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorProperties.cpp</includedby>
+    <includedby refid="_tensor_shape_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorShape.cpp</includedby>
+    <includedby refid="_unary_ops_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/UnaryOps.cpp</includedby>
+    <includedby refid="_sparse_type_derived_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/SparseTypeDerived.cpp</includedby>
+    <includedby refid="_type_derived_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TypeDerived.cpp</includedby>
+    <includedby refid="_tensor_geometry_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorGeometry.h</includedby>
+    <includedby refid="_wrap_dim_utils_multi_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtilsMulti.h</includedby>
+    <incdepgraph>
+      <node id="13920">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="13921" relation="include">
+        </childnode>
+        <childnode refid="13922" relation="include">
+        </childnode>
+        <childnode refid="13923" relation="include">
+        </childnode>
+        <childnode refid="13924" relation="include">
+        </childnode>
+        <childnode refid="13925" relation="include">
+        </childnode>
+        <childnode refid="13926" relation="include">
+        </childnode>
+        <childnode refid="13927" relation="include">
+        </childnode>
+      </node>
+      <node id="13913">
+        <label>atomic</label>
+      </node>
+      <node id="13925">
+        <label>functional</label>
+      </node>
+      <node id="13916">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="13917" relation="include">
+        </childnode>
+        <childnode refid="13919" relation="include">
+        </childnode>
+        <childnode refid="13941" relation="include">
+        </childnode>
+        <childnode refid="13943" relation="include">
+        </childnode>
+        <childnode refid="13947" relation="include">
+        </childnode>
+      </node>
+      <node id="13942">
+        <label>limits</label>
+      </node>
+      <node id="13937">
+        <label>iterator</label>
+      </node>
+      <node id="13943">
+        <label>cstdint</label>
+      </node>
+      <node id="13944">
+        <label>cmath</label>
+      </node>
+      <node id="13924">
+        <label>cassert</label>
+      </node>
+      <node id="13946">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="13919" relation="include">
+        </childnode>
+        <childnode refid="13936" relation="include">
+        </childnode>
+        <childnode refid="13942" relation="include">
+        </childnode>
+      </node>
+      <node id="13927">
+        <label>stdexcept</label>
+      </node>
+      <node id="13912">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="13913" relation="include">
+        </childnode>
+        <childnode refid="13914" relation="include">
+        </childnode>
+        <childnode refid="13915" relation="include">
+        </childnode>
+        <childnode refid="13916" relation="include">
+        </childnode>
+        <childnode refid="13920" relation="include">
+        </childnode>
+      </node>
+      <node id="13941">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="13919" relation="include">
+        </childnode>
+        <childnode refid="13942" relation="include">
+        </childnode>
+        <childnode refid="13926" relation="include">
+        </childnode>
+        <childnode refid="13943" relation="include">
+        </childnode>
+        <childnode refid="13927" relation="include">
+        </childnode>
+        <childnode refid="13921" relation="include">
+        </childnode>
+        <childnode refid="13944" relation="include">
+        </childnode>
+        <childnode refid="13945" relation="include">
+        </childnode>
+        <childnode refid="13946" relation="include">
+        </childnode>
+      </node>
+      <node id="13915">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="13913" relation="include">
+        </childnode>
+      </node>
+      <node id="13926">
+        <label>string</label>
+      </node>
+      <node id="13929">
+        <label>exception</label>
+      </node>
+      <node id="13933">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="13928" relation="include">
+        </childnode>
+      </node>
+      <node id="13930">
+        <label>ostream</label>
+      </node>
+      <node id="13917">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="13918" relation="include">
+        </childnode>
+        <childnode refid="13932" relation="include">
+        </childnode>
+        <childnode refid="13939" relation="include">
+        </childnode>
+        <childnode refid="13937" relation="include">
+        </childnode>
+        <childnode refid="13940" relation="include">
+        </childnode>
+      </node>
+      <node id="13919">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="13911">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h"/>
+        <childnode refid="13912" relation="include">
+        </childnode>
+        <childnode refid="13931" relation="include">
+        </childnode>
+      </node>
+      <node id="13940">
+        <label>vector</label>
+      </node>
+      <node id="13938">
+        <label>new</label>
+      </node>
+      <node id="13921">
+        <label>utility</label>
+      </node>
+      <node id="13939">
+        <label>array</label>
+      </node>
+      <node id="13931">
+        <label>sstream</label>
+      </node>
+      <node id="13945">
+        <label>iosfwd</label>
+      </node>
+      <node id="13935">
+        <label>cstdlib</label>
+      </node>
+      <node id="13947">
+        <label>iostream</label>
+      </node>
+      <node id="13928">
+        <label>cstddef</label>
+      </node>
+      <node id="13918">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="13919" relation="include">
+        </childnode>
+        <childnode refid="13920" relation="include">
+        </childnode>
+        <childnode refid="13928" relation="include">
+        </childnode>
+        <childnode refid="13929" relation="include">
+        </childnode>
+        <childnode refid="13930" relation="include">
+        </childnode>
+        <childnode refid="13931" relation="include">
+        </childnode>
+        <childnode refid="13926" relation="include">
+        </childnode>
+      </node>
+      <node id="13922">
+        <label>type_traits</label>
+      </node>
+      <node id="13932">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="13933" relation="include">
+        </childnode>
+        <childnode refid="13934" relation="include">
+        </childnode>
+        <childnode refid="13924" relation="include">
+        </childnode>
+        <childnode refid="13928" relation="include">
+        </childnode>
+        <childnode refid="13935" relation="include">
+        </childnode>
+        <childnode refid="13936" relation="include">
+        </childnode>
+        <childnode refid="13923" relation="include">
+        </childnode>
+        <childnode refid="13937" relation="include">
+        </childnode>
+        <childnode refid="13914" relation="include">
+        </childnode>
+        <childnode refid="13938" relation="include">
+        </childnode>
+        <childnode refid="13922" relation="include">
+        </childnode>
+        <childnode refid="13921" relation="include">
+        </childnode>
+        <childnode refid="13919" relation="include">
+        </childnode>
+      </node>
+      <node id="13934">
+        <label>algorithm</label>
+      </node>
+      <node id="13936">
+        <label>cstring</label>
+      </node>
+      <node id="13914">
+        <label>memory</label>
+      </node>
+      <node id="13923">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="13959">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h</label>
+        <link refid="rnn_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13984">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h_source"/>
+      </node>
+      <node id="13956">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="13973">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="13952" relation="include">
+        </childnode>
+        <childnode refid="13974" relation="include">
+        </childnode>
+        <childnode refid="13976" relation="include">
+        </childnode>
+        <childnode refid="13951" relation="include">
+        </childnode>
+        <childnode refid="13963" relation="include">
+        </childnode>
+        <childnode refid="13953" relation="include">
+        </childnode>
+        <childnode refid="13957" relation="include">
+        </childnode>
+        <childnode refid="13958" relation="include">
+        </childnode>
+        <childnode refid="13960" relation="include">
+        </childnode>
+        <childnode refid="13961" relation="include">
+        </childnode>
+        <childnode refid="13962" relation="include">
+        </childnode>
+        <childnode refid="13959" relation="include">
+        </childnode>
+        <childnode refid="13964" relation="include">
+        </childnode>
+        <childnode refid="13965" relation="include">
+        </childnode>
+        <childnode refid="13977" relation="include">
+        </childnode>
+        <childnode refid="13966" relation="include">
+        </childnode>
+        <childnode refid="13975" relation="include">
+        </childnode>
+        <childnode refid="13972" relation="include">
+        </childnode>
+        <childnode refid="13968" relation="include">
+        </childnode>
+        <childnode refid="13978" relation="include">
+        </childnode>
+        <childnode refid="13956" relation="include">
+        </childnode>
+      </node>
+      <node id="13953">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/batchnorm.h</label>
+        <link refid="batchnorm_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13986">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="13985" relation="include">
+        </childnode>
+      </node>
+      <node id="13972">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h</label>
+        <link refid="sgd_8h_source"/>
+        <childnode refid="13967" relation="include">
+        </childnode>
+      </node>
+      <node id="13975">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h</label>
+        <link refid="optimizer_8h_source"/>
+        <childnode refid="13966" relation="include">
+        </childnode>
+        <childnode refid="13969" relation="include">
+        </childnode>
+        <childnode refid="13970" relation="include">
+        </childnode>
+        <childnode refid="13971" relation="include">
+        </childnode>
+        <childnode refid="13972" relation="include">
+        </childnode>
+        <childnode refid="13967" relation="include">
+        </childnode>
+      </node>
+      <node id="13992">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="13964">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h</label>
+        <link refid="sequential_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13969">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adam.h</label>
+        <link refid="adam_8h_source"/>
+        <childnode refid="13967" relation="include">
+        </childnode>
+      </node>
+      <node id="13974">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="13951" relation="include">
+        </childnode>
+        <childnode refid="13955" relation="include">
+        </childnode>
+        <childnode refid="13975" relation="include">
+        </childnode>
+      </node>
+      <node id="13976">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/init.h</label>
+        <link refid="init_8h_source"/>
+      </node>
+      <node id="13949">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="13950" relation="include">
+        </childnode>
+        <childnode refid="13995" relation="include">
+        </childnode>
+      </node>
+      <node id="13977">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="13951" relation="include">
+        </childnode>
+        <childnode refid="13963" relation="include">
+        </childnode>
+        <childnode refid="13953" relation="include">
+        </childnode>
+        <childnode refid="13957" relation="include">
+        </childnode>
+        <childnode refid="13958" relation="include">
+        </childnode>
+        <childnode refid="13960" relation="include">
+        </childnode>
+        <childnode refid="13961" relation="include">
+        </childnode>
+        <childnode refid="13962" relation="include">
+        </childnode>
+        <childnode refid="13959" relation="include">
+        </childnode>
+        <childnode refid="13964" relation="include">
+        </childnode>
+        <childnode refid="13965" relation="include">
+        </childnode>
+        <childnode refid="13955" relation="include">
+        </childnode>
+        <childnode refid="13969" relation="include">
+        </childnode>
+        <childnode refid="13972" relation="include">
+        </childnode>
+      </node>
+      <node id="13995">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="13993" relation="include">
+        </childnode>
+        <childnode refid="13979" relation="include">
+        </childnode>
+      </node>
+      <node id="13978">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h</label>
+        <link refid="tensor__list__view_8h_source"/>
+        <childnode refid="13956" relation="include">
+        </childnode>
+      </node>
+      <node id="13951">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="13952" relation="include">
+        </childnode>
+        <childnode refid="13963" relation="include">
+        </childnode>
+        <childnode refid="13962" relation="include">
+        </childnode>
+        <childnode refid="13964" relation="include">
+        </childnode>
+        <childnode refid="13965" relation="include">
+        </childnode>
+        <childnode refid="13955" relation="include">
+        </childnode>
+        <childnode refid="13966" relation="include">
+        </childnode>
+        <childnode refid="13969" relation="include">
+        </childnode>
+        <childnode refid="13970" relation="include">
+        </childnode>
+        <childnode refid="13971" relation="include">
+        </childnode>
+        <childnode refid="13972" relation="include">
+        </childnode>
+      </node>
+      <node id="13948">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h"/>
+        <childnode refid="13949" relation="include">
+        </childnode>
+        <childnode refid="13996" relation="include">
+        </childnode>
+      </node>
+      <node id="13996">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtilsMulti.h</label>
+        <link refid="_wrap_dim_utils_multi_8h_source"/>
+      </node>
+      <node id="13954">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules.h</label>
+        <link refid="modules_8h_source"/>
+        <childnode refid="13955" relation="include">
+        </childnode>
+      </node>
+      <node id="13960">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/embedding.h</label>
+        <link refid="embedding_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13990">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorTransformations.h</label>
+        <link refid="_tensor_transformations_8h_source"/>
+      </node>
+      <node id="13955">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn.h</label>
+        <link refid="nn_8h_source"/>
+        <childnode refid="13956" relation="include">
+        </childnode>
+      </node>
+      <node id="13985">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+      <node id="13957">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13971">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/rmsprop.h</label>
+        <link refid="rmsprop_8h_source"/>
+        <childnode refid="13967" relation="include">
+        </childnode>
+      </node>
+      <node id="13967">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim.h</label>
+        <link refid="optim_8h_source"/>
+        <childnode refid="13968" relation="include">
+        </childnode>
+        <childnode refid="13956" relation="include">
+        </childnode>
+      </node>
+      <node id="13994">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+      </node>
+      <node id="13980">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="13963">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h</label>
+        <link refid="any_8h_source"/>
+        <childnode refid="13964" relation="include">
+        </childnode>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13979">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="13981">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+      </node>
+      <node id="13989">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+      </node>
+      <node id="13968">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h</label>
+        <link refid="serialization_8h_source"/>
+        <childnode refid="13956" relation="include">
+        </childnode>
+      </node>
+      <node id="13965">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="13993">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+      </node>
+      <node id="13966">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adagrad.h</label>
+        <link refid="adagrad_8h_source"/>
+        <childnode refid="13967" relation="include">
+        </childnode>
+      </node>
+      <node id="13958">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="13959" relation="include">
+        </childnode>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13982">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+      </node>
+      <node id="13987">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Gesv.h</label>
+        <link refid="_gesv_8h_source"/>
+      </node>
+      <node id="13952">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="13953" relation="include">
+        </childnode>
+        <childnode refid="13957" relation="include">
+        </childnode>
+        <childnode refid="13958" relation="include">
+        </childnode>
+        <childnode refid="13960" relation="include">
+        </childnode>
+        <childnode refid="13961" relation="include">
+        </childnode>
+        <childnode refid="13962" relation="include">
+        </childnode>
+        <childnode refid="13959" relation="include">
+        </childnode>
+        <childnode refid="13955" relation="include">
+        </childnode>
+      </node>
+      <node id="13950">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="13951" relation="include">
+        </childnode>
+        <childnode refid="13959" relation="include">
+        </childnode>
+        <childnode refid="13966" relation="include">
+        </childnode>
+        <childnode refid="13969" relation="include">
+        </childnode>
+        <childnode refid="13970" relation="include">
+        </childnode>
+        <childnode refid="13971" relation="include">
+        </childnode>
+        <childnode refid="13972" relation="include">
+        </childnode>
+        <childnode refid="13973" relation="include">
+        </childnode>
+        <childnode refid="13979" relation="include">
+        </childnode>
+        <childnode refid="13980" relation="include">
+        </childnode>
+        <childnode refid="13981" relation="include">
+        </childnode>
+        <childnode refid="13982" relation="include">
+        </childnode>
+        <childnode refid="13983" relation="include">
+        </childnode>
+        <childnode refid="13984" relation="include">
+        </childnode>
+        <childnode refid="13985" relation="include">
+        </childnode>
+        <childnode refid="13986" relation="include">
+        </childnode>
+        <childnode refid="13987" relation="include">
+        </childnode>
+        <childnode refid="13988" relation="include">
+        </childnode>
+        <childnode refid="13989" relation="include">
+        </childnode>
+        <childnode refid="13990" relation="include">
+        </childnode>
+        <childnode refid="13991" relation="include">
+        </childnode>
+        <childnode refid="13994" relation="include">
+        </childnode>
+      </node>
+      <node id="13961">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2nn_2modules_2functional_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13988">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LinearAlgebraUtils.h</label>
+        <link refid="_linear_algebra_utils_8h_source"/>
+      </node>
+      <node id="13983">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+      </node>
+      <node id="13962">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/linear.h</label>
+        <link refid="linear_8h_source"/>
+        <childnode refid="13954" relation="include">
+        </childnode>
+      </node>
+      <node id="13991">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="13965" relation="include">
+        </childnode>
+        <childnode refid="13992" relation="include">
+        </childnode>
+        <childnode refid="13993" relation="include">
+        </childnode>
+      </node>
+      <node id="13970">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h</label>
+        <link refid="lbfgs_8h_source"/>
+        <childnode refid="13967" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/TensorImpl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>maybe_wrap_dim(int64_t<sp/>dim,<sp/>int64_t<sp/>dim_post_expr,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>wrap_scalar=</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dim_post_expr<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!wrap_scalar)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>oss;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;dimension<sp/>specified<sp/>as<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>dim<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>tensor<sp/>has<sp/>no<sp/>dimensions&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(oss.str());</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>dim_post_expr<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>this<sp/>will<sp/>make<sp/>range<sp/>[-1,<sp/>0]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>int64_t<sp/>min<sp/>=<sp/>-dim_post_expr;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>int64_t<sp/>max<sp/>=<sp/>dim_post_expr<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>dim<sp/>&gt;=<sp/>min<sp/>&amp;&amp;<sp/>dim<sp/>&lt;=<sp/>max,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Dimension<sp/>out<sp/>of<sp/>range<sp/>(expected<sp/>to<sp/>be<sp/>in<sp/>range<sp/>of<sp/>[&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>min,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">,<sp/>max,<sp/></highlight><highlight class="stringliteral">&quot;],<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>dim,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dim<sp/>&lt;<sp/>0)<sp/>dim<sp/>+=<sp/>dim_post_expr;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dim;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>maybe_wrap_dim(int64_t<sp/>dim,<sp/>TensorImpl<sp/>*tensor)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maybe_wrap_dim(dim,<sp/>tensor-&gt;dim());</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>maybe_wrap_dim(int64_t<sp/>dim,<sp/>TensorList<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tensors.size()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can&apos;t<sp/>wrap<sp/>empty<sp/>TensorList;<sp/>rely<sp/>on<sp/>underlying<sp/>implementation<sp/>to<sp/>throw<sp/>error<sp/>if<sp/>necessary.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dim;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maybe_wrap_dim(dim,<sp/>tensors[0].dim());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>maybe_wrap_dim(int64_t<sp/>dim,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;int64_t&gt;&gt;<sp/>&amp;<sp/>tensor_sizes)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tensor_sizes.size()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>can&apos;t<sp/>wrap<sp/>empty<sp/>list;<sp/>rely<sp/>on<sp/>underlying<sp/>implementation<sp/>to<sp/>throw<sp/>error<sp/>if<sp/>necessary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dim;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maybe_wrap_dim(dim,<sp/>tensor_sizes[0].size());</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>wrap<sp/>each<sp/>of<sp/>dims<sp/>basing<sp/>on<sp/>dim_post_expr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>maybe_wrap_dims(std::vector&lt;int64_t&gt;&amp;<sp/>dims,<sp/>int64_t<sp/>dim_post_expr)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dim_post_expr<sp/>&lt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>dim_post_expr<sp/>=<sp/>1;<sp/></highlight><highlight class="comment">//<sp/>this<sp/>will<sp/>make<sp/>range<sp/>[-1,<sp/>0]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>int64_t<sp/>min<sp/>=<sp/>-dim_post_expr;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>int64_t<sp/>max<sp/>=<sp/>dim_post_expr<sp/>-<sp/>1;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>dim<sp/>:<sp/>dims)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim<sp/>&gt;=<sp/>min<sp/>&amp;&amp;<sp/>dim<sp/>&lt;=<sp/>max,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Dimension<sp/>out<sp/>of<sp/>range<sp/>(expected<sp/>to<sp/>be<sp/>in<sp/>range<sp/>of<sp/>[&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>min,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">,<sp/>max,<sp/></highlight><highlight class="stringliteral">&quot;],<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>dim,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dim<sp/>&lt;<sp/>0)<sp/>dim<sp/>+=<sp/>dim_post_expr;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>previously,<sp/>size<sp/>[0]<sp/>tensors<sp/>were<sp/>the<sp/>only<sp/>possible<sp/>empty<sp/>tensors;<sp/>thus,<sp/>it<sp/>wasn&apos;t<sp/>possible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>cat<sp/>empty<sp/>tensors<sp/>unless<sp/>all<sp/>the<sp/>other<sp/>tensors<sp/>were<sp/>1-dimensional,<sp/>so<sp/>we<sp/>allowed<sp/>these<sp/>tensors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>be<sp/>&quot;skipped&quot;<sp/>(both<sp/>for<sp/>wrap<sp/>dimension<sp/>behavior<sp/>and<sp/>dimension<sp/>size<sp/>checking).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>maintain<sp/>this<sp/>behavior<sp/>for<sp/>backwards<sp/>compatibility,<sp/>but<sp/>only<sp/>for<sp/>this<sp/>specific<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(i.e.<sp/>other<sp/>empty<sp/>sizes<sp/>are<sp/>not<sp/>skipped).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>legacy_cat_wrap_dim(int64_t<sp/>dim,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::vector&lt;int64_t&gt;&gt;&amp;<sp/>tensor_sizes)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>sizes<sp/>:<sp/>tensor_sizes)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sizes<sp/>==<sp/>std::vector&lt;int64_t&gt;({0}))<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maybe_wrap_dim(dim,<sp/>sizes.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dim;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>legacy_cat_wrap_dim(int64_t<sp/>dim,<sp/>TensorList<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>tensor<sp/>:<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tensor.dim()<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>tensor.sizes()[0]<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>maybe_wrap_dim(dim,<sp/>tensor.dim());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dim;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtils.h"/>
+  </compounddef>
+</doxygen>

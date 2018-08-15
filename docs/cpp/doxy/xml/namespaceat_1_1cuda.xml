@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceat_1_1cuda" kind="namespace" language="C++">
+    <compoundname>at::cuda</compoundname>
+    <innerclass refid="structat_1_1cuda_1_1_c_u_d_a_guard" prot="public">at::cuda::CUDAGuard</innerclass>
+    <innerclass refid="structat_1_1cuda_1_1_c_u_d_a_stream" prot="public">at::cuda::CUDAStream</innerclass>
+    <innernamespace refid="namespaceat_1_1cuda_1_1detail">at::cuda::detail</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1ae20be1eba1c7514846c3f47c9c035c61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>AT_API int64_t at::cuda::getNumGPUs</definition>
+        <argsstring>()</argsstring>
+        <name>getNumGPUs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="7" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="7" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a98062c1cfb7a91ecbec6bac71c1ce7ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>AT_API int64_t at::cuda::current_device</definition>
+        <argsstring>()</argsstring>
+        <name>current_device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="13" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="13" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a1ff6de08b7d3ed9652abf5e39a6c8a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cudaDeviceProp *</type>
+        <definition>AT_API cudaDeviceProp * at::cuda::getCurrentDeviceProperties</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentDeviceProperties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a3a3c01065eb22ebfde2ab75520df9cb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cudaDeviceProp *</type>
+        <definition>AT_API cudaDeviceProp * at::cuda::getDeviceProperties</definition>
+        <argsstring>(int64_t device)</argsstring>
+        <name>getDeviceProperties</name>
+        <param>
+          <type>int64_t</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1ade534c0f817817cff274ce993a082572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+        <definition>AT_API CUDAStream at::cuda::createCUDAStream</definition>
+        <argsstring>()</argsstring>
+        <name>createCUDAStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a8351797e541974c0e6da13519f20e6e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+        <definition>AT_API CUDAStream at::cuda::createCUDAStreamWithOptions</definition>
+        <argsstring>(int32_t flags, int32_t priority)</argsstring>
+        <name>createCUDAStreamWithOptions</name>
+        <param>
+          <type>int32_t</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>priority</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="35" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a93d2620ff247078ccb16b3b5eb807040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+        <definition>AT_API CUDAStream at::cuda::getDefaultCUDAStream</definition>
+        <argsstring>()</argsstring>
+        <name>getDefaultCUDAStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="39" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1af340faca62caa5eea83a1386dba69e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+        <definition>AT_API CUDAStream at::cuda::getDefaultCUDAStreamOnDevice</definition>
+        <argsstring>(int64_t device)</argsstring>
+        <name>getDefaultCUDAStreamOnDevice</name>
+        <param>
+          <type>int64_t</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1af3cbe9a0c96567208969fa40d0620868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+        <definition>AT_API CUDAStream at::cuda::getCurrentCUDAStream</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentCUDAStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="47" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="47" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1ae0f2ddcf6bdb12df44ba699ab8eecbe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+        <definition>AT_API CUDAStream at::cuda::getCurrentCUDAStreamOnDevice</definition>
+        <argsstring>(int64_t device)</argsstring>
+        <name>getCurrentCUDAStreamOnDevice</name>
+        <param>
+          <type>int64_t</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1ae61815826922b06388b26b06ed7fe097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>AT_API void at::cuda::setCurrentCUDAStream</definition>
+        <argsstring>(CUDAStream stream)</argsstring>
+        <name>setCurrentCUDAStream</name>
+        <param>
+          <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a1338ddb8582850ec9025440dd891b651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>AT_API void at::cuda::setCurrentCUDAStreamOnDevice</definition>
+        <argsstring>(int64_t device, CUDAStream stream)</argsstring>
+        <name>setCurrentCUDAStreamOnDevice</name>
+        <param>
+          <type>int64_t</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="59" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a4ddfb844ae430e932b3110e265abff77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>AT_API void at::cuda::uncheckedSetCurrentCUDAStreamOnDevice</definition>
+        <argsstring>(int64_t device, CUDAStream stream)</argsstring>
+        <name>uncheckedSetCurrentCUDAStreamOnDevice</name>
+        <param>
+          <type>int64_t</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="_c_u_d_a_context_8cpp_1a8f34fd5b0c1daf320ae8ea597c9245c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cusparseHandle_t</type>
+        <definition>AT_API cusparseHandle_t at::cuda::getCurrentCUDASparseHandle</definition>
+        <argsstring>()</argsstring>
+        <name>getCurrentCUDASparseHandle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="69" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" bodystart="69" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="_pinned_memory_allocator_8cpp_1a468d0f9ebb914d3ff8753c45af5e7411" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_allocator" kindref="compound">at::Allocator</ref> *</type>
+        <definition>at::Allocator * at::cuda::getPinnedMemoryAllocator</definition>
+        <argsstring>()</argsstring>
+        <name>getPinnedMemoryAllocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/PinnedMemoryAllocator.cpp" line="12" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/PinnedMemoryAllocator.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.cpp" line="4" column="1"/>
+  </compounddef>
+</doxygen>

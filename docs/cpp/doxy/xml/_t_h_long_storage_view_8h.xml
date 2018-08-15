@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_t_h_long_storage_view_8h" kind="file" language="C++">
+    <compoundname>THLongStorageView.h</compoundname>
+    <includes local="yes">TH/TH.h</includes>
+    <includes local="yes">TH/THStorageFunctions.hpp</includes>
+    <includes local="yes">TH/THTypeConversion.hpp</includes>
+    <includedby refid="_sparse_type_derived_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/SparseTypeDerived.cpp</includedby>
+    <includedby refid="_type_derived_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TypeDerived.cpp</includedby>
+    <incdepgraph>
+      <node id="13611">
+        <label>TH/TH.h</label>
+      </node>
+      <node id="13612">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="13613">
+        <label>TH/THTypeConversion.hpp</label>
+      </node>
+      <node id="13610">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/THLongStorageView.h</label>
+        <link refid="_t_h_long_storage_view_8h"/>
+        <childnode refid="13611" relation="include">
+        </childnode>
+        <childnode refid="13612" relation="include">
+        </childnode>
+        <childnode refid="13613" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classat_1_1_t_h_long_storage_view" prot="public">at::THLongStorageView</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH/TH.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH/THStorageFunctions.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH/THTypeConversion.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>THLongStorageViewKind<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>SIZE,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>STRIDE,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>LENGTH,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>make<sp/>a<sp/>fake<sp/>storage<sp/>out<sp/>of<sp/>a<sp/>size,<sp/>pointer<sp/>pair...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>as<sp/>an<sp/>argument<sp/>where<sp/>THSize<sp/>and<sp/>THStride<sp/>are<sp/>passed<sp/>into<sp/>TH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classat_1_1_t_h_long_storage_view" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classat_1_1_t_h_long_storage_view" kindref="compound">THLongStorageView</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>THLongStorage*()<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(storage.size<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>zero_dim_to_null)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;storage;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/>//<sp/>This<sp/>is<sp/>done<sp/>as<sp/>an<sp/>enum,<sp/>and<sp/>not<sp/>as<sp/>static<sp/>constructors,<sp/>as<sp/>there</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/>//<sp/>is<sp/>no<sp/>move/copy<sp/>constructor<sp/>for<sp/>THLongStorageView</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/>static<sp/>THLongStorageView<sp/>makeFromSize(ArrayRef&lt;int64_t&gt;<sp/>ref)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/>static<sp/>THLongStorageView<sp/>makeFromLength(ArrayRef&lt;int64_t&gt;<sp/>ref)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1_t_h_long_storage_view" kindref="compound">THLongStorageView</ref>(<ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef&lt;int64_t&gt;</ref><sp/>ref,<sp/>THLongStorageViewKind<sp/>kind)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>:<sp/>storage(<ref refid="structat_1_1_c_type_to_scalar_type" kindref="compound">at::CTypeToScalarType</ref>&lt;th::from_type&lt;int64_t&gt;&gt;::to(),<sp/>0,<sp/>getTHDefaultAllocator(),<sp/>0),<sp/>zero_dim_to_null(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zero_dim_to_one<sp/>converts<sp/>an<sp/>empty<sp/>ArrayRef<sp/>into<sp/>[1]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>zero_dim_to_null<sp/>converts<sp/>an<sp/>empty<sp/>ArrayRef<sp/>into<sp/>a<sp/>null<sp/>THLongStorage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>zero_dim_to_one<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>noelem_to_empty<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(kind)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>THLongStorageViewKind::SIZE:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zero_dim_to_one<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>THLongStorageViewKind::STRIDE:</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>zero_dim_to_null<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>THLongStorageViewKind::LENGTH:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(zero_dim_to_one<sp/>&amp;&amp;<sp/>ref.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>storage<sp/>of<sp/>size<sp/>0<sp/>actually<sp/>a<sp/>1-length<sp/>storage<sp/>with<sp/>1<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>that<sp/>our<sp/>0-dim<sp/>tensors<sp/>get<sp/>allocated<sp/>as<sp/>1-dim<sp/>inside<sp/>TH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>one<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>storage.data_ptr<sp/>=<sp/>{&amp;one,<sp/>kCPU};<sp/></highlight><highlight class="comment">//<sp/>non-owning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>storage.size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>storage.data_ptr<sp/>=<sp/>{</highlight><highlight class="keyword">const_cast&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ref.data())),<sp/>kCPU};<sp/></highlight><highlight class="comment">//<sp/>non-owning</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>storage.size<sp/>=<sp/>ref.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>storage.scalar_type<sp/>=<sp/><ref refid="structat_1_1_c_type_to_scalar_type" kindref="compound">at::CTypeToScalarType&lt;th::from_type&lt;int64_t&gt;</ref>&gt;::to();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>storage.refcount<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>storage.flag<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>int64_t<sp/>one;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>THLongStorage<sp/>storage;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>zero_dim_to_null;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/THLongStorageView.h"/>
+  </compounddef>
+</doxygen>

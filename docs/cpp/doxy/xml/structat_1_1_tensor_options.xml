@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_tensor_options" kind="struct" language="C++" prot="public">
+    <compoundname>at::TensorOptions</compoundname>
+    <includes refid="_tensor_options_8h" local="no">TensorOptions.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structat_1_1_tensor_options_1a94ab3634512564f446b3daefcc2de1f9" prot="private" static="no" mutable="no">
+        <type>ScalarType</type>
+        <definition>ScalarType at::TensorOptions::dtype_</definition>
+        <argsstring></argsstring>
+        <name>dtype_</name>
+        <initializer>{kFloat}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="201" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_tensor_options_1a1d9bc91264b9ee73c3103025da0ec793" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+        <definition>Device at::TensorOptions::device_</definition>
+        <argsstring></argsstring>
+        <name>device_</name>
+        <initializer>{Device::Type::CPU}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="202" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_tensor_options_1a53ca9050aea93e1f091e4b5391856c1e" prot="private" static="no" mutable="no">
+        <type>Layout</type>
+        <definition>Layout at::TensorOptions::layout_</definition>
+        <argsstring></argsstring>
+        <name>layout_</name>
+        <initializer>{Layout::Strided}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="203" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_tensor_options_1a9b2aae9f337224d057df2fc2cf2286fa" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::TensorOptions::requires_grad_</definition>
+        <argsstring></argsstring>
+        <name>requires_grad_</name>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="204" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_tensor_options_1a611b29d172fc821c7a37de72f2b8a170" prot="private" static="no" mutable="yes">
+        <type>const <ref refid="structat_1_1_type" kindref="compound">Type</ref> *</type>
+        <definition>const Type* at::TensorOptions::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="207" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_tensor_options_1af4a4161466774b6e028b85f838854968" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>()</argsstring>
+        <name>TensorOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a1ca469afb954ae4c94db393621266e59" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(bool use_thread_local_default_options)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type>bool</type>
+          <declname>use_thread_local_default_options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> with defaults taken from the thread local <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> object if <computeroutput>use_thread_local_default_options</computeroutput>, else defaults to:<itemizedlist>
+<listitem><para>dtype: kFloat,</para></listitem><listitem><para>device: kCPU,</para></listitem><listitem><para>layout: kStrided,</para></listitem><listitem><para>requires_grad: false </para></listitem></itemizedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="33" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.cpp" bodystart="13" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1aac501e8228ab4f81d9a8231bc68a5d03" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(Tensor tensor, bool discard_runtime_type=false)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>tensor</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>discard_runtime_type</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> from the type of the given <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></computeroutput>. If the <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></computeroutput> has a CUDA type, the <computeroutput>device_index</computeroutput> will match that of the tensor. The <computeroutput>requires_grad</computeroutput> property of the tensor is ignored and set to false in the created <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. See the constructor from <computeroutput><ref refid="structat_1_1_type" kindref="compound">Type</ref></computeroutput> for the semantics w.r.t. the <computeroutput><ref refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" kindref="member">type()</ref></computeroutput> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1aa3339c5bb1a78447f33605696f223e91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(const Type &amp;type, int32_t device_index=-1, bool discard_runtime_type=false)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type>const <ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>device_index</declname>
+          <defval>-1</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>discard_runtime_type</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> from a type and a <computeroutput>device_index</computeroutput>.</para><para>If <computeroutput>discard_runtime_type</computeroutput> is false (the default), the behavior of <computeroutput><ref refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" kindref="member">TensorOptions::type()</ref></computeroutput> is changed in that it will always return this <computeroutput>type</computeroutput>, irrespective of any <computeroutput>device</computeroutput> or <computeroutput>dtype</computeroutput> or <computeroutput>layout</computeroutput> specified at a later time. This is to ensure that when a <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> object is constructed from a tensor&apos;s type, and that type has a dynamic type other than <computeroutput><ref refid="structat_1_1_type" kindref="compound">at::Type</ref></computeroutput> (e.g. <computeroutput>torch::autograd::VariableType</computeroutput>), constructing a new tensor from this <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> will use this same derived type. If instead the given <computeroutput>type</computeroutput> were destructured into its components (backend, dtype and layout), information about the runtime type of the <computeroutput><ref refid="structat_1_1_type" kindref="compound">Type</ref></computeroutput> would be lost. Set <computeroutput>discard_runtime_type</computeroutput> to <computeroutput>true</computeroutput> to always destructure the type into its components and discard its runtime type. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="62" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="62" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a3ca3bb00255555f31b15529fc760ed6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(Layout layout)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type>Layout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> object with the given layout. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="75" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a85ea269d220312c9fd2af7afb7e461cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(Device device)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> object with the given device. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="80" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1ab198eaaa224bbd91c84c8dd30135a1ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(Backend backend)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type>Backend</type>
+          <declname>backend</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> object from a backend, forwarded to the <computeroutput><ref refid="structat_1_1_device" kindref="compound">Device</ref></computeroutput> constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="86" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="86" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a1784c305b84666bef8fd18ca56d9ff3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorOptions::TensorOptions</definition>
+        <argsstring>(ScalarType dtype)</argsstring>
+        <name>TensorOptions</name>
+        <param>
+          <type>ScalarType</type>
+          <declname>dtype</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> object with the given dtype. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a92fc69dce2b7f17e98650f38fee47c4d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::TensorOptions::operator==</definition>
+        <argsstring>(const TensorOptions &amp;other) const noexcept</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>True if all elements of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> match that of the other. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="95" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a051df634c4b2bc3e7b610c2a9501df0d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::TensorOptions::operator!=</definition>
+        <argsstring>(const TensorOptions &amp;other) const noexcept</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True if any of the elements of this <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> do not match that of the other. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a7080e0987c37f5e6581f3346a646779d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>const TensorOptions&amp; at::TensorOptions::discard_runtime_type</definition>
+        <argsstring>() const</argsstring>
+        <name>discard_runtime_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Discards the runtime type stored if the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> was constructed from a <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></computeroutput> or a <computeroutput><ref refid="structat_1_1_type" kindref="compound">Type</ref></computeroutput>. See the documentation of the constructor from a <computeroutput><ref refid="structat_1_1_type" kindref="compound">Type</ref></computeroutput> for implications on the behavior of the <computeroutput><ref refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" kindref="member">type()</ref></computeroutput> method on <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="110" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="110" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a94d4f14513dd74499a81fde2c36a93e2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>TensorOptions&amp; at::TensorOptions::device</definition>
+        <argsstring>(Device device)</argsstring>
+        <name>device</name>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Sets the device of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="116" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="116" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a292cb933722ee542e044f874bb36d8db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>TensorOptions&amp; at::TensorOptions::device_index</definition>
+        <argsstring>(int32_t device_index)</argsstring>
+        <name>device_index</name>
+        <param>
+          <type>int32_t</type>
+          <declname>device_index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the device of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> to CUDA, and then sets the device index to the given one. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="124" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a73103c8b23a9008c19322f7833d2e313" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>TensorOptions&amp; at::TensorOptions::dtype</definition>
+        <argsstring>(ScalarType dtype)</argsstring>
+        <name>dtype</name>
+        <param>
+          <type>ScalarType</type>
+          <declname>dtype</declname>
+        </param>
+        <briefdescription>
+<para>Sets the dtype of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="129" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="129" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1adf8ca7410557f417326d58f593ecb0ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>TensorOptions&amp; at::TensorOptions::layout</definition>
+        <argsstring>(Layout layout)</argsstring>
+        <name>layout</name>
+        <param>
+          <type>Layout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+<para>Sets the layout of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="136" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="136" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a161df7b4ef12ea2ca50c0993bb4ba5d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>TensorOptions&amp; at::TensorOptions::requires_grad</definition>
+        <argsstring>(bool requires_grad)</argsstring>
+        <name>requires_grad</name>
+        <param>
+          <type>bool</type>
+          <declname>requires_grad</declname>
+        </param>
+        <briefdescription>
+<para>Sets the <computeroutput>requires_grad</computeroutput> property of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="143" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a34a8d34319ce3ebd4a9ebe54c9e69995" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structat_1_1_device" kindref="compound">Device</ref> &amp;</type>
+        <definition>const Device&amp; at::TensorOptions::device</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>device</name>
+        <briefdescription>
+<para>Returns the device of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="149" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1ab685f4349c5e9f3b281154ac9b2d9b83" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int32_t</type>
+        <definition>int32_t at::TensorOptions::device_index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>device_index</name>
+        <briefdescription>
+<para>Returns the device index of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="154" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="154" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a75cfaa978c85234d360c3b11cd4e68f0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ScalarType</type>
+        <definition>ScalarType at::TensorOptions::dtype</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>dtype</name>
+        <briefdescription>
+<para>Returns the dtype of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="159" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="159" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a20a6e9a47d9322af3c1177add411e202" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Layout</type>
+        <definition>Layout at::TensorOptions::layout</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>layout</name>
+        <briefdescription>
+<para>Returns the layout of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="164" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="164" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a668d5aca5851d41388f5010e4693ba17" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::TensorOptions::requires_grad</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>requires_grad</name>
+        <briefdescription>
+<para>Returns the <computeroutput>requires_grad</computeroutput> property of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="169" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>const Type&amp; at::TensorOptions::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Constructs an <computeroutput><ref refid="structat_1_1_type" kindref="compound">at::Type</ref></computeroutput> from the members of the <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="174" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="174" bodyend="179"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structat_1_1_tensor_options_1a8f50e762f19be36cac242a9dc4151b10" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::TensorOptions::update_underlying_type</definition>
+        <argsstring>()</argsstring>
+        <name>update_underlying_type</name>
+        <briefdescription>
+<para>Updates any stored underlying type to the current construction axes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="183" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="183" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_options_1af35a895f3fa3a76982d3ff132dfe51f3" prot="private" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Backend</type>
+        <definition>Backend at::TensorOptions::backend</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>backend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="190" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="190" bodyend="198"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class to encapsulate construction axes of a <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></computeroutput>. <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput> is a virtual class to enable overriding of certain methods by subclasses in other libraries, such as PyTorch. In PyTorch, there is a <computeroutput>torch::TensorOptions</computeroutput> subclass of this <computeroutput><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></computeroutput>, which changes <computeroutput><ref refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" kindref="member">type()</ref></computeroutput> to return a variable type instead of a tensor type, such that variables are created inside factory methods, instead of tensors. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" bodystart="23" bodyend="208"/>
+    <listofallmembers>
+      <member refid="structat_1_1_tensor_options_1af35a895f3fa3a76982d3ff132dfe51f3" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>backend</name></member>
+      <member refid="structat_1_1_tensor_options_1a94d4f14513dd74499a81fde2c36a93e2" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>device</name></member>
+      <member refid="structat_1_1_tensor_options_1a34a8d34319ce3ebd4a9ebe54c9e69995" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>device</name></member>
+      <member refid="structat_1_1_tensor_options_1a1d9bc91264b9ee73c3103025da0ec793" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>device_</name></member>
+      <member refid="structat_1_1_tensor_options_1a292cb933722ee542e044f874bb36d8db" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>device_index</name></member>
+      <member refid="structat_1_1_tensor_options_1ab685f4349c5e9f3b281154ac9b2d9b83" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>device_index</name></member>
+      <member refid="structat_1_1_tensor_options_1a7080e0987c37f5e6581f3346a646779d" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>discard_runtime_type</name></member>
+      <member refid="structat_1_1_tensor_options_1a73103c8b23a9008c19322f7833d2e313" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>dtype</name></member>
+      <member refid="structat_1_1_tensor_options_1a75cfaa978c85234d360c3b11cd4e68f0" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>dtype</name></member>
+      <member refid="structat_1_1_tensor_options_1a94ab3634512564f446b3daefcc2de1f9" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>dtype_</name></member>
+      <member refid="structat_1_1_tensor_options_1adf8ca7410557f417326d58f593ecb0ca" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>layout</name></member>
+      <member refid="structat_1_1_tensor_options_1a20a6e9a47d9322af3c1177add411e202" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>layout</name></member>
+      <member refid="structat_1_1_tensor_options_1a53ca9050aea93e1f091e4b5391856c1e" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>layout_</name></member>
+      <member refid="structat_1_1_tensor_options_1a051df634c4b2bc3e7b610c2a9501df0d" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>operator!=</name></member>
+      <member refid="structat_1_1_tensor_options_1a92fc69dce2b7f17e98650f38fee47c4d" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>operator==</name></member>
+      <member refid="structat_1_1_tensor_options_1a161df7b4ef12ea2ca50c0993bb4ba5d6" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>requires_grad</name></member>
+      <member refid="structat_1_1_tensor_options_1a668d5aca5851d41388f5010e4693ba17" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>requires_grad</name></member>
+      <member refid="structat_1_1_tensor_options_1a9b2aae9f337224d057df2fc2cf2286fa" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>requires_grad_</name></member>
+      <member refid="structat_1_1_tensor_options_1af4a4161466774b6e028b85f838854968" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1a1ca469afb954ae4c94db393621266e59" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1aac501e8228ab4f81d9a8231bc68a5d03" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1aa3339c5bb1a78447f33605696f223e91" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1a3ca3bb00255555f31b15529fc760ed6c" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1a85ea269d220312c9fd2af7afb7e461cb" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1ab198eaaa224bbd91c84c8dd30135a1ac" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1a1784c305b84666bef8fd18ca56d9ff3c" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>TensorOptions</name></member>
+      <member refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" prot="public" virt="non-virtual"><scope>at::TensorOptions</scope><name>type</name></member>
+      <member refid="structat_1_1_tensor_options_1a611b29d172fc821c7a37de72f2b8a170" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>type_</name></member>
+      <member refid="structat_1_1_tensor_options_1a8f50e762f19be36cac242a9dc4151b10" prot="private" virt="non-virtual"><scope>at::TensorOptions</scope><name>update_underlying_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

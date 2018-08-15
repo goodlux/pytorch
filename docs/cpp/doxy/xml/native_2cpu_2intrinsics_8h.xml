@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="native_2cpu_2intrinsics_8h" kind="file" language="C++">
+    <compoundname>Intrinsics.h</compoundname>
+    <includedby refid="avx__mathfun_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/avx_mathfun.h</includedby>
+    <invincdepgraph>
+      <node id="955">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/Intrinsics.h</label>
+        <link refid="native_2cpu_2intrinsics_8h"/>
+        <childnode refid="956" relation="include">
+        </childnode>
+      </node>
+      <node id="956">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/avx_mathfun.h</label>
+        <link refid="avx__mathfun_8h_source"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Microsoft<sp/>C/C++-compatible<sp/>compiler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;intrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_MSC_VER<sp/>&lt;=<sp/>1900</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm256_extract_epi64(X,<sp/>Y)<sp/>(((uint64_t*)&amp;X)[Y])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>(defined(__x86_64__)<sp/>||<sp/>defined(__i386__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>x86/x86-64<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;x86intrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__ARM_NEON__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>ARM<sp/>with<sp/>NEON<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_neon.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__IWMMXT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>ARM<sp/>with<sp/>WMMX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mmintrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(defined(__GNUC__)<sp/>||<sp/>defined(__xlC__))<sp/>&amp;&amp;<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(__VEC__)<sp/>||<sp/>defined(__ALTIVEC__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>XLC<sp/>or<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>PowerPC<sp/>with<sp/>VMX/VSX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;altivec.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__SPE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>PowerPC<sp/>with<sp/>SPE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spe.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/Intrinsics.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_any_module" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::AnyModule</compoundname>
+    <includes refid="any_8h" local="no">any.h</includes>
+    <innerclass refid="structtorch_1_1nn_1_1_any_module_1_1_holder" prot="private">torch::nn::AnyModule::Holder</innerclass>
+    <innerclass refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" prot="public">torch::nn::AnyModule::Placeholder</innerclass>
+    <innerclass refid="classtorch_1_1nn_1_1_any_module_1_1_value" prot="public">torch::nn::AnyModule::Value</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_any_module_1af9ab0e81b68ccb8f78b3f87c79da3762" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Placeholder&gt; torch::nn::AnyModule::content_</definition>
+        <argsstring></argsstring>
+        <name>content_</name>
+        <briefdescription>
+<para>The type erased module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="132" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a4782ae9077d5e426d220e123ac9101dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::AnyModule</definition>
+        <argsstring>()=default</argsstring>
+        <name>AnyModule</name>
+        <briefdescription>
+<para>A default-constructed <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> is in an empty state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ae76b9aea5ef6c18511d5cbca9a43aa0c" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::AnyModule::AnyModule</definition>
+        <argsstring>(std::shared_ptr&lt; ModuleType &gt; module)</argsstring>
+        <name>AnyModule</name>
+        <param>
+          <type>std::shared_ptr&lt; ModuleType &gt;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> from a <computeroutput>shared_ptr</computeroutput> to concrete module object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="328" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a346f166334839d80df976ab9751dd798" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::detail::enable_if_module_t&lt;ModuleType&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::AnyModule::AnyModule</definition>
+        <argsstring>(ModuleType &amp;&amp;module)</argsstring>
+        <name>AnyModule</name>
+        <param>
+          <type>ModuleType &amp;&amp;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> from a concrete module object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="334" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a2ee1b3c9fd2ba48fc07a73a0ef95b39b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::AnyModule::AnyModule</definition>
+        <argsstring>(const ModuleHolder&lt; ModuleType &gt; &amp;module_holder)</argsstring>
+        <name>AnyModule</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref>&lt; ModuleType &gt; &amp;</type>
+          <declname>module_holder</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> from a module holder. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="47" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="339" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a72581e9dbaa78d77806ffeacbf91d4f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::AnyModule</definition>
+        <argsstring>(AnyModule &amp;&amp;)=default</argsstring>
+        <name>AnyModule</name>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move construction and assignment is allowed, and follows the default behavior of move for <computeroutput>std::unique_ptr</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ad6b49981329675727466972871c04642" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;</type>
+        <definition>AnyModule&amp; torch::nn::AnyModule::operator=</definition>
+        <argsstring>(AnyModule &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ae73b55393c3ed33d041d9b49737c6581" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::AnyModule</definition>
+        <argsstring>(const AnyModule &amp;other)</argsstring>
+        <name>AnyModule</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Creates a shallow copy of an <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="342" bodyend="343"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ac320cff42fbfa874f5530726bfd284cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;</type>
+        <definition>AnyModule &amp; torch::nn::AnyModule::operator=</definition>
+        <argsstring>(const AnyModule &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="345" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a24906f2317355cd7bd826d25f6e8c12e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></type>
+        <definition>AnyModule torch::nn::AnyModule::clone</definition>
+        <argsstring>(at::optional&lt; Device &gt; device=at::nullopt) const</argsstring>
+        <name>clone</name>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a deep copy of an <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> if it contains a module, else an empty <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> if it is empty. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="60" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="352" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1aea9a3820dc0e72fe8379057566746b23" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &amp;</type>
+        <definition>AnyModule &amp; torch::nn::AnyModule::operator=</definition>
+        <argsstring>(std::shared_ptr&lt; ModuleType &gt; module)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>std::shared_ptr&lt; ModuleType &gt;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assigns a module to the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> (to circumvent the explicit constructor). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="65" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="359" bodyend="361"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>ArgumentTypes</declname>
+            <defname>ArgumentTypes</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></type>
+        <definition>AnyModule::Value torch::nn::AnyModule::forward</definition>
+        <argsstring>(ArgumentTypes &amp;&amp;... arguments)</argsstring>
+        <name>forward</name>
+        <param>
+          <type>ArgumentTypes &amp;&amp;...</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Invokes <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" kindref="member">forward()</ref></computeroutput> on the contained module with the given arguments, and returns the return value as an <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput>. Use this method when chaining <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput>s in a loop. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="364" bodyend="372"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1abb1a2f1e04087b5b83f012ab354064fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::detail::enable_if_module_t&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; torch::nn::AnyModule::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to cast the underlying module to the given module type. Throws an exception if the types do not match. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="375" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ae6286bf25851ab8fad4edb222c1d6d2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::detail::enable_if_module_t&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>const T &amp;</type>
+        <definition>const T &amp; torch::nn::AnyModule::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to cast the underlying module to the given module type. Throws an exception if the types do not match. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="81" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1af3c1e661120aec952a65160b20a87d52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename ContainedType</type>
+            <defval>typename T::ContainedType</defval>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T torch::nn::AnyModule::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the contained module in a <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">nn::ModuleHolder</ref></computeroutput> subclass if possible (i.e. if <computeroutput>T</computeroutput> has a constructor for the underlying module type). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="86" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="387" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a1c48ad507b1f18cf7333aff911909aae" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; Module &gt; torch::nn::AnyModule::ptr</definition>
+        <argsstring>() const</argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a <computeroutput>std::shared_ptr</computeroutput> whose dynamic type is that of the underlying module. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="391" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a48356bd42b88ab0592deb83623ab009e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::detail::enable_if_module_t&lt;T&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>std::shared_ptr&lt; T &gt; torch::nn::AnyModule::ptr</definition>
+        <argsstring>() const</argsstring>
+        <name>ptr</name>
+        <briefdescription>
+<para>Like <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1a1c48ad507b1f18cf7333aff911909aae" kindref="member">ptr()</ref></computeroutput>, but casts the pointer to the given type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Call <ref refid="classtorch_1_1nn_1_1_any_module_1abb1a2f1e04087b5b83f012ab354064fe" kindref="member">get()</ref> but discard the value, just to do the type checking. </para>        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="94" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="397" bodyend="402"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a96d9ea81ab454a54347bf4a1774c20de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::type_info &amp;</type>
+        <definition>const std::type_info &amp; torch::nn::AnyModule::type_info</definition>
+        <argsstring>() const</argsstring>
+        <name>type_info</name>
+        <briefdescription>
+<para>Returns the <computeroutput>type_info</computeroutput> object of the contained value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="404" bodyend="407"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a69029292d5d4c23155f064b60fe85af5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool torch::nn::AnyModule::is_empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_empty</name>
+        <briefdescription>
+<para>Returns true if the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> does not contain a module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="100" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="409" bodyend="411"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1ad9b9f85c8a54e14a02b2cbe98235c3fe" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+          <param>
+            <type>typename Class</type>
+          </param>
+          <param>
+            <type>typename ReturnType</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>ArgumentTypes</declname>
+            <defname>ArgumentTypes</defname>
+          </param>
+        </templateparamlist>
+        <type>std::unique_ptr&lt; <ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; AnyModule::Placeholder &gt; torch::nn::AnyModule::make_holder</definition>
+        <argsstring>(std::shared_ptr&lt; ModuleType &gt; &amp;&amp;module, ReturnType(Class::*)(ArgumentTypes...))</argsstring>
+        <name>make_holder</name>
+        <param>
+          <type>std::shared_ptr&lt; ModuleType &gt; &amp;&amp;</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>ReturnType(Class::*)(ArgumentTypes...)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a <computeroutput>unique_ptr&lt;<ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref>&gt;</computeroutput> pointing to a <computeroutput>Holder</computeroutput> of the correct type. This method is used to deduce the arguments of the module&apos;s <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" kindref="member">forward()</ref></computeroutput> method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="123" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="420" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1a078f9f88930ca5c2db1f4b28537b75ae" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T &amp; torch::nn::AnyModule::get_</definition>
+        <argsstring>() const</argsstring>
+        <name>get_</name>
+        <briefdescription>
+<para>Helper method invoked by const and non-const <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1abb1a2f1e04087b5b83f012ab354064fe" kindref="member">get()</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="129" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="436" bodyend="445"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A class to store a type erased module, whose <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" kindref="member">forward()</ref></computeroutput> method can be invoked, with dynamic type checking. An <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> has an empty state, into which it is default constructed. <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1a69029292d5d4c23155f064b60fe85af5" kindref="member">is_empty()</ref></computeroutput> can be used to query whether the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> is empty. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="27" bodyend="133"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a4782ae9077d5e426d220e123ac9101dc" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ae76b9aea5ef6c18511d5cbca9a43aa0c" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a346f166334839d80df976ab9751dd798" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a2ee1b3c9fd2ba48fc07a73a0ef95b39b" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a72581e9dbaa78d77806ffeacbf91d4f1" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ae73b55393c3ed33d041d9b49737c6581" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a24906f2317355cd7bd826d25f6e8c12e" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1af9ab0e81b68ccb8f78b3f87c79da3762" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>content_</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1abb1a2f1e04087b5b83f012ab354064fe" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>get</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ae6286bf25851ab8fad4edb222c1d6d2f" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>get</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1af3c1e661120aec952a65160b20a87d52" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>get</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a078f9f88930ca5c2db1f4b28537b75ae" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>get_</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a69029292d5d4c23155f064b60fe85af5" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>is_empty</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ad9b9f85c8a54e14a02b2cbe98235c3fe" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>make_holder</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ad6b49981329675727466972871c04642" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1ac320cff42fbfa874f5530726bfd284cd" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1aea9a3820dc0e72fe8379057566746b23" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a1c48ad507b1f18cf7333aff911909aae" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>ptr</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a48356bd42b88ab0592deb83623ab009e" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>ptr</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1a96d9ea81ab454a54347bf4a1774c20de" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule</scope><name>type_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

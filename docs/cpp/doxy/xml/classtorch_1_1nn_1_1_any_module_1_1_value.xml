@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_any_module_1_1_value" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::AnyModule::Value</compoundname>
+    <includes refid="any_8h" local="no">any.h</includes>
+    <innerclass refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_holder" prot="private">torch::nn::AnyModule::Value::Holder</innerclass>
+    <innerclass refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder" prot="private">torch::nn::AnyModule::Value::Placeholder</innerclass>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a040ade92934d9e491723959d88e35618" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class AnyModule</definition>
+        <argsstring></argsstring>
+        <name>AnyModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="191" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a01487a87f5b66eecbb267eddc3b6f1b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct TestValue</definition>
+        <argsstring></argsstring>
+        <name>TestValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="192" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a7197fdb9bfc68e8da152329242dabbb6" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; Placeholder &gt;</type>
+        <definition>std::unique_ptr&lt;Placeholder&gt; torch::nn::AnyModule::Value::content_</definition>
+        <argsstring></argsstring>
+        <name>content_</name>
+        <briefdescription>
+<para>The type erased object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="234" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a8550ec401384a71bf412cbb9f597a5a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::Value::Value</definition>
+        <argsstring>(Value &amp;&amp;)=default</argsstring>
+        <name>Value</name>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move construction and assignment is allowed, and follows the default behavior of move for <computeroutput>std::unique_ptr</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a0f4bc90ff9d66517acceb44b3af03f6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &amp;</type>
+        <definition>Value&amp; torch::nn::AnyModule::Value::operator=</definition>
+        <argsstring>(Value &amp;&amp;)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &amp;&amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a201e953a7dcbda81f96ab08abf3ff623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::Value::Value</definition>
+        <argsstring>(const Value &amp;other)=delete</argsstring>
+        <name>Value</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Copy is disallowed, because we don&apos;t need it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="150" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a491e13e343ce1dd1affe0ff70a18a873" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &amp;</type>
+        <definition>Value&amp; torch::nn::AnyModule::Value::operator=</definition>
+        <argsstring>(const Value &amp;other)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="151" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a305cf2d39b1ff380fb63a0fbfdd8591b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* torch::nn::AnyModule::Value::try_get</definition>
+        <argsstring>()</argsstring>
+        <name>try_get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a pointer to the value contained in the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput> if the type passed as template parameter matches the type of the value stored, and returns a null pointer otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="157" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="157" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a11db5a11fe7946b96e25854670cfb4d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T torch::nn::AnyModule::Value::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value contained in the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput> if the type passed as template parameter matches the type of the value stored, and throws an exception otherwise. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="174" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="174" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a2621962c425fde2ef03dca430875b81c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::type_info &amp;</type>
+        <definition>const std::type_info&amp; torch::nn::AnyModule::Value::type_info</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>type_info</name>
+        <briefdescription>
+<para>Returns the <computeroutput>type_info</computeroutput> object of the contained value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="186" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="186" bodyend="188"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1ab655d246b41e6a07b29f7f7259fd9497" prot="private" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::disable_if_t&lt;std::is_same&lt;<ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref>, T&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::AnyModule::Value::Value</definition>
+        <argsstring>(T &amp;&amp;value)</argsstring>
+        <name>Value</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput> from value type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="198" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="198" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_any_module_1_1_value_1a45eb3f988ee21b135cb3275c9c38d873" prot="private" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::Value::Value</definition>
+        <argsstring>(at::Tensor tensor)</argsstring>
+        <name>Value</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput>, but converts an <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></computeroutput> to a <computeroutput>torch::Tensor</computeroutput> implicitly if the <computeroutput><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></computeroutput> is really a <computeroutput>torch::Tensor</computeroutput> (a variable). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="204" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="204" bodyend="210"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A simplified implementation of <computeroutput>std::any</computeroutput> which stores a type erased object, whose concrete value can be retrieved at runtime by checking if the <computeroutput>typeid()</computeroutput> of a requested type matches the <computeroutput>typeid()</computeroutput> of the object stored. It is simplified in that it does not handle copying, as we do not require it for our use cases. Moves are sufficient. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="142" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="142" bodyend="235"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a040ade92934d9e491723959d88e35618" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>AnyModule</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a7197fdb9bfc68e8da152329242dabbb6" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>content_</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a11db5a11fe7946b96e25854670cfb4d4" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>get</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a0f4bc90ff9d66517acceb44b3af03f6d" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a491e13e343ce1dd1affe0ff70a18a873" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a01487a87f5b66eecbb267eddc3b6f1b4" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>TestValue</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a305cf2d39b1ff380fb63a0fbfdd8591b" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>try_get</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a2621962c425fde2ef03dca430875b81c" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>type_info</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a8550ec401384a71bf412cbb9f597a5a4" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>Value</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a201e953a7dcbda81f96ab08abf3ff623" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>Value</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1ab655d246b41e6a07b29f7f7259fd9497" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>Value</name></member>
+      <member refid="classtorch_1_1nn_1_1_any_module_1_1_value_1a45eb3f988ee21b135cb3275c9c38d873" prot="private" virt="non-virtual"><scope>torch::nn::AnyModule::Value</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="cudnn-wrapper_8h" kind="file" language="C++">
+    <compoundname>cudnn-wrapper.h</compoundname>
+    <includes local="no">cudnn.h</includes>
+    <includedby refid="cudnn_2_descriptors_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</includedby>
+    <includedby refid="_handles_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Handles.h</includedby>
+    <includedby refid="_types_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Types.h</includedby>
+    <includedby refid="aten_2src_2_a_ten_2cudnn_2utils_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</includedby>
+    <incdepgraph>
+      <node id="2197">
+        <label>cudnn.h</label>
+      </node>
+      <node id="2196">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h</label>
+        <link refid="cudnn-wrapper_8h"/>
+        <childnode refid="2197" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2200">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Handles.h</label>
+        <link refid="_handles_8h_source"/>
+        <childnode refid="2201" relation="include">
+        </childnode>
+      </node>
+      <node id="2202">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Types.h</label>
+        <link refid="_types_8h_source"/>
+      </node>
+      <node id="2201">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="2199">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="2198">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h</label>
+        <link refid="cudnn-wrapper_8h"/>
+        <childnode refid="2199" relation="include">
+        </childnode>
+        <childnode refid="2200" relation="include">
+        </childnode>
+        <childnode refid="2202" relation="include">
+        </childnode>
+        <childnode refid="2201" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cudnn-wrapper_8h_1a6df1d22fb5f09eccc23b9f399670cfd7" prot="public" static="no">
+        <name>STRINGIFY</name>
+        <param><defname>x</defname></param>
+        <initializer>#x</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h" line="5" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cudnn-wrapper_8h_1a9e9c7019565ee800abaf5fef300b73db" prot="public" static="no">
+        <name>STRING</name>
+        <param><defname>x</defname></param>
+        <initializer>STRINGIFY(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h" line="6" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cudnn.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STRINGIFY(x)<sp/>#x</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>STRING(x)<sp/>STRINGIFY(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CUDNN_MAJOR<sp/>&lt;<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message<sp/>(&quot;CuDNN<sp/>v&quot;<sp/>STRING(CUDNN_MAJOR)<sp/>&quot;<sp/>found,<sp/>but<sp/>need<sp/>at<sp/>least<sp/>CuDNN<sp/>v6.<sp/>You<sp/>can<sp/>get<sp/>the<sp/>latest<sp/>version<sp/>of<sp/>CuDNN<sp/>from<sp/>https://developer.nvidia.com/cudnn<sp/>or<sp/>disable<sp/>CuDNN<sp/>with<sp/>NO_CUDNN=1&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message<sp/>&quot;We<sp/>strongly<sp/>encourage<sp/>you<sp/>to<sp/>move<sp/>to<sp/>6.0<sp/>and<sp/>above.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>message<sp/>&quot;This<sp/>message<sp/>is<sp/>intended<sp/>to<sp/>annoy<sp/>you<sp/>enough<sp/>to<sp/>update.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>STRINGIFY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>STRING</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/cudnn-wrapper.h"/>
+  </compounddef>
+</doxygen>

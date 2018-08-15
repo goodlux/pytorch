@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="cuda_8h" kind="file" language="C++">
+    <compoundname>cuda.h</compoundname>
+    <includes local="no">cstddef</includes>
+    <includedby refid="data__parallel_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</includedby>
+    <includedby refid="torch_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</includedby>
+    <includedby refid="cuda_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/cuda.cpp</includedby>
+    <includedby refid="torch_2csrc_2api_2src_2nn_2modules_2batchnorm_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/batchnorm.cpp</includedby>
+    <includedby refid="_c_u_d_a_hooks_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp</includedby>
+    <includedby refid="cudnn_2_descriptors_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</includedby>
+    <includedby refid="apply__test_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp</includedby>
+    <includedby refid="cuda__rng__test_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/cuda_rng_test.cpp</includedby>
+    <incdepgraph>
+      <node id="14227">
+        <label>cstddef</label>
+      </node>
+      <node id="14226">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/cuda.h</label>
+        <link refid="cuda_8h"/>
+        <childnode refid="14227" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14230">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="14231">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="14229">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="14228">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/cuda.h</label>
+        <link refid="cuda_8h"/>
+        <childnode refid="14229" relation="include">
+        </childnode>
+        <childnode refid="14230" relation="include">
+        </childnode>
+        <childnode refid="14231" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacetorch">torch</innernamespace>
+    <innernamespace refid="namespacetorch_1_1cuda">torch::cuda</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetorch" kindref="compound">torch</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">cuda<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>device_count();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_available();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cudnn_is_available();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>cuda</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>torch</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/cuda.h"/>
+  </compounddef>
+</doxygen>

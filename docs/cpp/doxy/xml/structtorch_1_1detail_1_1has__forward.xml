@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structtorch_1_1detail_1_1has__forward" kind="struct" language="C++" prot="public">
+    <compoundname>torch::detail::has_forward</compoundname>
+    <includes refid="static_8h" local="no">static.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structtorch_1_1detail_1_1has__forward_1adce29d4faa7acbfb817aecc4b5b0ebc0" prot="public" static="no">
+        <type>int8_t</type>
+        <definition>using torch::detail::has_forward&lt; T &gt;::yes =  int8_t</definition>
+        <argsstring></argsstring>
+        <name>yes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="structtorch_1_1detail_1_1has__forward_1a187748c5bd1c344fa36a92817047ef0d" prot="public" static="no">
+        <type>int16_t</type>
+        <definition>using torch::detail::has_forward&lt; T &gt;::no =  int16_t</definition>
+        <argsstring></argsstring>
+        <name>no</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structtorch_1_1detail_1_1has__forward_1af87e8c4739b233505e6af8f57d4d2220" prot="public" static="yes" mutable="no">
+        <type>constexpr bool</type>
+        <definition>constexpr bool torch::detail::has_forward&lt; T &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= (sizeof(test&lt;T&gt;(nullptr)) == sizeof(yes))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structtorch_1_1detail_1_1has__forward_1a400b249fcc386e7ff3f0c2a1cce25a83" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>yes</type>
+        <definition>static yes torch::detail::has_forward&lt; T &gt;::test</definition>
+        <argsstring>(decltype(&amp;U::forward))</argsstring>
+        <name>test</name>
+        <param>
+          <type>decltype &amp;::forward</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1detail_1_1has__forward_1a53b0cde9af0c4209cf97930903d9cb61" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>no</type>
+        <definition>static no torch::detail::has_forward&lt; T &gt;::test</definition>
+        <argsstring>(...)</argsstring>
+        <name>test</name>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="34" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Detects if a type T has a forward() method. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/static.h" bodystart="16" bodyend="39"/>
+    <listofallmembers>
+      <member refid="structtorch_1_1detail_1_1has__forward_1a187748c5bd1c344fa36a92817047ef0d" prot="public" virt="non-virtual"><scope>torch::detail::has_forward</scope><name>no</name></member>
+      <member refid="structtorch_1_1detail_1_1has__forward_1a400b249fcc386e7ff3f0c2a1cce25a83" prot="public" virt="non-virtual"><scope>torch::detail::has_forward</scope><name>test</name></member>
+      <member refid="structtorch_1_1detail_1_1has__forward_1a53b0cde9af0c4209cf97930903d9cb61" prot="public" virt="non-virtual"><scope>torch::detail::has_forward</scope><name>test</name></member>
+      <member refid="structtorch_1_1detail_1_1has__forward_1af87e8c4739b233505e6af8f57d4d2220" prot="public" virt="non-virtual"><scope>torch::detail::has_forward</scope><name>value</name></member>
+      <member refid="structtorch_1_1detail_1_1has__forward_1adce29d4faa7acbfb817aecc4b5b0ebc0" prot="public" virt="non-virtual"><scope>torch::detail::has_forward</scope><name>yes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_device" kind="struct" language="C++" prot="public">
+    <compoundname>at::Device</compoundname>
+    <includes refid="_device_8h" local="no">Device.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Type</name>
+        <enumvalue id="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451a2b55387dd066c5bac646ac61543d152d" prot="public">
+          <name>CPU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451aa33b7755e5f9b504d2d038eaca4ff28d" prot="public">
+          <name>CUDA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>The possible values of the device <emphasis>type</emphasis>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structat_1_1_device_1a34d9779367c1dc8f325c7717f7bdfafc" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" kindref="member">Type</ref></type>
+        <definition>Type at::Device::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="109" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_device_1ab2945fb56a8637aaea4491dd53cedaf8" prot="private" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t at::Device::index_</definition>
+        <argsstring></argsstring>
+        <name>index_</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="110" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structat_1_1_device_1a78a8f23188c0def66b96e53df7d56c84" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" kindref="member">Type</ref></type>
+        <definition>static Type at::Device::backend_to_type</definition>
+        <argsstring>(Backend backend)</argsstring>
+        <name>backend_to_type</name>
+        <param>
+          <type>Backend</type>
+          <declname>backend</declname>
+        </param>
+        <briefdescription>
+<para>Converts a <computeroutput>Backend</computeroutput> to a <computeroutput><ref refid="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" kindref="member">Device::Type</ref></computeroutput> if possible. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="27" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_device_1ac04b3e2ac9f8d0858cdbbe3e34b34c90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::Device::Device</definition>
+        <argsstring>(Type type, int32_t index=-1)</argsstring>
+        <name>Device</name>
+        <param>
+          <type><ref refid="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" kindref="member">Type</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>index</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a new <computeroutput><ref refid="structat_1_1_device" kindref="compound">Device</ref></computeroutput> from a <computeroutput><ref refid="structat_1_1_type" kindref="compound">Type</ref></computeroutput> and an optional device index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="42" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="42" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1acbe05d63d3612303a48852fa1ac59b2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::Device::Device</definition>
+        <argsstring>(const std::string &amp;device_string)</argsstring>
+        <name>Device</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>device_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a <computeroutput><ref refid="structat_1_1_device" kindref="compound">Device</ref></computeroutput> from a string description, for convenience. The string supplied must follow the following schema: <computeroutput>(cpu|cuda):[&lt;device-index&gt;]</computeroutput> where <computeroutput>cpu:</computeroutput> or <computeroutput>cuda:</computeroutput> specifies the device type, and <computeroutput>&lt;device-index&gt;</computeroutput> optionally specifies a device index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="59" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.cpp" bodystart="48" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1a8a9d1df0818173f2091470c3c55e9703" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::Device::Device</definition>
+        <argsstring>(Backend backend, int32_t index=-1)</argsstring>
+        <name>Device</name>
+        <param>
+          <type>Backend</type>
+          <declname>backend</declname>
+        </param>
+        <param>
+          <type>int32_t</type>
+          <declname>index</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs a new <computeroutput><ref refid="structat_1_1_device" kindref="compound">Device</ref></computeroutput> from a <computeroutput>Backend</computeroutput> (which is converted to a <computeroutput><ref refid="structat_1_1_type" kindref="compound">Type</ref></computeroutput>, if possible) and an optional device index. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="63" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1a3118feabf9d7b46c7cc3c914357b40a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Device::operator==</definition>
+        <argsstring>(const Device &amp;other) const noexcept</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structat_1_1_device" kindref="compound">Device</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the type and index of this <computeroutput><ref refid="structat_1_1_device" kindref="compound">Device</ref></computeroutput> matches that of <computeroutput>other</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="68" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1a3aed5d04e923e8710189c9adbc87330a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Device::operator!=</definition>
+        <argsstring>(const Device &amp;other) const noexcept</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structat_1_1_device" kindref="compound">Device</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the type or index of this <computeroutput><ref refid="structat_1_1_device" kindref="compound">Device</ref></computeroutput> differs from that of <computeroutput>other</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="74" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="74" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1a62cc7fbd9f5244c745e31dd3a72ed767" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Device::set_index</definition>
+        <argsstring>(int32_t index)</argsstring>
+        <name>set_index</name>
+        <param>
+          <type>int32_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Sets the device index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="79" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="79" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1ab94716172efad91c58e74d80a5b36da1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" kindref="member">Type</ref></type>
+        <definition>Type at::Device::type</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>type</name>
+        <briefdescription>
+<para>Returns the type of device this is. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="84" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1a3156afbcfaeb5c742e6c775362b6aff2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int32_t &amp;</type>
+        <definition>const int32_t&amp; at::Device::index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>index</name>
+        <briefdescription>
+<para>Returns the optional index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="89" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="89" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1ad3a66ceb2f4bc6ef0e58e54d8b0a2ad4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Device::has_index</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>has_index</name>
+        <briefdescription>
+<para>Returns true if the device has a non-default index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="94" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1af393b6cf2c93ccc92a23e80deb8e18c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Device::is_cuda</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_cuda</name>
+        <briefdescription>
+<para>Return true if the device is of CUDA type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="99" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="99" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_device_1a7ec77bb04a9686bce9cbb4a691366e37" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Device::is_cpu</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_cpu</name>
+        <briefdescription>
+<para>Return true if the device is of CPU type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="104" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="104" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Represents a a compute device on which a tensor is located. A device is uniquely identified by a type, which specifies the type of machine it is (e.g. CPU or CUDA GPU), and a device index or ordinal, which identifies the specific compute device when there is more than one of a certain type. The device index is optional, and in its defaulted state represents (abstractly) &quot;the current device&quot;. Further, there are two constraints on the value of the device index, if one is explicitly stored:<orderedlist>
+<listitem><para>A negative index represents the current device, a non-negative index represents a specific, concrete device,</para></listitem><listitem><para>When the device type is CPU, the device index must be zero. </para></listitem></orderedlist>
+</para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h" bodystart="22" bodyend="111"/>
+    <listofallmembers>
+      <member refid="structat_1_1_device_1a78a8f23188c0def66b96e53df7d56c84" prot="public" virt="non-virtual"><scope>at::Device</scope><name>backend_to_type</name></member>
+      <member refid="structat_1_1_device_1ac04b3e2ac9f8d0858cdbbe3e34b34c90" prot="public" virt="non-virtual"><scope>at::Device</scope><name>Device</name></member>
+      <member refid="structat_1_1_device_1acbe05d63d3612303a48852fa1ac59b2f" prot="public" virt="non-virtual"><scope>at::Device</scope><name>Device</name></member>
+      <member refid="structat_1_1_device_1a8a9d1df0818173f2091470c3c55e9703" prot="public" virt="non-virtual"><scope>at::Device</scope><name>Device</name></member>
+      <member refid="structat_1_1_device_1ad3a66ceb2f4bc6ef0e58e54d8b0a2ad4" prot="public" virt="non-virtual"><scope>at::Device</scope><name>has_index</name></member>
+      <member refid="structat_1_1_device_1a3156afbcfaeb5c742e6c775362b6aff2" prot="public" virt="non-virtual"><scope>at::Device</scope><name>index</name></member>
+      <member refid="structat_1_1_device_1ab2945fb56a8637aaea4491dd53cedaf8" prot="private" virt="non-virtual"><scope>at::Device</scope><name>index_</name></member>
+      <member refid="structat_1_1_device_1a7ec77bb04a9686bce9cbb4a691366e37" prot="public" virt="non-virtual"><scope>at::Device</scope><name>is_cpu</name></member>
+      <member refid="structat_1_1_device_1af393b6cf2c93ccc92a23e80deb8e18c0" prot="public" virt="non-virtual"><scope>at::Device</scope><name>is_cuda</name></member>
+      <member refid="structat_1_1_device_1a3aed5d04e923e8710189c9adbc87330a" prot="public" virt="non-virtual"><scope>at::Device</scope><name>operator!=</name></member>
+      <member refid="structat_1_1_device_1a3118feabf9d7b46c7cc3c914357b40a9" prot="public" virt="non-virtual"><scope>at::Device</scope><name>operator==</name></member>
+      <member refid="structat_1_1_device_1a62cc7fbd9f5244c745e31dd3a72ed767" prot="public" virt="non-virtual"><scope>at::Device</scope><name>set_index</name></member>
+      <member refid="structat_1_1_device_1acb3a307c0e02be38e72ba20e39d1f451" prot="public" virt="non-virtual"><scope>at::Device</scope><name>Type</name></member>
+      <member refid="structat_1_1_device_1ab94716172efad91c58e74d80a5b36da1" prot="public" virt="non-virtual"><scope>at::Device</scope><name>type</name></member>
+      <member refid="structat_1_1_device_1a34d9779367c1dc8f325c7717f7bdfafc" prot="private" virt="non-virtual"><scope>at::Device</scope><name>type_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

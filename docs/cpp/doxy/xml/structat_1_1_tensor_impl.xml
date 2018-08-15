@@ -1,0 +1,461 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_tensor_impl" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>at::TensorImpl</compoundname>
+    <basecompoundref refid="structat_1_1_retainable" prot="public" virt="non-virtual">at::Retainable</basecompoundref>
+    <derivedcompoundref refid="structat_1_1_sparse_tensor_impl" prot="public" virt="non-virtual">at::SparseTensorImpl</derivedcompoundref>
+    <derivedcompoundref refid="structat_1_1_undefined_tensor" prot="public" virt="non-virtual">at::UndefinedTensor</derivedcompoundref>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structat_1_1_tensor_impl_1a9d088de66de35d450a56e236fbaab94d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="36" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="structat_1_1_tensor_impl_1abdc2a7d0ff266591cb7d4ddad5d8a90e" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::TensorImpl::is_scalar</definition>
+        <argsstring></argsstring>
+        <name>is_scalar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="95" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_tensor_impl_1a281bbf952fcab35ec74b57a0beb078ac" prot="protected" static="no" mutable="no">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> *</type>
+        <definition>Type* at::TensorImpl::type_</definition>
+        <argsstring></argsstring>
+        <name>type_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="96" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a7469ca6b329494f9de1c8ae559e2ee54" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorImpl::TensorImpl</definition>
+        <argsstring>(Type *type)</argsstring>
+        <name>TensorImpl</name>
+        <param>
+          <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="19" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1aab13757c47cccf942862857e8b46188b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>Type&amp; at::TensorImpl::type</definition>
+        <argsstring>() const</argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a613a3398805a6a138762cee20fabb4e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* at::TensorImpl::toString</definition>
+        <argsstring>() const =0</argsstring>
+        <name>toString</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1a805db901fb445aa6381097953b89a414">toString</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1af833cbffeec244f5faaa774d5d5b57da">toString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a65e5eeafc1f29060c0ee2f1761077d3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+        <definition>virtual IntList at::TensorImpl::sizes</definition>
+        <argsstring>() const =0</argsstring>
+        <name>sizes</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1a5d665fdbf9246b6cb3591313643ce578">sizes</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1a2a71255dc7fac65198ff1754d64c64fc">sizes</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a3ac77d597015cecc2ad035d7c2411987" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+        <definition>virtual IntList at::TensorImpl::strides</definition>
+        <argsstring>() const =0</argsstring>
+        <name>strides</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1a4e5928d43dd4bf9871e0b3295bf872c5">strides</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1aef07faa4db1b67eb77306687d740809a">strides</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1ab8edca66e99efe77ae1f2e98f754e2c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>int64_t</type>
+        <definition>virtual int64_t at::TensorImpl::dim</definition>
+        <argsstring>() const =0</argsstring>
+        <name>dim</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1a5ff354f6d41bed51ca89dbcb84285ef3">dim</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1a93e5afb006021c00fb0379df9e913cc0">dim</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1ae805a79db6203eb5bb9cacd4a41df2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classat_1_1_scalar" kindref="compound">Scalar</ref></type>
+        <definition>virtual Scalar at::TensorImpl::localScalar</definition>
+        <argsstring>()=0</argsstring>
+        <name>localScalar</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1ae160f214f57d4a9a33b8b9f55f9cd144">localScalar</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1a8a84e2a11ee10ef5d584e449dc5e61f0">localScalar</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform a conversion of this tensor to a scalar, if numel() == 1. Otherwise, raise an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a44491c0216b7f25a4a122f36826ba56e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void *</type>
+        <definition>virtual void* at::TensorImpl::unsafeGetTH</definition>
+        <argsstring>(bool retain)=0</argsstring>
+        <name>unsafeGetTH</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1ae16ecd5856b18b21bec53b3d050d5f11">unsafeGetTH</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1a118315439ffd89794cf3dd438b34a4f4">unsafeGetTH</reimplementedby>
+        <param>
+          <type>bool</type>
+          <declname>retain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a8c5cd89bfb316fcfc69e45a2f0b65cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Storage&gt; at::TensorImpl::storage</definition>
+        <argsstring>()=0</argsstring>
+        <name>storage</name>
+        <reimplementedby refid="structat_1_1_undefined_tensor_1ad1ab4edd5b126c61cc4dc7b5d8b77720">storage</reimplementedby>
+        <reimplementedby refid="structat_1_1_sparse_tensor_impl_1a91d28ff7df5207ca91eba20068c9a086">storage</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1ad8ebe995f5da28a936e40308236168e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::TensorImpl::numel</definition>
+        <argsstring>()</argsstring>
+        <name>numel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a379baab1e38a419b82d4c249a3727358" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::TensorImpl::isScalar</definition>
+        <argsstring>() const</argsstring>
+        <name>isScalar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a719b64429ad7eb2e25e9778009c4d57e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+        <definition>TensorImpl* at::TensorImpl::maybeScalar</definition>
+        <argsstring>(bool condition_when_scalar)</argsstring>
+        <name>maybeScalar</name>
+        <param>
+          <type>bool</type>
+          <declname>condition_when_scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="59" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1af1819788d9b4e48026345b84e1f13a48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::TensorImpl::setScalar</definition>
+        <argsstring>(bool s)</argsstring>
+        <name>setScalar</name>
+        <param>
+          <type>bool</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a198097090a2f335edfb4f51e05087630" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>AT_API void</type>
+        <definition>virtual AT_API void at::TensorImpl::set_requires_grad</definition>
+        <argsstring>(bool requires_grad)</argsstring>
+        <name>set_requires_grad</name>
+        <param>
+          <type>bool</type>
+          <declname>requires_grad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="72" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a10b18c7d9b42b0128f611dd033eac14d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>AT_API bool</type>
+        <definition>virtual AT_API bool at::TensorImpl::requires_grad</definition>
+        <argsstring>() const</argsstring>
+        <name>requires_grad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="75" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1aa12a99c2ae0b6fa7437b050dfcfa7295" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AT_API <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>Tensor &amp; at::TensorImpl::grad</definition>
+        <argsstring>()</argsstring>
+        <name>grad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="79" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.cpp" bodystart="7" bodyend="9"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a159f6d26b8be357bf720fbc30d3f7056" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>AT_API const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>const Tensor &amp; at::TensorImpl::grad</definition>
+        <argsstring>() const</argsstring>
+        <name>grad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.cpp" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1afbf95f6ffab5d40091d4da4ac891507b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>AT_API <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::TensorImpl::detach</definition>
+        <argsstring>() const</argsstring>
+        <name>detach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="82" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1a580c9d43719e20aa02e6bf7edd673d9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>AT_API void</type>
+        <definition>virtual AT_API void at::TensorImpl::detach_</definition>
+        <argsstring>()</argsstring>
+        <name>detach_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="83" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1afc73d2d410d70d65841cdc0f15ab0724" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AT_API void</type>
+        <definition>void at::TensorImpl::backward</definition>
+        <argsstring>(at::optional&lt; Tensor &gt; gradient, bool keep_graph, bool create_graph)</argsstring>
+        <name>backward</name>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+          <declname>gradient</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>keep_graph</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>create_graph</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="87" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.cpp" bodystart="19" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_tensor_impl_1aa5701846e853185fd80db9e1ae93dca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>AT_API void</type>
+        <definition>void at::TensorImpl::set_data</definition>
+        <argsstring>(Tensor new_data)</argsstring>
+        <name>set_data</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>new_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="92" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="717">
+        <label>at::UndefinedTensor</label>
+        <link refid="structat_1_1_undefined_tensor"/>
+        <childnode refid="714" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="714">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="715" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="715">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+      <node id="716">
+        <label>at::SparseTensorImpl</label>
+        <link refid="structat_1_1_sparse_tensor_impl"/>
+        <childnode refid="714" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="720">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="718">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="719" relation="public-inheritance">
+        </childnode>
+        <childnode refid="720" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="719">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h" bodystart="18" bodyend="97"/>
+    <listofallmembers>
+      <member refid="structat_1_1_tensor_impl_1afc73d2d410d70d65841cdc0f15ab0724" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>backward</name></member>
+      <member refid="structat_1_1_tensor_impl_1afbf95f6ffab5d40091d4da4ac891507b" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>detach</name></member>
+      <member refid="structat_1_1_tensor_impl_1a580c9d43719e20aa02e6bf7edd673d9d" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>detach_</name></member>
+      <member refid="structat_1_1_tensor_impl_1ab8edca66e99efe77ae1f2e98f754e2c6" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>dim</name></member>
+      <member refid="structat_1_1_tensor_impl_1aa12a99c2ae0b6fa7437b050dfcfa7295" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>grad</name></member>
+      <member refid="structat_1_1_tensor_impl_1a159f6d26b8be357bf720fbc30d3f7056" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>grad</name></member>
+      <member refid="structat_1_1_tensor_impl_1abdc2a7d0ff266591cb7d4ddad5d8a90e" prot="protected" virt="non-virtual"><scope>at::TensorImpl</scope><name>is_scalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1a379baab1e38a419b82d4c249a3727358" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>isScalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1ae805a79db6203eb5bb9cacd4a41df2b1" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>localScalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1a719b64429ad7eb2e25e9778009c4d57e" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>maybeScalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1ad8ebe995f5da28a936e40308236168e3" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>numel</name></member>
+      <member refid="structat_1_1_retainable_1a8a4537081eb26a211e307035c82143f7" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>release</name></member>
+      <member refid="structat_1_1_retainable_1aad2a8607f7e3d3bb2a98935469e185e6" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>release_resources</name></member>
+      <member refid="structat_1_1_tensor_impl_1a10b18c7d9b42b0128f611dd033eac14d" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>requires_grad</name></member>
+      <member refid="structat_1_1_retainable_1a4aa214543027000b07c494d58b38ae07" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>retain</name></member>
+      <member refid="structat_1_1_retainable_1a06038e08629048348dfc5ba761947c1d" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>Retainable</name></member>
+      <member refid="structat_1_1_tensor_impl_1aa5701846e853185fd80db9e1ae93dca2" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>set_data</name></member>
+      <member refid="structat_1_1_tensor_impl_1a198097090a2f335edfb4f51e05087630" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>set_requires_grad</name></member>
+      <member refid="structat_1_1_tensor_impl_1af1819788d9b4e48026345b84e1f13a48" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>setScalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1a65e5eeafc1f29060c0ee2f1761077d3d" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>sizes</name></member>
+      <member refid="structat_1_1_tensor_impl_1a8c5cd89bfb316fcfc69e45a2f0b65cba" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>storage</name></member>
+      <member refid="structat_1_1_tensor_impl_1a3ac77d597015cecc2ad035d7c2411987" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>strides</name></member>
+      <member refid="structat_1_1_tensor_impl_1a7469ca6b329494f9de1c8ae559e2ee54" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>TensorImpl</name></member>
+      <member refid="structat_1_1_tensor_impl_1a613a3398805a6a138762cee20fabb4e2" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>toString</name></member>
+      <member refid="structat_1_1_tensor_impl_1a9d088de66de35d450a56e236fbaab94d" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>Type</name></member>
+      <member refid="structat_1_1_tensor_impl_1aab13757c47cccf942862857e8b46188b" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>type</name></member>
+      <member refid="structat_1_1_tensor_impl_1a281bbf952fcab35ec74b57a0beb078ac" prot="protected" virt="non-virtual"><scope>at::TensorImpl</scope><name>type_</name></member>
+      <member refid="structat_1_1_tensor_impl_1a44491c0216b7f25a4a122f36826ba56e" prot="public" virt="pure-virtual"><scope>at::TensorImpl</scope><name>unsafeGetTH</name></member>
+      <member refid="structat_1_1_retainable_1a15ff448065b4844c62baa15e34d37bda" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>use_count</name></member>
+      <member refid="structat_1_1_retainable_1adaec38a4c9ba4ce8f3c64e1b0da13cb1" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>weak_lock</name></member>
+      <member refid="structat_1_1_retainable_1a613e2a11ec7a123db1fb9d81440442fb" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>weak_release</name></member>
+      <member refid="structat_1_1_retainable_1a933d38384c98ed5b87bd032fef80a259" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>weak_retain</name></member>
+      <member refid="structat_1_1_retainable_1aa1b78b534baa70cb5bc8c824a4946d7a" prot="public" virt="non-virtual"><scope>at::TensorImpl</scope><name>weak_use_count</name></member>
+      <member refid="structat_1_1_retainable_1af8f593744812835454b30cb364537768" prot="public" virt="virtual"><scope>at::TensorImpl</scope><name>~Retainable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

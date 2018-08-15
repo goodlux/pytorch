@@ -1,0 +1,523 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_dim_vector_8h" kind="file" language="C++">
+    <compoundname>DimVector.h</compoundname>
+    <includes refid="_small_vector_8h" local="yes">SmallVector.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="_a_ten_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</includedby>
+    <incdepgraph>
+      <node id="3257">
+        <label>iterator</label>
+      </node>
+      <node id="3263">
+        <label>stdint.h</label>
+      </node>
+      <node id="3253">
+        <label>cassert</label>
+      </node>
+      <node id="3248">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h"/>
+        <childnode refid="3249" relation="include">
+        </childnode>
+        <childnode refid="3263" relation="include">
+        </childnode>
+      </node>
+      <node id="3250">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="3251" relation="include">
+        </childnode>
+      </node>
+      <node id="3262">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="3259">
+        <label>new</label>
+      </node>
+      <node id="3261">
+        <label>utility</label>
+      </node>
+      <node id="3254">
+        <label>cstdlib</label>
+      </node>
+      <node id="3251">
+        <label>cstddef</label>
+      </node>
+      <node id="3260">
+        <label>type_traits</label>
+      </node>
+      <node id="3249">
+        <label>SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="3250" relation="include">
+        </childnode>
+        <childnode refid="3252" relation="include">
+        </childnode>
+        <childnode refid="3253" relation="include">
+        </childnode>
+        <childnode refid="3251" relation="include">
+        </childnode>
+        <childnode refid="3254" relation="include">
+        </childnode>
+        <childnode refid="3255" relation="include">
+        </childnode>
+        <childnode refid="3256" relation="include">
+        </childnode>
+        <childnode refid="3257" relation="include">
+        </childnode>
+        <childnode refid="3258" relation="include">
+        </childnode>
+        <childnode refid="3259" relation="include">
+        </childnode>
+        <childnode refid="3260" relation="include">
+        </childnode>
+        <childnode refid="3261" relation="include">
+        </childnode>
+        <childnode refid="3262" relation="include">
+        </childnode>
+      </node>
+      <node id="3252">
+        <label>algorithm</label>
+      </node>
+      <node id="3255">
+        <label>cstring</label>
+      </node>
+      <node id="3258">
+        <label>memory</label>
+      </node>
+      <node id="3256">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3274">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h</label>
+        <link refid="rnn_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3299">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h_source"/>
+      </node>
+      <node id="3271">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="3288">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3289" relation="include">
+        </childnode>
+        <childnode refid="3291" relation="include">
+        </childnode>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+        <childnode refid="3292" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+        <childnode refid="3283" relation="include">
+        </childnode>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3268">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/batchnorm.h</label>
+        <link refid="batchnorm_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3301">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="3300" relation="include">
+        </childnode>
+      </node>
+      <node id="3287">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h</label>
+        <link refid="sgd_8h_source"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3290">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h</label>
+        <link refid="optimizer_8h_source"/>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3307">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="3279">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h</label>
+        <link refid="sequential_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3264">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h"/>
+        <childnode refid="3265" relation="include">
+        </childnode>
+      </node>
+      <node id="3284">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adam.h</label>
+        <link refid="adam_8h_source"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3289">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3291">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/init.h</label>
+        <link refid="init_8h_source"/>
+      </node>
+      <node id="3292">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+      </node>
+      <node id="3293">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h</label>
+        <link refid="tensor__list__view_8h_source"/>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3266">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="3267" relation="include">
+        </childnode>
+        <childnode refid="3278" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3280" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+      </node>
+      <node id="3269">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules.h</label>
+        <link refid="modules_8h_source"/>
+        <childnode refid="3270" relation="include">
+        </childnode>
+      </node>
+      <node id="3275">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/embedding.h</label>
+        <link refid="embedding_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3305">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorTransformations.h</label>
+        <link refid="_tensor_transformations_8h_source"/>
+      </node>
+      <node id="3270">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn.h</label>
+        <link refid="nn_8h_source"/>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3300">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+      <node id="3272">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3286">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/rmsprop.h</label>
+        <link refid="rmsprop_8h_source"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3282">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim.h</label>
+        <link refid="optim_8h_source"/>
+        <childnode refid="3283" relation="include">
+        </childnode>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3309">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+      </node>
+      <node id="3295">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="3278">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h</label>
+        <link refid="any_8h_source"/>
+        <childnode refid="3279" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3294">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="3296">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+      </node>
+      <node id="3304">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+      </node>
+      <node id="3283">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h</label>
+        <link refid="serialization_8h_source"/>
+        <childnode refid="3271" relation="include">
+        </childnode>
+      </node>
+      <node id="3280">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="3308">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+      </node>
+      <node id="3281">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adagrad.h</label>
+        <link refid="adagrad_8h_source"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+      <node id="3273">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3297">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+      </node>
+      <node id="3302">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Gesv.h</label>
+        <link refid="_gesv_8h_source"/>
+      </node>
+      <node id="3267">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="3268" relation="include">
+        </childnode>
+        <childnode refid="3272" relation="include">
+        </childnode>
+        <childnode refid="3273" relation="include">
+        </childnode>
+        <childnode refid="3275" relation="include">
+        </childnode>
+        <childnode refid="3276" relation="include">
+        </childnode>
+        <childnode refid="3277" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3270" relation="include">
+        </childnode>
+      </node>
+      <node id="3265">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="3266" relation="include">
+        </childnode>
+        <childnode refid="3274" relation="include">
+        </childnode>
+        <childnode refid="3281" relation="include">
+        </childnode>
+        <childnode refid="3284" relation="include">
+        </childnode>
+        <childnode refid="3285" relation="include">
+        </childnode>
+        <childnode refid="3286" relation="include">
+        </childnode>
+        <childnode refid="3287" relation="include">
+        </childnode>
+        <childnode refid="3288" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3295" relation="include">
+        </childnode>
+        <childnode refid="3296" relation="include">
+        </childnode>
+        <childnode refid="3297" relation="include">
+        </childnode>
+        <childnode refid="3298" relation="include">
+        </childnode>
+        <childnode refid="3299" relation="include">
+        </childnode>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3301" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3304" relation="include">
+        </childnode>
+        <childnode refid="3305" relation="include">
+        </childnode>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3309" relation="include">
+        </childnode>
+      </node>
+      <node id="3276">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2nn_2modules_2functional_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3303">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LinearAlgebraUtils.h</label>
+        <link refid="_linear_algebra_utils_8h_source"/>
+      </node>
+      <node id="3298">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+      </node>
+      <node id="3277">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/linear.h</label>
+        <link refid="linear_8h_source"/>
+        <childnode refid="3269" relation="include">
+        </childnode>
+      </node>
+      <node id="3306">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="3280" relation="include">
+        </childnode>
+        <childnode refid="3307" relation="include">
+        </childnode>
+        <childnode refid="3308" relation="include">
+        </childnode>
+      </node>
+      <node id="3285">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h</label>
+        <link refid="lbfgs_8h_source"/>
+        <childnode refid="3282" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SmallVector.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespaceat_1a4bfb3054d339964178cc931625e40016" refkind="member"><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classat_1_1_small_vector" kindref="compound">DimVector</ref><sp/>=<sp/><ref refid="classat_1_1_small_vector" kindref="compound">SmallVector&lt;int64_t, 5&gt;</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DimVector.h"/>
+  </compounddef>
+</doxygen>

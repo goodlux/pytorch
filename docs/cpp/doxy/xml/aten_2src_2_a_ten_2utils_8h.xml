@@ -1,0 +1,1119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="aten_2src_2_a_ten_2utils_8h" kind="file" language="C++">
+    <compoundname>Utils.h</compoundname>
+    <includes refid="_a_ten_general_8h" local="yes">ATen/ATenGeneral.h</includes>
+    <includes refid="_array_ref_8h" local="yes">ATen/ArrayRef.h</includes>
+    <includes refid="_error_8h" local="yes">ATen/Error.h</includes>
+    <includes refid="_undefined_tensor_8h" local="yes">ATen/UndefinedTensor.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">typeinfo</includes>
+    <includes local="no">numeric</includes>
+    <includedby refid="build_2aten_2src_2_a_ten_2tensor_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Tensor.h</includedby>
+    <includedby refid="_check_generator_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CheckGenerator.h</includedby>
+    <includedby refid="_context_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h</includedby>
+    <includedby refid="vec256__base_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_base.h</includedby>
+    <includedby refid="_matrix_ref_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h</includedby>
+    <includedby refid="_scalar_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Scalar.h</includedby>
+    <includedby refid="_sparse_type_derived_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/SparseTypeDerived.cpp</includedby>
+    <includedby refid="aten_2src_2_a_ten_2templates_2tensor_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Tensor.h</includedby>
+    <includedby refid="_type_derived_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TypeDerived.cpp</includedby>
+    <includedby refid="_tensor_utils_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorUtils.h</includedby>
+    <includedby refid="aten_2src_2_a_ten_2utils_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.cpp</includedby>
+    <incdepgraph>
+      <node id="17452">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="17453" relation="include">
+        </childnode>
+        <childnode refid="17454" relation="include">
+        </childnode>
+        <childnode refid="17455" relation="include">
+        </childnode>
+        <childnode refid="17456" relation="include">
+        </childnode>
+        <childnode refid="17457" relation="include">
+        </childnode>
+        <childnode refid="17458" relation="include">
+        </childnode>
+        <childnode refid="17459" relation="include">
+        </childnode>
+      </node>
+      <node id="17476">
+        <label>atomic</label>
+      </node>
+      <node id="17457">
+        <label>functional</label>
+      </node>
+      <node id="17478">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="17450" relation="include">
+        </childnode>
+        <childnode refid="17449" relation="include">
+        </childnode>
+        <childnode refid="17479" relation="include">
+        </childnode>
+        <childnode refid="17481" relation="include">
+        </childnode>
+        <childnode refid="17485" relation="include">
+        </childnode>
+      </node>
+      <node id="17480">
+        <label>limits</label>
+      </node>
+      <node id="17469">
+        <label>iterator</label>
+      </node>
+      <node id="17448">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h"/>
+        <childnode refid="17449" relation="include">
+        </childnode>
+        <childnode refid="17450" relation="include">
+        </childnode>
+        <childnode refid="17451" relation="include">
+        </childnode>
+        <childnode refid="17474" relation="include">
+        </childnode>
+        <childnode refid="17466" relation="include">
+        </childnode>
+        <childnode refid="17463" relation="include">
+        </childnode>
+        <childnode refid="17486" relation="include">
+        </childnode>
+        <childnode refid="17487" relation="include">
+        </childnode>
+      </node>
+      <node id="17481">
+        <label>cstdint</label>
+      </node>
+      <node id="17482">
+        <label>cmath</label>
+      </node>
+      <node id="17456">
+        <label>cassert</label>
+      </node>
+      <node id="17484">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="17449" relation="include">
+        </childnode>
+        <childnode refid="17468" relation="include">
+        </childnode>
+        <childnode refid="17480" relation="include">
+        </childnode>
+      </node>
+      <node id="17459">
+        <label>stdexcept</label>
+      </node>
+      <node id="17487">
+        <label>numeric</label>
+      </node>
+      <node id="17475">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="17476" relation="include">
+        </childnode>
+        <childnode refid="17470" relation="include">
+        </childnode>
+        <childnode refid="17477" relation="include">
+        </childnode>
+        <childnode refid="17478" relation="include">
+        </childnode>
+        <childnode refid="17452" relation="include">
+        </childnode>
+      </node>
+      <node id="17479">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="17449" relation="include">
+        </childnode>
+        <childnode refid="17480" relation="include">
+        </childnode>
+        <childnode refid="17458" relation="include">
+        </childnode>
+        <childnode refid="17481" relation="include">
+        </childnode>
+        <childnode refid="17459" relation="include">
+        </childnode>
+        <childnode refid="17453" relation="include">
+        </childnode>
+        <childnode refid="17482" relation="include">
+        </childnode>
+        <childnode refid="17483" relation="include">
+        </childnode>
+        <childnode refid="17484" relation="include">
+        </childnode>
+      </node>
+      <node id="17477">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="17476" relation="include">
+        </childnode>
+      </node>
+      <node id="17458">
+        <label>string</label>
+      </node>
+      <node id="17461">
+        <label>exception</label>
+      </node>
+      <node id="17474">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="17475" relation="include">
+        </childnode>
+      </node>
+      <node id="17465">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="17460" relation="include">
+        </childnode>
+      </node>
+      <node id="17462">
+        <label>ostream</label>
+      </node>
+      <node id="17450">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="17451" relation="include">
+        </childnode>
+        <childnode refid="17464" relation="include">
+        </childnode>
+        <childnode refid="17472" relation="include">
+        </childnode>
+        <childnode refid="17469" relation="include">
+        </childnode>
+        <childnode refid="17473" relation="include">
+        </childnode>
+      </node>
+      <node id="17449">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="17486">
+        <label>typeinfo</label>
+      </node>
+      <node id="17473">
+        <label>vector</label>
+      </node>
+      <node id="17471">
+        <label>new</label>
+      </node>
+      <node id="17453">
+        <label>utility</label>
+      </node>
+      <node id="17472">
+        <label>array</label>
+      </node>
+      <node id="17463">
+        <label>sstream</label>
+      </node>
+      <node id="17483">
+        <label>iosfwd</label>
+      </node>
+      <node id="17467">
+        <label>cstdlib</label>
+      </node>
+      <node id="17485">
+        <label>iostream</label>
+      </node>
+      <node id="17460">
+        <label>cstddef</label>
+      </node>
+      <node id="17451">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="17449" relation="include">
+        </childnode>
+        <childnode refid="17452" relation="include">
+        </childnode>
+        <childnode refid="17460" relation="include">
+        </childnode>
+        <childnode refid="17461" relation="include">
+        </childnode>
+        <childnode refid="17462" relation="include">
+        </childnode>
+        <childnode refid="17463" relation="include">
+        </childnode>
+        <childnode refid="17458" relation="include">
+        </childnode>
+      </node>
+      <node id="17454">
+        <label>type_traits</label>
+      </node>
+      <node id="17464">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="17465" relation="include">
+        </childnode>
+        <childnode refid="17466" relation="include">
+        </childnode>
+        <childnode refid="17456" relation="include">
+        </childnode>
+        <childnode refid="17460" relation="include">
+        </childnode>
+        <childnode refid="17467" relation="include">
+        </childnode>
+        <childnode refid="17468" relation="include">
+        </childnode>
+        <childnode refid="17455" relation="include">
+        </childnode>
+        <childnode refid="17469" relation="include">
+        </childnode>
+        <childnode refid="17470" relation="include">
+        </childnode>
+        <childnode refid="17471" relation="include">
+        </childnode>
+        <childnode refid="17454" relation="include">
+        </childnode>
+        <childnode refid="17453" relation="include">
+        </childnode>
+        <childnode refid="17449" relation="include">
+        </childnode>
+      </node>
+      <node id="17466">
+        <label>algorithm</label>
+      </node>
+      <node id="17468">
+        <label>cstring</label>
+      </node>
+      <node id="17470">
+        <label>memory</label>
+      </node>
+      <node id="17455">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="17501">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h</label>
+        <link refid="rnn_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17525">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h_source"/>
+      </node>
+      <node id="17567">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Tensor.h</label>
+        <link refid="aten_2src_2_a_ten_2templates_2tensor_8h_source"/>
+      </node>
+      <node id="17491">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="17545">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h</label>
+        <link refid="_sparse_tensor_impl_8h_source"/>
+        <childnode refid="17530" relation="include">
+        </childnode>
+      </node>
+      <node id="17515">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="17495" relation="include">
+        </childnode>
+        <childnode refid="17516" relation="include">
+        </childnode>
+        <childnode refid="17518" relation="include">
+        </childnode>
+        <childnode refid="17494" relation="include">
+        </childnode>
+        <childnode refid="17505" relation="include">
+        </childnode>
+        <childnode refid="17496" relation="include">
+        </childnode>
+        <childnode refid="17499" relation="include">
+        </childnode>
+        <childnode refid="17500" relation="include">
+        </childnode>
+        <childnode refid="17502" relation="include">
+        </childnode>
+        <childnode refid="17503" relation="include">
+        </childnode>
+        <childnode refid="17504" relation="include">
+        </childnode>
+        <childnode refid="17501" relation="include">
+        </childnode>
+        <childnode refid="17506" relation="include">
+        </childnode>
+        <childnode refid="17507" relation="include">
+        </childnode>
+        <childnode refid="17519" relation="include">
+        </childnode>
+        <childnode refid="17508" relation="include">
+        </childnode>
+        <childnode refid="17517" relation="include">
+        </childnode>
+        <childnode refid="17514" relation="include">
+        </childnode>
+        <childnode refid="17510" relation="include">
+        </childnode>
+        <childnode refid="17490" relation="include">
+        </childnode>
+        <childnode refid="17491" relation="include">
+        </childnode>
+      </node>
+      <node id="17496">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/batchnorm.h</label>
+        <link refid="batchnorm_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17488">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h"/>
+        <childnode refid="17489" relation="include">
+        </childnode>
+        <childnode refid="17551" relation="include">
+        </childnode>
+        <childnode refid="17554" relation="include">
+        </childnode>
+        <childnode refid="17557" relation="include">
+        </childnode>
+        <childnode refid="17563" relation="include">
+        </childnode>
+        <childnode refid="17564" relation="include">
+        </childnode>
+        <childnode refid="17567" relation="include">
+        </childnode>
+        <childnode refid="17550" relation="include">
+        </childnode>
+      </node>
+      <node id="17564">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="17489" relation="include">
+        </childnode>
+        <childnode refid="17492" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17565" relation="include">
+        </childnode>
+        <childnode refid="17566" relation="include">
+        </childnode>
+        <childnode refid="17539" relation="include">
+        </childnode>
+        <childnode refid="17567" relation="include">
+        </childnode>
+        <childnode refid="17547" relation="include">
+        </childnode>
+        <childnode refid="17548" relation="include">
+        </childnode>
+        <childnode refid="17549" relation="include">
+        </childnode>
+      </node>
+      <node id="17557">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_base.h</label>
+        <link refid="vec256__base_8h_source"/>
+        <childnode refid="17558" relation="include">
+        </childnode>
+        <childnode refid="17560" relation="include">
+        </childnode>
+        <childnode refid="17561" relation="include">
+        </childnode>
+        <childnode refid="17562" relation="include">
+        </childnode>
+      </node>
+      <node id="17527">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="17526" relation="include">
+        </childnode>
+      </node>
+      <node id="17514">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h</label>
+        <link refid="sgd_8h_source"/>
+        <childnode refid="17509" relation="include">
+        </childnode>
+      </node>
+      <node id="17517">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h</label>
+        <link refid="optimizer_8h_source"/>
+        <childnode refid="17508" relation="include">
+        </childnode>
+        <childnode refid="17511" relation="include">
+        </childnode>
+        <childnode refid="17512" relation="include">
+        </childnode>
+        <childnode refid="17513" relation="include">
+        </childnode>
+        <childnode refid="17514" relation="include">
+        </childnode>
+        <childnode refid="17509" relation="include">
+        </childnode>
+      </node>
+      <node id="17533">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="17546">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.h</label>
+        <link refid="_tensor_derived_8h_source"/>
+      </node>
+      <node id="17554">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17555" relation="include">
+        </childnode>
+        <childnode refid="17556" relation="include">
+        </childnode>
+        <childnode refid="17546" relation="include">
+        </childnode>
+        <childnode refid="17552" relation="include">
+        </childnode>
+        <childnode refid="17540" relation="include">
+        </childnode>
+        <childnode refid="17553" relation="include">
+        </childnode>
+      </node>
+      <node id="17549">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17542" relation="include">
+        </childnode>
+      </node>
+      <node id="17506">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h</label>
+        <link refid="sequential_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17555">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.h</label>
+        <link refid="_c_u_d_a_context_8h_source"/>
+        <childnode refid="17538" relation="include">
+        </childnode>
+        <childnode refid="17520" relation="include">
+        </childnode>
+        <childnode refid="17526" relation="include">
+        </childnode>
+      </node>
+      <node id="17558">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256.h</label>
+        <link refid="vec256_8h_source"/>
+        <childnode refid="17559" relation="include">
+        </childnode>
+        <childnode refid="17533" relation="include">
+        </childnode>
+      </node>
+      <node id="17559">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h</label>
+        <link refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_source"/>
+        <childnode refid="17533" relation="include">
+        </childnode>
+      </node>
+      <node id="17561">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_double.h</label>
+        <link refid="vec256__double_8h_source"/>
+        <childnode refid="17558" relation="include">
+        </childnode>
+      </node>
+      <node id="17541">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="17495" relation="include">
+        </childnode>
+        <childnode refid="17507" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
+      </node>
+      <node id="17543">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ExpandUtils.h</label>
+        <link refid="_expand_utils_8h_source"/>
+      </node>
+      <node id="17511">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adam.h</label>
+        <link refid="adam_8h_source"/>
+        <childnode refid="17509" relation="include">
+        </childnode>
+      </node>
+      <node id="17516">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="17494" relation="include">
+        </childnode>
+        <childnode refid="17498" relation="include">
+        </childnode>
+        <childnode refid="17517" relation="include">
+        </childnode>
+      </node>
+      <node id="17537">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="17492" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17538" relation="include">
+        </childnode>
+        <childnode refid="17539" relation="include">
+        </childnode>
+        <childnode refid="17540" relation="include">
+        </childnode>
+      </node>
+      <node id="17566">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="17489" relation="include">
+        </childnode>
+        <childnode refid="17492" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17539" relation="include">
+        </childnode>
+        <childnode refid="17556" relation="include">
+        </childnode>
+        <childnode refid="17567" relation="include">
+        </childnode>
+      </node>
+      <node id="17518">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/init.h</label>
+        <link refid="init_8h_source"/>
+      </node>
+      <node id="17519">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="17494" relation="include">
+        </childnode>
+        <childnode refid="17505" relation="include">
+        </childnode>
+        <childnode refid="17496" relation="include">
+        </childnode>
+        <childnode refid="17499" relation="include">
+        </childnode>
+        <childnode refid="17500" relation="include">
+        </childnode>
+        <childnode refid="17502" relation="include">
+        </childnode>
+        <childnode refid="17503" relation="include">
+        </childnode>
+        <childnode refid="17504" relation="include">
+        </childnode>
+        <childnode refid="17501" relation="include">
+        </childnode>
+        <childnode refid="17506" relation="include">
+        </childnode>
+        <childnode refid="17507" relation="include">
+        </childnode>
+        <childnode refid="17498" relation="include">
+        </childnode>
+        <childnode refid="17511" relation="include">
+        </childnode>
+        <childnode refid="17514" relation="include">
+        </childnode>
+      </node>
+      <node id="17550">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="17534" relation="include">
+        </childnode>
+        <childnode refid="17520" relation="include">
+        </childnode>
+      </node>
+      <node id="17563">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h</label>
+        <link refid="_matrix_ref_8h_source"/>
+      </node>
+      <node id="17490">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h</label>
+        <link refid="tensor__list__view_8h_source"/>
+        <childnode refid="17491" relation="include">
+        </childnode>
+      </node>
+      <node id="17551">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CheckGenerator.h</label>
+        <link refid="_check_generator_8h_source"/>
+        <childnode refid="17552" relation="include">
+        </childnode>
+        <childnode refid="17553" relation="include">
+        </childnode>
+      </node>
+      <node id="17494">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="17495" relation="include">
+        </childnode>
+        <childnode refid="17505" relation="include">
+        </childnode>
+        <childnode refid="17504" relation="include">
+        </childnode>
+        <childnode refid="17506" relation="include">
+        </childnode>
+        <childnode refid="17507" relation="include">
+        </childnode>
+        <childnode refid="17498" relation="include">
+        </childnode>
+        <childnode refid="17508" relation="include">
+        </childnode>
+        <childnode refid="17511" relation="include">
+        </childnode>
+        <childnode refid="17512" relation="include">
+        </childnode>
+        <childnode refid="17513" relation="include">
+        </childnode>
+        <childnode refid="17514" relation="include">
+        </childnode>
+      </node>
+      <node id="17536">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Types.h</label>
+        <link refid="_types_8h_source"/>
+      </node>
+      <node id="17497">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules.h</label>
+        <link refid="modules_8h_source"/>
+        <childnode refid="17498" relation="include">
+        </childnode>
+      </node>
+      <node id="17502">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/embedding.h</label>
+        <link refid="embedding_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17538">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAGuard.h</label>
+        <link refid="cuda_2_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="17556">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/StorageDerived.h</label>
+        <link refid="_storage_derived_8h_source"/>
+      </node>
+      <node id="17531">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorTransformations.h</label>
+        <link refid="_tensor_transformations_8h_source"/>
+      </node>
+      <node id="17498">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn.h</label>
+        <link refid="nn_8h_source"/>
+        <childnode refid="17491" relation="include">
+        </childnode>
+      </node>
+      <node id="17526">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+      <node id="17499">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17513">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/rmsprop.h</label>
+        <link refid="rmsprop_8h_source"/>
+        <childnode refid="17509" relation="include">
+        </childnode>
+      </node>
+      <node id="17539">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Functions.h</label>
+        <link refid="aten_2src_2_a_ten_2templates_2_functions_8h_source"/>
+      </node>
+      <node id="17509">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim.h</label>
+        <link refid="optim_8h_source"/>
+        <childnode refid="17510" relation="include">
+        </childnode>
+        <childnode refid="17491" relation="include">
+        </childnode>
+      </node>
+      <node id="17552">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TypeDerived.h</label>
+        <link refid="_type_derived_8h_source"/>
+      </node>
+      <node id="17535">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+      </node>
+      <node id="17521">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="17505">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h</label>
+        <link refid="any_8h_source"/>
+        <childnode refid="17506" relation="include">
+        </childnode>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17520">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="17522">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+      </node>
+      <node id="17530">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+      </node>
+      <node id="17492">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="17493" relation="include">
+        </childnode>
+      </node>
+      <node id="17560">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_float.h</label>
+        <link refid="vec256__float_8h_source"/>
+        <childnode refid="17558" relation="include">
+        </childnode>
+      </node>
+      <node id="17510">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h</label>
+        <link refid="serialization_8h_source"/>
+        <childnode refid="17491" relation="include">
+        </childnode>
+      </node>
+      <node id="17562">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_int.h</label>
+        <link refid="vec256__int_8h_source"/>
+        <childnode refid="17558" relation="include">
+        </childnode>
+      </node>
+      <node id="17507">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="17534">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+      </node>
+      <node id="17508">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adagrad.h</label>
+        <link refid="adagrad_8h_source"/>
+        <childnode refid="17509" relation="include">
+        </childnode>
+      </node>
+      <node id="17500">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="17501" relation="include">
+        </childnode>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17523">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+      </node>
+      <node id="17548">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h</label>
+        <link refid="_type_8h_source"/>
+      </node>
+      <node id="17528">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Gesv.h</label>
+        <link refid="_gesv_8h_source"/>
+      </node>
+      <node id="17495">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="17496" relation="include">
+        </childnode>
+        <childnode refid="17499" relation="include">
+        </childnode>
+        <childnode refid="17500" relation="include">
+        </childnode>
+        <childnode refid="17502" relation="include">
+        </childnode>
+        <childnode refid="17503" relation="include">
+        </childnode>
+        <childnode refid="17504" relation="include">
+        </childnode>
+        <childnode refid="17501" relation="include">
+        </childnode>
+        <childnode refid="17498" relation="include">
+        </childnode>
+      </node>
+      <node id="17542">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/NativeFunctions.h</label>
+        <link refid="_native_functions_8h_source"/>
+      </node>
+      <node id="17493">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="17494" relation="include">
+        </childnode>
+        <childnode refid="17501" relation="include">
+        </childnode>
+        <childnode refid="17508" relation="include">
+        </childnode>
+        <childnode refid="17511" relation="include">
+        </childnode>
+        <childnode refid="17512" relation="include">
+        </childnode>
+        <childnode refid="17513" relation="include">
+        </childnode>
+        <childnode refid="17514" relation="include">
+        </childnode>
+        <childnode refid="17515" relation="include">
+        </childnode>
+        <childnode refid="17520" relation="include">
+        </childnode>
+        <childnode refid="17521" relation="include">
+        </childnode>
+        <childnode refid="17522" relation="include">
+        </childnode>
+        <childnode refid="17523" relation="include">
+        </childnode>
+        <childnode refid="17524" relation="include">
+        </childnode>
+        <childnode refid="17525" relation="include">
+        </childnode>
+        <childnode refid="17526" relation="include">
+        </childnode>
+        <childnode refid="17527" relation="include">
+        </childnode>
+        <childnode refid="17528" relation="include">
+        </childnode>
+        <childnode refid="17529" relation="include">
+        </childnode>
+        <childnode refid="17530" relation="include">
+        </childnode>
+        <childnode refid="17531" relation="include">
+        </childnode>
+        <childnode refid="17532" relation="include">
+        </childnode>
+        <childnode refid="17535" relation="include">
+        </childnode>
+      </node>
+      <node id="17544">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/mkl/Descriptors.h</label>
+        <link refid="mkl_2_descriptors_8h_source"/>
+      </node>
+      <node id="17503">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2nn_2modules_2functional_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17540">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="17495" relation="include">
+        </childnode>
+        <childnode refid="17507" relation="include">
+        </childnode>
+        <childnode refid="17492" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17541" relation="include">
+        </childnode>
+        <childnode refid="17539" relation="include">
+        </childnode>
+        <childnode refid="17542" relation="include">
+        </childnode>
+      </node>
+      <node id="17529">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LinearAlgebraUtils.h</label>
+        <link refid="_linear_algebra_utils_8h_source"/>
+      </node>
+      <node id="17489">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="17490" relation="include">
+        </childnode>
+        <childnode refid="17492" relation="include">
+        </childnode>
+        <childnode refid="17493" relation="include">
+        </childnode>
+        <childnode refid="17536" relation="include">
+        </childnode>
+        <childnode refid="17537" relation="include">
+        </childnode>
+        <childnode refid="17522" relation="include">
+        </childnode>
+        <childnode refid="17543" relation="include">
+        </childnode>
+        <childnode refid="17544" relation="include">
+        </childnode>
+        <childnode refid="17545" relation="include">
+        </childnode>
+        <childnode refid="17539" relation="include">
+        </childnode>
+        <childnode refid="17546" relation="include">
+        </childnode>
+        <childnode refid="17547" relation="include">
+        </childnode>
+        <childnode refid="17548" relation="include">
+        </childnode>
+        <childnode refid="17549" relation="include">
+        </childnode>
+        <childnode refid="17540" relation="include">
+        </childnode>
+        <childnode refid="17550" relation="include">
+        </childnode>
+      </node>
+      <node id="17553">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/UndefinedType.h</label>
+        <link refid="_undefined_type_8h_source"/>
+      </node>
+      <node id="17547">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorMethods.h</label>
+        <link refid="_tensor_methods_8h_source"/>
+      </node>
+      <node id="17524">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+      </node>
+      <node id="17504">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/linear.h</label>
+        <link refid="linear_8h_source"/>
+        <childnode refid="17497" relation="include">
+        </childnode>
+      </node>
+      <node id="17532">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="17507" relation="include">
+        </childnode>
+        <childnode refid="17533" relation="include">
+        </childnode>
+        <childnode refid="17534" relation="include">
+        </childnode>
+      </node>
+      <node id="17565">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="17493" relation="include">
+        </childnode>
+      </node>
+      <node id="17512">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h</label>
+        <link refid="lbfgs_8h_source"/>
+        <childnode refid="17509" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="aten_2src_2_a_ten_2utils_8h_1a3663ecaea9e41c9ba4a28d5ca8728f9f" prot="public" static="no">
+        <name>__ubsan_ignore_float_divide_by_zero__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h" line="17" column="10" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="aten_2src_2_a_ten_2utils_8h_1ada65446dbaa120d972359a591c55c6a0" prot="public" static="no">
+        <name>__ubsan_ignore_vptr__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h" line="18" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATenGeneral.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ArrayRef.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/UndefinedTensor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;typeinfo&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ubsan_ignore_float_divide_by_zero__<sp/>__attribute__((no_sanitize(&quot;float-divide-by-zero&quot;)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ubsan_ignore_vptr__<sp/>__attribute__((no_sanitize(&quot;vptr&quot;)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ubsan_ignore_float_divide_by_zero__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__ubsan_ignore_vptr__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">AT_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_crash_if_asan(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Base&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T*<sp/>checked_cast_storage(Base*<sp/>expr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(*expr)<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(T))</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ERROR(</highlight><highlight class="stringliteral">&quot;Expected<sp/>object<sp/>of<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>T::typeString(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>found<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>expr-&gt;type().toString(),</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>argument<sp/>#&quot;</highlight><highlight class="normal">,<sp/>pos,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(expr);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Base&gt;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>T*<sp/>checked_cast_tensor(Base*<sp/>expr,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>allowNull)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(allowNull<sp/>&amp;&amp;<sp/>expr<sp/>==<sp/>UndefinedTensor::singleton())<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(*expr)<sp/>!=<sp/></highlight><highlight class="keyword">typeid</highlight><highlight class="normal">(T))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ERROR(</highlight><highlight class="stringliteral">&quot;Expected<sp/>object<sp/>of<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>T::typeString(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>found<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>expr-&gt;type().toString(),</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>argument<sp/>#&quot;</highlight><highlight class="normal">,<sp/>pos,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">T*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(expr);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Converts<sp/>a<sp/>TensorList<sp/>(i.e.<sp/>ArrayRef&lt;Tensor&gt;<sp/>to<sp/>the<sp/>underlying<sp/>TH*<sp/>Tensor<sp/>Pointer)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TBase,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>TH&gt;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::vector&lt;TH*&gt;<sp/>tensor_list_checked_cast(ArrayRef&lt;TBase&gt;<sp/>tensors,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>std::vector&lt;TH*&gt;<sp/>casted(tensors.size());</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>tensors.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*expr<sp/>=<sp/>tensors[i].pImpl;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">T*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(expr);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(result)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>casted[i]<sp/>=<sp/>result-&gt;tensor;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_ERROR(</highlight><highlight class="stringliteral">&quot;Expected<sp/>a<sp/>Tensor<sp/>of<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>T::typeString(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>but<sp/>found<sp/>a<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>expr-&gt;type().toString(),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>sequence<sp/>element<sp/>&quot;</highlight><highlight class="normal">,<sp/>i,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>in<sp/>sequence<sp/>argument<sp/>at<sp/>position<sp/>#&quot;</highlight><highlight class="normal">,<sp/>pos,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>casted;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>N&gt;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">std::array&lt;int64_t,<sp/>N&gt;<sp/>check_intlist(ArrayRef&lt;int64_t&gt;<sp/>list,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos,<sp/>ArrayRef&lt;int64_t&gt;<sp/>def={})<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list.empty())<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>list<sp/>=<sp/>def;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>std::array&lt;int64_t,<sp/>N&gt;();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list.size()<sp/>==<sp/>1<sp/>&amp;&amp;<sp/>N<sp/>&gt;<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>res.fill(list[0]);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(list.size()<sp/>!=<sp/>N)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ERROR(</highlight><highlight class="stringliteral">&quot;Expected<sp/>a<sp/>list<sp/>of<sp/>&quot;</highlight><highlight class="normal">,<sp/>N,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>ints<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>list.size(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>argument<sp/>#&quot;</highlight><highlight class="normal">,<sp/>pos,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&apos;&quot;</highlight><highlight class="normal">,<sp/>name,<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>std::copy_n(list.begin(),<sp/>N,<sp/>res.begin());</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>res;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>sum_intlist(ArrayRef&lt;int64_t&gt;<sp/>list)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::accumulate(list.begin(),<sp/>list.end(),<sp/>0);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>prod_intlist(ArrayRef&lt;int64_t&gt;<sp/>list)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::accumulate(list.begin(),<sp/>list.end(),<sp/>1,<sp/>std::multiplies&lt;int64_t&gt;());</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h"/>
+  </compounddef>
+</doxygen>

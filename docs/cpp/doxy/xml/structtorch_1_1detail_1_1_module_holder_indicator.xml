@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structtorch_1_1detail_1_1_module_holder_indicator" kind="struct" language="C++" prot="public">
+    <compoundname>torch::detail::ModuleHolderIndicator</compoundname>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_module_holder" prot="private" virt="non-virtual">torch::nn::ModuleHolder&lt; Contained &gt;</derivedcompoundref>
+    <includes refid="pimpl_8h" local="no">pimpl.h</includes>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This class exists only to do SFINAE on abstract types <computeroutput>T</computeroutput> that are really <computeroutput>ModuleHolder&lt;ModuleType&gt;</computeroutput>, because there&apos;s no good way to say that <computeroutput>T</computeroutput> is a <computeroutput>ModuleHolder</computeroutput> over some unknown type <computeroutput>ModuleType</computeroutput>. With this, you can do enable_if_t&lt;is_base_of&lt;ModuleHolderIndicator, T&gt;::value&gt;::type. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="447">
+        <label>torch::detail::ModuleHolderIndicator</label>
+        <link refid="structtorch_1_1detail_1_1_module_holder_indicator"/>
+      </node>
+      <node id="448">
+        <label>torch::nn::ModuleHolder&lt; Contained &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_module_holder"/>
+        <childnode refid="447" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="16" bodyend="16"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

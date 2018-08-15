@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_cloneable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>torch::nn::Cloneable</compoundname>
+    <basecompoundref refid="classtorch_1_1nn_1_1_module" prot="public" virt="non-virtual">torch::nn::Module</basecompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1_conv_impl" prot="public" virt="non-virtual">torch::nn::ConvImpl&lt; D, Derived &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base" prot="public" virt="non-virtual">torch::nn::detail::DropoutImplBase&lt; Derived &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base" prot="public" virt="non-virtual">torch::nn::detail::RNNImplBase&lt; Derived &gt;</derivedcompoundref>
+    <includes refid="cloneable_8h" local="no">cloneable.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Derived</declname>
+        <defname>Derived</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void torch::nn::Cloneable&lt; Derived &gt;::reset</definition>
+        <argsstring>()=0</argsstring>
+        <name>reset</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a45c40c3933826b965441dde01b5d3362">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a45c40c3933826b965441dde01b5d3362">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_linear_impl_1a6702a1d63bed9865d9505fac7cee4e54">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_embedding_impl_1a1b9c00da3fd72a1edc5faf44c5fbb22c">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a45c40c3933826b965441dde01b5d3362">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_batch_norm_impl_1a466e62abc12ac7a055f535a32f8fa86c">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_functional_impl_1a44bb67df4511b59bc4ccf193f44c0443">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_conv_impl_1aba4862a17ee0361e8175175dccc15a68">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_conv_impl_1aba4862a17ee0361e8175175dccc15a68">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_conv_impl_1aba4862a17ee0361e8175175dccc15a68">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_conv_impl_1aba4862a17ee0361e8175175dccc15a68">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_sequential_impl_1ac359204d4dd1285defbc2abde1909bb2">reset</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base_1a4b83893f07b3affac78c965d6c60316b">reset</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput><ref refid="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab" kindref="member">reset()</ref></computeroutput> must perform initialization of all members with reference semantics, most importantly parameters, buffers and submodules. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Module&gt; torch::nn::Cloneable&lt; Derived &gt;::clone</definition>
+        <argsstring>(at::optional&lt; Device &gt; device=at::nullopt) const override</argsstring>
+        <name>clone</name>
+        <reimplements refid="classtorch_1_1nn_1_1_module_1ac1f0c742f8b793a80797b62a490bbdc5">clone</reimplements>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performs a recursive &quot;deep copy&quot; of the <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput>, such that all parameters and submodules in the cloned module are different from those in the original module. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" line="35" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" bodystart="35" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::Module::Module</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>Module</name>
+        <briefdescription>
+<para>Tells the base <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> about the name of the submodule. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/module.cpp" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::Module::Module</definition>
+        <argsstring>()=default</argsstring>
+        <name>Module</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the base module without immediate knowledge of the submodule&apos;s name. The name of the submodule is inferred via RTTI the first time <computeroutput>.<ref refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" kindref="member">name()</ref></computeroutput> is invoked. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" line="26" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427" prot="private" static="no" const="no" explicit="no" inline="yes" final="yes" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::Cloneable&lt; Derived &gt;::clone_</definition>
+        <argsstring>(Module &amp;other, at::optional&lt; Device &gt; device) final override</argsstring>
+        <name>clone_</name>
+        <reimplements refid="classtorch_1_1nn_1_1_module_1a388d156f14536a3abf0cceb50a044a1a">clone_</reimplements>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" bodystart="90" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The <computeroutput><ref refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" kindref="member">clone()</ref></computeroutput> method in the base <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> class does not have knowledge of the concrete runtime type of its subclasses. Therefore, <computeroutput><ref refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" kindref="member">clone()</ref></computeroutput> must either be called from within the subclass, or from a base class that has knowledge of the concrete type. <computeroutput><ref refid="classtorch_1_1nn_1_1_cloneable" kindref="compound">Cloneable</ref></computeroutput> uses the CRTP to gain knowledge of the subclass&apos; static type and provide an implementation of the <computeroutput><ref refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" kindref="member">clone()</ref></computeroutput> method. We do not want to use this pattern in the base class, because then storing a module would always require templatizing it. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="101">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="104">
+        <label>torch::nn::detail::RNNImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_r_n_n_impl_base"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="101" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>torch::nn::ConvImpl&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_conv_impl"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>torch::nn::detail::DropoutImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base"/>
+        <childnode refid="100" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="106">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="105">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="106" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h" bodystart="24" bodyend="101"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a1568c000ad3b93cc17d62789aa54e427" prot="private" virt="virtual"><scope>torch::nn::Cloneable</scope><name>clone_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::Cloneable</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::Cloneable</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab" prot="public" virt="pure-virtual"><scope>torch::nn::Cloneable</scope><name>reset</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::Cloneable</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::Cloneable</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

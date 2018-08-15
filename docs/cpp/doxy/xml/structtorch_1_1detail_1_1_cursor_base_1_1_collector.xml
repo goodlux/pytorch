@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structtorch_1_1detail_1_1_cursor_base_1_1_collector" kind="struct" language="C++" prot="public">
+    <compoundname>torch::detail::CursorBase::Collector</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1aa4bf0d28589e9e9f9ac2169fce0ec169" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structtorch_1_1detail_1_1_cursor_base_1_1_item" kindref="compound">Item</ref> &gt;</type>
+        <definition>std::vector&lt;Item&gt; torch::detail::CursorBase&lt; T &gt;::Collector::items</definition>
+        <argsstring></argsstring>
+        <name>items</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" line="207" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1a9db105b0506c2844bd0b282acf911722" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::detail::CursorBase&lt; T &gt;::Collector::Collector</definition>
+        <argsstring>()=default</argsstring>
+        <name>Collector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1a87048fa12783b106067fe54cb1ca1389" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="structtorch_1_1detail_1_1_cursor_base_1_1_item" kindref="compound">Item</ref> &gt; &amp;&amp;</type>
+        <definition>std::vector&lt;Item&gt;&amp;&amp; torch::detail::CursorBase&lt; T &gt;::Collector::collect_children</definition>
+        <argsstring>(ModuleType &amp;module, size_t maximum_depth, std::string name_prefix=std::string())</argsstring>
+        <name>collect_children</name>
+        <param>
+          <type>ModuleType &amp;</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>maximum_depth</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_prefix</declname>
+          <defval>std::string()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" line="165" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" bodystart="165" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1ab553742f5dc795113e56ae65c8e7598c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="structtorch_1_1detail_1_1_cursor_base_1_1_item" kindref="compound">Item</ref> &gt; &amp;&amp;</type>
+        <definition>std::vector&lt;Item&gt;&amp;&amp; torch::detail::CursorBase&lt; T &gt;::Collector::collect_parameters</definition>
+        <argsstring>(ModuleType &amp;module, std::string name_prefix=std::string())</argsstring>
+        <name>collect_parameters</name>
+        <param>
+          <type>ModuleType &amp;</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_prefix</declname>
+          <defval>std::string()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" line="181" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" bodystart="181" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1a651d5eee1da12867521b570234c32de0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="structtorch_1_1detail_1_1_cursor_base_1_1_item" kindref="compound">Item</ref> &gt; &amp;&amp;</type>
+        <definition>std::vector&lt;Item&gt;&amp;&amp; torch::detail::CursorBase&lt; T &gt;::Collector::collect_buffers</definition>
+        <argsstring>(ModuleType &amp;module, std::string name_prefix=std::string())</argsstring>
+        <name>collect_buffers</name>
+        <param>
+          <type>ModuleType &amp;</type>
+          <declname>module</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_prefix</declname>
+          <defval>std::string()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" line="195" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" bodystart="195" bodyend="205"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" line="161" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/cursor.cpp" bodystart="161" bodyend="208"/>
+    <listofallmembers>
+      <member refid="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1a651d5eee1da12867521b570234c32de0" prot="public" virt="non-virtual"><scope>torch::detail::CursorBase::Collector</scope><name>collect_buffers</name></member>
+      <member refid="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1a87048fa12783b106067fe54cb1ca1389" prot="public" virt="non-virtual"><scope>torch::detail::CursorBase::Collector</scope><name>collect_children</name></member>
+      <member refid="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1ab553742f5dc795113e56ae65c8e7598c" prot="public" virt="non-virtual"><scope>torch::detail::CursorBase::Collector</scope><name>collect_parameters</name></member>
+      <member refid="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1a9db105b0506c2844bd0b282acf911722" prot="public" virt="non-virtual"><scope>torch::detail::CursorBase::Collector</scope><name>Collector</name></member>
+      <member refid="structtorch_1_1detail_1_1_cursor_base_1_1_collector_1aa4bf0d28589e9e9f9ac2169fce0ec169" prot="public" virt="non-virtual"><scope>torch::detail::CursorBase::Collector</scope><name>items</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

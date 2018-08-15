@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_default_tensor_options" kind="struct" language="C++" prot="public">
+    <compoundname>at::DefaultTensorOptions</compoundname>
+    <includes refid="_options_guard_8h" local="no">OptionsGuard.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="structat_1_1_default_tensor_options_1a0f25fa299f4b7b17fe490289e0f95193" prot="private" static="yes" mutable="no">
+        <type>thread_local <ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &gt;</type>
+        <definition>thread_local at::optional&lt; TensorOptions &gt; at::DefaultTensorOptions::options_</definition>
+        <argsstring></argsstring>
+        <name>options_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an optional because of compiler bugs that mis-initialize static thread local variables. The workaround is lazy initialization, i.e. <computeroutput><ref refid="structat_1_1_default_tensor_options_1a44ce5e22fc4ce9e358cfcaf50b431d9b" kindref="member">DefaultTensorOptions::get()</ref></computeroutput> will initialize the <computeroutput>options_</computeroutput> to a proper value upon first invocation. <ulink url="https://gcc.gnu.org/ml/gcc-bugs/2013-12/msg00026.html">https://gcc.gnu.org/ml/gcc-bugs/2013-12/msg00026.html</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structat_1_1_default_tensor_options_1a44ce5e22fc4ce9e358cfcaf50b431d9b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>TensorOptions &amp; at::DefaultTensorOptions::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current thread local default options. Defined in OptionsGuard.cpp because we can&apos;t use optional in headers, due to Windows and other compilers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.cpp" bodystart="8" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A wrapper over a thread local <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> instance. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="12" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="12" bodyend="25"/>
+    <listofallmembers>
+      <member refid="structat_1_1_default_tensor_options_1a44ce5e22fc4ce9e358cfcaf50b431d9b" prot="public" virt="non-virtual"><scope>at::DefaultTensorOptions</scope><name>get</name></member>
+      <member refid="structat_1_1_default_tensor_options_1a0f25fa299f4b7b17fe490289e0f95193" prot="private" virt="non-virtual"><scope>at::DefaultTensorOptions</scope><name>options_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

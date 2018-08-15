@@ -1,0 +1,629 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacegen" kind="namespace" language="Python">
+    <compoundname>gen</compoundname>
+    <innerclass refid="classgen_1_1_file_manager" prot="public">gen::FileManager</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="gen_8py_1ab096d47a0abbe4037fff730c22450996" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.parser</definition>
+        <argsstring></argsstring>
+        <name>parser</name>
+        <initializer>=  argparse.ArgumentParser(description=&apos;Generate ATen source files&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a8583780752e21a0fa4ab9e055ebbe334" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a159a6845d47032367e086b745ffca416" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.nargs</definition>
+        <argsstring></argsstring>
+        <name>nargs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a676cf008762b87aee62cf364a6e694ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.default</definition>
+        <argsstring></argsstring>
+        <name>default</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="35" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1ac201ec2110c84955484bdf2cb64b590c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <initializer>=  parser.parse_args()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="42" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a037273386fee4649512839ab029ac956" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string gen.TEMPLATE_PATH</definition>
+        <argsstring></argsstring>
+        <name>TEMPLATE_PATH</name>
+        <initializer>=  options.source_path + &quot;/templates&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="103" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a27329375403d2fde1d7ee0c400d29b36" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.GENERATOR_DERIVED</definition>
+        <argsstring></argsstring>
+        <name>GENERATOR_DERIVED</name>
+        <initializer>=  CodeTemplate.from_file(
+    TEMPLATE_PATH + &quot;/GeneratorDerived.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="104" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a3a996e53af0fc963855eed3ca2af4ebf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.STORAGE_DERIVED_CPP</definition>
+        <argsstring></argsstring>
+        <name>STORAGE_DERIVED_CPP</name>
+        <initializer>=  CodeTemplate.from_file(
+    TEMPLATE_PATH + &quot;/StorageDerived.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="106" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a8b0fcdae37eac66a1e1f8ca09aaade71" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.STORAGE_DERIVED_H</definition>
+        <argsstring></argsstring>
+        <name>STORAGE_DERIVED_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/StorageDerived.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="108" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a6e6bbc80b2c31ad6afc0d3b632ae0432" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TYPE_DERIVED_CPP</definition>
+        <argsstring></argsstring>
+        <name>TYPE_DERIVED_CPP</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/TypeDerived.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="110" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a1bd22994ba2f7837c660ccec16ae88bd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.SPARSE_TYPE_DERIVED_CPP</definition>
+        <argsstring></argsstring>
+        <name>SPARSE_TYPE_DERIVED_CPP</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/SparseTypeDerived.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="111" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1aa6a3065d854a20724f8ebb60d36f9e98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TYPE_DERIVED_H</definition>
+        <argsstring></argsstring>
+        <name>TYPE_DERIVED_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/TypeDerived.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="112" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1ab1e572b2e60f6f9649287f56c839fa89" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TYPE_H</definition>
+        <argsstring></argsstring>
+        <name>TYPE_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/Type.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="113" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1aae21eecfbe10fcd063f479e7c5336c8d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TYPE_CPP</definition>
+        <argsstring></argsstring>
+        <name>TYPE_CPP</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/Type.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="114" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a85c58e598e337825235e4c92f81592d3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TENSOR_DERIVED_CPP</definition>
+        <argsstring></argsstring>
+        <name>TENSOR_DERIVED_CPP</name>
+        <initializer>=  CodeTemplate.from_file(
+    TEMPLATE_PATH + &quot;/TensorDerived.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="116" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1ac7238901995a26b538df7041c17ca0c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TENSOR_DENSE_CPP</definition>
+        <argsstring></argsstring>
+        <name>TENSOR_DENSE_CPP</name>
+        <initializer>=  CodeTemplate.from_file(
+    TEMPLATE_PATH + &quot;/TensorDense.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="118" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a67b035e2ffc629cf9c01750ef8212d75" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.REGISTER_CUDA_H</definition>
+        <argsstring></argsstring>
+        <name>REGISTER_CUDA_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/RegisterCUDA.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="121" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a6c69028af036d061efd65acd06e7905c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.REGISTER_CUDA_CPP</definition>
+        <argsstring></argsstring>
+        <name>REGISTER_CUDA_CPP</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/RegisterCUDA.cpp&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="122" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a198ca4ae745f411fb074e76b28bbb81c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TENSOR_DERIVED_H</definition>
+        <argsstring></argsstring>
+        <name>TENSOR_DERIVED_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/TensorDerived.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="124" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a159a84708e6eb78f211cb62f008345ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TENSOR_H</definition>
+        <argsstring></argsstring>
+        <name>TENSOR_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/Tensor.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="125" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1ad59009570e032e5dded00641f8f3bb03" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TENSOR_METHODS_H</definition>
+        <argsstring></argsstring>
+        <name>TENSOR_METHODS_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/TensorMethods.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="126" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a770f809a9accc0004927b15bde8b418a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.FUNCTIONS_H</definition>
+        <argsstring></argsstring>
+        <name>FUNCTIONS_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/Functions.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="128" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a428d7a7a3928ef288ab7b9e302583987" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.NATIVE_FUNCTIONS_H</definition>
+        <argsstring></argsstring>
+        <name>NATIVE_FUNCTIONS_H</name>
+        <initializer>=  CodeTemplate.from_file(TEMPLATE_PATH + &quot;/NativeFunctions.h&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="130" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1adcfce536f51cedfa145a130e8baaeab6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.TYPE_REGISTER</definition>
+        <argsstring></argsstring>
+        <name>TYPE_REGISTER</name>
+        <initializer>=  <ref refid="classcode__template_1_1_code_template" kindref="compound">CodeTemplate</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="132" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a2f8ab4bc6f64d807af4c66a9c41600a2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.file_manager</definition>
+        <argsstring></argsstring>
+        <name>file_manager</name>
+        <initializer>=  <ref refid="classgen_1_1_file_manager" kindref="compound">FileManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="139" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a393ac0004ed84ea0452cab22f008ae43" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>gen.cuda_file_manager</definition>
+        <argsstring></argsstring>
+        <name>cuda_file_manager</name>
+        <initializer>=  <ref refid="classgen_1_1_file_manager" kindref="compound">FileManager</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="140" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a2b4c4018bba8aefdd084cc1cd7569f90" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary gen.generators</definition>
+        <argsstring></argsstring>
+        <name>generators</name>
+        <initializer>=  {
+    &apos;CPUGenerator.h&apos;: {
+        &apos;name&apos;: &apos;CPU&apos;,
+        &apos;th_generator&apos;: &apos;THGenerator * generator;&apos;,
+        &apos;header&apos;: &apos;TH/TH.h&apos;,
+    },
+    &apos;CUDAGenerator.h&apos;: {
+        &apos;name&apos;: &apos;CUDA&apos;,
+        &apos;th_generator&apos;: &apos;&apos;,
+        &apos;header&apos;: &apos;THC/THC.h&apos;
+    },
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="142" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1ae9261832390893584d465e9a8b77a02a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list gen.backends</definition>
+        <argsstring></argsstring>
+        <name>backends</name>
+        <initializer>=  [&apos;CPU&apos;, &apos;CUDA&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="155" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1ae180f4b974c8f046abebbd94d8fbc86d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list gen.densities</definition>
+        <argsstring></argsstring>
+        <name>densities</name>
+        <initializer>=  [&apos;Dense&apos;, &apos;Sparse&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="156" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a0bee683e043e715be086408111998dbc" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list gen.scalar_types</definition>
+        <argsstring></argsstring>
+        <name>scalar_types</name>
+        <initializer>=  [
+    (&apos;Byte&apos;, &apos;uint8_t&apos;, &apos;Long&apos;, &apos;uint8_t&apos;, False),
+    (&apos;Char&apos;, &apos;int8_t&apos;, &apos;Long&apos;, &apos;int8_t&apos;, False),
+    (&apos;Double&apos;, &apos;double&apos;, &apos;Double&apos;, &apos;double&apos;, True),
+    (&apos;Float&apos;, &apos;float&apos;, &apos;Double&apos;, &apos;float&apos;, True),
+    (&apos;Int&apos;, &apos;int&apos;, &apos;Long&apos;, &apos;int32_t&apos;, False),
+    (&apos;Long&apos;, &apos;int64_t&apos;, &apos;Long&apos;, &apos;int64_t&apos;, False),
+    (&apos;Short&apos;, &apos;int16_t&apos;, &apos;Long&apos;, &apos;int16_t&apos;, False),
+    (&apos;Half&apos;, &apos;Half&apos;, &apos;Double&apos;, &apos;THHalf&apos;, True),
+]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="159" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="gen_8py_1a1fb50c5776e171645a776b8cacdc20f6" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary gen.top_env</definition>
+        <argsstring></argsstring>
+        <name>top_env</name>
+        <initializer>=  {
+    &apos;cpu_type_registrations&apos;: [],
+    &apos;cpu_type_headers&apos;: [],
+    &apos;cuda_type_registrations&apos;: [],
+    &apos;cuda_type_headers&apos;: [],
+    &apos;type_method_declarations&apos;: [],
+    &apos;type_method_definitions&apos;: [],
+    &apos;type_method_inline_definitions&apos;: [],
+    &apos;tensor_method_declarations&apos;: [],
+    &apos;tensor_method_definitions&apos;: [],
+    &apos;function_declarations&apos;: [],
+    &apos;function_definitions&apos;: [],
+    &apos;type_ids&apos;: [],
+    &apos;native_function_declarations&apos;: [],
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="171" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gen_8py_1a66f8cbd992366c3cda9539b3bb6f987d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.dict_representer</definition>
+        <argsstring>(dumper, data)</argsstring>
+        <name>dict_representer</name>
+        <param>
+          <type>dumper</type>
+          <defname>dumper</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="188" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1a27dbfccfc377528a47a995114277c1f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.postprocess_output_declarations</definition>
+        <argsstring>(output_declarations)</argsstring>
+        <name>postprocess_output_declarations</name>
+        <param>
+          <type>output_declarations</type>
+          <defname>output_declarations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="192" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="192" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1a98236b088a30a044bcb25bb5c7a31e6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.format_yaml</definition>
+        <argsstring>(data)</argsstring>
+        <name>format_yaml</name>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="217" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="217" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1aa89ff4a0244ca7d885cf0b4bd615031f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.generate_storage_type_and_tensor</definition>
+        <argsstring>(backend, density, scalar_type, declarations)</argsstring>
+        <name>generate_storage_type_and_tensor</name>
+        <param>
+          <type>backend</type>
+          <defname>backend</defname>
+        </param>
+        <param>
+          <type>density</type>
+          <defname>density</defname>
+        </param>
+        <param>
+          <type>scalar_type</type>
+          <defname>scalar_type</defname>
+        </param>
+        <param>
+          <type>declarations</type>
+          <defname>declarations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="228" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="228" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1a45b0dd2094c68af8b0c292af18af34ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.iterate_types</definition>
+        <argsstring>()</argsstring>
+        <name>iterate_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="351" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="351" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1ab05c9b7045e523155fe1b3826dc047ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.declare_outputs</definition>
+        <argsstring>()</argsstring>
+        <name>declare_outputs</name>
+        <briefdescription>
+<para>declare what files will be output <emphasis>before</emphasis> we do any work so that the script runs quickly when we are just querying the outputs </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="365" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="365" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1afc7065263d8e0583bfef7a462b440105" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.filter_by_extension</definition>
+        <argsstring>(files, extensions)</argsstring>
+        <name>filter_by_extension</name>
+        <param>
+          <type>files</type>
+          <defname>files</defname>
+        </param>
+        <param>
+          <type>extensions</type>
+          <defname>extensions</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="393" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="393" bodyend="401"/>
+      </memberdef>
+      <memberdef kind="function" id="gen_8py_1afc1bfd83e10726c443c7ebf53ca3d557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def gen.generate_outputs</definition>
+        <argsstring>()</argsstring>
+        <name>generate_outputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="402" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" bodystart="402" bodyend="452"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/gen.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

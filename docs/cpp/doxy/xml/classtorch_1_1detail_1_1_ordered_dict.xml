@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1detail_1_1_ordered_dict" kind="class" language="C++" prot="public">
+    <compoundname>torch::detail::OrderedDict</compoundname>
+    <includes refid="ordered__dict_8h" local="no">ordered_dict.h</includes>
+    <innerclass refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" prot="public">torch::detail::OrderedDict::Item</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Key</declname>
+        <defname>Key</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>Value</declname>
+        <defname>Value</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtorch_1_1detail_1_1_ordered_dict_1a428338792f670fb651cff712c4c45938" prot="public" static="no">
+        <type>typename std::vector&lt; <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &gt;::iterator</type>
+        <definition>using torch::detail::OrderedDict&lt; Key, Value &gt;::Iterator =  typename std::vector&lt;Item&gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="45" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classtorch_1_1detail_1_1_ordered_dict_1a40844690c3f2a15f9c2f6f45f0b42903" prot="public" static="no">
+        <type>typename std::vector&lt; <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &gt;::const_iterator</type>
+        <definition>using torch::detail::OrderedDict&lt; Key, Value &gt;::ConstIterator =  typename std::vector&lt;Item&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>ConstIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="46" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1detail_1_1_ordered_dict_1a183932fdd95b6bd236e13072c839508d" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; Key, size_t &gt;</type>
+        <definition>std::unordered_map&lt;Key, size_t&gt; torch::detail::OrderedDict&lt; Key, Value &gt;::index_</definition>
+        <argsstring></argsstring>
+        <name>index_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="215" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1detail_1_1_ordered_dict_1ac5d353de76c419279ee00c81a4f31d5a" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &gt;</type>
+        <definition>std::vector&lt;Item&gt; torch::detail::OrderedDict&lt; Key, Value &gt;::items_</definition>
+        <argsstring></argsstring>
+        <name>items_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="216" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1detail_1_1_ordered_dict_1a546fbf0a7547f4a45e90ac3a3d68bcfd" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string torch::detail::OrderedDict&lt; Key, Value &gt;::subject_</definition>
+        <argsstring></argsstring>
+        <name>subject_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="217" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a9d5308b27c08da9af6f84b3e4134ac04" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::detail::OrderedDict&lt; Key, Value &gt;::OrderedDict</definition>
+        <argsstring>(std::string subject=&quot;Key&quot;)</argsstring>
+        <name>OrderedDict</name>
+        <param>
+          <type>std::string</type>
+          <declname>subject</declname>
+          <defval>&quot;Key&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref></computeroutput> with a string that should describe the kind of value stored in this <computeroutput><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref></computeroutput>, for example &apos;parameter&apos; or &apos;module&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="51" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a921f0edd7c78768f679a74efa80e8ce7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::detail::OrderedDict&lt; Key, Value &gt;::OrderedDict</definition>
+        <argsstring>(const OrderedDict &amp;other)</argsstring>
+        <name>OrderedDict</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="56" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a3298ab6820f0c84d8e8b46d2492f4d24" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;</type>
+        <definition>OrderedDict&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::operator=</definition>
+        <argsstring>(const OrderedDict &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="63" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ace2d689816442e6515fbc3ea78b41328" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::detail::OrderedDict&lt; Key, Value &gt;::OrderedDict</definition>
+        <argsstring>(OrderedDict &amp;&amp;other)=default</argsstring>
+        <name>OrderedDict</name>
+        <param>
+          <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a41aad5a2ffd61afea924b19b21c46f11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;</type>
+        <definition>OrderedDict&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::operator=</definition>
+        <argsstring>(OrderedDict &amp;&amp;other)=default</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a536be7a85b74684f1169aa3e04764a1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::detail::OrderedDict&lt; Key, Value &gt;::~OrderedDict</definition>
+        <argsstring>()=default</argsstring>
+        <name>~OrderedDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a28bdfe461cd1c41b80addbd1f5c4c5a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::detail::OrderedDict&lt; Key, Value &gt;::OrderedDict</definition>
+        <argsstring>(std::initializer_list&lt; Item &gt; initializer_list)</argsstring>
+        <name>OrderedDict</name>
+        <param>
+          <type>std::initializer_list&lt; <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &gt;</type>
+          <declname>initializer_list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="80" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a4bb3f83c3579cc0266b87dcef547e428" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator torch::detail::OrderedDict&lt; Key, Value &gt;::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="90" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a3fcfded864272e430dfeb52613ca9cfe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ConstIterator</type>
+        <definition>ConstIterator torch::detail::OrderedDict&lt; Key, Value &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="94" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a2f26426859e032c44c4679acfcd82d3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator torch::detail::OrderedDict&lt; Key, Value &gt;::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="98" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="98" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1aeac799da3d23a5ac0fe211a3dc32fad0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ConstIterator</type>
+        <definition>ConstIterator torch::detail::OrderedDict&lt; Key, Value &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="102" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ab7f6c03e8663507b0d0f8419d866f57e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &amp;</type>
+        <definition>Item&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::front</definition>
+        <argsstring>()</argsstring>
+        <name>front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="106" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="106" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a52282dca1d7a4ee394e26e8f61e5de2d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &amp;</type>
+        <definition>const Item&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::front</definition>
+        <argsstring>() const</argsstring>
+        <name>front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="110" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a339ce5c4d24c30e9cf91240a57515e34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &amp;</type>
+        <definition>Item&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::back</definition>
+        <argsstring>()</argsstring>
+        <name>back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="114" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a4444e95502f74ece519ac40a3daead18" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &amp;</type>
+        <definition>const Item&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::back</definition>
+        <argsstring>() const</argsstring>
+        <name>back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="118" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a3217c05cd94f3f98c88b1db518918d3e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &amp;</type>
+        <definition>Item&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::operator[]</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="122" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ac7a5ccaf7679557ebf8802b2079bfda4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structtorch_1_1detail_1_1_ordered_dict_1_1_item" kindref="compound">Item</ref> &amp;</type>
+        <definition>const Item&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::operator[]</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="126" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="126" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ae15a0146d56e9301ae1abf1edddf6866" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Value &amp;</type>
+        <definition>Value&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::operator[]</definition>
+        <argsstring>(const Key &amp;key)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="130" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="130" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1aa1b98dbf346addfd700e19d2c82d4a45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value &amp;</type>
+        <definition>const Value&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::operator[]</definition>
+        <argsstring>(const Key &amp;key) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="134" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a878d26e94ca37d812349a3761d00f13b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>Value &amp;</type>
+        <definition>Value&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::insert</definition>
+        <argsstring>(K &amp;&amp;key, V &amp;&amp;value)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>K &amp;&amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>V &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="139" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="139" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a7ebbd719e9e544d8e04ed35c281bb292" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Value &amp;</type>
+        <definition>Value&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::insert</definition>
+        <argsstring>(Key key, Value &amp;&amp;value)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>Key</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>Value &amp;&amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Allows calling <computeroutput>insert</computeroutput> with an initializer list for the value, e.g. <computeroutput>insert(key, {...})</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="149" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a2847a093bb5ec295f8e579620b2e8da8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::detail::OrderedDict&lt; Key, Value &gt;::update</definition>
+        <argsstring>(OrderedDict &amp;&amp;other)</argsstring>
+        <name>update</name>
+        <param>
+          <type><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="153" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="153" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a6fa3d644be0c8fc84d3d7e9d041ad404" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::detail::OrderedDict&lt; Key, Value &gt;::update</definition>
+        <argsstring>(const OrderedDict &amp;other)</argsstring>
+        <name>update</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="160" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="160" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a3797ee44856c40a37f6c346181747e67" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Value *</type>
+        <definition>Value* torch::detail::OrderedDict&lt; Key, Value &gt;::find</definition>
+        <argsstring>(const Key &amp;key) noexcept</argsstring>
+        <name>find</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="167" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="167" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a26e5ff62f5ecf7269c48ec5f7ef7a8ce" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value *</type>
+        <definition>const Value* torch::detail::OrderedDict&lt; Key, Value &gt;::find</definition>
+        <argsstring>(const Key &amp;key) const noexcept</argsstring>
+        <name>find</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="175" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="175" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a9c9e7a2e9d0c8841e1e5e94dab1ea95b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Value &amp;</type>
+        <definition>Value&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::get</definition>
+        <argsstring>(const Key &amp;key)</argsstring>
+        <name>get</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="183" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="183" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ac9ec031ab2b2cbb1d05af8594420e781" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Value &amp;</type>
+        <definition>const Value&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::get</definition>
+        <argsstring>(const Key &amp;key) const</argsstring>
+        <name>get</name>
+        <param>
+          <type>const Key &amp;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="190" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="190" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1aaa2781000eb9f7bbbf18fe51a13a086b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::detail::OrderedDict&lt; Key, Value &gt;::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="197" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="197" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ab1c4497b6e85331b6f748110a721254a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t torch::detail::OrderedDict&lt; Key, Value &gt;::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="202" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="202" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1a8486fd6bf707dafa0dde242089edacf0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool torch::detail::OrderedDict&lt; Key, Value &gt;::is_empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="206" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="206" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1detail_1_1_ordered_dict_1ad1f22009389dcab62ee9f2ad505fd85f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; torch::detail::OrderedDict&lt; Key, Value &gt;::subject</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>subject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="210" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="210" bodyend="212"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A simple ordered dictionary implementation, akin to Python&apos;s <computeroutput><ref refid="classtorch_1_1detail_1_1_ordered_dict" kindref="compound">OrderedDict</ref></computeroutput>. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/detail/ordered_dict.h" bodystart="18" bodyend="218"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a339ce5c4d24c30e9cf91240a57515e34" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>back</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a4444e95502f74ece519ac40a3daead18" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>back</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a4bb3f83c3579cc0266b87dcef547e428" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>begin</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a3fcfded864272e430dfeb52613ca9cfe" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>begin</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1aaa2781000eb9f7bbbf18fe51a13a086b" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>clear</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a40844690c3f2a15f9c2f6f45f0b42903" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>ConstIterator</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a2f26426859e032c44c4679acfcd82d3d" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>end</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1aeac799da3d23a5ac0fe211a3dc32fad0" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>end</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a3797ee44856c40a37f6c346181747e67" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>find</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a26e5ff62f5ecf7269c48ec5f7ef7a8ce" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>find</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ab7f6c03e8663507b0d0f8419d866f57e" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>front</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a52282dca1d7a4ee394e26e8f61e5de2d" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>front</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a9c9e7a2e9d0c8841e1e5e94dab1ea95b" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>get</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ac9ec031ab2b2cbb1d05af8594420e781" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>get</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a183932fdd95b6bd236e13072c839508d" prot="private" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>index_</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a878d26e94ca37d812349a3761d00f13b" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>insert</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a7ebbd719e9e544d8e04ed35c281bb292" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>insert</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a8486fd6bf707dafa0dde242089edacf0" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>is_empty</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ac5d353de76c419279ee00c81a4f31d5a" prot="private" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>items_</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a428338792f670fb651cff712c4c45938" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>Iterator</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a3298ab6820f0c84d8e8b46d2492f4d24" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a41aad5a2ffd61afea924b19b21c46f11" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>operator=</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a3217c05cd94f3f98c88b1db518918d3e" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>operator[]</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ac7a5ccaf7679557ebf8802b2079bfda4" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>operator[]</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ae15a0146d56e9301ae1abf1edddf6866" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>operator[]</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1aa1b98dbf346addfd700e19d2c82d4a45" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>operator[]</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a9d5308b27c08da9af6f84b3e4134ac04" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>OrderedDict</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a921f0edd7c78768f679a74efa80e8ce7" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>OrderedDict</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ace2d689816442e6515fbc3ea78b41328" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>OrderedDict</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a28bdfe461cd1c41b80addbd1f5c4c5a9" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>OrderedDict</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ab1c4497b6e85331b6f748110a721254a" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>size</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1ad1f22009389dcab62ee9f2ad505fd85f" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>subject</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a546fbf0a7547f4a45e90ac3a3d68bcfd" prot="private" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>subject_</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a2847a093bb5ec295f8e579620b2e8da8" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>update</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a6fa3d644be0c8fc84d3d7e9d041ad404" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>update</name></member>
+      <member refid="classtorch_1_1detail_1_1_ordered_dict_1a536be7a85b74684f1169aa3e04764a1d" prot="public" virt="non-virtual"><scope>torch::detail::OrderedDict</scope><name>~OrderedDict</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

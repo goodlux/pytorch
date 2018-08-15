@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_holder" kind="struct" language="C++" prot="private">
+    <compoundname>torch::nn::AnyModule::Value::Holder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">torch::nn::AnyModule::Value::Placeholder</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_holder_1ad52438027db8af4244b1809f1799973e" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T torch::nn::AnyModule::Value::Holder&lt; T &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="230" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_holder_1a5f4db660aa1f330f17816698bd838163" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::AnyModule::Value::Holder&lt; T &gt;::Holder</definition>
+        <argsstring>(U &amp;&amp;value_) noexcept</argsstring>
+        <name>Holder</name>
+        <param>
+          <type>U &amp;&amp;</type>
+          <declname>value_</declname>
+        </param>
+        <briefdescription>
+<para>A template because T&amp;&amp; would not be universal reference here. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="228" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="228" bodyend="229"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The dynamic type of the object we store in the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput>, which hides the actual object we have erased in this <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="345">
+        <label>torch::nn::AnyModule::Value::Holder&lt; T &gt;</label>
+        <childnode refid="346" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="346">
+        <label>torch::nn::AnyModule::Value::Placeholder</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="349">
+        <label>T</label>
+      </node>
+      <node id="347">
+        <label>torch::nn::AnyModule::Value::Holder&lt; T &gt;</label>
+        <childnode refid="348" relation="public-inheritance">
+        </childnode>
+        <childnode refid="349" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="348">
+        <label>torch::nn::AnyModule::Value::Placeholder</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="225" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="225" bodyend="231"/>
+    <listofallmembers>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_holder_1a5f4db660aa1f330f17816698bd838163" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value::Holder</scope><name>Holder</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1afc72f3c240249ab0ec5ff7e2743f4e94" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value::Holder</scope><name>Placeholder</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1a373454270986799ed293c58b221cb4c4" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value::Holder</scope><name>type_info</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_holder_1ad52438027db8af4244b1809f1799973e" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Value::Holder</scope><name>value</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1a42eaa4d1d7b82a7339c8c6adf178b64b" prot="public" virt="virtual"><scope>torch::nn::AnyModule::Value::Holder</scope><name>~Placeholder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

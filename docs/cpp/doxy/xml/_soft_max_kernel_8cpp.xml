@@ -1,0 +1,1130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_soft_max_kernel_8cpp" kind="file" language="C++">
+    <compoundname>SoftMaxKernel.cpp</compoundname>
+    <includes refid="_softmax_kernel_8h" local="yes">ATen/native/cpu/SoftmaxKernel.h</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">numeric</includes>
+    <includes refid="_dispatch_8h" local="yes">ATen/Dispatch.h</includes>
+    <includes refid="_parallel_8h" local="yes">ATen/Parallel.h</includes>
+    <includes refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h" local="yes">ATen/cpu/vec256/functional.h</includes>
+    <includes refid="vec256_8h" local="yes">ATen/cpu/vec256/vec256.h</includes>
+    <includes refid="optional_8h" local="yes">ATen/optional.h</includes>
+    <incdepgraph>
+      <node id="4920">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="4921" relation="include">
+        </childnode>
+        <childnode refid="4922" relation="include">
+        </childnode>
+        <childnode refid="4923" relation="include">
+        </childnode>
+        <childnode refid="4924" relation="include">
+        </childnode>
+        <childnode refid="4925" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4927" relation="include">
+        </childnode>
+      </node>
+      <node id="4966">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="4916" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4967" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4925" relation="include">
+        </childnode>
+        <childnode refid="4917" relation="include">
+        </childnode>
+      </node>
+      <node id="4934">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4950" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4925" relation="include">
+        </childnode>
+      </node>
+      <node id="4933">
+        <label>atomic</label>
+      </node>
+      <node id="4925">
+        <label>functional</label>
+      </node>
+      <node id="4971">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4961" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+      </node>
+      <node id="4935">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="4936" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4946" relation="include">
+        </childnode>
+        <childnode refid="4948" relation="include">
+        </childnode>
+        <childnode refid="4952" relation="include">
+        </childnode>
+      </node>
+      <node id="4947">
+        <label>limits</label>
+      </node>
+      <node id="4955">
+        <label>assert.h</label>
+      </node>
+      <node id="4960">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4936" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4959" relation="include">
+        </childnode>
+        <childnode refid="4939" relation="include">
+        </childnode>
+        <childnode refid="4931" relation="include">
+        </childnode>
+        <childnode refid="4961" relation="include">
+        </childnode>
+        <childnode refid="4962" relation="include">
+        </childnode>
+      </node>
+      <node id="4942">
+        <label>iterator</label>
+      </node>
+      <node id="4954">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="4955" relation="include">
+        </childnode>
+        <childnode refid="4956" relation="include">
+        </childnode>
+        <childnode refid="4927" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4921" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4946" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4957" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+      </node>
+      <node id="4974">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="4999">
+        <label>vec256_base.h</label>
+        <link refid="vec256__base_8h_source"/>
+        <childnode refid="4941" relation="include">
+        </childnode>
+        <childnode refid="4925" relation="include">
+        </childnode>
+        <childnode refid="4949" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+      </node>
+      <node id="4948">
+        <label>cstdint</label>
+      </node>
+      <node id="4982">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="4956">
+        <label>stdint.h</label>
+      </node>
+      <node id="4993">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="4949">
+        <label>cmath</label>
+      </node>
+      <node id="4924">
+        <label>cassert</label>
+      </node>
+      <node id="4965">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4915" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4966" relation="include">
+        </childnode>
+        <childnode refid="4972" relation="include">
+        </childnode>
+        <childnode refid="4917" relation="include">
+        </childnode>
+        <childnode refid="4969" relation="include">
+        </childnode>
+        <childnode refid="4948" relation="include">
+        </childnode>
+      </node>
+      <node id="4951">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4941" relation="include">
+        </childnode>
+        <childnode refid="4947" relation="include">
+        </childnode>
+      </node>
+      <node id="4927">
+        <label>stdexcept</label>
+      </node>
+      <node id="4988">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="4954" relation="include">
+        </childnode>
+        <childnode refid="4975" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4927" relation="include">
+        </childnode>
+      </node>
+      <node id="4962">
+        <label>numeric</label>
+      </node>
+      <node id="4958">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="4933" relation="include">
+        </childnode>
+        <childnode refid="4917" relation="include">
+        </childnode>
+        <childnode refid="4932" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+      </node>
+      <node id="4946">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4947" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4948" relation="include">
+        </childnode>
+        <childnode refid="4927" relation="include">
+        </childnode>
+        <childnode refid="4921" relation="include">
+        </childnode>
+        <childnode refid="4949" relation="include">
+        </childnode>
+        <childnode refid="4950" relation="include">
+        </childnode>
+        <childnode refid="4951" relation="include">
+        </childnode>
+      </node>
+      <node id="4932">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="4933" relation="include">
+        </childnode>
+      </node>
+      <node id="4997">
+        <label>vec256.h</label>
+        <link refid="vec256_8h_source"/>
+        <childnode refid="4998" relation="include">
+        </childnode>
+        <childnode refid="4999" relation="include">
+        </childnode>
+        <childnode refid="5000" relation="include">
+        </childnode>
+        <childnode refid="5001" relation="include">
+        </childnode>
+        <childnode refid="5002" relation="include">
+        </childnode>
+        <childnode refid="4939" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4948" relation="include">
+        </childnode>
+        <childnode refid="4941" relation="include">
+        </childnode>
+        <childnode refid="4952" relation="include">
+        </childnode>
+      </node>
+      <node id="4996">
+        <label>ATen/cpu/vec256/functional.h</label>
+        <link refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_source"/>
+        <childnode refid="4997" relation="include">
+        </childnode>
+      </node>
+      <node id="4957">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="4958" relation="include">
+        </childnode>
+        <childnode refid="4959" relation="include">
+        </childnode>
+      </node>
+      <node id="4926">
+        <label>string</label>
+      </node>
+      <node id="4991">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="4937" relation="include">
+        </childnode>
+        <childnode refid="4956" relation="include">
+        </childnode>
+      </node>
+      <node id="5001">
+        <label>vec256_double.h</label>
+        <link refid="vec256__double_8h_source"/>
+        <childnode refid="4998" relation="include">
+        </childnode>
+        <childnode refid="4999" relation="include">
+        </childnode>
+      </node>
+      <node id="4992">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="4934" relation="include">
+        </childnode>
+        <childnode refid="4978" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4985" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+      </node>
+      <node id="4916">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="4917" relation="include">
+        </childnode>
+        <childnode refid="4918" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4932" relation="include">
+        </childnode>
+        <childnode refid="4934" relation="include">
+        </childnode>
+        <childnode refid="4953" relation="include">
+        </childnode>
+      </node>
+      <node id="4972">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="4984">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="4934" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4975" relation="include">
+        </childnode>
+        <childnode refid="4966" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+      </node>
+      <node id="4929">
+        <label>exception</label>
+      </node>
+      <node id="4918">
+        <label>stddef.h</label>
+      </node>
+      <node id="4959">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="4958" relation="include">
+        </childnode>
+      </node>
+      <node id="4990">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4946" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+      </node>
+      <node id="4938">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="4928" relation="include">
+        </childnode>
+      </node>
+      <node id="4973">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="4954" relation="include">
+        </childnode>
+        <childnode refid="4974" relation="include">
+        </childnode>
+      </node>
+      <node id="4930">
+        <label>ostream</label>
+      </node>
+      <node id="4915">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+      </node>
+      <node id="4963">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="4936">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4937" relation="include">
+        </childnode>
+        <childnode refid="4944" relation="include">
+        </childnode>
+        <childnode refid="4942" relation="include">
+        </childnode>
+        <childnode refid="4945" relation="include">
+        </childnode>
+      </node>
+      <node id="4979">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4980" relation="include">
+        </childnode>
+      </node>
+      <node id="4976">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="4914">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="4980">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="4958" relation="include">
+        </childnode>
+        <childnode refid="4931" relation="include">
+        </childnode>
+      </node>
+      <node id="4977">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4956" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+      </node>
+      <node id="4994">
+        <label>ATen/native/DispatchStub.h</label>
+        <link refid="_dispatch_stub_8h_source"/>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4922" relation="include">
+        </childnode>
+      </node>
+      <node id="4961">
+        <label>typeinfo</label>
+      </node>
+      <node id="4968">
+        <label>cstdio</label>
+      </node>
+      <node id="4953">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="4917" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+      </node>
+      <node id="4945">
+        <label>vector</label>
+      </node>
+      <node id="4989">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="4986">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="4943">
+        <label>new</label>
+      </node>
+      <node id="4921">
+        <label>utility</label>
+      </node>
+      <node id="4944">
+        <label>array</label>
+      </node>
+      <node id="4931">
+        <label>sstream</label>
+      </node>
+      <node id="4981">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="4954" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4975" relation="include">
+        </childnode>
+        <childnode refid="4973" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4982" relation="include">
+        </childnode>
+        <childnode refid="4983" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="4985" relation="include">
+        </childnode>
+        <childnode refid="4986" relation="include">
+        </childnode>
+      </node>
+      <node id="5000">
+        <label>vec256_float.h</label>
+        <link refid="vec256__float_8h_source"/>
+        <childnode refid="4998" relation="include">
+        </childnode>
+        <childnode refid="4999" relation="include">
+        </childnode>
+      </node>
+      <node id="4983">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="5002">
+        <label>vec256_int.h</label>
+        <link refid="vec256__int_8h_source"/>
+        <childnode refid="4998" relation="include">
+        </childnode>
+        <childnode refid="4999" relation="include">
+        </childnode>
+      </node>
+      <node id="4950">
+        <label>iosfwd</label>
+      </node>
+      <node id="4940">
+        <label>cstdlib</label>
+      </node>
+      <node id="4952">
+        <label>iostream</label>
+      </node>
+      <node id="4928">
+        <label>cstddef</label>
+      </node>
+      <node id="4970">
+        <label>unordered_map</label>
+      </node>
+      <node id="4969">
+        <label>mutex</label>
+      </node>
+      <node id="4998">
+        <label>intrinsics.h</label>
+        <link refid="cpu_2vec256_2intrinsics_8h_source"/>
+      </node>
+      <node id="4913">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4915" relation="include">
+        </childnode>
+        <childnode refid="4916" relation="include">
+        </childnode>
+        <childnode refid="4954" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4965" relation="include">
+        </childnode>
+        <childnode refid="4973" relation="include">
+        </childnode>
+        <childnode refid="4975" relation="include">
+        </childnode>
+        <childnode refid="4934" relation="include">
+        </childnode>
+        <childnode refid="4979" relation="include">
+        </childnode>
+        <childnode refid="4981" relation="include">
+        </childnode>
+        <childnode refid="4987" relation="include">
+        </childnode>
+        <childnode refid="4988" relation="include">
+        </childnode>
+        <childnode refid="4989" relation="include">
+        </childnode>
+        <childnode refid="4990" relation="include">
+        </childnode>
+        <childnode refid="4991" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="4985" relation="include">
+        </childnode>
+        <childnode refid="4978" relation="include">
+        </childnode>
+        <childnode refid="4992" relation="include">
+        </childnode>
+        <childnode refid="4993" relation="include">
+        </childnode>
+      </node>
+      <node id="4967">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="4939" relation="include">
+        </childnode>
+        <childnode refid="4968" relation="include">
+        </childnode>
+        <childnode refid="4940" relation="include">
+        </childnode>
+        <childnode refid="4925" relation="include">
+        </childnode>
+        <childnode refid="4917" relation="include">
+        </childnode>
+        <childnode refid="4969" relation="include">
+        </childnode>
+        <childnode refid="4970" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+        <childnode refid="4945" relation="include">
+        </childnode>
+        <childnode refid="4971" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+      </node>
+      <node id="4919">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="4914" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4929" relation="include">
+        </childnode>
+        <childnode refid="4930" relation="include">
+        </childnode>
+        <childnode refid="4931" relation="include">
+        </childnode>
+        <childnode refid="4926" relation="include">
+        </childnode>
+      </node>
+      <node id="4911">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftMaxKernel.cpp</label>
+        <link refid="_soft_max_kernel_8cpp"/>
+        <childnode refid="4912" relation="include">
+        </childnode>
+        <childnode refid="4939" relation="include">
+        </childnode>
+        <childnode refid="4942" relation="include">
+        </childnode>
+        <childnode refid="4962" relation="include">
+        </childnode>
+        <childnode refid="4990" relation="include">
+        </childnode>
+        <childnode refid="4995" relation="include">
+        </childnode>
+        <childnode refid="4996" relation="include">
+        </childnode>
+        <childnode refid="4997" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+      </node>
+      <node id="4985">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="4965" relation="include">
+        </childnode>
+        <childnode refid="4934" relation="include">
+        </childnode>
+        <childnode refid="4984" relation="include">
+        </childnode>
+        <childnode refid="4978" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4975" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4950" relation="include">
+        </childnode>
+        <childnode refid="4921" relation="include">
+        </childnode>
+      </node>
+      <node id="4975">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="4964" relation="include">
+        </childnode>
+        <childnode refid="4954" relation="include">
+        </childnode>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4976" relation="include">
+        </childnode>
+        <childnode refid="4973" relation="include">
+        </childnode>
+        <childnode refid="4977" relation="include">
+        </childnode>
+        <childnode refid="4957" relation="include">
+        </childnode>
+        <childnode refid="4958" relation="include">
+        </childnode>
+        <childnode refid="4960" relation="include">
+        </childnode>
+        <childnode refid="4934" relation="include">
+        </childnode>
+        <childnode refid="4978" relation="include">
+        </childnode>
+        <childnode refid="4920" relation="include">
+        </childnode>
+      </node>
+      <node id="4922">
+        <label>type_traits</label>
+      </node>
+      <node id="4978">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="4935" relation="include">
+        </childnode>
+        <childnode refid="4919" relation="include">
+        </childnode>
+        <childnode refid="4952" relation="include">
+        </childnode>
+      </node>
+      <node id="4937">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="4938" relation="include">
+        </childnode>
+        <childnode refid="4939" relation="include">
+        </childnode>
+        <childnode refid="4924" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+        <childnode refid="4940" relation="include">
+        </childnode>
+        <childnode refid="4941" relation="include">
+        </childnode>
+        <childnode refid="4923" relation="include">
+        </childnode>
+        <childnode refid="4942" relation="include">
+        </childnode>
+        <childnode refid="4917" relation="include">
+        </childnode>
+        <childnode refid="4943" relation="include">
+        </childnode>
+        <childnode refid="4922" relation="include">
+        </childnode>
+        <childnode refid="4921" relation="include">
+        </childnode>
+        <childnode refid="4914" relation="include">
+        </childnode>
+      </node>
+      <node id="4939">
+        <label>algorithm</label>
+      </node>
+      <node id="4964">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="4956" relation="include">
+        </childnode>
+      </node>
+      <node id="4912">
+        <label>ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+        <childnode refid="4913" relation="include">
+        </childnode>
+        <childnode refid="4994" relation="include">
+        </childnode>
+      </node>
+      <node id="4941">
+        <label>cstring</label>
+      </node>
+      <node id="4917">
+        <label>memory</label>
+      </node>
+      <node id="4923">
+        <label>initializer_list</label>
+      </node>
+      <node id="4995">
+        <label>ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="4913" relation="include">
+        </childnode>
+        <childnode refid="4928" relation="include">
+        </childnode>
+      </node>
+      <node id="4987">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="4952" relation="include">
+        </childnode>
+        <childnode refid="4963" relation="include">
+        </childnode>
+        <childnode refid="4954" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/native/cpu/SoftmaxKernel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Dispatch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Parallel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cpu/vec256/functional.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cpu/vec256/vec256.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/optional.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>[Note<sp/>AVX-SSE<sp/>transitions]<sp/>In<sp/>general<sp/>we<sp/>avoid<sp/>calls<sp/>into<sp/>cmath<sp/>for<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>compiled<sp/>with<sp/>AVX/AVX2<sp/>This<sp/>is<sp/>because<sp/>of<sp/>SSE-AVX<sp/>transitions<sp/>and<sp/>a<sp/>bug<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Glibc2.23<sp/>See<sp/>https://bugs.launchpad.net/ubuntu/+source/glibc/+bug/1663280</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>On<sp/>grainsize:<sp/>The<sp/>grainsize<sp/>is<sp/>chosen<sp/>to<sp/>roughly<sp/>get<sp/>GRAIN_SIZE<sp/>number<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>computations<sp/>per<sp/>task.<sp/>Each<sp/>task<sp/>works<sp/>across<sp/>dim_size<sp/>elements.<sp/>16<sp/>should<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>a<sp/>very<sp/>rough<sp/>approximation<sp/>of<sp/>the<sp/>number<sp/>of<sp/>computations<sp/>per<sp/>dim_size<sp/>element</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>counting<sp/>simple<sp/>computations<sp/>(*,<sp/>+,<sp/>-)<sp/>as<sp/>1<sp/>and<sp/>exp<sp/>or<sp/>log<sp/>as<sp/>4.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_vec_log_softmax_lastdim(</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data_base,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data_base,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>outer_size,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_size)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>int64_t<sp/>CHUNK_SIZE<sp/>=<sp/>(128<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(scalar_t))<sp/>*<sp/>Vec::size;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>int64_t<sp/>grain_size<sp/>=<sp/>internal::GRAIN_SIZE<sp/>/<sp/>(16<sp/>*<sp/>dim_size<sp/>*<sp/>CHUNK_SIZE);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grain_size<sp/>&lt;<sp/>CHUNK_SIZE)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>grain_size<sp/>=<sp/>CHUNK_SIZE;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>parallel_for(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outer_size,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grain_size,</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>ii<sp/>=<sp/>begin;<sp/>ii<sp/>&lt;<sp/>end;<sp/>ii<sp/>+=<sp/>CHUNK_SIZE)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>tmp_sum_scalar[CHUNK_SIZE];</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>max_input_arr[CHUNK_SIZE];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>loop_end<sp/>=<sp/>CHUNK_SIZE;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ii<sp/>+<sp/>CHUNK_SIZE<sp/>&gt;<sp/>end)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_end<sp/>=<sp/>end<sp/>-<sp/>ii;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>loop_end;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>i<sp/>=<sp/>ii<sp/>+<sp/>j;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data<sp/>=<sp/>input_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_input_arr[j]<sp/>=<sp/>vec256::reduce_all&lt;scalar_t&gt;(</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec&amp;<sp/>x,<sp/>Vec&amp;<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec256::max(x,<sp/>y);<sp/>},</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>loop_end;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>i<sp/>=<sp/>ii<sp/>+<sp/>j;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data<sp/>=<sp/>input_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>max_input<sp/>=<sp/>max_input_arr[j];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_sum_scalar[j]<sp/>=<sp/>vec256::map_reduce_all&lt;scalar_t&gt;(</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[max_input](Vec<sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>-<sp/>Vec(max_input)).exp();<sp/>},</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>+<sp/>y;<sp/>},</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>[Note<sp/>AVX-SSE<sp/>transitions]<sp/>for<sp/>why<sp/>this<sp/>should<sp/>call<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>vectorized<sp/>version<sp/>(aside<sp/>from<sp/>perf<sp/>improvements).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec256::map2(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x.log()<sp/>+<sp/>y;<sp/>},</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_sum_scalar,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_sum_scalar,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max_input_arr,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>loop_end);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>loop_end;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>i<sp/>=<sp/>ii<sp/>+<sp/>j;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data<sp/>=<sp/>input_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data<sp/>=<sp/>output_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>tmp_sum<sp/>=<sp/>tmp_sum_scalar[j];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec256::map(</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[tmp_sum](Vec<sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>-<sp/>Vec(tmp_sum);<sp/>},</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t&gt;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_vec_softmax_lastdim(</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data_base,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data_base,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>outer_size,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_size)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>int64_t<sp/>grain_size<sp/>=<sp/>internal::GRAIN_SIZE<sp/>/<sp/>(16<sp/>*<sp/>dim_size);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grain_size<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>grain_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>parallel_for(</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outer_size,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grain_size,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>begin;<sp/>i<sp/>&lt;<sp/>end;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data<sp/>=<sp/>input_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data<sp/>=<sp/>output_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>max_input<sp/>=<sp/>vec256::reduce_all&lt;scalar_t&gt;(</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec&amp;<sp/>x,<sp/>Vec&amp;<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec256::max(x,<sp/>y);<sp/>},</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec256::map(</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[max_input](Vec<sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>-<sp/>Vec(max_input)).exp();<sp/>},</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>tmp_sum<sp/>=<sp/>vec256::reduce_all&lt;scalar_t&gt;(</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>+<sp/>y;<sp/>},<sp/>output_data,<sp/>dim_size);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tmp_sum<sp/>=<sp/>1<sp/>/<sp/>tmp_sum;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec256::map(</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[tmp_sum](Vec<sp/>x)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>Vec(tmp_sum);<sp/>},</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>log_softmax&gt;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_vec_host_softmax_backward_lastdim(</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>grad_input_data_base,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>grad_data_base,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data_base,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>outer_size,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_size)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>int64_t<sp/>grain_size<sp/>=<sp/>internal::GRAIN_SIZE<sp/>/<sp/>(16<sp/>*<sp/>dim_size);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grain_size<sp/>&lt;<sp/>1)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>grain_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>parallel_for(</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outer_size,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grain_size,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[&amp;](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>begin;<sp/>i<sp/>&lt;<sp/>end;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>grad_input_data<sp/>=<sp/>grad_input_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>grad_data<sp/>=<sp/>grad_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data<sp/>=<sp/>output_data_base<sp/>+<sp/>i<sp/>*<sp/>dim_size;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>sum;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log_softmax)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>vec256::reduce_all&lt;scalar_t&gt;(</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec&amp;<sp/>x,<sp/>Vec&amp;<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>+<sp/>y;<sp/>},<sp/>grad_data,<sp/>dim_size);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>vec256::map2_reduce_all&lt;scalar_t&gt;(</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>*<sp/>y;<sp/>},</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>+<sp/>y;<sp/>},</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_data,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(log_softmax)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec256::map2(</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[sum](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>x<sp/>-<sp/>((y.exp())<sp/>*<sp/>Vec(sum));<sp/>},</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_input_data,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_data,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec256::map2(</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[sum](Vec<sp/>x,<sp/>Vec<sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>-<sp/>Vec(sum))<sp/>*<sp/>y;<sp/>},</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_input_data,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_data,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogSoftMax&gt;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">vec_host_softmax_lastdim<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>apply(Tensor&amp;<sp/>output,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>outer_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_size<sp/>=<sp/>input.size(input.ndimension()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>input.ndimension()<sp/>-<sp/>1;<sp/>++i)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outer_size<sp/>*=<sp/>input.size(i);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data_base<sp/>=<sp/>input.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data_base<sp/>=<sp/>output.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(LogSoftMax)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_vec_log_softmax_lastdim(</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data_base,<sp/>output_data_base,<sp/>outer_size,<sp/>dim_size);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_vec_softmax_lastdim(</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_data_base,<sp/>output_data_base,<sp/>outer_size,<sp/>dim_size);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>LogSoftMax&gt;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">vec_host_softmax_backward_lastdim<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>apply(Tensor&amp;<sp/>grad_input,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>grad,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>outer_size<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>dim_size<sp/>=<sp/>grad.size(grad.ndimension()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>grad.ndimension()<sp/>-<sp/>1;<sp/>++i)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>outer_size<sp/>*=<sp/>grad.size(i);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>grad_input_data_base<sp/>=<sp/>grad_input.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>grad_data_base<sp/>=<sp/>grad.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data_base<sp/>=<sp/>output.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/>_vec_host_softmax_backward_lastdim&lt;scalar_t,<sp/>LogSoftMax&gt;(</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_input_data_base,</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_data_base,</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>output_data_base,</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outer_size,</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dim_size);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>softmax_lastdim_kernel_impl(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type(),<sp/></highlight><highlight class="stringliteral">&quot;softmax_lastdim_kernel_impl&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>vec_host_softmax_lastdim&lt;scalar_t,<sp/>false&gt;::apply(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="224"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>log_softmax_lastdim_kernel_impl(</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor&amp;<sp/>result,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type(),<sp/></highlight><highlight class="stringliteral">&quot;log_softmax_lastdim_kernel_impl&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec_host_softmax_lastdim&lt;scalar_t,<sp/>true&gt;::apply(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>softmax_backward_lastdim_kernel_impl(</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor&amp;<sp/>grad_input,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>grad,</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grad.type(),<sp/></highlight><highlight class="stringliteral">&quot;softmax_backward_lastdim_kernel_impl&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec_host_softmax_backward_lastdim&lt;scalar_t,<sp/>false&gt;::apply(</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_input,<sp/>grad,<sp/>output);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>log_softmax_backward_lastdim_kernel_impl(</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor&amp;<sp/>grad_input,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>grad,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grad.type(),<sp/></highlight><highlight class="stringliteral">&quot;log_softmax_backward_lastdim_kernel_impl&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec_host_softmax_backward_lastdim&lt;scalar_t,<sp/>true&gt;::apply(</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_input,<sp/>grad,<sp/>output);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>anonymous<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">REGISTER_DISPATCH(softmax_lastdim_kernel,<sp/>&amp;softmax_lastdim_kernel_impl);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">REGISTER_DISPATCH(log_softmax_lastdim_kernel,<sp/>&amp;log_softmax_lastdim_kernel_impl);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">REGISTER_DISPATCH(</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>softmax_backward_lastdim_kernel,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;softmax_backward_lastdim_kernel_impl);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal">REGISTER_DISPATCH(</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>log_softmax_backward_lastdim_kernel,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>&amp;log_softmax_backward_lastdim_kernel_impl);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftMaxKernel.cpp"/>
+  </compounddef>
+</doxygen>

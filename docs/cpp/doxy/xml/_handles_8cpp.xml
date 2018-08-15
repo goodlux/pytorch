@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_handles_8cpp" kind="file" language="C++">
+    <compoundname>Handles.cpp</compoundname>
+    <includes refid="_handles_8h" local="yes">Handles.h</includes>
+    <includes refid="cuda_2_exceptions_8h" local="yes">ATen/cuda/Exceptions.h</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">mutex</includes>
+    <incdepgraph>
+      <node id="2456">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="2457" relation="include">
+        </childnode>
+        <childnode refid="2458" relation="include">
+        </childnode>
+        <childnode refid="2459" relation="include">
+        </childnode>
+        <childnode refid="2460" relation="include">
+        </childnode>
+        <childnode refid="2461" relation="include">
+        </childnode>
+        <childnode refid="2462" relation="include">
+        </childnode>
+        <childnode refid="2463" relation="include">
+        </childnode>
+      </node>
+      <node id="2461">
+        <label>functional</label>
+      </node>
+      <node id="2451">
+        <label>cudnn.h</label>
+      </node>
+      <node id="2460">
+        <label>cassert</label>
+      </node>
+      <node id="2463">
+        <label>stdexcept</label>
+      </node>
+      <node id="2462">
+        <label>string</label>
+      </node>
+      <node id="2453">
+        <label>ATen/cuda/Exceptions.h</label>
+        <link refid="cuda_2_exceptions_8h_source"/>
+        <childnode refid="2454" relation="include">
+        </childnode>
+      </node>
+      <node id="2449">
+        <label>Handles.h</label>
+        <link refid="_handles_8h_source"/>
+        <childnode refid="2450" relation="include">
+        </childnode>
+        <childnode refid="2452" relation="include">
+        </childnode>
+      </node>
+      <node id="2465">
+        <label>exception</label>
+      </node>
+      <node id="2466">
+        <label>ostream</label>
+      </node>
+      <node id="2452">
+        <label>ATen/cuda/ATenCUDAGeneral.h</label>
+        <link refid="_a_ten_c_u_d_a_general_8h_source"/>
+      </node>
+      <node id="2455">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="2457">
+        <label>utility</label>
+      </node>
+      <node id="2467">
+        <label>sstream</label>
+      </node>
+      <node id="2464">
+        <label>cstddef</label>
+      </node>
+      <node id="2468">
+        <label>unordered_map</label>
+      </node>
+      <node id="2469">
+        <label>mutex</label>
+      </node>
+      <node id="2454">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="2455" relation="include">
+        </childnode>
+        <childnode refid="2456" relation="include">
+        </childnode>
+        <childnode refid="2464" relation="include">
+        </childnode>
+        <childnode refid="2465" relation="include">
+        </childnode>
+        <childnode refid="2466" relation="include">
+        </childnode>
+        <childnode refid="2467" relation="include">
+        </childnode>
+        <childnode refid="2462" relation="include">
+        </childnode>
+      </node>
+      <node id="2458">
+        <label>type_traits</label>
+      </node>
+      <node id="2450">
+        <label>cudnn-wrapper.h</label>
+        <link refid="cudnn-wrapper_8h_source"/>
+        <childnode refid="2451" relation="include">
+        </childnode>
+      </node>
+      <node id="2459">
+        <label>initializer_list</label>
+      </node>
+      <node id="2448">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Handles.cpp</label>
+        <link refid="_handles_8cpp"/>
+        <childnode refid="2449" relation="include">
+        </childnode>
+        <childnode refid="2453" relation="include">
+        </childnode>
+        <childnode refid="2468" relation="include">
+        </childnode>
+        <childnode refid="2469" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_handles_8cpp_1a85b768230c0a624586442a144fed188c" prot="public" static="no" mutable="no">
+        <type>cudnnHandle_t</type>
+        <definition>cudnnHandle_t handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Handles.cpp" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Handles.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;Handles.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cuda/Exceptions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Get<sp/>rid<sp/>of<sp/>the<sp/>mutex,<sp/>and<sp/>just<sp/>initialize<sp/>these</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>handles<sp/>in<sp/>at::Context<sp/>along<sp/>with<sp/>lazy<sp/>CUDA<sp/>initialization</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Handle<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>cudnnHandle_t<sp/>handle;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>Handle()<sp/>:<sp/>handle(NULL)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CUDNN_CHECK(cudnnCreate(&amp;handle));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>~Handle()<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(handle)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>because<sp/>of<sp/>something<sp/>dumb<sp/>in<sp/>the<sp/>ordering<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>destruction.<sp/>Sometimes<sp/>atexit,<sp/>the<sp/>cuda<sp/>context<sp/>(or<sp/>something)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>would<sp/>already<sp/>be<sp/>destroyed<sp/>by<sp/>the<sp/>time<sp/>this<sp/>gets<sp/>destroyed.<sp/>It</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>happens<sp/>in<sp/>fbcode<sp/>setting.<sp/>@colesbury<sp/>and<sp/>I<sp/>decided<sp/>to<sp/>not<sp/>destroy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>handle<sp/>as<sp/>a<sp/>workaround.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>-<sp/>@soumith</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NO_CUDNN_DESTROY_HANDLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cudnnDestroy(handle);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">std::mutex<sp/>mutex;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">std::unordered_map&lt;int,<sp/>Handle&gt;<sp/>handles;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">cudnnHandle_t<sp/>getCudnnHandle()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>AT_CUDA_CHECK(cudaGetDevice(&amp;<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>));</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>guard(mutex);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>handles[<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>].handle;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::cudnn</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Handles.cpp"/>
+  </compounddef>
+</doxygen>

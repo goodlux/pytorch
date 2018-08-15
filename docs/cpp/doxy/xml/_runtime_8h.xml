@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_runtime_8h" kind="file" language="C++">
+    <compoundname>Runtime.h</compoundname>
+    <includes local="no">mkldnn.hpp</includes>
+    <includedby refid="_runtime_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/mkldnn/Runtime.cpp</includedby>
+    <incdepgraph>
+      <node id="4476">
+        <label>mkldnn.hpp</label>
+      </node>
+      <node id="4475">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/mkldnn/Runtime.h</label>
+        <link refid="_runtime_8h"/>
+        <childnode refid="4476" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structat_1_1native_1_1_cpu_engine" prot="public">at::native::CpuEngine</innerclass>
+    <innerclass refid="structat_1_1native_1_1_stream" prot="public">at::native::Stream</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <innernamespace refid="namespacemkldnn">mkldnn</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mkldnn.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemkldnn" kindref="compound">mkldnn</ref>;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CpuEngine<sp/>singleton</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structat_1_1native_1_1_cpu_engine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref>&amp;<sp/>Instance()<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>myInstance;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>engine&amp;<sp/>get_engine()<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_cpu_engine;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref>(<ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref>&amp;<sp/>operator=(<ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref>():_cpu_engine(mkldnn::engine::cpu,<sp/>0)<sp/>{}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>~<ref refid="structat_1_1native_1_1_cpu_engine" kindref="compound">CpuEngine</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>engine<sp/>_cpu_engine;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Stream<sp/>singleton</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structat_1_1native_1_1_stream" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref>&amp;<sp/>Instance()<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref><sp/>myInstance;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>myInstance;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>stream&amp;<sp/>get_stream()<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_cpu_stream;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref>(<ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref>&amp;<sp/>operator=(<ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref>():_cpu_stream(mkldnn::stream::kind::eager)<sp/>{}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>~<ref refid="structat_1_1native_1_1_stream" kindref="compound">Stream</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>stream<sp/>_cpu_stream;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/mkldnn/Runtime.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_cu_f_f_t_plan_cache_8h" kind="file" language="C++">
+    <compoundname>CuFFTPlanCache.h</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="_c_u_d_a_context_8h" local="yes">ATen/cuda/CUDAContext.h</includes>
+    <includes refid="_config_8h" local="yes">ATen/Config.h</includes>
+    <includes refid="_cu_f_f_t_utils_8h" local="yes">ATen/native/cuda/CuFFTUtils.h</includes>
+    <includes refid="_params_hash_8h" local="yes">ATen/native/utils/ParamsHash.h</includes>
+    <includes local="no">list</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">cufft.h</includes>
+    <includes local="no">cufftXt.h</includes>
+    <includedby refid="_c_u_d_a_hooks_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp</includedby>
+    <incdepgraph>
+      <node id="5528">
+        <label>list</label>
+      </node>
+      <node id="5444">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="5445" relation="include">
+        </childnode>
+        <childnode refid="5446" relation="include">
+        </childnode>
+        <childnode refid="5447" relation="include">
+        </childnode>
+        <childnode refid="5448" relation="include">
+        </childnode>
+        <childnode refid="5449" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5451" relation="include">
+        </childnode>
+      </node>
+      <node id="5490">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="5440" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5488" relation="include">
+        </childnode>
+        <childnode refid="5491" relation="include">
+        </childnode>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5449" relation="include">
+        </childnode>
+        <childnode refid="5441" relation="include">
+        </childnode>
+      </node>
+      <node id="5458">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5474" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5449" relation="include">
+        </childnode>
+      </node>
+      <node id="5457">
+        <label>atomic</label>
+      </node>
+      <node id="5449">
+        <label>functional</label>
+      </node>
+      <node id="5495">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5485" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5459">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="5460" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5470" relation="include">
+        </childnode>
+        <childnode refid="5472" relation="include">
+        </childnode>
+        <childnode refid="5476" relation="include">
+        </childnode>
+      </node>
+      <node id="5471">
+        <label>limits</label>
+      </node>
+      <node id="5479">
+        <label>assert.h</label>
+      </node>
+      <node id="5484">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5460" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5483" relation="include">
+        </childnode>
+        <childnode refid="5463" relation="include">
+        </childnode>
+        <childnode refid="5455" relation="include">
+        </childnode>
+        <childnode refid="5485" relation="include">
+        </childnode>
+        <childnode refid="5486" relation="include">
+        </childnode>
+      </node>
+      <node id="5466">
+        <label>iterator</label>
+      </node>
+      <node id="5478">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="5479" relation="include">
+        </childnode>
+        <childnode refid="5480" relation="include">
+        </childnode>
+        <childnode refid="5451" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5445" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5470" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5481" relation="include">
+        </childnode>
+        <childnode refid="5484" relation="include">
+        </childnode>
+      </node>
+      <node id="5498">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="5472">
+        <label>cstdint</label>
+      </node>
+      <node id="5524">
+        <label>ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="5437" relation="include">
+        </childnode>
+        <childnode refid="5523" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5451" relation="include">
+        </childnode>
+        <childnode refid="5455" relation="include">
+        </childnode>
+        <childnode refid="5525" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+      </node>
+      <node id="5525">
+        <label>cufft.h</label>
+      </node>
+      <node id="5506">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="5480">
+        <label>stdint.h</label>
+      </node>
+      <node id="5517">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="5473">
+        <label>cmath</label>
+      </node>
+      <node id="5448">
+        <label>cassert</label>
+      </node>
+      <node id="5489">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5439" relation="include">
+        </childnode>
+        <childnode refid="5488" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5484" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5490" relation="include">
+        </childnode>
+        <childnode refid="5496" relation="include">
+        </childnode>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5493" relation="include">
+        </childnode>
+        <childnode refid="5472" relation="include">
+        </childnode>
+      </node>
+      <node id="5475">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5465" relation="include">
+        </childnode>
+        <childnode refid="5471" relation="include">
+        </childnode>
+      </node>
+      <node id="5451">
+        <label>stdexcept</label>
+      </node>
+      <node id="5512">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="5478" relation="include">
+        </childnode>
+        <childnode refid="5499" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5451" relation="include">
+        </childnode>
+      </node>
+      <node id="5518">
+        <label>ATen/cuda/CUDAContext.h</label>
+        <link refid="_c_u_d_a_context_8h_source"/>
+        <childnode refid="5489" relation="include">
+        </childnode>
+        <childnode refid="5519" relation="include">
+        </childnode>
+        <childnode refid="5521" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5472" relation="include">
+        </childnode>
+        <childnode refid="5520" relation="include">
+        </childnode>
+        <childnode refid="5522" relation="include">
+        </childnode>
+      </node>
+      <node id="5486">
+        <label>numeric</label>
+      </node>
+      <node id="5482">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="5457" relation="include">
+        </childnode>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5456" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5444" relation="include">
+        </childnode>
+      </node>
+      <node id="5470">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5471" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5472" relation="include">
+        </childnode>
+        <childnode refid="5451" relation="include">
+        </childnode>
+        <childnode refid="5445" relation="include">
+        </childnode>
+        <childnode refid="5473" relation="include">
+        </childnode>
+        <childnode refid="5474" relation="include">
+        </childnode>
+        <childnode refid="5475" relation="include">
+        </childnode>
+      </node>
+      <node id="5456">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="5457" relation="include">
+        </childnode>
+      </node>
+      <node id="5481">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="5482" relation="include">
+        </childnode>
+        <childnode refid="5483" relation="include">
+        </childnode>
+      </node>
+      <node id="5450">
+        <label>string</label>
+      </node>
+      <node id="5521">
+        <label>ATen/cuda/Exceptions.h</label>
+        <link refid="cuda_2_exceptions_8h_source"/>
+        <childnode refid="5443" relation="include">
+        </childnode>
+      </node>
+      <node id="5515">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="5461" relation="include">
+        </childnode>
+        <childnode refid="5480" relation="include">
+        </childnode>
+      </node>
+      <node id="5516">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="5458" relation="include">
+        </childnode>
+        <childnode refid="5502" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5509" relation="include">
+        </childnode>
+        <childnode refid="5444" relation="include">
+        </childnode>
+      </node>
+      <node id="5523">
+        <label>ATen/Config.h</label>
+        <link refid="_config_8h_source"/>
+      </node>
+      <node id="5440">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5442" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5456" relation="include">
+        </childnode>
+        <childnode refid="5458" relation="include">
+        </childnode>
+        <childnode refid="5477" relation="include">
+        </childnode>
+      </node>
+      <node id="5526">
+        <label>cufftXt.h</label>
+      </node>
+      <node id="5496">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="5508">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="5458" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5499" relation="include">
+        </childnode>
+        <childnode refid="5490" relation="include">
+        </childnode>
+        <childnode refid="5452" relation="include">
+        </childnode>
+      </node>
+      <node id="5453">
+        <label>exception</label>
+      </node>
+      <node id="5442">
+        <label>stddef.h</label>
+      </node>
+      <node id="5483">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="5482" relation="include">
+        </childnode>
+      </node>
+      <node id="5514">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5470" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+      </node>
+      <node id="5462">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="5452" relation="include">
+        </childnode>
+      </node>
+      <node id="5497">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="5478" relation="include">
+        </childnode>
+        <childnode refid="5498" relation="include">
+        </childnode>
+      </node>
+      <node id="5454">
+        <label>ostream</label>
+      </node>
+      <node id="5439">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5487">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="5460">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5461" relation="include">
+        </childnode>
+        <childnode refid="5468" relation="include">
+        </childnode>
+        <childnode refid="5466" relation="include">
+        </childnode>
+        <childnode refid="5469" relation="include">
+        </childnode>
+      </node>
+      <node id="5503">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5504" relation="include">
+        </childnode>
+      </node>
+      <node id="5500">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="5438">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="5504">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="5482" relation="include">
+        </childnode>
+        <childnode refid="5455" relation="include">
+        </childnode>
+      </node>
+      <node id="5501">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5480" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+      </node>
+      <node id="5485">
+        <label>typeinfo</label>
+      </node>
+      <node id="5492">
+        <label>cstdio</label>
+      </node>
+      <node id="5436">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h"/>
+        <childnode refid="5437" relation="include">
+        </childnode>
+        <childnode refid="5518" relation="include">
+        </childnode>
+        <childnode refid="5523" relation="include">
+        </childnode>
+        <childnode refid="5524" relation="include">
+        </childnode>
+        <childnode refid="5527" relation="include">
+        </childnode>
+        <childnode refid="5528" relation="include">
+        </childnode>
+        <childnode refid="5494" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5451" relation="include">
+        </childnode>
+        <childnode refid="5455" relation="include">
+        </childnode>
+        <childnode refid="5471" relation="include">
+        </childnode>
+        <childnode refid="5525" relation="include">
+        </childnode>
+        <childnode refid="5526" relation="include">
+        </childnode>
+      </node>
+      <node id="5477">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5469">
+        <label>vector</label>
+      </node>
+      <node id="5513">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="5510">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="5467">
+        <label>new</label>
+      </node>
+      <node id="5445">
+        <label>utility</label>
+      </node>
+      <node id="5468">
+        <label>array</label>
+      </node>
+      <node id="5455">
+        <label>sstream</label>
+      </node>
+      <node id="5505">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="5478" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5499" relation="include">
+        </childnode>
+        <childnode refid="5497" relation="include">
+        </childnode>
+        <childnode refid="5488" relation="include">
+        </childnode>
+        <childnode refid="5506" relation="include">
+        </childnode>
+        <childnode refid="5507" relation="include">
+        </childnode>
+        <childnode refid="5508" relation="include">
+        </childnode>
+        <childnode refid="5509" relation="include">
+        </childnode>
+        <childnode refid="5510" relation="include">
+        </childnode>
+      </node>
+      <node id="5507">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="5474">
+        <label>iosfwd</label>
+      </node>
+      <node id="5464">
+        <label>cstdlib</label>
+      </node>
+      <node id="5476">
+        <label>iostream</label>
+      </node>
+      <node id="5452">
+        <label>cstddef</label>
+      </node>
+      <node id="5519">
+        <label>ATen/cuda/CUDAStream.h</label>
+        <link refid="cuda_2_c_u_d_a_stream_8h_source"/>
+        <childnode refid="5472" relation="include">
+        </childnode>
+        <childnode refid="5445" relation="include">
+        </childnode>
+        <childnode refid="5520" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5494">
+        <label>unordered_map</label>
+      </node>
+      <node id="5493">
+        <label>mutex</label>
+      </node>
+      <node id="5520">
+        <label>cuda_runtime_api.h</label>
+      </node>
+      <node id="5437">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5439" relation="include">
+        </childnode>
+        <childnode refid="5440" relation="include">
+        </childnode>
+        <childnode refid="5478" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5488" relation="include">
+        </childnode>
+        <childnode refid="5489" relation="include">
+        </childnode>
+        <childnode refid="5497" relation="include">
+        </childnode>
+        <childnode refid="5499" relation="include">
+        </childnode>
+        <childnode refid="5458" relation="include">
+        </childnode>
+        <childnode refid="5503" relation="include">
+        </childnode>
+        <childnode refid="5505" relation="include">
+        </childnode>
+        <childnode refid="5511" relation="include">
+        </childnode>
+        <childnode refid="5512" relation="include">
+        </childnode>
+        <childnode refid="5513" relation="include">
+        </childnode>
+        <childnode refid="5514" relation="include">
+        </childnode>
+        <childnode refid="5515" relation="include">
+        </childnode>
+        <childnode refid="5508" relation="include">
+        </childnode>
+        <childnode refid="5509" relation="include">
+        </childnode>
+        <childnode refid="5502" relation="include">
+        </childnode>
+        <childnode refid="5516" relation="include">
+        </childnode>
+        <childnode refid="5517" relation="include">
+        </childnode>
+      </node>
+      <node id="5491">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="5463" relation="include">
+        </childnode>
+        <childnode refid="5492" relation="include">
+        </childnode>
+        <childnode refid="5464" relation="include">
+        </childnode>
+        <childnode refid="5449" relation="include">
+        </childnode>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5493" relation="include">
+        </childnode>
+        <childnode refid="5494" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+        <childnode refid="5469" relation="include">
+        </childnode>
+        <childnode refid="5495" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5443">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="5438" relation="include">
+        </childnode>
+        <childnode refid="5444" relation="include">
+        </childnode>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5453" relation="include">
+        </childnode>
+        <childnode refid="5454" relation="include">
+        </childnode>
+        <childnode refid="5455" relation="include">
+        </childnode>
+        <childnode refid="5450" relation="include">
+        </childnode>
+      </node>
+      <node id="5509">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="5489" relation="include">
+        </childnode>
+        <childnode refid="5458" relation="include">
+        </childnode>
+        <childnode refid="5508" relation="include">
+        </childnode>
+        <childnode refid="5502" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5499" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5474" relation="include">
+        </childnode>
+        <childnode refid="5445" relation="include">
+        </childnode>
+      </node>
+      <node id="5499">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="5488" relation="include">
+        </childnode>
+        <childnode refid="5478" relation="include">
+        </childnode>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5500" relation="include">
+        </childnode>
+        <childnode refid="5497" relation="include">
+        </childnode>
+        <childnode refid="5501" relation="include">
+        </childnode>
+        <childnode refid="5481" relation="include">
+        </childnode>
+        <childnode refid="5482" relation="include">
+        </childnode>
+        <childnode refid="5484" relation="include">
+        </childnode>
+        <childnode refid="5458" relation="include">
+        </childnode>
+        <childnode refid="5502" relation="include">
+        </childnode>
+        <childnode refid="5444" relation="include">
+        </childnode>
+      </node>
+      <node id="5446">
+        <label>type_traits</label>
+      </node>
+      <node id="5502">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="5459" relation="include">
+        </childnode>
+        <childnode refid="5443" relation="include">
+        </childnode>
+        <childnode refid="5476" relation="include">
+        </childnode>
+      </node>
+      <node id="5527">
+        <label>ATen/native/utils/ParamsHash.h</label>
+        <link refid="_params_hash_8h_source"/>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5493" relation="include">
+        </childnode>
+      </node>
+      <node id="5522">
+        <label>cusparse.h</label>
+      </node>
+      <node id="5461">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="5462" relation="include">
+        </childnode>
+        <childnode refid="5463" relation="include">
+        </childnode>
+        <childnode refid="5448" relation="include">
+        </childnode>
+        <childnode refid="5452" relation="include">
+        </childnode>
+        <childnode refid="5464" relation="include">
+        </childnode>
+        <childnode refid="5465" relation="include">
+        </childnode>
+        <childnode refid="5447" relation="include">
+        </childnode>
+        <childnode refid="5466" relation="include">
+        </childnode>
+        <childnode refid="5441" relation="include">
+        </childnode>
+        <childnode refid="5467" relation="include">
+        </childnode>
+        <childnode refid="5446" relation="include">
+        </childnode>
+        <childnode refid="5445" relation="include">
+        </childnode>
+        <childnode refid="5438" relation="include">
+        </childnode>
+      </node>
+      <node id="5463">
+        <label>algorithm</label>
+      </node>
+      <node id="5488">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="5480" relation="include">
+        </childnode>
+      </node>
+      <node id="5465">
+        <label>cstring</label>
+      </node>
+      <node id="5441">
+        <label>memory</label>
+      </node>
+      <node id="5447">
+        <label>initializer_list</label>
+      </node>
+      <node id="5511">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="5476" relation="include">
+        </childnode>
+        <childnode refid="5487" relation="include">
+        </childnode>
+        <childnode refid="5478" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" prot="public">at::native::detail::CuFFTParams</innerclass>
+    <innerclass refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_handle_deleter" prot="public">at::native::detail::CuFFTHandleDeleter</innerclass>
+    <innerclass refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" prot="public">at::native::detail::CuFFTConfig</innerclass>
+    <innerclass refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" prot="public">at::native::detail::CuFFTParamsLRUCache</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <innernamespace refid="namespaceat_1_1native_1_1detail">at::native::detail</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cuda/CUDAContext.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/native/cuda/CuFFTUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/native/utils/ParamsHash.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufft.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cufftXt.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>POD<sp/>struct<sp/>is<sp/>used<sp/>to<sp/>let<sp/>us<sp/>easily<sp/>compute<sp/>hashes<sp/>of<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>parameters.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>will<sp/>be<sp/>the<sp/>**key**<sp/>to<sp/>the<sp/>plan<sp/>cache.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" kindref="compound">CuFFTParams</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>at::ScalarType<sp/>scalar_type_;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>int64_t<sp/>input_sizes_[max_rank<sp/>+<sp/>2];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>int64_t<sp/>input_strides_[max_rank<sp/>+<sp/>2];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>uint8_t<sp/>signal_ndim_;<sp/><sp/></highlight><highlight class="comment">//<sp/>between<sp/>1<sp/>and<sp/>max_rank,<sp/>i.e.,<sp/>1<sp/>&lt;=<sp/>signal_ndim<sp/>&lt;=<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_input_;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_output_;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>int64_t<sp/>signal_sizes_[max_rank];</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>onesided_;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>This<sp/>can&apos;t<sp/>be<sp/>a<sp/>constructor,<sp/>because<sp/>then<sp/>CuFFTParams</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>would<sp/>not<sp/>be<sp/>a<sp/>POD<sp/>anymore.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCuFFTParams(<ref refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" kindref="compound">CuFFTParams</ref>*<sp/>params,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref>&amp;<sp/>input,<sp/>int64_t<sp/>signal_ndim,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_input,</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_output,<sp/><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref><sp/>checked_signal_sizes,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>onesided)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>memset(params,<sp/>0,<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" kindref="compound">CuFFTParams</ref>));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>params-&gt;scalar_type_<sp/>=<sp/>input.type().scalarType();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>!=<sp/>input.dim();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>params-&gt;input_sizes_[i]<sp/>=<sp/>input.size(i);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.size(i)<sp/>!=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>params-&gt;input_strides_[i]<sp/>=<sp/>input.stride(i);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>params-&gt;signal_ndim_<sp/>=<sp/>(uint8_t)<sp/>signal_ndim;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>params-&gt;complex_input_<sp/>=<sp/>complex_input;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>params-&gt;complex_output_<sp/>=<sp/>complex_output;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>!=<sp/>checked_signal_sizes.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>params-&gt;signal_sizes_[i]<sp/>=<sp/>checked_signal_sizes[i];</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>params-&gt;onesided_<sp/>=<sp/>onesided;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_handle_deleter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_handle_deleter" kindref="compound">CuFFTHandleDeleter</ref><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(cufftHandle*<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CUFFT_CHECK(cufftDestroy(*x));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">__forceinline__</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_pow_of_two(int64_t<sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(x<sp/>&amp;<sp/>(x<sp/>-<sp/>1))<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>class<sp/>contains<sp/>all<sp/>the<sp/>information<sp/>needed<sp/>to<sp/>execute<sp/>a<sp/>cuFFT<sp/>plan:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>1.<sp/>the<sp/>plan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>2.<sp/>whether<sp/>to<sp/>clone<sp/>input<sp/>before<sp/>executing<sp/>the<sp/>plan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>3.<sp/>the<sp/>workspace<sp/>size<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Its<sp/>constructor<sp/>also<sp/>guarantees<sp/>that<sp/>if<sp/>`input`<sp/>is<sp/>contiguous<sp/>in<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>dimensions,<sp/>e.g.,<sp/>from<sp/>cloning,<sp/>clone_input<sp/>will<sp/>be<sp/>false.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>class<sp/>will<sp/>be<sp/>the<sp/>**value**<sp/>in<sp/>the<sp/>plan<sp/>cache.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>**owns**<sp/>the<sp/>raw<sp/>plan<sp/>via<sp/>a<sp/>unique_ptr.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>move<sp/>semantics<sp/>is<sp/>enought<sp/>for<sp/>this<sp/>class.<sp/>Although<sp/>we<sp/>already<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>unique_ptr<sp/>for<sp/>the<sp/>plan,<sp/>still<sp/>remove<sp/>copy<sp/>constructor<sp/>and<sp/>assignment<sp/>op<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>don&apos;t<sp/>accidentally<sp/>copy<sp/>and<sp/>take<sp/>perf<sp/>hit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref>&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref>&amp;<sp/>operator=(<ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref>(<ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref>&amp;<sp/>input,<sp/>int64_t<sp/>signal_ndim,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_input,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>complex_output,<sp/><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref><sp/>checked_signal_sizes,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>onesided,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref><sp/>output_sizes)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>signal<sp/>sizes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>long<sp/>int&gt;<sp/>signal_sizes(checked_signal_sizes.begin(),</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>checked_signal_sizes.end());</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input<sp/>batch<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>batch<sp/>=<sp/>input.size(0);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>cuFFT<sp/>has<sp/>limited<sp/>non-unit<sp/>stride<sp/>support<sp/>and<sp/>various<sp/>constraints,<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>a<sp/>flag<sp/>to<sp/>keep<sp/>track<sp/>throughout<sp/>this<sp/>function<sp/>to<sp/>see<sp/>if<sp/>we<sp/>need<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input<sp/>=<sp/>input.clone();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>clone_input<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>half,<sp/>base<sp/>strides<sp/>on<sp/>the<sp/>real<sp/>part<sp/>of<sp/>real-to-complex<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>complex-to-real<sp/>transforms<sp/>are<sp/>not<sp/>supported.<sp/>Since<sp/>our<sp/>output<sp/>is<sp/>always</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>contiguous,<sp/>only<sp/>need<sp/>to<sp/>check<sp/>real-to-complex<sp/>case.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.type().scalarType()<sp/>==<sp/>ScalarType::Half)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cuFFT<sp/>on<sp/>half<sp/>requires<sp/>compute<sp/>capability<sp/>of<sp/>at<sp/>least<sp/>SM_53</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>dev_prop<sp/>=<sp/>at::cuda::getCurrentDeviceProperties();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dev_prop-&gt;major<sp/>&lt;<sp/>5<sp/>||<sp/>(dev_prop-&gt;major<sp/>==<sp/>5<sp/>&amp;&amp;<sp/>dev_prop-&gt;minor<sp/>&lt;<sp/>3))<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cuFFT<sp/>doesn&apos;t<sp/>support<sp/>signals<sp/>of<sp/>half<sp/>type<sp/>with<sp/>compute<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;capability<sp/>less<sp/>than<sp/>SM_53,<sp/>but<sp/>the<sp/>device<sp/>containing<sp/>input<sp/>half<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;tensor<sp/>only<sp/>has<sp/>SM_&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>dev_prop-&gt;major<sp/>&lt;&lt;<sp/>dev_prop-&gt;minor;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(ss.str());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>signal_ndim;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>signal_size<sp/>=<sp/>checked_signal_sizes[i];</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!is_pow_of_two(signal_size))<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cuFFT<sp/>doesn&apos;t<sp/>support<sp/>signals<sp/>of<sp/>half<sp/>type<sp/>with<sp/>size<sp/>at<sp/>any<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;dimension<sp/>that<sp/>is<sp/>not<sp/>a<sp/>power<sp/>of<sp/>two,<sp/>but<sp/>got<sp/>a<sp/>signal<sp/>size<sp/>of<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>checked_signal_sizes;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(ss.str());</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>clone_input<sp/>|=<sp/>input.stride(signal_ndim)<sp/>!=<sp/>1;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>the<sp/>input<sp/>sizes<sp/>and<sp/>strides<sp/>to<sp/>see<sp/>if<sp/>we<sp/>need<sp/>to<sp/>make<sp/>it<sp/>contiguous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cuFFT<sp/>doesn&apos;t<sp/>support<sp/>batch<sp/>dim<sp/>with<sp/>stride<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>clone_input<sp/>|=<sp/>input.stride(0)<sp/>==<sp/>0;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(complex_input)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Real/imag<sp/>dimension<sp/>must<sp/>be<sp/>like<sp/>complex<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>clone_input<sp/>|=<sp/>input.stride(-1)<sp/>!=<sp/>1;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Strides<sp/>of<sp/>other<sp/>dimensions<sp/>needs<sp/>to<sp/>be<sp/>aligned<sp/>when<sp/>viewed<sp/>as<sp/>of<sp/>complex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type,<sp/>i.e.,<sp/>multiples<sp/>of<sp/>2.<sp/>We<sp/>check<sp/>the<sp/>batch<sp/>dim<sp/>and<sp/>last<sp/>signal<sp/>dim</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>here.<sp/>If<sp/>the<sp/>input<sp/>can<sp/>be<sp/>viewed<sp/>as<sp/>having<sp/>embedded<sp/>strides,<sp/>the<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>signal<sp/>dims<sp/>will<sp/>also<sp/>satisfy<sp/>this.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>NOTE<sp/>[<sp/>cuFFT<sp/>Embedded<sp/>Strides<sp/>]<sp/>in<sp/>native/cuda/SpectralOps.cu.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>clone_input<sp/>|=<sp/>(batch<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>input.stride(0)<sp/>%<sp/>2<sp/>!=<sp/>0)<sp/>||</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input.stride(signal_ndim)<sp/>%<sp/>2<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Checks<sp/>if<sp/>input<sp/>strides<sp/>can<sp/>be<sp/>viewed<sp/>as<sp/>embedded.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>NOTE<sp/>[<sp/>cuFFT<sp/>Embedded<sp/>Strides<sp/>].</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Figure<sp/>out<sp/>why<sp/>windows<sp/>fails<sp/>to<sp/>compile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at::optional&lt;std::vector&lt;long<sp/>long<sp/>int&gt;&gt;<sp/>inembed_opt<sp/>=<sp/>at::nullopt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Then<sp/>move<sp/>the<sp/>following<sp/>to<sp/>a<sp/>helper<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>long<sp/>int&gt;<sp/>inembed(signal_ndim);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!clone_input)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>istrides<sp/>=<sp/>input.strides();</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>last_istride<sp/>=<sp/>istrides[signal_ndim];</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>clone_input<sp/>=<sp/>last_istride<sp/>&lt;=<sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>signal_ndim<sp/>-<sp/>1;<sp/>!clone_input<sp/>&amp;&amp;<sp/>i<sp/>&gt;<sp/>0<sp/></highlight><highlight class="comment">/*<sp/>inembed[0]<sp/>doesn&apos;t<sp/>matteer<sp/>*/</highlight><highlight class="normal">;<sp/>i--)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>istride<sp/>=<sp/>istrides[i];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(istride<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>istride<sp/>%<sp/>last_istride<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inembed[i]<sp/>=<sp/>istride<sp/>/<sp/>last_istride;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>last_istride<sp/>=<sp/>istride;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clone_input<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>we<sp/>can<sp/>take<sp/>advantage<sp/>of<sp/>simple<sp/>data<sp/>layout.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Note<sp/>that<sp/>this<sp/>is<sp/>before<sp/>the<sp/>actual<sp/>cloning.<sp/>This<sp/>is<sp/>intentional<sp/>so<sp/>we<sp/>can</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>for<sp/>advanced<sp/>data<sp/>layout<sp/>with<sp/>complex-to-real<sp/>transform.<sp/>cuFFT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>out-of-place<sp/>complex-to-real<sp/>transforms<sp/>with<sp/>advanced<sp/>layout<sp/>may<sp/>overwrite</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>input,<sp/>and<sp/>we<sp/>need<sp/>to<sp/>clone<sp/>the<sp/>input.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>just<sp/>needs<sp/>contiguity<sp/>in<sp/>cases<sp/>except<sp/>for<sp/>twosided<sp/>real-to-complex</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transform<sp/>where<sp/>we<sp/>won&apos;t<sp/>have<sp/>simple<sp/>data<sp/>layout<sp/>as<sp/>output<sp/>is<sp/>two<sp/>sided.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>NOTE<sp/>[<sp/>cuFFT<sp/>Embedded<sp/>Strides<sp/>]<sp/>in<sp/>native/cuda/SpectralOps.cu.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>simple_layout<sp/>=<sp/>!(!complex_input<sp/>&amp;&amp;<sp/>complex_output<sp/>&amp;&amp;<sp/>!onesided)<sp/>&amp;&amp;<sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>twosided<sp/>R2C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(clone_input<sp/>||<sp/>input.is_contiguous());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>contiguous</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!simple_layout<sp/>&amp;&amp;<sp/>complex_input<sp/>&amp;&amp;<sp/>!complex_output)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>clone_input<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>simple_layout<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>input<sp/>should<sp/>be<sp/>cloned<sp/>but<sp/>simple<sp/>layout<sp/>can&apos;t<sp/>be<sp/>used<sp/>(e.g.<sp/>twosided<sp/>R2C)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(clone_input<sp/>&amp;&amp;<sp/>!simple_layout)<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>input_size<sp/>=<sp/>input.sizes();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::copy(input_size.begin()<sp/>+<sp/>1,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>begin<sp/>of<sp/>signal<sp/>dim<sp/>in<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input_size.begin()<sp/>+<sp/>signal_ndim<sp/>+<sp/>1,<sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>of<sp/>signal<sp/>dim<sp/>in<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inembed.begin());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>begin<sp/>of<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>cudaDataType<sp/>itype,<sp/>otype,<sp/>exec_type;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.type().scalarType()<sp/>==<sp/>ScalarType::Float)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>itype<sp/>=<sp/>complex_input<sp/>?<sp/>CUDA_C_32F<sp/>:<sp/>CUDA_R_32F;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>otype<sp/>=<sp/>complex_output<sp/>?<sp/>CUDA_C_32F<sp/>:<sp/>CUDA_R_32F;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exec_type<sp/>=<sp/>CUDA_C_32F;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.type().scalarType()<sp/>==<sp/>ScalarType::Double)<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>itype<sp/>=<sp/>complex_input<sp/>?<sp/>CUDA_C_64F<sp/>:<sp/>CUDA_R_64F;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>otype<sp/>=<sp/>complex_output<sp/>?<sp/>CUDA_C_64F<sp/>:<sp/>CUDA_R_64F;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exec_type<sp/>=<sp/>CUDA_C_64F;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(input.type().scalarType()<sp/>==<sp/>ScalarType::Half)<sp/>{</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>itype<sp/>=<sp/>complex_input<sp/>?<sp/>CUDA_C_16F<sp/>:<sp/>CUDA_R_16F;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>otype<sp/>=<sp/>complex_output<sp/>?<sp/>CUDA_C_16F<sp/>:<sp/>CUDA_R_16F;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>exec_type<sp/>=<sp/>CUDA_C_16F;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cuFFT<sp/>doesn&apos;t<sp/>support<sp/>tensor<sp/>of<sp/>type:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>at::toString(input.type().scalarType());</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(ss.str());</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>plan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>raw_plan_ptr<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>cufftHandle();</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CHECK(cufftCreate(raw_plan_ptr));</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>plan_ptr.reset(raw_plan_ptr);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>disable<sp/>auto<sp/>allocation<sp/>of<sp/>workspace<sp/>to<sp/>use<sp/>THC<sp/>allocator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>CUFFT_CHECK(cufftSetAutoAllocation(plan(),<sp/></highlight><highlight class="comment">/*<sp/>autoAllocate<sp/>*/</highlight><highlight class="normal"><sp/>0));</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>ws_size_t;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>plan</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(simple_layout)<sp/>{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>with<sp/>unit-stride,<sp/>we<sp/>tell<sp/>cuFFT<sp/>by<sp/>setting<sp/>inembed<sp/>==<sp/>onembed<sp/>==<sp/>NULL.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>In<sp/>such<sp/>case,<sp/>cuFFT<sp/>ignores<sp/>base_istride,<sp/>base_ostride,<sp/>idist,<sp/>and<sp/>odist</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>by<sp/>assuming<sp/>base_istride<sp/>=<sp/>base_ostride<sp/>=<sp/>1.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>NOTE<sp/>[<sp/>cuFFT<sp/>Embedded<sp/>Strides<sp/>]<sp/>in<sp/>native/cuda/SpectralOps.cu.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CUFFT_CHECK(cufftXtMakePlanMany(plan(),<sp/>signal_ndim,<sp/>signal_sizes.data(),</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>inembed<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">/*<sp/>base_istride<sp/>*/</highlight><highlight class="normal"><sp/>1,<sp/></highlight><highlight class="comment">/*<sp/>idist<sp/>*/</highlight><highlight class="normal"><sp/>1,<sp/>itype,</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>onembed<sp/>*/</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="comment">/*<sp/>base_ostride<sp/>*/</highlight><highlight class="normal"><sp/>1,<sp/></highlight><highlight class="comment">/*<sp/>odist<sp/>*/</highlight><highlight class="normal"><sp/>1,<sp/>otype,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>batch,<sp/>&amp;ws_size_t,<sp/>exec_type));</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>idist<sp/>(stride<sp/>at<sp/>batch<sp/>dim)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>base_istride<sp/>(stride<sp/>at<sp/>innermost<sp/>dim<sp/>of<sp/>signal)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idist,<sp/>base_istride;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(clone_input)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idist<sp/>=<sp/>at::prod_intlist(input.sizes().<ref refid="classat_1_1_array_ref_1a2635bf1377cc7ab446ffb8936f7a1f21" kindref="member">slice</ref>(1,<sp/>signal_ndim));</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base_istride<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(complex_input)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idist<sp/>=<sp/>input.stride(0)<sp/>&gt;&gt;<sp/>1;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base_istride<sp/>=<sp/>input.stride(signal_ndim)<sp/>&gt;&gt;<sp/>1;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idist<sp/>=<sp/>input.stride(0);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>base_istride<sp/>=<sp/>input.stride(signal_ndim);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Even<sp/>if<sp/>batch<sp/>dimension<sp/>is<sp/>one<sp/>and<sp/>idist<sp/>(stride(0))<sp/>doesn&apos;t<sp/>matter,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>cuFFT<sp/>errors<sp/>if<sp/>idist<sp/>=<sp/>0.<sp/>This<sp/>is<sp/>hack<sp/>to<sp/>make<sp/>it<sp/>succeed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(idist<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>batch<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>idist<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>odist,<sp/>onembed,<sp/>base_ostride</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>odist<sp/>=<sp/>at::prod_intlist(output_sizes.<ref refid="classat_1_1_array_ref_1a2635bf1377cc7ab446ffb8936f7a1f21" kindref="member">slice</ref>(1,<sp/>signal_ndim));</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;long<sp/>long<sp/>int&gt;<sp/>onembed(output_sizes.data()<sp/>+<sp/>1,<sp/>output_sizes.data()<sp/>+<sp/>signal_ndim<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>base_ostride<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CUFFT_CHECK(cufftXtMakePlanMany(plan(),<sp/>signal_ndim,<sp/>signal_sizes.data(),</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inembed.data(),<sp/>base_istride,<sp/>idist,<sp/>itype,</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>onembed.data(),<sp/>base_ostride,<sp/>odist,<sp/>otype,</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>batch,<sp/>&amp;ws_size_t,<sp/>exec_type));</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>ws_size<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int64_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ws_size_t);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cufftHandle<sp/>&amp;plan()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*plan_ptr.get();<sp/>}</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>should_clone_input()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>clone_input;<sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>int64_t<sp/>workspace_size()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ws_size;<sp/>}</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;cufftHandle,<sp/>CuFFTHandleDeleter&gt;<sp/>plan_ptr;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clone_input;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/>int64_t<sp/>ws_size;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>cuFFT<sp/>allocates<sp/>a<sp/>starting<sp/>plan<sp/>array<sp/>of<sp/>size<sp/>1024.<sp/>It<sp/>should<sp/>grow<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>array<sp/>as<sp/>more<sp/>plans<sp/>are<sp/>created.<sp/>However,<sp/>a<sp/>bug<sp/>in<sp/>cuFFT<sp/>(at<sp/>least</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>present<sp/>in<sp/>CUDA<sp/>9.1)<sp/>causes<sp/>the<sp/>cufftSetAutoAllocation<sp/>call<sp/>on<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>1024-th<sp/>plan<sp/>to<sp/>fail<sp/>with<sp/>CUFFT_INVALID_PLAN.<sp/>Therefore,<sp/>we<sp/>check<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>cache<sp/>size<sp/>is<sp/>leq<sp/>1023.<sp/>The<sp/>initial<sp/>plan<sp/>array<sp/>size<sp/>is<sp/>1024<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>CUDA<sp/>8.0<sp/>~<sp/>9.2<sp/>so<sp/>setting<sp/>this<sp/>as<sp/>a<sp/>CUDA-version-agnostic<sp/>constant<sp/>should</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>be<sp/>fine<sp/>for<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>When<sp/>CUDA<sp/>10<sp/>comes<sp/>out,<sp/>check<sp/>if<sp/>the<sp/>bug<sp/>is<sp/>fixed<sp/>or<sp/>if<sp/>we<sp/>need<sp/>another</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/>number<sp/>for<sp/>CUDA<sp/>10.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal">constexpr<sp/>int64_t<sp/>CUFFT_MAX_PLAN_NUM<sp/>=<sp/>1023;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal">static_assert(CUFFT_MAX_PLAN_NUM<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>CUFFT_MAX_PLAN_NUM<sp/>&lt;=<sp/>std::numeric_limits&lt;size_t&gt;::max(),</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;CUFFT_MAX_PLAN_NUM<sp/>not<sp/>in<sp/>size_t<sp/>range&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>cache<sp/>assumes<sp/>that<sp/>the<sp/>mapping<sp/>from<sp/>key<sp/>to<sp/>value<sp/>never<sp/>changes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>**NOT**<sp/>thread-safe.<sp/>Please<sp/>use<sp/>a<sp/>mutex<sp/>when<sp/>using<sp/>it<sp/>**AND**<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight><highlight class="comment">//<sp/>value<sp/>returned<sp/>from<sp/>try_emplace_value.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>contract<sp/>of<sp/>using<sp/>this<sp/>cache<sp/>is<sp/>that<sp/>try_emplace_value<sp/>should<sp/>only<sp/>be</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="comment">//<sp/>used<sp/>when<sp/>the<sp/>max_size<sp/>is<sp/>positive.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299" refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" kindref="compound">CuFFTParamsLRUCache</ref><sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>kv_t<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::pair&lt;CuFFTParams,<sp/>CuFFTConfig&gt;;</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>map_t<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::unordered_map&lt;std::reference_wrapper&lt;CuFFTParams&gt;,</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>std::list&lt;kv_t&gt;::iterator,</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structat_1_1native_1_1_params_hash" kindref="compound">ParamsHash&lt;CuFFTParams&gt;</ref>,</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structat_1_1native_1_1_params_equal" kindref="compound">ParamsEqual&lt;CuFFTParams&gt;</ref>&gt;;</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>map_kkv_iter_t<sp/>=<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>map_t::iterator;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" kindref="compound">CuFFTParamsLRUCache</ref>()<sp/>:<sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" kindref="compound">CuFFTParamsLRUCache</ref>(CUFFT_MAX_PLAN_NUM)<sp/>{}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" kindref="compound">CuFFTParamsLRUCache</ref>(int64_t<sp/>max_size)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>_set_max_size(max_size);</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>key<sp/>is<sp/>in<sp/>this<sp/>cache,<sp/>return<sp/>the<sp/>cached<sp/>config.<sp/>Otherwise,<sp/>emplace<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>config<sp/>in<sp/>this<sp/>cache<sp/>using<sp/>value_args<sp/>and<sp/>return<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>const<sp/>reference<sp/>because<sp/>CuFFTConfig<sp/>shouldn&apos;t<sp/>be<sp/>tampered<sp/>with<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>created.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>similar<sp/>to<sp/>c++<sp/>17<sp/>try_emplace.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>K,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">...VArgs&gt;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" kindref="compound">CuFFTConfig</ref><sp/>&amp;try_emplace_value(K&amp;&amp;<sp/>key,<sp/>VArgs&amp;&amp;...<sp/>value_args)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ASSERT(_max_size<sp/>&gt;<sp/>0);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>map_kkv_iter_t<sp/>map_it<sp/>=<sp/>_cache_map.find(key);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hit,<sp/>put<sp/>to<sp/>list<sp/>front</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(map_it<sp/>!=<sp/>_cache_map.end())<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_usage_list.splice(_usage_list.begin(),<sp/>_usage_list,<sp/>map_it-&gt;second);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>map_it-&gt;second-&gt;second;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Miss</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>if<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_usage_list.size()<sp/>&gt;=<sp/>_max_size)<sp/>{</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>last<sp/>=<sp/>_usage_list.end();</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>last--;</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_cache_map.erase(last-&gt;first);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_usage_list.pop_back();</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>construct<sp/>new<sp/>plan<sp/>at<sp/>list<sp/>front,<sp/>then<sp/>insert<sp/>into<sp/>_cache_map</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/>_usage_list.emplace_front(std::piecewise_construct,</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward_as_tuple(key),</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward_as_tuple(value_args...));</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>kv_it<sp/>=<sp/>_usage_list.begin();</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>_cache_map.emplace(std::piecewise_construct,</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward_as_tuple(kv_it-&gt;first),</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::forward_as_tuple(kv_it));</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>kv_it-&gt;second;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clear()<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>_cache_map.clear();</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/>_usage_list.clear();</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>resize(int64_t<sp/>new_size)<sp/>{</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/>_set_max_size(new_size);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cur_size<sp/>=<sp/>_usage_list.size();</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cur_size<sp/>&gt;<sp/>_max_size)<sp/>{</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>delete_it<sp/>=<sp/>_usage_list.end();</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>cur_size<sp/>-<sp/>_max_size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delete_it--;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_cache_map.erase(delete_it-&gt;first);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_usage_list.erase(delete_it,<sp/>_usage_list.end());</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_cache_map.size();<sp/>}</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>max_size()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_max_size;<sp/>}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Only<sp/>sets<sp/>size<sp/>and<sp/>does<sp/>value<sp/>check.<sp/>Does<sp/>not<sp/>resize<sp/>the<sp/>data<sp/>structures.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_set_max_size(int64_t<sp/>new_size)<sp/>{</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(new_size<sp/>&lt;=<sp/>CUFFT_MAX_PLAN_NUM,</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;cuFFT<sp/>plan<sp/>cache<sp/>size<sp/>can<sp/>not<sp/>be<sp/>larger<sp/>than<sp/>&quot;</highlight><highlight class="normal">,<sp/>CUFFT_MAX_PLAN_NUM,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>new_size);</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_CHECK(new_size<sp/>&gt;=<sp/>0,</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;cuFFT<sp/>plan<sp/>cache<sp/>size<sp/>must<sp/>be<sp/>non-negative,<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>new_size);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>_max_size<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(new_size);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/>std::list&lt;kv_t&gt;<sp/>_usage_list;</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/>map_t<sp/>_cache_map;</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>_max_size;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"></highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Since<sp/>ATen<sp/>is<sp/>separated<sp/>into<sp/>CPU<sp/>build<sp/>and<sp/>CUDA<sp/>build,<sp/>we<sp/>need<sp/>a<sp/>way<sp/>to<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight><highlight class="comment">//<sp/>these<sp/>functions<sp/>only<sp/>when<sp/>CUDA<sp/>is<sp/>loaded.<sp/>We<sp/>use<sp/>CUDA<sp/>hooks<sp/>for<sp/>this<sp/>purpose</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(at<sp/>cuda/detail/CUDAHooks.cpp),<sp/>and<sp/>call<sp/>the<sp/>hooked<sp/>functions<sp/>from<sp/>the<sp/>actual</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight><highlight class="comment">//<sp/>native<sp/>function<sp/>counterparts<sp/>(at<sp/>native/SpectralOps.cpp),<sp/>i.e.,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_cufft_get_plan_cache_max_size,<sp/>_cufft_set_plan_cache_max_size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_cufft_get_plan_cache_size,<sp/>and<sp/>_cufft_clear_plan_cache.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal">int64_t<sp/>cufft_get_plan_cache_max_size_impl();</highlight></codeline>
+<codeline lineno="396"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cufft_set_plan_cache_max_size_impl(int64_t<sp/>max_size);</highlight></codeline>
+<codeline lineno="397"><highlight class="normal">int64_t<sp/>cufft_get_plan_cache_size_impl();</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cufft_clear_plan_cache_impl();</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal">}}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native::detail</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h"/>
+  </compounddef>
+</doxygen>

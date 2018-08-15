@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_sequential_impl" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::SequentialImpl</compoundname>
+    <basecompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; SequentialImpl &gt;</basecompoundref>
+    <includes refid="sequential_8h" local="no">sequential.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtorch_1_1nn_1_1_sequential_impl_1a8eedfb07323ae2df81e6774cbf56fd3c" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &gt;::iterator</type>
+        <definition>using torch::nn::SequentialImpl::Iterator =  std::vector&lt;AnyModule&gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classtorch_1_1nn_1_1_sequential_impl_1ab7b768addcdc149e7f0d12a127b22c8f" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &gt;::const_iterator</type>
+        <definition>using torch::nn::SequentialImpl::ConstIterator =  std::vector&lt;AnyModule&gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>ConstIterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_sequential_impl_1a063ecccb486db0067a39226ae52959e0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref> &gt;</type>
+        <definition>std::vector&lt;AnyModule&gt; torch::nn::SequentialImpl::modules_</definition>
+        <argsstring></argsstring>
+        <name>modules_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="225" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a70215f36bc9ef1700c9d66ebde1db9c1" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Modules</declname>
+            <defname>Modules</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::SequentialImpl::SequentialImpl</definition>
+        <argsstring>(Modules &amp;&amp;... modules)</argsstring>
+        <name>SequentialImpl</name>
+        <param>
+          <type>Modules &amp;&amp;...</type>
+          <declname>modules</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput>Sequential</computeroutput> from a pack of modules. Each module can either be a plain value (e.g. <computeroutput>Linear</computeroutput>) or a boxed value (e.g. <computeroutput>shared_ptr&lt;Linear&gt;</computeroutput>). Unboxed modules will be moved into <computeroutput>shared_ptr</computeroutput>s internally. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="33" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1ac1de5a466d4eafcd9d466efe8efd646c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Module&gt; torch::nn::SequentialImpl::clone</definition>
+        <argsstring>(at::optional&lt; Device &gt; device=at::nullopt) const override</argsstring>
+        <name>clone</name>
+        <reimplements refid="classtorch_1_1nn_1_1_module_1ac1f0c742f8b793a80797b62a490bbdc5">clone</reimplements>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+          <defval>at::nullopt</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Special cloning function for <computeroutput>Sequential</computeroutput> because it does not use <computeroutput><ref refid="classtorch_1_1nn_1_1_sequential_impl_1ac359204d4dd1285defbc2abde1909bb2" kindref="member">reset()</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1ac359204d4dd1285defbc2abde1909bb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <reimplements refid="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput><ref refid="classtorch_1_1nn_1_1_sequential_impl_1ac359204d4dd1285defbc2abde1909bb2" kindref="member">reset()</ref></computeroutput> is empty for <computeroutput>Sequential</computeroutput>, since it does not have parameter of its own. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1ae714fc3c5e9fc6da7ce76f5a6a184949" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ReturnType</type>
+            <defval><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></defval>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>ArgumentTypes</declname>
+            <defname>ArgumentTypes</defname>
+          </param>
+        </templateparamlist>
+        <type>ReturnType</type>
+        <definition>ReturnType torch::nn::SequentialImpl::forward</definition>
+        <argsstring>(ArgumentTypes &amp;&amp;... arguments)</argsstring>
+        <name>forward</name>
+        <param>
+          <type>ArgumentTypes &amp;&amp;...</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Feeds the <computeroutput>inputs</computeroutput> to the first module, then chains the output of each module with the input of the next, in order of construction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="56" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a1c973b8931ca54bd841928bff269d636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ModuleType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::push_back</definition>
+        <argsstring>(std::shared_ptr&lt; ModuleType &gt; module_ptr)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>std::shared_ptr&lt; ModuleType &gt;</type>
+          <declname>module_ptr</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new (boxed) <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> to the <computeroutput>Sequential</computeroutput> container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a70bcced94f826d44815380c6adaaeeb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M</type>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::detail::enable_if_module_t&lt;M&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::push_back</definition>
+        <argsstring>(M &amp;&amp;module)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>M &amp;&amp;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a new <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref></computeroutput> to the <computeroutput>Sequential</computeroutput> container, moving or copying it into a <computeroutput>shared_ptr</computeroutput> internally. This method allows passing value types, and letting the container deal with the boxing. This means you can write <computeroutput>Sequential(Module(3, 4))</computeroutput> instead of <computeroutput>Sequential(std::make_shared&lt;<ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref>&gt;(3, 4))</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="101" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="101" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1ad76e776ea59a1e200ab6ecf1fd586984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename M</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::push_back</definition>
+        <argsstring>(const ModuleHolder&lt; M &gt; &amp;module_holder)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref>&lt; M &gt; &amp;</type>
+          <declname>module_holder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unwraps the contained module of a <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> and adds it to the <computeroutput>Sequential</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="111" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="111" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1af82ab58dcd9436dab34fc5e78ac46f51" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Container</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::extend</definition>
+        <argsstring>(const Container &amp;container)</argsstring>
+        <name>extend</name>
+        <param>
+          <type>const Container &amp;</type>
+          <declname>container</declname>
+        </param>
+        <briefdescription>
+<para>Iterates over the container and calls <computeroutput>push_back()</computeroutput> on each value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="117" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="117" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a499ba7d0b1739ca9f05ca7cdadd21885" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator torch::nn::SequentialImpl::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Returns an iterator to the start of the <computeroutput>Sequential</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="124" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="124" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1af4f71993452840a1dedd0e8274fcd6e4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ConstIterator</type>
+        <definition>ConstIterator torch::nn::SequentialImpl::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="127" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="127" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a294708b97b2a118d9d8dae5c6ae6865f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Iterator</type>
+        <definition>Iterator torch::nn::SequentialImpl::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Returns an iterator to the end of the <computeroutput>Sequential</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="132" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="132" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a27c608d82f82144f48ba620c1427e09e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>ConstIterator</type>
+        <definition>ConstIterator torch::nn::SequentialImpl::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="135" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="135" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1ae3ba5146328b1ce4984cf12160935d8c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T &amp;</type>
+        <definition>T&amp; torch::nn::SequentialImpl::at</definition>
+        <argsstring>(size_t index)</argsstring>
+        <name>at</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to return the module at the given index as the requested type. Throws an exception if the index is out of bounds or the types do not match. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="143" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="143" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a6c424cda129c976a99ded55617497138" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>const T &amp;</type>
+        <definition>const T&amp; torch::nn::SequentialImpl::at</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>at</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to return the module at the given index as the requested type. Throws an exception if the index is out of bounds or the types do not match. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="155" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="155" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1add2fd52fcacc5c90a8134ca68d27ccef" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Module&gt; torch::nn::SequentialImpl::ptr</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>ptr</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to return a <computeroutput>std::shared_ptr</computeroutput> whose dynamic type is that of the underlying module at the given index. Throws an exception if the index is out of bounds. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="166" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a456ad2c3e6d626de590acfdfb43a8a9c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; T &gt;</type>
+        <definition>std::shared_ptr&lt;T&gt; torch::nn::SequentialImpl::ptr</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>ptr</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to return a <computeroutput>std::shared_ptr</computeroutput> whose type is the one provided. Throws an exception if the index is out of bounds or the types do not match. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="175" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="175" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a3d7217c294bf3bd4ab2ee1d062300d2d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Module&gt; torch::nn::SequentialImpl::operator[]</definition>
+        <argsstring>(size_t index) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Like <computeroutput>ptr(index)</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="184" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a32b23f9aaa2d5b4af326d3354e98cf96" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t torch::nn::SequentialImpl::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>The current size of the <computeroutput>Sequential</computeroutput> container. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="190" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a2d520532a603a6f65d7890bcba25ac3b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool torch::nn::SequentialImpl::is_empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_empty</name>
+        <briefdescription>
+<para>True if there are no modules in the <computeroutput>Sequential</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="195" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="195" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1ae2be357508ef1a5111867440589fc464" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename First</type>
+          </param>
+          <param>
+            <type>typename Second</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Rest</declname>
+            <defname>Rest</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::push_back</definition>
+        <argsstring>(First &amp;&amp;first, Second &amp;&amp;second, Rest &amp;&amp;... rest)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>First &amp;&amp;</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type>Second &amp;&amp;</type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type>Rest &amp;&amp;...</type>
+          <declname>rest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Takes a First <emphasis>and</emphasis> Second parameter, to avoid ambiguity when a parameter pack has only one type, in which case the template would be preferred, even if the other <computeroutput>push_back</computeroutput> functions are better fits (e.g. <computeroutput>unique_ptr</computeroutput> -&gt; <computeroutput>shared_ptr</computeroutput> overload). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="205" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="205" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a91ebf0d297091296491c31061dac88e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::push_back</definition>
+        <argsstring>(AnyModule any_module)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></type>
+          <declname>any_module</declname>
+        </param>
+        <briefdescription>
+<para>Adds a type-erased <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput> to the <computeroutput>Sequential</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="213" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="213" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_sequential_impl_1a85f59d4720b4a09e4be1bb71b7f71f0b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::nn::SequentialImpl::push_back</definition>
+        <argsstring>()</argsstring>
+        <name>push_back</name>
+        <briefdescription>
+<para>The base case, when the list of modules is empty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="220" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="220" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <computeroutput>Sequential</computeroutput> module is a container for any number of other modules. Its <computeroutput><ref refid="classtorch_1_1nn_1_1_sequential_impl_1ae714fc3c5e9fc6da7ce76f5a6a184949" kindref="member">forward()</ref></computeroutput> method chains outputs to inputs and returns the final output. The <computeroutput>Sequential</computeroutput> class reference semantics. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="571">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="569">
+        <label>torch::nn::SequentialImpl</label>
+        <link refid="classtorch_1_1nn_1_1_sequential_impl"/>
+        <childnode refid="570" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="570">
+        <label>torch::nn::Cloneable&lt; SequentialImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="571" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="574">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="572">
+        <label>torch::nn::SequentialImpl</label>
+        <link refid="classtorch_1_1nn_1_1_sequential_impl"/>
+        <childnode refid="573" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="573">
+        <label>torch::nn::Cloneable&lt; SequentialImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="574" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h" bodystart="23" bodyend="226"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ae3ba5146328b1ce4984cf12160935d8c" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>at</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a6c424cda129c976a99ded55617497138" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>at</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a499ba7d0b1739ca9f05ca7cdadd21885" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>begin</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1af4f71993452840a1dedd0e8274fcd6e4" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>begin</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ac1de5a466d4eafcd9d466efe8efd646c" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ab7b768addcdc149e7f0d12a127b22c8f" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>ConstIterator</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a294708b97b2a118d9d8dae5c6ae6865f" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>end</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a27c608d82f82144f48ba620c1427e09e" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>end</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1af82ab58dcd9436dab34fc5e78ac46f51" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>extend</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ae714fc3c5e9fc6da7ce76f5a6a184949" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a2d520532a603a6f65d7890bcba25ac3b" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>is_empty</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a8eedfb07323ae2df81e6774cbf56fd3c" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>Iterator</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::SequentialImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::SequentialImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a063ecccb486db0067a39226ae52959e0" prot="private" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>modules_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a3d7217c294bf3bd4ab2ee1d062300d2d" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>operator[]</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1add2fd52fcacc5c90a8134ca68d27ccef" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>ptr</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a456ad2c3e6d626de590acfdfb43a8a9c" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>ptr</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a1c973b8931ca54bd841928bff269d636" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>push_back</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a70bcced94f826d44815380c6adaaeeb2" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>push_back</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ad76e776ea59a1e200ab6ecf1fd586984" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>push_back</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ae2be357508ef1a5111867440589fc464" prot="private" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>push_back</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a91ebf0d297091296491c31061dac88e5" prot="private" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>push_back</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a85f59d4720b4a09e4be1bb71b7f71f0b" prot="private" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>push_back</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1ac359204d4dd1285defbc2abde1909bb2" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>reset</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a70215f36bc9ef1700c9d66ebde1db9c1" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>SequentialImpl</name></member>
+      <member refid="classtorch_1_1nn_1_1_sequential_impl_1a32b23f9aaa2d5b4af326d3354e98cf96" prot="public" virt="non-virtual"><scope>torch::nn::SequentialImpl</scope><name>size</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::SequentialImpl</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

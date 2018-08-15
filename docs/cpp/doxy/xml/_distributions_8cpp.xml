@@ -1,0 +1,1062 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_distributions_8cpp" kind="file" language="C++">
+    <compoundname>Distributions.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="_c_p_u_apply_utils_8h" local="yes">ATen/CPUApplyUtils.h</includes>
+    <includes refid="_dispatch_8h" local="yes">ATen/Dispatch.h</includes>
+    <includes refid="_error_8h" local="yes">ATen/Error.h</includes>
+    <includes refid="_expand_utils_8h" local="yes">ATen/ExpandUtils.h</includes>
+    <includes local="yes">ATen/NativeFunctions.h</includes>
+    <includes local="yes">ATen/CPUGenerator.h</includes>
+    <includes refid="_check_generator_8h" local="yes">ATen/CheckGenerator.h</includes>
+    <includes refid="_generator_8h" local="yes">ATen/Generator.h</includes>
+    <includes refid="_distributions_8h" local="yes">ATen/native/Distributions.h</includes>
+    <includes local="no">functional</includes>
+    <includes local="yes">TH/THRandom.h</includes>
+    <includes local="yes">TH/THGenerator.hpp</includes>
+    <includes local="yes">TH/THMath.h</includes>
+    <incdepgraph>
+      <node id="5953">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="5954" relation="include">
+        </childnode>
+        <childnode refid="5955" relation="include">
+        </childnode>
+        <childnode refid="5956" relation="include">
+        </childnode>
+        <childnode refid="5957" relation="include">
+        </childnode>
+        <childnode refid="5958" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5960" relation="include">
+        </childnode>
+      </node>
+      <node id="5999">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="5949" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="6000" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5958" relation="include">
+        </childnode>
+        <childnode refid="5950" relation="include">
+        </childnode>
+      </node>
+      <node id="5967">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5983" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5958" relation="include">
+        </childnode>
+      </node>
+      <node id="5966">
+        <label>atomic</label>
+      </node>
+      <node id="5958">
+        <label>functional</label>
+      </node>
+      <node id="6004">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5994" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+      </node>
+      <node id="5968">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="5969" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5979" relation="include">
+        </childnode>
+        <childnode refid="5981" relation="include">
+        </childnode>
+        <childnode refid="5985" relation="include">
+        </childnode>
+      </node>
+      <node id="5980">
+        <label>limits</label>
+      </node>
+      <node id="5988">
+        <label>assert.h</label>
+      </node>
+      <node id="5993">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5969" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5992" relation="include">
+        </childnode>
+        <childnode refid="5972" relation="include">
+        </childnode>
+        <childnode refid="5964" relation="include">
+        </childnode>
+        <childnode refid="5994" relation="include">
+        </childnode>
+        <childnode refid="5995" relation="include">
+        </childnode>
+      </node>
+      <node id="5975">
+        <label>iterator</label>
+      </node>
+      <node id="5987">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="5988" relation="include">
+        </childnode>
+        <childnode refid="5989" relation="include">
+        </childnode>
+        <childnode refid="5960" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5954" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5979" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="5990" relation="include">
+        </childnode>
+        <childnode refid="5993" relation="include">
+        </childnode>
+      </node>
+      <node id="6007">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="5981">
+        <label>cstdint</label>
+      </node>
+      <node id="6037">
+        <label>TH/THGenerator.hpp</label>
+      </node>
+      <node id="6015">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="5989">
+        <label>stdint.h</label>
+      </node>
+      <node id="6026">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="5982">
+        <label>cmath</label>
+      </node>
+      <node id="5957">
+        <label>cassert</label>
+      </node>
+      <node id="5998">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5948" relation="include">
+        </childnode>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="5993" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5999" relation="include">
+        </childnode>
+        <childnode refid="6005" relation="include">
+        </childnode>
+        <childnode refid="5950" relation="include">
+        </childnode>
+        <childnode refid="6002" relation="include">
+        </childnode>
+        <childnode refid="5981" relation="include">
+        </childnode>
+      </node>
+      <node id="5984">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5974" relation="include">
+        </childnode>
+        <childnode refid="5980" relation="include">
+        </childnode>
+      </node>
+      <node id="5960">
+        <label>stdexcept</label>
+      </node>
+      <node id="6021">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="5987" relation="include">
+        </childnode>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5960" relation="include">
+        </childnode>
+      </node>
+      <node id="5995">
+        <label>numeric</label>
+      </node>
+      <node id="5991">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="5966" relation="include">
+        </childnode>
+        <childnode refid="5950" relation="include">
+        </childnode>
+        <childnode refid="5965" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="5953" relation="include">
+        </childnode>
+      </node>
+      <node id="5979">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5980" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5981" relation="include">
+        </childnode>
+        <childnode refid="5960" relation="include">
+        </childnode>
+        <childnode refid="5954" relation="include">
+        </childnode>
+        <childnode refid="5982" relation="include">
+        </childnode>
+        <childnode refid="5983" relation="include">
+        </childnode>
+        <childnode refid="5984" relation="include">
+        </childnode>
+      </node>
+      <node id="5965">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="5966" relation="include">
+        </childnode>
+      </node>
+      <node id="5990">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="5991" relation="include">
+        </childnode>
+        <childnode refid="5992" relation="include">
+        </childnode>
+      </node>
+      <node id="5959">
+        <label>string</label>
+      </node>
+      <node id="6024">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="5970" relation="include">
+        </childnode>
+        <childnode refid="5989" relation="include">
+        </childnode>
+      </node>
+      <node id="6025">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="5967" relation="include">
+        </childnode>
+        <childnode refid="6011" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="6018" relation="include">
+        </childnode>
+        <childnode refid="5953" relation="include">
+        </childnode>
+      </node>
+      <node id="6034">
+        <label>ATen/native/Distributions.h</label>
+        <link refid="_distributions_8h_source"/>
+        <childnode refid="6035" relation="include">
+        </childnode>
+      </node>
+      <node id="6036">
+        <label>TH/THRandom.h</label>
+      </node>
+      <node id="6030">
+        <label>ATen/ExpandUtils.h</label>
+        <link refid="_expand_utils_8h_source"/>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5958" relation="include">
+        </childnode>
+        <childnode refid="5964" relation="include">
+        </childnode>
+        <childnode refid="6031" relation="include">
+        </childnode>
+      </node>
+      <node id="5949">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="5950" relation="include">
+        </childnode>
+        <childnode refid="5951" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5965" relation="include">
+        </childnode>
+        <childnode refid="5967" relation="include">
+        </childnode>
+        <childnode refid="5986" relation="include">
+        </childnode>
+      </node>
+      <node id="6005">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="6017">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="5967" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="5999" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+      </node>
+      <node id="5962">
+        <label>exception</label>
+      </node>
+      <node id="5951">
+        <label>stddef.h</label>
+      </node>
+      <node id="5992">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="5991" relation="include">
+        </childnode>
+      </node>
+      <node id="6023">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5979" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+      </node>
+      <node id="5971">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="5961" relation="include">
+        </childnode>
+      </node>
+      <node id="6006">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="5987" relation="include">
+        </childnode>
+        <childnode refid="6007" relation="include">
+        </childnode>
+      </node>
+      <node id="5963">
+        <label>ostream</label>
+      </node>
+      <node id="5948">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+      </node>
+      <node id="5996">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="5969">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5970" relation="include">
+        </childnode>
+        <childnode refid="5977" relation="include">
+        </childnode>
+        <childnode refid="5975" relation="include">
+        </childnode>
+        <childnode refid="5978" relation="include">
+        </childnode>
+      </node>
+      <node id="6012">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="6013" relation="include">
+        </childnode>
+      </node>
+      <node id="6009">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="6029">
+        <label>ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="6012" relation="include">
+        </childnode>
+        <childnode refid="5993" relation="include">
+        </childnode>
+      </node>
+      <node id="6033">
+        <label>ATen/CheckGenerator.h</label>
+        <link refid="_check_generator_8h_source"/>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="5993" relation="include">
+        </childnode>
+      </node>
+      <node id="5947">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="6013">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="5991" relation="include">
+        </childnode>
+        <childnode refid="5964" relation="include">
+        </childnode>
+      </node>
+      <node id="5945">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.cpp</label>
+        <link refid="_distributions_8cpp"/>
+        <childnode refid="5946" relation="include">
+        </childnode>
+        <childnode refid="6027" relation="include">
+        </childnode>
+        <childnode refid="6023" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="6030" relation="include">
+        </childnode>
+        <childnode refid="6016" relation="include">
+        </childnode>
+        <childnode refid="6032" relation="include">
+        </childnode>
+        <childnode refid="6033" relation="include">
+        </childnode>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="6034" relation="include">
+        </childnode>
+        <childnode refid="5958" relation="include">
+        </childnode>
+        <childnode refid="6036" relation="include">
+        </childnode>
+        <childnode refid="6037" relation="include">
+        </childnode>
+        <childnode refid="6035" relation="include">
+        </childnode>
+      </node>
+      <node id="6010">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5989" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+      </node>
+      <node id="5994">
+        <label>typeinfo</label>
+      </node>
+      <node id="6001">
+        <label>cstdio</label>
+      </node>
+      <node id="6031">
+        <label>tuple</label>
+      </node>
+      <node id="5986">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="5950" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+      </node>
+      <node id="5978">
+        <label>vector</label>
+      </node>
+      <node id="6022">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="6019">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="5976">
+        <label>new</label>
+      </node>
+      <node id="5954">
+        <label>utility</label>
+      </node>
+      <node id="5977">
+        <label>array</label>
+      </node>
+      <node id="5964">
+        <label>sstream</label>
+      </node>
+      <node id="6014">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="5987" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="6006" relation="include">
+        </childnode>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="6015" relation="include">
+        </childnode>
+        <childnode refid="6016" relation="include">
+        </childnode>
+        <childnode refid="6017" relation="include">
+        </childnode>
+        <childnode refid="6018" relation="include">
+        </childnode>
+        <childnode refid="6019" relation="include">
+        </childnode>
+      </node>
+      <node id="6016">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="6027">
+        <label>ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+        <childnode refid="6028" relation="include">
+        </childnode>
+        <childnode refid="6029" relation="include">
+        </childnode>
+        <childnode refid="5980" relation="include">
+        </childnode>
+      </node>
+      <node id="5983">
+        <label>iosfwd</label>
+      </node>
+      <node id="5973">
+        <label>cstdlib</label>
+      </node>
+      <node id="5985">
+        <label>iostream</label>
+      </node>
+      <node id="5961">
+        <label>cstddef</label>
+      </node>
+      <node id="6003">
+        <label>unordered_map</label>
+      </node>
+      <node id="6035">
+        <label>TH/THMath.h</label>
+      </node>
+      <node id="6002">
+        <label>mutex</label>
+      </node>
+      <node id="5946">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5948" relation="include">
+        </childnode>
+        <childnode refid="5949" relation="include">
+        </childnode>
+        <childnode refid="5987" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="5998" relation="include">
+        </childnode>
+        <childnode refid="6006" relation="include">
+        </childnode>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="5967" relation="include">
+        </childnode>
+        <childnode refid="6012" relation="include">
+        </childnode>
+        <childnode refid="6014" relation="include">
+        </childnode>
+        <childnode refid="6020" relation="include">
+        </childnode>
+        <childnode refid="6021" relation="include">
+        </childnode>
+        <childnode refid="6022" relation="include">
+        </childnode>
+        <childnode refid="6023" relation="include">
+        </childnode>
+        <childnode refid="6024" relation="include">
+        </childnode>
+        <childnode refid="6017" relation="include">
+        </childnode>
+        <childnode refid="6018" relation="include">
+        </childnode>
+        <childnode refid="6011" relation="include">
+        </childnode>
+        <childnode refid="6025" relation="include">
+        </childnode>
+        <childnode refid="6026" relation="include">
+        </childnode>
+      </node>
+      <node id="6000">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="5972" relation="include">
+        </childnode>
+        <childnode refid="6001" relation="include">
+        </childnode>
+        <childnode refid="5973" relation="include">
+        </childnode>
+        <childnode refid="5958" relation="include">
+        </childnode>
+        <childnode refid="5950" relation="include">
+        </childnode>
+        <childnode refid="6002" relation="include">
+        </childnode>
+        <childnode refid="6003" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+        <childnode refid="5978" relation="include">
+        </childnode>
+        <childnode refid="6004" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+      </node>
+      <node id="5952">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="5947" relation="include">
+        </childnode>
+        <childnode refid="5953" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5962" relation="include">
+        </childnode>
+        <childnode refid="5963" relation="include">
+        </childnode>
+        <childnode refid="5964" relation="include">
+        </childnode>
+        <childnode refid="5959" relation="include">
+        </childnode>
+      </node>
+      <node id="6018">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="5998" relation="include">
+        </childnode>
+        <childnode refid="5967" relation="include">
+        </childnode>
+        <childnode refid="6017" relation="include">
+        </childnode>
+        <childnode refid="6011" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="6008" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5983" relation="include">
+        </childnode>
+        <childnode refid="5954" relation="include">
+        </childnode>
+      </node>
+      <node id="6008">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="5997" relation="include">
+        </childnode>
+        <childnode refid="5987" relation="include">
+        </childnode>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="6009" relation="include">
+        </childnode>
+        <childnode refid="6006" relation="include">
+        </childnode>
+        <childnode refid="6010" relation="include">
+        </childnode>
+        <childnode refid="5990" relation="include">
+        </childnode>
+        <childnode refid="5991" relation="include">
+        </childnode>
+        <childnode refid="5993" relation="include">
+        </childnode>
+        <childnode refid="5967" relation="include">
+        </childnode>
+        <childnode refid="6011" relation="include">
+        </childnode>
+        <childnode refid="5953" relation="include">
+        </childnode>
+      </node>
+      <node id="5955">
+        <label>type_traits</label>
+      </node>
+      <node id="6011">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="5968" relation="include">
+        </childnode>
+        <childnode refid="5952" relation="include">
+        </childnode>
+        <childnode refid="5985" relation="include">
+        </childnode>
+      </node>
+      <node id="5970">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="5971" relation="include">
+        </childnode>
+        <childnode refid="5972" relation="include">
+        </childnode>
+        <childnode refid="5957" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+        <childnode refid="5973" relation="include">
+        </childnode>
+        <childnode refid="5974" relation="include">
+        </childnode>
+        <childnode refid="5956" relation="include">
+        </childnode>
+        <childnode refid="5975" relation="include">
+        </childnode>
+        <childnode refid="5950" relation="include">
+        </childnode>
+        <childnode refid="5976" relation="include">
+        </childnode>
+        <childnode refid="5955" relation="include">
+        </childnode>
+        <childnode refid="5954" relation="include">
+        </childnode>
+        <childnode refid="5947" relation="include">
+        </childnode>
+      </node>
+      <node id="5972">
+        <label>algorithm</label>
+      </node>
+      <node id="5997">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="5989" relation="include">
+        </childnode>
+      </node>
+      <node id="5974">
+        <label>cstring</label>
+      </node>
+      <node id="5950">
+        <label>memory</label>
+      </node>
+      <node id="5956">
+        <label>initializer_list</label>
+      </node>
+      <node id="6032">
+        <label>ATen/CPUGenerator.h</label>
+      </node>
+      <node id="6028">
+        <label>ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="5946" relation="include">
+        </childnode>
+        <childnode refid="5961" relation="include">
+        </childnode>
+      </node>
+      <node id="6020">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="5985" relation="include">
+        </childnode>
+        <childnode refid="5996" relation="include">
+        </childnode>
+        <childnode refid="5987" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/CPUApplyUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Dispatch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Error.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ExpandUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/NativeFunctions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/CPUGenerator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/CheckGenerator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Generator.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/native/Distributions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH/THRandom.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH/THGenerator.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TH/THMath.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>*<sp/>This<sp/>section<sp/>is<sp/>a<sp/>counterpart<sp/>to<sp/>Distributions.cu</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>function<sp/>`sample_poisson`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>adapted<sp/>from<sp/>Numpy&apos;s<sp/>distributions.c<sp/>implementation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//<sp/>It<sp/>is<sp/>MIT<sp/>licensed,<sp/>so<sp/>here<sp/>is<sp/>the<sp/>copyright:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Copyright<sp/>2005<sp/>Robert<sp/>Kern<sp/>(robert.kern@gmail.com)</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/>*<sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/>*<sp/>copy<sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/>*<sp/>&quot;Software&quot;),<sp/>to<sp/>deal<sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/>*<sp/>without<sp/>limitation<sp/>the<sp/>rights<sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/>*<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell<sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/>*<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is<sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/>*<sp/>the<sp/>following<sp/>conditions:</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/>*<sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/>*<sp/>in<sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/>*<sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/>*<sp/>OR<sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY,<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/>*<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE<sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/>*<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER<sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/>*<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,<sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/>*<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN<sp/>THE<sp/>SOFTWARE.</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">THGenerator*<sp/>get_generator(<ref refid="structat_1_1_generator" kindref="compound">at::Generator</ref>*<sp/><ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>default_gen<sp/>=<sp/>&amp;at::globalContext().defaultGenerator(at::Backend::CPU);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>gen_<sp/>=<sp/>at::check_generator&lt;at::CPUGenerator&gt;(<ref refid="namespacegen" kindref="compound">gen</ref>,<sp/>default_gen);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>gen_-&gt;generator;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">int64_t<sp/>sample_poisson(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>lambda,<sp/>THGenerator*<sp/>generator)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lambda<sp/>&gt;=<sp/>10)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>transformed<sp/>rejection<sp/>method,<sp/>(Hoermann,<sp/>1993)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>k;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>U,<sp/>V,<sp/>a,<sp/>b,<sp/>invalpha,<sp/>vr,<sp/>us;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>slam<sp/>=<sp/>std::sqrt(lambda);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>loglam<sp/>=<sp/>std::log(lambda);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>b<sp/>=<sp/>0.931<sp/>+<sp/>2.53<sp/>*<sp/>slam;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>=<sp/>-0.059<sp/>+<sp/>0.02483<sp/>*<sp/>b;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>invalpha<sp/>=<sp/>1.1239<sp/>+<sp/>1.1328<sp/>/<sp/>(b<sp/>-<sp/>3.4);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>vr<sp/>=<sp/>0.9277<sp/>-<sp/>3.6224<sp/>/<sp/>(b<sp/>-<sp/>2);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>U<sp/>=<sp/>THRandom_standard_uniform(generator)<sp/>-<sp/>0.5;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>V<sp/>=<sp/>THRandom_standard_uniform(generator);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>us<sp/>=<sp/>0.5<sp/>-<sp/>std::fabs(U);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>k<sp/>=<sp/>(int64_t)std::floor((2<sp/>*<sp/>a<sp/>/<sp/>us<sp/>+<sp/>b)<sp/>*<sp/>U<sp/>+<sp/>lambda<sp/>+<sp/>0.43);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((us<sp/>&gt;=<sp/>0.07)<sp/>&amp;&amp;<sp/>(V<sp/>&lt;=<sp/>vr))<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>k;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((k<sp/>&lt;<sp/>0)<sp/>||<sp/>((us<sp/>&lt;<sp/>0.013)<sp/>&amp;&amp;<sp/>(V<sp/>&gt;<sp/>us)))<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((std::log(V)<sp/>+<sp/>std::log(invalpha)<sp/>-<sp/>std::log(a<sp/>/<sp/>(us<sp/>*<sp/>us)<sp/>+<sp/>b))<sp/>&lt;=</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(-lambda<sp/>+<sp/>k<sp/>*<sp/>loglam<sp/>-<sp/>std::lgamma((</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">)k<sp/>+<sp/>1)))<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>k;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(lambda<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>X;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>prod,<sp/>U,<sp/>enlam;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>enlam<sp/>=<sp/>std::exp(-lambda);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>X<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>prod<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>U<sp/>=<sp/>THRandom_standard_uniform(generator);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>prod<sp/>*=<sp/>U;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prod<sp/>&gt;<sp/>enlam)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>X<sp/>+=<sp/>1;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>X;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">Tensor<sp/>bernoulli(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>p,<sp/>Generator*<sp/><ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>Tensor<sp/>result<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type().tensor();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>result.resize_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes());</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native::bernoulli_(result,<sp/>p,<sp/><ref refid="namespacegen" kindref="compound">gen</ref>);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">Tensor<sp/>bernoulli(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p,<sp/>Generator*<sp/><ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/>Tensor<sp/>result<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type().tensor();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>result.resize_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes());</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native::bernoulli_(result,<sp/>p,<sp/><ref refid="namespacegen" kindref="compound">gen</ref>);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">Tensor<sp/>bernoulli(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>Tensor<sp/>result<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type().tensor();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>result.resize_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native::bernoulli(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">Tensor&amp;<sp/>bernoulli_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>p_,<sp/>Generator*<sp/><ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!</highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_cuda()<sp/>&amp;&amp;<sp/>!p_.is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>p<sp/>=<sp/>p_.toType(kDouble);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_DISPATCH_ALL_TYPES(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type(),<sp/></highlight><highlight class="stringliteral">&quot;bernoulli_&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>THGenerator*<sp/>generator<sp/>=<sp/>get_generator(<ref refid="namespacegen" kindref="compound">gen</ref>);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(generator-&gt;mutex);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>CPU_tensor_apply2&lt;scalar_t,<sp/>double&gt;(</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>p,<sp/>[generator](scalar_t&amp;<sp/>ret_val,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>p_val)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret_val<sp/>=<sp/>(scalar_t)THRandom_bernoulli(generator,<sp/>p_val);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.copy_(at::_th_bernoulli(std::get&lt;0&gt;(expand_inplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>p_)),<sp/><ref refid="namespacegen" kindref="compound">gen</ref>));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">Tensor&amp;<sp/>bernoulli_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p,<sp/>Generator*<sp/><ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">._bernoulli_(p,<sp/><ref refid="namespacegen" kindref="compound">gen</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">Tensor&amp;<sp/>bernoulli_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native::bernoulli_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>0.5,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">Tensor<sp/>_standard_gamma_grad_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>output)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>Tensor<sp/>ret<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.type().tensor(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.sizes());</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type(),<sp/></highlight><highlight class="stringliteral">&quot;_standard_gamma_grad&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>CPU_tensor_apply3&lt;scalar_t,<sp/>scalar_t,<sp/>scalar_t&gt;(ret,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>output,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[](scalar_t&amp;<sp/>ret_val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t&amp;<sp/>self_val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t<sp/>&amp;output_val)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret_val<sp/>=<sp/>standard_gamma_grad_one&lt;scalar_t,<sp/>double&gt;(self_val,<sp/>output_val);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="169"><highlight class="comment"><sp/>*<sp/>This<sp/>section<sp/>is<sp/>a<sp/>counterpart<sp/>to<sp/>Distributions.cu</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">Tensor<sp/>_s_poisson_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>lambda,<sp/>Generator<sp/>*<ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/>Tensor<sp/>ret<sp/>=<sp/>at::zeros(lambda.sizes(),<sp/>lambda.type());</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(ret.type(),<sp/></highlight><highlight class="stringliteral">&quot;poisson&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>THGenerator*<sp/>generator<sp/>=<sp/>get_generator(<ref refid="namespacegen" kindref="compound">gen</ref>);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(generator-&gt;mutex);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>CPU_tensor_apply2&lt;scalar_t,<sp/>scalar_t&gt;(ret,<sp/>lambda,</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[generator](scalar_t&amp;<sp/>ret_val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t&amp;<sp/>lambda){</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret_val<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">scalar_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(sample_poisson(static_cast&lt;double&gt;(lambda),<sp/>generator));</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">Tensor<sp/>_s_gamma_cpu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>alpha,<sp/>Generator<sp/>*<ref refid="namespacegen" kindref="compound">gen</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>Tensor<sp/>ret<sp/>=<sp/>at::zeros(alpha.sizes(),<sp/>alpha.type());</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/>AT_DISPATCH_FLOATING_TYPES(ret.type(),<sp/></highlight><highlight class="stringliteral">&quot;gamma&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>THGenerator*<sp/>generator<sp/>=<sp/>get_generator(<ref refid="namespacegen" kindref="compound">gen</ref>);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(generator-&gt;mutex);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>CPU_tensor_apply2&lt;scalar_t,<sp/>scalar_t&gt;(ret,<sp/>alpha,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[generator](scalar_t&amp;<sp/>ret_val,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t&amp;<sp/>alpha){</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseSampler&lt;double&gt;<sp/>standard_uniform([generator]<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>THRandom_standard_uniform(generator);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BaseSampler&lt;double&gt;<sp/>standard_normal([generator]<sp/>()<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>THRandom_normal(generator,<sp/>0.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sample<sp/>=<sp/>sample_gamma&lt;scalar_t,<sp/>double&gt;(alpha,<sp/>standard_uniform,<sp/>standard_normal);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ret_val<sp/>=<sp/>std::max(std::numeric_limits&lt;scalar_t&gt;::min(),<sp/>(scalar_t)<sp/>sample);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Distributions.cpp"/>
+  </compounddef>
+</doxygen>

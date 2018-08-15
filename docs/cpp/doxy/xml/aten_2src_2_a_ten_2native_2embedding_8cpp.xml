@@ -1,0 +1,952 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="aten_2src_2_a_ten_2native_2embedding_8cpp" kind="file" language="C++">
+    <compoundname>Embedding.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="_tensor_utils_8h" local="yes">ATen/TensorUtils.h</includes>
+    <includes local="yes">ATen/NativeFunctions.h</includes>
+    <includes local="no">cstring</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="18544">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="18545" relation="include">
+        </childnode>
+        <childnode refid="18546" relation="include">
+        </childnode>
+        <childnode refid="18547" relation="include">
+        </childnode>
+        <childnode refid="18548" relation="include">
+        </childnode>
+        <childnode refid="18549" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18551" relation="include">
+        </childnode>
+      </node>
+      <node id="18590">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="18540" relation="include">
+        </childnode>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18588" relation="include">
+        </childnode>
+        <childnode refid="18591" relation="include">
+        </childnode>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18549" relation="include">
+        </childnode>
+        <childnode refid="18541" relation="include">
+        </childnode>
+      </node>
+      <node id="18558">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18574" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18549" relation="include">
+        </childnode>
+      </node>
+      <node id="18557">
+        <label>atomic</label>
+      </node>
+      <node id="18549">
+        <label>functional</label>
+      </node>
+      <node id="18595">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18585" relation="include">
+        </childnode>
+        <childnode refid="18538" relation="include">
+        </childnode>
+      </node>
+      <node id="18559">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="18560" relation="include">
+        </childnode>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18570" relation="include">
+        </childnode>
+        <childnode refid="18572" relation="include">
+        </childnode>
+        <childnode refid="18576" relation="include">
+        </childnode>
+      </node>
+      <node id="18571">
+        <label>limits</label>
+      </node>
+      <node id="18579">
+        <label>assert.h</label>
+      </node>
+      <node id="18584">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18560" relation="include">
+        </childnode>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18583" relation="include">
+        </childnode>
+        <childnode refid="18563" relation="include">
+        </childnode>
+        <childnode refid="18555" relation="include">
+        </childnode>
+        <childnode refid="18585" relation="include">
+        </childnode>
+        <childnode refid="18586" relation="include">
+        </childnode>
+      </node>
+      <node id="18566">
+        <label>iterator</label>
+      </node>
+      <node id="18578">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="18579" relation="include">
+        </childnode>
+        <childnode refid="18580" relation="include">
+        </childnode>
+        <childnode refid="18551" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18545" relation="include">
+        </childnode>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18570" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18581" relation="include">
+        </childnode>
+        <childnode refid="18584" relation="include">
+        </childnode>
+      </node>
+      <node id="18598">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="18572">
+        <label>cstdint</label>
+      </node>
+      <node id="18606">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="18580">
+        <label>stdint.h</label>
+      </node>
+      <node id="18617">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="18573">
+        <label>cmath</label>
+      </node>
+      <node id="18548">
+        <label>cassert</label>
+      </node>
+      <node id="18589">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18539" relation="include">
+        </childnode>
+        <childnode refid="18588" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18584" relation="include">
+        </childnode>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18590" relation="include">
+        </childnode>
+        <childnode refid="18596" relation="include">
+        </childnode>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18593" relation="include">
+        </childnode>
+        <childnode refid="18572" relation="include">
+        </childnode>
+      </node>
+      <node id="18575">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18565" relation="include">
+        </childnode>
+        <childnode refid="18571" relation="include">
+        </childnode>
+      </node>
+      <node id="18551">
+        <label>stdexcept</label>
+      </node>
+      <node id="18612">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="18578" relation="include">
+        </childnode>
+        <childnode refid="18599" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18551" relation="include">
+        </childnode>
+      </node>
+      <node id="18586">
+        <label>numeric</label>
+      </node>
+      <node id="18582">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="18557" relation="include">
+        </childnode>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18556" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18544" relation="include">
+        </childnode>
+      </node>
+      <node id="18570">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18571" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18572" relation="include">
+        </childnode>
+        <childnode refid="18551" relation="include">
+        </childnode>
+        <childnode refid="18545" relation="include">
+        </childnode>
+        <childnode refid="18573" relation="include">
+        </childnode>
+        <childnode refid="18574" relation="include">
+        </childnode>
+        <childnode refid="18575" relation="include">
+        </childnode>
+      </node>
+      <node id="18556">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="18557" relation="include">
+        </childnode>
+      </node>
+      <node id="18581">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="18582" relation="include">
+        </childnode>
+        <childnode refid="18583" relation="include">
+        </childnode>
+      </node>
+      <node id="18550">
+        <label>string</label>
+      </node>
+      <node id="18615">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="18561" relation="include">
+        </childnode>
+        <childnode refid="18580" relation="include">
+        </childnode>
+      </node>
+      <node id="18616">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="18558" relation="include">
+        </childnode>
+        <childnode refid="18602" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18609" relation="include">
+        </childnode>
+        <childnode refid="18544" relation="include">
+        </childnode>
+      </node>
+      <node id="18540">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18542" relation="include">
+        </childnode>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18556" relation="include">
+        </childnode>
+        <childnode refid="18558" relation="include">
+        </childnode>
+        <childnode refid="18577" relation="include">
+        </childnode>
+      </node>
+      <node id="18596">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="18608">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="18558" relation="include">
+        </childnode>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18599" relation="include">
+        </childnode>
+        <childnode refid="18590" relation="include">
+        </childnode>
+        <childnode refid="18552" relation="include">
+        </childnode>
+      </node>
+      <node id="18553">
+        <label>exception</label>
+      </node>
+      <node id="18542">
+        <label>stddef.h</label>
+      </node>
+      <node id="18583">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="18582" relation="include">
+        </childnode>
+      </node>
+      <node id="18614">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18570" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+      </node>
+      <node id="18562">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="18552" relation="include">
+        </childnode>
+      </node>
+      <node id="18597">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="18578" relation="include">
+        </childnode>
+        <childnode refid="18598" relation="include">
+        </childnode>
+      </node>
+      <node id="18554">
+        <label>ostream</label>
+      </node>
+      <node id="18539">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+      </node>
+      <node id="18587">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="18560">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18561" relation="include">
+        </childnode>
+        <childnode refid="18568" relation="include">
+        </childnode>
+        <childnode refid="18566" relation="include">
+        </childnode>
+        <childnode refid="18569" relation="include">
+        </childnode>
+      </node>
+      <node id="18603">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18604" relation="include">
+        </childnode>
+      </node>
+      <node id="18600">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="18618">
+        <label>ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="18599" relation="include">
+        </childnode>
+        <childnode refid="18603" relation="include">
+        </childnode>
+        <childnode refid="18584" relation="include">
+        </childnode>
+      </node>
+      <node id="18538">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="18604">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="18582" relation="include">
+        </childnode>
+        <childnode refid="18555" relation="include">
+        </childnode>
+      </node>
+      <node id="18601">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18580" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+      </node>
+      <node id="18585">
+        <label>typeinfo</label>
+      </node>
+      <node id="18592">
+        <label>cstdio</label>
+      </node>
+      <node id="18577">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18538" relation="include">
+        </childnode>
+      </node>
+      <node id="18569">
+        <label>vector</label>
+      </node>
+      <node id="18613">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="18610">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="18567">
+        <label>new</label>
+      </node>
+      <node id="18545">
+        <label>utility</label>
+      </node>
+      <node id="18568">
+        <label>array</label>
+      </node>
+      <node id="18555">
+        <label>sstream</label>
+      </node>
+      <node id="18605">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="18578" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18599" relation="include">
+        </childnode>
+        <childnode refid="18597" relation="include">
+        </childnode>
+        <childnode refid="18588" relation="include">
+        </childnode>
+        <childnode refid="18606" relation="include">
+        </childnode>
+        <childnode refid="18607" relation="include">
+        </childnode>
+        <childnode refid="18608" relation="include">
+        </childnode>
+        <childnode refid="18609" relation="include">
+        </childnode>
+        <childnode refid="18610" relation="include">
+        </childnode>
+      </node>
+      <node id="18607">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="18536">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Embedding.cpp</label>
+        <link refid="aten_2src_2_a_ten_2native_2embedding_8cpp"/>
+        <childnode refid="18537" relation="include">
+        </childnode>
+        <childnode refid="18618" relation="include">
+        </childnode>
+        <childnode refid="18607" relation="include">
+        </childnode>
+        <childnode refid="18565" relation="include">
+        </childnode>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18555" relation="include">
+        </childnode>
+        <childnode refid="18569" relation="include">
+        </childnode>
+      </node>
+      <node id="18574">
+        <label>iosfwd</label>
+      </node>
+      <node id="18564">
+        <label>cstdlib</label>
+      </node>
+      <node id="18576">
+        <label>iostream</label>
+      </node>
+      <node id="18552">
+        <label>cstddef</label>
+      </node>
+      <node id="18594">
+        <label>unordered_map</label>
+      </node>
+      <node id="18593">
+        <label>mutex</label>
+      </node>
+      <node id="18537">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18539" relation="include">
+        </childnode>
+        <childnode refid="18540" relation="include">
+        </childnode>
+        <childnode refid="18578" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18588" relation="include">
+        </childnode>
+        <childnode refid="18589" relation="include">
+        </childnode>
+        <childnode refid="18597" relation="include">
+        </childnode>
+        <childnode refid="18599" relation="include">
+        </childnode>
+        <childnode refid="18558" relation="include">
+        </childnode>
+        <childnode refid="18603" relation="include">
+        </childnode>
+        <childnode refid="18605" relation="include">
+        </childnode>
+        <childnode refid="18611" relation="include">
+        </childnode>
+        <childnode refid="18612" relation="include">
+        </childnode>
+        <childnode refid="18613" relation="include">
+        </childnode>
+        <childnode refid="18614" relation="include">
+        </childnode>
+        <childnode refid="18615" relation="include">
+        </childnode>
+        <childnode refid="18608" relation="include">
+        </childnode>
+        <childnode refid="18609" relation="include">
+        </childnode>
+        <childnode refid="18602" relation="include">
+        </childnode>
+        <childnode refid="18616" relation="include">
+        </childnode>
+        <childnode refid="18617" relation="include">
+        </childnode>
+      </node>
+      <node id="18591">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="18563" relation="include">
+        </childnode>
+        <childnode refid="18592" relation="include">
+        </childnode>
+        <childnode refid="18564" relation="include">
+        </childnode>
+        <childnode refid="18549" relation="include">
+        </childnode>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18593" relation="include">
+        </childnode>
+        <childnode refid="18594" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+        <childnode refid="18569" relation="include">
+        </childnode>
+        <childnode refid="18595" relation="include">
+        </childnode>
+        <childnode refid="18538" relation="include">
+        </childnode>
+      </node>
+      <node id="18543">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="18538" relation="include">
+        </childnode>
+        <childnode refid="18544" relation="include">
+        </childnode>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18553" relation="include">
+        </childnode>
+        <childnode refid="18554" relation="include">
+        </childnode>
+        <childnode refid="18555" relation="include">
+        </childnode>
+        <childnode refid="18550" relation="include">
+        </childnode>
+      </node>
+      <node id="18609">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="18589" relation="include">
+        </childnode>
+        <childnode refid="18558" relation="include">
+        </childnode>
+        <childnode refid="18608" relation="include">
+        </childnode>
+        <childnode refid="18602" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18599" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18574" relation="include">
+        </childnode>
+        <childnode refid="18545" relation="include">
+        </childnode>
+      </node>
+      <node id="18599">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="18588" relation="include">
+        </childnode>
+        <childnode refid="18578" relation="include">
+        </childnode>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18600" relation="include">
+        </childnode>
+        <childnode refid="18597" relation="include">
+        </childnode>
+        <childnode refid="18601" relation="include">
+        </childnode>
+        <childnode refid="18581" relation="include">
+        </childnode>
+        <childnode refid="18582" relation="include">
+        </childnode>
+        <childnode refid="18584" relation="include">
+        </childnode>
+        <childnode refid="18558" relation="include">
+        </childnode>
+        <childnode refid="18602" relation="include">
+        </childnode>
+        <childnode refid="18544" relation="include">
+        </childnode>
+      </node>
+      <node id="18546">
+        <label>type_traits</label>
+      </node>
+      <node id="18602">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="18559" relation="include">
+        </childnode>
+        <childnode refid="18543" relation="include">
+        </childnode>
+        <childnode refid="18576" relation="include">
+        </childnode>
+      </node>
+      <node id="18561">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="18562" relation="include">
+        </childnode>
+        <childnode refid="18563" relation="include">
+        </childnode>
+        <childnode refid="18548" relation="include">
+        </childnode>
+        <childnode refid="18552" relation="include">
+        </childnode>
+        <childnode refid="18564" relation="include">
+        </childnode>
+        <childnode refid="18565" relation="include">
+        </childnode>
+        <childnode refid="18547" relation="include">
+        </childnode>
+        <childnode refid="18566" relation="include">
+        </childnode>
+        <childnode refid="18541" relation="include">
+        </childnode>
+        <childnode refid="18567" relation="include">
+        </childnode>
+        <childnode refid="18546" relation="include">
+        </childnode>
+        <childnode refid="18545" relation="include">
+        </childnode>
+        <childnode refid="18538" relation="include">
+        </childnode>
+      </node>
+      <node id="18563">
+        <label>algorithm</label>
+      </node>
+      <node id="18588">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="18580" relation="include">
+        </childnode>
+      </node>
+      <node id="18565">
+        <label>cstring</label>
+      </node>
+      <node id="18541">
+        <label>memory</label>
+      </node>
+      <node id="18547">
+        <label>initializer_list</label>
+      </node>
+      <node id="18611">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="18576" relation="include">
+        </childnode>
+        <childnode refid="18587" relation="include">
+        </childnode>
+        <childnode refid="18578" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/TensorUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/NativeFunctions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;omp.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">Tensor<sp/>embedding(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>weight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>indices,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>padding_idx,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>scale_grad_by_freq,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sparse)<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_arg<sp/>=<sp/>TensorArg(indices,<sp/></highlight><highlight class="stringliteral">&quot;indices&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>checkScalarType(</highlight><highlight class="stringliteral">&quot;embedding&quot;</highlight><highlight class="normal">,<sp/>indices_arg,<sp/>kLong);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>use<sp/>tensor.index()<sp/>after<sp/>improving<sp/>perf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indices.dim()<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>weight.index_select(0,<sp/>indices);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>size<sp/>=<sp/>std::vector&lt;int64_t&gt;(indices.sizes());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>d<sp/>:<sp/>weight.sizes().slice(1))<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>size.push_back(d);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>weight.index_select(0,<sp/>indices.reshape(-1)).view(size);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">Tensor<sp/>embedding_backward(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>grad,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>indices,<sp/>int64_t<sp/>num_weights,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>padding_idx,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>scale_grad_by_freq,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sparse)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sparse)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>at::embedding_sparse_backward(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad,<sp/>indices,<sp/>num_weights,<sp/>padding_idx,<sp/>scale_grad_by_freq);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>at::embedding_dense_backward(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad,<sp/>indices,<sp/>num_weights,<sp/>padding_idx,<sp/>scale_grad_by_freq);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">Tensor<sp/>embedding_sparse_backward(</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>grad_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>indices_,<sp/>int64_t<sp/>num_weights,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>padding_idx,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>scale_grad_by_freq)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_arg<sp/>=<sp/>TensorArg(indices_,<sp/></highlight><highlight class="stringliteral">&quot;indices&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>checkScalarType(</highlight><highlight class="stringliteral">&quot;embedding_backward&quot;</highlight><highlight class="normal">,<sp/>indices_arg,<sp/>kLong);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>implement<sp/>scale_grad_by_freq</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scale_grad_by_freq)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ERROR(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;embedding_backward:<sp/>scale_grad_by_freq<sp/>not<sp/>supported<sp/>with<sp/>sparse<sp/>gradients&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>Tensor<sp/>indices<sp/>=<sp/>indices_;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>Tensor<sp/>grad<sp/>=<sp/>grad_;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(padding_idx<sp/>!=<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>indices<sp/>!=<sp/>padding_idx;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>indices<sp/>=<sp/>indices.index(c);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>grad<sp/>=<sp/>grad.index(c);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>int64_t<sp/>num_features<sp/>=<sp/>grad_.size(-1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>weight_size<sp/>=<sp/>std::array&lt;int64_t,<sp/>2&gt;{{<sp/>num_weights,<sp/>num_features<sp/>}};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>dense_type<sp/>=<sp/>grad.type();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>sparse_type<sp/>=<sp/>dense_type.toBackend(grad.is_cuda()<sp/>?<sp/>kSparseCUDA<sp/>:<sp/>kSparseCPU);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>if<sp/>all<sp/>our<sp/>grad<sp/>come<sp/>from<sp/>padding_idx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grad.numel()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>FIXME:<sp/>USE_TH_SIZE_ZERO_DIM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sparse_type._sparse_coo_tensor_unsafe(indices_.type().tensor(),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dense_type.tensor(),<sp/>weight_size);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>indices.reshape({1,<sp/>-1});</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>values<sp/>=<sp/>grad.reshape({-1,<sp/>num_features});</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sparse_type._sparse_coo_tensor_unsafe(index,<sp/>values,<sp/>weight_size);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">Tensor<sp/>embedding_dense_backward_cpu(</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>grad_,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>indices,<sp/>int64_t<sp/>num_weights,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>padding_idx,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>scale_grad_by_freq)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_arg<sp/>=<sp/>TensorArg(indices,<sp/></highlight><highlight class="stringliteral">&quot;indices&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>checkScalarType(</highlight><highlight class="stringliteral">&quot;embedding_backward&quot;</highlight><highlight class="normal">,<sp/>indices_arg,<sp/>kLong);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_contig<sp/>=<sp/>indices.contiguous();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_data<sp/>=<sp/>indices_contig.data&lt;int64_t&gt;();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>int64_t<sp/>numel<sp/>=<sp/>indices.numel();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>std::unique_ptr&lt;int64_t[]&gt;<sp/>counts;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scale_grad_by_freq)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>counts.reset(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>int64_t[num_weights]);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numel;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>counts[indices_data[i]]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numel;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>counts[indices_data[i]]++;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>grad<sp/>=<sp/>grad_.contiguous().view({numel,<sp/>grad_.size(-1)});</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>grad_weight<sp/>=<sp/>at::zeros({num_weights,<sp/>grad_.size(-1)},<sp/>grad_.options());</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(numel<sp/>&gt;<sp/>1000)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>strategy<sp/>is<sp/>to<sp/>parallelize<sp/>over<sp/>sections<sp/>of<sp/>the<sp/>vocabulary,<sp/>so<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>thread<sp/>1<sp/>handles<sp/>updates<sp/>to<sp/>gradWeight[0..nVocab/nThreads].<sp/>Every<sp/>thread</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>has<sp/>to<sp/>traverse<sp/>the<sp/>entire<sp/>input,<sp/>but<sp/>the<sp/>dominating<sp/>factor<sp/>is<sp/>the<sp/>axpy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>BLAS<sp/>call.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#pragma<sp/>omp<sp/>parallel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tid<sp/>=<sp/>omp_get_thread_num();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nthreads<sp/>=<sp/>omp_get_num_threads();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>start<sp/>=<sp/>tid<sp/>*<sp/>(num_weights/nthreads<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>end<sp/>=<sp/>start<sp/>+<sp/>(num_weights/nthreads<sp/>+<sp/>1);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numel;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indices_data[i]<sp/>!=<sp/>padding_idx)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>k<sp/>=<sp/>indices_data[i];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(k<sp/>&gt;=<sp/>start<sp/>&amp;&amp;<sp/>k<sp/>&lt;<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scale_grad_by_freq)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale<sp/>/=<sp/>counts[k];</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>grad_weight[k].add_(grad[i],<sp/>scale);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grad_weight;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numel;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(indices_data[i]<sp/>!=<sp/>padding_idx)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>k<sp/>=<sp/>indices_data[i];</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scale<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scale_grad_by_freq)<sp/>{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scale<sp/>/=<sp/>counts[k];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grad_weight[k].add_(grad[i],<sp/>scale);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>grad_weight;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">Tensor<sp/>&amp;<sp/>embedding_renorm_cpu_(</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/>indices,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_norm,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>norm_type)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>self_arg<sp/>=<sp/>TensorArg(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;self&quot;</highlight><highlight class="normal">,<sp/>1);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_arg<sp/>=<sp/>TensorArg(indices,<sp/></highlight><highlight class="stringliteral">&quot;indices&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>checkDim(</highlight><highlight class="stringliteral">&quot;embedding_renorm_&quot;</highlight><highlight class="normal">,<sp/>self_arg,<sp/>2);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>checkScalarType(</highlight><highlight class="stringliteral">&quot;embedding_renorm_&quot;</highlight><highlight class="normal">,<sp/>indices_arg,<sp/>kLong);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>indices_contig<sp/>=<sp/>indices.contiguous();</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>num_indices<sp/>=<sp/>indices.numel();</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>data_ptr<sp/>=<sp/>indices_contig.data&lt;int64_t&gt;();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>sorted_indices<sp/>=<sp/>std::vector&lt;int64_t&gt;(data_ptr,<sp/>data_ptr<sp/>+<sp/>num_indices);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>std::sort(sorted_indices.begin(),<sp/>sorted_indices.end(),<sp/>std::less&lt;int64_t&gt;());</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#pragma<sp/>omp<sp/>parallel<sp/>for<sp/>if(num_indices<sp/>&gt;<sp/>1000)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>num_indices;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>sorted_indices[i]<sp/>==<sp/>sorted_indices[i<sp/>-<sp/>1])<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>row<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">[sorted_indices[i]];</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>norm<sp/>=<sp/>row.norm(norm_type).toCDouble();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(norm<sp/>&gt;<sp/>max_norm)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>scale<sp/>=<sp/>max_norm<sp/>/<sp/>(norm<sp/>+<sp/>1e-7);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>row<sp/>*=<sp/>scale;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">}}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Embedding.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_module_holder" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::ModuleHolder</compoundname>
+    <basecompoundref refid="structtorch_1_1detail_1_1_module_holder_indicator" prot="private" virt="non-virtual">torch::detail::ModuleHolderIndicator</basecompoundref>
+    <includes refid="pimpl_8h" local="no">pimpl.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Contained</declname>
+        <defname>Contained</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtorch_1_1nn_1_1_module_holder_1a519c19cc54dc5d5136168bf4a20bafc7" prot="public" static="no">
+        <type>Contained</type>
+        <definition>using torch::nn::ModuleHolder&lt; Contained &gt;::ContainedType =  Contained</definition>
+        <argsstring></argsstring>
+        <name>ContainedType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="39" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_module_holder_1a89e90205415c23c1519b9a81c7e50168" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; Contained &gt;</type>
+        <definition>std::shared_ptr&lt;Contained&gt; torch::nn::ModuleHolder&lt; Contained &gt;::impl_</definition>
+        <argsstring></argsstring>
+        <name>impl_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The module pointer this class wraps. NOTE: Must be placed at the top of the class so that we can use it with trailing return types below. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="36" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a815f201135084d8dd00c72f470bc8d50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::ModuleHolder&lt; Contained &gt;::ModuleHolder</definition>
+        <argsstring>()</argsstring>
+        <name>ModuleHolder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default constructs the contained module if if has a default constructor, else produces a static error. NOTE: This uses the behavior of template classes in C++ that constructors (or any methods) are only compiled when actually used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="45" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="45" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a5731fead969d123af1bef21922dbf63e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::ModuleHolder&lt; Contained &gt;::ModuleHolder</definition>
+        <argsstring>(std::nullptr_t)</argsstring>
+        <name>ModuleHolder</name>
+        <param>
+          <type>std::nullptr_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> with an empty contained value. Access to the underlying module is not permitted and will throw an exception, until a value is assigned. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a67759f2c75428c31b86f4c8408aa92eb" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Ts</declname>
+            <defname>Ts</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::ModuleHolder&lt; Contained &gt;::ModuleHolder</definition>
+        <argsstring>(Ts &amp;&amp;... ts)</argsstring>
+        <name>ModuleHolder</name>
+        <param>
+          <type>Ts &amp;&amp;...</type>
+          <declname>ts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> with a contained module, forwarding all arguments to its constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="61" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="61" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a7e11b3e1cc620aee1c034fa96afb7f85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::ModuleHolder&lt; Contained &gt;::ModuleHolder</definition>
+        <argsstring>(std::shared_ptr&lt; Contained &gt; module)</argsstring>
+        <name>ModuleHolder</name>
+        <param>
+          <type>std::shared_ptr&lt; Contained &gt;</type>
+          <declname>module</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> from a pointer to the contained type. Example: <computeroutput>Linear(std::make_shared&lt;<ref refid="classtorch_1_1nn_1_1_linear_impl" kindref="compound">LinearImpl</ref>&gt;(...))</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="66" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="66" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a4672d3bf9aaa4f5f8fead93a3c682dbd" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::ModuleHolder&lt; Contained &gt;::operator bool</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns true if the <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> contains a module, or false if it is <computeroutput>nullptr</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a23fa15f61a057301c189007e64e727d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Contained *</type>
+        <definition>Contained* torch::nn::ModuleHolder&lt; Contained &gt;::operator-&gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Forwards to the contained module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a2ae02d3a860f4d50cf59de275c370267" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Contained *</type>
+        <definition>const Contained* torch::nn::ModuleHolder&lt; Contained &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Forwards to the contained module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="81" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a5b5011ef1b6338a001ca1ceb9149b658" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Contained &amp;</type>
+        <definition>Contained&amp; torch::nn::ModuleHolder&lt; Contained &gt;::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Returns a reference to the contained module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="86" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="86" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a4a059763f91eab994e21bac15b87914e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Contained &amp;</type>
+        <definition>const Contained&amp; torch::nn::ModuleHolder&lt; Contained &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Returns a const reference to the contained module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="91" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a88ed61f6d1017c1d7ec8454ccbb19307" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::shared_ptr&lt; Contained &gt; &amp;</type>
+        <definition>const std::shared_ptr&lt;Contained&gt;&amp; torch::nn::ModuleHolder&lt; Contained &gt;::ptr</definition>
+        <argsstring>() const</argsstring>
+        <name>ptr</name>
+        <briefdescription>
+<para>Returns a shared pointer to the underlying module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="96" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1ae0b83572a7438a5edd53d77c9f3a1edb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Contained *</type>
+        <definition>Contained* torch::nn::ModuleHolder&lt; Contained &gt;::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Returns a pointer to the underlying module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="102" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a6df40d8ca29d5c1605f353e6fe4b5380" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const Contained *</type>
+        <definition>const Contained* torch::nn::ModuleHolder&lt; Contained &gt;::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+<para>Returns a const pointer to the underlying module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="108" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1ada81ca7228a19b52837acca90a6a5075" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto torch::nn::ModuleHolder&lt; Contained &gt;::operator()</definition>
+        <argsstring>(Args &amp;&amp;... args) -&gt; decltype((*impl_)(std::forward&lt; Args &gt;(args)...))</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Forwards to the call operator of the contained module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="115" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="115" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a4764a97cdfb9d5671168f6f5610462c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Arg</type>
+          </param>
+        </templateparamlist>
+        <type>auto</type>
+        <definition>auto torch::nn::ModuleHolder&lt; Contained &gt;::operator[]</definition>
+        <argsstring>(Arg &amp;&amp;arg) -&gt; decltype((*impl_)[std::forward&lt; Arg &gt;(arg)])</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>Arg &amp;&amp;</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+<para>Forwards to the subscript operator of the contained module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="122" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="122" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1ad21fdc6f8dfab8ec38d37ad23f5016fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool torch::nn::ModuleHolder&lt; Contained &gt;::is_empty</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_empty</name>
+        <briefdescription>
+<para>Returns true if the <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> does not contain a module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="127" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="127" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a7da9345e1fb4c5f94875adf39730d7a8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval>Contained</defval>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::enable_if_t&lt;std::is_default_constructible&lt;T&gt;::value&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; Contained &gt;</type>
+        <definition>std::shared_ptr&lt;Contained&gt; torch::nn::ModuleHolder&lt; Contained &gt;::default_construct</definition>
+        <argsstring>()</argsstring>
+        <name>default_construct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>In C++17, the two methods below could be written as the following: if constexpr (std::is_default_constructible_v&lt;Contained&gt;) { return std::make_shared&lt;Contained&gt;(); } else { return nullptr; } In C++11, we use SFINAE instead of <computeroutput>if constexpr</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="143" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_module_holder_1a0fa256f7fe18c8e60b561c54a8798235" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+            <defval>Contained</defval>
+          </param>
+        </templateparamlist>
+        <type>torch::disable_if_t&lt; std::is_default_constructible&lt; T &gt;::value, std::shared_ptr&lt; Contained &gt; &gt;</type>
+        <definition>torch::disable_if_t&lt; std::is_default_constructible&lt;T&gt;::value, std::shared_ptr&lt;Contained&gt; &gt; torch::nn::ModuleHolder&lt; Contained &gt;::default_construct</definition>
+        <argsstring>()</argsstring>
+        <name>default_construct</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="151" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="151" bodyend="153"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A <computeroutput><ref refid="classtorch_1_1nn_1_1_module_holder" kindref="compound">ModuleHolder</ref></computeroutput> is essentially a wrapper around <computeroutput>std::shared_ptr&lt;M&gt;</computeroutput> where <computeroutput>M</computeroutput> is an <computeroutput><ref refid="classtorch_1_1nn_1_1_module" kindref="compound">nn::Module</ref></computeroutput> subclass, with convenient constructors defined for the kind of constructions we want to allow for our modules. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="444">
+        <label>torch::detail::ModuleHolderIndicator</label>
+        <link refid="structtorch_1_1detail_1_1_module_holder_indicator"/>
+      </node>
+      <node id="443">
+        <label>torch::nn::ModuleHolder&lt; Contained &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_module_holder"/>
+        <childnode refid="444" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="446">
+        <label>torch::detail::ModuleHolderIndicator</label>
+        <link refid="structtorch_1_1detail_1_1_module_holder_indicator"/>
+      </node>
+      <node id="445">
+        <label>torch::nn::ModuleHolder&lt; Contained &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_module_holder"/>
+        <childnode refid="446" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" line="31" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h" bodystart="31" bodyend="154"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a519c19cc54dc5d5136168bf4a20bafc7" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>ContainedType</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a7da9345e1fb4c5f94875adf39730d7a8" prot="private" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>default_construct</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a0fa256f7fe18c8e60b561c54a8798235" prot="private" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>default_construct</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1ae0b83572a7438a5edd53d77c9f3a1edb" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>get</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a6df40d8ca29d5c1605f353e6fe4b5380" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>get</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a89e90205415c23c1519b9a81c7e50168" prot="protected" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>impl_</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1ad21fdc6f8dfab8ec38d37ad23f5016fe" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>is_empty</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a815f201135084d8dd00c72f470bc8d50" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>ModuleHolder</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a5731fead969d123af1bef21922dbf63e" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>ModuleHolder</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a67759f2c75428c31b86f4c8408aa92eb" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>ModuleHolder</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a7e11b3e1cc620aee1c034fa96afb7f85" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>ModuleHolder</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a4672d3bf9aaa4f5f8fead93a3c682dbd" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator bool</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1ada81ca7228a19b52837acca90a6a5075" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator()</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a5b5011ef1b6338a001ca1ceb9149b658" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator*</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a4a059763f91eab994e21bac15b87914e" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator*</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a23fa15f61a057301c189007e64e727d0" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator-&gt;</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a2ae02d3a860f4d50cf59de275c370267" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator-&gt;</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a4764a97cdfb9d5671168f6f5610462c4" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>operator[]</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_holder_1a88ed61f6d1017c1d7ec8454ccbb19307" prot="public" virt="non-virtual"><scope>torch::nn::ModuleHolder</scope><name>ptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

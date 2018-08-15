@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1native_1_1_r_n_n_descriptor" kind="struct" language="C++" prot="public">
+    <compoundname>at::native::RNNDescriptor</compoundname>
+    <basecompoundref refid="classat_1_1native_1_1_descriptor" prot="public" virt="non-virtual">at::native::Descriptor&lt; cudnnRNNStruct, &amp;cudnnCreateRNNDescriptor, &amp;cudnnDestroyRNNDescriptor &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1native_1_1_r_n_n_descriptor_1a032ff3540bba1de8ddaa0e37e5c63a57" prot="public" static="no" mutable="no">
+        <type><ref refid="structat_1_1native_1_1_dropout_descriptor" kindref="compound">DropoutDescriptor</ref></type>
+        <definition>DropoutDescriptor at::native::RNNDescriptor::dropout_desc_</definition>
+        <argsstring></argsstring>
+        <name>dropout_desc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="291" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1native_1_1_r_n_n_descriptor_1ae9b23d19df0aa83d1bd57e5e9bac8ba4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::RNNDescriptor::set</definition>
+        <argsstring>(cudnnHandle_t handle, int hidden_size, int num_layers, DropoutDescriptor &amp;&amp;dropout_desc, cudnnRNNInputMode_t input_mode, cudnnDirectionMode_t bidirectional, cudnnRNNMode_t mode, cudnnDataType_t datatype)</argsstring>
+        <name>set</name>
+        <param>
+          <type>cudnnHandle_t</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hidden_size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>num_layers</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1native_1_1_dropout_descriptor" kindref="compound">DropoutDescriptor</ref> &amp;&amp;</type>
+          <declname>dropout_desc</declname>
+        </param>
+        <param>
+          <type>cudnnRNNInputMode_t</type>
+          <declname>input_mode</declname>
+        </param>
+        <param>
+          <type>cudnnDirectionMode_t</type>
+          <declname>bidirectional</declname>
+        </param>
+        <param>
+          <type>cudnnRNNMode_t</type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>cudnnDataType_t</type>
+          <declname>datatype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="292" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="292" bodyend="319"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="530">
+        <label>at::native::Descriptor&lt; cudnnRNNStruct, &amp;cudnnCreateRNNDescriptor, &amp;cudnnDestroyRNNDescriptor &gt;</label>
+        <link refid="classat_1_1native_1_1_descriptor"/>
+      </node>
+      <node id="529">
+        <label>at::native::RNNDescriptor</label>
+        <link refid="structat_1_1native_1_1_r_n_n_descriptor"/>
+        <childnode refid="530" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="534">
+        <label>at::native::Descriptor&lt; cudnnDropoutStruct, &amp;cudnnCreateDropoutDescriptor, &amp;cudnnDestroyDropoutDescriptor &gt;</label>
+        <link refid="classat_1_1native_1_1_descriptor"/>
+      </node>
+      <node id="536">
+        <label>detail::TensorBase</label>
+        <link refid="structat_1_1detail_1_1_tensor_base_impl"/>
+        <childnode refid="537" relation="usage">
+          <edgelabel>pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="532">
+        <label>at::native::Descriptor&lt; cudnnRNNStruct, &amp;cudnnCreateRNNDescriptor, &amp;cudnnDestroyRNNDescriptor &gt;</label>
+        <link refid="classat_1_1native_1_1_descriptor"/>
+      </node>
+      <node id="539">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="537">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="538" relation="public-inheritance">
+        </childnode>
+        <childnode refid="539" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="531">
+        <label>at::native::RNNDescriptor</label>
+        <link refid="structat_1_1native_1_1_r_n_n_descriptor"/>
+        <childnode refid="532" relation="public-inheritance">
+        </childnode>
+        <childnode refid="533" relation="usage">
+          <edgelabel>dropout_desc_</edgelabel>
+        </childnode>
+      </node>
+      <node id="538">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+      <node id="535">
+        <label>at::Tensor</label>
+        <link refid="structat_1_1_tensor"/>
+        <childnode refid="536" relation="public-inheritance">
+        </childnode>
+        <childnode refid="536" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="533">
+        <label>at::native::DropoutDescriptor</label>
+        <link refid="structat_1_1native_1_1_dropout_descriptor"/>
+        <childnode refid="534" relation="public-inheritance">
+        </childnode>
+        <childnode refid="535" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="290" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="286" bodyend="320"/>
+    <listofallmembers>
+      <member refid="classat_1_1native_1_1_descriptor_1a050635f28ddec72002d5ce243f7878d6" prot="public" virt="non-virtual"><scope>at::native::RNNDescriptor</scope><name>desc</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ad9afd0db5daee329ae46fd45a8d27029" prot="public" virt="non-virtual"><scope>at::native::RNNDescriptor</scope><name>desc</name></member>
+      <member refid="structat_1_1native_1_1_r_n_n_descriptor_1a032ff3540bba1de8ddaa0e37e5c63a57" prot="public" virt="non-virtual"><scope>at::native::RNNDescriptor</scope><name>dropout_desc_</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ab3a812f540f5ba193d5f1784550f590f" prot="protected" virt="non-virtual"><scope>at::native::RNNDescriptor</scope><name>init</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1a85efbdf36360cd8ac82335cfdbf25fc9" prot="public" virt="non-virtual"><scope>at::native::RNNDescriptor</scope><name>mut_desc</name></member>
+      <member refid="structat_1_1native_1_1_r_n_n_descriptor_1ae9b23d19df0aa83d1bd57e5e9bac8ba4" prot="public" virt="non-virtual"><scope>at::native::RNNDescriptor</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

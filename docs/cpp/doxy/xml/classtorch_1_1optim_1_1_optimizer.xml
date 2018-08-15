@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1optim_1_1_optimizer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>torch::optim::Optimizer</compoundname>
+    <basecompoundref refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base" prot="public" virt="non-virtual">torch::optim::detail::OptimizerBase</basecompoundref>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_adagrad" prot="public" virt="non-virtual">torch::optim::Adagrad</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_adam" prot="public" virt="non-virtual">torch::optim::Adam</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_r_m_sprop" prot="public" virt="non-virtual">torch::optim::RMSprop</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_s_g_d" prot="public" virt="non-virtual">torch::optim::SGD</derivedcompoundref>
+    <includes refid="optimizer_8h" local="no">optimizer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_optimizer_1a16ae1552521f10d0ca86377b591747d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void torch::optim::Optimizer::step</definition>
+        <argsstring>()=0</argsstring>
+        <name>step</name>
+        <reimplementedby refid="classtorch_1_1optim_1_1_adagrad_1aa9fb1176b534af3ee9b00c23e5ef28b2">step</reimplementedby>
+        <reimplementedby refid="classtorch_1_1optim_1_1_s_g_d_1aebe52107a6b5271eb28a6c2fc50052d8">step</reimplementedby>
+        <reimplementedby refid="classtorch_1_1optim_1_1_adam_1a36f0cf96ef1b03e333904db62abca669">step</reimplementedby>
+        <reimplementedby refid="classtorch_1_1optim_1_1_r_m_sprop_1a5378b8617642e23f451ae06eeadb4303">step</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="90" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classtorch_1_1optim_1_1_optimizer" kindref="compound">Optimizer</ref> that defines a required <computeroutput>step()</computeroutput> method that takes no arguments and produces no values. The only side effect is that parameters are updated according to the concrete optimization algorithm. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="468">
+        <label>torch::optim::Adagrad</label>
+        <link refid="classtorch_1_1optim_1_1_adagrad"/>
+        <childnode refid="466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="471">
+        <label>torch::optim::SGD</label>
+        <link refid="classtorch_1_1optim_1_1_s_g_d"/>
+        <childnode refid="466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="467">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="470">
+        <label>torch::optim::RMSprop</label>
+        <link refid="classtorch_1_1optim_1_1_r_m_sprop"/>
+        <childnode refid="466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>torch::optim::Adam</label>
+        <link refid="classtorch_1_1optim_1_1_adam"/>
+        <childnode refid="466" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>torch::optim::Optimizer</label>
+        <link refid="classtorch_1_1optim_1_1_optimizer"/>
+        <childnode refid="467" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="473">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="472">
+        <label>torch::optim::Optimizer</label>
+        <link refid="classtorch_1_1optim_1_1_optimizer"/>
+        <childnode refid="473" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="87" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="87" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a35aa4e671083a378e84ead01097854c1" prot="public" virt="virtual"><scope>torch::optim::Optimizer</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a4f0e78d1b05b4f412513e940bb274209" prot="public" virt="virtual"><scope>torch::optim::Optimizer</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a2726328360488171de7ccd2085bcae03" prot="protected" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>buffer_at</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ac095094927b128f97db9a5653cb66807" prot="public" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a99c883bd29f37597dac940c420474d38" prot="public" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a08eb2b3fb09eddb7916e790d8e8f4add" prot="protected" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ae3931245065d22fa16cb775c95c33b01" prot="public" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>ParameterCursor</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a7fc838f1237cdc236ea515dcb30082e4" prot="public" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a1bc457f914c49a04e70a7629488df23f" prot="protected" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>parameters_</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1af05d9e4c072611745a8dd8f4ff8f6220" prot="public" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>size</name></member>
+      <member refid="classtorch_1_1optim_1_1_optimizer_1a16ae1552521f10d0ca86377b591747d1" prot="public" virt="pure-virtual"><scope>torch::optim::Optimizer</scope><name>step</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a60e97f95e8f138600b63fa949bcf2b60" prot="protected" virt="non-virtual"><scope>torch::optim::Optimizer</scope><name>zero_buffers_like</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1abfe0f04c0fa9c13efbf09568985ac834" prot="public" virt="virtual"><scope>torch::optim::Optimizer</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1aaf3ff0cc2a3a28566bc8c106673af53c" prot="public" virt="virtual"><scope>torch::optim::Optimizer</scope><name>~OptimizerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

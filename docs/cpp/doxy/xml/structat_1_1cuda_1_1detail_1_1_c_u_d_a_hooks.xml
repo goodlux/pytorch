@@ -1,0 +1,310 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks" kind="struct" language="C++" prot="public">
+    <compoundname>at::cuda::detail::CUDAHooks</compoundname>
+    <basecompoundref refid="structat_1_1_c_u_d_a_hooks_interface" prot="public" virt="non-virtual">at::CUDAHooksInterface</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a7b26a23309333f3acdba7cdfe8c1dcb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::cuda::detail::CUDAHooks::CUDAHooks</definition>
+        <argsstring>(at::CUDAHooksArgs)</argsstring>
+        <name>CUDAHooks</name>
+        <param>
+          <type><ref refid="structat_1_1_c_u_d_a_hooks_args" kindref="compound">at::CUDAHooksArgs</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="12" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1af87bff13204ea971a0af659596d01af3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; THCState, void(*)(THCState *)&gt;</type>
+        <definition>std::unique_ptr&lt; THCState, void(*)(THCState *)&gt; at::cuda::detail::CUDAHooks::initCUDA</definition>
+        <argsstring>() const override</argsstring>
+        <name>initCUDA</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a56e72ae8976caefe0794c4c8add399ee">initCUDA</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="13" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="70" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a15ab7f3ceb38c50b9c8b06df44bc76cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_generator" kindref="compound">Generator</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Generator &gt; at::cuda::detail::CUDAHooks::initCUDAGenerator</definition>
+        <argsstring>(Context *) const override</argsstring>
+        <name>initCUDAGenerator</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1adbda56beea139c5cfa7b1e68d92c74fc">initCUDAGenerator</reimplements>
+        <param>
+          <type><ref refid="classat_1_1_context" kindref="compound">Context</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="14" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1abe86c5e385ed953a80b637fabbe61a33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool at::cuda::detail::CUDAHooks::hasCUDA</definition>
+        <argsstring>() const override</argsstring>
+        <name>hasCUDA</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1af15d2fd1c5cd1ad5b46b10eac57f6c10">hasCUDA</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="15" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="88" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a9da0bcd85d3a324b3d7cae05f2536b89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool at::cuda::detail::CUDAHooks::hasCuDNN</definition>
+        <argsstring>() const override</argsstring>
+        <name>hasCuDNN</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a77546b80559140800408452df400e793">hasCuDNN</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a8a8b735011ac918c5c4dbdf1429858a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::cuda::detail::CUDAHooks::current_device</definition>
+        <argsstring>() const override</argsstring>
+        <name>current_device</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a66011be390b691453531fe2166df7473">current_device</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="17" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="101" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a7fad8fec1086b34c7191647eee3a9529" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structat_1_1_allocator" kindref="compound">Allocator</ref> *</type>
+        <definition>Allocator * at::cuda::detail::CUDAHooks::getPinnedMemoryAllocator</definition>
+        <argsstring>() const override</argsstring>
+        <name>getPinnedMemoryAllocator</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a336cafe803e6edb543964a00d1592396">getPinnedMemoryAllocator</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ae46c174fc1c43c5f3c74ecf90f309708" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void at::cuda::detail::CUDAHooks::registerCUDATypes</definition>
+        <argsstring>(Context *) const override</argsstring>
+        <name>registerCUDATypes</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1ac9ed539bbec1c75826fa36e21fd5ed60">registerCUDATypes</reimplements>
+        <param>
+          <type><ref refid="classat_1_1_context" kindref="compound">Context</ref> *</type>
+          <defname>context</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="114" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a5ab09e9a3d3f3cfc9f0ca14af4780d26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool at::cuda::detail::CUDAHooks::compiledWithCuDNN</definition>
+        <argsstring>() const override</argsstring>
+        <name>compiledWithCuDNN</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a9e28eb4944b0546f1410274201ea0aef">compiledWithCuDNN</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="20" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="118" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a8cb02f14087c4f729be4d013e744e637" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool at::cuda::detail::CUDAHooks::supportsDilatedConvolutionWithCuDNN</definition>
+        <argsstring>() const override</argsstring>
+        <name>supportsDilatedConvolutionWithCuDNN</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a4a73b97adc741b6f5053fc9bc6cc01d4">supportsDilatedConvolutionWithCuDNN</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="122" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ae1e017ce3a4b367bd57145c43098f41f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>long</type>
+        <definition>long at::cuda::detail::CUDAHooks::versionCuDNN</definition>
+        <argsstring>() const override</argsstring>
+        <name>versionCuDNN</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a2fe47f9258e226815ab9da25aa532efb">versionCuDNN</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="136" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a040610e6b0d418f5adc40fefa59e7fb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double at::cuda::detail::CUDAHooks::batchnormMinEpsilonCuDNN</definition>
+        <argsstring>() const override</argsstring>
+        <name>batchnormMinEpsilonCuDNN</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a17f2a6f8a7543644b678ceb491025687">batchnormMinEpsilonCuDNN</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="144" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a175867d0912b8d6fc2d535cd03dcb06a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::cuda::detail::CUDAHooks::cuFFTGetPlanCacheMaxSize</definition>
+        <argsstring>() const override</argsstring>
+        <name>cuFFTGetPlanCacheMaxSize</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a184cf12f46bbf25725215d4b8521a472">cuFFTGetPlanCacheMaxSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="153" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ad13d09e742d1fc49b2ee743a9aa508ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void at::cuda::detail::CUDAHooks::cuFFTSetPlanCacheMaxSize</definition>
+        <argsstring>(int64_t max_size) const override</argsstring>
+        <name>cuFFTSetPlanCacheMaxSize</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a7bcd1e3bcd1bc3a15d3315b1a64107dc">cuFFTSetPlanCacheMaxSize</reimplements>
+        <param>
+          <type>int64_t</type>
+          <declname>max_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="161" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ae34b0ec9a3a570e91edc7ac534cd2825" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::cuda::detail::CUDAHooks::cuFFTGetPlanCacheSize</definition>
+        <argsstring>() const override</argsstring>
+        <name>cuFFTGetPlanCacheSize</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a29696b3ec4d8fb4c22eddd01a345e4b3">cuFFTGetPlanCacheSize</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="169" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a7a15543ec93e324ae08895177ef68c83" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void at::cuda::detail::CUDAHooks::cuFFTClearPlanCache</definition>
+        <argsstring>() const override</argsstring>
+        <name>cuFFTClearPlanCache</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a0ae0ef97a44d1dae78d1ee1f2951576e">cuFFTClearPlanCache</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="177" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a4e9e80ca8986b00795a61b877e81c7d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int at::cuda::detail::CUDAHooks::getNumGPUs</definition>
+        <argsstring>() const override</argsstring>
+        <name>getNumGPUs</name>
+        <reimplements refid="structat_1_1_c_u_d_a_hooks_interface_1a3d6e7c4ba6517751bc4cdbb98e57f79b">getNumGPUs</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp" bodystart="185" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="178">
+        <label>at::cuda::detail::CUDAHooks</label>
+        <link refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks"/>
+        <childnode refid="179" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="179">
+        <label>at::CUDAHooksInterface</label>
+        <link refid="structat_1_1_c_u_d_a_hooks_interface"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="180">
+        <label>at::cuda::detail::CUDAHooks</label>
+        <link refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="181">
+        <label>at::CUDAHooksInterface</label>
+        <link refid="structat_1_1_c_u_d_a_hooks_interface"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" line="11" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h" bodystart="11" bodyend="29"/>
+    <listofallmembers>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a040610e6b0d418f5adc40fefa59e7fb5" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>batchnormMinEpsilonCuDNN</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a5ab09e9a3d3f3cfc9f0ca14af4780d26" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>compiledWithCuDNN</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a7b26a23309333f3acdba7cdfe8c1dcb0" prot="public" virt="non-virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>CUDAHooks</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a7a15543ec93e324ae08895177ef68c83" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>cuFFTClearPlanCache</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a175867d0912b8d6fc2d535cd03dcb06a" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>cuFFTGetPlanCacheMaxSize</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ae34b0ec9a3a570e91edc7ac534cd2825" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>cuFFTGetPlanCacheSize</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ad13d09e742d1fc49b2ee743a9aa508ab" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>cuFFTSetPlanCacheMaxSize</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a8a8b735011ac918c5c4dbdf1429858a4" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>current_device</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a4e9e80ca8986b00795a61b877e81c7d8" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>getNumGPUs</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a7fad8fec1086b34c7191647eee3a9529" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>getPinnedMemoryAllocator</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1abe86c5e385ed953a80b637fabbe61a33" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>hasCUDA</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a9da0bcd85d3a324b3d7cae05f2536b89" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>hasCuDNN</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1af87bff13204ea971a0af659596d01af3" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>initCUDA</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a15ab7f3ceb38c50b9c8b06df44bc76cb" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>initCUDAGenerator</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ae46c174fc1c43c5f3c74ecf90f309708" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>registerCUDATypes</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1a8cb02f14087c4f729be4d013e744e637" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>supportsDilatedConvolutionWithCuDNN</name></member>
+      <member refid="structat_1_1cuda_1_1detail_1_1_c_u_d_a_hooks_1ae1e017ce3a4b367bd57145c43098f41f" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>versionCuDNN</name></member>
+      <member refid="structat_1_1_c_u_d_a_hooks_interface_1a6f242a49d1f0f44583a83788669c435b" prot="public" virt="virtual"><scope>at::cuda::detail::CUDAHooks</scope><name>~CUDAHooksInterface</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

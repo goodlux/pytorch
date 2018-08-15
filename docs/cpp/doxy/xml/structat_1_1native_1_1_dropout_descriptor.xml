@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1native_1_1_dropout_descriptor" kind="struct" language="C++" prot="public">
+    <compoundname>at::native::DropoutDescriptor</compoundname>
+    <basecompoundref refid="classat_1_1native_1_1_descriptor" prot="public" virt="non-virtual">at::native::Descriptor&lt; cudnnDropoutStruct, &amp;cudnnCreateDropoutDescriptor, &amp;cudnnDestroyDropoutDescriptor &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1native_1_1_dropout_descriptor_1a8c64d48e7f566096a645c6d98391a4ed" prot="public" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+        <definition>at::Tensor at::native::DropoutDescriptor::state</definition>
+        <argsstring></argsstring>
+        <name>state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="249" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1native_1_1_dropout_descriptor_1a214a367e043a625103014e50a42cba77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::DropoutDescriptor::initialize_rng</definition>
+        <argsstring>(const Type &amp;type, cudnnHandle_t handle, float dropout, long long int seed)</argsstring>
+        <name>initialize_rng</name>
+        <param>
+          <type>const <ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>cudnnHandle_t</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dropout</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="254" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="254" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1native_1_1_dropout_descriptor_1ae4d7abefdcef9c6384b4dcae120a899d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::DropoutDescriptor::set</definition>
+        <argsstring>(cudnnHandle_t handle, float dropout, at::Tensor state_)</argsstring>
+        <name>set</name>
+        <param>
+          <type>cudnnHandle_t</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dropout</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+          <declname>state_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="266" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="266" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1native_1_1_dropout_descriptor_1aa26ce231c6840e0e9481c577731f2b1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::DropoutDescriptor::set_no_dropout</definition>
+        <argsstring>(cudnnHandle_t handle)</argsstring>
+        <name>set_no_dropout</name>
+        <param>
+          <type>cudnnHandle_t</type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="277" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="277" bodyend="283"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="246">
+        <label>at::native::Descriptor&lt; cudnnDropoutStruct, &amp;cudnnCreateDropoutDescriptor, &amp;cudnnDestroyDropoutDescriptor &gt;</label>
+        <link refid="classat_1_1native_1_1_descriptor"/>
+      </node>
+      <node id="245">
+        <label>at::native::DropoutDescriptor</label>
+        <link refid="structat_1_1native_1_1_dropout_descriptor"/>
+        <childnode refid="246" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="248">
+        <label>at::native::Descriptor&lt; cudnnDropoutStruct, &amp;cudnnCreateDropoutDescriptor, &amp;cudnnDestroyDropoutDescriptor &gt;</label>
+        <link refid="classat_1_1native_1_1_descriptor"/>
+      </node>
+      <node id="250">
+        <label>detail::TensorBase</label>
+        <link refid="structat_1_1detail_1_1_tensor_base_impl"/>
+        <childnode refid="251" relation="usage">
+          <edgelabel>pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="253">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="251">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+        <childnode refid="253" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="252">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+      <node id="249">
+        <label>at::Tensor</label>
+        <link refid="structat_1_1_tensor"/>
+        <childnode refid="250" relation="public-inheritance">
+        </childnode>
+        <childnode refid="250" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="247">
+        <label>at::native::DropoutDescriptor</label>
+        <link refid="structat_1_1native_1_1_dropout_descriptor"/>
+        <childnode refid="248" relation="public-inheritance">
+        </childnode>
+        <childnode refid="249" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="248" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="244" bodyend="284"/>
+    <listofallmembers>
+      <member refid="classat_1_1native_1_1_descriptor_1a050635f28ddec72002d5ce243f7878d6" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>desc</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ad9afd0db5daee329ae46fd45a8d27029" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>desc</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ab3a812f540f5ba193d5f1784550f590f" prot="protected" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>init</name></member>
+      <member refid="structat_1_1native_1_1_dropout_descriptor_1a214a367e043a625103014e50a42cba77" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>initialize_rng</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1a85efbdf36360cd8ac82335cfdbf25fc9" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>mut_desc</name></member>
+      <member refid="structat_1_1native_1_1_dropout_descriptor_1ae4d7abefdcef9c6384b4dcae120a899d" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>set</name></member>
+      <member refid="structat_1_1native_1_1_dropout_descriptor_1aa26ce231c6840e0e9481c577731f2b1d" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>set_no_dropout</name></member>
+      <member refid="structat_1_1native_1_1_dropout_descriptor_1a8c64d48e7f566096a645c6d98391a4ed" prot="public" virt="non-virtual"><scope>at::native::DropoutDescriptor</scope><name>state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

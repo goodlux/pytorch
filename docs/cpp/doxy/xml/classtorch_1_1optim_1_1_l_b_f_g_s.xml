@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1optim_1_1_l_b_f_g_s" kind="class" language="C++" prot="public">
+    <compoundname>torch::optim::LBFGS</compoundname>
+    <basecompoundref refid="classtorch_1_1optim_1_1_loss_closure_optimizer" prot="public" virt="non-virtual">torch::optim::LossClosureOptimizer</basecompoundref>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtorch_1_1optim_1_1_l_b_f_g_s_1ab2f44cbb59a08132f4c843e5225bba0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class cereal::access</definition>
+        <argsstring></argsstring>
+        <name>cereal::access</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="54" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1af5e38d750c345ea554ce94e78ab42cdd" prot="private" static="no" mutable="no">
+        <type><ref refid="structtorch_1_1optim_1_1_l_b_f_g_s_options" kindref="compound">LBFGSOptions</ref></type>
+        <definition>LBFGSOptions torch::optim::LBFGS::options_</definition>
+        <argsstring></argsstring>
+        <name>options_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="60" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a4727d2deb87a3c8156805b6b66170fa6" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+        <definition>at::Tensor torch::optim::LBFGS::d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <initializer>{torch::empty({0})}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="62" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1aebbb58d91a72acdcfa7bda9515fb8b67" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+        <definition>at::Tensor torch::optim::LBFGS::H_diag</definition>
+        <argsstring></argsstring>
+        <name>H_diag</name>
+        <initializer>{torch::empty({0})}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a43f6807d74191be566b5835942c718b2" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+        <definition>at::Tensor torch::optim::LBFGS::prev_flat_grad</definition>
+        <argsstring></argsstring>
+        <name>prev_flat_grad</name>
+        <initializer>{torch::empty({0})}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a562f97f12a65a514d8a746830f54b7c5" prot="private" static="no" mutable="no">
+        <type><ref refid="classat_1_1_scalar" kindref="compound">torch::Scalar</ref></type>
+        <definition>torch::Scalar torch::optim::LBFGS::t</definition>
+        <argsstring></argsstring>
+        <name>t</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="65" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a306c12a7d5be1d0c979dad8c8a125f80" prot="private" static="no" mutable="no">
+        <type><ref refid="classat_1_1_scalar" kindref="compound">torch::Scalar</ref></type>
+        <definition>torch::Scalar torch::optim::LBFGS::prev_loss</definition>
+        <argsstring></argsstring>
+        <name>prev_loss</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="66" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1ace6637030846b687be9e1217c74625e8" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;at::Tensor&gt; torch::optim::LBFGS::ro</definition>
+        <argsstring></argsstring>
+        <name>ro</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="67" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a6034ba2181f5c8b6b2d9b1a622c77d99" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;at::Tensor&gt; torch::optim::LBFGS::al</definition>
+        <argsstring></argsstring>
+        <name>al</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="68" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1aebbfedbfbb36074f96d9e28e55fc205f" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref> &gt;</type>
+        <definition>std::deque&lt;at::Tensor&gt; torch::optim::LBFGS::old_dirs</definition>
+        <argsstring></argsstring>
+        <name>old_dirs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="69" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1adb0a5fdbdaf83f212a53d3ce14e38728" prot="private" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref> &gt;</type>
+        <definition>std::deque&lt;at::Tensor&gt; torch::optim::LBFGS::old_stps</definition>
+        <argsstring></argsstring>
+        <name>old_stps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="70" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a2ad3aebd6f0ddfa51eacb8f6127415e0" prot="private" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t torch::optim::LBFGS::func_evals</definition>
+        <argsstring></argsstring>
+        <name>func_evals</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a77383eea8849ac184ab646870913f7f0" prot="private" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t torch::optim::LBFGS::state_n_iter</definition>
+        <argsstring></argsstring>
+        <name>state_n_iter</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="72" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1ac65cdde824adf9478537b84e75e660a2" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ParameterContainer</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::optim::LBFGS::LBFGS</definition>
+        <argsstring>(ParameterContainer &amp;&amp;parameters, const LBFGSOptions &amp;options)</argsstring>
+        <name>LBFGS</name>
+        <param>
+          <type>ParameterContainer &amp;&amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtorch_1_1optim_1_1_l_b_f_g_s_options" kindref="compound">LBFGSOptions</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a9b38625a8dbf092acea513e4463082d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref></type>
+        <definition>torch::Tensor torch::optim::LBFGS::step</definition>
+        <argsstring>(LossClosure closure) override</argsstring>
+        <name>step</name>
+        <reimplements refid="classtorch_1_1optim_1_1_loss_closure_optimizer_1af84d25e82fff79230c20460fa966353e">step</reimplements>
+        <param>
+          <type><ref refid="classtorch_1_1optim_1_1_loss_closure_optimizer_1aec739fb5decd33995e2217dc20c2191b" kindref="member">LossClosure</ref></type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>comute step length</para><para>Check conditions</para>        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/lbfgs.cpp" bodystart="40" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1af9d72900285a9da56603c2a0d3b2a710" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structtorch_1_1optim_1_1_l_b_f_g_s_options" kindref="compound">LBFGSOptions</ref> &amp;</type>
+        <definition>const LBFGSOptions &amp; torch::optim::LBFGS::options</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/lbfgs.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1acd96193572e7dca82431253649bb55e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::optim::LBFGS::serialize</definition>
+        <argsstring>(Archive &amp;ar)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="43" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a8f4604d7b42e3d10862e41d3b9badb80" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::optim::LBFGS::LBFGS</definition>
+        <argsstring>()</argsstring>
+        <name>LBFGS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a85805dcb27e9bde5bdab7602ab51ce4d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref></type>
+        <definition>at::Tensor torch::optim::LBFGS::gather_flat_grad</definition>
+        <argsstring>()</argsstring>
+        <name>gather_flat_grad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="57" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/lbfgs.cpp" bodystart="22" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_l_b_f_g_s_1a53fbb9d773d5b7c1d53ab7d5ab66fbc0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::optim::LBFGS::add_grad</definition>
+        <argsstring>(const torch::Scalar &amp;step_size, const at::Tensor &amp;update)</argsstring>
+        <name>add_grad</name>
+        <param>
+          <type>const <ref refid="classat_1_1_scalar" kindref="compound">torch::Scalar</ref> &amp;</type>
+          <declname>step_size</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref> &amp;</type>
+          <declname>update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/lbfgs.cpp" bodystart="30" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="366">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="364">
+        <label>torch::optim::LBFGS</label>
+        <link refid="classtorch_1_1optim_1_1_l_b_f_g_s"/>
+        <childnode refid="365" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>torch::optim::LossClosureOptimizer</label>
+        <link refid="classtorch_1_1optim_1_1_loss_closure_optimizer"/>
+        <childnode refid="366" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="369">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="367">
+        <label>torch::optim::LBFGS</label>
+        <link refid="classtorch_1_1optim_1_1_l_b_f_g_s"/>
+        <childnode refid="368" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="368">
+        <label>torch::optim::LossClosureOptimizer</label>
+        <link refid="classtorch_1_1optim_1_1_loss_closure_optimizer"/>
+        <childnode refid="369" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h" bodystart="29" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a53fbb9d773d5b7c1d53ab7d5ab66fbc0" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>add_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a35aa4e671083a378e84ead01097854c1" prot="public" virt="virtual"><scope>torch::optim::LBFGS</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a4f0e78d1b05b4f412513e940bb274209" prot="public" virt="virtual"><scope>torch::optim::LBFGS</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a6034ba2181f5c8b6b2d9b1a622c77d99" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>al</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a2726328360488171de7ccd2085bcae03" prot="protected" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>buffer_at</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1ab2f44cbb59a08132f4c843e5225bba0e" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>cereal::access</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a4727d2deb87a3c8156805b6b66170fa6" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>d</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a2ad3aebd6f0ddfa51eacb8f6127415e0" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>func_evals</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a85805dcb27e9bde5bdab7602ab51ce4d" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>gather_flat_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1aebbb58d91a72acdcfa7bda9515fb8b67" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>H_diag</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1ac65cdde824adf9478537b84e75e660a2" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>LBFGS</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a8f4604d7b42e3d10862e41d3b9badb80" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>LBFGS</name></member>
+      <member refid="classtorch_1_1optim_1_1_loss_closure_optimizer_1aec739fb5decd33995e2217dc20c2191b" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>LossClosure</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1aebbfedbfbb36074f96d9e28e55fc205f" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>old_dirs</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1adb0a5fdbdaf83f212a53d3ce14e38728" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>old_stps</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ac095094927b128f97db9a5653cb66807" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a99c883bd29f37597dac940c420474d38" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a08eb2b3fb09eddb7916e790d8e8f4add" prot="protected" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1af9d72900285a9da56603c2a0d3b2a710" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>options</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1af5e38d750c345ea554ce94e78ab42cdd" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>options_</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ae3931245065d22fa16cb775c95c33b01" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>ParameterCursor</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a7fc838f1237cdc236ea515dcb30082e4" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a1bc457f914c49a04e70a7629488df23f" prot="protected" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>parameters_</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a43f6807d74191be566b5835942c718b2" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>prev_flat_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a306c12a7d5be1d0c979dad8c8a125f80" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>prev_loss</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1ace6637030846b687be9e1217c74625e8" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>ro</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1acd96193572e7dca82431253649bb55e9" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>serialize</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1af05d9e4c072611745a8dd8f4ff8f6220" prot="public" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>size</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a77383eea8849ac184ab646870913f7f0" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>state_n_iter</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a9b38625a8dbf092acea513e4463082d2" prot="public" virt="virtual"><scope>torch::optim::LBFGS</scope><name>step</name></member>
+      <member refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a562f97f12a65a514d8a746830f54b7c5" prot="private" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>t</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a60e97f95e8f138600b63fa949bcf2b60" prot="protected" virt="non-virtual"><scope>torch::optim::LBFGS</scope><name>zero_buffers_like</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1abfe0f04c0fa9c13efbf09568985ac834" prot="public" virt="virtual"><scope>torch::optim::LBFGS</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1aaf3ff0cc2a3a28566bc8c106673af53c" prot="public" virt="virtual"><scope>torch::optim::LBFGS</scope><name>~OptimizerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,773 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_type" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>at::Type</compoundname>
+    <derivedcompoundref refid="structat_1_1_undefined_type" prot="public" virt="non-virtual">at::UndefinedType</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1_type_1ad446a94998d164001110096fa2a9c678" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::Type::is_variable_</definition>
+        <argsstring></argsstring>
+        <name>is_variable_</name>
+        <initializer>{type_method_declarations}
+protected:
+  <ref refid="classat_1_1_context" kindref="compound">Context</ref>* context</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="101" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_type_1a44093fb66df9b6a02f38d61feef7b279" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::Type::is_undefined_</definition>
+        <argsstring></argsstring>
+        <name>is_undefined_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_type_1a346026e4f458a879f1137917aba8feb4" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::Type::Type</definition>
+        <argsstring>(Context *context, bool is_variable, bool is_undefined)</argsstring>
+        <name>Type</name>
+        <param>
+          <type><ref refid="classat_1_1_context" kindref="compound">Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_variable</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>is_undefined</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="47" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="47" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1aef1337d9430adc422a45fa6f684f7ae4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual at::Type::~Type</definition>
+        <argsstring>()</argsstring>
+        <name>~Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a8eb18eeed6efb5e66f356c6ffa25852f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>ScalarType</type>
+        <definition>virtual ScalarType at::Type::scalarType</definition>
+        <argsstring>() const =0</argsstring>
+        <name>scalarType</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a78610037c0af0069a30a7ad3589a4c1d">scalarType</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a0e6aa01bbf07a79d15682347b1a46b6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>Backend</type>
+        <definition>virtual Backend at::Type::backend</definition>
+        <argsstring>() const =0</argsstring>
+        <name>backend</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a16a340f3fbc416b7022594e2262ad6a2">backend</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a51b2ef79be18dae8270df25cc8966d0a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>Layout</type>
+        <definition>Layout at::Type::layout</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="52" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1ae541e29faf5f3a42e0716fb39c9904e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool at::Type::is_cuda</definition>
+        <argsstring>() const =0</argsstring>
+        <name>is_cuda</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a6be13bae5152e0d665ed341feb92b9ca">is_cuda</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1ae0a6510141835a3e73d7ebc0978f8d5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool at::Type::is_sparse</definition>
+        <argsstring>() const =0</argsstring>
+        <name>is_sparse</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a395a4554ba4aa4e8629df95c1e56eb84">is_sparse</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a593a61a5140cd073039bd4fe1e598592" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool at::Type::is_distributed</definition>
+        <argsstring>() const =0</argsstring>
+        <name>is_distributed</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a080705c675adb79a9287fa1296d6ba48">is_distributed</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1af0a36810fbd40e39bc48bc3793fe2fc7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Type::is_variable</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_variable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a7968fdd3b73af8ef9bd4a98472d04297" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Type::is_undefined</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>is_undefined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="57" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1adbe3af10982ae2b4c3aeecb942941d47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Storage&gt; at::Type::storage</definition>
+        <argsstring>() const =0</argsstring>
+        <name>storage</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a9a41d17b408150477f2a198cae54416e">storage</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a2244f67e548549470ef3dd4b111a3baa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Storage&gt; at::Type::storage</definition>
+        <argsstring>(size_t size) const =0</argsstring>
+        <name>storage</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1ae82fa5e9037d636d628c6835593450c9">storage</reimplementedby>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a10e8349141cfc8c0e10f28347c1b16aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Storage&gt; at::Type::storageFromBlob</definition>
+        <argsstring>(void *data, int64_t size, const std::function&lt; void(void *)&gt; &amp;deleter=noop_deleter) const =0</argsstring>
+        <name>storageFromBlob</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a0313f58b87902d6b07726b1ec44b83aa">storageFromBlob</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(void *)&gt; &amp;</type>
+          <declname>deleter</declname>
+          <defval>noop_deleter</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a9b195a1aaa3fecf1a657df0f7d243f79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Storage&gt; at::Type::storageWithAllocator</definition>
+        <argsstring>(int64_t size, Allocator *allocator) const =0</argsstring>
+        <name>storageWithAllocator</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a5842cb674bf9183652b197fbdb94d02d">storageWithAllocator</reimplementedby>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_allocator" kindref="compound">Allocator</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a39e0ff4799d0844edcbee5ed2ac6da01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_generator" kindref="compound">Generator</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Generator&gt; at::Type::generator</definition>
+        <argsstring>() const =0</argsstring>
+        <name>generator</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1ae034c2f7c99ced00e837dc3972dc9189">generator</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1aff0602ed17016b6d1c2b45450ebe8c54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>virtual Tensor at::Type::unsafeTensorFromTH</definition>
+        <argsstring>(void *th_pointer, bool retain) const =0</argsstring>
+        <name>unsafeTensorFromTH</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1aa1a3549cf46238518b5e2b5651b1e7d6">unsafeTensorFromTH</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>th_pointer</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1afc6eb5cb236179e1b674da51ec556ed1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Storage&gt; at::Type::unsafeStorageFromTH</definition>
+        <argsstring>(void *th_pointer, bool retain) const =0</argsstring>
+        <name>unsafeStorageFromTH</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a025c02df6488e0db65f3609cbbb8ba74">unsafeStorageFromTH</reimplementedby>
+        <param>
+          <type>void *</type>
+          <declname>th_pointer</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a29bf96d8b5e9054fa8f004d359139019" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>const char *</type>
+        <definition>virtual const char* at::Type::toString</definition>
+        <argsstring>() const =0</argsstring>
+        <name>toString</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1abf0c0a20ac323398bea5b120bc12c5b9">toString</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a0ca147e18db4a2eba5e77544a8a40bce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t at::Type::elementSizeInBytes</definition>
+        <argsstring>() const =0</argsstring>
+        <name>elementSizeInBytes</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1ac131876d95db3bd28b3a4c63b566d7e4">elementSizeInBytes</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a114d4a879ad7dd50ed968d385343f4f9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>virtual Type&amp; at::Type::toBackend</definition>
+        <argsstring>(Backend b) const</argsstring>
+        <name>toBackend</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a8d3d6ded9f207f4a10cc8398e96e9a04">toBackend</reimplementedby>
+        <param>
+          <type>Backend</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1aa84fee54363328d3d15a652db760676f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>virtual Type&amp; at::Type::toScalarType</definition>
+        <argsstring>(ScalarType s) const</argsstring>
+        <name>toScalarType</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1aad171460b12488e5942e6612bda98894">toScalarType</reimplementedby>
+        <param>
+          <type>ScalarType</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1ac2dc714720f88a1559863849c9e59a2e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>Type&amp; at::Type::toSparse</definition>
+        <argsstring>() const</argsstring>
+        <name>toSparse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="70" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a842f1531b375a32316aacab0d8b4c758" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>Type&amp; at::Type::toDense</definition>
+        <argsstring>() const</argsstring>
+        <name>toDense</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="73" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a28451eae64050b27c034cbc135874785" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classat_1_1_context" kindref="compound">Context</ref> &amp;</type>
+        <definition>Context&amp; at::Type::get_context</definition>
+        <argsstring>() const</argsstring>
+        <name>get_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a3aefadb21e89386be1dbf6c672ebc912" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>TypeID</type>
+        <definition>virtual TypeID at::Type::ID</definition>
+        <argsstring>() const =0</argsstring>
+        <name>ID</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a0f1086f3d68d10e10bc136a9cfe79462">ID</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a1cf18d1e4a47309a6cf8de46132c3dc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::Type::copy</definition>
+        <argsstring>(const Tensor &amp;src, bool non_blocking=false) const</argsstring>
+        <name>copy</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1af00c3d3e43c029cc047d2c41f9447ddd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>Tensor&amp; at::Type::copy_</definition>
+        <argsstring>(Tensor &amp;self, const Tensor &amp;src, bool non_blocking=false) const</argsstring>
+        <name>copy_</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a4fd36da7243334dbf6208551ff2f122d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>virtual Tensor&amp; at::Type::s_copy_</definition>
+        <argsstring>(Tensor &amp;self, const Tensor &amp;src, bool non_blocking) const =0</argsstring>
+        <name>s_copy_</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1a8b3187fa1ccc85891c38c97cbb597341">s_copy_</reimplementedby>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a53d72141ce74fcb55db04c57d818e06c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>virtual Tensor&amp; at::Type::_s_copy_from</definition>
+        <argsstring>(const Tensor &amp;self, Tensor &amp;dst, bool non_blocking) const =0</argsstring>
+        <name>_s_copy_from</name>
+        <reimplementedby refid="structat_1_1_undefined_type_1ae35eecc9e803f2cc0ce21b80f8e51ada">_s_copy_from</reimplementedby>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>dst</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>non_blocking</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a6582a84d31debc6deabb3ea492e19288" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::Type::tensorFromBlob</definition>
+        <argsstring>(void *data, IntList sizes, const std::function&lt; void(void *)&gt; &amp;deleter=noop_deleter) const</argsstring>
+        <name>tensorFromBlob</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>sizes</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(void *)&gt; &amp;</type>
+          <declname>deleter</declname>
+          <defval>noop_deleter</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1aaeadd536571e6811ea691d3c832ba9a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::Type::tensorFromBlob</definition>
+        <argsstring>(void *data, IntList sizes, IntList strides, const std::function&lt; void(void *)&gt; &amp;deleter=noop_deleter) const</argsstring>
+        <name>tensorFromBlob</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>sizes</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>strides</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; void(void *)&gt; &amp;</type>
+          <declname>deleter</declname>
+          <defval>noop_deleter</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a9e7f58c5246a510f3f7c722f95d6ae29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::Type::tensorWithAllocator</definition>
+        <argsstring>(IntList sizes, Allocator *allocator) const</argsstring>
+        <name>tensorWithAllocator</name>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>sizes</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_allocator" kindref="compound">Allocator</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a770faed256402c18d02f14646baa745d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::Type::tensorWithAllocator</definition>
+        <argsstring>(IntList sizes, IntList strides, Allocator *allocator) const</argsstring>
+        <name>tensorWithAllocator</name>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>sizes</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>strides</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_allocator" kindref="compound">Allocator</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1abd301db60fa5a61e83c306b999e1c3c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::Type::scalarTensor</definition>
+        <argsstring>(Scalar s) const</argsstring>
+        <name>scalarTensor</name>
+        <param>
+          <type><ref refid="classat_1_1_scalar" kindref="compound">Scalar</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1ac29789f3b1e686b4819c76d6dd9ac2ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Type::operator==</definition>
+        <argsstring>(const Type &amp;other) const</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_type_1a1b08192c58e164a086e979b314602603" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Type::operator!=</definition>
+        <argsstring>(const Type &amp;other) const</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="94" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structat_1_1_type_1a339a6bf7e480271c207bed62dbc903ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void at::Type::registerCPU</definition>
+        <argsstring>(Context *context)</argsstring>
+        <name>registerCPU</name>
+        <param>
+          <type><ref refid="classat_1_1_context" kindref="compound">Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="58" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="729">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="730">
+        <label>at::UndefinedType</label>
+        <link refid="structat_1_1_undefined_type"/>
+        <childnode refid="729" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" line="46" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h" bodystart="46" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structat_1_1_type_1a53d72141ce74fcb55db04c57d818e06c" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>_s_copy_from</name></member>
+      <member refid="structat_1_1_type_1a0e6aa01bbf07a79d15682347b1a46b6f" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>backend</name></member>
+      <member refid="structat_1_1_type_1a1cf18d1e4a47309a6cf8de46132c3dc7" prot="public" virt="non-virtual"><scope>at::Type</scope><name>copy</name></member>
+      <member refid="structat_1_1_type_1af00c3d3e43c029cc047d2c41f9447ddd" prot="public" virt="non-virtual"><scope>at::Type</scope><name>copy_</name></member>
+      <member refid="structat_1_1_type_1a0ca147e18db4a2eba5e77544a8a40bce" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>elementSizeInBytes</name></member>
+      <member refid="structat_1_1_type_1a39e0ff4799d0844edcbee5ed2ac6da01" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>generator</name></member>
+      <member refid="structat_1_1_type_1a28451eae64050b27c034cbc135874785" prot="public" virt="non-virtual"><scope>at::Type</scope><name>get_context</name></member>
+      <member refid="structat_1_1_type_1a3aefadb21e89386be1dbf6c672ebc912" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>ID</name></member>
+      <member refid="structat_1_1_type_1ae541e29faf5f3a42e0716fb39c9904e6" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>is_cuda</name></member>
+      <member refid="structat_1_1_type_1a593a61a5140cd073039bd4fe1e598592" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>is_distributed</name></member>
+      <member refid="structat_1_1_type_1ae0a6510141835a3e73d7ebc0978f8d5b" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>is_sparse</name></member>
+      <member refid="structat_1_1_type_1a7968fdd3b73af8ef9bd4a98472d04297" prot="public" virt="non-virtual"><scope>at::Type</scope><name>is_undefined</name></member>
+      <member refid="structat_1_1_type_1a44093fb66df9b6a02f38d61feef7b279" prot="public" virt="non-virtual"><scope>at::Type</scope><name>is_undefined_</name></member>
+      <member refid="structat_1_1_type_1af0a36810fbd40e39bc48bc3793fe2fc7" prot="public" virt="non-virtual"><scope>at::Type</scope><name>is_variable</name></member>
+      <member refid="structat_1_1_type_1ad446a94998d164001110096fa2a9c678" prot="public" virt="non-virtual"><scope>at::Type</scope><name>is_variable_</name></member>
+      <member refid="structat_1_1_type_1a51b2ef79be18dae8270df25cc8966d0a" prot="public" virt="non-virtual"><scope>at::Type</scope><name>layout</name></member>
+      <member refid="structat_1_1_type_1a1b08192c58e164a086e979b314602603" prot="public" virt="non-virtual"><scope>at::Type</scope><name>operator!=</name></member>
+      <member refid="structat_1_1_type_1ac29789f3b1e686b4819c76d6dd9ac2ce" prot="public" virt="non-virtual"><scope>at::Type</scope><name>operator==</name></member>
+      <member refid="structat_1_1_type_1a339a6bf7e480271c207bed62dbc903ce" prot="public" virt="non-virtual"><scope>at::Type</scope><name>registerCPU</name></member>
+      <member refid="structat_1_1_type_1a4fd36da7243334dbf6208551ff2f122d" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>s_copy_</name></member>
+      <member refid="structat_1_1_type_1abd301db60fa5a61e83c306b999e1c3c8" prot="public" virt="non-virtual"><scope>at::Type</scope><name>scalarTensor</name></member>
+      <member refid="structat_1_1_type_1a8eb18eeed6efb5e66f356c6ffa25852f" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>scalarType</name></member>
+      <member refid="structat_1_1_type_1adbe3af10982ae2b4c3aeecb942941d47" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>storage</name></member>
+      <member refid="structat_1_1_type_1a2244f67e548549470ef3dd4b111a3baa" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>storage</name></member>
+      <member refid="structat_1_1_type_1a10e8349141cfc8c0e10f28347c1b16aa" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>storageFromBlob</name></member>
+      <member refid="structat_1_1_type_1a9b195a1aaa3fecf1a657df0f7d243f79" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>storageWithAllocator</name></member>
+      <member refid="structat_1_1_type_1a6582a84d31debc6deabb3ea492e19288" prot="public" virt="non-virtual"><scope>at::Type</scope><name>tensorFromBlob</name></member>
+      <member refid="structat_1_1_type_1aaeadd536571e6811ea691d3c832ba9a7" prot="public" virt="non-virtual"><scope>at::Type</scope><name>tensorFromBlob</name></member>
+      <member refid="structat_1_1_type_1a9e7f58c5246a510f3f7c722f95d6ae29" prot="public" virt="non-virtual"><scope>at::Type</scope><name>tensorWithAllocator</name></member>
+      <member refid="structat_1_1_type_1a770faed256402c18d02f14646baa745d" prot="public" virt="non-virtual"><scope>at::Type</scope><name>tensorWithAllocator</name></member>
+      <member refid="structat_1_1_type_1a114d4a879ad7dd50ed968d385343f4f9" prot="public" virt="virtual"><scope>at::Type</scope><name>toBackend</name></member>
+      <member refid="structat_1_1_type_1a842f1531b375a32316aacab0d8b4c758" prot="public" virt="non-virtual"><scope>at::Type</scope><name>toDense</name></member>
+      <member refid="structat_1_1_type_1aa84fee54363328d3d15a652db760676f" prot="public" virt="virtual"><scope>at::Type</scope><name>toScalarType</name></member>
+      <member refid="structat_1_1_type_1ac2dc714720f88a1559863849c9e59a2e" prot="public" virt="non-virtual"><scope>at::Type</scope><name>toSparse</name></member>
+      <member refid="structat_1_1_type_1a29bf96d8b5e9054fa8f004d359139019" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>toString</name></member>
+      <member refid="structat_1_1_type_1a346026e4f458a879f1137917aba8feb4" prot="public" virt="non-virtual"><scope>at::Type</scope><name>Type</name></member>
+      <member refid="structat_1_1_type_1afc6eb5cb236179e1b674da51ec556ed1" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>unsafeStorageFromTH</name></member>
+      <member refid="structat_1_1_type_1aff0602ed17016b6d1c2b45450ebe8c54" prot="public" virt="pure-virtual"><scope>at::Type</scope><name>unsafeTensorFromTH</name></member>
+      <member refid="structat_1_1_type_1aef1337d9430adc422a45fa6f684f7ae4" prot="public" virt="virtual"><scope>at::Type</scope><name>~Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

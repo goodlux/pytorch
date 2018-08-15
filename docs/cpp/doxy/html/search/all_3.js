@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['data',['data',['../struct_d_l_tensor.html#a6af4539ae2c74d60e8dbc4c6047ed805',1,'DLTensor::data()'],['../classat_1_1_small_vector_template_common.html#a768dfe9aa7c6b564c4e3fb2bc60c62dc',1,'at::SmallVectorTemplateCommon::data()'],['../classat_1_1_small_vector_template_common.html#a8390706f7405a97fb1608afa74d5689c',1,'at::SmallVectorTemplateCommon::data() const']]],
+  ['dataptr',['DataPtr',['../classat_1_1_data_ptr.html',1,'at']]],
+  ['defaulttensoroptions',['DefaultTensorOptions',['../structat_1_1_default_tensor_options.html',1,'at']]],
+  ['deleter',['deleter',['../struct_d_l_managed_tensor.html#a3b5ac9adc40f2dbaf072531eb957d7ea',1,'DLManagedTensor']]],
+  ['demangle',['demangle',['../namespaceat.html#a412233e8aa47c513eb60182bd748e091',1,'at']]],
+  ['demangle_5ftype',['demangle_type',['../namespaceat.html#a9843a10c28d69a5a70cf212c4cda59c4',1,'at']]],
+  ['device',['Device',['../structat_1_1_device.html',1,'at::Device'],['../structat_1_1_device.html#ac04b3e2ac9f8d0858cdbbe3e34b34c90',1,'at::Device::Device(Type type, int32_t index=-1)'],['../structat_1_1_device.html#acbe05d63d3612303a48852fa1ac59b2f',1,'at::Device::Device(const std::string &amp;device_string)'],['../structat_1_1_device.html#a8a9d1df0818173f2091470c3c55e9703',1,'at::Device::Device(Backend backend, int32_t index=-1)'],['../structat_1_1_tensor_options.html#a94d4f14513dd74499a81fde2c36a93e2',1,'at::TensorOptions::device(Device device)'],['../structat_1_1_tensor_options.html#a34a8d34319ce3ebd4a9ebe54c9e69995',1,'at::TensorOptions::device() const noexcept'],['../namespaceat.html#a7b0b366b175733b3ff709ceed5058911',1,'at::device()']]],
+  ['device_5fid',['device_id',['../struct_d_l_context.html#a7cd00ca96ac03a1f8ea2b2b3a565794d',1,'DLContext']]],
+  ['device_5findex',['device_index',['../structat_1_1_tensor_options.html#a292cb933722ee542e044f874bb36d8db',1,'at::TensorOptions::device_index(int32_t device_index)'],['../structat_1_1_tensor_options.html#ab685f4349c5e9f3b281154ac9b2d9b83',1,'at::TensorOptions::device_index() const noexcept'],['../namespaceat.html#a562dbafa8baf6a2724b3747e2008b206',1,'at::device_index()']]],
+  ['device_5ftype',['device_type',['../struct_d_l_context.html#a9e7b666f60b074a4f48943da69cee9ce',1,'DLContext']]],
+  ['deviceguard',['DeviceGuard',['../structat_1_1_device_guard.html',1,'at::DeviceGuard'],['../structat_1_1_device_guard.html#a18dd23cc17f813abc8443a9e64210a24',1,'at::DeviceGuard::DeviceGuard()=default'],['../structat_1_1_device_guard.html#ac492b9bae4e5a305dc16292d07c7a65d',1,'at::DeviceGuard::DeviceGuard(Device device)'],['../structat_1_1_device_guard.html#aaeab6b8b84328c9bf41f3224fda9784a',1,'at::DeviceGuard::DeviceGuard(int32_t index)'],['../structat_1_1_device_guard.html#a934a782529f7b4706277c5a6cfcadd4f',1,'at::DeviceGuard::DeviceGuard(const Tensor &amp;tensor)'],['../structat_1_1_device_guard.html#a3ac33e3877754135f368ff096c6f1735',1,'at::DeviceGuard::DeviceGuard(const TensorList &amp;tensors)'],['../structat_1_1_device_guard.html#a79048280219066eb5e8d2d8756a3d998',1,'at::DeviceGuard::DeviceGuard(const DeviceGuard &amp;)=delete'],['../structat_1_1_device_guard.html#aa73c59c5096c61c250e91173a1bd4b60',1,'at::DeviceGuard::DeviceGuard(DeviceGuard &amp;&amp;other) noexcept']]],
+  ['dimvector',['DimVector',['../namespaceat.html#a4bfb3054d339964178cc931625e40016',1,'at']]],
+  ['discard_5fruntime_5ftype',['discard_runtime_type',['../structat_1_1_tensor_options.html#a7080e0987c37f5e6581f3346a646779d',1,'at::TensorOptions']]],
+  ['dl_5ftensor',['dl_tensor',['../struct_d_l_managed_tensor.html#a568171e573aca5ba30f2cbae9fd2489b',1,'DLManagedTensor']]],
+  ['dlcontext',['DLContext',['../struct_d_l_context.html',1,'']]],
+  ['dldatatype',['DLDataType',['../struct_d_l_data_type.html',1,'']]],
+  ['dldatatypecode',['DLDataTypeCode',['../dlpack_8h.html#a2a5dbaa5fb67f4845a973c09a7f2ec50',1,'dlpack.h']]],
+  ['dldevicetype',['DLDeviceType',['../dlpack_8h.html#a49db572e18d84c47738fc746568fb573',1,'dlpack.h']]],
+  ['dlmanagedtensor',['DLManagedTensor',['../struct_d_l_managed_tensor.html',1,'DLManagedTensor'],['../dlpack_8h.html#a927ecc672891526a594bf5ef5ca25994',1,'DLManagedTensor():&#160;dlpack.h']]],
+  ['dlpack_2eh',['dlpack.h',['../dlpack_8h.html',1,'']]],
+  ['dlpack_5fdll',['DLPACK_DLL',['../dlpack_8h.html#ad57157a7cb94036d48d0444fd14ab6cf',1,'dlpack.h']]],
+  ['dlpack_5fversion',['DLPACK_VERSION',['../dlpack_8h.html#a493a8fe63f179b98d4e7a1728659a808',1,'dlpack.h']]],
+  ['dltensor',['DLTensor',['../struct_d_l_tensor.html',1,'']]],
+  ['dtype',['dtype',['../struct_d_l_tensor.html#ae0cf02d1a8b19118838670b3b3d857f5',1,'DLTensor::dtype()'],['../structat_1_1_tensor_options.html#a73103c8b23a9008c19322f7833d2e313',1,'at::TensorOptions::dtype(ScalarType dtype)'],['../structat_1_1_tensor_options.html#a75cfaa978c85234d360c3b11cd4e68f0',1,'at::TensorOptions::dtype() const noexcept'],['../namespaceat.html#a25549deef81727b261b7b298eb848197',1,'at::dtype()']]]
+];

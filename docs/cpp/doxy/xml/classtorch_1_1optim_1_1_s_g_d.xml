@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1optim_1_1_s_g_d" kind="class" language="C++" prot="public">
+    <compoundname>torch::optim::SGD</compoundname>
+    <basecompoundref refid="classtorch_1_1optim_1_1_optimizer" prot="public" virt="non-virtual">torch::optim::Optimizer</basecompoundref>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classtorch_1_1optim_1_1_s_g_d_1ab2f44cbb59a08132f4c843e5225bba0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class cereal::access</definition>
+        <argsstring></argsstring>
+        <name>cereal::access</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_s_g_d_1ab6e93bb21ac986cc3e8b53acaeec4157" prot="private" static="no" mutable="no">
+        <type><ref refid="structtorch_1_1optim_1_1_s_g_d_options" kindref="compound">SGDOptions</ref></type>
+        <definition>SGDOptions torch::optim::SGD::options_</definition>
+        <argsstring></argsstring>
+        <name>options_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="52" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_s_g_d_1a1d4fc405f2e5d342aafb899af3982fd6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::optim::SGD::momentum_buffers_</definition>
+        <argsstring></argsstring>
+        <name>momentum_buffers_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="53" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1_s_g_d_1a347a90654ab1b1f82ea5835da63c9d26" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t torch::optim::SGD::iteration_</definition>
+        <argsstring></argsstring>
+        <name>iteration_</name>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>Counts how often <computeroutput>step()</computeroutput> is called, for dampening. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_s_g_d_1aad3c3745485c687d5f0fe3762e20f204" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ParameterContainer</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::optim::SGD::SGD</definition>
+        <argsstring>(ParameterContainer &amp;&amp;parameters, const SGDOptions &amp;options)</argsstring>
+        <name>SGD</name>
+        <param>
+          <type>ParameterContainer &amp;&amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structtorch_1_1optim_1_1_s_g_d_options" kindref="compound">SGDOptions</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="31" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_s_g_d_1aebe52107a6b5271eb28a6c2fc50052d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::optim::SGD::step</definition>
+        <argsstring>() override</argsstring>
+        <name>step</name>
+        <reimplements refid="classtorch_1_1optim_1_1_optimizer_1a16ae1552521f10d0ca86377b591747d1">step</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="39" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/sgd.cpp" bodystart="17" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_s_g_d_1a5b977364ef92f02fa8255259f8448448" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::optim::SGD::serialize</definition>
+        <argsstring>(Archive &amp;ar)</argsstring>
+        <name>serialize</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>ar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="42" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_s_g_d_1a1068142e1d87ce3af94427891e1c14b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structtorch_1_1optim_1_1_s_g_d_options" kindref="compound">SGDOptions</ref> &amp;</type>
+        <definition>const SGDOptions &amp; torch::optim::SGD::options</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="46" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/sgd.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_s_g_d_1a831f98e2e02d31204205e9436cc0e641" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::optim::SGD::SGD</definition>
+        <argsstring>()</argsstring>
+        <name>SGD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="50" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="50" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="575">
+        <label>torch::optim::SGD</label>
+        <link refid="classtorch_1_1optim_1_1_s_g_d"/>
+        <childnode refid="576" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="577">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="576">
+        <label>torch::optim::Optimizer</label>
+        <link refid="classtorch_1_1optim_1_1_optimizer"/>
+        <childnode refid="577" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="578">
+        <label>torch::optim::SGD</label>
+        <link refid="classtorch_1_1optim_1_1_s_g_d"/>
+        <childnode refid="579" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="580">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="579">
+        <label>torch::optim::Optimizer</label>
+        <link refid="classtorch_1_1optim_1_1_optimizer"/>
+        <childnode refid="580" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h" bodystart="28" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a35aa4e671083a378e84ead01097854c1" prot="public" virt="virtual"><scope>torch::optim::SGD</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a4f0e78d1b05b4f412513e940bb274209" prot="public" virt="virtual"><scope>torch::optim::SGD</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a2726328360488171de7ccd2085bcae03" prot="protected" virt="non-virtual"><scope>torch::optim::SGD</scope><name>buffer_at</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1ab2f44cbb59a08132f4c843e5225bba0e" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>cereal::access</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1a347a90654ab1b1f82ea5835da63c9d26" prot="private" virt="non-virtual"><scope>torch::optim::SGD</scope><name>iteration_</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1a1d4fc405f2e5d342aafb899af3982fd6" prot="private" virt="non-virtual"><scope>torch::optim::SGD</scope><name>momentum_buffers_</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ac095094927b128f97db9a5653cb66807" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a99c883bd29f37597dac940c420474d38" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a08eb2b3fb09eddb7916e790d8e8f4add" prot="protected" virt="non-virtual"><scope>torch::optim::SGD</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1a1068142e1d87ce3af94427891e1c14b5" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>options</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1ab6e93bb21ac986cc3e8b53acaeec4157" prot="private" virt="non-virtual"><scope>torch::optim::SGD</scope><name>options_</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ae3931245065d22fa16cb775c95c33b01" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>ParameterCursor</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a7fc838f1237cdc236ea515dcb30082e4" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a1bc457f914c49a04e70a7629488df23f" prot="protected" virt="non-virtual"><scope>torch::optim::SGD</scope><name>parameters_</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1a5b977364ef92f02fa8255259f8448448" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>serialize</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1aad3c3745485c687d5f0fe3762e20f204" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>SGD</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1a831f98e2e02d31204205e9436cc0e641" prot="private" virt="non-virtual"><scope>torch::optim::SGD</scope><name>SGD</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1af05d9e4c072611745a8dd8f4ff8f6220" prot="public" virt="non-virtual"><scope>torch::optim::SGD</scope><name>size</name></member>
+      <member refid="classtorch_1_1optim_1_1_s_g_d_1aebe52107a6b5271eb28a6c2fc50052d8" prot="public" virt="virtual"><scope>torch::optim::SGD</scope><name>step</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a60e97f95e8f138600b63fa949bcf2b60" prot="protected" virt="non-virtual"><scope>torch::optim::SGD</scope><name>zero_buffers_like</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1abfe0f04c0fa9c13efbf09568985ac834" prot="public" virt="virtual"><scope>torch::optim::SGD</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1aaf3ff0cc2a3a28566bc8c106673af53c" prot="public" virt="virtual"><scope>torch::optim::SGD</scope><name>~OptimizerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

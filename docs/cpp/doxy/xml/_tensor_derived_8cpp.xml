@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_tensor_derived_8cpp" kind="file" language="C++">
+    <compoundname>TensorDerived.cpp</compoundname>
+    <includes refid="_config_8h" local="yes">ATen/Config.h</includes>
+    <includes local="yes">ATen/${Tensor}.h</includes>
+    <includes local="yes">ATen/${Storage}.h</includes>
+    <includes refid="_scalar_8h" local="yes">ATen/Scalar.h</includes>
+    <includes refid="_half_8h" local="yes">ATen/Half.h</includes>
+    <incdepgraph>
+      <node id="10399">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="10387" relation="include">
+        </childnode>
+        <childnode refid="10400" relation="include">
+        </childnode>
+        <childnode refid="10401" relation="include">
+        </childnode>
+        <childnode refid="10402" relation="include">
+        </childnode>
+        <childnode refid="10403" relation="include">
+        </childnode>
+        <childnode refid="10386" relation="include">
+        </childnode>
+        <childnode refid="10385" relation="include">
+        </childnode>
+      </node>
+      <node id="10420">
+        <label>atomic</label>
+      </node>
+      <node id="10403">
+        <label>functional</label>
+      </node>
+      <node id="10396">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="10397" relation="include">
+        </childnode>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10389" relation="include">
+        </childnode>
+        <childnode refid="10391" relation="include">
+        </childnode>
+        <childnode refid="10417" relation="include">
+        </childnode>
+      </node>
+      <node id="10390">
+        <label>limits</label>
+      </node>
+      <node id="10383">
+        <label>assert.h</label>
+      </node>
+      <node id="10423">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10397" relation="include">
+        </childnode>
+        <childnode refid="10398" relation="include">
+        </childnode>
+        <childnode refid="10422" relation="include">
+        </childnode>
+        <childnode refid="10410" relation="include">
+        </childnode>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10424" relation="include">
+        </childnode>
+        <childnode refid="10425" relation="include">
+        </childnode>
+      </node>
+      <node id="10412">
+        <label>iterator</label>
+      </node>
+      <node id="10382">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="10383" relation="include">
+        </childnode>
+        <childnode refid="10384" relation="include">
+        </childnode>
+        <childnode refid="10385" relation="include">
+        </childnode>
+        <childnode refid="10386" relation="include">
+        </childnode>
+        <childnode refid="10387" relation="include">
+        </childnode>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10389" relation="include">
+        </childnode>
+        <childnode refid="10396" relation="include">
+        </childnode>
+        <childnode refid="10418" relation="include">
+        </childnode>
+        <childnode refid="10423" relation="include">
+        </childnode>
+      </node>
+      <node id="10391">
+        <label>cstdint</label>
+      </node>
+      <node id="10384">
+        <label>stdint.h</label>
+      </node>
+      <node id="10392">
+        <label>cmath</label>
+      </node>
+      <node id="10402">
+        <label>cassert</label>
+      </node>
+      <node id="10394">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10395" relation="include">
+        </childnode>
+        <childnode refid="10390" relation="include">
+        </childnode>
+      </node>
+      <node id="10385">
+        <label>stdexcept</label>
+      </node>
+      <node id="10425">
+        <label>numeric</label>
+      </node>
+      <node id="10419">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="10420" relation="include">
+        </childnode>
+        <childnode refid="10413" relation="include">
+        </childnode>
+        <childnode refid="10421" relation="include">
+        </childnode>
+        <childnode refid="10396" relation="include">
+        </childnode>
+        <childnode refid="10399" relation="include">
+        </childnode>
+      </node>
+      <node id="10421">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="10420" relation="include">
+        </childnode>
+      </node>
+      <node id="10389">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10390" relation="include">
+        </childnode>
+        <childnode refid="10386" relation="include">
+        </childnode>
+        <childnode refid="10391" relation="include">
+        </childnode>
+        <childnode refid="10385" relation="include">
+        </childnode>
+        <childnode refid="10387" relation="include">
+        </childnode>
+        <childnode refid="10392" relation="include">
+        </childnode>
+        <childnode refid="10393" relation="include">
+        </childnode>
+        <childnode refid="10394" relation="include">
+        </childnode>
+      </node>
+      <node id="10418">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="10419" relation="include">
+        </childnode>
+        <childnode refid="10422" relation="include">
+        </childnode>
+      </node>
+      <node id="10386">
+        <label>string</label>
+      </node>
+      <node id="10379">
+        <label>ATen/Config.h</label>
+        <link refid="_config_8h_source"/>
+      </node>
+      <node id="10405">
+        <label>exception</label>
+      </node>
+      <node id="10422">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="10419" relation="include">
+        </childnode>
+      </node>
+      <node id="10409">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="10404" relation="include">
+        </childnode>
+      </node>
+      <node id="10406">
+        <label>ostream</label>
+      </node>
+      <node id="10397">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="10398" relation="include">
+        </childnode>
+        <childnode refid="10408" relation="include">
+        </childnode>
+        <childnode refid="10415" relation="include">
+        </childnode>
+        <childnode refid="10412" relation="include">
+        </childnode>
+        <childnode refid="10416" relation="include">
+        </childnode>
+      </node>
+      <node id="10388">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="10424">
+        <label>typeinfo</label>
+      </node>
+      <node id="10416">
+        <label>vector</label>
+      </node>
+      <node id="10414">
+        <label>new</label>
+      </node>
+      <node id="10387">
+        <label>utility</label>
+      </node>
+      <node id="10415">
+        <label>array</label>
+      </node>
+      <node id="10407">
+        <label>sstream</label>
+      </node>
+      <node id="10393">
+        <label>iosfwd</label>
+      </node>
+      <node id="10411">
+        <label>cstdlib</label>
+      </node>
+      <node id="10417">
+        <label>iostream</label>
+      </node>
+      <node id="10381">
+        <label>ATen/${Storage}.h</label>
+      </node>
+      <node id="10404">
+        <label>cstddef</label>
+      </node>
+      <node id="10380">
+        <label>ATen/${Tensor}.h</label>
+      </node>
+      <node id="10378">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.cpp</label>
+        <link refid="_tensor_derived_8cpp"/>
+        <childnode refid="10379" relation="include">
+        </childnode>
+        <childnode refid="10380" relation="include">
+        </childnode>
+        <childnode refid="10381" relation="include">
+        </childnode>
+        <childnode refid="10382" relation="include">
+        </childnode>
+        <childnode refid="10389" relation="include">
+        </childnode>
+      </node>
+      <node id="10398">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="10388" relation="include">
+        </childnode>
+        <childnode refid="10399" relation="include">
+        </childnode>
+        <childnode refid="10404" relation="include">
+        </childnode>
+        <childnode refid="10405" relation="include">
+        </childnode>
+        <childnode refid="10406" relation="include">
+        </childnode>
+        <childnode refid="10407" relation="include">
+        </childnode>
+        <childnode refid="10386" relation="include">
+        </childnode>
+      </node>
+      <node id="10400">
+        <label>type_traits</label>
+      </node>
+      <node id="10408">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="10409" relation="include">
+        </childnode>
+        <childnode refid="10410" relation="include">
+        </childnode>
+        <childnode refid="10402" relation="include">
+        </childnode>
+        <childnode refid="10404" relation="include">
+        </childnode>
+        <childnode refid="10411" relation="include">
+        </childnode>
+        <childnode refid="10395" relation="include">
+        </childnode>
+        <childnode refid="10401" relation="include">
+        </childnode>
+        <childnode refid="10412" relation="include">
+        </childnode>
+        <childnode refid="10413" relation="include">
+        </childnode>
+        <childnode refid="10414" relation="include">
+        </childnode>
+        <childnode refid="10400" relation="include">
+        </childnode>
+        <childnode refid="10387" relation="include">
+        </childnode>
+        <childnode refid="10388" relation="include">
+        </childnode>
+      </node>
+      <node id="10410">
+        <label>algorithm</label>
+      </node>
+      <node id="10395">
+        <label>cstring</label>
+      </node>
+      <node id="10413">
+        <label>memory</label>
+      </node>
+      <node id="10401">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_tensor_derived_8cpp_1aacbb9e1f38be71e22df1584a37c56693" prot="public" static="no">
+        <name>__STDC_FORMAT_MACROS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.cpp" line="4" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>required<sp/>for<sp/>old<sp/>g++<sp/>to<sp/>compile<sp/>PRId64<sp/>macros,<sp/>see</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://github.com/pytorch/pytorch/issues/3571</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__STDC_FORMAT_MACROS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>${generated_comment}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/${Tensor}.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/${Storage}.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Scalar.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Half.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">$extra_cuda_headers</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">${Tensor}::${Tensor}(Context*<sp/>context)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">:<sp/>${Tensor}(context,${THTensor}_new(${state}))<sp/>{}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">${Tensor}::${Tensor}(Context*<sp/>context,<sp/>${THTensor}<sp/>*<sp/>tensor)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">:<sp/>TensorImpl(&amp;context-&gt;getType(Backend::${Backend},ScalarType::${ScalarName})),</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>tensor(tensor),</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>context(context)<sp/>{}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">${Tensor}::~${Tensor}()<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tensor)<sp/>tensor-&gt;release();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>${Tensor}::toString()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;${Tensor}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">IntList<sp/>${Tensor}::sizes()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>dim<sp/>in<sp/>tensor<sp/>is<sp/>not<sp/>synchronized<sp/>with<sp/>THTensor,<sp/>so<sp/>it&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>important<sp/>to<sp/>apply<sp/>dim<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>IntList(THTensor_getSizePtr(tensor),<sp/>dim());</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">int64_t<sp/>${Tensor}::dim()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isScalar())</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tensor-&gt;dim();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>${Tensor}::typeString()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;${Type}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>${Tensor}::unsafeGetTH(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>retain)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(retain)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>tensor-&gt;retain();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tensor;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>${Tensor}::release_resources()<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>tensor-&gt;release();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>tensor<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">${TensorDenseOrSparse}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>torch::nn::detail::DropoutImplBase</compoundname>
+    <basecompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; Derived &gt;</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>Derived</declname>
+        <defname>Derived</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1af07785fbaee59d6b961bdacb2f88bf96" prot="public" static="no" mutable="no">
+        <type><ref refid="structtorch_1_1nn_1_1_dropout_options" kindref="compound">DropoutOptions</ref></type>
+        <definition>DropoutOptions torch::nn::detail::DropoutImplBase&lt; Derived &gt;::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a2a37b2e2c6eedfdcaba6fc935781bcec" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::detail::DropoutImplBase&lt; Derived &gt;::DropoutImplBase</definition>
+        <argsstring>(double rate)</argsstring>
+        <name>DropoutImplBase</name>
+        <param>
+          <type>double</type>
+          <declname>rate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" bodystart="21" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1aff40709552f7a6587eff09ad32ce41af" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::detail::DropoutImplBase&lt; Derived &gt;::DropoutImplBase</definition>
+        <argsstring>(DropoutOptions options_)</argsstring>
+        <name>DropoutImplBase</name>
+        <param>
+          <type><ref refid="structtorch_1_1nn_1_1_dropout_options" kindref="compound">DropoutOptions</ref></type>
+          <declname>options_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/dropout.cpp" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a45c40c3933826b965441dde01b5d3362" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::detail::DropoutImplBase&lt; Derived &gt;::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <reimplements refid="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput><ref refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a45c40c3933826b965441dde01b5d3362" kindref="member">reset()</ref></computeroutput> must perform initialization of all members with reference semantics, most importantly parameters, buffers and submodules. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/dropout.cpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1abbd6df014f45a085ecefa042cbce3e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::detail::DropoutImplBase&lt; Derived &gt;::forward</definition>
+        <argsstring>(Tensor input)</argsstring>
+        <name>forward</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/dropout.cpp" bodystart="24" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1ae370aac8c8bcc9072a33ab83cc99d2c5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>virtual Tensor torch::nn::detail::DropoutImplBase&lt; Derived &gt;::noise_mask</definition>
+        <argsstring>(Tensor input) const =0</argsstring>
+        <name>noise_mask</name>
+        <reimplementedby refid="classtorch_1_1nn_1_1_dropout_impl_1aa9d3d18ad15bafc8531c692c68fbdeb7">noise_mask</reimplementedby>
+        <reimplementedby refid="classtorch_1_1nn_1_1_dropout2d_impl_1a6ccf4a22d98f86e1e5aa4ef671844848">noise_mask</reimplementedby>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="27" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="265">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="264">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="265" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>torch::nn::detail::DropoutImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base"/>
+        <childnode refid="264" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="268">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="267">
+        <label>torch::nn::Cloneable&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="268" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="269">
+        <label>torch::nn::DropoutOptions</label>
+        <link refid="structtorch_1_1nn_1_1_dropout_options"/>
+      </node>
+      <node id="266">
+        <label>torch::nn::detail::DropoutImplBase&lt; Derived &gt;</label>
+        <link refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base"/>
+        <childnode refid="267" relation="public-inheritance">
+        </childnode>
+        <childnode refid="269" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h" bodystart="19" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a2a37b2e2c6eedfdcaba6fc935781bcec" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>DropoutImplBase</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1aff40709552f7a6587eff09ad32ce41af" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>DropoutImplBase</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1abbd6df014f45a085ecefa042cbce3e8b" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::detail::DropoutImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::detail::DropoutImplBase</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1ae370aac8c8bcc9072a33ab83cc99d2c5" prot="public" virt="pure-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>noise_mask</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1af07785fbaee59d6b961bdacb2f88bf96" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>options</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1detail_1_1_dropout_impl_base_1a45c40c3933826b965441dde01b5d3362" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>reset</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::detail::DropoutImplBase</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

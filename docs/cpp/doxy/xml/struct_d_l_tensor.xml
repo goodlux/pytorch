@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_d_l_tensor" kind="struct" language="C++" prot="public">
+    <compoundname>DLTensor</compoundname>
+    <includes refid="dlpack_8h" local="no">dlpack.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_d_l_tensor_1a6af4539ae2c74d60e8dbc4c6047ed805" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* DLTensor::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+<para>The opaque data pointer points to the allocated data. This will be CUDA device pointer or cl_mem handle in OpenCL. This pointer is always aligns to 256 bytes as in CUDA. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="100" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_l_tensor_1a552ca85f7d04138c876c636e25b3c484" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_l_context" kindref="compound">DLContext</ref></type>
+        <definition>DLContext DLTensor::ctx</definition>
+        <argsstring></argsstring>
+        <name>ctx</name>
+        <briefdescription>
+<para>The device context of the tensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_l_tensor_1a8b28a3876c4d157ccea80956f3ec18f5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int DLTensor::ndim</definition>
+        <argsstring></argsstring>
+        <name>ndim</name>
+        <briefdescription>
+<para>Number of dimensions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="104" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_l_tensor_1ae0cf02d1a8b19118838670b3b3d857f5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_l_data_type" kindref="compound">DLDataType</ref></type>
+        <definition>DLDataType DLTensor::dtype</definition>
+        <argsstring></argsstring>
+        <name>dtype</name>
+        <briefdescription>
+<para>The data type of the pointer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="106" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_l_tensor_1a6e33904029ec8a18658b6bd62be28688" prot="public" static="no" mutable="no">
+        <type>int64_t *</type>
+        <definition>int64_t* DLTensor::shape</definition>
+        <argsstring></argsstring>
+        <name>shape</name>
+        <briefdescription>
+<para>The shape of the tensor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="108" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_l_tensor_1a0ad3b8079e712f711b716d34d418d44e" prot="public" static="no" mutable="no">
+        <type>int64_t *</type>
+        <definition>int64_t* DLTensor::strides</definition>
+        <argsstring></argsstring>
+        <name>strides</name>
+        <briefdescription>
+<para>strides of the tensor, can be NULL, indicating tensor is compact. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="113" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_d_l_tensor_1a647dfbb2a3b976c4e9d1e17740dca568" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t DLTensor::byte_offset</definition>
+        <argsstring></argsstring>
+        <name>byte_offset</name>
+        <briefdescription>
+<para>The offset in bytes to the beginning pointer to data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="115" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Plain C Tensor object, does not manage memory. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="235">
+        <label>DLDataType</label>
+        <link refid="struct_d_l_data_type"/>
+      </node>
+      <node id="234">
+        <label>DLContext</label>
+        <link refid="struct_d_l_context"/>
+      </node>
+      <node id="233">
+        <label>DLTensor</label>
+        <link refid="struct_d_l_tensor"/>
+        <childnode refid="234" relation="usage">
+          <edgelabel>ctx</edgelabel>
+        </childnode>
+        <childnode refid="235" relation="usage">
+          <edgelabel>dtype</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" line="94" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/dlpack.h" bodystart="94" bodyend="116"/>
+    <listofallmembers>
+      <member refid="struct_d_l_tensor_1a647dfbb2a3b976c4e9d1e17740dca568" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>byte_offset</name></member>
+      <member refid="struct_d_l_tensor_1a552ca85f7d04138c876c636e25b3c484" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>ctx</name></member>
+      <member refid="struct_d_l_tensor_1a6af4539ae2c74d60e8dbc4c6047ed805" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>data</name></member>
+      <member refid="struct_d_l_tensor_1ae0cf02d1a8b19118838670b3b3d857f5" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>dtype</name></member>
+      <member refid="struct_d_l_tensor_1a8b28a3876c4d157ccea80956f3ec18f5" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>ndim</name></member>
+      <member refid="struct_d_l_tensor_1a6e33904029ec8a18658b6bd62be28688" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>shape</name></member>
+      <member refid="struct_d_l_tensor_1a0ad3b8079e712f711b716d34d418d44e" prot="public" virt="non-virtual"><scope>DLTensor</scope><name>strides</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

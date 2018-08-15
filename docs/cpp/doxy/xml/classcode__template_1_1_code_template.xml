@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classcode__template_1_1_code_template" kind="class" language="Python" prot="public">
+    <compoundname>code_template::CodeTemplate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcode__template_1_1_code_template_1a11243a889472d585f2b44944b8ad6db1" prot="public" static="yes" mutable="no">
+        <type>string</type>
+        <definition>string code_template.CodeTemplate::substitution_str</definition>
+        <argsstring></argsstring>
+        <name>substitution_str</name>
+        <initializer>=  &apos;(^[^\n\S]*)?\$([^\d\W]\w*|\{,?[^\d\W]\w*\,?})&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="14" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcode__template_1_1_code_template_1a27e4e54879b2dbf345f1a95cae9cb67d" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>code_template.CodeTemplate::subtitution</definition>
+        <argsstring></argsstring>
+        <name>subtitution</name>
+        <initializer>=  re.compile(substitution_str, re.MULTILINE)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcode__template_1_1_code_template_1a708c0ef3d9db5c6f00e08061bbc4ebdf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>code_template.CodeTemplate::pattern</definition>
+        <argsstring></argsstring>
+        <name>pattern</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcode__template_1_1_code_template_1ac76bcf0737099688ad4776b9364aa7e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def code_template.CodeTemplate.from_file</definition>
+        <argsstring>(filename)</argsstring>
+        <name>from_file</name>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="25" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcode__template_1_1_code_template_1acf003c15a60327aa0998f1cd7e3fda21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def code_template.CodeTemplate.__init__</definition>
+        <argsstring>(self, pattern)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>pattern</type>
+          <defname>pattern</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="29" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classcode__template_1_1_code_template_1a8d8b442ae00b89612a0e352e050a77d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def code_template.CodeTemplate.substitute</definition>
+        <argsstring>(self, env={}, kwargs)</argsstring>
+        <name>substitute</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>env</type>
+          <defname>env</defname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>kwargs</type>
+          <defname>kwargs</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="32" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="107">
+        <label>code_template.CodeTemplate</label>
+        <link refid="classcode__template_1_1_code_template"/>
+        <childnode refid="108" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="108">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="109">
+        <label>code_template.CodeTemplate</label>
+        <link refid="classcode__template_1_1_code_template"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" line="13" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/code_template.py" bodystart="13" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classcode__template_1_1_code_template_1acf003c15a60327aa0998f1cd7e3fda21" prot="public" virt="non-virtual"><scope>code_template::CodeTemplate</scope><name>__init__</name></member>
+      <member refid="classcode__template_1_1_code_template_1ac76bcf0737099688ad4776b9364aa7e9" prot="public" virt="non-virtual"><scope>code_template::CodeTemplate</scope><name>from_file</name></member>
+      <member refid="classcode__template_1_1_code_template_1a708c0ef3d9db5c6f00e08061bbc4ebdf" prot="public" virt="non-virtual"><scope>code_template::CodeTemplate</scope><name>pattern</name></member>
+      <member refid="classcode__template_1_1_code_template_1a8d8b442ae00b89612a0e352e050a77d1" prot="public" virt="non-virtual"><scope>code_template::CodeTemplate</scope><name>substitute</name></member>
+      <member refid="classcode__template_1_1_code_template_1a11243a889472d585f2b44944b8ad6db1" prot="public" virt="non-virtual"><scope>code_template::CodeTemplate</scope><name>substitution_str</name></member>
+      <member refid="classcode__template_1_1_code_template_1a27e4e54879b2dbf345f1a95cae9cb67d" prot="public" virt="non-virtual"><scope>code_template::CodeTemplate</scope><name>subtitution</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

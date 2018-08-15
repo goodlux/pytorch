@@ -1,0 +1,424 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacenn__parse" kind="namespace" language="Python">
+    <compoundname>nn_parse</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="nn__parse_8py_1ab0cbcfb5b06a435ec2d791d0d7ec5842" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string nn_parse.NAME_PARAM_REGEX</definition>
+        <argsstring></argsstring>
+        <name>NAME_PARAM_REGEX</name>
+        <initializer>=  r&apos;(\w+)\((.*)\)&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="15" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nn__parse_8py_1a09028ceb5653256efd8f91c81ce69daa" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary nn_parse.ARGUMENT_MAPPINGS</definition>
+        <argsstring></argsstring>
+        <name>ARGUMENT_MAPPINGS</name>
+        <initializer>=  {
+    &apos;k&apos;: &apos;kernel_size&apos;,
+    &apos;d&apos;: &apos;stride&apos;,
+    &apos;pad&apos;: &apos;padding&apos;,
+    &apos;p&apos;: &apos;padding&apos;,
+    &apos;o&apos;: &apos;output_size&apos;,
+    &apos;osize&apos;: &apos;output_size&apos;,
+    &apos;output&apos;: &apos;output_size&apos;,  # as a prefix e.g. outputW
+    &apos;isize&apos;: &apos;input_size&apos;,
+    &apos;dilation&apos;: &apos;dilation&apos;,
+    &apos;adj&apos;: &apos;output_padding&apos;,
+    &apos;a&apos;: &apos;output_padding&apos;,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="95" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nn__parse_8py_1a427e10ae83ff8d139397b8806a84166b" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary nn_parse.DIMENSION_OFFSET</definition>
+        <argsstring></argsstring>
+        <name>DIMENSION_OFFSET</name>
+        <initializer>=  {
+    &apos;width&apos;: -1,
+    &apos;height&apos;: -2,
+    &apos;B&apos;: 0,
+    &apos;C&apos;: 1,
+    &apos;W&apos;: -1,
+    &apos;H&apos;: -2,
+    &apos;T&apos;: -3,
+    &apos;left&apos;: 0,
+    &apos;right&apos;: 1,
+    &apos;top&apos;: 2,
+    &apos;bottom&apos;: 3,
+    &apos;front&apos;: 4,
+    &apos;back&apos;: 5,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="109" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nn__parse_8py_1ac64c2a54374a4c9673bea49c88390313" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary nn_parse.SUBSTITUTIONS</definition>
+        <argsstring></argsstring>
+        <name>SUBSTITUTIONS</name>
+        <initializer>=  {
+    &apos;input&apos;: &apos;self&apos;,
+    &apos;weights&apos;: &apos;weight&apos;,
+    &apos;train&apos;: &apos;training&apos;,
+    &apos;val&apos;: &apos;value&apos;,
+    &apos;lambda&apos;: &apos;lambd&apos;,
+    &apos;negval&apos;: &apos;negative_slope&apos;,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="125" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nn__parse_8py_1a6493b082dd706975eb2284880da3e585" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string nn_parse.include_only</definition>
+        <argsstring></argsstring>
+        <name>include_only</name>
+        <initializer>=  &apos;(updateOutput|updateGradInput|accGradParameters|backward)$&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="372" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="nn__parse_8py_1a2317e83903ce69f893de4edbc736f4d8" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string nn_parse.exclude</definition>
+        <argsstring></argsstring>
+        <name>exclude</name>
+        <initializer>=  &apos;LookupTable&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="373" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="nn__parse_8py_1aab75b0ec0c9e05709efe36b52c49ca8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.argument_to_declaration</definition>
+        <argsstring>(param, func=None)</argsstring>
+        <name>argument_to_declaration</name>
+        <param>
+          <type>param</type>
+          <defname>param</defname>
+        </param>
+        <param>
+          <type>func</type>
+          <defname>func</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="18" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a967e8e0d58354a13138462f9a63b56a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.output_arguments</definition>
+        <argsstring>(thnn_function)</argsstring>
+        <name>output_arguments</name>
+        <param>
+          <type>thnn_function</type>
+          <defname>thnn_function</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="53" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="53" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a05c3d181737325ad7a7a7731cb164154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.get_return</definition>
+        <argsstring>(args)</argsstring>
+        <name>get_return</name>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a2cf20ba2cab8cc0a4d1310e22a7b2b8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.camel_to_snake</definition>
+        <argsstring>(name)</argsstring>
+        <name>camel_to_snake</name>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="135" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="135" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1af4cecefaccac205a5da3902d4116d7e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.get_thnn_args</definition>
+        <argsstring>(thnn_function, params, inplace)</argsstring>
+        <name>get_thnn_args</name>
+        <param>
+          <type>thnn_function</type>
+          <defname>thnn_function</defname>
+        </param>
+        <param>
+          <type>params</type>
+          <defname>params</defname>
+        </param>
+        <param>
+          <type>inplace</type>
+          <defname>inplace</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="141" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="141" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1af39c5c5c11233fefd202fbe42a1705df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.remove_unused_args</definition>
+        <argsstring>(args, thnn_args)</argsstring>
+        <name>remove_unused_args</name>
+        <param>
+          <type>args</type>
+          <defname>args</defname>
+        </param>
+        <param>
+          <type>thnn_args</type>
+          <defname>thnn_args</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the subset of args whose name appears in thnn_args</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="190" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="190" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1abac137044cb328daa0cc004152fad373" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.unique_args</definition>
+        <argsstring>(argslist)</argsstring>
+        <name>unique_args</name>
+        <param>
+          <type>argslist</type>
+          <defname>argslist</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="206" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="206" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a8a339060f306d823907cf36ca34ab06b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.function_info</definition>
+        <argsstring>(name, arguments, cimpls, buffers, backends, inplace, scalar_check)</argsstring>
+        <name>function_info</name>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>arguments</type>
+          <defname>arguments</defname>
+        </param>
+        <param>
+          <type>cimpls</type>
+          <defname>cimpls</defname>
+        </param>
+        <param>
+          <type>buffers</type>
+          <defname>buffers</defname>
+        </param>
+        <param>
+          <type>backends</type>
+          <defname>backends</defname>
+        </param>
+        <param>
+          <type>inplace</type>
+          <defname>inplace</defname>
+        </param>
+        <param>
+          <type>scalar_check</type>
+          <defname>scalar_check</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>cimpls contains information use to call into THNN:
+    cname: THNN function name
+    arguments: arguments to functional call
+    condition: [optional] guard around call
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="218" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="218" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1aef09e5df90f0cb9b4f0fce530d38b23f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.base_declaration</definition>
+        <argsstring>(func, thnn_function, backends, inplace=False)</argsstring>
+        <name>base_declaration</name>
+        <param>
+          <type>func</type>
+          <defname>func</defname>
+        </param>
+        <param>
+          <type>thnn_function</type>
+          <defname>thnn_function</defname>
+        </param>
+        <param>
+          <type>backends</type>
+          <defname>backends</defname>
+        </param>
+        <param>
+          <type>inplace</type>
+          <defname>inplace</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates the NN function without any buffers in it&apos;s signature</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="239" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="239" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a27a548d986a0e6bec5c8824f3391529d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.forward_declaration</definition>
+        <argsstring>(base, thnn_function, inplace=False)</argsstring>
+        <name>forward_declaration</name>
+        <param>
+          <type>base</type>
+          <defname>base</defname>
+        </param>
+        <param>
+          <type>thnn_function</type>
+          <defname>thnn_function</defname>
+        </param>
+        <param>
+          <type>inplace</type>
+          <defname>inplace</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="254" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="254" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a40ac436b29a025f78fd2a3ca04035ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.backward_declaration</definition>
+        <argsstring>(base, thnn_functions)</argsstring>
+        <name>backward_declaration</name>
+        <param>
+          <type>base</type>
+          <defname>base</defname>
+        </param>
+        <param>
+          <type>thnn_functions</type>
+          <defname>thnn_functions</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="280" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="280" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1a02d1795351018939d4258c7608b99745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.parse_nn_yaml</definition>
+        <argsstring>(filename)</argsstring>
+        <name>parse_nn_yaml</name>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="367" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="367" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="function" id="nn__parse_8py_1af396a5ce1e2aea8d344d0dd9ccac259d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def nn_parse.run</definition>
+        <argsstring>(paths)</argsstring>
+        <name>run</name>
+        <param>
+          <type>paths</type>
+          <defname>paths</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="376" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" bodystart="376" bodyend="416"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/nn_parse.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

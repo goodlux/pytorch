@@ -1,0 +1,553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_sparse_tensor_impl" kind="struct" language="C++" prot="public">
+    <compoundname>at::SparseTensorImpl</compoundname>
+    <basecompoundref refid="structat_1_1_tensor_impl" prot="public" virt="non-virtual">at::TensorImpl</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1ac2b90d66d9241e5977e1f86fc02698cf" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; int64_t &gt;</type>
+        <definition>std::vector&lt;int64_t&gt; at::SparseTensorImpl::size_</definition>
+        <argsstring></argsstring>
+        <name>size_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1aab92ac52f8839beab0df185e08021185" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::nnz_</definition>
+        <argsstring></argsstring>
+        <name>nnz_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1a82ba960d39ab25134dd45c8b8fbd5007" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::sparseDims_</definition>
+        <argsstring></argsstring>
+        <name>sparseDims_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="34" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1a6cbeb3b7f91479de91bdea1028eea466" prot="public" static="no" mutable="no">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::denseDims_</definition>
+        <argsstring></argsstring>
+        <name>denseDims_</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="35" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1a73b2996e5cbbb96ab1a5fb80691cb60b" prot="public" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::SparseTensorImpl::indices_</definition>
+        <argsstring></argsstring>
+        <name>indices_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1a0044c4f2404bcf2754c3a32c00a10e17" prot="public" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::SparseTensorImpl::values_</definition>
+        <argsstring></argsstring>
+        <name>values_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_sparse_tensor_impl_1ae7edcebcd5831dbcb987dbfdfa95590f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::SparseTensorImpl::coalesced_</definition>
+        <argsstring></argsstring>
+        <name>coalesced_</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="47" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a9849f7ae9d18d19d5e7d6b916be0e9b7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::SparseTensorImpl::SparseTensorImpl</definition>
+        <argsstring>(Type *type)</argsstring>
+        <name>SparseTensorImpl</name>
+        <param>
+          <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="21" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a95fffc699471c05c87512f48db30415c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::nnz</definition>
+        <argsstring>() const</argsstring>
+        <name>nnz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="53" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a530df5f3404734076583b8ccf3f1b11c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::sparseDims</definition>
+        <argsstring>() const</argsstring>
+        <name>sparseDims</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="54" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a3b91475a933bacf5a37f4aa2f613e22b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::denseDims</definition>
+        <argsstring>() const</argsstring>
+        <name>denseDims</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a556a992a0a51e0f913ea94bb711e6bf7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::SparseTensorImpl::coalesced</definition>
+        <argsstring>() const</argsstring>
+        <name>coalesced</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a9d0103ec6fbe5c557e809c338ad4c036" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::SparseTensorImpl::indices</definition>
+        <argsstring>() const</argsstring>
+        <name>indices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="57" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a76e06c5aab6d2393b6a4862fa5045478" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::SparseTensorImpl::values</definition>
+        <argsstring>() const</argsstring>
+        <name>values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1af833cbffeec244f5faaa774d5d5b57da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * at::SparseTensorImpl::toString</definition>
+        <argsstring>() const override</argsstring>
+        <name>toString</name>
+        <reimplements refid="structat_1_1_tensor_impl_1a613a3398805a6a138762cee20fabb4e2">toString</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="60" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="31" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a2a71255dc7fac65198ff1754d64c64fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+        <definition>IntList at::SparseTensorImpl::sizes</definition>
+        <argsstring>() const override</argsstring>
+        <name>sizes</name>
+        <reimplements refid="structat_1_1_tensor_impl_1a65e5eeafc1f29060c0ee2f1761077d3d">sizes</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="61" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1aef07faa4db1b67eb77306687d740809a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+        <definition>IntList at::SparseTensorImpl::strides</definition>
+        <argsstring>() const override</argsstring>
+        <name>strides</name>
+        <reimplements refid="structat_1_1_tensor_impl_1a3ac77d597015cecc2ad035d7c2411987">strides</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="62" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a93e5afb006021c00fb0379df9e913cc0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::SparseTensorImpl::dim</definition>
+        <argsstring>() const override</argsstring>
+        <name>dim</name>
+        <reimplements refid="structat_1_1_tensor_impl_1ab8edca66e99efe77ae1f2e98f754e2c6">dim</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a8a84e2a11ee10ef5d584e449dc5e61f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classat_1_1_scalar" kindref="compound">Scalar</ref></type>
+        <definition>Scalar at::SparseTensorImpl::localScalar</definition>
+        <argsstring>() override</argsstring>
+        <name>localScalar</name>
+        <reimplements refid="structat_1_1_tensor_impl_1ae805a79db6203eb5bb9cacd4a41df2b1">localScalar</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform a conversion of this tensor to a scalar, if numel() == 1. Otherwise, raise an error. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a118315439ffd89794cf3dd438b34a4f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void *</type>
+        <definition>void * at::SparseTensorImpl::unsafeGetTH</definition>
+        <argsstring>(bool retain) override</argsstring>
+        <name>unsafeGetTH</name>
+        <reimplements refid="structat_1_1_tensor_impl_1a44491c0216b7f25a4a122f36826ba56e">unsafeGetTH</reimplements>
+        <param>
+          <type>bool</type>
+          <declname>retain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="65" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a91d28ff7df5207ca91eba20068c9a086" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_storage" kindref="compound">Storage</ref> &gt;</type>
+        <definition>std::unique_ptr&lt; Storage &gt; at::SparseTensorImpl::storage</definition>
+        <argsstring>() override</argsstring>
+        <name>storage</name>
+        <reimplements refid="structat_1_1_tensor_impl_1a8c5cd89bfb316fcfc69e45a2f0b65cba">storage</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="66" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a92fec0ef662093c69ce7e25f6d3991b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; int64_t &gt; &amp;</type>
+        <definition>std::vector&lt;int64_t&gt;&amp; at::SparseTensorImpl::_sizes_mut</definition>
+        <argsstring>()</argsstring>
+        <name>_sizes_mut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="70" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a83302d85dbdc912353858f0e40a793c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SparseTensorImpl::raw_resize_</definition>
+        <argsstring>(int64_t sparseDims, int64_t denseDims, ArrayRef&lt; int64_t &gt; size)</argsstring>
+        <name>raw_resize_</name>
+        <param>
+          <type>int64_t</type>
+          <declname>sparseDims</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>denseDims</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; int64_t &gt;</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="74" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="74" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a3f8a2e5f987fc4e177554db8bbfe772b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SparseTensorImpl::set_indices</definition>
+        <argsstring>(const Tensor &amp;indices)</argsstring>
+        <name>set_indices</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="86" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1ac73ead9576ccfa9107ed36d0f529cd18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SparseTensorImpl::set_values</definition>
+        <argsstring>(const Tensor &amp;values)</argsstring>
+        <name>set_values</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="91" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="91" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1afee479889802fc4c890c5ed80a5a9f13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SparseTensorImpl::set_coalesced</definition>
+        <argsstring>(bool coalesced)</argsstring>
+        <name>set_coalesced</name>
+        <param>
+          <type>bool</type>
+          <declname>coalesced</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="96" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a651d3da4801987ffa7b264094dd138d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SparseTensorImpl::set_nnz</definition>
+        <argsstring>(int64_t nnz)</argsstring>
+        <name>set_nnz</name>
+        <param>
+          <type>int64_t</type>
+          <declname>nnz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_sparse_tensor_impl_1a1a6f75369686e817f356e8e78b2c9e07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SparseTensorImpl::set_indices_and_values</definition>
+        <argsstring>(const Tensor &amp;indices, const Tensor &amp;values)</argsstring>
+        <name>set_indices_and_values</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>indices</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.cpp" bodystart="60" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="640">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="641" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+      <node id="639">
+        <label>at::SparseTensorImpl</label>
+        <link refid="structat_1_1_sparse_tensor_impl"/>
+        <childnode refid="640" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="647">
+        <label>detail::TensorBase</label>
+        <link refid="structat_1_1detail_1_1_tensor_base_impl"/>
+        <childnode refid="643" relation="usage">
+          <edgelabel>pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="645">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="643">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="644" relation="public-inheritance">
+        </childnode>
+        <childnode refid="645" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="644">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+      <node id="646">
+        <label>at::Tensor</label>
+        <link refid="structat_1_1_tensor"/>
+        <childnode refid="647" relation="public-inheritance">
+        </childnode>
+        <childnode refid="647" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="642">
+        <label>at::SparseTensorImpl</label>
+        <link refid="structat_1_1_sparse_tensor_impl"/>
+        <childnode refid="643" relation="public-inheritance">
+        </childnode>
+        <childnode refid="646" relation="usage">
+          <edgelabel>indices_</edgelabel>
+          <edgelabel>values_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" line="8" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h" bodystart="8" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structat_1_1_sparse_tensor_impl_1a92fec0ef662093c69ce7e25f6d3991b7" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>_sizes_mut</name></member>
+      <member refid="structat_1_1_tensor_impl_1afc73d2d410d70d65841cdc0f15ab0724" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>backward</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a556a992a0a51e0f913ea94bb711e6bf7" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>coalesced</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1ae7edcebcd5831dbcb987dbfdfa95590f" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>coalesced_</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a3b91475a933bacf5a37f4aa2f613e22b" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>denseDims</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a6cbeb3b7f91479de91bdea1028eea466" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>denseDims_</name></member>
+      <member refid="structat_1_1_tensor_impl_1afbf95f6ffab5d40091d4da4ac891507b" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>detach</name></member>
+      <member refid="structat_1_1_tensor_impl_1a580c9d43719e20aa02e6bf7edd673d9d" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>detach_</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a93e5afb006021c00fb0379df9e913cc0" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>dim</name></member>
+      <member refid="structat_1_1_tensor_impl_1aa12a99c2ae0b6fa7437b050dfcfa7295" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>grad</name></member>
+      <member refid="structat_1_1_tensor_impl_1a159f6d26b8be357bf720fbc30d3f7056" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>grad</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a9d0103ec6fbe5c557e809c338ad4c036" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>indices</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a73b2996e5cbbb96ab1a5fb80691cb60b" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>indices_</name></member>
+      <member refid="structat_1_1_tensor_impl_1abdc2a7d0ff266591cb7d4ddad5d8a90e" prot="protected" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>is_scalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1a379baab1e38a419b82d4c249a3727358" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>isScalar</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a8a84e2a11ee10ef5d584e449dc5e61f0" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>localScalar</name></member>
+      <member refid="structat_1_1_tensor_impl_1a719b64429ad7eb2e25e9778009c4d57e" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>maybeScalar</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a95fffc699471c05c87512f48db30415c" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>nnz</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1aab92ac52f8839beab0df185e08021185" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>nnz_</name></member>
+      <member refid="structat_1_1_tensor_impl_1ad8ebe995f5da28a936e40308236168e3" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>numel</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a83302d85dbdc912353858f0e40a793c0" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>raw_resize_</name></member>
+      <member refid="structat_1_1_retainable_1a8a4537081eb26a211e307035c82143f7" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>release</name></member>
+      <member refid="structat_1_1_retainable_1aad2a8607f7e3d3bb2a98935469e185e6" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>release_resources</name></member>
+      <member refid="structat_1_1_tensor_impl_1a10b18c7d9b42b0128f611dd033eac14d" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>requires_grad</name></member>
+      <member refid="structat_1_1_retainable_1a4aa214543027000b07c494d58b38ae07" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>retain</name></member>
+      <member refid="structat_1_1_retainable_1a06038e08629048348dfc5ba761947c1d" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>Retainable</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1afee479889802fc4c890c5ed80a5a9f13" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>set_coalesced</name></member>
+      <member refid="structat_1_1_tensor_impl_1aa5701846e853185fd80db9e1ae93dca2" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>set_data</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a3f8a2e5f987fc4e177554db8bbfe772b" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>set_indices</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a1a6f75369686e817f356e8e78b2c9e07" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>set_indices_and_values</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a651d3da4801987ffa7b264094dd138d0" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>set_nnz</name></member>
+      <member refid="structat_1_1_tensor_impl_1a198097090a2f335edfb4f51e05087630" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>set_requires_grad</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1ac73ead9576ccfa9107ed36d0f529cd18" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>set_values</name></member>
+      <member refid="structat_1_1_tensor_impl_1af1819788d9b4e48026345b84e1f13a48" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>setScalar</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1ac2b90d66d9241e5977e1f86fc02698cf" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>size_</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a2a71255dc7fac65198ff1754d64c64fc" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>sizes</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a530df5f3404734076583b8ccf3f1b11c" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>sparseDims</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a82ba960d39ab25134dd45c8b8fbd5007" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>sparseDims_</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a9849f7ae9d18d19d5e7d6b916be0e9b7" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>SparseTensorImpl</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a91d28ff7df5207ca91eba20068c9a086" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>storage</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1aef07faa4db1b67eb77306687d740809a" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>strides</name></member>
+      <member refid="structat_1_1_tensor_impl_1a7469ca6b329494f9de1c8ae559e2ee54" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>TensorImpl</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1af833cbffeec244f5faaa774d5d5b57da" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>toString</name></member>
+      <member refid="structat_1_1_tensor_impl_1aab13757c47cccf942862857e8b46188b" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>type</name></member>
+      <member refid="structat_1_1_tensor_impl_1a281bbf952fcab35ec74b57a0beb078ac" prot="protected" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>type_</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a118315439ffd89794cf3dd438b34a4f4" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>unsafeGetTH</name></member>
+      <member refid="structat_1_1_retainable_1a15ff448065b4844c62baa15e34d37bda" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>use_count</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a76e06c5aab6d2393b6a4862fa5045478" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>values</name></member>
+      <member refid="structat_1_1_sparse_tensor_impl_1a0044c4f2404bcf2754c3a32c00a10e17" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>values_</name></member>
+      <member refid="structat_1_1_retainable_1adaec38a4c9ba4ce8f3c64e1b0da13cb1" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>weak_lock</name></member>
+      <member refid="structat_1_1_retainable_1a613e2a11ec7a123db1fb9d81440442fb" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>weak_release</name></member>
+      <member refid="structat_1_1_retainable_1a933d38384c98ed5b87bd032fef80a259" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>weak_retain</name></member>
+      <member refid="structat_1_1_retainable_1aa1b78b534baa70cb5bc8c824a4946d7a" prot="public" virt="non-virtual"><scope>at::SparseTensorImpl</scope><name>weak_use_count</name></member>
+      <member refid="structat_1_1_retainable_1af8f593744812835454b30cb364537768" prot="public" virt="virtual"><scope>at::SparseTensorImpl</scope><name>~Retainable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

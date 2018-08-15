@@ -1,0 +1,512 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_context" kind="class" language="C++" prot="public">
+    <compoundname>at::Context</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classat_1_1_context_1a2b4dde0c6239b286ca4d4ebadc77271d" prot="public" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_generator" kindref="compound">Generator</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Generator&gt; at::Context::generator_registry[static_cast&lt; int &gt;(Backend::NumOptions)]</definition>
+        <argsstring>[static_cast&lt; int &gt;(Backend::NumOptions)]</argsstring>
+        <name>generator_registry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="101" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classat_1_1_context_1aede690e34c25144fdac689881c96c38e" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; <ref refid="structat_1_1_type" kindref="compound">Type</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Type&gt; at::Context::type_registry[static_cast&lt; int &gt;(Backend::NumOptions)][static_cast&lt; int &gt;(ScalarType::NumOptions)]</definition>
+        <argsstring>[static_cast&lt; int &gt;(Backend::NumOptions)][static_cast&lt; int &gt;(ScalarType::NumOptions)]</argsstring>
+        <name>type_registry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="105" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_context_1a7b65e80fbc9e1ad4f36f5654d0b70e38" prot="private" static="no" mutable="no">
+        <type>std::once_flag</type>
+        <definition>std::once_flag at::Context::thc_init</definition>
+        <argsstring></argsstring>
+        <name>thc_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="112" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_context_1a07cbd77aecac46a2e1960bff2456e6c8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::Context::enabled_cudnn</definition>
+        <argsstring></argsstring>
+        <name>enabled_cudnn</name>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="113" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_context_1acd75d4d3a82f291054de3634c49e3ed0" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::Context::deterministic_cudnn</definition>
+        <argsstring></argsstring>
+        <name>deterministic_cudnn</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="114" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_context_1ada49b95673aef56dad8301975e07d207" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool at::Context::benchmark_cudnn</definition>
+        <argsstring></argsstring>
+        <name>benchmark_cudnn</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="115" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_context_1ae601ac0a96b79d8f02734ebe2f96e45c" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; size_t &gt;</type>
+        <definition>std::atomic&lt;size_t&gt; at::Context::next_id</definition>
+        <argsstring></argsstring>
+        <name>next_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="116" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_context_1a3a74e372e70536d03c630a9eb9bff41a" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; THCState, void(*)(THCState *)&gt;</type>
+        <definition>std::unique_ptr&lt;THCState, void(*)(THCState*)&gt; at::Context::thc_state</definition>
+        <argsstring></argsstring>
+        <name>thc_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="117" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classat_1_1_context_1a9d088de66de35d450a56e236fbaab94d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="118" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classat_1_1_context_1a473aac8b75fbb6923e2f8b827d5484bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend void</type>
+        <definition>void register_cuda_types</definition>
+        <argsstring>(Context *context)</argsstring>
+        <name>register_cuda_types</name>
+        <param>
+          <type><ref refid="classat_1_1_context" kindref="compound">Context</ref> *</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="119" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_context_1a6fd07a0af14c61f935282fa7282c79cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::Context::Context</definition>
+        <argsstring>()</argsstring>
+        <name>Context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="28" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a65716190bcb2f42d86cbfb485d117ee9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> *</type>
+        <definition>Type* at::Context::getTypeRaw</definition>
+        <argsstring>(Backend p, ScalarType s)</argsstring>
+        <name>getTypeRaw</name>
+        <param>
+          <type>Backend</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>ScalarType</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1acc0cfce5e5762f6a10098c3000eef499" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> *</type>
+        <definition>Type* at::Context::getTypeOpt</definition>
+        <argsstring>(Backend p, ScalarType s)</argsstring>
+        <name>getTypeOpt</name>
+        <param>
+          <type>Backend</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>ScalarType</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="30" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1ad6f76b479b1d137ac8d7547446d5f2ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_type" kindref="compound">Type</ref> &amp;</type>
+        <definition>Type&amp; at::Context::getType</definition>
+        <argsstring>(Backend p, ScalarType s)</argsstring>
+        <name>getType</name>
+        <param>
+          <type>Backend</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>ScalarType</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="43" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1afbe8db521b828e38bd20712287c60580" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_generator" kindref="compound">Generator</ref> &amp;</type>
+        <definition>Generator&amp; at::Context::defaultGenerator</definition>
+        <argsstring>(Backend p)</argsstring>
+        <name>defaultGenerator</name>
+        <param>
+          <type>Backend</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="48" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="48" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a0c6034d23ce9d32c0c136ae80c697bb1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::hasMKL</definition>
+        <argsstring>() const</argsstring>
+        <name>hasMKL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1aab2de33a59eb1cd484a1b679a02500bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::hasCUDA</definition>
+        <argsstring>() const</argsstring>
+        <name>hasCUDA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a634baaa71ded8fa861cc1ef8b8ebf14b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::hasCuDNN</definition>
+        <argsstring>() const</argsstring>
+        <name>hasCuDNN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="59" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a4a8dc615c8bd83bf2bc310d0bed6f9a9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::Context::current_device</definition>
+        <argsstring>() const</argsstring>
+        <name>current_device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="62" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1af91759c24ae1747c1d44587d9a4bc0bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>THCState *</type>
+        <definition>THCState* at::Context::lazyInitCUDA</definition>
+        <argsstring>()</argsstring>
+        <name>lazyInitCUDA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="67" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="67" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a7d825d55e359efc19b850a7fad36c603" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>THCState *</type>
+        <definition>THCState* at::Context::getTHCState</definition>
+        <argsstring>()</argsstring>
+        <name>getTHCState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="77" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a64442434d6be11e5d66cf579b6469c6c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int at::Context::getNumGPUs</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumGPUs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="82" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="82" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a48c035dc4994a1090dac62c77b716de2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t at::Context::freshTypeID</definition>
+        <argsstring>()</argsstring>
+        <name>freshTypeID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="85" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1afe58bcaa470e6185ad514131fb3717bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::setFlushDenormal</definition>
+        <argsstring>(bool on)</argsstring>
+        <name>setFlushDenormal</name>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="88" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a0c58e1f6be1721bb725eba2c44c3177f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::userEnabledCuDNN</definition>
+        <argsstring>() const</argsstring>
+        <name>userEnabledCuDNN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="94" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a431f2e50bd4acd67c3934f9f43672ace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Context::setUserEnabledCuDNN</definition>
+        <argsstring>(bool e)</argsstring>
+        <name>setUserEnabledCuDNN</name>
+        <param>
+          <type>bool</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="95" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a0e764b0674a6f7bdac132684a4e71262" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::benchmarkCuDNN</definition>
+        <argsstring>() const</argsstring>
+        <name>benchmarkCuDNN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="96" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="64" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1ac13e98a66e60749921145b500f76ddb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Context::setBenchmarkCuDNN</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setBenchmarkCuDNN</name>
+        <param>
+          <type>bool</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1aca10768a52412800e055cc42e9b984c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::Context::deterministicCuDNN</definition>
+        <argsstring>() const</argsstring>
+        <name>deterministicCuDNN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="98" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="56" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_context_1a55ae23446c42f169f26c5b502ea4d179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Context::setDeterministicCuDNN</definition>
+        <argsstring>(bool)</argsstring>
+        <name>setDeterministicCuDNN</name>
+        <param>
+          <type>bool</type>
+          <defname>b</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="99" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.cpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classat_1_1_context_1a38e3ed67d7a386a6ce6dec0c48c265ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Context::initCUDAIfNeeded</definition>
+        <argsstring>(Backend p)</argsstring>
+        <name>initCUDAIfNeeded</name>
+        <param>
+          <type>Backend</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="108" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="108" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h" bodystart="24" bodyend="120"/>
+    <listofallmembers>
+      <member refid="classat_1_1_context_1ada49b95673aef56dad8301975e07d207" prot="private" virt="non-virtual"><scope>at::Context</scope><name>benchmark_cudnn</name></member>
+      <member refid="classat_1_1_context_1a0e764b0674a6f7bdac132684a4e71262" prot="public" virt="non-virtual"><scope>at::Context</scope><name>benchmarkCuDNN</name></member>
+      <member refid="classat_1_1_context_1a6fd07a0af14c61f935282fa7282c79cb" prot="public" virt="non-virtual"><scope>at::Context</scope><name>Context</name></member>
+      <member refid="classat_1_1_context_1a4a8dc615c8bd83bf2bc310d0bed6f9a9" prot="public" virt="non-virtual"><scope>at::Context</scope><name>current_device</name></member>
+      <member refid="classat_1_1_context_1afbe8db521b828e38bd20712287c60580" prot="public" virt="non-virtual"><scope>at::Context</scope><name>defaultGenerator</name></member>
+      <member refid="classat_1_1_context_1acd75d4d3a82f291054de3634c49e3ed0" prot="private" virt="non-virtual"><scope>at::Context</scope><name>deterministic_cudnn</name></member>
+      <member refid="classat_1_1_context_1aca10768a52412800e055cc42e9b984c1" prot="public" virt="non-virtual"><scope>at::Context</scope><name>deterministicCuDNN</name></member>
+      <member refid="classat_1_1_context_1a07cbd77aecac46a2e1960bff2456e6c8" prot="private" virt="non-virtual"><scope>at::Context</scope><name>enabled_cudnn</name></member>
+      <member refid="classat_1_1_context_1a48c035dc4994a1090dac62c77b716de2" prot="public" virt="non-virtual"><scope>at::Context</scope><name>freshTypeID</name></member>
+      <member refid="classat_1_1_context_1a2b4dde0c6239b286ca4d4ebadc77271d" prot="public" virt="non-virtual"><scope>at::Context</scope><name>generator_registry</name></member>
+      <member refid="classat_1_1_context_1a64442434d6be11e5d66cf579b6469c6c" prot="public" virt="non-virtual"><scope>at::Context</scope><name>getNumGPUs</name></member>
+      <member refid="classat_1_1_context_1a7d825d55e359efc19b850a7fad36c603" prot="public" virt="non-virtual"><scope>at::Context</scope><name>getTHCState</name></member>
+      <member refid="classat_1_1_context_1ad6f76b479b1d137ac8d7547446d5f2ee" prot="public" virt="non-virtual"><scope>at::Context</scope><name>getType</name></member>
+      <member refid="classat_1_1_context_1acc0cfce5e5762f6a10098c3000eef499" prot="public" virt="non-virtual"><scope>at::Context</scope><name>getTypeOpt</name></member>
+      <member refid="classat_1_1_context_1a65716190bcb2f42d86cbfb485d117ee9" prot="public" virt="non-virtual"><scope>at::Context</scope><name>getTypeRaw</name></member>
+      <member refid="classat_1_1_context_1aab2de33a59eb1cd484a1b679a02500bc" prot="public" virt="non-virtual"><scope>at::Context</scope><name>hasCUDA</name></member>
+      <member refid="classat_1_1_context_1a634baaa71ded8fa861cc1ef8b8ebf14b" prot="public" virt="non-virtual"><scope>at::Context</scope><name>hasCuDNN</name></member>
+      <member refid="classat_1_1_context_1a0c6034d23ce9d32c0c136ae80c697bb1" prot="public" virt="non-virtual"><scope>at::Context</scope><name>hasMKL</name></member>
+      <member refid="classat_1_1_context_1a38e3ed67d7a386a6ce6dec0c48c265ce" prot="private" virt="non-virtual"><scope>at::Context</scope><name>initCUDAIfNeeded</name></member>
+      <member refid="classat_1_1_context_1af91759c24ae1747c1d44587d9a4bc0bd" prot="public" virt="non-virtual"><scope>at::Context</scope><name>lazyInitCUDA</name></member>
+      <member refid="classat_1_1_context_1ae601ac0a96b79d8f02734ebe2f96e45c" prot="private" virt="non-virtual"><scope>at::Context</scope><name>next_id</name></member>
+      <member refid="classat_1_1_context_1a473aac8b75fbb6923e2f8b827d5484bc" prot="private" virt="non-virtual"><scope>at::Context</scope><name>register_cuda_types</name></member>
+      <member refid="classat_1_1_context_1ac13e98a66e60749921145b500f76ddb5" prot="public" virt="non-virtual"><scope>at::Context</scope><name>setBenchmarkCuDNN</name></member>
+      <member refid="classat_1_1_context_1a55ae23446c42f169f26c5b502ea4d179" prot="public" virt="non-virtual"><scope>at::Context</scope><name>setDeterministicCuDNN</name></member>
+      <member refid="classat_1_1_context_1afe58bcaa470e6185ad514131fb3717bf" prot="public" virt="non-virtual"><scope>at::Context</scope><name>setFlushDenormal</name></member>
+      <member refid="classat_1_1_context_1a431f2e50bd4acd67c3934f9f43672ace" prot="public" virt="non-virtual"><scope>at::Context</scope><name>setUserEnabledCuDNN</name></member>
+      <member refid="classat_1_1_context_1a7b65e80fbc9e1ad4f36f5654d0b70e38" prot="private" virt="non-virtual"><scope>at::Context</scope><name>thc_init</name></member>
+      <member refid="classat_1_1_context_1a3a74e372e70536d03c630a9eb9bff41a" prot="private" virt="non-virtual"><scope>at::Context</scope><name>thc_state</name></member>
+      <member refid="classat_1_1_context_1a9d088de66de35d450a56e236fbaab94d" prot="private" virt="non-virtual"><scope>at::Context</scope><name>Type</name></member>
+      <member refid="classat_1_1_context_1aede690e34c25144fdac689881c96c38e" prot="private" virt="non-virtual"><scope>at::Context</scope><name>type_registry</name></member>
+      <member refid="classat_1_1_context_1a0c58e1f6be1721bb725eba2c44c3177f" prot="public" virt="non-virtual"><scope>at::Context</scope><name>userEnabledCuDNN</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

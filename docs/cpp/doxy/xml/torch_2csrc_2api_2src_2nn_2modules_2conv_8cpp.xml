@@ -1,0 +1,1063 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="torch_2csrc_2api_2src_2nn_2modules_2conv_8cpp" kind="file" language="C++">
+    <compoundname>conv.cpp</compoundname>
+    <includes refid="conv_8h" local="no">torch/nn/modules/conv.h</includes>
+    <includes refid="expanding__array_8h" local="no">torch/expanding_array.h</includes>
+    <includes refid="torch_2csrc_2api_2include_2torch_2tensor_8h" local="no">torch/tensor.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="18089">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="18090" relation="include">
+        </childnode>
+        <childnode refid="18091" relation="include">
+        </childnode>
+        <childnode refid="18092" relation="include">
+        </childnode>
+        <childnode refid="18093" relation="include">
+        </childnode>
+        <childnode refid="18094" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18096" relation="include">
+        </childnode>
+      </node>
+      <node id="18145">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="18120" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18143" relation="include">
+        </childnode>
+        <childnode refid="18146" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18094" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+      </node>
+      <node id="18124">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18129" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18094" relation="include">
+        </childnode>
+      </node>
+      <node id="18123">
+        <label>atomic</label>
+      </node>
+      <node id="18172">
+        <label>torch/csrc/autograd/generated/variable_factories.h</label>
+      </node>
+      <node id="18094">
+        <label>functional</label>
+      </node>
+      <node id="18149">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18140" relation="include">
+        </childnode>
+        <childnode refid="18088" relation="include">
+        </childnode>
+      </node>
+      <node id="18125">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="18086" relation="include">
+        </childnode>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18126" relation="include">
+        </childnode>
+        <childnode refid="18111" relation="include">
+        </childnode>
+        <childnode refid="18131" relation="include">
+        </childnode>
+      </node>
+      <node id="18127">
+        <label>limits</label>
+      </node>
+      <node id="18117">
+        <label>torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="18118" relation="include">
+        </childnode>
+        <childnode refid="18172" relation="include">
+        </childnode>
+        <childnode refid="18173" relation="include">
+        </childnode>
+      </node>
+      <node id="18134">
+        <label>assert.h</label>
+      </node>
+      <node id="18139">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18086" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18138" relation="include">
+        </childnode>
+        <childnode refid="18103" relation="include">
+        </childnode>
+        <childnode refid="18100" relation="include">
+        </childnode>
+        <childnode refid="18140" relation="include">
+        </childnode>
+        <childnode refid="18141" relation="include">
+        </childnode>
+      </node>
+      <node id="18106">
+        <label>iterator</label>
+      </node>
+      <node id="18133">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="18134" relation="include">
+        </childnode>
+        <childnode refid="18135" relation="include">
+        </childnode>
+        <childnode refid="18096" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18126" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18136" relation="include">
+        </childnode>
+        <childnode refid="18139" relation="include">
+        </childnode>
+      </node>
+      <node id="18152">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="18111">
+        <label>cstdint</label>
+      </node>
+      <node id="18160">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="18135">
+        <label>stdint.h</label>
+      </node>
+      <node id="18083">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/conv.cpp</label>
+        <link refid="torch_2csrc_2api_2src_2nn_2modules_2conv_8cpp"/>
+        <childnode refid="18084" relation="include">
+        </childnode>
+        <childnode refid="18085" relation="include">
+        </childnode>
+        <childnode refid="18117" relation="include">
+        </childnode>
+        <childnode refid="18128" relation="include">
+        </childnode>
+        <childnode refid="18111" relation="include">
+        </childnode>
+        <childnode refid="18094" relation="include">
+        </childnode>
+        <childnode refid="18110" relation="include">
+        </childnode>
+      </node>
+      <node id="18171">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="18173">
+        <label>torch/csrc/autograd/variable.h</label>
+      </node>
+      <node id="18128">
+        <label>cmath</label>
+      </node>
+      <node id="18093">
+        <label>cassert</label>
+      </node>
+      <node id="18144">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18119" relation="include">
+        </childnode>
+        <childnode refid="18143" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18139" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18145" relation="include">
+        </childnode>
+        <childnode refid="18150" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18148" relation="include">
+        </childnode>
+        <childnode refid="18111" relation="include">
+        </childnode>
+      </node>
+      <node id="18130">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18105" relation="include">
+        </childnode>
+        <childnode refid="18127" relation="include">
+        </childnode>
+      </node>
+      <node id="18096">
+        <label>stdexcept</label>
+      </node>
+      <node id="18166">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="18133" relation="include">
+        </childnode>
+        <childnode refid="18153" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18096" relation="include">
+        </childnode>
+      </node>
+      <node id="18141">
+        <label>numeric</label>
+      </node>
+      <node id="18137">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="18123" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18089" relation="include">
+        </childnode>
+      </node>
+      <node id="18126">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18127" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18111" relation="include">
+        </childnode>
+        <childnode refid="18096" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+        <childnode refid="18128" relation="include">
+        </childnode>
+        <childnode refid="18129" relation="include">
+        </childnode>
+        <childnode refid="18130" relation="include">
+        </childnode>
+      </node>
+      <node id="18122">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="18123" relation="include">
+        </childnode>
+      </node>
+      <node id="18136">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="18137" relation="include">
+        </childnode>
+        <childnode refid="18138" relation="include">
+        </childnode>
+      </node>
+      <node id="18095">
+        <label>string</label>
+      </node>
+      <node id="18169">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="18101" relation="include">
+        </childnode>
+        <childnode refid="18135" relation="include">
+        </childnode>
+      </node>
+      <node id="18170">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18156" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18163" relation="include">
+        </childnode>
+        <childnode refid="18089" relation="include">
+        </childnode>
+      </node>
+      <node id="18176">
+        <label>map</label>
+      </node>
+      <node id="18085">
+        <label>torch/expanding_array.h</label>
+        <link refid="expanding__array_8h_source"/>
+        <childnode refid="18086" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18103" relation="include">
+        </childnode>
+        <childnode refid="18109" relation="include">
+        </childnode>
+        <childnode refid="18111" relation="include">
+        </childnode>
+        <childnode refid="18092" relation="include">
+        </childnode>
+        <childnode refid="18110" relation="include">
+        </childnode>
+      </node>
+      <node id="18120">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18121" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18122" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18132" relation="include">
+        </childnode>
+      </node>
+      <node id="18116">
+        <label>torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="18117" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18106" relation="include">
+        </childnode>
+        <childnode refid="18127" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18091" relation="include">
+        </childnode>
+      </node>
+      <node id="18150">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="18162">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18153" relation="include">
+        </childnode>
+        <childnode refid="18145" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+      </node>
+      <node id="18098">
+        <label>exception</label>
+      </node>
+      <node id="18121">
+        <label>stddef.h</label>
+      </node>
+      <node id="18138">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="18137" relation="include">
+        </childnode>
+      </node>
+      <node id="18168">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18126" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+      </node>
+      <node id="18102">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="18097" relation="include">
+        </childnode>
+      </node>
+      <node id="18151">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="18133" relation="include">
+        </childnode>
+        <childnode refid="18152" relation="include">
+        </childnode>
+      </node>
+      <node id="18099">
+        <label>ostream</label>
+      </node>
+      <node id="18119">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+      </node>
+      <node id="18142">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="18086">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18101" relation="include">
+        </childnode>
+        <childnode refid="18109" relation="include">
+        </childnode>
+        <childnode refid="18106" relation="include">
+        </childnode>
+        <childnode refid="18110" relation="include">
+        </childnode>
+      </node>
+      <node id="18157">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18158" relation="include">
+        </childnode>
+      </node>
+      <node id="18174">
+        <label>torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="18175" relation="include">
+        </childnode>
+        <childnode refid="18117" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18091" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+      </node>
+      <node id="18154">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="18088">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="18113">
+        <label>torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="18114" relation="include">
+        </childnode>
+        <childnode refid="18116" relation="include">
+        </childnode>
+        <childnode refid="18174" relation="include">
+        </childnode>
+        <childnode refid="18117" relation="include">
+        </childnode>
+        <childnode refid="18118" relation="include">
+        </childnode>
+        <childnode refid="18089" relation="include">
+        </childnode>
+        <childnode refid="18176" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18091" relation="include">
+        </childnode>
+        <childnode refid="18115" relation="include">
+        </childnode>
+      </node>
+      <node id="18158">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="18137" relation="include">
+        </childnode>
+        <childnode refid="18100" relation="include">
+        </childnode>
+      </node>
+      <node id="18155">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18135" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+      </node>
+      <node id="18140">
+        <label>typeinfo</label>
+      </node>
+      <node id="18147">
+        <label>cstdio</label>
+      </node>
+      <node id="18175">
+        <label>torch/csrc/utils/variadic.h</label>
+      </node>
+      <node id="18084">
+        <label>torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="18085" relation="include">
+        </childnode>
+        <childnode refid="18112" relation="include">
+        </childnode>
+        <childnode refid="18174" relation="include">
+        </childnode>
+        <childnode refid="18117" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18110" relation="include">
+        </childnode>
+      </node>
+      <node id="18132">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18088" relation="include">
+        </childnode>
+      </node>
+      <node id="18114">
+        <label>torch/detail/ordered_dict.h</label>
+        <link refid="ordered__dict_8h_source"/>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18111" relation="include">
+        </childnode>
+        <childnode refid="18094" relation="include">
+        </childnode>
+        <childnode refid="18092" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18115" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+        <childnode refid="18110" relation="include">
+        </childnode>
+      </node>
+      <node id="18110">
+        <label>vector</label>
+      </node>
+      <node id="18167">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="18164">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="18108">
+        <label>new</label>
+      </node>
+      <node id="18090">
+        <label>utility</label>
+      </node>
+      <node id="18109">
+        <label>array</label>
+      </node>
+      <node id="18100">
+        <label>sstream</label>
+      </node>
+      <node id="18159">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="18133" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18153" relation="include">
+        </childnode>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18143" relation="include">
+        </childnode>
+        <childnode refid="18160" relation="include">
+        </childnode>
+        <childnode refid="18161" relation="include">
+        </childnode>
+        <childnode refid="18162" relation="include">
+        </childnode>
+        <childnode refid="18163" relation="include">
+        </childnode>
+        <childnode refid="18164" relation="include">
+        </childnode>
+      </node>
+      <node id="18161">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="18129">
+        <label>iosfwd</label>
+      </node>
+      <node id="18104">
+        <label>cstdlib</label>
+      </node>
+      <node id="18131">
+        <label>iostream</label>
+      </node>
+      <node id="18097">
+        <label>cstddef</label>
+      </node>
+      <node id="18115">
+        <label>unordered_map</label>
+      </node>
+      <node id="18148">
+        <label>mutex</label>
+      </node>
+      <node id="18112">
+        <label>torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="18113" relation="include">
+        </childnode>
+        <childnode refid="18117" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18170" relation="include">
+        </childnode>
+        <childnode refid="18163" relation="include">
+        </childnode>
+        <childnode refid="18089" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+      </node>
+      <node id="18118">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18119" relation="include">
+        </childnode>
+        <childnode refid="18120" relation="include">
+        </childnode>
+        <childnode refid="18133" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18143" relation="include">
+        </childnode>
+        <childnode refid="18144" relation="include">
+        </childnode>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18153" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18157" relation="include">
+        </childnode>
+        <childnode refid="18159" relation="include">
+        </childnode>
+        <childnode refid="18165" relation="include">
+        </childnode>
+        <childnode refid="18166" relation="include">
+        </childnode>
+        <childnode refid="18167" relation="include">
+        </childnode>
+        <childnode refid="18168" relation="include">
+        </childnode>
+        <childnode refid="18169" relation="include">
+        </childnode>
+        <childnode refid="18162" relation="include">
+        </childnode>
+        <childnode refid="18163" relation="include">
+        </childnode>
+        <childnode refid="18156" relation="include">
+        </childnode>
+        <childnode refid="18170" relation="include">
+        </childnode>
+        <childnode refid="18171" relation="include">
+        </childnode>
+      </node>
+      <node id="18146">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="18103" relation="include">
+        </childnode>
+        <childnode refid="18147" relation="include">
+        </childnode>
+        <childnode refid="18104" relation="include">
+        </childnode>
+        <childnode refid="18094" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18148" relation="include">
+        </childnode>
+        <childnode refid="18115" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+        <childnode refid="18110" relation="include">
+        </childnode>
+        <childnode refid="18149" relation="include">
+        </childnode>
+        <childnode refid="18088" relation="include">
+        </childnode>
+      </node>
+      <node id="18087">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="18088" relation="include">
+        </childnode>
+        <childnode refid="18089" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18098" relation="include">
+        </childnode>
+        <childnode refid="18099" relation="include">
+        </childnode>
+        <childnode refid="18100" relation="include">
+        </childnode>
+        <childnode refid="18095" relation="include">
+        </childnode>
+      </node>
+      <node id="18163">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="18144" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18162" relation="include">
+        </childnode>
+        <childnode refid="18156" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18153" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18129" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+      </node>
+      <node id="18153">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="18143" relation="include">
+        </childnode>
+        <childnode refid="18133" relation="include">
+        </childnode>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18154" relation="include">
+        </childnode>
+        <childnode refid="18151" relation="include">
+        </childnode>
+        <childnode refid="18155" relation="include">
+        </childnode>
+        <childnode refid="18136" relation="include">
+        </childnode>
+        <childnode refid="18137" relation="include">
+        </childnode>
+        <childnode refid="18139" relation="include">
+        </childnode>
+        <childnode refid="18124" relation="include">
+        </childnode>
+        <childnode refid="18156" relation="include">
+        </childnode>
+        <childnode refid="18089" relation="include">
+        </childnode>
+      </node>
+      <node id="18091">
+        <label>type_traits</label>
+      </node>
+      <node id="18156">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="18125" relation="include">
+        </childnode>
+        <childnode refid="18087" relation="include">
+        </childnode>
+        <childnode refid="18131" relation="include">
+        </childnode>
+      </node>
+      <node id="18101">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="18102" relation="include">
+        </childnode>
+        <childnode refid="18103" relation="include">
+        </childnode>
+        <childnode refid="18093" relation="include">
+        </childnode>
+        <childnode refid="18097" relation="include">
+        </childnode>
+        <childnode refid="18104" relation="include">
+        </childnode>
+        <childnode refid="18105" relation="include">
+        </childnode>
+        <childnode refid="18092" relation="include">
+        </childnode>
+        <childnode refid="18106" relation="include">
+        </childnode>
+        <childnode refid="18107" relation="include">
+        </childnode>
+        <childnode refid="18108" relation="include">
+        </childnode>
+        <childnode refid="18091" relation="include">
+        </childnode>
+        <childnode refid="18090" relation="include">
+        </childnode>
+        <childnode refid="18088" relation="include">
+        </childnode>
+      </node>
+      <node id="18103">
+        <label>algorithm</label>
+      </node>
+      <node id="18143">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="18135" relation="include">
+        </childnode>
+      </node>
+      <node id="18105">
+        <label>cstring</label>
+      </node>
+      <node id="18107">
+        <label>memory</label>
+      </node>
+      <node id="18092">
+        <label>initializer_list</label>
+      </node>
+      <node id="18165">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="18131" relation="include">
+        </childnode>
+        <childnode refid="18142" relation="include">
+        </childnode>
+        <childnode refid="18133" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacetorch">torch</innernamespace>
+    <innernamespace refid="namespacetorch_1_1nn">torch::nn</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;torch/nn/modules/conv.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;torch/expanding_array.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;torch/tensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacetorch" kindref="compound">torch</ref><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">nn<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>D&gt;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">ConvOptions&lt;D&gt;::ConvOptions(</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>input_channels,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>output_channels,</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>ExpandingArray&lt;D&gt;<sp/>kernel_size)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>input_channels_(input_channels),</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>output_channels_(output_channels),</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>kernel_size_(<ref refid="namespacestd" kindref="compound">std</ref>::move(kernel_size))<sp/>{}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">ConvImpl&lt;D,<sp/>Derived&gt;::ConvImpl(ConvOptions&lt;D&gt;<sp/>options)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>options(<ref refid="namespacestd" kindref="compound">std</ref>::move(options))<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>reset();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>D,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Derived&gt;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ConvImpl&lt;D,<sp/>Derived&gt;::reset()<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!options.transposed_)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pad<sp/>:<sp/>*options.output_padding_)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pad<sp/>==<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;Only<sp/>transposed<sp/>convolutions<sp/>support<sp/>output<sp/>padding!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>weights_size;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.transposed_)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>weights_size.push_back(options.input_channels_);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>weights_size.push_back(options.output_channels_<sp/>/<sp/>options.groups_);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>weights_size.push_back(options.output_channels_);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>weights_size.push_back(options.input_channels_<sp/>/<sp/>options.groups_);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>weights_size.insert(</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>weights_size.end(),</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.kernel_size_-&gt;begin(),</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.kernel_size_-&gt;end());</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>AT_ASSERT(weights_size.size()<sp/>==<sp/>2<sp/>+<sp/>options.kernel_size_-&gt;size());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>weight<sp/>=<sp/>this-&gt;register_parameter(</highlight><highlight class="stringliteral">&quot;weight&quot;</highlight><highlight class="normal">,<sp/>torch::empty(weights_size));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.with_bias_)<sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>bias<sp/>=<sp/>this-&gt;register_parameter(</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;bias&quot;</highlight><highlight class="normal">,<sp/>torch::empty(options.output_channels_));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>number_of_features<sp/>=<sp/>std::accumulate(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.kernel_size_-&gt;begin(),</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.kernel_size_-&gt;end(),</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.input_channels_,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::multiplies&lt;int64_t&gt;{});</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>stdv<sp/>=<sp/>1.0<sp/>/<sp/>std::sqrt(number_of_features);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>p<sp/>:<sp/>this-&gt;parameters())<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>p-&gt;data().uniform_(-stdv,<sp/>stdv);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal">Tensor<sp/>Conv1dImpl::forward(Tensor<sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>AT_ASSERT(input.ndimension()<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.transposed_)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::conv_transpose1d(</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bias,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.stride_,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.padding_,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.output_padding_,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.groups_,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.dilation_);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::conv1d(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>input,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>weight,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bias,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.stride_,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.padding_,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.dilation_,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.groups_);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">Tensor<sp/>Conv2dImpl::forward(Tensor<sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>AT_ASSERT(input.ndimension()<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.transposed_)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::conv_transpose2d(</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bias,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.stride_,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.padding_,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.output_padding_,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.groups_,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.dilation_);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::conv2d(</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>input,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>weight,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bias,</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.stride_,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.padding_,</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.dilation_,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>options.groups_);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">Tensor<sp/>Conv3dImpl::forward(Tensor<sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>AT_ASSERT(input.ndimension()<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(options.transposed_)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::conv_transpose3d(</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bias,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.stride_,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.padding_,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.output_padding_,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.groups_,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.dilation_);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>torch::conv3d(</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>weight,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bias,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.stride_,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.padding_,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.dilation_,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>options.groups_);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ConvOptions&lt;1&gt;;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ConvImpl&lt;1,<sp/>Conv1dImpl&gt;;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ConvOptions&lt;2&gt;;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ConvImpl&lt;2,<sp/>Conv2dImpl&gt;;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ConvOptions&lt;3&gt;;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ConvImpl&lt;3,<sp/>Conv3dImpl&gt;;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nn</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>torch</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/conv.cpp"/>
+  </compounddef>
+</doxygen>

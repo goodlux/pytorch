@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_a_ten_d_l_m_tensor" kind="struct" language="C++" prot="public">
+    <compoundname>at::ATenDLMTensor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1_a_ten_d_l_m_tensor_1af3c251f5ec4fe2b2bfb7724f3f984369" prot="public" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor at::ATenDLMTensor::handle</definition>
+        <argsstring></argsstring>
+        <name>handle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp" line="129" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1_a_ten_d_l_m_tensor_1a7c1bfd9e7f75713b52c34a1a42536487" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_d_l_managed_tensor" kindref="compound">DLManagedTensor</ref></type>
+        <definition>DLManagedTensor at::ATenDLMTensor::tensor</definition>
+        <argsstring></argsstring>
+        <name>tensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp" line="130" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="71">
+        <label>at::ATenDLMTensor</label>
+        <link refid="structat_1_1_a_ten_d_l_m_tensor"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>tensor</edgelabel>
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>handle</edgelabel>
+        </childnode>
+      </node>
+      <node id="75">
+        <label>DLDataType</label>
+        <link refid="struct_d_l_data_type"/>
+      </node>
+      <node id="74">
+        <label>DLContext</label>
+        <link refid="struct_d_l_context"/>
+      </node>
+      <node id="73">
+        <label>DLTensor</label>
+        <link refid="struct_d_l_tensor"/>
+        <childnode refid="74" relation="usage">
+          <edgelabel>ctx</edgelabel>
+        </childnode>
+        <childnode refid="75" relation="usage">
+          <edgelabel>dtype</edgelabel>
+        </childnode>
+      </node>
+      <node id="77">
+        <label>detail::TensorBase</label>
+        <link refid="structat_1_1detail_1_1_tensor_base_impl"/>
+        <childnode refid="78" relation="usage">
+          <edgelabel>pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>DLManagedTensor</label>
+        <link refid="struct_d_l_managed_tensor"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>dl_tensor</edgelabel>
+        </childnode>
+      </node>
+      <node id="80">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="78">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="79" relation="public-inheritance">
+        </childnode>
+        <childnode refid="80" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="79">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+      <node id="76">
+        <label>at::Tensor</label>
+        <link refid="structat_1_1_tensor"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp" line="128" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.cpp" bodystart="128" bodyend="131"/>
+    <listofallmembers>
+      <member refid="structat_1_1_a_ten_d_l_m_tensor_1af3c251f5ec4fe2b2bfb7724f3f984369" prot="public" virt="non-virtual"><scope>at::ATenDLMTensor</scope><name>handle</name></member>
+      <member refid="structat_1_1_a_ten_d_l_m_tensor_1a7c1bfd9e7f75713b52c34a1a42536487" prot="public" virt="non-virtual"><scope>at::ATenDLMTensor</scope><name>tensor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

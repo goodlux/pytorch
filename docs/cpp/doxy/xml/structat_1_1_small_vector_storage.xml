@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_small_vector_storage" kind="struct" language="C++" prot="public">
+    <compoundname>at::SmallVectorStorage</compoundname>
+    <includes refid="_small_vector_8h" local="no">SmallVector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>unsigned</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1_small_vector_storage_1aef2ffd33db69043099bbbd623dfb476f" prot="public" static="no" mutable="no">
+        <type><ref refid="classat_1_1_small_vector_template_common" kindref="compound">SmallVectorTemplateCommon</ref>&lt; T &gt;::U</type>
+        <definition>SmallVectorTemplateCommon&lt;T&gt;::U at::SmallVectorStorage&lt; T, N &gt;::InlineElts[N - 1]</definition>
+        <argsstring>[N - 1]</argsstring>
+        <name>InlineElts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="868" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="868" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="structat_1_1_storage" kindref="compound">Storage</ref> for the <ref refid="classat_1_1_small_vector" kindref="compound">SmallVector</ref> elements which aren&apos;t contained in <ref refid="classat_1_1_small_vector_template_common" kindref="compound">SmallVectorTemplateCommon</ref>. There are &apos;N-1&apos; elements here. The remaining &apos;1&apos; element is in the base class. This is specialized for the N=1 and N=0 cases to avoid allocating unnecessary storage. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="615">
+        <label>at::SmallVectorTemplateCommon&lt; T &gt;</label>
+        <link refid="classat_1_1_small_vector_template_common"/>
+        <childnode refid="616" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="614">
+        <label>at::SmallVectorStorage&lt; T, N &gt;</label>
+        <link refid="structat_1_1_small_vector_storage"/>
+        <childnode refid="615" relation="usage">
+          <edgelabel>InlineElts</edgelabel>
+        </childnode>
+      </node>
+      <node id="616">
+        <label>at::SmallVectorBase</label>
+        <link refid="classat_1_1_small_vector_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="867" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="867" bodyend="869"/>
+    <listofallmembers>
+      <member refid="structat_1_1_small_vector_storage_1aef2ffd33db69043099bbbd623dfb476f" prot="public" virt="non-virtual"><scope>at::SmallVectorStorage</scope><name>InlineElts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

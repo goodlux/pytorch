@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacetorch" kind="namespace" language="C++">
+    <compoundname>torch</compoundname>
+    <innerclass refid="classtorch_1_1_expanding_array" prot="public">torch::ExpandingArray</innerclass>
+    <innerclass refid="structtorch_1_1_no_grad_guard" prot="public">torch::NoGradGuard</innerclass>
+    <innerclass refid="classtorch_1_1_tensor_list_view" prot="public">torch::TensorListView</innerclass>
+    <innernamespace refid="namespacetorch_1_1cuda">torch::cuda</innernamespace>
+    <innernamespace refid="namespacetorch_1_1detail">torch::detail</innernamespace>
+    <innernamespace refid="namespacetorch_1_1nn">torch::nn</innernamespace>
+    <innernamespace refid="namespacetorch_1_1optim">torch::optim</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a2963e840d82b913833455437a354c95a" prot="public" static="no">
+        <type>autograd::Variable</type>
+        <definition>using torch::Tensor = typedef autograd::Variable</definition>
+        <argsstring></argsstring>
+        <name>Tensor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="11" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a6369c7235ef5ea9c5fccbff406ad979e" prot="public" static="no">
+        <type>at::ScalarType</type>
+        <definition>using torch::Dtype = typedef at::ScalarType</definition>
+        <argsstring></argsstring>
+        <name>Dtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="12" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a8020f04bd2e1a116176f1f50e199f331" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kUInt8</definition>
+        <argsstring></argsstring>
+        <name>kUInt8</name>
+        <initializer>= at::kByte</initializer>
+        <briefdescription>
+<para>Fixed width dtypes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="15" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1ade0f0a5a70cf0a5c6878984ffafd90a2" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kInt8</definition>
+        <argsstring></argsstring>
+        <name>kInt8</name>
+        <initializer>= at::kChar</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a1d0b9c50a321fff33255fed6d1a0e054" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kInt16</definition>
+        <argsstring></argsstring>
+        <name>kInt16</name>
+        <initializer>= at::kShort</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="17" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a7e48bd81264c04bf9dfa4ebba05daff2" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kInt32</definition>
+        <argsstring></argsstring>
+        <name>kInt32</name>
+        <initializer>= at::kInt</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1aca5be74e0c90ee0b02abcdf224231c30" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kInt64</definition>
+        <argsstring></argsstring>
+        <name>kInt64</name>
+        <initializer>= at::kLong</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a46a53603a6a443c39008a474915078d1" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kFloat32</definition>
+        <argsstring></argsstring>
+        <name>kFloat32</name>
+        <initializer>= at::kFloat</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="20" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1aec4dc7ff45a796efc14a599c307a9d10" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kFloat64</definition>
+        <argsstring></argsstring>
+        <name>kFloat64</name>
+        <initializer>= at::kDouble</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a5c00c565e7da60d3c19b850c8cb653c7" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kU8</definition>
+        <argsstring></argsstring>
+        <name>kU8</name>
+        <initializer>= kUInt8</initializer>
+        <briefdescription>
+<para>Rust-style short dtypes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1acc9198e1be7b2e91168bf15e49ba081b" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kI8</definition>
+        <argsstring></argsstring>
+        <name>kI8</name>
+        <initializer>= kInt8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a33cebddbd336eb57b62fe7e64f99f76a" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kI16</definition>
+        <argsstring></argsstring>
+        <name>kI16</name>
+        <initializer>= kInt16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a08d38d287430021ff45e142a37630a60" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kI32</definition>
+        <argsstring></argsstring>
+        <name>kI32</name>
+        <initializer>= kInt32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1af960f5a30f4230a7d403eb83d72b5aeb" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kI64</definition>
+        <argsstring></argsstring>
+        <name>kI64</name>
+        <initializer>= kInt64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1adef20b9a6fc1ce61ec9d9f28d8117c50" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kF32</definition>
+        <argsstring></argsstring>
+        <name>kF32</name>
+        <initializer>= kFloat32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="torch_2csrc_2api_2include_2torch_2tensor_8h_1a165669b3f41bc44a82e4d4fd7be352d1" prot="public" static="no" mutable="no">
+        <type>constexpr auto</type>
+        <definition>constexpr auto torch::kF64</definition>
+        <argsstring></argsstring>
+        <name>kF64</name>
+        <initializer>= kFloat64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="serialization_8h_1a7e5798af35c87b7778fb7825eda4e1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::save</definition>
+        <argsstring>(std::ostream &amp;stream, T const &amp;obj)</argsstring>
+        <name>save</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a4d6dabf493efa7e58abb55a8a07dcd90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::load</definition>
+        <argsstring>(std::istream &amp;stream, T &amp;obj)</argsstring>
+        <name>load</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a8da5613761292347c2f9262571bb3341" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::save</definition>
+        <argsstring>(std::ostream &amp;stream, T const *obj)</argsstring>
+        <name>save</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>T const *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1aac54b5eeea6fcdaa8308b2f077457c49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::load</definition>
+        <argsstring>(std::istream &amp;stream, T *obj)</argsstring>
+        <name>load</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="34" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a7e957ae0da12e02a3d30b3fff8df5eb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::save</definition>
+        <argsstring>(std::string const &amp;path, T const &amp;obj)</argsstring>
+        <name>save</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>T const &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="39" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1afa9c58e27695c7d17473df98474ab933" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void torch::load</definition>
+        <argsstring>(std::string const &amp;path, T &amp;obj)</argsstring>
+        <name>load</name>
+        <param>
+          <type>std::string const &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>T &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="44" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="torch_2csrc_2api_2include_2torch_2utils_8h_1af46d453c794964df68d2b84139a92110" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void torch::manual_seed</definition>
+        <argsstring>(uint64_t seed)</argsstring>
+        <name>manual_seed</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+<para>Sets the global random seed for all newly created CPU and CUDA tensors. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/utils.h" line="17" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/utils.cpp" bodystart="8" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/cuda.h" line="5" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacepreprocess__declarations" kind="namespace" language="Python">
+    <compoundname>preprocess_declarations</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="preprocess__declarations_8py_1a6150ad3d5c4e43fe3ff3ad89fa1d29ac" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary preprocess_declarations.type_map</definition>
+        <argsstring></argsstring>
+        <name>type_map</name>
+        <initializer>=  {
+    &apos;floating_point&apos;: [
+        &apos;Float&apos;,
+        &apos;Double&apos;,
+        &apos;Half&apos;,
+    ],
+    &apos;integral&apos;: [
+        &apos;Byte&apos;,
+        &apos;Char&apos;,
+        &apos;Short&apos;,
+        &apos;Int&apos;,
+        &apos;Long&apos;
+    ],
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="6" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="preprocess__declarations_8py_1ac51240f2cb079c1b257db4b22ad63fb2" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary preprocess_declarations.all_types</definition>
+        <argsstring></argsstring>
+        <name>all_types</name>
+        <initializer>=  type_map[&apos;floating_point&apos;] + type_map[&apos;integral&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="preprocess__declarations_8py_1ae35889c0fac684677226aaf9cebf9757" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list preprocess_declarations.all_backends</definition>
+        <argsstring></argsstring>
+        <name>all_backends</name>
+        <initializer>=  [&apos;CPU&apos;, &apos;CUDA&apos;, &apos;SparseCPU&apos;, &apos;SparseCUDA&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="preprocess__declarations_8py_1a7651830c3506df681919f4cc9cb81738" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list preprocess_declarations.default_backends</definition>
+        <argsstring></argsstring>
+        <name>default_backends</name>
+        <initializer>=  [&apos;CPU&apos;, &apos;CUDA&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="preprocess__declarations_8py_1a83054c96bc0ee70ec58f908306c670c6" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary preprocess_declarations.sparse_map</definition>
+        <argsstring></argsstring>
+        <name>sparse_map</name>
+        <initializer>=  {
+    &apos;CPU&apos;: &apos;SparseCPU&apos;,
+    &apos;CUDA&apos;: &apos;SparseCUDA&apos;,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="preprocess__declarations_8py_1a6801751671136087615038c091feb516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.process_types_and_backends</definition>
+        <argsstring>(option)</argsstring>
+        <name>process_types_and_backends</name>
+        <param>
+          <type>option</type>
+          <defname>option</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="33" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="33" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1af67492493c49ba2b93acb071f7ccb787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.exclude</definition>
+        <argsstring>(declaration)</argsstring>
+        <name>exclude</name>
+        <param>
+          <type>declaration</type>
+          <defname>declaration</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="72" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1a0d5a287bbee385406e26dd4f4b3bd52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.add_variants</definition>
+        <argsstring>(option)</argsstring>
+        <name>add_variants</name>
+        <param>
+          <type>option</type>
+          <defname>option</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="76" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1a2672425db24bd593cfd0f26fc7686e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.handle_outputs_taken_as_arguments</definition>
+        <argsstring>(options)</argsstring>
+        <name>handle_outputs_taken_as_arguments</name>
+        <param>
+          <type>options</type>
+          <defname>options</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="84" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="84" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1aeb6735a2e9a873b7dd54da198947be13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.sanitize_return</definition>
+        <argsstring>(option)</argsstring>
+        <name>sanitize_return</name>
+        <param>
+          <type>option</type>
+          <defname>option</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="125" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="125" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1a3ef37f368debf23e9492d7c5a1dffa5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.set_mode</definition>
+        <argsstring>(option)</argsstring>
+        <name>set_mode</name>
+        <param>
+          <type>option</type>
+          <defname>option</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="141" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="141" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1a5901e994e2cd9b4f33bdad6b8ca452d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.discover_zero_dim_tensor_operations</definition>
+        <argsstring>(declaration)</argsstring>
+        <name>discover_zero_dim_tensor_operations</name>
+        <param>
+          <type>declaration</type>
+          <defname>declaration</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="153" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="153" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1a5c8f3917f20b87f260ca0ce7e7a79a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.discover_sparse_tensor_operations</definition>
+        <argsstring>(declaration)</argsstring>
+        <name>discover_sparse_tensor_operations</name>
+        <param>
+          <type>declaration</type>
+          <defname>declaration</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="184" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="184" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="preprocess__declarations_8py_1a9b05b36b09bc34c4afd82bb1e7f4ecbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def preprocess_declarations.run</definition>
+        <argsstring>(declarations)</argsstring>
+        <name>run</name>
+        <param>
+          <type>declarations</type>
+          <defname>declarations</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="220" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" bodystart="220" bodyend="243"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/preprocess_declarations.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

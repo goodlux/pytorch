@@ -1,0 +1,1110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_legacy_bridge_8cpp" kind="file" language="C++">
+    <compoundname>LegacyBridge.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="no">ATen/ATen.h</includes>
+    <includes local="no">ATen/NativeFunctions.h</includes>
+    <includes refid="_sparse_tensor_ref_8h" local="no">ATen/SparseTensorRef.h</includes>
+    <includes refid="_expand_utils_8h" local="no">ATen/ExpandUtils.h</includes>
+    <incdepgraph>
+      <node id="6394">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="6395" relation="include">
+        </childnode>
+        <childnode refid="6396" relation="include">
+        </childnode>
+        <childnode refid="6397" relation="include">
+        </childnode>
+        <childnode refid="6398" relation="include">
+        </childnode>
+        <childnode refid="6399" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6401" relation="include">
+        </childnode>
+      </node>
+      <node id="6440">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="6390" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6438" relation="include">
+        </childnode>
+        <childnode refid="6441" relation="include">
+        </childnode>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6399" relation="include">
+        </childnode>
+        <childnode refid="6391" relation="include">
+        </childnode>
+      </node>
+      <node id="6408">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6424" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6399" relation="include">
+        </childnode>
+      </node>
+      <node id="6407">
+        <label>atomic</label>
+      </node>
+      <node id="6399">
+        <label>functional</label>
+      </node>
+      <node id="6445">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6435" relation="include">
+        </childnode>
+        <childnode refid="6388" relation="include">
+        </childnode>
+      </node>
+      <node id="6409">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="6410" relation="include">
+        </childnode>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6420" relation="include">
+        </childnode>
+        <childnode refid="6422" relation="include">
+        </childnode>
+        <childnode refid="6426" relation="include">
+        </childnode>
+      </node>
+      <node id="6421">
+        <label>limits</label>
+      </node>
+      <node id="6429">
+        <label>assert.h</label>
+      </node>
+      <node id="6434">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6410" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6433" relation="include">
+        </childnode>
+        <childnode refid="6413" relation="include">
+        </childnode>
+        <childnode refid="6405" relation="include">
+        </childnode>
+        <childnode refid="6435" relation="include">
+        </childnode>
+        <childnode refid="6436" relation="include">
+        </childnode>
+      </node>
+      <node id="6416">
+        <label>iterator</label>
+      </node>
+      <node id="6428">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="6429" relation="include">
+        </childnode>
+        <childnode refid="6430" relation="include">
+        </childnode>
+        <childnode refid="6401" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6395" relation="include">
+        </childnode>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6420" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6431" relation="include">
+        </childnode>
+        <childnode refid="6434" relation="include">
+        </childnode>
+      </node>
+      <node id="6448">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="6422">
+        <label>cstdint</label>
+      </node>
+      <node id="6456">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="6430">
+        <label>stdint.h</label>
+      </node>
+      <node id="6467">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="6423">
+        <label>cmath</label>
+      </node>
+      <node id="6398">
+        <label>cassert</label>
+      </node>
+      <node id="6439">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6389" relation="include">
+        </childnode>
+        <childnode refid="6438" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6434" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6440" relation="include">
+        </childnode>
+        <childnode refid="6446" relation="include">
+        </childnode>
+        <childnode refid="6391" relation="include">
+        </childnode>
+        <childnode refid="6443" relation="include">
+        </childnode>
+        <childnode refid="6422" relation="include">
+        </childnode>
+      </node>
+      <node id="6425">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6415" relation="include">
+        </childnode>
+        <childnode refid="6421" relation="include">
+        </childnode>
+      </node>
+      <node id="6401">
+        <label>stdexcept</label>
+      </node>
+      <node id="6462">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="6428" relation="include">
+        </childnode>
+        <childnode refid="6449" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6401" relation="include">
+        </childnode>
+      </node>
+      <node id="6436">
+        <label>numeric</label>
+      </node>
+      <node id="6432">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="6407" relation="include">
+        </childnode>
+        <childnode refid="6391" relation="include">
+        </childnode>
+        <childnode refid="6406" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6394" relation="include">
+        </childnode>
+      </node>
+      <node id="6420">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6421" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6422" relation="include">
+        </childnode>
+        <childnode refid="6401" relation="include">
+        </childnode>
+        <childnode refid="6395" relation="include">
+        </childnode>
+        <childnode refid="6423" relation="include">
+        </childnode>
+        <childnode refid="6424" relation="include">
+        </childnode>
+        <childnode refid="6425" relation="include">
+        </childnode>
+      </node>
+      <node id="6406">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="6407" relation="include">
+        </childnode>
+      </node>
+      <node id="6431">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="6432" relation="include">
+        </childnode>
+        <childnode refid="6433" relation="include">
+        </childnode>
+      </node>
+      <node id="6400">
+        <label>string</label>
+      </node>
+      <node id="6465">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="6411" relation="include">
+        </childnode>
+        <childnode refid="6430" relation="include">
+        </childnode>
+      </node>
+      <node id="6466">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="6408" relation="include">
+        </childnode>
+        <childnode refid="6452" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6459" relation="include">
+        </childnode>
+        <childnode refid="6394" relation="include">
+        </childnode>
+      </node>
+      <node id="6468">
+        <label>ATen/ExpandUtils.h</label>
+        <link refid="_expand_utils_8h_source"/>
+        <childnode refid="6449" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6399" relation="include">
+        </childnode>
+        <childnode refid="6405" relation="include">
+        </childnode>
+        <childnode refid="6469" relation="include">
+        </childnode>
+      </node>
+      <node id="6390">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="6391" relation="include">
+        </childnode>
+        <childnode refid="6392" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6406" relation="include">
+        </childnode>
+        <childnode refid="6408" relation="include">
+        </childnode>
+        <childnode refid="6427" relation="include">
+        </childnode>
+      </node>
+      <node id="6446">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="6458">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="6408" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6449" relation="include">
+        </childnode>
+        <childnode refid="6440" relation="include">
+        </childnode>
+        <childnode refid="6402" relation="include">
+        </childnode>
+      </node>
+      <node id="6403">
+        <label>exception</label>
+      </node>
+      <node id="6392">
+        <label>stddef.h</label>
+      </node>
+      <node id="6433">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="6432" relation="include">
+        </childnode>
+      </node>
+      <node id="6464">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6420" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+      </node>
+      <node id="6412">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="6402" relation="include">
+        </childnode>
+      </node>
+      <node id="6447">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="6428" relation="include">
+        </childnode>
+        <childnode refid="6448" relation="include">
+        </childnode>
+      </node>
+      <node id="6404">
+        <label>ostream</label>
+      </node>
+      <node id="6389">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+      </node>
+      <node id="6437">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="6410">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6411" relation="include">
+        </childnode>
+        <childnode refid="6418" relation="include">
+        </childnode>
+        <childnode refid="6416" relation="include">
+        </childnode>
+        <childnode refid="6419" relation="include">
+        </childnode>
+      </node>
+      <node id="6453">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6454" relation="include">
+        </childnode>
+      </node>
+      <node id="6450">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="6388">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="6454">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="6432" relation="include">
+        </childnode>
+        <childnode refid="6405" relation="include">
+        </childnode>
+      </node>
+      <node id="6451">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6430" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+      </node>
+      <node id="6435">
+        <label>typeinfo</label>
+      </node>
+      <node id="6442">
+        <label>cstdio</label>
+      </node>
+      <node id="6386">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LegacyBridge.cpp</label>
+        <link refid="_legacy_bridge_8cpp"/>
+        <childnode refid="6387" relation="include">
+        </childnode>
+        <childnode refid="6457" relation="include">
+        </childnode>
+        <childnode refid="6450" relation="include">
+        </childnode>
+        <childnode refid="6468" relation="include">
+        </childnode>
+      </node>
+      <node id="6469">
+        <label>tuple</label>
+      </node>
+      <node id="6427">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="6391" relation="include">
+        </childnode>
+        <childnode refid="6388" relation="include">
+        </childnode>
+      </node>
+      <node id="6419">
+        <label>vector</label>
+      </node>
+      <node id="6463">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="6460">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="6417">
+        <label>new</label>
+      </node>
+      <node id="6395">
+        <label>utility</label>
+      </node>
+      <node id="6418">
+        <label>array</label>
+      </node>
+      <node id="6405">
+        <label>sstream</label>
+      </node>
+      <node id="6455">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="6428" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6449" relation="include">
+        </childnode>
+        <childnode refid="6447" relation="include">
+        </childnode>
+        <childnode refid="6438" relation="include">
+        </childnode>
+        <childnode refid="6456" relation="include">
+        </childnode>
+        <childnode refid="6457" relation="include">
+        </childnode>
+        <childnode refid="6458" relation="include">
+        </childnode>
+        <childnode refid="6459" relation="include">
+        </childnode>
+        <childnode refid="6460" relation="include">
+        </childnode>
+      </node>
+      <node id="6457">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="6424">
+        <label>iosfwd</label>
+      </node>
+      <node id="6414">
+        <label>cstdlib</label>
+      </node>
+      <node id="6426">
+        <label>iostream</label>
+      </node>
+      <node id="6402">
+        <label>cstddef</label>
+      </node>
+      <node id="6444">
+        <label>unordered_map</label>
+      </node>
+      <node id="6443">
+        <label>mutex</label>
+      </node>
+      <node id="6387">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6389" relation="include">
+        </childnode>
+        <childnode refid="6390" relation="include">
+        </childnode>
+        <childnode refid="6428" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6438" relation="include">
+        </childnode>
+        <childnode refid="6439" relation="include">
+        </childnode>
+        <childnode refid="6447" relation="include">
+        </childnode>
+        <childnode refid="6449" relation="include">
+        </childnode>
+        <childnode refid="6408" relation="include">
+        </childnode>
+        <childnode refid="6453" relation="include">
+        </childnode>
+        <childnode refid="6455" relation="include">
+        </childnode>
+        <childnode refid="6461" relation="include">
+        </childnode>
+        <childnode refid="6462" relation="include">
+        </childnode>
+        <childnode refid="6463" relation="include">
+        </childnode>
+        <childnode refid="6464" relation="include">
+        </childnode>
+        <childnode refid="6465" relation="include">
+        </childnode>
+        <childnode refid="6458" relation="include">
+        </childnode>
+        <childnode refid="6459" relation="include">
+        </childnode>
+        <childnode refid="6452" relation="include">
+        </childnode>
+        <childnode refid="6466" relation="include">
+        </childnode>
+        <childnode refid="6467" relation="include">
+        </childnode>
+      </node>
+      <node id="6441">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="6413" relation="include">
+        </childnode>
+        <childnode refid="6442" relation="include">
+        </childnode>
+        <childnode refid="6414" relation="include">
+        </childnode>
+        <childnode refid="6399" relation="include">
+        </childnode>
+        <childnode refid="6391" relation="include">
+        </childnode>
+        <childnode refid="6443" relation="include">
+        </childnode>
+        <childnode refid="6444" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+        <childnode refid="6419" relation="include">
+        </childnode>
+        <childnode refid="6445" relation="include">
+        </childnode>
+        <childnode refid="6388" relation="include">
+        </childnode>
+      </node>
+      <node id="6393">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6394" relation="include">
+        </childnode>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6403" relation="include">
+        </childnode>
+        <childnode refid="6404" relation="include">
+        </childnode>
+        <childnode refid="6405" relation="include">
+        </childnode>
+        <childnode refid="6400" relation="include">
+        </childnode>
+      </node>
+      <node id="6459">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="6439" relation="include">
+        </childnode>
+        <childnode refid="6408" relation="include">
+        </childnode>
+        <childnode refid="6458" relation="include">
+        </childnode>
+        <childnode refid="6452" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6449" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6424" relation="include">
+        </childnode>
+        <childnode refid="6395" relation="include">
+        </childnode>
+      </node>
+      <node id="6449">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="6438" relation="include">
+        </childnode>
+        <childnode refid="6428" relation="include">
+        </childnode>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6450" relation="include">
+        </childnode>
+        <childnode refid="6447" relation="include">
+        </childnode>
+        <childnode refid="6451" relation="include">
+        </childnode>
+        <childnode refid="6431" relation="include">
+        </childnode>
+        <childnode refid="6432" relation="include">
+        </childnode>
+        <childnode refid="6434" relation="include">
+        </childnode>
+        <childnode refid="6408" relation="include">
+        </childnode>
+        <childnode refid="6452" relation="include">
+        </childnode>
+        <childnode refid="6394" relation="include">
+        </childnode>
+      </node>
+      <node id="6396">
+        <label>type_traits</label>
+      </node>
+      <node id="6452">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="6409" relation="include">
+        </childnode>
+        <childnode refid="6393" relation="include">
+        </childnode>
+        <childnode refid="6426" relation="include">
+        </childnode>
+      </node>
+      <node id="6411">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="6412" relation="include">
+        </childnode>
+        <childnode refid="6413" relation="include">
+        </childnode>
+        <childnode refid="6398" relation="include">
+        </childnode>
+        <childnode refid="6402" relation="include">
+        </childnode>
+        <childnode refid="6414" relation="include">
+        </childnode>
+        <childnode refid="6415" relation="include">
+        </childnode>
+        <childnode refid="6397" relation="include">
+        </childnode>
+        <childnode refid="6416" relation="include">
+        </childnode>
+        <childnode refid="6391" relation="include">
+        </childnode>
+        <childnode refid="6417" relation="include">
+        </childnode>
+        <childnode refid="6396" relation="include">
+        </childnode>
+        <childnode refid="6395" relation="include">
+        </childnode>
+        <childnode refid="6388" relation="include">
+        </childnode>
+      </node>
+      <node id="6413">
+        <label>algorithm</label>
+      </node>
+      <node id="6438">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="6430" relation="include">
+        </childnode>
+      </node>
+      <node id="6415">
+        <label>cstring</label>
+      </node>
+      <node id="6391">
+        <label>memory</label>
+      </node>
+      <node id="6397">
+        <label>initializer_list</label>
+      </node>
+      <node id="6461">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="6426" relation="include">
+        </childnode>
+        <childnode refid="6437" relation="include">
+        </childnode>
+        <childnode refid="6428" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;ATen/ATen.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/NativeFunctions.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/SparseTensorRef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/ExpandUtils.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_type_has_native(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Type&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.is_sparse();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>_has_native(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_type_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type());</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>native<sp/>operations<sp/>are<sp/>not<sp/>&quot;really&quot;<sp/>native;<sp/>they&apos;re<sp/>actually<sp/>just<sp/>bridge</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>functions<sp/>that<sp/>decide<sp/>whether<sp/>or<sp/>not<sp/>to<sp/>call<sp/>native<sp/>sparse<sp/>functions,<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TH<sp/>functions.<sp/><sp/>This<sp/>file<sp/>should<sp/>be<sp/>temporary;<sp/>when<sp/>all<sp/>of<sp/>TH<sp/>gets<sp/>ported,<sp/>we</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>can<sp/>just<sp/>use<sp/>the<sp/>native<sp/>mechanism<sp/>straight.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Maybe<sp/>the<sp/>foo_<sp/>variants<sp/>should<sp/>call<sp/>th_foo_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">Tensor<sp/>norm(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor<sp/>&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>p)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_norm(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_norm(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>p);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">Tensor<sp/>clone(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_clone(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_clone(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">Tensor&amp;<sp/>resize_as_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>the_template)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_resize_as_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>the_template);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_resize_as_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>the_template);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">Tensor&amp;<sp/>pow_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>exponent)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_pow_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>exponent);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_pow_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>exponent);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal">Tensor<sp/>pow(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>exponent)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_pow(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>exponent);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_pow(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>exponent);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">Tensor&amp;<sp/>zero_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_zero_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_zero_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>an<sp/>ideal<sp/>world,<sp/>we<sp/>would<sp/>use<sp/>direct<sp/>support<sp/>for<sp/>multiple<sp/>dispatch<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/>say<sp/>that<sp/>add(Dense,<sp/>Dense)<sp/>should<sp/>dispatch<sp/>to<sp/>one<sp/>function,<sp/>while</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>add(Dense,<sp/>Sparse)<sp/>should<sp/>dispatch<sp/>to<sp/>another<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>a<sp/>world<sp/>where<sp/>we<sp/>only<sp/>have<sp/>single<sp/>dispatch,<sp/>we<sp/>can<sp/>single<sp/>dispatch<sp/>on</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>first<sp/>function,<sp/>and<sp/>then<sp/>do<sp/>an<sp/>is_sparse()<sp/>test<sp/>on<sp/>the<sp/>second<sp/>argument</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>to<sp/>direct<sp/>ourselves<sp/>to<sp/>the<sp/>correct<sp/>argument.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>We<sp/>are<sp/>in<sp/>neither<sp/>of<sp/>those<sp/>worlds.<sp/><sp/>Instead,<sp/>we<sp/>have<sp/>a<sp/>th_add<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>which<sp/>has<sp/>legacy<sp/>implementations<sp/>in<sp/>the<sp/>single<sp/>dispatch<sp/>world,<sp/>BUT<sp/>our</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/>actual<sp/>add<sp/>function<sp/>needs<sp/>to<sp/>call<sp/>s_native_add<sp/>if<sp/>the<sp/>function<sp/>*would<sp/>have*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/>utilized<sp/>a<sp/>sparse<sp/>kernel<sp/>that<sp/>is<sp/>natively<sp/>implemented.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>th_add<sp/>is<sp/>&quot;good<sp/>old<sp/>single<sp/>dispatch&quot;<sp/>which<sp/>internally<sp/>handles<sp/>the<sp/>is_sparse()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/>test<sp/>and<sp/>also<sp/>handles<sp/>broadcasting.<sp/><sp/>s_native_add<sp/>works<sp/>asymmetrically:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>doesn&apos;t<sp/>handle<sp/>broadcasting<sp/>at<sp/>all,<sp/>and<sp/>it<sp/>ASSUMES<sp/>that<sp/>the<sp/>relevant</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="comment">//<sp/>argument<sp/>is<sp/>a<sp/>sparse<sp/>tensor.<sp/><sp/>Why<sp/>the<sp/>asymmetry?<sp/><sp/>It<sp/>turns<sp/>out<sp/>it<sp/>is<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>so<sp/>easy<sp/>to<sp/>figure<sp/>out<sp/>if<sp/>a<sp/>kernel<sp/>is<sp/>implemented<sp/>in<sp/>THS;<sp/>it&apos;s<sp/>not<sp/>as<sp/>simple</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>as<sp/>testing<sp/>if<sp/>the<sp/>first<sp/>argument<sp/>is<sp/>sparse,<sp/>because,<sp/>e.g.,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>add(Dense,<sp/>Sparse),<sp/>the<sp/>sparse<sp/>kernel<sp/>is<sp/>in<sp/>the<sp/>second<sp/>argument.<sp/><sp/>So,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>trampoline<sp/>function<sp/>is<sp/>going<sp/>to<sp/>know<sp/>about<sp/>the<sp/>overloads<sp/>*anyway*;<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/>might<sp/>as<sp/>well<sp/>also<sp/>handle<sp/>is_sparse()<sp/>and<sp/>broadcasting<sp/>while<sp/>it&apos;s<sp/>at<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Why<sp/>not<sp/>change<sp/>TH<sp/>to<sp/>follow<sp/>this<sp/>new<sp/>scheme?<sp/><sp/>We<sp/>could...<sp/>but<sp/>since<sp/>it&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>all<sp/>going<sp/>away<sp/>when<sp/>we<sp/>finish<sp/>porting<sp/>the<sp/>TH<sp/>functions<sp/>to<sp/>ATen,<sp/>we<sp/>haven&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">//<sp/>done<sp/>it.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">Tensor&amp;<sp/>add_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>self_sparse<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_sparse();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>other_sparse<sp/>=<sp/>other.is_sparse();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self_sparse<sp/>&amp;&amp;<sp/>other_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;add_out&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_add_out(result,<sp/>b_self,<sp/>b_other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!self_sparse<sp/>&amp;&amp;<sp/>other_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>Perhaps<sp/>doing<sp/>overload<sp/>selection<sp/>with<sp/>SparseTensorRef<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>confusing,<sp/>and<sp/>we<sp/>should<sp/>have<sp/>given<sp/>these<sp/>overloads<sp/>different<sp/>names.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>now,<sp/>we<sp/>do<sp/>it<sp/>this<sp/>way<sp/>for<sp/>consistency<sp/>with<sp/>the<sp/>TH<sp/>bindings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(not<sp/>that<sp/>it<sp/>is<sp/>terribly<sp/>consistent<sp/>anyway).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_add_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>SparseTensorRef(other),<sp/>alpha);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_add_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>You<sp/>may<sp/>be<sp/>tempted<sp/>to<sp/>implement<sp/>add<sp/>and<sp/>add_<sp/>just<sp/>as<sp/>calls<sp/>to<sp/>add_out,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>calling<sp/>the<sp/>actual<sp/>implementing<sp/>function<sp/>matters,<sp/>because<sp/>broadcast</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="comment">//<sp/>will<sp/>be<sp/>handled<sp/>differently<sp/>depending<sp/>on<sp/>if<sp/>you<sp/>call<sp/>add_<sp/>or<sp/>(a<sp/>seemingly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">//<sp/>equivalent)<sp/>add_out.<sp/><sp/>Arguably<sp/>this<sp/>mismatch<sp/>in<sp/>treatment<sp/>is<sp/>a<sp/>bug,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>c.f.,<sp/>https://github.com/pytorch/pytorch/issues/8308<sp/>but<sp/>fixing<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>bug<sp/>would<sp/>involve<sp/>changing<sp/>a<sp/>lot<sp/>of<sp/>other<sp/>places,<sp/>so<sp/>we<sp/>leave<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>alone<sp/>for<sp/>now.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">Tensor<sp/>add(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>self_sparse<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_sparse();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>other_sparse<sp/>=<sp/>other.is_sparse();</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self_sparse<sp/>&amp;&amp;<sp/>other_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;add&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_add(b_self,<sp/>b_other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!self_sparse<sp/>&amp;&amp;<sp/>other_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_add(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>SparseTensorRef(other),<sp/>alpha);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_add(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal">Tensor&amp;<sp/>add_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>self_sparse<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.is_sparse();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>other_sparse<sp/>=<sp/>other.is_sparse();</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(self_sparse<sp/>&amp;&amp;<sp/>other_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_other;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_other)<sp/>=<sp/>expand_inplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;add_&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_add_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>b_other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!self_sparse<sp/>&amp;&amp;<sp/>other_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_add_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>SparseTensorRef(other),<sp/>alpha);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_add_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal">Tensor&amp;<sp/>sub_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;sub_out&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_sub_out(result,<sp/>b_self,<sp/>b_other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_sub_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">Tensor<sp/>sub(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;sub&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_sub(b_self,<sp/>b_other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_sub(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal">Tensor&amp;<sp/>sub_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_other;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_other)<sp/>=<sp/>expand_inplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;sub_&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_sub_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>b_other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_sub_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/>alpha);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">Tensor&amp;<sp/>mul_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;mul_out&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_mul_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_mul_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">Tensor<sp/>mul(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;mul&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_mul(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_mul(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">Tensor&amp;<sp/>mul_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_other;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_other)<sp/>=<sp/>expand_inplace(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other,<sp/></highlight><highlight class="stringliteral">&quot;mul_&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_mul_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>b_other);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_mul_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">Tensor&amp;<sp/>mul_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_mul_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_mul_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">Tensor<sp/>mul(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_mul(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_mul(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal">Tensor&amp;<sp/>mul_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_mul_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_mul_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">Tensor&amp;<sp/>div_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_div_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_div_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal">Tensor<sp/>div(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_div(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_div(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">Tensor&amp;<sp/>div_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>Scalar<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_div_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_div_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>other);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal">Tensor&amp;<sp/>addmm_out(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>mat1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>mat2,<sp/>Scalar<sp/>beta,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mat1_sparse<sp/>=<sp/>mat1.is_sparse();</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mat1_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self)<sp/>=<sp/>expand_size(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>{mat1.size(0),<sp/>mat2.size(1)},<sp/></highlight><highlight class="stringliteral">&quot;addmm_out&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_addmm_out(result,<sp/>b_self,<sp/>mat1,<sp/>mat2,<sp/>beta,<sp/>alpha);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_addmm_out(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>mat1,<sp/>mat2,<sp/>beta,<sp/>alpha);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">Tensor<sp/>addmm(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>mat1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>mat2,<sp/>Scalar<sp/>beta,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mat1_sparse<sp/>=<sp/>mat1.is_sparse();</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mat1_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>Tensor<sp/>b_self;</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>std::tie(b_self)<sp/>=<sp/>expand_size(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>{mat1.size(0),<sp/>mat2.size(1)},<sp/></highlight><highlight class="stringliteral">&quot;addmm&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_addmm(b_self,<sp/>mat1,<sp/>mat2,<sp/>beta,<sp/>alpha);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_addmm(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>mat1,<sp/>mat2,<sp/>beta,<sp/>alpha);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal">Tensor&amp;<sp/>addmm_(Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>mat1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>mat2,<sp/>Scalar<sp/>beta,<sp/>Scalar<sp/>alpha)<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>Note<sp/>[Multiple<sp/>dispatch<sp/>to<sp/>sparse]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>mat1_sparse<sp/>=<sp/>mat1.is_sparse();</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mat1_sparse)<sp/>{</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>inplace<sp/>is<sp/>not<sp/>broadcasting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s_native_addmm_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>mat1,<sp/>mat2,<sp/>beta,<sp/>alpha);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>th_addmm_(</highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>mat1,<sp/>mat2,<sp/>beta,<sp/>alpha);</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal">Tensor<sp/>tensor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Type&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_type_has_native(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.native_tensor();</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.th_tensor();</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="312"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal">Tensor<sp/>tensor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Type&amp;<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/>ArrayRef&lt;int64_t&gt;<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_type_has_native(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.native_tensor(size);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>.th_tensor(size);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal">Tensor<sp/>sparse_coo_tensor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>indices,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>values)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values.type().toSparse().native_sparse_coo_tensor(indices,<sp/>values);</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal">Tensor<sp/>sparse_coo_tensor(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>indices,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>values,<sp/>ArrayRef&lt;int64_t&gt;<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values.type().toSparse().native_sparse_coo_tensor(indices,<sp/>values,<sp/>size);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">Tensor<sp/>_sparse_coo_tensor_unsafe(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>indices,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>values,<sp/>ArrayRef&lt;int64_t&gt;<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>values.type().toSparse()._native_sparse_coo_tensor_unsafe(indices,<sp/>values,<sp/>size);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal">int64_t<sp/>get_device(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(_has_native(</highlight><highlight class="keyword">self</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>native_get_device(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_th_get_device(</highlight><highlight class="keyword">self</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LegacyBridge.cpp"/>
+  </compounddef>
+</doxygen>

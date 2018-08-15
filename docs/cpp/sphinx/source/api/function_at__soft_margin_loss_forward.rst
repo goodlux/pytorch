@@ -1,0 +1,13 @@
+.. _function_at__soft_margin_loss_forward:
+
+Function soft_margin_loss_forward
+=================================
+
+- Defined in :ref:`file__Users_robkunkle_fork_goodlux_pytorch_build_aten_src_ATen_Functions.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: at::soft_margin_loss_forward

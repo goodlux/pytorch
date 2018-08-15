@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>torch::nn::AnyModule::Placeholder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">torch::nn::AnyModule::Value::Placeholder</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1ae8f1fde14e5024b67f8f98de4b9ac031" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></type>
+        <definition>virtual Value torch::nn::AnyModule::Placeholder::forward</definition>
+        <argsstring>(std::vector&lt; Value &gt; &amp;&amp;arguments)=0</argsstring>
+        <name>forward</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &gt; &amp;&amp;</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>The &quot;erased&quot; <computeroutput><ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1ae8f1fde14e5024b67f8f98de4b9ac031" kindref="member">forward()</ref></computeroutput> method. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="243" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1a2e07a91f1dd9dd743c6a23e6d532157a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>virtual std::shared_ptr&lt;Module&gt; torch::nn::AnyModule::Placeholder::ptr</definition>
+        <argsstring>()=0</argsstring>
+        <name>ptr</name>
+        <briefdescription>
+<para>Returns std::shared_ptr&lt;Module&gt; pointing to the erased module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1ac0f450860e00af4c370ae716ff47bb7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Placeholder&gt; torch::nn::AnyModule::Placeholder::copy</definition>
+        <argsstring>() const =0</argsstring>
+        <name>copy</name>
+        <briefdescription>
+<para>Returns a <computeroutput><ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref></computeroutput> with a shallow copy of this <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="249" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1a35a2496f7a704a67ec4234adbd3305d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref> &gt;</type>
+        <definition>virtual std::unique_ptr&lt;Placeholder&gt; torch::nn::AnyModule::Placeholder::clone</definition>
+        <argsstring>(at::optional&lt; Device &gt; device) const =0</argsstring>
+        <name>clone</name>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+<para>Returns a <computeroutput><ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref></computeroutput> with a deep copy of this <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="252" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="509">
+        <label>torch::nn::AnyModule::Value::Placeholder</label>
+      </node>
+      <node id="508">
+        <label>torch::nn::AnyModule::Placeholder</label>
+        <link refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder"/>
+        <childnode refid="509" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="511">
+        <label>torch::nn::AnyModule::Value::Placeholder</label>
+      </node>
+      <node id="510">
+        <label>torch::nn::AnyModule::Placeholder</label>
+        <link refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder"/>
+        <childnode refid="511" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="239" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="239" bodyend="254"/>
+    <listofallmembers>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1a35a2496f7a704a67ec4234adbd3305d0" prot="public" virt="pure-virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>clone</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1ac0f450860e00af4c370ae716ff47bb7a" prot="public" virt="pure-virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>copy</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1ae8f1fde14e5024b67f8f98de4b9ac031" prot="public" virt="pure-virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>forward</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1afc72f3c240249ab0ec5ff7e2743f4e94" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>Placeholder</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder_1a2e07a91f1dd9dd743c6a23e6d532157a" prot="public" virt="pure-virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>ptr</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1a373454270986799ed293c58b221cb4c4" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>type_info</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1a42eaa4d1d7b82a7339c8c6adf178b64b" prot="public" virt="virtual"><scope>torch::nn::AnyModule::Placeholder</scope><name>~Placeholder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

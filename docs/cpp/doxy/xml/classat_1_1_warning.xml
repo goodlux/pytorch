@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_warning" kind="class" language="C++" prot="public">
+    <compoundname>at::Warning</compoundname>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classat_1_1_warning_1a37d753ca58bf060bea29db500285d5cc" prot="private" static="no">
+        <type>void(*)(const <ref refid="structat_1_1_source_location" kindref="compound">SourceLocation</ref> &amp;source_location, const char *msg)</type>
+        <definition>using at::Warning::handler_t =  void(*)(const SourceLocation&amp; source_location, const char* msg)</definition>
+        <argsstring></argsstring>
+        <name>handler_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="88" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classat_1_1_warning_1a049b2017ab127a5cc6cce30e31c59101" prot="private" static="yes" mutable="no">
+        <type>handler_t</type>
+        <definition>Warning::handler_t at::Warning::warning_handler_</definition>
+        <argsstring></argsstring>
+        <name>warning_handler_</name>
+        <initializer>= &amp;<ref refid="classat_1_1_warning_1ac7bf46101fe9978120367883c89a8b41" kindref="member">Warning::print_warning</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="103" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classat_1_1_warning_1a2daef8d3dc262acd68d692ca154ce4e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Warning::warn</definition>
+        <argsstring>(SourceLocation source_location, std::string msg)</argsstring>
+        <name>warn</name>
+        <param>
+          <type><ref refid="structat_1_1_source_location" kindref="compound">SourceLocation</ref></type>
+          <declname>source_location</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Issue a warning with a given message. Dispatched to the current warning handler. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="93" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_warning_1a54b3ea47c5b60e4ef0c04af916162b78" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Warning::set_warning_handler</definition>
+        <argsstring>(handler_t handler)</argsstring>
+        <name>set_warning_handler</name>
+        <param>
+          <type>handler_t</type>
+          <declname>handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the global warning handler. This is not thread-safe, so it should generally be called once during initialization. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_warning_1ac7bf46101fe9978120367883c89a8b41" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Warning::print_warning</definition>
+        <argsstring>(const SourceLocation &amp;source_location, const char *msg)</argsstring>
+        <name>print_warning</name>
+        <param>
+          <type>const <ref refid="structat_1_1_source_location" kindref="compound">SourceLocation</ref> &amp;</type>
+          <declname>source_location</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>The default warning handler. Prints the message to stderr. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="100" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" line="87" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Error.h" bodystart="87" bodyend="104"/>
+    <listofallmembers>
+      <member refid="classat_1_1_warning_1a37d753ca58bf060bea29db500285d5cc" prot="private" virt="non-virtual"><scope>at::Warning</scope><name>handler_t</name></member>
+      <member refid="classat_1_1_warning_1ac7bf46101fe9978120367883c89a8b41" prot="public" virt="non-virtual"><scope>at::Warning</scope><name>print_warning</name></member>
+      <member refid="classat_1_1_warning_1a54b3ea47c5b60e4ef0c04af916162b78" prot="public" virt="non-virtual"><scope>at::Warning</scope><name>set_warning_handler</name></member>
+      <member refid="classat_1_1_warning_1a2daef8d3dc262acd68d692ca154ce4e9" prot="public" virt="non-virtual"><scope>at::Warning</scope><name>warn</name></member>
+      <member refid="classat_1_1_warning_1a049b2017ab127a5cc6cce30e31c59101" prot="private" virt="non-virtual"><scope>at::Warning</scope><name>warning_handler_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

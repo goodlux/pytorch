@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1nn_1_1_functional_impl" kind="class" language="C++" prot="public">
+    <compoundname>torch::nn::FunctionalImpl</compoundname>
+    <basecompoundref refid="classtorch_1_1nn_1_1_cloneable" prot="public" virt="non-virtual">torch::nn::Cloneable&lt; FunctionalImpl &gt;</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtorch_1_1nn_1_1_functional_impl_1a759235b85006456907cef294a6e9f9b4" prot="public" static="no">
+        <type>std::function&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref>(<ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref>)&gt;</type>
+        <definition>using torch::nn::FunctionalImpl::Function =  std::function&lt;Tensor(Tensor)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="17" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1nn_1_1_functional_impl_1a744c1a0577dd15beb0ac39b5904ef279" prot="private" static="no" mutable="no">
+        <type>Function</type>
+        <definition>Function torch::nn::FunctionalImpl::function_</definition>
+        <argsstring></argsstring>
+        <name>function_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_functional_impl_1a95bf7380b5bded4746a158fcb743de6b" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::FunctionalImpl::FunctionalImpl</definition>
+        <argsstring>(Function function)</argsstring>
+        <name>FunctionalImpl</name>
+        <param>
+          <type>Function</type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_functional_impl_1ad7c54f950a8a5faabee03dfbad5c25c6" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename SomeFunction</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename</type>
+            <defval>torch::enable_if_t&lt;(sizeof...(Args) &gt; 0</defval>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::nn::FunctionalImpl::FunctionalImpl</definition>
+        <argsstring>(SomeFunction original_function, Args &amp;&amp;... args)</argsstring>
+        <name>FunctionalImpl</name>
+        <param>
+          <type>SomeFunction</type>
+          <declname>original_function</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_functional_impl_1a44bb67df4511b59bc4ccf193f44c0443" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::nn::FunctionalImpl::reset</definition>
+        <argsstring>() override</argsstring>
+        <name>reset</name>
+        <reimplements refid="classtorch_1_1nn_1_1_cloneable_1a615301b61c2146c150a0e5df0c4d83ab">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput><ref refid="classtorch_1_1nn_1_1_functional_impl_1a44bb67df4511b59bc4ccf193f44c0443" kindref="member">reset()</ref></computeroutput> must perform initialization of all members with reference semantics, most importantly parameters, buffers and submodules. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="36" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/functional.cpp" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_functional_impl_1ab3c6d78366e569a39bb1b1fc745c6e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::FunctionalImpl::forward</definition>
+        <argsstring>(Tensor input)</argsstring>
+        <name>forward</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/functional.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1nn_1_1_functional_impl_1ab39489c254bf8e0378e85b8cf7d85b8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>Tensor torch::nn::FunctionalImpl::operator()</definition>
+        <argsstring>(Tensor input)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Calls forward(input). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/nn/modules/functional.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="309">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="308">
+        <label>torch::nn::Cloneable&lt; FunctionalImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="309" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="307">
+        <label>torch::nn::FunctionalImpl</label>
+        <link refid="classtorch_1_1nn_1_1_functional_impl"/>
+        <childnode refid="308" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="312">
+        <label>torch::nn::Module</label>
+        <link refid="classtorch_1_1nn_1_1_module"/>
+      </node>
+      <node id="311">
+        <label>torch::nn::Cloneable&lt; FunctionalImpl &gt;</label>
+        <link refid="classtorch_1_1nn_1_1_cloneable"/>
+        <childnode refid="312" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="310">
+        <label>torch::nn::FunctionalImpl</label>
+        <link refid="classtorch_1_1nn_1_1_functional_impl"/>
+        <childnode refid="311" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" line="15" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h" bodystart="15" bodyend="44"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1nn_1_1_module_1ab933f8f978b718c513fbc39ab70de97b" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4af0d4c015e6f453f57f078860f607ff" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>as</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a4a454ce3c8f5f45df56a2af6b45e279d" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab9edbda5e5d8f5347ebd71d20151ff28" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>buffers</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af4749687a6b4ba26c753e670124c0ac3" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0d342685071dfb8ef5d90b88b1c35351" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>children</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a17155365d71ece55dacb2ad026ad6f6e" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>clone</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af0be79d2e17a200b5f69023ba6f02598" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>eval</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1ab3c6d78366e569a39bb1b1fc745c6e71" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>forward</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1a759235b85006456907cef294a6e9f9b4" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>Function</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1a744c1a0577dd15beb0ac39b5904ef279" prot="private" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>function_</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1a95bf7380b5bded4746a158fcb743de6b" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>FunctionalImpl</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1ad7c54f950a8a5faabee03dfbad5c25c6" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>FunctionalImpl</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0489238ce8594bf93c210e36e971d314" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>is_training</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a1f7e60a680a0f2781204bc086b554a24" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>load</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_cloneable_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a33ac482c601ffecdaabe46a0f364cc51" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::FunctionalImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a6d7baa75e5b84bb97e2867b6ef93c82c" prot="public" virt="non-virtual" ambiguityscope="torch::nn::Module::"><scope>torch::nn::FunctionalImpl</scope><name>Module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a892a2b7bc212018316dfa5f26a5b8efc" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ac92d5366afb1cca7578c569fdbdbc405" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>modules</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ab503bb4fdf163c00ac1e9fc695f55403" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>name</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1ab39489c254bf8e0378e85b8cf7d85b8f" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>operator()</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aa5c48c9bf4715d4c48f1f00228a9761f" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a036e8a4cad8eb1d1253f3de7f355a650" prot="protected" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>register_buffer</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a505feb18878e17ed60038c4ed87406f5" prot="protected" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1ae21020d776f84f91ebc8679da84c3fc7" prot="protected" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>register_module</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1aab880a8567a7aaff03677207e00bae93" prot="protected" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>register_parameter</name></member>
+      <member refid="classtorch_1_1nn_1_1_functional_impl_1a44bb67df4511b59bc4ccf193f44c0443" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>reset</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a14804242333be316fb15f5dc7becb3f1" prot="public" virt="non-virtual"><scope>torch::nn::FunctionalImpl</scope><name>save</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a9335a64808dda0178374d0818403f88f" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a06916399bc5c0270d3db18153b4a0ad8" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1abd24812c2304761b85420f4d5edfa828" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>to</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1af1874eca189786412714e807c38bdcf1" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>train</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1a0ae8830982a7a15bfa6df1dcc7d5e7f3" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1nn_1_1_module_1afbc08b9bf696297df27ab4e86fcec9f4" prot="public" virt="virtual"><scope>torch::nn::FunctionalImpl</scope><name>~Module</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

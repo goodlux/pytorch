@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1optim_1_1_loss_closure_optimizer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>torch::optim::LossClosureOptimizer</compoundname>
+    <basecompoundref refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base" prot="public" virt="non-virtual">torch::optim::detail::OptimizerBase</basecompoundref>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_l_b_f_g_s" prot="public" virt="non-virtual">torch::optim::LBFGS</derivedcompoundref>
+    <includes refid="optimizer_8h" local="no">optimizer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtorch_1_1optim_1_1_loss_closure_optimizer_1aec739fb5decd33995e2217dc20c2191b" prot="public" static="no">
+        <type>std::function&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref>()&gt;</type>
+        <definition>using torch::optim::LossClosureOptimizer::LossClosure =  std::function&lt;Tensor()&gt;</definition>
+        <argsstring></argsstring>
+        <name>LossClosure</name>
+        <briefdescription>
+<para>A loss function closure, which is expected to return the loss value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="100" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1_loss_closure_optimizer_1af84d25e82fff79230c20460fa966353e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref></type>
+        <definition>virtual Tensor torch::optim::LossClosureOptimizer::step</definition>
+        <argsstring>(LossClosure closure)=0</argsstring>
+        <name>step</name>
+        <reimplementedby refid="classtorch_1_1optim_1_1_l_b_f_g_s_1a9b38625a8dbf092acea513e4463082d2">step</reimplementedby>
+        <param>
+          <type><ref refid="classtorch_1_1optim_1_1_loss_closure_optimizer_1aec739fb5decd33995e2217dc20c2191b" kindref="member">LossClosure</ref></type>
+          <declname>closure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="102" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classtorch_1_1optim_1_1_optimizer" kindref="compound">Optimizer</ref> that requires the loss function to be supplied to the <computeroutput>step()</computeroutput> function, as it may evaluate the loss function multiple times per step. Examples of such algorithms are conjugate gradient and <ref refid="classtorch_1_1optim_1_1_l_b_f_g_s" kindref="compound">LBFGS</ref>. The <computeroutput>step()</computeroutput> function also returns the loss value. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="382">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="383">
+        <label>torch::optim::LBFGS</label>
+        <link refid="classtorch_1_1optim_1_1_l_b_f_g_s"/>
+        <childnode refid="381" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="381">
+        <label>torch::optim::LossClosureOptimizer</label>
+        <link refid="classtorch_1_1optim_1_1_loss_closure_optimizer"/>
+        <childnode refid="382" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="385">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="384">
+        <label>torch::optim::LossClosureOptimizer</label>
+        <link refid="classtorch_1_1optim_1_1_loss_closure_optimizer"/>
+        <childnode refid="385" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="97" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="97" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a35aa4e671083a378e84ead01097854c1" prot="public" virt="virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a4f0e78d1b05b4f412513e940bb274209" prot="public" virt="virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a2726328360488171de7ccd2085bcae03" prot="protected" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>buffer_at</name></member>
+      <member refid="classtorch_1_1optim_1_1_loss_closure_optimizer_1aec739fb5decd33995e2217dc20c2191b" prot="public" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>LossClosure</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ac095094927b128f97db9a5653cb66807" prot="public" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a99c883bd29f37597dac940c420474d38" prot="public" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a08eb2b3fb09eddb7916e790d8e8f4add" prot="protected" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ae3931245065d22fa16cb775c95c33b01" prot="public" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>ParameterCursor</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a7fc838f1237cdc236ea515dcb30082e4" prot="public" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a1bc457f914c49a04e70a7629488df23f" prot="protected" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>parameters_</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1af05d9e4c072611745a8dd8f4ff8f6220" prot="public" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>size</name></member>
+      <member refid="classtorch_1_1optim_1_1_loss_closure_optimizer_1af84d25e82fff79230c20460fa966353e" prot="public" virt="pure-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>step</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a60e97f95e8f138600b63fa949bcf2b60" prot="protected" virt="non-virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>zero_buffers_like</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1abfe0f04c0fa9c13efbf09568985ac834" prot="public" virt="virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1aaf3ff0cc2a3a28566bc8c106673af53c" prot="public" virt="virtual"><scope>torch::optim::LossClosureOptimizer</scope><name>~OptimizerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

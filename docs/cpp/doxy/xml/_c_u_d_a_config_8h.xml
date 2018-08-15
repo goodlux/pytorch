@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_c_u_d_a_config_8h" kind="file" language="C++">
+    <compoundname>CUDAConfig.h</compoundname>
+    <includedby refid="_c_u_d_a_hooks_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.cpp</includedby>
+    <includedby refid="_affine_grid_generator_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cudnn/AffineGridGenerator.cpp</includedby>
+    <includedby refid="aten_2src_2_a_ten_2native_2cudnn_2batchnorm_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cudnn/BatchNorm.cpp</includedby>
+    <includedby refid="aten_2src_2_a_ten_2native_2cudnn_2conv_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cudnn/Conv.cpp</includedby>
+    <includedby refid="_grid_sampler_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cudnn/GridSampler.cpp</includedby>
+    <includedby refid="aten_2src_2_a_ten_2native_2cudnn_2rnn_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cudnn/RNN.cpp</includedby>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_c_u_d_a_config_8h_1a79d20a8bb0238f7a51172ca30937eae7" prot="public" static="no">
+        <name>AT_CUDNN_ENABLED</name>
+        <param></param>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAConfig.h" line="7" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAConfig.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Test<sp/>these<sp/>using<sp/>#if<sp/>AT_CUDNN_ENABLED(),<sp/>not<sp/>#ifdef,<sp/>so<sp/>that<sp/>it&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>obvious<sp/>if<sp/>you<sp/>forgot<sp/>to<sp/>include<sp/>Config.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>c.f.<sp/>https://stackoverflow.com/questions/33759787/generating-an-error-if-checked-boolean-macro-is-not-defined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_CUDNN_ENABLED()<sp/>0</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAConfig.h"/>
+  </compounddef>
+</doxygen>

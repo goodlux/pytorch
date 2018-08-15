@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceat_1_1native_1_1detail" kind="namespace" language="C++">
+    <compoundname>at::native::detail</compoundname>
+    <innerclass refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_config" prot="public">at::native::detail::CuFFTConfig</innerclass>
+    <innerclass refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_handle_deleter" prot="public">at::native::detail::CuFFTHandleDeleter</innerclass>
+    <innerclass refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" prot="public">at::native::detail::CuFFTParams</innerclass>
+    <innerclass refid="classat_1_1native_1_1detail_1_1_cu_f_f_t_params_l_r_u_cache" prot="public">at::native::detail::CuFFTParamsLRUCache</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_cu_f_f_t_plan_cache_8h_1a49dc55e205ca30308cc3996aaa7c40bb" prot="public" static="no" mutable="no">
+        <type>constexpr int64_t</type>
+        <definition>constexpr int64_t at::native::detail::CUFFT_MAX_PLAN_NUM</definition>
+        <argsstring></argsstring>
+        <name>CUFFT_MAX_PLAN_NUM</name>
+        <initializer>= 1023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="290" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_cu_f_f_t_plan_cache_8h_1aafa89d4898eb43488c90f71dd2d1cbc0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void at::native::detail::setCuFFTParams</definition>
+        <argsstring>(CuFFTParams *params, const Tensor &amp;input, int64_t signal_ndim, bool complex_input, bool complex_output, IntList checked_signal_sizes, bool onesided)</argsstring>
+        <name>setCuFFTParams</name>
+        <param>
+          <type><ref refid="structat_1_1native_1_1detail_1_1_cu_f_f_t_params" kindref="compound">CuFFTParams</ref> *</type>
+          <declname>params</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>signal_ndim</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>complex_input</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>complex_output</declname>
+        </param>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+          <declname>checked_signal_sizes</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>onesided</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="35" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" bodystart="35" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="_cu_f_f_t_plan_cache_8h_1a3df6018ae15853ee7e32cc52448edebd" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>__forceinline__ bool</type>
+        <definition>static __forceinline__ bool at::native::detail::is_pow_of_two</definition>
+        <argsstring>(int64_t x)</argsstring>
+        <name>is_pow_of_two</name>
+        <param>
+          <type>int64_t</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="65" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" bodystart="65" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="_cu_f_f_t_plan_cache_8h_1a04d945ca03161ff5f3cc29122ec5d090" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::native::detail::cufft_get_plan_cache_max_size_impl</definition>
+        <argsstring>()</argsstring>
+        <name>cufft_get_plan_cache_max_size_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="395" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_cu_f_f_t_plan_cache_8h_1a3f33b4db7fbaa215c1df3d6395f36dc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::detail::cufft_set_plan_cache_max_size_impl</definition>
+        <argsstring>(int64_t max_size)</argsstring>
+        <name>cufft_set_plan_cache_max_size_impl</name>
+        <param>
+          <type>int64_t</type>
+          <declname>max_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="396" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_cu_f_f_t_plan_cache_8h_1a7d39b0c843d28e05377a65371694964e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::native::detail::cufft_get_plan_cache_size_impl</definition>
+        <argsstring>()</argsstring>
+        <name>cufft_get_plan_cache_size_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="397" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="_cu_f_f_t_plan_cache_8h_1a195fdb3740194666ebcf7ca1e61af371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::detail::cufft_clear_plan_cache_impl</definition>
+        <argsstring>()</argsstring>
+        <name>cufft_clear_plan_cache_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="398" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h" line="16" column="1"/>
+  </compounddef>
+</doxygen>

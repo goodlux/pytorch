@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_array_ref" kind="class" language="C++" prot="public">
+    <compoundname>at::ArrayRef</compoundname>
+    <includes refid="_array_ref_8h" local="no">ArrayRef.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Constructors</header>
+      <memberdef kind="function" id="classat_1_1_array_ref_1adf57d53613f29bb002321dbe277d75d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>()</argsstring>
+        <name>ArrayRef</name>
+        <briefdescription>
+<para>Construct an empty <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a13b32cdfb230bc46edbd836073044909" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const T &amp;OneElt)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>OneElt</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a single element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="61" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="61" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1afa6bd1b1039b6d5cdbd4263b4c3f6c4e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const T *data, size_t length)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const T *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a pointer and length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="65" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="65" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1adb37c1a847377e84d306dc1922d1132e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const T *begin, const T *end)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const T *</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>const T *</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a range. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="69" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="69" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a0eb7f20db0d5033a4077f5bf777da614" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const SmallVectorTemplateCommon&lt; T, U &gt; &amp;Vec)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const <ref refid="classat_1_1_small_vector_template_common" kindref="compound">SmallVectorTemplateCommon</ref>&lt; T, U &gt; &amp;</type>
+          <declname>Vec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a <ref refid="classat_1_1_small_vector" kindref="compound">SmallVector</ref>. This is templated in order to avoid instantiating <ref refid="classat_1_1_small_vector_template_common" kindref="compound">SmallVectorTemplateCommon&lt;T&gt;</ref> whenever we copy-construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1ab45eba2f6aa6d565aac533ac7f7d61a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename A</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const std::vector&lt; T, A &gt; &amp;Vec)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const std::vector&lt; T, A &gt; &amp;</type>
+          <declname>Vec</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a std::vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="82" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="82" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1ad2c07a93b086be57d9a97b27890f3547" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const std::array&lt; T, N &gt; &amp;Arr)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const std::array&lt; T, N &gt; &amp;</type>
+          <declname>Arr</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a std::array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="87" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="87" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1ad7f82912ee64e1a5ed2b99b9df78adc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type>constexpr</type>
+        <definition>constexpr at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const T(&amp;Arr)[N])</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const T(&amp;)</type>
+          <declname>Arr</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a C array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="92" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1abcf5b63ee4b71867562cc5a08d10096d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::ArrayRef</definition>
+        <argsstring>(const std::initializer_list&lt; T &gt; &amp;Vec)</argsstring>
+        <name>ArrayRef</name>
+        <param>
+          <type>const std::initializer_list&lt; T &gt; &amp;</type>
+          <declname>Vec</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> from a std::initializer_list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="95" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="95" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Simple Operations</header>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a8447443e65feb8d79c3a2b4373f96a75" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator at::ArrayRef&lt; T &gt;::begin</definition>
+        <argsstring>() const</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="103" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a7a65864b13b6a3df2156a1bc983828a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const_iterator</type>
+        <definition>const_iterator at::ArrayRef&lt; T &gt;::end</definition>
+        <argsstring>() const</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="104" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a88ebe32390dbdab941762fea3a19f50a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>reverse_iterator</type>
+        <definition>reverse_iterator at::ArrayRef&lt; T &gt;::rbegin</definition>
+        <argsstring>() const</argsstring>
+        <name>rbegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="106" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="106" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1acd9b6e7866579d119dd30a385835f7a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>reverse_iterator</type>
+        <definition>reverse_iterator at::ArrayRef&lt; T &gt;::rend</definition>
+        <argsstring>() const</argsstring>
+        <name>rend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="107" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="107" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1ac7b1f3b38a3ff4ba1e7518fea7d4db2a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::ArrayRef&lt; T &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>empty - Check if the array is empty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="110" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a5edc8a42144ecf03d2876fe612e95875" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* at::ArrayRef&lt; T &gt;::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="112" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t at::ArrayRef&lt; T &gt;::size</definition>
+        <argsstring>() const</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>size - Get the array size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="115" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1ad68c3bbca8b6155a614ccc00d5f4e2c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; at::ArrayRef&lt; T &gt;::front</definition>
+        <argsstring>() const</argsstring>
+        <name>front</name>
+        <briefdescription>
+<para>front - Get the first element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="118" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="118" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1acd53d717fc15977d60ea3a87084d24de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; at::ArrayRef&lt; T &gt;::back</definition>
+        <argsstring>() const</argsstring>
+        <name>back</name>
+        <briefdescription>
+<para>back - Get the last element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="124" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a0feda741d9a2e73f563a67028827f6fa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::ArrayRef&lt; T &gt;::equals</definition>
+        <argsstring>(ArrayRef RHS) const</argsstring>
+        <name>equals</name>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref></type>
+          <declname>RHS</declname>
+        </param>
+        <briefdescription>
+<para>equals - Check for element-wise equality. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="130" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="130" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a2635bf1377cc7ab446ffb8936f7a1f21" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt;</type>
+        <definition>ArrayRef&lt;T&gt; at::ArrayRef&lt; T &gt;::slice</definition>
+        <argsstring>(size_t N, size_t M) const</argsstring>
+        <name>slice</name>
+        <param>
+          <type>size_t</type>
+          <declname>N</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>M</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>slice(n, m) - Chop off the first N elements of the array, and keep M elements in the array. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="138" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1ae36ac37a3b3cb5c0873c92bd94d4f131" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt;</type>
+        <definition>ArrayRef&lt;T&gt; at::ArrayRef&lt; T &gt;::slice</definition>
+        <argsstring>(size_t N) const</argsstring>
+        <name>slice</name>
+        <param>
+          <type>size_t</type>
+          <declname>N</declname>
+        </param>
+        <briefdescription>
+<para>slice(n) - Chop off the first N elements of the array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="144" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="144" bodyend="144"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Operator Overloads</header>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a4e49de24f81d6691f2a2c6fc2cd60500" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; at::ArrayRef&lt; T &gt;::operator[]</definition>
+        <argsstring>(size_t Index) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>Index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="149" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="149" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a33872f688ee1e8c4713fc81f4218fc45" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T &amp;</type>
+        <definition>const T&amp; at::ArrayRef&lt; T &gt;::at</definition>
+        <argsstring>(size_t Index) const</argsstring>
+        <name>at</name>
+        <param>
+          <type>size_t</type>
+          <declname>Index</declname>
+        </param>
+        <briefdescription>
+<para>Vector compatibility. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="154" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a3b722d9c1c35a9ae608c307c8938a0ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_same&lt; U, T &gt;::value, <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt; &gt;::type &amp;</type>
+        <definition>std::enable_if&lt;std::is_same&lt;U, T&gt;::value, ArrayRef&lt;T&gt; &gt;::type&amp; at::ArrayRef&lt; T &gt;::operator=</definition>
+        <argsstring>(U &amp;&amp;Temporary)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>U &amp;&amp;</type>
+          <declname>Temporary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disallow accidental assignment from a temporary.</para><para>The declaration here is extra complicated so that &quot;arrayRef = {}&quot; continues to select the move assignment operator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="165" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a7138fc8b40744bd828f3570607ca8dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_same&lt; U, T &gt;::value, <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt; &gt;::type &amp;</type>
+        <definition>std::enable_if&lt;std::is_same&lt;U, T&gt;::value, ArrayRef&lt;T&gt; &gt;::type&amp; at::ArrayRef&lt; T &gt;::operator=</definition>
+        <argsstring>(std::initializer_list&lt; U &gt;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>std::initializer_list&lt; U &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disallow accidental assignment from a temporary.</para><para>The declaration here is extra complicated so that &quot;arrayRef = {}&quot; continues to select the move assignment operator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="173" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Expensive Operations</header>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a04dc7cd39d3ec3df94f97146d269f099" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; T &gt;</type>
+        <definition>std::vector&lt;T&gt; at::ArrayRef&lt; T &gt;::vec</definition>
+        <argsstring>() const</argsstring>
+        <name>vec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="178" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="178" bodyend="180"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Conversion operators</header>
+      <memberdef kind="function" id="classat_1_1_array_ref_1a76f4abeda72c2f6ea102e2305ef7a729" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::ArrayRef&lt; T &gt;::operator std::vector&lt; T &gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator std::vector&lt; T &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="185" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="185" bodyend="187"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classat_1_1_array_ref_1a94163dfe8b69094be6fb5e7efc1d1ef2" prot="public" static="no">
+        <type>const T *</type>
+        <definition>typedef const T* at::ArrayRef&lt; T &gt;::iterator</definition>
+        <argsstring></argsstring>
+        <name>iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classat_1_1_array_ref_1af1ad5cfa4ec3f1c88f01e0061c5bfb34" prot="public" static="no">
+        <type>const T *</type>
+        <definition>typedef const T* at::ArrayRef&lt; T &gt;::const_iterator</definition>
+        <argsstring></argsstring>
+        <name>const_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="41" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classat_1_1_array_ref_1ac3ac84efe2bea3eb37a80488ce34f25d" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t at::ArrayRef&lt; T &gt;::size_type</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="42" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classat_1_1_array_ref_1affbd8855d785f26525e10cfcc500670d" prot="public" static="no">
+        <type>std::reverse_iterator&lt; iterator &gt;</type>
+        <definition>typedef std::reverse_iterator&lt;iterator&gt; at::ArrayRef&lt; T &gt;::reverse_iterator</definition>
+        <argsstring></argsstring>
+        <name>reverse_iterator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="44" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classat_1_1_array_ref_1a5380bcd6a998b1b8ae8029f23e09f483" prot="private" static="no" mutable="no">
+        <type>const T *</type>
+        <definition>const T* at::ArrayRef&lt; T &gt;::Data</definition>
+        <argsstring></argsstring>
+        <name>Data</name>
+        <briefdescription>
+<para>The start of the array, in an external buffer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="48" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_array_ref_1aca0c6b01b05690cdc994f8ad06e90989" prot="private" static="no" mutable="no">
+        <type>size_type</type>
+        <definition>size_type at::ArrayRef&lt; T &gt;::Length</definition>
+        <argsstring></argsstring>
+        <name>Length</name>
+        <briefdescription>
+<para>The number of elements. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> - Represent a constant reference to an array (0 or more elements consecutively in memory), i.e. a start pointer and a length. It allows various APIs to take consecutive elements easily and conveniently.</para><para>This class does not own the underlying data, it is expected to be used in situations where the data resides in some other buffer, whose lifetime extends past that of the <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>. For this reason, it is not in general safe to store an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>.</para><para>This is intended to be trivially copyable, so it should be passed by value. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ArrayRef.h" bodystart="38" bodyend="190"/>
+    <listofallmembers>
+      <member refid="classat_1_1_array_ref_1adf57d53613f29bb002321dbe277d75d7" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1a13b32cdfb230bc46edbd836073044909" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1afa6bd1b1039b6d5cdbd4263b4c3f6c4e" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1adb37c1a847377e84d306dc1922d1132e" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1a0eb7f20db0d5033a4077f5bf777da614" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1ab45eba2f6aa6d565aac533ac7f7d61a8" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1ad2c07a93b086be57d9a97b27890f3547" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1ad7f82912ee64e1a5ed2b99b9df78adc5" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1abcf5b63ee4b71867562cc5a08d10096d" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>ArrayRef</name></member>
+      <member refid="classat_1_1_array_ref_1a33872f688ee1e8c4713fc81f4218fc45" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>at</name></member>
+      <member refid="classat_1_1_array_ref_1acd53d717fc15977d60ea3a87084d24de" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>back</name></member>
+      <member refid="classat_1_1_array_ref_1a8447443e65feb8d79c3a2b4373f96a75" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>begin</name></member>
+      <member refid="classat_1_1_array_ref_1af1ad5cfa4ec3f1c88f01e0061c5bfb34" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>const_iterator</name></member>
+      <member refid="classat_1_1_array_ref_1a5380bcd6a998b1b8ae8029f23e09f483" prot="private" virt="non-virtual"><scope>at::ArrayRef</scope><name>Data</name></member>
+      <member refid="classat_1_1_array_ref_1a5edc8a42144ecf03d2876fe612e95875" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>data</name></member>
+      <member refid="classat_1_1_array_ref_1ac7b1f3b38a3ff4ba1e7518fea7d4db2a" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>empty</name></member>
+      <member refid="classat_1_1_array_ref_1a7a65864b13b6a3df2156a1bc983828a5" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>end</name></member>
+      <member refid="classat_1_1_array_ref_1a0feda741d9a2e73f563a67028827f6fa" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>equals</name></member>
+      <member refid="classat_1_1_array_ref_1ad68c3bbca8b6155a614ccc00d5f4e2c4" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>front</name></member>
+      <member refid="classat_1_1_array_ref_1a94163dfe8b69094be6fb5e7efc1d1ef2" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>iterator</name></member>
+      <member refid="classat_1_1_array_ref_1aca0c6b01b05690cdc994f8ad06e90989" prot="private" virt="non-virtual"><scope>at::ArrayRef</scope><name>Length</name></member>
+      <member refid="classat_1_1_array_ref_1a76f4abeda72c2f6ea102e2305ef7a729" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>operator std::vector&lt; T &gt;</name></member>
+      <member refid="classat_1_1_array_ref_1a3b722d9c1c35a9ae608c307c8938a0ff" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>operator=</name></member>
+      <member refid="classat_1_1_array_ref_1a7138fc8b40744bd828f3570607ca8dea" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>operator=</name></member>
+      <member refid="classat_1_1_array_ref_1a4e49de24f81d6691f2a2c6fc2cd60500" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>operator[]</name></member>
+      <member refid="classat_1_1_array_ref_1a88ebe32390dbdab941762fea3a19f50a" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>rbegin</name></member>
+      <member refid="classat_1_1_array_ref_1acd9b6e7866579d119dd30a385835f7a6" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>rend</name></member>
+      <member refid="classat_1_1_array_ref_1affbd8855d785f26525e10cfcc500670d" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>reverse_iterator</name></member>
+      <member refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>size</name></member>
+      <member refid="classat_1_1_array_ref_1ac3ac84efe2bea3eb37a80488ce34f25d" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>size_type</name></member>
+      <member refid="classat_1_1_array_ref_1a2635bf1377cc7ab446ffb8936f7a1f21" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>slice</name></member>
+      <member refid="classat_1_1_array_ref_1ae36ac37a3b3cb5c0873c92bd94d4f131" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>slice</name></member>
+      <member refid="classat_1_1_array_ref_1a04dc7cd39d3ec3df94f97146d269f099" prot="public" virt="non-virtual"><scope>at::ArrayRef</scope><name>vec</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

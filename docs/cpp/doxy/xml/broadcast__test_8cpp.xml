@@ -1,0 +1,943 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="broadcast__test_8cpp" kind="file" language="C++">
+    <compoundname>broadcast_test.cpp</compoundname>
+    <includes local="yes">catch.hpp</includes>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes refid="test__seed_8h" local="yes">test_seed.h</includes>
+    <incdepgraph>
+      <node id="12161">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="12162" relation="include">
+        </childnode>
+        <childnode refid="12163" relation="include">
+        </childnode>
+        <childnode refid="12164" relation="include">
+        </childnode>
+        <childnode refid="12165" relation="include">
+        </childnode>
+        <childnode refid="12166" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12168" relation="include">
+        </childnode>
+      </node>
+      <node id="12207">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="12157" relation="include">
+        </childnode>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12205" relation="include">
+        </childnode>
+        <childnode refid="12208" relation="include">
+        </childnode>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12166" relation="include">
+        </childnode>
+        <childnode refid="12158" relation="include">
+        </childnode>
+      </node>
+      <node id="12175">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12191" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12166" relation="include">
+        </childnode>
+      </node>
+      <node id="12174">
+        <label>atomic</label>
+      </node>
+      <node id="12153">
+        <label>catch.hpp</label>
+      </node>
+      <node id="12166">
+        <label>functional</label>
+      </node>
+      <node id="12212">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12202" relation="include">
+        </childnode>
+        <childnode refid="12155" relation="include">
+        </childnode>
+      </node>
+      <node id="12176">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="12177" relation="include">
+        </childnode>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12187" relation="include">
+        </childnode>
+        <childnode refid="12189" relation="include">
+        </childnode>
+        <childnode refid="12193" relation="include">
+        </childnode>
+      </node>
+      <node id="12188">
+        <label>limits</label>
+      </node>
+      <node id="12196">
+        <label>assert.h</label>
+      </node>
+      <node id="12201">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12177" relation="include">
+        </childnode>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12200" relation="include">
+        </childnode>
+        <childnode refid="12180" relation="include">
+        </childnode>
+        <childnode refid="12172" relation="include">
+        </childnode>
+        <childnode refid="12202" relation="include">
+        </childnode>
+        <childnode refid="12203" relation="include">
+        </childnode>
+      </node>
+      <node id="12183">
+        <label>iterator</label>
+      </node>
+      <node id="12195">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="12196" relation="include">
+        </childnode>
+        <childnode refid="12197" relation="include">
+        </childnode>
+        <childnode refid="12168" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12162" relation="include">
+        </childnode>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12187" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12198" relation="include">
+        </childnode>
+        <childnode refid="12201" relation="include">
+        </childnode>
+      </node>
+      <node id="12215">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="12189">
+        <label>cstdint</label>
+      </node>
+      <node id="12223">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="12197">
+        <label>stdint.h</label>
+      </node>
+      <node id="12234">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="12190">
+        <label>cmath</label>
+      </node>
+      <node id="12165">
+        <label>cassert</label>
+      </node>
+      <node id="12206">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12156" relation="include">
+        </childnode>
+        <childnode refid="12205" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12201" relation="include">
+        </childnode>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12207" relation="include">
+        </childnode>
+        <childnode refid="12213" relation="include">
+        </childnode>
+        <childnode refid="12158" relation="include">
+        </childnode>
+        <childnode refid="12210" relation="include">
+        </childnode>
+        <childnode refid="12189" relation="include">
+        </childnode>
+      </node>
+      <node id="12192">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12182" relation="include">
+        </childnode>
+        <childnode refid="12188" relation="include">
+        </childnode>
+      </node>
+      <node id="12168">
+        <label>stdexcept</label>
+      </node>
+      <node id="12229">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="12195" relation="include">
+        </childnode>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12168" relation="include">
+        </childnode>
+      </node>
+      <node id="12203">
+        <label>numeric</label>
+      </node>
+      <node id="12199">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="12174" relation="include">
+        </childnode>
+        <childnode refid="12158" relation="include">
+        </childnode>
+        <childnode refid="12173" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12161" relation="include">
+        </childnode>
+      </node>
+      <node id="12187">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12188" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12189" relation="include">
+        </childnode>
+        <childnode refid="12168" relation="include">
+        </childnode>
+        <childnode refid="12162" relation="include">
+        </childnode>
+        <childnode refid="12190" relation="include">
+        </childnode>
+        <childnode refid="12191" relation="include">
+        </childnode>
+        <childnode refid="12192" relation="include">
+        </childnode>
+      </node>
+      <node id="12173">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="12174" relation="include">
+        </childnode>
+      </node>
+      <node id="12198">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="12199" relation="include">
+        </childnode>
+        <childnode refid="12200" relation="include">
+        </childnode>
+      </node>
+      <node id="12167">
+        <label>string</label>
+      </node>
+      <node id="12232">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="12178" relation="include">
+        </childnode>
+        <childnode refid="12197" relation="include">
+        </childnode>
+      </node>
+      <node id="12233">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="12175" relation="include">
+        </childnode>
+        <childnode refid="12219" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12226" relation="include">
+        </childnode>
+        <childnode refid="12161" relation="include">
+        </childnode>
+      </node>
+      <node id="12157">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="12158" relation="include">
+        </childnode>
+        <childnode refid="12159" relation="include">
+        </childnode>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12173" relation="include">
+        </childnode>
+        <childnode refid="12175" relation="include">
+        </childnode>
+        <childnode refid="12194" relation="include">
+        </childnode>
+      </node>
+      <node id="12213">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="12225">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="12175" relation="include">
+        </childnode>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12207" relation="include">
+        </childnode>
+        <childnode refid="12169" relation="include">
+        </childnode>
+      </node>
+      <node id="12170">
+        <label>exception</label>
+      </node>
+      <node id="12159">
+        <label>stddef.h</label>
+      </node>
+      <node id="12200">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="12199" relation="include">
+        </childnode>
+      </node>
+      <node id="12231">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12187" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+      </node>
+      <node id="12179">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="12169" relation="include">
+        </childnode>
+      </node>
+      <node id="12214">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="12195" relation="include">
+        </childnode>
+        <childnode refid="12215" relation="include">
+        </childnode>
+      </node>
+      <node id="12171">
+        <label>ostream</label>
+      </node>
+      <node id="12156">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+      </node>
+      <node id="12204">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="12177">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12178" relation="include">
+        </childnode>
+        <childnode refid="12185" relation="include">
+        </childnode>
+        <childnode refid="12183" relation="include">
+        </childnode>
+        <childnode refid="12186" relation="include">
+        </childnode>
+      </node>
+      <node id="12220">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12221" relation="include">
+        </childnode>
+      </node>
+      <node id="12217">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="12155">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="12221">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="12199" relation="include">
+        </childnode>
+        <childnode refid="12172" relation="include">
+        </childnode>
+      </node>
+      <node id="12218">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12197" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+      </node>
+      <node id="12202">
+        <label>typeinfo</label>
+      </node>
+      <node id="12209">
+        <label>cstdio</label>
+      </node>
+      <node id="12194">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="12158" relation="include">
+        </childnode>
+        <childnode refid="12155" relation="include">
+        </childnode>
+      </node>
+      <node id="12186">
+        <label>vector</label>
+      </node>
+      <node id="12235">
+        <label>test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+        <childnode refid="12154" relation="include">
+        </childnode>
+      </node>
+      <node id="12230">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="12227">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="12184">
+        <label>new</label>
+      </node>
+      <node id="12162">
+        <label>utility</label>
+      </node>
+      <node id="12185">
+        <label>array</label>
+      </node>
+      <node id="12172">
+        <label>sstream</label>
+      </node>
+      <node id="12222">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="12195" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12214" relation="include">
+        </childnode>
+        <childnode refid="12205" relation="include">
+        </childnode>
+        <childnode refid="12223" relation="include">
+        </childnode>
+        <childnode refid="12224" relation="include">
+        </childnode>
+        <childnode refid="12225" relation="include">
+        </childnode>
+        <childnode refid="12226" relation="include">
+        </childnode>
+        <childnode refid="12227" relation="include">
+        </childnode>
+      </node>
+      <node id="12224">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="12191">
+        <label>iosfwd</label>
+      </node>
+      <node id="12181">
+        <label>cstdlib</label>
+      </node>
+      <node id="12193">
+        <label>iostream</label>
+      </node>
+      <node id="12152">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/broadcast_test.cpp</label>
+        <link refid="broadcast__test_8cpp"/>
+        <childnode refid="12153" relation="include">
+        </childnode>
+        <childnode refid="12154" relation="include">
+        </childnode>
+        <childnode refid="12235" relation="include">
+        </childnode>
+      </node>
+      <node id="12169">
+        <label>cstddef</label>
+      </node>
+      <node id="12211">
+        <label>unordered_map</label>
+      </node>
+      <node id="12210">
+        <label>mutex</label>
+      </node>
+      <node id="12154">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12156" relation="include">
+        </childnode>
+        <childnode refid="12157" relation="include">
+        </childnode>
+        <childnode refid="12195" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12205" relation="include">
+        </childnode>
+        <childnode refid="12206" relation="include">
+        </childnode>
+        <childnode refid="12214" relation="include">
+        </childnode>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12175" relation="include">
+        </childnode>
+        <childnode refid="12220" relation="include">
+        </childnode>
+        <childnode refid="12222" relation="include">
+        </childnode>
+        <childnode refid="12228" relation="include">
+        </childnode>
+        <childnode refid="12229" relation="include">
+        </childnode>
+        <childnode refid="12230" relation="include">
+        </childnode>
+        <childnode refid="12231" relation="include">
+        </childnode>
+        <childnode refid="12232" relation="include">
+        </childnode>
+        <childnode refid="12225" relation="include">
+        </childnode>
+        <childnode refid="12226" relation="include">
+        </childnode>
+        <childnode refid="12219" relation="include">
+        </childnode>
+        <childnode refid="12233" relation="include">
+        </childnode>
+        <childnode refid="12234" relation="include">
+        </childnode>
+      </node>
+      <node id="12208">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="12180" relation="include">
+        </childnode>
+        <childnode refid="12209" relation="include">
+        </childnode>
+        <childnode refid="12181" relation="include">
+        </childnode>
+        <childnode refid="12166" relation="include">
+        </childnode>
+        <childnode refid="12158" relation="include">
+        </childnode>
+        <childnode refid="12210" relation="include">
+        </childnode>
+        <childnode refid="12211" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+        <childnode refid="12186" relation="include">
+        </childnode>
+        <childnode refid="12212" relation="include">
+        </childnode>
+        <childnode refid="12155" relation="include">
+        </childnode>
+      </node>
+      <node id="12160">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="12155" relation="include">
+        </childnode>
+        <childnode refid="12161" relation="include">
+        </childnode>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12170" relation="include">
+        </childnode>
+        <childnode refid="12171" relation="include">
+        </childnode>
+        <childnode refid="12172" relation="include">
+        </childnode>
+        <childnode refid="12167" relation="include">
+        </childnode>
+      </node>
+      <node id="12226">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="12206" relation="include">
+        </childnode>
+        <childnode refid="12175" relation="include">
+        </childnode>
+        <childnode refid="12225" relation="include">
+        </childnode>
+        <childnode refid="12219" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12216" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12191" relation="include">
+        </childnode>
+        <childnode refid="12162" relation="include">
+        </childnode>
+      </node>
+      <node id="12216">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="12205" relation="include">
+        </childnode>
+        <childnode refid="12195" relation="include">
+        </childnode>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12217" relation="include">
+        </childnode>
+        <childnode refid="12214" relation="include">
+        </childnode>
+        <childnode refid="12218" relation="include">
+        </childnode>
+        <childnode refid="12198" relation="include">
+        </childnode>
+        <childnode refid="12199" relation="include">
+        </childnode>
+        <childnode refid="12201" relation="include">
+        </childnode>
+        <childnode refid="12175" relation="include">
+        </childnode>
+        <childnode refid="12219" relation="include">
+        </childnode>
+        <childnode refid="12161" relation="include">
+        </childnode>
+      </node>
+      <node id="12163">
+        <label>type_traits</label>
+      </node>
+      <node id="12219">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="12176" relation="include">
+        </childnode>
+        <childnode refid="12160" relation="include">
+        </childnode>
+        <childnode refid="12193" relation="include">
+        </childnode>
+      </node>
+      <node id="12178">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="12179" relation="include">
+        </childnode>
+        <childnode refid="12180" relation="include">
+        </childnode>
+        <childnode refid="12165" relation="include">
+        </childnode>
+        <childnode refid="12169" relation="include">
+        </childnode>
+        <childnode refid="12181" relation="include">
+        </childnode>
+        <childnode refid="12182" relation="include">
+        </childnode>
+        <childnode refid="12164" relation="include">
+        </childnode>
+        <childnode refid="12183" relation="include">
+        </childnode>
+        <childnode refid="12158" relation="include">
+        </childnode>
+        <childnode refid="12184" relation="include">
+        </childnode>
+        <childnode refid="12163" relation="include">
+        </childnode>
+        <childnode refid="12162" relation="include">
+        </childnode>
+        <childnode refid="12155" relation="include">
+        </childnode>
+      </node>
+      <node id="12180">
+        <label>algorithm</label>
+      </node>
+      <node id="12205">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="12197" relation="include">
+        </childnode>
+      </node>
+      <node id="12182">
+        <label>cstring</label>
+      </node>
+      <node id="12158">
+        <label>memory</label>
+      </node>
+      <node id="12164">
+        <label>initializer_list</label>
+      </node>
+      <node id="12228">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="12193" relation="include">
+        </childnode>
+        <childnode refid="12204" relation="include">
+        </childnode>
+        <childnode refid="12195" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="broadcast__test_8cpp_1a656eb5868e824d59f489f910db438420" prot="public" static="no">
+        <name>CATCH_CONFIG_MAIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/broadcast_test.cpp" line="1" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/broadcast_test.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="broadcast__test_8cpp_1af7b65a90ae95fe28639c2172210a4535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;broadcast&quot;, &quot;[]&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;broadcast&quot;</type>
+        </param>
+        <param>
+          <type>&quot;&quot;</type>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/broadcast_test.cpp" line="9" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/broadcast_test.cpp" bodystart="9" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CATCH_CONFIG_MAIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;catch.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;test_seed.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">TEST_CASE(<sp/></highlight><highlight class="stringliteral">&quot;broadcast&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;[]&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>manual_seed(123,<sp/>at::Backend::CPU);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_type" kindref="compound">Type</ref><sp/>&amp;<sp/>T<sp/>=<sp/>CPU(kFloat);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>0)<sp/>pre-req<sp/>tests:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;can&apos;t<sp/>expand<sp/>empty<sp/>tensor&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>empty<sp/>=<sp/>randn({0},<sp/>T);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE_THROWS(empty.expand({3}));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>1)<sp/>out-place<sp/>function<sp/>with<sp/>2<sp/>args</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;out-place<sp/>function<sp/>with<sp/>2<sp/>args&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({5},<sp/>T);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>expanded_sizes<sp/>=<sp/>{3,<sp/>5};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE((a<sp/>+<sp/>b).equal(a.expand(expanded_sizes)<sp/>+<sp/>b.expand(expanded_sizes)));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>scalar&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>aScalar<sp/>=<sp/>ones({1},<sp/>T);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>aScalar.get()-&gt;maybeScalar(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE((aScalar<sp/>+<sp/>b).equal(aScalar.expand(b.sizes())<sp/>+<sp/>b.expand(b.sizes())));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;old<sp/>fallback<sp/>behavior<sp/>yields<sp/>error&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({5,<sp/>3},<sp/>T);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a<sp/>+<sp/>b);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>mismatched<sp/>sizes&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({7,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a<sp/>+<sp/>b);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;out-place<sp/>function<sp/>with<sp/>3<sp/>args&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>1,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({1,<sp/>2,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({1,<sp/>1,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>expanded_sizes<sp/>=<sp/>{3,<sp/>2,<sp/>5};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE((a<sp/>+<sp/>b<sp/>+<sp/>c).equal(a.expand(expanded_sizes)<sp/>+<sp/>b.expand(expanded_sizes)<sp/>+<sp/>c.expand(expanded_sizes)));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>scalar&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>aTensorScalar<sp/>=<sp/>ones({1},<sp/>T);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>aTensorScalar.get()-&gt;maybeScalar(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({3,<sp/>2,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({1,<sp/>2,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;int64_t&gt;<sp/>expanded_sizes<sp/>=<sp/>{3,<sp/>2,<sp/>5};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(aTensorScalar.addcmul(b,<sp/>c).equal(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>aTensorScalar.expand(expanded_sizes).addcmul(b.expand(expanded_sizes),<sp/>c.expand(expanded_sizes))));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;old<sp/>fallback<sp/>behavior<sp/>yields<sp/>error&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>2,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({2,<sp/>3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({5,<sp/>3,<sp/>2},<sp/>T);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a.addcmul(b,<sp/>c));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>mismatched<sp/>sizes&quot;</highlight><highlight class="normal"><sp/>){</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>2,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({2,<sp/>3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({5,<sp/>5,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a.addcmul(b,<sp/>c));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;in-place<sp/>function<sp/>with<sp/>2<sp/>args&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({3,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE((a<sp/>+<sp/>b).equal(a<sp/>+<sp/>b.expand({3,<sp/>5})));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>scalar&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bScalar<sp/>=<sp/>ones({1},<sp/>T);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bScalar.get()-&gt;maybeScalar(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE((a<sp/>+<sp/>bScalar).equal(a<sp/>+<sp/>bScalar.expand(a.sizes())));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>would<sp/>have<sp/>to<sp/>expand<sp/>inplace<sp/>arg&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({1,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({3,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a.add_(b));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;in-place<sp/>function<sp/>with<sp/>3<sp/>args&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>5,<sp/>2},<sp/>T);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({3,<sp/>1,<sp/>2},<sp/>T);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({1,<sp/>5,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>aClone<sp/>=<sp/>a.clone();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(a.addcmul_(b,<sp/>c).equal(aClone.addcmul_(b.expand(a.sizes()),<sp/>c.expand(a.sizes()))));</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>scalar&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>aClone<sp/>=<sp/>a.clone();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>bScalar<sp/>=<sp/>ones({1},<sp/>T);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bScalar.get()-&gt;maybeScalar(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(a.addcmul_(bScalar,<sp/>c).equal(aClone.addcmul_(bScalar.expand(a.sizes()),<sp/>c.expand(a.sizes()))));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;error:<sp/>would<sp/>have<sp/>to<sp/>expand<sp/>inplace<sp/>arg&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({1,<sp/>3,<sp/>5},<sp/>T);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({4,<sp/>1,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({1,<sp/>3,<sp/>1},<sp/>T);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a.addcmul_(b,<sp/>c));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;explicit<sp/>dim<sp/>specification&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({1},<sp/>T);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>randn({5,<sp/>3},<sp/>T);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>c<sp/>=<sp/>randn({3,<sp/>7},<sp/>T);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(a.addmm(b,<sp/>c).equal(a.expand({5,7}).addmm(b,<sp/>c)));</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>scalar&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>aScalar<sp/>=<sp/>ones({1},<sp/>T);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>aScalar.get()-&gt;maybeScalar(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE(aScalar.addmm(b,<sp/>c).equal(aScalar.expand({5,<sp/>7}).addmm(b,<sp/>c)));</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>SECTION(<sp/></highlight><highlight class="stringliteral">&quot;with<sp/>mismatched<sp/>sizes&quot;</highlight><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>a<sp/>=<sp/>randn({3,<sp/>3},<sp/>T);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>REQUIRE_THROWS(a.addmm(b,<sp/>c));</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/broadcast_test.cpp"/>
+  </compounddef>
+</doxygen>

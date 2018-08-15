@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1detail_1_1_tensor_base_impl" kind="struct" language="C++" prot="public">
+    <compoundname>at::detail::TensorBaseImpl</compoundname>
+    <derivedcompoundref refid="structat_1_1_tensor" prot="public" virt="non-virtual">at::Tensor</derivedcompoundref>
+    <derivedcompoundref refid="structat_1_1_tensor" prot="public" virt="non-virtual">at::Tensor</derivedcompoundref>
+    <derivedcompoundref refid="structat_1_1_weak_tensor" prot="public" virt="non-virtual">at::WeakTensor</derivedcompoundref>
+    <derivedcompoundref refid="structat_1_1_weak_tensor" prot="public" virt="non-virtual">at::WeakTensor</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>bool</type>
+        <declname>is_strong</declname>
+        <defname>is_strong</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structat_1_1detail_1_1_tensor_base_impl_1a9d088de66de35d450a56e236fbaab94d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="81" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structat_1_1detail_1_1_tensor_base_impl_1a0fd8c05f8aa269923a3b0e237d0592b8" prot="public" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+        <definition>TensorImpl* at::detail::TensorBaseImpl&lt; is_strong &gt;::pImpl</definition>
+        <argsstring></argsstring>
+        <name>pImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="85" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a693cc27c833f78fab0b11fef9e33d110" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::detail::TensorBaseImpl&lt; is_strong &gt;::TensorBaseImpl</definition>
+        <argsstring>()</argsstring>
+        <name>TensorBaseImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="11" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="11" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a536ae4dee477d6238aad7ea6c0577b61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::detail::TensorBaseImpl&lt; is_strong &gt;::TensorBaseImpl</definition>
+        <argsstring>(TensorImpl *self, bool should_retain)</argsstring>
+        <name>TensorBaseImpl</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>should_retain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="12" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="12" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a3af33b4a76bf3ac3c8fd2a25dda7bb96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::detail::TensorBaseImpl&lt; is_strong &gt;::TensorBaseImpl</definition>
+        <argsstring>(const TensorBaseImpl &amp;rhs)</argsstring>
+        <name>TensorBaseImpl</name>
+        <param>
+          <type>const <ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="21" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a3b790184f8440ceae70215d3c8291c15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::detail::TensorBaseImpl&lt; is_strong &gt;::TensorBaseImpl</definition>
+        <argsstring>(TensorBaseImpl &amp;&amp;rhs) noexcept</argsstring>
+        <name>TensorBaseImpl</name>
+        <param>
+          <type><ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="27" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1ab8ab4a0e6ec611a8571ba03e3151daad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::detail::TensorBaseImpl&lt; is_strong &gt;::~TensorBaseImpl</definition>
+        <argsstring>()</argsstring>
+        <name>~TensorBaseImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="31" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="31" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a20dae34c3fc4be8321dda63ee3064a9e" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <type><ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> &amp;</type>
+        <definition>TensorBaseImpl&amp; at::detail::TensorBaseImpl&lt; is_strong &gt;::operator=</definition>
+        <argsstring>(TensorBaseImpl &amp;&amp;rhs) &amp;</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> &amp;&amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="36" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a58b39d2f0941418977b617c8d9303372" prot="public" static="no" const="no" explicit="no" inline="yes" refqual="lvalue" virt="non-virtual">
+        <type><ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> &amp;</type>
+        <definition>TensorBaseImpl&amp; at::detail::TensorBaseImpl&lt; is_strong &gt;::operator=</definition>
+        <argsstring>(TensorBaseImpl const &amp;rhs) &amp;</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> const &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a035d60099a2293e070b6a150c201cf0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::detail::TensorBaseImpl&lt; is_strong &gt;::dim</definition>
+        <argsstring>() const</argsstring>
+        <name>dim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="47" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="47" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a9a4a2e694e26ce5d3d90d7bc6dc58f56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::detail::TensorBaseImpl&lt; is_strong &gt;::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="54" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1abc80a9b964737897f9476c616bf41aa9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::detail::TensorBaseImpl&lt; is_strong &gt;::reset</definition>
+        <argsstring>(TensorImpl *rhs)</argsstring>
+        <name>reset</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="57" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="57" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a78d88d013fe23bb05dde64403652bbe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::detail::TensorBaseImpl&lt; is_strong &gt;::reset</definition>
+        <argsstring>(TensorImpl *rhs, bool should_retain)</argsstring>
+        <name>reset</name>
+        <param>
+          <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>should_retain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="60" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a0a08b33b8c56059599af0ac3db63f41b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::detail::TensorBaseImpl&lt; is_strong &gt;::swap</definition>
+        <argsstring>(TensorBaseImpl &amp;rhs)</argsstring>
+        <name>swap</name>
+        <param>
+          <type><ref refid="structat_1_1detail_1_1_tensor_base_impl" kindref="compound">TensorBaseImpl</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="63" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a4b6520f7edcc5682ceb9c790b66a45b7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+        <definition>TensorImpl* at::detail::TensorBaseImpl&lt; is_strong &gt;::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="68" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a38c63c4d8f35ed5dd2634f26c083e8bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor_impl" kindref="compound">TensorImpl</ref> *</type>
+        <definition>TensorImpl* at::detail::TensorBaseImpl&lt; is_strong &gt;::detach</definition>
+        <argsstring>()</argsstring>
+        <name>detach</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1aa84fc2e46da60e511e23eb3fa40989f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::detail::TensorBaseImpl&lt; is_strong &gt;::defined</definition>
+        <argsstring>() const</argsstring>
+        <name>defined</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="77" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="77" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1a45f8988f222a058b1e80df37fb0a3bd0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::detail::TensorBaseImpl&lt; is_strong &gt;::retain</definition>
+        <argsstring>()</argsstring>
+        <name>retain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="88" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="88" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1detail_1_1_tensor_base_impl_1ae0f62e19e443752aeda46b1dac1259b5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::detail::TensorBaseImpl&lt; is_strong &gt;::release</definition>
+        <argsstring>()</argsstring>
+        <name>release</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="96" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="96" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="698">
+        <label>at::detail::TensorBaseImpl&lt; is_strong &gt;</label>
+        <link refid="structat_1_1detail_1_1_tensor_base_impl"/>
+      </node>
+      <node id="699">
+        <label>at::Tensor&lt; true &gt;</label>
+        <link refid="structat_1_1_tensor"/>
+        <childnode refid="698" relation="public-inheritance">
+        </childnode>
+        <childnode refid="698" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="700">
+        <label>at::WeakTensor&lt; false &gt;</label>
+        <link refid="structat_1_1_weak_tensor"/>
+        <childnode refid="698" relation="public-inheritance">
+        </childnode>
+        <childnode refid="698" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="701">
+        <label>at::detail::TensorBaseImpl&lt; is_strong &gt;</label>
+        <link refid="structat_1_1detail_1_1_tensor_base_impl"/>
+        <childnode refid="702" relation="usage">
+          <edgelabel>pImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="704">
+        <label>at::Type</label>
+        <link refid="structat_1_1_type"/>
+      </node>
+      <node id="702">
+        <label>at::TensorImpl</label>
+        <link refid="structat_1_1_tensor_impl"/>
+        <childnode refid="703" relation="public-inheritance">
+        </childnode>
+        <childnode refid="704" relation="usage">
+          <edgelabel>type_</edgelabel>
+        </childnode>
+      </node>
+      <node id="703">
+        <label>at::Retainable</label>
+        <link refid="structat_1_1_retainable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" line="10" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h" bodystart="10" bodyend="103"/>
+    <listofallmembers>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1aa84fc2e46da60e511e23eb3fa40989f7" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>defined</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a38c63c4d8f35ed5dd2634f26c083e8bc" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>detach</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a035d60099a2293e070b6a150c201cf0b" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>dim</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a4b6520f7edcc5682ceb9c790b66a45b7" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>get</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a20dae34c3fc4be8321dda63ee3064a9e" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>operator=</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a58b39d2f0941418977b617c8d9303372" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>operator=</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a0fd8c05f8aa269923a3b0e237d0592b8" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>pImpl</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1ae0f62e19e443752aeda46b1dac1259b5" prot="private" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>release</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a9a4a2e694e26ce5d3d90d7bc6dc58f56" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>reset</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1abc80a9b964737897f9476c616bf41aa9" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>reset</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a78d88d013fe23bb05dde64403652bbe9" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>reset</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a45f8988f222a058b1e80df37fb0a3bd0" prot="private" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>retain</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a0a08b33b8c56059599af0ac3db63f41b" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>swap</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a693cc27c833f78fab0b11fef9e33d110" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>TensorBaseImpl</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a536ae4dee477d6238aad7ea6c0577b61" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>TensorBaseImpl</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a3af33b4a76bf3ac3c8fd2a25dda7bb96" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>TensorBaseImpl</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a3b790184f8440ceae70215d3c8291c15" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>TensorBaseImpl</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1a9d088de66de35d450a56e236fbaab94d" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>Type</name></member>
+      <member refid="structat_1_1detail_1_1_tensor_base_impl_1ab8ab4a0e6ec611a8571ba03e3151daad" prot="public" virt="non-virtual"><scope>at::detail::TensorBaseImpl</scope><name>~TensorBaseImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

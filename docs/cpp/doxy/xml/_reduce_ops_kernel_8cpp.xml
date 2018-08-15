@@ -1,0 +1,1062 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_reduce_ops_kernel_8cpp" kind="file" language="C++">
+    <compoundname>ReduceOpsKernel.cpp</compoundname>
+    <includes refid="_reduce_ops_kernel_8h" local="yes">ATen/native/cpu/ReduceOpsKernel.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">iterator</includes>
+    <includes local="no">algorithm</includes>
+    <includes refid="_dispatch_8h" local="yes">ATen/Dispatch.h</includes>
+    <includes refid="_parallel_8h" local="yes">ATen/Parallel.h</includes>
+    <includes refid="vec256_8h" local="yes">ATen/cpu/vec256/vec256.h</includes>
+    <includes refid="optional_8h" local="yes">ATen/optional.h</includes>
+    <incdepgraph>
+      <node id="4744">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="4745" relation="include">
+        </childnode>
+        <childnode refid="4746" relation="include">
+        </childnode>
+        <childnode refid="4747" relation="include">
+        </childnode>
+        <childnode refid="4748" relation="include">
+        </childnode>
+        <childnode refid="4749" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4751" relation="include">
+        </childnode>
+      </node>
+      <node id="4790">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="4740" relation="include">
+        </childnode>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4788" relation="include">
+        </childnode>
+        <childnode refid="4791" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4749" relation="include">
+        </childnode>
+        <childnode refid="4741" relation="include">
+        </childnode>
+      </node>
+      <node id="4758">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4774" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4749" relation="include">
+        </childnode>
+      </node>
+      <node id="4757">
+        <label>atomic</label>
+      </node>
+      <node id="4749">
+        <label>functional</label>
+      </node>
+      <node id="4795">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4785" relation="include">
+        </childnode>
+        <childnode refid="4738" relation="include">
+        </childnode>
+      </node>
+      <node id="4759">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="4760" relation="include">
+        </childnode>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4770" relation="include">
+        </childnode>
+        <childnode refid="4772" relation="include">
+        </childnode>
+        <childnode refid="4776" relation="include">
+        </childnode>
+      </node>
+      <node id="4771">
+        <label>limits</label>
+      </node>
+      <node id="4779">
+        <label>assert.h</label>
+      </node>
+      <node id="4784">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4760" relation="include">
+        </childnode>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4783" relation="include">
+        </childnode>
+        <childnode refid="4763" relation="include">
+        </childnode>
+        <childnode refid="4755" relation="include">
+        </childnode>
+        <childnode refid="4785" relation="include">
+        </childnode>
+        <childnode refid="4786" relation="include">
+        </childnode>
+      </node>
+      <node id="4766">
+        <label>iterator</label>
+      </node>
+      <node id="4778">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="4779" relation="include">
+        </childnode>
+        <childnode refid="4780" relation="include">
+        </childnode>
+        <childnode refid="4751" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4745" relation="include">
+        </childnode>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4770" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4781" relation="include">
+        </childnode>
+        <childnode refid="4784" relation="include">
+        </childnode>
+      </node>
+      <node id="4798">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="4822">
+        <label>vec256_base.h</label>
+        <link refid="vec256__base_8h_source"/>
+        <childnode refid="4765" relation="include">
+        </childnode>
+        <childnode refid="4749" relation="include">
+        </childnode>
+        <childnode refid="4773" relation="include">
+        </childnode>
+        <childnode refid="4784" relation="include">
+        </childnode>
+      </node>
+      <node id="4772">
+        <label>cstdint</label>
+      </node>
+      <node id="4806">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="4780">
+        <label>stdint.h</label>
+      </node>
+      <node id="4817">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="4773">
+        <label>cmath</label>
+      </node>
+      <node id="4748">
+        <label>cassert</label>
+      </node>
+      <node id="4789">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4739" relation="include">
+        </childnode>
+        <childnode refid="4788" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4784" relation="include">
+        </childnode>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4790" relation="include">
+        </childnode>
+        <childnode refid="4796" relation="include">
+        </childnode>
+        <childnode refid="4741" relation="include">
+        </childnode>
+        <childnode refid="4793" relation="include">
+        </childnode>
+        <childnode refid="4772" relation="include">
+        </childnode>
+      </node>
+      <node id="4775">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4765" relation="include">
+        </childnode>
+        <childnode refid="4771" relation="include">
+        </childnode>
+      </node>
+      <node id="4751">
+        <label>stdexcept</label>
+      </node>
+      <node id="4812">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="4778" relation="include">
+        </childnode>
+        <childnode refid="4799" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4751" relation="include">
+        </childnode>
+      </node>
+      <node id="4786">
+        <label>numeric</label>
+      </node>
+      <node id="4782">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="4757" relation="include">
+        </childnode>
+        <childnode refid="4741" relation="include">
+        </childnode>
+        <childnode refid="4756" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4744" relation="include">
+        </childnode>
+      </node>
+      <node id="4735">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.cpp</label>
+        <link refid="_reduce_ops_kernel_8cpp"/>
+        <childnode refid="4736" relation="include">
+        </childnode>
+        <childnode refid="4786" relation="include">
+        </childnode>
+        <childnode refid="4766" relation="include">
+        </childnode>
+        <childnode refid="4763" relation="include">
+        </childnode>
+        <childnode refid="4814" relation="include">
+        </childnode>
+        <childnode refid="4819" relation="include">
+        </childnode>
+        <childnode refid="4820" relation="include">
+        </childnode>
+        <childnode refid="4744" relation="include">
+        </childnode>
+      </node>
+      <node id="4770">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4771" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4772" relation="include">
+        </childnode>
+        <childnode refid="4751" relation="include">
+        </childnode>
+        <childnode refid="4745" relation="include">
+        </childnode>
+        <childnode refid="4773" relation="include">
+        </childnode>
+        <childnode refid="4774" relation="include">
+        </childnode>
+        <childnode refid="4775" relation="include">
+        </childnode>
+      </node>
+      <node id="4756">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="4757" relation="include">
+        </childnode>
+      </node>
+      <node id="4820">
+        <label>ATen/cpu/vec256/vec256.h</label>
+        <link refid="vec256_8h_source"/>
+        <childnode refid="4821" relation="include">
+        </childnode>
+        <childnode refid="4822" relation="include">
+        </childnode>
+        <childnode refid="4823" relation="include">
+        </childnode>
+        <childnode refid="4824" relation="include">
+        </childnode>
+        <childnode refid="4825" relation="include">
+        </childnode>
+        <childnode refid="4763" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4772" relation="include">
+        </childnode>
+        <childnode refid="4765" relation="include">
+        </childnode>
+        <childnode refid="4776" relation="include">
+        </childnode>
+      </node>
+      <node id="4781">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="4782" relation="include">
+        </childnode>
+        <childnode refid="4783" relation="include">
+        </childnode>
+      </node>
+      <node id="4750">
+        <label>string</label>
+      </node>
+      <node id="4815">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="4761" relation="include">
+        </childnode>
+        <childnode refid="4780" relation="include">
+        </childnode>
+      </node>
+      <node id="4824">
+        <label>vec256_double.h</label>
+        <link refid="vec256__double_8h_source"/>
+        <childnode refid="4821" relation="include">
+        </childnode>
+        <childnode refid="4822" relation="include">
+        </childnode>
+      </node>
+      <node id="4816">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="4758" relation="include">
+        </childnode>
+        <childnode refid="4802" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4809" relation="include">
+        </childnode>
+        <childnode refid="4744" relation="include">
+        </childnode>
+      </node>
+      <node id="4740">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="4741" relation="include">
+        </childnode>
+        <childnode refid="4742" relation="include">
+        </childnode>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4756" relation="include">
+        </childnode>
+        <childnode refid="4758" relation="include">
+        </childnode>
+        <childnode refid="4777" relation="include">
+        </childnode>
+      </node>
+      <node id="4796">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="4808">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="4758" relation="include">
+        </childnode>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4799" relation="include">
+        </childnode>
+        <childnode refid="4790" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+      </node>
+      <node id="4753">
+        <label>exception</label>
+      </node>
+      <node id="4742">
+        <label>stddef.h</label>
+      </node>
+      <node id="4783">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="4782" relation="include">
+        </childnode>
+      </node>
+      <node id="4814">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4770" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+      </node>
+      <node id="4762">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="4752" relation="include">
+        </childnode>
+      </node>
+      <node id="4797">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="4778" relation="include">
+        </childnode>
+        <childnode refid="4798" relation="include">
+        </childnode>
+      </node>
+      <node id="4754">
+        <label>ostream</label>
+      </node>
+      <node id="4739">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+      </node>
+      <node id="4787">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="4760">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4761" relation="include">
+        </childnode>
+        <childnode refid="4768" relation="include">
+        </childnode>
+        <childnode refid="4766" relation="include">
+        </childnode>
+        <childnode refid="4769" relation="include">
+        </childnode>
+      </node>
+      <node id="4803">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4804" relation="include">
+        </childnode>
+      </node>
+      <node id="4800">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="4738">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="4804">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="4782" relation="include">
+        </childnode>
+        <childnode refid="4755" relation="include">
+        </childnode>
+      </node>
+      <node id="4801">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4780" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+      </node>
+      <node id="4818">
+        <label>ATen/native/DispatchStub.h</label>
+        <link refid="_dispatch_stub_8h_source"/>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4746" relation="include">
+        </childnode>
+      </node>
+      <node id="4785">
+        <label>typeinfo</label>
+      </node>
+      <node id="4792">
+        <label>cstdio</label>
+      </node>
+      <node id="4777">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="4741" relation="include">
+        </childnode>
+        <childnode refid="4738" relation="include">
+        </childnode>
+      </node>
+      <node id="4769">
+        <label>vector</label>
+      </node>
+      <node id="4813">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="4810">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="4767">
+        <label>new</label>
+      </node>
+      <node id="4745">
+        <label>utility</label>
+      </node>
+      <node id="4768">
+        <label>array</label>
+      </node>
+      <node id="4755">
+        <label>sstream</label>
+      </node>
+      <node id="4805">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="4778" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4799" relation="include">
+        </childnode>
+        <childnode refid="4797" relation="include">
+        </childnode>
+        <childnode refid="4788" relation="include">
+        </childnode>
+        <childnode refid="4806" relation="include">
+        </childnode>
+        <childnode refid="4807" relation="include">
+        </childnode>
+        <childnode refid="4808" relation="include">
+        </childnode>
+        <childnode refid="4809" relation="include">
+        </childnode>
+        <childnode refid="4810" relation="include">
+        </childnode>
+      </node>
+      <node id="4823">
+        <label>vec256_float.h</label>
+        <link refid="vec256__float_8h_source"/>
+        <childnode refid="4821" relation="include">
+        </childnode>
+        <childnode refid="4822" relation="include">
+        </childnode>
+      </node>
+      <node id="4807">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="4825">
+        <label>vec256_int.h</label>
+        <link refid="vec256__int_8h_source"/>
+        <childnode refid="4821" relation="include">
+        </childnode>
+        <childnode refid="4822" relation="include">
+        </childnode>
+      </node>
+      <node id="4774">
+        <label>iosfwd</label>
+      </node>
+      <node id="4764">
+        <label>cstdlib</label>
+      </node>
+      <node id="4736">
+        <label>ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+        <childnode refid="4737" relation="include">
+        </childnode>
+        <childnode refid="4818" relation="include">
+        </childnode>
+        <childnode refid="4744" relation="include">
+        </childnode>
+      </node>
+      <node id="4776">
+        <label>iostream</label>
+      </node>
+      <node id="4752">
+        <label>cstddef</label>
+      </node>
+      <node id="4794">
+        <label>unordered_map</label>
+      </node>
+      <node id="4793">
+        <label>mutex</label>
+      </node>
+      <node id="4821">
+        <label>intrinsics.h</label>
+        <link refid="cpu_2vec256_2intrinsics_8h_source"/>
+      </node>
+      <node id="4737">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4739" relation="include">
+        </childnode>
+        <childnode refid="4740" relation="include">
+        </childnode>
+        <childnode refid="4778" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4788" relation="include">
+        </childnode>
+        <childnode refid="4789" relation="include">
+        </childnode>
+        <childnode refid="4797" relation="include">
+        </childnode>
+        <childnode refid="4799" relation="include">
+        </childnode>
+        <childnode refid="4758" relation="include">
+        </childnode>
+        <childnode refid="4803" relation="include">
+        </childnode>
+        <childnode refid="4805" relation="include">
+        </childnode>
+        <childnode refid="4811" relation="include">
+        </childnode>
+        <childnode refid="4812" relation="include">
+        </childnode>
+        <childnode refid="4813" relation="include">
+        </childnode>
+        <childnode refid="4814" relation="include">
+        </childnode>
+        <childnode refid="4815" relation="include">
+        </childnode>
+        <childnode refid="4808" relation="include">
+        </childnode>
+        <childnode refid="4809" relation="include">
+        </childnode>
+        <childnode refid="4802" relation="include">
+        </childnode>
+        <childnode refid="4816" relation="include">
+        </childnode>
+        <childnode refid="4817" relation="include">
+        </childnode>
+      </node>
+      <node id="4791">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="4763" relation="include">
+        </childnode>
+        <childnode refid="4792" relation="include">
+        </childnode>
+        <childnode refid="4764" relation="include">
+        </childnode>
+        <childnode refid="4749" relation="include">
+        </childnode>
+        <childnode refid="4741" relation="include">
+        </childnode>
+        <childnode refid="4793" relation="include">
+        </childnode>
+        <childnode refid="4794" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+        <childnode refid="4769" relation="include">
+        </childnode>
+        <childnode refid="4795" relation="include">
+        </childnode>
+        <childnode refid="4738" relation="include">
+        </childnode>
+      </node>
+      <node id="4743">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="4738" relation="include">
+        </childnode>
+        <childnode refid="4744" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4753" relation="include">
+        </childnode>
+        <childnode refid="4754" relation="include">
+        </childnode>
+        <childnode refid="4755" relation="include">
+        </childnode>
+        <childnode refid="4750" relation="include">
+        </childnode>
+      </node>
+      <node id="4809">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="4789" relation="include">
+        </childnode>
+        <childnode refid="4758" relation="include">
+        </childnode>
+        <childnode refid="4808" relation="include">
+        </childnode>
+        <childnode refid="4802" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4799" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4774" relation="include">
+        </childnode>
+        <childnode refid="4745" relation="include">
+        </childnode>
+      </node>
+      <node id="4799">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="4788" relation="include">
+        </childnode>
+        <childnode refid="4778" relation="include">
+        </childnode>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4800" relation="include">
+        </childnode>
+        <childnode refid="4797" relation="include">
+        </childnode>
+        <childnode refid="4801" relation="include">
+        </childnode>
+        <childnode refid="4781" relation="include">
+        </childnode>
+        <childnode refid="4782" relation="include">
+        </childnode>
+        <childnode refid="4784" relation="include">
+        </childnode>
+        <childnode refid="4758" relation="include">
+        </childnode>
+        <childnode refid="4802" relation="include">
+        </childnode>
+        <childnode refid="4744" relation="include">
+        </childnode>
+      </node>
+      <node id="4746">
+        <label>type_traits</label>
+      </node>
+      <node id="4802">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="4759" relation="include">
+        </childnode>
+        <childnode refid="4743" relation="include">
+        </childnode>
+        <childnode refid="4776" relation="include">
+        </childnode>
+      </node>
+      <node id="4761">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="4762" relation="include">
+        </childnode>
+        <childnode refid="4763" relation="include">
+        </childnode>
+        <childnode refid="4748" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+        <childnode refid="4764" relation="include">
+        </childnode>
+        <childnode refid="4765" relation="include">
+        </childnode>
+        <childnode refid="4747" relation="include">
+        </childnode>
+        <childnode refid="4766" relation="include">
+        </childnode>
+        <childnode refid="4741" relation="include">
+        </childnode>
+        <childnode refid="4767" relation="include">
+        </childnode>
+        <childnode refid="4746" relation="include">
+        </childnode>
+        <childnode refid="4745" relation="include">
+        </childnode>
+        <childnode refid="4738" relation="include">
+        </childnode>
+      </node>
+      <node id="4763">
+        <label>algorithm</label>
+      </node>
+      <node id="4788">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="4780" relation="include">
+        </childnode>
+      </node>
+      <node id="4765">
+        <label>cstring</label>
+      </node>
+      <node id="4741">
+        <label>memory</label>
+      </node>
+      <node id="4747">
+        <label>initializer_list</label>
+      </node>
+      <node id="4819">
+        <label>ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="4737" relation="include">
+        </childnode>
+        <childnode refid="4752" relation="include">
+        </childnode>
+      </node>
+      <node id="4811">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="4776" relation="include">
+        </childnode>
+        <childnode refid="4787" relation="include">
+        </childnode>
+        <childnode refid="4778" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_reduce_ops_kernel_8cpp_1ab44a4b7e31fd22d0239c90f6e4ef1838" prot="public" static="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int WIDTH</definition>
+        <argsstring></argsstring>
+        <name>WIDTH</name>
+        <initializer>= 128 / sizeof(scalar_t)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.cpp" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.cpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/native/cpu/ReduceOpsKernel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iterator&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Dispatch.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Parallel.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cpu/vec256/vec256.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/optional.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">vec256;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>int64_t<sp/>round_down(int64_t<sp/>a,<sp/>int64_t<sp/>m)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>a<sp/>-<sp/>(a<sp/>%<sp/>m);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>F&gt;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>_parallel_for(int64_t<sp/>size,<sp/>int64_t<sp/>step,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>parallelize,<sp/>F<sp/>func)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(parallelize)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>parallel_for(0,<sp/>size<sp/>/<sp/>step,<sp/>1,<sp/>[func,<sp/>step](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>k<sp/>=<sp/>begin<sp/>*<sp/>step;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>begin;<sp/>i<sp/>&lt;<sp/>end;<sp/>i++,<sp/>k<sp/>+=<sp/>step)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>func(k);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>!=<sp/>size;<sp/>i<sp/>+=<sp/>step)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>func(i);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Vectorized<sp/>reduction<sp/>defined<sp/>by<sp/>reduce<sp/>operation<sp/>`Op`<sp/>with<sp/>identity<sp/>`ident`.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>reduction<sp/>is<sp/>built<sp/>on<sp/>top<sp/>of<sp/>reduce128,<sp/>which<sp/>reduces<sp/>down<sp/>a<sp/>column</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>128<sp/>bytes<sp/>wide<sp/>(WIDTH<sp/>scalar<sp/>elements).<sp/>The<sp/>width<sp/>of<sp/>128<sp/>bytes<sp/>is<sp/>chosen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>because<sp/>of<sp/>the<sp/>&quot;adjacent<sp/>cache<sp/>line<sp/>prefetch&quot;<sp/>behavior<sp/>on<sp/>x86<sp/>CPUs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal">&gt;<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Op,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ident&gt;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Reduction<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>reduction<sp/>width<sp/>in<sp/>number<sp/>of<sp/>scalar<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>WIDTH<sp/>=<sp/>128<sp/>/<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(scalar_t);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Reduce<sp/>=<sp/>Op&lt;Vec&gt;;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>ReduceScalar<sp/>=<sp/>Op&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>apply(Tensor&amp;<sp/>res,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="classat_1_1optional" kindref="compound">at::optional&lt;int64_t&gt;</ref><sp/>dim)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>out_<sp/>=<sp/>res.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>data_<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.data&lt;scalar_t&gt;();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>numel<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.numel();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dim.has_value())<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>*out_<sp/>=<sp/>reduce_all(data_,<sp/>numel);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>n<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.size(*dim);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>stride<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.stride(*dim);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>A<sp/>contiguous<sp/>tensor<sp/>does<sp/>not<sp/>need<sp/>to<sp/>hold<sp/>a<sp/>meaningful<sp/>stride</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>the<sp/>corresponding<sp/>size<sp/>is<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(n<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>stride<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.ndimension()<sp/>-<sp/>1;<sp/>i<sp/>&gt;<sp/>*dim;<sp/>i--)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stride<sp/>*=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.size(i);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>batch<sp/>=<sp/>numel<sp/>/<sp/>(n<sp/>*<sp/>stride);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>paralellize<sp/>=<sp/>batch<sp/>*<sp/>n<sp/>&gt;<sp/>internal::GRAIN_SIZE;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stride<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parallel_for(0,<sp/>batch,<sp/>1,<sp/>[=](int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>b<sp/>=<sp/>begin;<sp/>b<sp/>&lt;<sp/>end;<sp/>b++)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t*<sp/>data<sp/>=<sp/>&amp;data_[b<sp/>*<sp/>n];</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>out<sp/>=<sp/>&amp;out_[b];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>buf[WIDTH]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fill(buf,<sp/>buf<sp/>+<sp/>WIDTH,<sp/>ident);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>cols_rounded<sp/>=<sp/>n<sp/>/<sp/>WIDTH;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reduce128(data,<sp/>buf,<sp/>cols_rounded,<sp/>WIDTH);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>result<sp/>=<sp/>ident;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>WIDTH;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>ReduceScalar()(result,<sp/>buf[i]);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>col<sp/>=<sp/>cols_rounded<sp/>*<sp/>WIDTH;<sp/>col<sp/>!=<sp/>n;<sp/>col++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>ReduceScalar()(result,<sp/>data[col]);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out_[b]<sp/>=<sp/>result;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>rows<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>cols<sp/>=<sp/>stride;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>cols_rounded<sp/>=<sp/>round_down(cols,<sp/>WIDTH);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>size<sp/>=<sp/>cols_rounded;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>parallel_for(</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>batch<sp/>*<sp/>(size<sp/>/<sp/>WIDTH),</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[out_,<sp/>data_,<sp/>n,<sp/>stride,<sp/>rows,<sp/>cols,<sp/>cols_rounded,<sp/>size](</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>begin,<sp/>int64_t<sp/>end)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>bi<sp/>=<sp/>begin;<sp/>bi<sp/>&lt;<sp/>end;<sp/>bi++)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>b<sp/>=<sp/>bi<sp/>/<sp/>(size<sp/>/<sp/>WIDTH);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>i<sp/>=<sp/>bi<sp/>%<sp/>(size<sp/>/<sp/>WIDTH);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>k<sp/>=<sp/>i<sp/>*<sp/>WIDTH;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reduce128(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;data_[b<sp/>*<sp/>n<sp/>*<sp/>stride<sp/>+<sp/>k],</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;out_[b<sp/>*<sp/>stride<sp/>+<sp/>k],</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rows,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stride);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>_parallel_for(batch,<sp/>1,<sp/>paralellize,<sp/>[=](int64_t<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t*<sp/>data<sp/>=<sp/>&amp;data_[b<sp/>*<sp/>n<sp/>*<sp/>stride];</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t*<sp/>out<sp/>=<sp/>&amp;out_[b<sp/>*<sp/>stride];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>rows<sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>cols<sp/>=<sp/>stride;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>int64_t<sp/>cols_rounded<sp/>=<sp/>round_down(cols,<sp/>WIDTH);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(cols_rounded<sp/>!=<sp/>cols)<sp/>{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>buf[WIDTH]<sp/>=<sp/>{0};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::fill(buf,<sp/>buf<sp/>+<sp/>WIDTH,<sp/>ident);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>row<sp/>=<sp/>0;<sp/>row<sp/>!=<sp/>rows;<sp/>row++)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>!=<sp/>cols<sp/>-<sp/>cols_rounded;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>data[row<sp/>*<sp/>stride<sp/>+<sp/>j<sp/>+<sp/>cols_rounded];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buf[j]<sp/>=<sp/>ReduceScalar()(buf[j],<sp/>val);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>!=<sp/>cols<sp/>-<sp/>cols_rounded;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>out[j<sp/>+<sp/>cols_rounded]<sp/>=<sp/>buf[j];</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>scalar_t<sp/>reduce_all(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t*<sp/>data,<sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>k<sp/>=<sp/>size<sp/>/<sp/>WIDTH;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t<sp/>sum<sp/>=<sp/>parallel_reduce(</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>k,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>internal::GRAIN_SIZE<sp/>/<sp/>WIDTH,</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(scalar_t)ident,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[data](int64_t<sp/>begin,<sp/>int64_t<sp/>end,<sp/>scalar_t<sp/>init)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scalar_t<sp/>buf[WIDTH];</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>reduce128(&amp;data[begin<sp/>*<sp/>WIDTH],<sp/>buf,<sp/>end<sp/>-<sp/>begin,<sp/>WIDTH);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::accumulate(buf,<sp/>buf<sp/>+<sp/>WIDTH,<sp/>init,<sp/>ReduceScalar());</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>},</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ReduceScalar());</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>k<sp/>*<sp/>WIDTH;<sp/>i<sp/>!=<sp/>size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sum<sp/>=<sp/>ReduceScalar()(sum,<sp/>data[i]);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sum;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reduce<sp/>down<sp/>a<sp/>column<sp/>of<sp/>WIDTH<sp/>elements<sp/>(128<sp/>bytes)<sp/>with<sp/>the<sp/>given<sp/>number</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>rows.<sp/>Stores<sp/>the<sp/>results<sp/>in<sp/>out[0<sp/>...<sp/>WIDTH-1].</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>reduce128(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t*<sp/>data,<sp/>scalar_t*<sp/>out,<sp/>int64_t<sp/>rows,<sp/>int64_t<sp/>stride)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>acc[4]<sp/>=<sp/>{ident,<sp/>ident,<sp/>ident,<sp/>ident};<sp/><sp/></highlight><highlight class="comment">//<sp/>128<sp/>bytes<sp/>(two<sp/>cache<sp/>lines)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>static_assert(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(acc)<sp/>==<sp/>128,<sp/></highlight><highlight class="stringliteral">&quot;accumulator<sp/>should<sp/>be<sp/>128<sp/>bytes&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>row<sp/>=<sp/>0;<sp/>row<sp/>!=<sp/>rows;<sp/>row++)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>!=<sp/>4;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>Vec::loadu(&amp;data[row<sp/>*<sp/>stride<sp/>+<sp/>j<sp/>*<sp/>Vec::size]);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>acc[j]<sp/>=<sp/>Reduce()(acc[j],<sp/>val);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;<sp/>j<sp/>!=<sp/>4;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>acc[j].store(&amp;out[j<sp/>*<sp/>Vec::size]);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sum_kernel_impl(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="classat_1_1optional" kindref="compound">at::optional&lt;int64_t&gt;</ref><sp/>dim)<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>AT_DISPATCH_ALL_TYPES(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type(),<sp/></highlight><highlight class="stringliteral">&quot;sum&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>Reduction&lt;scalar_t,<sp/>std::plus,<sp/>0&gt;::apply(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>dim);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>prod_kernel_impl(Tensor&amp;<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/><ref refid="classat_1_1optional" kindref="compound">at::optional&lt;int64_t&gt;</ref><sp/>dim)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/>AT_DISPATCH_ALL_TYPES(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.type(),<sp/></highlight><highlight class="stringliteral">&quot;prod&quot;</highlight><highlight class="normal">,<sp/>[&amp;]<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>Reduction&lt;scalar_t,<sp/>std::multiplies,<sp/>1&gt;::apply(result,<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">,<sp/>dim);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>});</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>anonymous<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">REGISTER_DISPATCH(sum_kernel,<sp/>&amp;sum_kernel_impl);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">REGISTER_DISPATCH(prod_kernel,<sp/>&amp;prod_kernel_impl);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::native</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.cpp"/>
+  </compounddef>
+</doxygen>

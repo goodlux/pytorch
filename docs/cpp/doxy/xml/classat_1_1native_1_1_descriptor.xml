@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1native_1_1_descriptor" kind="class" language="C++" prot="public">
+    <compoundname>at::native::Descriptor</compoundname>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>cudnnStatus_t(*)(T **)</type>
+        <declname>ctor</declname>
+        <defname>ctor</defname>
+      </param>
+      <param>
+        <type>cudnnStatus_t(*)(T *)</type>
+        <declname>dtor</declname>
+        <defname>dtor</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classat_1_1native_1_1_descriptor_1ab0f0e8d1df7256915e7119fd0adb46a6" prot="private" static="no" mutable="no">
+        <type>std::unique_ptr&lt; T, <ref refid="structat_1_1native_1_1_descriptor_deleter" kindref="compound">DescriptorDeleter</ref>&lt; T, dtor &gt; &gt;</type>
+        <definition>std::unique_ptr&lt;T, DescriptorDeleter&lt;T, dtor&gt; &gt; at::native::Descriptor&lt; T, ctor, dtor &gt;::desc_</definition>
+        <argsstring></argsstring>
+        <name>desc_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="131" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1native_1_1_descriptor_1a050635f28ddec72002d5ce243f7878d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* at::native::Descriptor&lt; T, ctor, dtor &gt;::desc</definition>
+        <argsstring>() const</argsstring>
+        <name>desc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="114" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1native_1_1_descriptor_1ad9afd0db5daee329ae46fd45a8d27029" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* at::native::Descriptor&lt; T, ctor, dtor &gt;::desc</definition>
+        <argsstring>()</argsstring>
+        <name>desc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="115" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1native_1_1_descriptor_1a85efbdf36360cd8ac82335cfdbf25fc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T *</type>
+        <definition>T* at::native::Descriptor&lt; T, ctor, dtor &gt;::mut_desc</definition>
+        <argsstring>()</argsstring>
+        <name>mut_desc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="121" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classat_1_1native_1_1_descriptor_1ab3a812f540f5ba193d5f1784550f590f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::native::Descriptor&lt; T, ctor, dtor &gt;::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="123" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="123" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" line="106" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h" bodystart="105" bodyend="132"/>
+    <listofallmembers>
+      <member refid="classat_1_1native_1_1_descriptor_1a050635f28ddec72002d5ce243f7878d6" prot="public" virt="non-virtual"><scope>at::native::Descriptor</scope><name>desc</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ad9afd0db5daee329ae46fd45a8d27029" prot="public" virt="non-virtual"><scope>at::native::Descriptor</scope><name>desc</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ab0f0e8d1df7256915e7119fd0adb46a6" prot="private" virt="non-virtual"><scope>at::native::Descriptor</scope><name>desc_</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1ab3a812f540f5ba193d5f1784550f590f" prot="protected" virt="non-virtual"><scope>at::native::Descriptor</scope><name>init</name></member>
+      <member refid="classat_1_1native_1_1_descriptor_1a85efbdf36360cd8ac82335cfdbf25fc9" prot="public" virt="non-virtual"><scope>at::native::Descriptor</scope><name>mut_desc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

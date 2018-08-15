@@ -1,0 +1,1538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_scalar_type_8h" kind="file" language="C++">
+    <compoundname>ScalarType.h</compoundname>
+    <includes refid="_array_ref_8h" local="yes">ATen/ArrayRef.h</includes>
+    <includes refid="_a_ten_general_8h" local="yes">ATen/ATenGeneral.h</includes>
+    <includes refid="_half_8h" local="yes">ATen/Half.h</includes>
+    <includes local="no">cstdint</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="build_2aten_2src_2_a_ten_2tensor_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Tensor.h</includedby>
+    <includedby refid="_variable_hooks_interface_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/VariableHooksInterface.h</includedby>
+    <includedby refid="_device_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h</includedby>
+    <includedby refid="_device_guard_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h</includedby>
+    <includedby refid="_layout_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Layout.h</includedby>
+    <includedby refid="_dispatch_stub_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/DispatchStub.h</includedby>
+    <includedby refid="_tensor_factories_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorFactories.cpp</includedby>
+    <includedby refid="_options_guard_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h</includedby>
+    <includedby refid="_scalar_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Scalar.h</includedby>
+    <includedby refid="_scalar_type_utils_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarTypeUtils.h</includedby>
+    <includedby refid="_native_functions_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/NativeFunctions.h</includedby>
+    <includedby refid="aten_2src_2_a_ten_2templates_2tensor_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Tensor.h</includedby>
+    <includedby refid="_type_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h</includedby>
+    <includedby refid="_tensor_accessor_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h</includedby>
+    <includedby refid="_tensor_impl_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h</includedby>
+    <includedby refid="_tensor_options_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.cpp</includedby>
+    <includedby refid="_tensor_options_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h</includedby>
+    <incdepgraph>
+      <node id="9448">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="9449" relation="include">
+        </childnode>
+        <childnode refid="9450" relation="include">
+        </childnode>
+        <childnode refid="9451" relation="include">
+        </childnode>
+        <childnode refid="9452" relation="include">
+        </childnode>
+        <childnode refid="9453" relation="include">
+        </childnode>
+        <childnode refid="9454" relation="include">
+        </childnode>
+        <childnode refid="9455" relation="include">
+        </childnode>
+      </node>
+      <node id="9453">
+        <label>functional</label>
+      </node>
+      <node id="9444">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h"/>
+        <childnode refid="9445" relation="include">
+        </childnode>
+        <childnode refid="9447" relation="include">
+        </childnode>
+        <childnode refid="9470" relation="include">
+        </childnode>
+        <childnode refid="9472" relation="include">
+        </childnode>
+        <childnode refid="9476" relation="include">
+        </childnode>
+      </node>
+      <node id="9471">
+        <label>limits</label>
+      </node>
+      <node id="9465">
+        <label>iterator</label>
+      </node>
+      <node id="9472">
+        <label>cstdint</label>
+      </node>
+      <node id="9473">
+        <label>cmath</label>
+      </node>
+      <node id="9452">
+        <label>cassert</label>
+      </node>
+      <node id="9475">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="9447" relation="include">
+        </childnode>
+        <childnode refid="9464" relation="include">
+        </childnode>
+        <childnode refid="9471" relation="include">
+        </childnode>
+      </node>
+      <node id="9455">
+        <label>stdexcept</label>
+      </node>
+      <node id="9470">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="9447" relation="include">
+        </childnode>
+        <childnode refid="9471" relation="include">
+        </childnode>
+        <childnode refid="9454" relation="include">
+        </childnode>
+        <childnode refid="9472" relation="include">
+        </childnode>
+        <childnode refid="9455" relation="include">
+        </childnode>
+        <childnode refid="9449" relation="include">
+        </childnode>
+        <childnode refid="9473" relation="include">
+        </childnode>
+        <childnode refid="9474" relation="include">
+        </childnode>
+        <childnode refid="9475" relation="include">
+        </childnode>
+      </node>
+      <node id="9454">
+        <label>string</label>
+      </node>
+      <node id="9457">
+        <label>exception</label>
+      </node>
+      <node id="9461">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="9456" relation="include">
+        </childnode>
+      </node>
+      <node id="9458">
+        <label>ostream</label>
+      </node>
+      <node id="9445">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="9446" relation="include">
+        </childnode>
+        <childnode refid="9460" relation="include">
+        </childnode>
+        <childnode refid="9468" relation="include">
+        </childnode>
+        <childnode refid="9465" relation="include">
+        </childnode>
+        <childnode refid="9469" relation="include">
+        </childnode>
+      </node>
+      <node id="9447">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="9469">
+        <label>vector</label>
+      </node>
+      <node id="9467">
+        <label>new</label>
+      </node>
+      <node id="9449">
+        <label>utility</label>
+      </node>
+      <node id="9468">
+        <label>array</label>
+      </node>
+      <node id="9459">
+        <label>sstream</label>
+      </node>
+      <node id="9474">
+        <label>iosfwd</label>
+      </node>
+      <node id="9463">
+        <label>cstdlib</label>
+      </node>
+      <node id="9476">
+        <label>iostream</label>
+      </node>
+      <node id="9456">
+        <label>cstddef</label>
+      </node>
+      <node id="9446">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="9447" relation="include">
+        </childnode>
+        <childnode refid="9448" relation="include">
+        </childnode>
+        <childnode refid="9456" relation="include">
+        </childnode>
+        <childnode refid="9457" relation="include">
+        </childnode>
+        <childnode refid="9458" relation="include">
+        </childnode>
+        <childnode refid="9459" relation="include">
+        </childnode>
+        <childnode refid="9454" relation="include">
+        </childnode>
+      </node>
+      <node id="9450">
+        <label>type_traits</label>
+      </node>
+      <node id="9460">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="9461" relation="include">
+        </childnode>
+        <childnode refid="9462" relation="include">
+        </childnode>
+        <childnode refid="9452" relation="include">
+        </childnode>
+        <childnode refid="9456" relation="include">
+        </childnode>
+        <childnode refid="9463" relation="include">
+        </childnode>
+        <childnode refid="9464" relation="include">
+        </childnode>
+        <childnode refid="9451" relation="include">
+        </childnode>
+        <childnode refid="9465" relation="include">
+        </childnode>
+        <childnode refid="9466" relation="include">
+        </childnode>
+        <childnode refid="9467" relation="include">
+        </childnode>
+        <childnode refid="9450" relation="include">
+        </childnode>
+        <childnode refid="9449" relation="include">
+        </childnode>
+        <childnode refid="9447" relation="include">
+        </childnode>
+      </node>
+      <node id="9462">
+        <label>algorithm</label>
+      </node>
+      <node id="9464">
+        <label>cstring</label>
+      </node>
+      <node id="9466">
+        <label>memory</label>
+      </node>
+      <node id="9451">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9544">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="9545" relation="include">
+        </childnode>
+        <childnode refid="9550" relation="include">
+        </childnode>
+        <childnode refid="9526" relation="include">
+        </childnode>
+      </node>
+      <node id="9541">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="9494" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9542" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9526" relation="include">
+        </childnode>
+        <childnode refid="9530" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+        <childnode refid="9529" relation="include">
+        </childnode>
+      </node>
+      <node id="9490">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h</label>
+        <link refid="rnn_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9514">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h_source"/>
+      </node>
+      <node id="9557">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarTypeUtils.h</label>
+        <link refid="_scalar_type_utils_8h_source"/>
+      </node>
+      <node id="9551">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Tensor.h</label>
+        <link refid="aten_2src_2_a_ten_2templates_2tensor_8h_source"/>
+      </node>
+      <node id="9477">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9540" relation="include">
+        </childnode>
+        <childnode refid="9541" relation="include">
+        </childnode>
+        <childnode refid="9526" relation="include">
+        </childnode>
+        <childnode refid="9552" relation="include">
+        </childnode>
+        <childnode refid="9553" relation="include">
+        </childnode>
+        <childnode refid="9530" relation="include">
+        </childnode>
+        <childnode refid="9554" relation="include">
+        </childnode>
+        <childnode refid="9557" relation="include">
+        </childnode>
+        <childnode refid="9531" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+        <childnode refid="9537" relation="include">
+        </childnode>
+        <childnode refid="9558" relation="include">
+        </childnode>
+        <childnode refid="9559" relation="include">
+        </childnode>
+        <childnode refid="9529" relation="include">
+        </childnode>
+      </node>
+      <node id="9480">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="9534">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SparseTensorImpl.h</label>
+        <link refid="_sparse_tensor_impl_8h_source"/>
+        <childnode refid="9519" relation="include">
+        </childnode>
+      </node>
+      <node id="9504">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="9484" relation="include">
+        </childnode>
+        <childnode refid="9505" relation="include">
+        </childnode>
+        <childnode refid="9507" relation="include">
+        </childnode>
+        <childnode refid="9483" relation="include">
+        </childnode>
+        <childnode refid="9494" relation="include">
+        </childnode>
+        <childnode refid="9485" relation="include">
+        </childnode>
+        <childnode refid="9488" relation="include">
+        </childnode>
+        <childnode refid="9489" relation="include">
+        </childnode>
+        <childnode refid="9491" relation="include">
+        </childnode>
+        <childnode refid="9492" relation="include">
+        </childnode>
+        <childnode refid="9493" relation="include">
+        </childnode>
+        <childnode refid="9490" relation="include">
+        </childnode>
+        <childnode refid="9495" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9508" relation="include">
+        </childnode>
+        <childnode refid="9497" relation="include">
+        </childnode>
+        <childnode refid="9506" relation="include">
+        </childnode>
+        <childnode refid="9503" relation="include">
+        </childnode>
+        <childnode refid="9499" relation="include">
+        </childnode>
+        <childnode refid="9479" relation="include">
+        </childnode>
+        <childnode refid="9480" relation="include">
+        </childnode>
+      </node>
+      <node id="9485">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/batchnorm.h</label>
+        <link refid="batchnorm_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9562">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9563" relation="include">
+        </childnode>
+        <childnode refid="9545" relation="include">
+        </childnode>
+        <childnode refid="9564" relation="include">
+        </childnode>
+        <childnode refid="9570" relation="include">
+        </childnode>
+        <childnode refid="9554" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+        <childnode refid="9539" relation="include">
+        </childnode>
+      </node>
+      <node id="9554">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9481" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9555" relation="include">
+        </childnode>
+        <childnode refid="9556" relation="include">
+        </childnode>
+        <childnode refid="9528" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+        <childnode refid="9536" relation="include">
+        </childnode>
+        <childnode refid="9537" relation="include">
+        </childnode>
+        <childnode refid="9538" relation="include">
+        </childnode>
+      </node>
+      <node id="9564">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_base.h</label>
+        <link refid="vec256__base_8h_source"/>
+        <childnode refid="9565" relation="include">
+        </childnode>
+        <childnode refid="9567" relation="include">
+        </childnode>
+        <childnode refid="9568" relation="include">
+        </childnode>
+        <childnode refid="9569" relation="include">
+        </childnode>
+      </node>
+      <node id="9516">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="9515" relation="include">
+        </childnode>
+      </node>
+      <node id="9503">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h</label>
+        <link refid="sgd_8h_source"/>
+        <childnode refid="9498" relation="include">
+        </childnode>
+      </node>
+      <node id="9506">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h</label>
+        <link refid="optimizer_8h_source"/>
+        <childnode refid="9497" relation="include">
+        </childnode>
+        <childnode refid="9500" relation="include">
+        </childnode>
+        <childnode refid="9501" relation="include">
+        </childnode>
+        <childnode refid="9502" relation="include">
+        </childnode>
+        <childnode refid="9503" relation="include">
+        </childnode>
+        <childnode refid="9498" relation="include">
+        </childnode>
+      </node>
+      <node id="9522">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="9543">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/PinnedMemoryAllocator.h</label>
+        <link refid="_pinned_memory_allocator_8h_source"/>
+      </node>
+      <node id="9535">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.h</label>
+        <link refid="_tensor_derived_8h_source"/>
+      </node>
+      <node id="9545">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9546" relation="include">
+        </childnode>
+        <childnode refid="9547" relation="include">
+        </childnode>
+        <childnode refid="9535" relation="include">
+        </childnode>
+        <childnode refid="9548" relation="include">
+        </childnode>
+        <childnode refid="9529" relation="include">
+        </childnode>
+        <childnode refid="9549" relation="include">
+        </childnode>
+      </node>
+      <node id="9538">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9531" relation="include">
+        </childnode>
+      </node>
+      <node id="9495">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h</label>
+        <link refid="sequential_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9546">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.h</label>
+        <link refid="_c_u_d_a_context_8h_source"/>
+        <childnode refid="9527" relation="include">
+        </childnode>
+        <childnode refid="9509" relation="include">
+        </childnode>
+        <childnode refid="9515" relation="include">
+        </childnode>
+      </node>
+      <node id="9559">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9534" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+        <childnode refid="9535" relation="include">
+        </childnode>
+        <childnode refid="9560" relation="include">
+        </childnode>
+        <childnode refid="9561" relation="include">
+        </childnode>
+        <childnode refid="9571" relation="include">
+        </childnode>
+        <childnode refid="9573" relation="include">
+        </childnode>
+      </node>
+      <node id="9565">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256.h</label>
+        <link refid="vec256_8h_source"/>
+        <childnode refid="9566" relation="include">
+        </childnode>
+        <childnode refid="9522" relation="include">
+        </childnode>
+      </node>
+      <node id="9566">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h</label>
+        <link refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_source"/>
+        <childnode refid="9522" relation="include">
+        </childnode>
+      </node>
+      <node id="9560">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9554" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+      </node>
+      <node id="9540">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/VariableHooksInterface.h</label>
+        <link refid="_variable_hooks_interface_8h_source"/>
+      </node>
+      <node id="9568">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_double.h</label>
+        <link refid="vec256__double_8h_source"/>
+        <childnode refid="9565" relation="include">
+        </childnode>
+      </node>
+      <node id="9530">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="9484" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+      </node>
+      <node id="9532">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ExpandUtils.h</label>
+        <link refid="_expand_utils_8h_source"/>
+      </node>
+      <node id="9542">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9543" relation="include">
+        </childnode>
+        <childnode refid="9544" relation="include">
+        </childnode>
+        <childnode refid="9537" relation="include">
+        </childnode>
+      </node>
+      <node id="9500">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adam.h</label>
+        <link refid="adam_8h_source"/>
+        <childnode refid="9498" relation="include">
+        </childnode>
+      </node>
+      <node id="9505">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="9483" relation="include">
+        </childnode>
+        <childnode refid="9487" relation="include">
+        </childnode>
+        <childnode refid="9506" relation="include">
+        </childnode>
+      </node>
+      <node id="9526">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="9481" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9527" relation="include">
+        </childnode>
+        <childnode refid="9528" relation="include">
+        </childnode>
+        <childnode refid="9529" relation="include">
+        </childnode>
+      </node>
+      <node id="9561">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="9560" relation="include">
+        </childnode>
+        <childnode refid="9562" relation="include">
+        </childnode>
+      </node>
+      <node id="9556">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9481" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9528" relation="include">
+        </childnode>
+        <childnode refid="9547" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+      </node>
+      <node id="9507">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/init.h</label>
+        <link refid="init_8h_source"/>
+      </node>
+      <node id="9572">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9539" relation="include">
+        </childnode>
+      </node>
+      <node id="9508">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="9483" relation="include">
+        </childnode>
+        <childnode refid="9494" relation="include">
+        </childnode>
+        <childnode refid="9485" relation="include">
+        </childnode>
+        <childnode refid="9488" relation="include">
+        </childnode>
+        <childnode refid="9489" relation="include">
+        </childnode>
+        <childnode refid="9491" relation="include">
+        </childnode>
+        <childnode refid="9492" relation="include">
+        </childnode>
+        <childnode refid="9493" relation="include">
+        </childnode>
+        <childnode refid="9490" relation="include">
+        </childnode>
+        <childnode refid="9495" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9487" relation="include">
+        </childnode>
+        <childnode refid="9500" relation="include">
+        </childnode>
+        <childnode refid="9503" relation="include">
+        </childnode>
+      </node>
+      <node id="9539">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="9523" relation="include">
+        </childnode>
+        <childnode refid="9509" relation="include">
+        </childnode>
+      </node>
+      <node id="9570">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h</label>
+        <link refid="_matrix_ref_8h_source"/>
+      </node>
+      <node id="9479">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h</label>
+        <link refid="tensor__list__view_8h_source"/>
+        <childnode refid="9480" relation="include">
+        </childnode>
+      </node>
+      <node id="9563">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CheckGenerator.h</label>
+        <link refid="_check_generator_8h_source"/>
+        <childnode refid="9548" relation="include">
+        </childnode>
+        <childnode refid="9549" relation="include">
+        </childnode>
+      </node>
+      <node id="9483">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="9484" relation="include">
+        </childnode>
+        <childnode refid="9494" relation="include">
+        </childnode>
+        <childnode refid="9493" relation="include">
+        </childnode>
+        <childnode refid="9495" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9487" relation="include">
+        </childnode>
+        <childnode refid="9497" relation="include">
+        </childnode>
+        <childnode refid="9500" relation="include">
+        </childnode>
+        <childnode refid="9501" relation="include">
+        </childnode>
+        <childnode refid="9502" relation="include">
+        </childnode>
+        <childnode refid="9503" relation="include">
+        </childnode>
+      </node>
+      <node id="9571">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="9572" relation="include">
+        </childnode>
+        <childnode refid="9573" relation="include">
+        </childnode>
+      </node>
+      <node id="9525">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Types.h</label>
+        <link refid="_types_8h_source"/>
+      </node>
+      <node id="9558">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+      </node>
+      <node id="9553">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/DispatchStub.h</label>
+        <link refid="_dispatch_stub_8h_source"/>
+        <childnode refid="9512" relation="include">
+        </childnode>
+        <childnode refid="9513" relation="include">
+        </childnode>
+        <childnode refid="9514" relation="include">
+        </childnode>
+      </node>
+      <node id="9573">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/WrapDimUtilsMulti.h</label>
+        <link refid="_wrap_dim_utils_multi_8h_source"/>
+      </node>
+      <node id="9486">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules.h</label>
+        <link refid="modules_8h_source"/>
+        <childnode refid="9487" relation="include">
+        </childnode>
+      </node>
+      <node id="9491">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/embedding.h</label>
+        <link refid="embedding_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9527">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAGuard.h</label>
+        <link refid="cuda_2_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="9547">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/StorageDerived.h</label>
+        <link refid="_storage_derived_8h_source"/>
+      </node>
+      <node id="9520">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorTransformations.h</label>
+        <link refid="_tensor_transformations_8h_source"/>
+      </node>
+      <node id="9487">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn.h</label>
+        <link refid="nn_8h_source"/>
+        <childnode refid="9480" relation="include">
+        </childnode>
+      </node>
+      <node id="9515">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+      <node id="9488">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9502">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/rmsprop.h</label>
+        <link refid="rmsprop_8h_source"/>
+        <childnode refid="9498" relation="include">
+        </childnode>
+      </node>
+      <node id="9528">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Functions.h</label>
+        <link refid="aten_2src_2_a_ten_2templates_2_functions_8h_source"/>
+      </node>
+      <node id="9498">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim.h</label>
+        <link refid="optim_8h_source"/>
+        <childnode refid="9499" relation="include">
+        </childnode>
+        <childnode refid="9480" relation="include">
+        </childnode>
+      </node>
+      <node id="9548">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TypeDerived.h</label>
+        <link refid="_type_derived_8h_source"/>
+      </node>
+      <node id="9524">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+      </node>
+      <node id="9510">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="9494">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h</label>
+        <link refid="any_8h_source"/>
+        <childnode refid="9495" relation="include">
+        </childnode>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9509">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="9511">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+      </node>
+      <node id="9519">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+      </node>
+      <node id="9481">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="9482" relation="include">
+        </childnode>
+      </node>
+      <node id="9567">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_float.h</label>
+        <link refid="vec256__float_8h_source"/>
+        <childnode refid="9565" relation="include">
+        </childnode>
+      </node>
+      <node id="9499">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h</label>
+        <link refid="serialization_8h_source"/>
+        <childnode refid="9480" relation="include">
+        </childnode>
+      </node>
+      <node id="9569">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_int.h</label>
+        <link refid="vec256__int_8h_source"/>
+        <childnode refid="9565" relation="include">
+        </childnode>
+      </node>
+      <node id="9496">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="9523">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+      </node>
+      <node id="9497">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adagrad.h</label>
+        <link refid="adagrad_8h_source"/>
+        <childnode refid="9498" relation="include">
+        </childnode>
+      </node>
+      <node id="9489">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="9490" relation="include">
+        </childnode>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9512">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+      </node>
+      <node id="9537">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.h</label>
+        <link refid="_type_8h_source"/>
+      </node>
+      <node id="9517">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Gesv.h</label>
+        <link refid="_gesv_8h_source"/>
+      </node>
+      <node id="9484">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="9485" relation="include">
+        </childnode>
+        <childnode refid="9488" relation="include">
+        </childnode>
+        <childnode refid="9489" relation="include">
+        </childnode>
+        <childnode refid="9491" relation="include">
+        </childnode>
+        <childnode refid="9492" relation="include">
+        </childnode>
+        <childnode refid="9493" relation="include">
+        </childnode>
+        <childnode refid="9490" relation="include">
+        </childnode>
+        <childnode refid="9487" relation="include">
+        </childnode>
+      </node>
+      <node id="9531">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/NativeFunctions.h</label>
+        <link refid="_native_functions_8h_source"/>
+      </node>
+      <node id="9482">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="9483" relation="include">
+        </childnode>
+        <childnode refid="9490" relation="include">
+        </childnode>
+        <childnode refid="9497" relation="include">
+        </childnode>
+        <childnode refid="9500" relation="include">
+        </childnode>
+        <childnode refid="9501" relation="include">
+        </childnode>
+        <childnode refid="9502" relation="include">
+        </childnode>
+        <childnode refid="9503" relation="include">
+        </childnode>
+        <childnode refid="9504" relation="include">
+        </childnode>
+        <childnode refid="9509" relation="include">
+        </childnode>
+        <childnode refid="9510" relation="include">
+        </childnode>
+        <childnode refid="9511" relation="include">
+        </childnode>
+        <childnode refid="9512" relation="include">
+        </childnode>
+        <childnode refid="9513" relation="include">
+        </childnode>
+        <childnode refid="9514" relation="include">
+        </childnode>
+        <childnode refid="9515" relation="include">
+        </childnode>
+        <childnode refid="9516" relation="include">
+        </childnode>
+        <childnode refid="9517" relation="include">
+        </childnode>
+        <childnode refid="9518" relation="include">
+        </childnode>
+        <childnode refid="9519" relation="include">
+        </childnode>
+        <childnode refid="9520" relation="include">
+        </childnode>
+        <childnode refid="9521" relation="include">
+        </childnode>
+        <childnode refid="9524" relation="include">
+        </childnode>
+      </node>
+      <node id="9533">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/mkl/Descriptors.h</label>
+        <link refid="mkl_2_descriptors_8h_source"/>
+      </node>
+      <node id="9492">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2nn_2modules_2functional_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9529">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="9484" relation="include">
+        </childnode>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9481" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9530" relation="include">
+        </childnode>
+        <childnode refid="9528" relation="include">
+        </childnode>
+        <childnode refid="9531" relation="include">
+        </childnode>
+      </node>
+      <node id="9518">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LinearAlgebraUtils.h</label>
+        <link refid="_linear_algebra_utils_8h_source"/>
+      </node>
+      <node id="9478">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="9479" relation="include">
+        </childnode>
+        <childnode refid="9481" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9525" relation="include">
+        </childnode>
+        <childnode refid="9526" relation="include">
+        </childnode>
+        <childnode refid="9511" relation="include">
+        </childnode>
+        <childnode refid="9532" relation="include">
+        </childnode>
+        <childnode refid="9533" relation="include">
+        </childnode>
+        <childnode refid="9534" relation="include">
+        </childnode>
+        <childnode refid="9528" relation="include">
+        </childnode>
+        <childnode refid="9535" relation="include">
+        </childnode>
+        <childnode refid="9536" relation="include">
+        </childnode>
+        <childnode refid="9537" relation="include">
+        </childnode>
+        <childnode refid="9538" relation="include">
+        </childnode>
+        <childnode refid="9529" relation="include">
+        </childnode>
+        <childnode refid="9539" relation="include">
+        </childnode>
+      </node>
+      <node id="9552">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="9478" relation="include">
+        </childnode>
+        <childnode refid="9482" relation="include">
+        </childnode>
+        <childnode refid="9530" relation="include">
+        </childnode>
+        <childnode refid="9551" relation="include">
+        </childnode>
+        <childnode refid="9537" relation="include">
+        </childnode>
+        <childnode refid="9529" relation="include">
+        </childnode>
+      </node>
+      <node id="9549">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/UndefinedType.h</label>
+        <link refid="_undefined_type_8h_source"/>
+      </node>
+      <node id="9550">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h</label>
+        <link refid="_c_u_d_a_hooks_8h_source"/>
+      </node>
+      <node id="9536">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorMethods.h</label>
+        <link refid="_tensor_methods_8h_source"/>
+      </node>
+      <node id="9513">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+      </node>
+      <node id="9493">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/linear.h</label>
+        <link refid="linear_8h_source"/>
+        <childnode refid="9486" relation="include">
+        </childnode>
+      </node>
+      <node id="9521">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="9496" relation="include">
+        </childnode>
+        <childnode refid="9522" relation="include">
+        </childnode>
+        <childnode refid="9523" relation="include">
+        </childnode>
+      </node>
+      <node id="9555">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="9482" relation="include">
+        </childnode>
+      </node>
+      <node id="9501">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h</label>
+        <link refid="lbfgs_8h_source"/>
+        <childnode refid="9498" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_scalar_type_8h_1ae4f9778606db665adf49b3087a592f07" prot="public" static="no">
+        <name>AT_FORALL_SCALAR_TYPES</name>
+        <param><defname>_</defname></param>
+        <initializer>_(uint8_t,Byte,i) \
+_(int8_t,Char,i) \
+_(int16_t,Short,i) \
+_(int,Int,i) \
+_(int64_t,Long,i) \
+_(<ref refid="structat_1_1_half" kindref="compound">at::Half</ref>,Half,d) \
+_(float,Float,d) \
+_(double,Double,d)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="14" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a2ec2d8569a6edd0938213244d630ca88" prot="public" static="no">
+        <name>AT_FORALL_SCALAR_TYPES_EXCEPT_HALF</name>
+        <param><defname>_</defname></param>
+        <initializer>_(uint8_t,Byte,i) \
+_(int8_t,Char,i) \
+_(int16_t,Short,i) \
+_(int,Int,i) \
+_(int64_t,Long,i) \
+_(float,Float,d) \
+_(double,Double,d)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="24" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a177f5068d2a41e908c2d950f7c7dddd4" prot="public" static="no">
+        <name>DEFINE_ENUM</name>
+        <param><defname>_1</defname></param>
+        <param><defname>n</defname></param>
+        <param><defname>_2</defname></param>
+        <initializer>n,</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="34" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1ac7b5d4e6c45a2fee0f58b16fc72bbe8d" prot="public" static="no">
+        <name>DEFINE_CONSTANT</name>
+        <param><defname>_</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>_2</defname></param>
+        <initializer>constexpr ScalarType k##name = ScalarType::name;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="85" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a057e641b144551adec8287cbbad22163" prot="public" static="no">
+        <name>DEFINE_CASE</name>
+        <param><defname>_</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>_2</defname></param>
+        <initializer>case ScalarType:: name : return #name;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="91" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a14d1b5831352a5798e9b4fdc915fe5f3" prot="public" static="no">
+        <name>CASE_ELEMENTSIZE_CASE</name>
+        <param><defname>ctype</defname></param>
+        <param><defname>name</defname></param>
+        <param><defname>_2</defname></param>
+        <initializer>case ScalarType:: name : return sizeof(ctype);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="102" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a64f8055b64cf2a4c299c841130c5c938" prot="public" static="no">
+        <name>u1</name>
+        <initializer>ScalarType::Byte</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="128" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1aab37e37b56dcbb737f240cf221754b2f" prot="public" static="no">
+        <name>i1</name>
+        <initializer>ScalarType::Char</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="129" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a9cf49e97bacbfddbfe651a7ecec4631a" prot="public" static="no">
+        <name>i2</name>
+        <initializer>ScalarType::Short</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="130" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1afa8aa21acb1132fa026f8dbbb0309b59" prot="public" static="no">
+        <name>i4</name>
+        <initializer>ScalarType::Int</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="131" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a8b1c3ba7ed71c46505556d43a9bee9e1" prot="public" static="no">
+        <name>i8</name>
+        <initializer>ScalarType::Long</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="132" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1ac2f3870b34bf49eb33d6c457b100a4c2" prot="public" static="no">
+        <name>f2</name>
+        <initializer>ScalarType::Half</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="133" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a9a257aee51d18b34406a78ec89802632" prot="public" static="no">
+        <name>f4</name>
+        <initializer>ScalarType::Float</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="134" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a852ad8d78723c6df8ff59a9427b8e463" prot="public" static="no">
+        <name>f8</name>
+        <initializer>ScalarType::Double</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="135" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="_scalar_type_8h_1a95c63a12a7edd42b04fd7aafa6fbb373" prot="public" static="no">
+        <name>ud</name>
+        <initializer>ScalarType::Undefined</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="136" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_scalar_type_8h_1aa2ebe03208a24f485661a29f9e741265" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, at::ScalarType scalar_type)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>at::ScalarType</type>
+          <declname>scalar_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" line="169" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h" bodystart="169" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ArrayRef.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATenGeneral.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/Half.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NB:<sp/>Order<sp/>matters<sp/>for<sp/>this<sp/>macro;<sp/>it<sp/>is<sp/>relied<sp/>upon<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>_promoteTypesLookup<sp/>and<sp/>probably<sp/>other<sp/>places.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_FORALL_SCALAR_TYPES(_)<sp/>\</highlight></codeline>
+<codeline lineno="15"><highlight class="preprocessor">_(uint8_t,Byte,i)<sp/>\</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor">_(int8_t,Char,i)<sp/>\</highlight></codeline>
+<codeline lineno="17"><highlight class="preprocessor">_(int16_t,Short,i)<sp/>\</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor">_(int,Int,i)<sp/>\</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor">_(int64_t,Long,i)<sp/>\</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor">_(at::Half,Half,d)<sp/>\</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor">_(float,Float,d)<sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor">_(double,Double,d)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_FORALL_SCALAR_TYPES_EXCEPT_HALF(_)<sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor">_(uint8_t,Byte,i)<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor">_(int8_t,Char,i)<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor">_(int16_t,Short,i)<sp/>\</highlight></codeline>
+<codeline lineno="28"><highlight class="preprocessor">_(int,Int,i)<sp/>\</highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor">_(int64_t,Long,i)<sp/>\</highlight></codeline>
+<codeline lineno="30"><highlight class="preprocessor">_(float,Float,d)<sp/>\</highlight></codeline>
+<codeline lineno="31"><highlight class="preprocessor">_(double,Double,d)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>ScalarType<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFINE_ENUM(_1,n,_2)<sp/>\</highlight></codeline>
+<codeline lineno="35"><highlight class="preprocessor"><sp/><sp/>n,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>AT_FORALL_SCALAR_TYPES(DEFINE_ENUM)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>DEFINE_ENUM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>Undefined,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>NumOptions</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/>Backend<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>CPU,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>CUDA,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>SparseCPU,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>SparseCUDA,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>Undefined,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>NumOptions</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">constexpr<sp/>Backend<sp/>kCPU<sp/>=<sp/>Backend::CPU;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">constexpr<sp/>Backend<sp/>kCUDA<sp/>=<sp/>Backend::CUDA;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">constexpr<sp/>Backend<sp/>kSparseCPU<sp/>=<sp/>Backend::SparseCPU;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">constexpr<sp/>Backend<sp/>kSparseCUDA<sp/>=<sp/>Backend::SparseCUDA;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Backend<sp/>toSparse(Backend<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(b)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::CPU:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::SparseCPU;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::CUDA:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::SparseCUDA;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::SparseCPU:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::SparseCPU;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::SparseCUDA:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::SparseCUDA;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>backend&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Backend<sp/>toDense(Backend<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(b)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::CPU:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::CPU;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::CUDA:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::CUDA;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::SparseCPU:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::CPU;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::SparseCUDA:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Backend::CUDA;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>backend&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>toString(Backend<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(b)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::CPU:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CPU&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::CUDA:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CUDA&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::SparseCPU:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;SparseCPU&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Backend::SparseCUDA:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;SparseCUDA&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;UNKNOWN_BACKEND&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFINE_CONSTANT(_,name,_2)<sp/>\</highlight></codeline>
+<codeline lineno="87"><highlight class="preprocessor">constexpr<sp/>ScalarType<sp/>k##name<sp/>=<sp/>ScalarType::name;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">AT_FORALL_SCALAR_TYPES(DEFINE_CONSTANT)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>DEFINE_CONSTANT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<sp/>toString(ScalarType<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DEFINE_CASE(_,name,_2)<sp/>\</highlight></codeline>
+<codeline lineno="94"><highlight class="preprocessor"><sp/><sp/>case<sp/>ScalarType::<sp/>name<sp/>:<sp/>return<sp/>#name;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(t)<sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_FORALL_SCALAR_TYPES(DEFINE_CASE)</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;UNKNOWN_SCALAR&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>DEFINE_CASE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>elementSize(ScalarType<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CASE_ELEMENTSIZE_CASE(ctype,name,_2)<sp/>\</highlight></codeline>
+<codeline lineno="106"><highlight class="preprocessor"><sp/><sp/>case<sp/>ScalarType::<sp/>name<sp/>:<sp/>return<sp/>sizeof(ctype);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(t)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_FORALL_SCALAR_TYPES(CASE_ELEMENTSIZE_CASE)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_ERROR(</highlight><highlight class="stringliteral">&quot;Unknown<sp/>ScalarType&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CASE_ELEMENTSIZE_CASE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isIntegralType(ScalarType<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(t<sp/>==<sp/>ScalarType::Byte<sp/>||</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>==<sp/>ScalarType::Char<sp/>||</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>==<sp/>ScalarType::Int<sp/>||</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>==<sp/>ScalarType::Long<sp/>||</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>==<sp/>ScalarType::Short);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isFloatingType(ScalarType<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(t<sp/>==<sp/>ScalarType::Double<sp/>||</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>==<sp/>ScalarType::Float<sp/>||</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t<sp/>==<sp/>ScalarType::Half);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>ScalarType<sp/>promoteTypes(ScalarType<sp/>a,<sp/>ScalarType<sp/>b)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>generated<sp/>according<sp/>to<sp/>NumPy&apos;s<sp/>promote_types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>u1<sp/>ScalarType::Byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>i1<sp/>ScalarType::Char</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>i2<sp/>ScalarType::Short</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>i4<sp/>ScalarType::Int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>i8<sp/>ScalarType::Long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>f2<sp/>ScalarType::Half</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>f4<sp/>ScalarType::Float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>f8<sp/>ScalarType::Double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ud<sp/>ScalarType::Undefined</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>constexpr<sp/>ScalarType<sp/>_promoteTypesLookup</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(ScalarType::NumOptions)]</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>[static_cast&lt;int&gt;(ScalarType::NumOptions)]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>u1<sp/><sp/>i1<sp/><sp/>i2<sp/><sp/>i4<sp/><sp/>i8<sp/><sp/>f2<sp/><sp/>f4<sp/><sp/>f8,<sp/>ud<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>u1<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>u1,<sp/>i2,<sp/>i2,<sp/>i4,<sp/>i8,<sp/>f2,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i1<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>i2,<sp/>i1,<sp/>i2,<sp/>i4,<sp/>i8,<sp/>f2,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i2<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>i2,<sp/>i2,<sp/>i2,<sp/>i4,<sp/>i8,<sp/>f4,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i4<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>i4,<sp/>i4,<sp/>i4,<sp/>i4,<sp/>i8,<sp/>f8,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>i8<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>i8,<sp/>i8,<sp/>i8,<sp/>i8,<sp/>i8,<sp/>f8,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>f2<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>f2,<sp/>f2,<sp/>f4,<sp/>f8,<sp/>f8,<sp/>f2,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>f4<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>f4,<sp/>f4,<sp/>f4,<sp/>f4,<sp/>f4,<sp/>f4,<sp/>f4,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>f8<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>f8,<sp/>f8,<sp/>f8,<sp/>f8,<sp/>f8,<sp/>f8,<sp/>f8,<sp/>f8,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>ud<sp/>*/</highlight><highlight class="normal"><sp/>{<sp/>ud,<sp/>ud,<sp/>ud,<sp/>ud,<sp/>ud,<sp/>ud,<sp/>ud,<sp/>ud,<sp/>ud<sp/>},</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>u1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>i1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>i2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>i4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>i8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>f2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>f4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>f8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>ud</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_promoteTypesLookup[</highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(a)][static_cast&lt;int&gt;(b)];</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Tensor;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>ArrayRef&lt;int64_t&gt;<sp/>IntList;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>ArrayRef&lt;Tensor&gt;<sp/>TensorList;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>std::ostream&amp;<sp/>operator&lt;&lt;(</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostream&amp;<sp/>stream,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>at::ScalarType<sp/>scalar_type)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>stream<sp/>&lt;&lt;<sp/>at::toString(scalar_type);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ScalarType.h"/>
+  </compounddef>
+</doxygen>

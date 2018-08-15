@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespacecereal" kind="namespace" language="C++">
+    <compoundname>cereal</compoundname>
+    <innernamespace refid="namespacecereal_1_1agimpl">cereal::agimpl</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="serialization_8h_1af7782852e136a8a038fd13650ad4d9e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void cereal::save</definition>
+        <argsstring>(Archive &amp;archive, torch::Tensor const &amp;tensor)</argsstring>
+        <name>save</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref> const &amp;</type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="170" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="170" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="serialization_8h_1a2ad42925cd3b3b43852b31d6d980460f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Archive</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void cereal::load</definition>
+        <argsstring>(Archive &amp;archive, torch::Tensor &amp;tensor)</argsstring>
+        <name>load</name>
+        <param>
+          <type>Archive &amp;</type>
+          <declname>archive</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref> &amp;</type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>We follow these rules for loading:<orderedlist>
+<listitem><para>If tensor is defined, and the same ScalarType as the saved tensor, then we simply copy the data into the tensor, with resizing.</para></listitem><listitem><para>Otherwise, overwrite the provided tensor with the right type and backend </para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="201" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" bodystart="201" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h" line="134" column="1"/>
+  </compounddef>
+</doxygen>

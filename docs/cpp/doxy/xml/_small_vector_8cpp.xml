@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_small_vector_8cpp" kind="file" language="C++">
+    <compoundname>SmallVector.cpp</compoundname>
+    <includes refid="_small_vector_8h" local="yes">SmallVector.h</includes>
+    <incdepgraph>
+      <node id="9618">
+        <label>iterator</label>
+      </node>
+      <node id="9614">
+        <label>cassert</label>
+      </node>
+      <node id="9611">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="9612" relation="include">
+        </childnode>
+      </node>
+      <node id="9623">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="9620">
+        <label>new</label>
+      </node>
+      <node id="9622">
+        <label>utility</label>
+      </node>
+      <node id="9615">
+        <label>cstdlib</label>
+      </node>
+      <node id="9612">
+        <label>cstddef</label>
+      </node>
+      <node id="9621">
+        <label>type_traits</label>
+      </node>
+      <node id="9610">
+        <label>SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="9611" relation="include">
+        </childnode>
+        <childnode refid="9613" relation="include">
+        </childnode>
+        <childnode refid="9614" relation="include">
+        </childnode>
+        <childnode refid="9612" relation="include">
+        </childnode>
+        <childnode refid="9615" relation="include">
+        </childnode>
+        <childnode refid="9616" relation="include">
+        </childnode>
+        <childnode refid="9617" relation="include">
+        </childnode>
+        <childnode refid="9618" relation="include">
+        </childnode>
+        <childnode refid="9619" relation="include">
+        </childnode>
+        <childnode refid="9620" relation="include">
+        </childnode>
+        <childnode refid="9621" relation="include">
+        </childnode>
+        <childnode refid="9622" relation="include">
+        </childnode>
+        <childnode refid="9623" relation="include">
+        </childnode>
+      </node>
+      <node id="9613">
+        <label>algorithm</label>
+      </node>
+      <node id="9609">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.cpp</label>
+        <link refid="_small_vector_8cpp"/>
+        <childnode refid="9610" relation="include">
+        </childnode>
+      </node>
+      <node id="9616">
+        <label>cstring</label>
+      </node>
+      <node id="9619">
+        <label>memory</label>
+      </node>
+      <node id="9617">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//===-<sp/>llvm/ADT/SmallVector.cpp<sp/>-<sp/>&apos;Normally<sp/>small&apos;<sp/>vectors<sp/>----------------===//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>LLVM<sp/>Compiler<sp/>Infrastructure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>is<sp/>distributed<sp/>under<sp/>the<sp/>University<sp/>of<sp/>Illinois<sp/>Open<sp/>Source</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License.<sp/>See<sp/>LICENSE.TXT<sp/>for<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//===----------------------------------------------------------------------===//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>file<sp/>implements<sp/>the<sp/>SmallVector<sp/>class.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//===----------------------------------------------------------------------===//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>ATen:<sp/>modified<sp/>from<sp/>llvm::SmallVector.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>replaced<sp/>report_bad_alloc_error<sp/>with<sp/>std::bad_alloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SmallVector.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classat_1_1_small_vector_base_1aad0c28f55592d56898e17b082992dc38" kindref="member">SmallVectorBase::grow_pod</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*FirstEl,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>MinSizeInBytes,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>TSize)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>CurSizeBytes<sp/>=<sp/><ref refid="classat_1_1_small_vector_base_1ac467c3e17cfe1931b7701af7efceda5c" kindref="member">size_in_bytes</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>NewCapacityInBytes<sp/>=<sp/>2<sp/>*<sp/><ref refid="classat_1_1_small_vector_base_1a080727fd01500634693cc7f5fb30904e" kindref="member">capacity_in_bytes</ref>()<sp/>+<sp/>TSize;<sp/></highlight><highlight class="comment">//<sp/>Always<sp/>grow.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NewCapacityInBytes<sp/>&lt;<sp/>MinSizeInBytes)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>NewCapacityInBytes<sp/>=<sp/>MinSizeInBytes;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*NewElts;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(BeginX<sp/>==<sp/>FirstEl)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>NewElts<sp/>=<sp/>malloc(NewCapacityInBytes);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NewElts<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::bad_alloc();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>the<sp/>elements<sp/>over.<sp/><sp/>No<sp/>need<sp/>to<sp/>run<sp/>dtors<sp/>on<sp/>PODs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>memcpy(NewElts,<sp/>this-&gt;BeginX,<sp/>CurSizeBytes);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>this<sp/>wasn&apos;t<sp/>grown<sp/>from<sp/>the<sp/>inline<sp/>copy,<sp/>grow<sp/>the<sp/>allocated<sp/>space.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>NewElts<sp/>=<sp/>realloc(this-&gt;BeginX,<sp/>NewCapacityInBytes);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NewElts<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::bad_alloc();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>this-&gt;EndX<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)NewElts+CurSizeBytes;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>this-&gt;BeginX<sp/>=<sp/>NewElts;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>this-&gt;CapacityX<sp/>=<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*)this-&gt;BeginX<sp/>+<sp/>NewCapacityInBytes;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.cpp"/>
+  </compounddef>
+</doxygen>

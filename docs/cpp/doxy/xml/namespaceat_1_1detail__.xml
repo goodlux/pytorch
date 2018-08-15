@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceat_1_1detail__" kind="namespace" language="C++">
+    <compoundname>at::detail_</compoundname>
+    <innerclass refid="structat_1_1detail___1_1has__overloaded__addressof" prot="public">at::detail_::has_overloaded_addressof</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="optional_8h_1ad5b0b3442d4a48529beb47bff6edd3a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; !has_overloaded_addressof&lt; T &gt; ::value, bool &gt;::type</type>
+            <defval>false</defval>
+          </param>
+        </templateparamlist>
+        <type>constexpr T *</type>
+        <definition>constexpr T* at::detail_::static_addressof</definition>
+        <argsstring>(T &amp;ref)</argsstring>
+        <name>static_addressof</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" line="156" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="optional_8h_1a77ba229791907ffa0e48932f1ff145ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>typename std::enable_if&lt; has_overloaded_addressof&lt; T &gt; ::value, bool &gt;::type</type>
+            <defval>false</defval>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* at::detail_::static_addressof</definition>
+        <argsstring>(T &amp;ref)</argsstring>
+        <name>static_addressof</name>
+        <param>
+          <type>T &amp;</type>
+          <declname>ref</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" line="162" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="optional_8h_1a78c9149f44fbb0f3b940cd3cdc686c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class U</type>
+          </param>
+        </templateparamlist>
+        <type>constexpr U</type>
+        <definition>constexpr U at::detail_::convert</definition>
+        <argsstring>(U v)</argsstring>
+        <name>convert</name>
+        <param>
+          <type>U</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" line="170" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" bodystart="170" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/optional.h" line="140" column="1"/>
+  </compounddef>
+</doxygen>

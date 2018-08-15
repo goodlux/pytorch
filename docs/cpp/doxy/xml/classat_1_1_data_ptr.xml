@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_data_ptr" kind="class" language="C++" prot="public">
+    <compoundname>at::DataPtr</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classat_1_1_data_ptr_1a184398d9bb99ef2e3d23663b4e5d9985" prot="private" static="no" mutable="no">
+        <type><ref refid="classat_1_1detail_1_1_unique_void_ptr" kindref="compound">detail::UniqueVoidPtr</ref></type>
+        <definition>detail::UniqueVoidPtr at::DataPtr::ptr_</definition>
+        <argsstring></argsstring>
+        <name>ptr_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_data_ptr_1a96b92400a8ed90eaaa673a5ca40ac2b2" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+        <definition>Device at::DataPtr::device_</definition>
+        <argsstring></argsstring>
+        <name>device_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a9176827eec8019f6f20a56f779c893ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DataPtr::DataPtr</definition>
+        <argsstring>()</argsstring>
+        <name>DataPtr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a3de53bbb2660884223c06cdad0d0a38a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DataPtr::DataPtr</definition>
+        <argsstring>(void *data, Device device)</argsstring>
+        <name>DataPtr</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="28" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a08a264e2a90fc459f506d107daf2a172" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DataPtr::DataPtr</definition>
+        <argsstring>(void *data, void *ctx, DeleterFnPtr ctx_deleter, Device device)</argsstring>
+        <name>DataPtr</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ctx</declname>
+        </param>
+        <param>
+          <type>DeleterFnPtr</type>
+          <declname>ctx_deleter</declname>
+        </param>
+        <param>
+          <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="30" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a3d22b2ee6f0497e5fa46ffe552d600cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* at::DataPtr::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a2d19b93eeca5c085c73ec3cfbb95e600" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::DataPtr::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="33" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1adb17c7c45e546efe5990a84966e580ee" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* at::DataPtr::get</definition>
+        <argsstring>() const</argsstring>
+        <name>get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="36" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a504cb22bef7af262ad0628a8b181dac0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* at::DataPtr::get_context</definition>
+        <argsstring>() const</argsstring>
+        <name>get_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a874aa11c194b656ac48f5ac7d88ff4a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* at::DataPtr::release_context</definition>
+        <argsstring>()</argsstring>
+        <name>release_context</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1a5e50dc75e326f2b2c6bddbc3779a5396" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::DataPtr::operator bool</definition>
+        <argsstring>() const</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="39" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1aef408ed4d1adff98b878400ff20971ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T *</type>
+        <definition>T* at::DataPtr::cast_context</definition>
+        <argsstring>(DeleterFnPtr expected_deleter) const</argsstring>
+        <name>cast_context</name>
+        <param>
+          <type>DeleterFnPtr</type>
+          <declname>expected_deleter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="41" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="41" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_data_ptr_1afabe70b57126bd53e1d93c6769116560" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_device" kindref="compound">Device</ref></type>
+        <definition>Device at::DataPtr::device</definition>
+        <argsstring>() const</argsstring>
+        <name>device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="44" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="20" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="20" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classat_1_1_data_ptr_1aef408ed4d1adff98b878400ff20971ff" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>cast_context</name></member>
+      <member refid="classat_1_1_data_ptr_1a2d19b93eeca5c085c73ec3cfbb95e600" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>clear</name></member>
+      <member refid="classat_1_1_data_ptr_1a9176827eec8019f6f20a56f779c893ef" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>DataPtr</name></member>
+      <member refid="classat_1_1_data_ptr_1a3de53bbb2660884223c06cdad0d0a38a" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>DataPtr</name></member>
+      <member refid="classat_1_1_data_ptr_1a08a264e2a90fc459f506d107daf2a172" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>DataPtr</name></member>
+      <member refid="classat_1_1_data_ptr_1afabe70b57126bd53e1d93c6769116560" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>device</name></member>
+      <member refid="classat_1_1_data_ptr_1a96b92400a8ed90eaaa673a5ca40ac2b2" prot="private" virt="non-virtual"><scope>at::DataPtr</scope><name>device_</name></member>
+      <member refid="classat_1_1_data_ptr_1adb17c7c45e546efe5990a84966e580ee" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>get</name></member>
+      <member refid="classat_1_1_data_ptr_1a504cb22bef7af262ad0628a8b181dac0" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>get_context</name></member>
+      <member refid="classat_1_1_data_ptr_1a5e50dc75e326f2b2c6bddbc3779a5396" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>operator bool</name></member>
+      <member refid="classat_1_1_data_ptr_1a3d22b2ee6f0497e5fa46ffe552d600cc" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>operator-&gt;</name></member>
+      <member refid="classat_1_1_data_ptr_1a184398d9bb99ef2e3d23663b4e5d9985" prot="private" virt="non-virtual"><scope>at::DataPtr</scope><name>ptr_</name></member>
+      <member refid="classat_1_1_data_ptr_1a874aa11c194b656ac48f5ac7d88ff4a5" prot="public" virt="non-virtual"><scope>at::DataPtr</scope><name>release_context</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

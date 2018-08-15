@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1cuda_1_1_c_u_d_a_stream" kind="struct" language="C++" prot="public">
+    <compoundname>at::cuda::CUDAStream</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a3584c91a82d0dc11a294fd3468a2cd14" prot="public" static="yes" mutable="no">
+        <type>constexpr int32_t</type>
+        <definition>constexpr int32_t at::cuda::CUDAStream::DEFAULT_FLAGS</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_FLAGS</name>
+        <initializer>= cudaStreamNonBlocking</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="60" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a3310d6f49c84fe21de737bc4451ae85b" prot="public" static="yes" mutable="no">
+        <type>constexpr int32_t</type>
+        <definition>constexpr int32_t at::cuda::CUDAStream::DEFAULT_PRIORITY</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_PRIORITY</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="61" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structat_1_1cuda_1_1_c_u_d_a_stream_1afd1e1b28dcb3e2fa72ca52bef3f2d953" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref> *</type>
+        <definition>CUDAStreamInternals* at::cuda::CUDAStream::internals_</definition>
+        <argsstring></argsstring>
+        <name>internals_</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="106" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a6b04218c7947ff7e7d7cb54e1e3cc7a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>at::cuda::CUDAStream::CUDAStream</definition>
+        <argsstring>()=default</argsstring>
+        <name>CUDAStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a2d4a1c0df3339fd195e7fdb5f492f24e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::cuda::CUDAStream::CUDAStream</definition>
+        <argsstring>(CUDAStreamInternals *internals, bool retain=false)</argsstring>
+        <name>CUDAStream</name>
+        <param>
+          <type><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref> *</type>
+          <declname>internals</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>retain</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="65" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="65" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1ad4ac9e8e91000f1f0ecef9b321cc58a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::cuda::CUDAStream::~CUDAStream</definition>
+        <argsstring>()</argsstring>
+        <name>~CUDAStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="73" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1aff717c3f84b5427eaf5e5428c82be839" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AT_API</type>
+        <definition>at::cuda::CUDAStream::CUDAStream</definition>
+        <argsstring>(const CUDAStream &amp;other)</argsstring>
+        <name>CUDAStream</name>
+        <param>
+          <type>const <ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.cpp" bodystart="183" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a2cf1cf76f4cbbfc912c2d6957c3d7fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>AT_API</type>
+        <definition>at::cuda::CUDAStream::CUDAStream</definition>
+        <argsstring>(CUDAStream &amp;&amp;other)</argsstring>
+        <name>CUDAStream</name>
+        <param>
+          <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="79" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.cpp" bodystart="191" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1af99dd33cd2cbba1085c473185db100ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref> &amp;</type>
+        <definition>CUDAStream&amp; at::cuda::CUDAStream::operator=</definition>
+        <argsstring>(CUDAStream other) noexcept</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="82" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a0836d60c54fcbfd44293d3b0cf6cbc25" prot="public" static="no" const="yes" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::cuda::CUDAStream::operator bool</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="88" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a316faaff1388bebcee4988c7f9cd1e32" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::cuda::CUDAStream::operator cudaStream_t</definition>
+        <argsstring>() const</argsstring>
+        <name>operator cudaStream_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="93" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a53a7e04a123c7e10b90763f3963e1140" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::cuda::CUDAStream::device</definition>
+        <argsstring>() const</argsstring>
+        <name>device</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="101" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1aa7962b3b38ba3c49208ce3bc7b0cde42" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>cudaStream_t</type>
+        <definition>cudaStream_t at::cuda::CUDAStream::stream</definition>
+        <argsstring>() const</argsstring>
+        <name>stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="102" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a4b3112faab19f7aaacceef874f0eabbe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_c_u_d_a_stream_internals" kindref="compound">CUDAStreamInternals</ref> *</type>
+        <definition>CUDAStreamInternals* at::cuda::CUDAStream::internals</definition>
+        <argsstring>() const</argsstring>
+        <name>internals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="103" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="103" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structat_1_1cuda_1_1_c_u_d_a_stream_1a345ea58e276cb7c33a0a045a94a931e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator&lt;</definition>
+        <argsstring>(const CUDAStream &amp;left, const CUDAStream &amp;right)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1cuda_1_1_c_u_d_a_stream" kindref="compound">CUDAStream</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="96" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="96" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAStream.h" bodystart="58" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a6b04218c7947ff7e7d7cb54e1e3cc7a9" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>CUDAStream</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a2d4a1c0df3339fd195e7fdb5f492f24e" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>CUDAStream</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1aff717c3f84b5427eaf5e5428c82be839" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>CUDAStream</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a2cf1cf76f4cbbfc912c2d6957c3d7fdc" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>CUDAStream</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a3584c91a82d0dc11a294fd3468a2cd14" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>DEFAULT_FLAGS</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a3310d6f49c84fe21de737bc4451ae85b" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>DEFAULT_PRIORITY</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a53a7e04a123c7e10b90763f3963e1140" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>device</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a4b3112faab19f7aaacceef874f0eabbe" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>internals</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1afd1e1b28dcb3e2fa72ca52bef3f2d953" prot="private" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>internals_</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a0836d60c54fcbfd44293d3b0cf6cbc25" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>operator bool</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a316faaff1388bebcee4988c7f9cd1e32" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>operator cudaStream_t</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1a345ea58e276cb7c33a0a045a94a931e8" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>operator&lt;</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1af99dd33cd2cbba1085c473185db100ef" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>operator=</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1aa7962b3b38ba3c49208ce3bc7b0cde42" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>stream</name></member>
+      <member refid="structat_1_1cuda_1_1_c_u_d_a_stream_1ad4ac9e8e91000f1f0ecef9b321cc58a2" prot="public" virt="non-virtual"><scope>at::cuda::CUDAStream</scope><name>~CUDAStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

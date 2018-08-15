@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_small_vector_base" kind="class" language="C++" prot="public">
+    <compoundname>at::SmallVectorBase</compoundname>
+    <derivedcompoundref refid="classat_1_1_small_vector_template_common" prot="public" virt="non-virtual">at::SmallVectorTemplateCommon&lt; T, typename &gt;</derivedcompoundref>
+    <derivedcompoundref refid="classat_1_1_small_vector_template_common" prot="public" virt="non-virtual">at::SmallVectorTemplateCommon&lt; T &gt;</derivedcompoundref>
+    <includes refid="_small_vector_8h" local="no">SmallVector.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classat_1_1_small_vector_base_1ac7d87982be839c1bd2646b7f631b55f4" prot="protected" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* at::SmallVectorBase::BeginX</definition>
+        <argsstring></argsstring>
+        <name>BeginX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_small_vector_base_1abf015558c9fc9666d61265ea81a515a9" prot="protected" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void * at::SmallVectorBase::EndX</definition>
+        <argsstring></argsstring>
+        <name>EndX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_small_vector_base_1a1f6b7f7b799d18affcd4f103dda6be82" prot="protected" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void * at::SmallVectorBase::CapacityX</definition>
+        <argsstring></argsstring>
+        <name>CapacityX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classat_1_1_small_vector_base_1a6ba6526e921aeab53df52a94a32cd9ec" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::SmallVectorBase::SmallVectorBase</definition>
+        <argsstring>(void *FirstEl, size_t Size)</argsstring>
+        <name>SmallVectorBase</name>
+        <param>
+          <type>void *</type>
+          <declname>FirstEl</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="67" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="67" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_base_1aad0c28f55592d56898e17b082992dc38" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SmallVectorBase::grow_pod</definition>
+        <argsstring>(void *FirstEl, size_t MinSizeInBytes, size_t TSize)</argsstring>
+        <name>grow_pod</name>
+        <param>
+          <type>void *</type>
+          <declname>FirstEl</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>MinSizeInBytes</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>TSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is an implementation of the grow() method which only works on POD-like data types and is out of line to reduce code duplication.</para><para>grow_pod - This is an implementation of the grow() method which only works on POD-like datatypes and is out of line to reduce code duplication. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="72" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.cpp" bodystart="23" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_small_vector_base_1ac467c3e17cfe1931b7701af7efceda5c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t at::SmallVectorBase::size_in_bytes</definition>
+        <argsstring>() const</argsstring>
+        <name>size_in_bytes</name>
+        <briefdescription>
+<para>This returns size()*sizeof(T). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_base_1a080727fd01500634693cc7f5fb30904e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t at::SmallVectorBase::capacity_in_bytes</definition>
+        <argsstring>() const</argsstring>
+        <name>capacity_in_bytes</name>
+        <briefdescription>
+<para>capacity_in_bytes - This returns capacity()*sizeof(T). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="81" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_base_1a1555255c2500ed31890456bcf0c44630" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::SmallVectorBase::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="85" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="85" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is all the non-templated stuff common to all SmallVectors. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="596">
+        <label>at::SmallVectorTemplateCommon&lt; T, typename &gt;</label>
+        <link refid="classat_1_1_small_vector_template_common"/>
+        <childnode refid="595" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="602">
+        <label>at::SmallVector&lt; T &gt;</label>
+        <link refid="classat_1_1_small_vector"/>
+        <childnode refid="601" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="598">
+        <label>at::SmallVectorTemplateBase&lt; T, isPodLike &gt;</label>
+        <link refid="classat_1_1_small_vector_template_base"/>
+        <childnode refid="597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="600">
+        <label>at::SmallVectorTemplateBase&lt; T, std::is_trivially_copyable&lt; T &gt;::value &gt;</label>
+        <link refid="classat_1_1_small_vector_template_base"/>
+        <childnode refid="597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="597">
+        <label>at::SmallVectorTemplateCommon&lt; T &gt;</label>
+        <link refid="classat_1_1_small_vector_template_common"/>
+        <childnode refid="595" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="601">
+        <label>at::SmallVectorImpl&lt; T &gt;</label>
+        <link refid="classat_1_1_small_vector_impl"/>
+        <childnode refid="600" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>at::SmallVectorTemplateBase&lt; T, true &gt;</label>
+        <link refid="classat_1_1_small_vector_template_base_3_01_t_00_01true_01_4"/>
+        <childnode refid="597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="595">
+        <label>at::SmallVectorBase</label>
+        <link refid="classat_1_1_small_vector_base"/>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="62" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="62" bodyend="86"/>
+    <listofallmembers>
+      <member refid="classat_1_1_small_vector_base_1ac7d87982be839c1bd2646b7f631b55f4" prot="protected" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>BeginX</name></member>
+      <member refid="classat_1_1_small_vector_base_1a080727fd01500634693cc7f5fb30904e" prot="public" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>capacity_in_bytes</name></member>
+      <member refid="classat_1_1_small_vector_base_1a1f6b7f7b799d18affcd4f103dda6be82" prot="protected" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>CapacityX</name></member>
+      <member refid="classat_1_1_small_vector_base_1a1555255c2500ed31890456bcf0c44630" prot="public" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>empty</name></member>
+      <member refid="classat_1_1_small_vector_base_1abf015558c9fc9666d61265ea81a515a9" prot="protected" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>EndX</name></member>
+      <member refid="classat_1_1_small_vector_base_1aad0c28f55592d56898e17b082992dc38" prot="protected" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>grow_pod</name></member>
+      <member refid="classat_1_1_small_vector_base_1ac467c3e17cfe1931b7701af7efceda5c" prot="public" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>size_in_bytes</name></member>
+      <member refid="classat_1_1_small_vector_base_1a6ba6526e921aeab53df52a94a32cd9ec" prot="protected" virt="non-virtual"><scope>at::SmallVectorBase</scope><name>SmallVectorBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_options_guard" kind="struct" language="C++" prot="public">
+    <compoundname>at::OptionsGuard</compoundname>
+    <includes refid="_options_guard_8h" local="no">OptionsGuard.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structat_1_1_options_guard_1a13d22273df464143bbde55399ba1210f" prot="private" static="no" mutable="no">
+        <type><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref></type>
+        <definition>TensorOptions at::OptionsGuard::original_</definition>
+        <argsstring></argsstring>
+        <name>original_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The original options that were in place at the time of construction of this object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_options_guard_1a22dcbedc0cb6f76615b4f5a506df3a32" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::OptionsGuard::OptionsGuard</definition>
+        <argsstring>(const TensorOptions &amp;options)</argsstring>
+        <name>OptionsGuard</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Stores the current default options and sets them to the given ones. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_options_guard_1a0d88755dc2a4793b9a915526e19d245e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::OptionsGuard::~OptionsGuard</definition>
+        <argsstring>()</argsstring>
+        <name>~OptionsGuard</name>
+        <briefdescription>
+<para>Restores the original default options. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_options_guard_1a541a26d108cfe09629e56dafd1f28d68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref> &amp;</type>
+        <definition>const TensorOptions&amp; at::OptionsGuard::original</definition>
+        <argsstring>()</argsstring>
+        <name>original</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the original options that were in place at the time of construction of this object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="44" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>RAII guard that stores the current default options upon construction, sets the current default options to the ones given to its constructor, and finally resets the options back to the original ones in the destructor. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h" bodystart="30" bodyend="52"/>
+    <listofallmembers>
+      <member refid="structat_1_1_options_guard_1a22dcbedc0cb6f76615b4f5a506df3a32" prot="public" virt="non-virtual"><scope>at::OptionsGuard</scope><name>OptionsGuard</name></member>
+      <member refid="structat_1_1_options_guard_1a541a26d108cfe09629e56dafd1f28d68" prot="public" virt="non-virtual"><scope>at::OptionsGuard</scope><name>original</name></member>
+      <member refid="structat_1_1_options_guard_1a13d22273df464143bbde55399ba1210f" prot="private" virt="non-virtual"><scope>at::OptionsGuard</scope><name>original_</name></member>
+      <member refid="structat_1_1_options_guard_1a0d88755dc2a4793b9a915526e19d245e" prot="public" virt="non-virtual"><scope>at::OptionsGuard</scope><name>~OptionsGuard</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_tensor_options_8h" kind="file" language="C++">
+    <compoundname>TensorOptions.h</compoundname>
+    <includes refid="_context_8h" local="no">ATen/Context.h</includes>
+    <includes refid="_device_8h" local="no">ATen/Device.h</includes>
+    <includes refid="_device_guard_8h" local="no">ATen/DeviceGuard.h</includes>
+    <includes refid="_layout_8h" local="no">ATen/Layout.h</includes>
+    <includes refid="_scalar_type_8h" local="no">ATen/ScalarType.h</includes>
+    <includes refid="build_2aten_2src_2_a_ten_2tensor_8h" local="no">ATen/Tensor.h</includes>
+    <includes local="no">ATen/Type.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">iosfwd</includes>
+    <includes local="no">utility</includes>
+    <includedby refid="cloneable_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</includedby>
+    <includedby refid="data__parallel_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</includedby>
+    <includedby refid="build_2aten_2src_2_a_ten_2_functions_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Functions.h</includedby>
+    <includedby refid="_a_ten_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</includedby>
+    <includedby refid="_tensor_factories_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorFactories.cpp</includedby>
+    <includedby refid="_options_guard_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h</includedby>
+    <includedby refid="aten_2src_2_a_ten_2templates_2_functions_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Functions.h</includedby>
+    <includedby refid="_native_functions_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/NativeFunctions.h</includedby>
+    <includedby refid="_type_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Type.cpp</includedby>
+    <includedby refid="_tensor_options_8cpp" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.cpp</includedby>
+    <incdepgraph>
+      <node id="11632">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="11633" relation="include">
+        </childnode>
+        <childnode refid="11634" relation="include">
+        </childnode>
+        <childnode refid="11635" relation="include">
+        </childnode>
+        <childnode refid="11636" relation="include">
+        </childnode>
+        <childnode refid="11637" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+        <childnode refid="11639" relation="include">
+        </childnode>
+      </node>
+      <node id="11671">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11663" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+        <childnode refid="11637" relation="include">
+        </childnode>
+      </node>
+      <node id="11668">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="11669" relation="include">
+        </childnode>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11626" relation="include">
+        </childnode>
+        <childnode refid="11673" relation="include">
+        </childnode>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11637" relation="include">
+        </childnode>
+        <childnode refid="11650" relation="include">
+        </childnode>
+      </node>
+      <node id="11656">
+        <label>atomic</label>
+      </node>
+      <node id="11637">
+        <label>functional</label>
+      </node>
+      <node id="11677">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+        <childnode refid="11666" relation="include">
+        </childnode>
+        <childnode refid="11624" relation="include">
+        </childnode>
+      </node>
+      <node id="11658">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="11630" relation="include">
+        </childnode>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11659" relation="include">
+        </childnode>
+        <childnode refid="11661" relation="include">
+        </childnode>
+        <childnode refid="11665" relation="include">
+        </childnode>
+      </node>
+      <node id="11660">
+        <label>limits</label>
+      </node>
+      <node id="11682">
+        <label>assert.h</label>
+      </node>
+      <node id="11649">
+        <label>iterator</label>
+      </node>
+      <node id="11629">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11630" relation="include">
+        </childnode>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11654" relation="include">
+        </childnode>
+        <childnode refid="11646" relation="include">
+        </childnode>
+        <childnode refid="11643" relation="include">
+        </childnode>
+        <childnode refid="11666" relation="include">
+        </childnode>
+        <childnode refid="11667" relation="include">
+        </childnode>
+      </node>
+      <node id="11681">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="11682" relation="include">
+        </childnode>
+        <childnode refid="11627" relation="include">
+        </childnode>
+        <childnode refid="11639" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+        <childnode refid="11633" relation="include">
+        </childnode>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11659" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11683" relation="include">
+        </childnode>
+        <childnode refid="11629" relation="include">
+        </childnode>
+      </node>
+      <node id="11686">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="11661">
+        <label>cstdint</label>
+      </node>
+      <node id="11627">
+        <label>stdint.h</label>
+      </node>
+      <node id="11662">
+        <label>cmath</label>
+      </node>
+      <node id="11636">
+        <label>cassert</label>
+      </node>
+      <node id="11623">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11625" relation="include">
+        </childnode>
+        <childnode refid="11626" relation="include">
+        </childnode>
+        <childnode refid="11628" relation="include">
+        </childnode>
+        <childnode refid="11629" relation="include">
+        </childnode>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11668" relation="include">
+        </childnode>
+        <childnode refid="11678" relation="include">
+        </childnode>
+        <childnode refid="11650" relation="include">
+        </childnode>
+        <childnode refid="11675" relation="include">
+        </childnode>
+        <childnode refid="11661" relation="include">
+        </childnode>
+      </node>
+      <node id="11664">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11648" relation="include">
+        </childnode>
+        <childnode refid="11660" relation="include">
+        </childnode>
+      </node>
+      <node id="11639">
+        <label>stdexcept</label>
+      </node>
+      <node id="11667">
+        <label>numeric</label>
+      </node>
+      <node id="11655">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="11656" relation="include">
+        </childnode>
+        <childnode refid="11650" relation="include">
+        </childnode>
+        <childnode refid="11657" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11632" relation="include">
+        </childnode>
+      </node>
+      <node id="11659">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11660" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+        <childnode refid="11661" relation="include">
+        </childnode>
+        <childnode refid="11639" relation="include">
+        </childnode>
+        <childnode refid="11633" relation="include">
+        </childnode>
+        <childnode refid="11662" relation="include">
+        </childnode>
+        <childnode refid="11663" relation="include">
+        </childnode>
+        <childnode refid="11664" relation="include">
+        </childnode>
+      </node>
+      <node id="11657">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="11656" relation="include">
+        </childnode>
+      </node>
+      <node id="11683">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="11655" relation="include">
+        </childnode>
+        <childnode refid="11654" relation="include">
+        </childnode>
+      </node>
+      <node id="11638">
+        <label>string</label>
+      </node>
+      <node id="11669">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="11650" relation="include">
+        </childnode>
+        <childnode refid="11670" relation="include">
+        </childnode>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11657" relation="include">
+        </childnode>
+        <childnode refid="11671" relation="include">
+        </childnode>
+        <childnode refid="11672" relation="include">
+        </childnode>
+      </node>
+      <node id="11678">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="11679">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="11671" relation="include">
+        </childnode>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11680" relation="include">
+        </childnode>
+        <childnode refid="11668" relation="include">
+        </childnode>
+        <childnode refid="11640" relation="include">
+        </childnode>
+      </node>
+      <node id="11641">
+        <label>exception</label>
+      </node>
+      <node id="11670">
+        <label>stddef.h</label>
+      </node>
+      <node id="11654">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="11655" relation="include">
+        </childnode>
+      </node>
+      <node id="11645">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="11640" relation="include">
+        </childnode>
+      </node>
+      <node id="11685">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="11681" relation="include">
+        </childnode>
+        <childnode refid="11686" relation="include">
+        </childnode>
+      </node>
+      <node id="11642">
+        <label>ostream</label>
+      </node>
+      <node id="11625">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="11624" relation="include">
+        </childnode>
+      </node>
+      <node id="11628">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="11630">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11644" relation="include">
+        </childnode>
+        <childnode refid="11652" relation="include">
+        </childnode>
+        <childnode refid="11649" relation="include">
+        </childnode>
+        <childnode refid="11653" relation="include">
+        </childnode>
+      </node>
+      <node id="11684">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="11624">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="11687">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11627" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+      </node>
+      <node id="11666">
+        <label>typeinfo</label>
+      </node>
+      <node id="11674">
+        <label>cstdio</label>
+      </node>
+      <node id="11672">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="11650" relation="include">
+        </childnode>
+        <childnode refid="11624" relation="include">
+        </childnode>
+      </node>
+      <node id="11653">
+        <label>vector</label>
+      </node>
+      <node id="11651">
+        <label>new</label>
+      </node>
+      <node id="11633">
+        <label>utility</label>
+      </node>
+      <node id="11652">
+        <label>array</label>
+      </node>
+      <node id="11643">
+        <label>sstream</label>
+      </node>
+      <node id="11663">
+        <label>iosfwd</label>
+      </node>
+      <node id="11647">
+        <label>cstdlib</label>
+      </node>
+      <node id="11665">
+        <label>iostream</label>
+      </node>
+      <node id="11640">
+        <label>cstddef</label>
+      </node>
+      <node id="11676">
+        <label>unordered_map</label>
+      </node>
+      <node id="11675">
+        <label>mutex</label>
+      </node>
+      <node id="11673">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="11646" relation="include">
+        </childnode>
+        <childnode refid="11674" relation="include">
+        </childnode>
+        <childnode refid="11647" relation="include">
+        </childnode>
+        <childnode refid="11637" relation="include">
+        </childnode>
+        <childnode refid="11650" relation="include">
+        </childnode>
+        <childnode refid="11675" relation="include">
+        </childnode>
+        <childnode refid="11676" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+        <childnode refid="11653" relation="include">
+        </childnode>
+        <childnode refid="11677" relation="include">
+        </childnode>
+        <childnode refid="11624" relation="include">
+        </childnode>
+      </node>
+      <node id="11631">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="11624" relation="include">
+        </childnode>
+        <childnode refid="11632" relation="include">
+        </childnode>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11641" relation="include">
+        </childnode>
+        <childnode refid="11642" relation="include">
+        </childnode>
+        <childnode refid="11643" relation="include">
+        </childnode>
+        <childnode refid="11638" relation="include">
+        </childnode>
+      </node>
+      <node id="11622">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h"/>
+        <childnode refid="11623" relation="include">
+        </childnode>
+        <childnode refid="11671" relation="include">
+        </childnode>
+        <childnode refid="11679" relation="include">
+        </childnode>
+        <childnode refid="11688" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11680" relation="include">
+        </childnode>
+        <childnode refid="11628" relation="include">
+        </childnode>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11663" relation="include">
+        </childnode>
+        <childnode refid="11633" relation="include">
+        </childnode>
+      </node>
+      <node id="11680">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="11626" relation="include">
+        </childnode>
+        <childnode refid="11681" relation="include">
+        </childnode>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11684" relation="include">
+        </childnode>
+        <childnode refid="11685" relation="include">
+        </childnode>
+        <childnode refid="11687" relation="include">
+        </childnode>
+        <childnode refid="11683" relation="include">
+        </childnode>
+        <childnode refid="11655" relation="include">
+        </childnode>
+        <childnode refid="11629" relation="include">
+        </childnode>
+        <childnode refid="11671" relation="include">
+        </childnode>
+        <childnode refid="11688" relation="include">
+        </childnode>
+        <childnode refid="11632" relation="include">
+        </childnode>
+      </node>
+      <node id="11634">
+        <label>type_traits</label>
+      </node>
+      <node id="11688">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="11658" relation="include">
+        </childnode>
+        <childnode refid="11631" relation="include">
+        </childnode>
+        <childnode refid="11665" relation="include">
+        </childnode>
+      </node>
+      <node id="11644">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="11645" relation="include">
+        </childnode>
+        <childnode refid="11646" relation="include">
+        </childnode>
+        <childnode refid="11636" relation="include">
+        </childnode>
+        <childnode refid="11640" relation="include">
+        </childnode>
+        <childnode refid="11647" relation="include">
+        </childnode>
+        <childnode refid="11648" relation="include">
+        </childnode>
+        <childnode refid="11635" relation="include">
+        </childnode>
+        <childnode refid="11649" relation="include">
+        </childnode>
+        <childnode refid="11650" relation="include">
+        </childnode>
+        <childnode refid="11651" relation="include">
+        </childnode>
+        <childnode refid="11634" relation="include">
+        </childnode>
+        <childnode refid="11633" relation="include">
+        </childnode>
+        <childnode refid="11624" relation="include">
+        </childnode>
+      </node>
+      <node id="11646">
+        <label>algorithm</label>
+      </node>
+      <node id="11626">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="11627" relation="include">
+        </childnode>
+      </node>
+      <node id="11648">
+        <label>cstring</label>
+      </node>
+      <node id="11650">
+        <label>memory</label>
+      </node>
+      <node id="11635">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11697">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h</label>
+        <link refid="rnn_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11725">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h_source"/>
+      </node>
+      <node id="11694">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="11714">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="11690" relation="include">
+        </childnode>
+        <childnode refid="11715" relation="include">
+        </childnode>
+        <childnode refid="11717" relation="include">
+        </childnode>
+        <childnode refid="11704" relation="include">
+        </childnode>
+        <childnode refid="11705" relation="include">
+        </childnode>
+        <childnode refid="11691" relation="include">
+        </childnode>
+        <childnode refid="11695" relation="include">
+        </childnode>
+        <childnode refid="11696" relation="include">
+        </childnode>
+        <childnode refid="11698" relation="include">
+        </childnode>
+        <childnode refid="11699" relation="include">
+        </childnode>
+        <childnode refid="11700" relation="include">
+        </childnode>
+        <childnode refid="11697" relation="include">
+        </childnode>
+        <childnode refid="11706" relation="include">
+        </childnode>
+        <childnode refid="11701" relation="include">
+        </childnode>
+        <childnode refid="11718" relation="include">
+        </childnode>
+        <childnode refid="11707" relation="include">
+        </childnode>
+        <childnode refid="11716" relation="include">
+        </childnode>
+        <childnode refid="11713" relation="include">
+        </childnode>
+        <childnode refid="11709" relation="include">
+        </childnode>
+        <childnode refid="11719" relation="include">
+        </childnode>
+        <childnode refid="11694" relation="include">
+        </childnode>
+      </node>
+      <node id="11691">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/batchnorm.h</label>
+        <link refid="batchnorm_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11727">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="11726" relation="include">
+        </childnode>
+      </node>
+      <node id="11713">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h</label>
+        <link refid="sgd_8h_source"/>
+        <childnode refid="11708" relation="include">
+        </childnode>
+      </node>
+      <node id="11716">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h</label>
+        <link refid="optimizer_8h_source"/>
+        <childnode refid="11707" relation="include">
+        </childnode>
+        <childnode refid="11710" relation="include">
+        </childnode>
+        <childnode refid="11711" relation="include">
+        </childnode>
+        <childnode refid="11712" relation="include">
+        </childnode>
+        <childnode refid="11713" relation="include">
+        </childnode>
+        <childnode refid="11708" relation="include">
+        </childnode>
+      </node>
+      <node id="11733">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="11706">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h</label>
+        <link refid="sequential_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11736">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="11690" relation="include">
+        </childnode>
+        <childnode refid="11701" relation="include">
+        </childnode>
+        <childnode refid="11703" relation="include">
+        </childnode>
+      </node>
+      <node id="11710">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adam.h</label>
+        <link refid="adam_8h_source"/>
+        <childnode refid="11708" relation="include">
+        </childnode>
+      </node>
+      <node id="11715">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="11704" relation="include">
+        </childnode>
+        <childnode refid="11693" relation="include">
+        </childnode>
+        <childnode refid="11716" relation="include">
+        </childnode>
+      </node>
+      <node id="11717">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/init.h</label>
+        <link refid="init_8h_source"/>
+      </node>
+      <node id="11718">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="11704" relation="include">
+        </childnode>
+        <childnode refid="11705" relation="include">
+        </childnode>
+        <childnode refid="11691" relation="include">
+        </childnode>
+        <childnode refid="11695" relation="include">
+        </childnode>
+        <childnode refid="11696" relation="include">
+        </childnode>
+        <childnode refid="11698" relation="include">
+        </childnode>
+        <childnode refid="11699" relation="include">
+        </childnode>
+        <childnode refid="11700" relation="include">
+        </childnode>
+        <childnode refid="11697" relation="include">
+        </childnode>
+        <childnode refid="11706" relation="include">
+        </childnode>
+        <childnode refid="11701" relation="include">
+        </childnode>
+        <childnode refid="11693" relation="include">
+        </childnode>
+        <childnode refid="11710" relation="include">
+        </childnode>
+        <childnode refid="11713" relation="include">
+        </childnode>
+      </node>
+      <node id="11719">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h</label>
+        <link refid="tensor__list__view_8h_source"/>
+        <childnode refid="11694" relation="include">
+        </childnode>
+      </node>
+      <node id="11704">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="11690" relation="include">
+        </childnode>
+        <childnode refid="11705" relation="include">
+        </childnode>
+        <childnode refid="11700" relation="include">
+        </childnode>
+        <childnode refid="11706" relation="include">
+        </childnode>
+        <childnode refid="11701" relation="include">
+        </childnode>
+        <childnode refid="11693" relation="include">
+        </childnode>
+        <childnode refid="11707" relation="include">
+        </childnode>
+        <childnode refid="11710" relation="include">
+        </childnode>
+        <childnode refid="11711" relation="include">
+        </childnode>
+        <childnode refid="11712" relation="include">
+        </childnode>
+        <childnode refid="11713" relation="include">
+        </childnode>
+      </node>
+      <node id="11692">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules.h</label>
+        <link refid="modules_8h_source"/>
+        <childnode refid="11693" relation="include">
+        </childnode>
+      </node>
+      <node id="11698">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/embedding.h</label>
+        <link refid="embedding_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11731">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorTransformations.h</label>
+        <link refid="_tensor_transformations_8h_source"/>
+      </node>
+      <node id="11693">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn.h</label>
+        <link refid="nn_8h_source"/>
+        <childnode refid="11694" relation="include">
+        </childnode>
+      </node>
+      <node id="11726">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+      <node id="11695">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11712">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/rmsprop.h</label>
+        <link refid="rmsprop_8h_source"/>
+        <childnode refid="11708" relation="include">
+        </childnode>
+      </node>
+      <node id="11737">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Functions.h</label>
+        <link refid="aten_2src_2_a_ten_2templates_2_functions_8h_source"/>
+      </node>
+      <node id="11708">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim.h</label>
+        <link refid="optim_8h_source"/>
+        <childnode refid="11709" relation="include">
+        </childnode>
+        <childnode refid="11694" relation="include">
+        </childnode>
+      </node>
+      <node id="11735">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+      </node>
+      <node id="11721">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="11705">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h</label>
+        <link refid="any_8h_source"/>
+        <childnode refid="11706" relation="include">
+        </childnode>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11720">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="11722">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+      </node>
+      <node id="11730">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+      </node>
+      <node id="11702">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="11703" relation="include">
+        </childnode>
+      </node>
+      <node id="11709">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h</label>
+        <link refid="serialization_8h_source"/>
+        <childnode refid="11694" relation="include">
+        </childnode>
+      </node>
+      <node id="11701">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="11734">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+      </node>
+      <node id="11707">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adagrad.h</label>
+        <link refid="adagrad_8h_source"/>
+        <childnode refid="11708" relation="include">
+        </childnode>
+      </node>
+      <node id="11696">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="11697" relation="include">
+        </childnode>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11723">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+      </node>
+      <node id="11728">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Gesv.h</label>
+        <link refid="_gesv_8h_source"/>
+      </node>
+      <node id="11690">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="11691" relation="include">
+        </childnode>
+        <childnode refid="11695" relation="include">
+        </childnode>
+        <childnode refid="11696" relation="include">
+        </childnode>
+        <childnode refid="11698" relation="include">
+        </childnode>
+        <childnode refid="11699" relation="include">
+        </childnode>
+        <childnode refid="11700" relation="include">
+        </childnode>
+        <childnode refid="11697" relation="include">
+        </childnode>
+        <childnode refid="11693" relation="include">
+        </childnode>
+      </node>
+      <node id="11738">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/NativeFunctions.h</label>
+        <link refid="_native_functions_8h_source"/>
+      </node>
+      <node id="11703">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="11704" relation="include">
+        </childnode>
+        <childnode refid="11697" relation="include">
+        </childnode>
+        <childnode refid="11707" relation="include">
+        </childnode>
+        <childnode refid="11710" relation="include">
+        </childnode>
+        <childnode refid="11711" relation="include">
+        </childnode>
+        <childnode refid="11712" relation="include">
+        </childnode>
+        <childnode refid="11713" relation="include">
+        </childnode>
+        <childnode refid="11714" relation="include">
+        </childnode>
+        <childnode refid="11720" relation="include">
+        </childnode>
+        <childnode refid="11721" relation="include">
+        </childnode>
+        <childnode refid="11722" relation="include">
+        </childnode>
+        <childnode refid="11723" relation="include">
+        </childnode>
+        <childnode refid="11724" relation="include">
+        </childnode>
+        <childnode refid="11725" relation="include">
+        </childnode>
+        <childnode refid="11726" relation="include">
+        </childnode>
+        <childnode refid="11727" relation="include">
+        </childnode>
+        <childnode refid="11728" relation="include">
+        </childnode>
+        <childnode refid="11729" relation="include">
+        </childnode>
+        <childnode refid="11730" relation="include">
+        </childnode>
+        <childnode refid="11731" relation="include">
+        </childnode>
+        <childnode refid="11732" relation="include">
+        </childnode>
+        <childnode refid="11735" relation="include">
+        </childnode>
+      </node>
+      <node id="11699">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2nn_2modules_2functional_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11689">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h"/>
+        <childnode refid="11690" relation="include">
+        </childnode>
+        <childnode refid="11701" relation="include">
+        </childnode>
+        <childnode refid="11702" relation="include">
+        </childnode>
+        <childnode refid="11703" relation="include">
+        </childnode>
+        <childnode refid="11736" relation="include">
+        </childnode>
+        <childnode refid="11737" relation="include">
+        </childnode>
+        <childnode refid="11738" relation="include">
+        </childnode>
+      </node>
+      <node id="11729">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LinearAlgebraUtils.h</label>
+        <link refid="_linear_algebra_utils_8h_source"/>
+      </node>
+      <node id="11724">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+      </node>
+      <node id="11700">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/linear.h</label>
+        <link refid="linear_8h_source"/>
+        <childnode refid="11692" relation="include">
+        </childnode>
+      </node>
+      <node id="11732">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="11701" relation="include">
+        </childnode>
+        <childnode refid="11733" relation="include">
+        </childnode>
+        <childnode refid="11734" relation="include">
+        </childnode>
+      </node>
+      <node id="11711">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h</label>
+        <link refid="lbfgs_8h_source"/>
+        <childnode refid="11708" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structat_1_1_tensor_options" prot="public">at::TensorOptions</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1detail">at::detail</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_tensor_options_8h_1a36eea61ab24871e62e782b75cef3795d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;stream, const at::TensorOptions &amp;options)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor_options" kindref="compound">at::TensorOptions</ref> &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h" line="282" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.cpp" bodystart="23" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Context.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Device.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/DeviceGuard.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Layout.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/ScalarType.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Tensor.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Type.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iosfwd&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;utility&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="structat_1_1_tensor_options" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal">AT_API<sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>()<sp/>:<sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>(</highlight><highlight class="comment">/*use_thread_local_default_options=*/</highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>use_thread_local_default_options);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="structat_1_1_tensor_options_1aac501e8228ab4f81d9a8231bc68a5d03" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1aac501e8228ab4f81d9a8231bc68a5d03" kindref="member">TensorOptions</ref>(<ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>tensor,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>discard_runtime_type<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!discard_runtime_type)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type_<sp/>=<sp/>&amp;tensor.type();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>(tensor.<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>(tensor.<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>());</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>(tensor.<ref refid="structat_1_1_tensor_1ae354b0becb671916dceec56663fedda1" kindref="member">layout</ref>());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="structat_1_1_tensor_options_1aa3339c5bb1a78447f33605696f223e91" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>implicit<sp/>*/</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1aa3339c5bb1a78447f33605696f223e91" kindref="member">TensorOptions</ref>(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_type" kindref="compound">Type</ref>&amp;<sp/>type,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>int32_t<sp/><ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref><sp/>=<sp/>-1,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>discard_runtime_type<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!discard_runtime_type)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type_<sp/>=<sp/>&amp;type;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>(type.scalarType());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>({type.backend(),<sp/><ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref>});</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>(type.layout());</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structat_1_1_tensor_options_1a3ca3bb00255555f31b15529fc760ed6c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>implicit<sp/>*/</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1a3ca3bb00255555f31b15529fc760ed6c" kindref="member">TensorOptions</ref>(Layout<sp/><ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>)<sp/>:<sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>(layout);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="structat_1_1_tensor_options_1a85ea269d220312c9fd2af7afb7e461cb" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>implicit<sp/>*/</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1a85ea269d220312c9fd2af7afb7e461cb" kindref="member">TensorOptions</ref>(<ref refid="structat_1_1_device" kindref="compound">Device</ref><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>:<sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>(device);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="structat_1_1_tensor_options_1ab198eaaa224bbd91c84c8dd30135a1ac" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>implicit<sp/>*/</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1ab198eaaa224bbd91c84c8dd30135a1ac" kindref="member">TensorOptions</ref>(Backend<sp/>backend)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>(<ref refid="structat_1_1_device" kindref="compound">Device</ref>(backend))<sp/>{}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="structat_1_1_tensor_options_1a1784c305b84666bef8fd18ca56d9ff3c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>implicit<sp/>*/</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1a1784c305b84666bef8fd18ca56d9ff3c" kindref="member">TensorOptions</ref>(ScalarType<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)<sp/>:<sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>(dtype);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="structat_1_1_tensor_options_1a92fc69dce2b7f17e98650f38fee47c4d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1a92fc69dce2b7f17e98650f38fee47c4d" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dtype_<sp/>==<sp/>other.dtype_<sp/>&amp;&amp;<sp/>layout_<sp/>==<sp/>other.layout_<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>device_<sp/>==<sp/>other.device_<sp/>&amp;&amp;<sp/>requires_grad_<sp/>==<sp/>other.requires_grad_;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="structat_1_1_tensor_options_1a051df634c4b2bc3e7b610c2a9501df0d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1a051df634c4b2bc3e7b610c2a9501df0d" kindref="member">operator!=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>!(*</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/>other);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="structat_1_1_tensor_options_1a7080e0987c37f5e6581f3346a646779d" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a7080e0987c37f5e6581f3346a646779d" kindref="member">discard_runtime_type</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>type_<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="structat_1_1_tensor_options_1a94d4f14513dd74499a81fde2c36a93e2" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a94d4f14513dd74499a81fde2c36a93e2" kindref="member">device</ref>(<ref refid="structat_1_1_device" kindref="compound">Device</ref><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>device_<sp/>=<sp/>std::move(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>update_underlying_type();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="structat_1_1_tensor_options_1a292cb933722ee542e044f874bb36d8db" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a292cb933722ee542e044f874bb36d8db" kindref="member">device_index</ref>(int32_t<sp/><ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>({Device::Type::CUDA,<sp/><ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref>});</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="structat_1_1_tensor_options_1a73103c8b23a9008c19322f7833d2e313" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a73103c8b23a9008c19322f7833d2e313" kindref="member">dtype</ref>(ScalarType<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>dtype_<sp/>=<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>update_underlying_type();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="structat_1_1_tensor_options_1adf8ca7410557f417326d58f593ecb0ca" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1adf8ca7410557f417326d58f593ecb0ca" kindref="member">layout</ref>(Layout<sp/><ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>layout_<sp/>=<sp/><ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>update_underlying_type();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="structat_1_1_tensor_options_1a161df7b4ef12ea2ca50c0993bb4ba5d6" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a161df7b4ef12ea2ca50c0993bb4ba5d6" kindref="member">requires_grad</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a0ec437861d65a58ca5118c6493967d16" kindref="member">requires_grad</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>requires_grad_<sp/>=<sp/><ref refid="namespaceat_1a0ec437861d65a58ca5118c6493967d16" kindref="member">requires_grad</ref>;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="structat_1_1_tensor_options_1a34a8d34319ce3ebd4a9ebe54c9e69995" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_device" kindref="compound">Device</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a34a8d34319ce3ebd4a9ebe54c9e69995" kindref="member">device</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>device_;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="structat_1_1_tensor_options_1ab685f4349c5e9f3b281154ac9b2d9b83" refkind="member"><highlight class="normal"><sp/><sp/>int32_t<sp/><ref refid="structat_1_1_tensor_options_1ab685f4349c5e9f3b281154ac9b2d9b83" kindref="member">device_index</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>device_.index();</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="structat_1_1_tensor_options_1a75cfaa978c85234d360c3b11cd4e68f0" refkind="member"><highlight class="normal"><sp/><sp/>ScalarType<sp/><ref refid="structat_1_1_tensor_options_1a75cfaa978c85234d360c3b11cd4e68f0" kindref="member">dtype</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dtype_;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="structat_1_1_tensor_options_1a20a6e9a47d9322af3c1177add411e202" refkind="member"><highlight class="normal"><sp/><sp/>Layout<sp/><ref refid="structat_1_1_tensor_options_1a20a6e9a47d9322af3c1177add411e202" kindref="member">layout</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>layout_;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="structat_1_1_tensor_options_1a668d5aca5851d41388f5010e4693ba17" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options_1a668d5aca5851d41388f5010e4693ba17" kindref="member">requires_grad</ref>()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>requires_grad_;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_type" kindref="compound">Type</ref>&amp;<sp/><ref refid="structat_1_1_tensor_options_1a7788ac3baa4a936597d9db4771525490" kindref="member">type</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type_<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*type_;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>getType(backend(),<sp/>dtype_);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update_underlying_type()<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(type_)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>type_<sp/>=<sp/>&amp;type_-&gt;toScalarType(dtype_).toBackend(backend());</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Resolves<sp/>the<sp/>ATen<sp/>backend<sp/>specified<sp/>by<sp/>the<sp/>current<sp/>construction<sp/>axes.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/>Backend<sp/>backend()<sp/>const<sp/>noexcept<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>Backend<sp/>backend;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(device_.type()<sp/>==<sp/>Device::Type::CPU)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>backend<sp/>=<sp/>(layout_<sp/>==<sp/>kStrided)<sp/>?<sp/>kCPU<sp/>:<sp/>kSparseCPU;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>backend<sp/>=<sp/>(layout_<sp/>==<sp/>kStrided)<sp/>?<sp/>kCUDA<sp/>:<sp/>kSparseCUDA;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>backend;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/>ScalarType<sp/>dtype_{kFloat};</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/>Device<sp/>device_{Device::Type::CPU};</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>Layout<sp/>layout_{Layout::Strided};</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>requires_grad_{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Not<sp/>part<sp/>of<sp/>the<sp/>observable<sp/>API,<sp/>so<sp/>make<sp/>`mutable`<sp/>so<sp/>we<sp/>can<sp/>set<sp/>it<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>`null`<sp/>in<sp/>`discard_runtime_type`.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Type*<sp/>type_{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212" refid="namespaceat_1a25549deef81727b261b7b298eb848197" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>(ScalarType<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>().<ref refid="structat_1_1_tensor_options_1a73103c8b23a9008c19322f7833d2e313" kindref="member">dtype</ref>(<ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218" refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/><ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>(Layout<sp/><ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>().<ref refid="structat_1_1_tensor_options_1adf8ca7410557f417326d58f593ecb0ca" kindref="member">layout</ref>(<ref refid="namespaceat_1a77ae26eb5b3908e51a7cd9b6bb69d265" kindref="member">layout</ref>);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>(<ref refid="structat_1_1_device" kindref="compound">Device</ref><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>().<ref refid="structat_1_1_tensor_options_1a94d4f14513dd74499a81fde2c36a93e2" kindref="member">device</ref>(std::move(<ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>));</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/><ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref>(int32_t<sp/><ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>().<ref refid="structat_1_1_tensor_options_1a292cb933722ee542e044f874bb36d8db" kindref="member">device_index</ref>(<ref refid="namespaceat_1a562dbafa8baf6a2724b3747e2008b206" kindref="member">device_index</ref>);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="namespaceat_1a0ec437861d65a58ca5118c6493967d16" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/><ref refid="namespaceat_1a0ec437861d65a58ca5118c6493967d16" kindref="member">requires_grad</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespaceat_1a0ec437861d65a58ca5118c6493967d16" kindref="member">requires_grad</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>().<ref refid="structat_1_1_tensor_options_1a161df7b4ef12ea2ca50c0993bb4ba5d6" kindref="member">requires_grad</ref>(<ref refid="namespaceat_1a0ec437861d65a58ca5118c6493967d16" kindref="member">requires_grad</ref>);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="structat_1_1_tensor_1a7d7c4c2a7b516b004f78940584c4491e" refkind="member"><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref><sp/><ref refid="structat_1_1_tensor_1a7d7c4c2a7b516b004f78940584c4491e" kindref="member">Tensor::options</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">detail<sp/>{</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/>to(</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref>&amp;<sp/>tensor,</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">TensorOptions</ref>&amp;<sp/>options,</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non_blocking)<sp/>{</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Don&apos;t<sp/>copy<sp/>if<sp/>the<sp/>options<sp/>match.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tensor.<ref refid="structat_1_1_tensor_1a7d7c4c2a7b516b004f78940584c4491e" kindref="member">options</ref>()<sp/>==<sp/>options)<sp/>{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tensor;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/>DeviceGuard<sp/>guard(options.device());</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>options.type().copy(tensor,<sp/>non_blocking);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>detail</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259" refid="structat_1_1_tensor_1af02d1520be96cf71c531b1eb4b20aa9e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/><ref refid="structat_1_1_tensor_1af02d1520be96cf71c531b1eb4b20aa9e" kindref="member">Tensor::to</ref>(<ref refid="structat_1_1_device" kindref="compound">Device</ref><sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>,<sp/>ScalarType<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non_blocking)</highlight><highlight class="keyword"></highlight></codeline>
+<codeline lineno="260"><highlight class="keyword"><sp/><sp/><sp/><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>()<sp/>==<sp/>device<sp/>&amp;&amp;<sp/>this-&gt;<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>()<sp/>==<sp/>dtype)<sp/>{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>detail::to(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="structat_1_1_tensor_1a7d7c4c2a7b516b004f78940584c4491e" kindref="member">options</ref>().<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>(<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>).<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>(<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>),<sp/>non_blocking);</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref><sp/><ref refid="structat_1_1_tensor_1af02d1520be96cf71c531b1eb4b20aa9e" kindref="member">Tensor::to</ref>(ScalarType<sp/><ref refid="namespaceat_1a25549deef81727b261b7b298eb848197" kindref="member">dtype</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non_blocking)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>()<sp/>==<sp/>dtype)<sp/>{</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>detail::to(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="structat_1_1_tensor_1a7d7c4c2a7b516b004f78940584c4491e" kindref="member">options</ref>().<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>(<ref refid="structat_1_1_tensor_1acb9e0d281b1fa351141cbc61730db10a" kindref="member">dtype</ref>),<sp/>non_blocking);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>Tensor<sp/><ref refid="structat_1_1_tensor_1af02d1520be96cf71c531b1eb4b20aa9e" kindref="member">Tensor::to</ref>(Device<sp/><ref refid="namespaceat_1a7b0b366b175733b3ff709ceed5058911" kindref="member">device</ref>,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>non_blocking)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>()<sp/>==<sp/>device)<sp/>{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>detail::to(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/><ref refid="structat_1_1_tensor_1a7d7c4c2a7b516b004f78940584c4491e" kindref="member">options</ref>().<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>(<ref refid="structat_1_1_tensor_1ad111f2086ee52a8b4c489033085af9a6" kindref="member">device</ref>),<sp/>non_blocking);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">std::ostream&amp;<sp/>operator&lt;&lt;(</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostream&amp;<sp/>stream,</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structat_1_1_tensor_options" kindref="compound">at::TensorOptions</ref>&amp;<sp/>options);</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h"/>
+  </compounddef>
+</doxygen>

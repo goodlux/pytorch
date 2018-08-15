@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_matrix_ref" kind="class" language="C++" prot="public">
+    <compoundname>at::MatrixRef</compoundname>
+    <includes refid="_matrix_ref_8h" local="no">MatrixRef.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="user-defined">
+      <header>Simple Operations</header>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a83ace10f58cd93555db7df8251a9ff71" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::MatrixRef&lt; T &gt;::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <briefdescription>
+<para>empty - Check if the matrix is empty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="51" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1ac3bbc2eb4d9efd00a18a60cd1b5a7fa2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const T *</type>
+        <definition>const T* at::MatrixRef&lt; T &gt;::data</definition>
+        <argsstring>() const</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="53" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1abc3c0d28808beb4434b6e03c6d9060c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t at::MatrixRef&lt; T &gt;::size</definition>
+        <argsstring>(size_t dim) const</argsstring>
+        <name>size</name>
+        <param>
+          <type>size_t</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+<para>size - Get size a dimension </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="56" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="56" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a9563a3329c449123144e6e31835074e1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t at::MatrixRef&lt; T &gt;::numel</definition>
+        <argsstring>() const</argsstring>
+        <name>numel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="66" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a49a778bd320d3e3a6e39b347d982d910" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool at::MatrixRef&lt; T &gt;::equals</definition>
+        <argsstring>(MatrixRef RHS) const</argsstring>
+        <name>equals</name>
+        <param>
+          <type><ref refid="classat_1_1_matrix_ref" kindref="compound">MatrixRef</ref></type>
+          <declname>RHS</declname>
+        </param>
+        <briefdescription>
+<para>equals - Check for element-wise equality. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="71" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="71" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <header>Operator Overloads</header>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a86428a9268113cdbb2ccf1fe8020ec82" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt;</type>
+        <definition>ArrayRef&lt;T&gt; at::MatrixRef&lt; T &gt;::operator[]</definition>
+        <argsstring>(size_t Index) const</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>Index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="78" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a3d9cb0e9386fccddaa7a7ca5fb5a0fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_same&lt; U, T &gt;::value, <ref refid="classat_1_1_matrix_ref" kindref="compound">MatrixRef</ref>&lt; T &gt; &gt;::type &amp;</type>
+        <definition>std::enable_if&lt;std::is_same&lt;U, T&gt;::value, MatrixRef&lt;T&gt; &gt;::type&amp; at::MatrixRef&lt; T &gt;::operator=</definition>
+        <argsstring>(U &amp;&amp;Temporary)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>U &amp;&amp;</type>
+          <declname>Temporary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disallow accidental assignment from a temporary.</para><para>The declaration here is extra complicated so that &quot;arrayRef = {}&quot; continues to select the move assignment operator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a429b51aa1798c4e2806581ade0604e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_same&lt; U, T &gt;::value, <ref refid="classat_1_1_matrix_ref" kindref="compound">MatrixRef</ref>&lt; T &gt; &gt;::type &amp;</type>
+        <definition>std::enable_if&lt;std::is_same&lt;U, T&gt;::value, MatrixRef&lt;T&gt; &gt;::type&amp; at::MatrixRef&lt; T &gt;::operator=</definition>
+        <argsstring>(std::initializer_list&lt; U &gt;)=delete</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>std::initializer_list&lt; U &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Disallow accidental assignment from a temporary.</para><para>The declaration here is extra complicated so that &quot;arrayRef = {}&quot; continues to select the move assignment operator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="96" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classat_1_1_matrix_ref_1aa471a50ce180ef846908a9389a056ce3" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t at::MatrixRef&lt; T &gt;::size_type</definition>
+        <argsstring></argsstring>
+        <name>size_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classat_1_1_matrix_ref_1ab72c176a363868d1e69333ab7a92898e" prot="private" static="no" mutable="no">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt;</type>
+        <definition>ArrayRef&lt;T&gt; at::MatrixRef&lt; T &gt;::arr</definition>
+        <argsstring></argsstring>
+        <name>arr</name>
+        <briefdescription>
+<para>Underlying <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="29" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_matrix_ref_1af4b816707e55d63c73e89baa10d6fddd" prot="private" static="no" mutable="no">
+        <type>size_type</type>
+        <definition>size_type at::MatrixRef&lt; T &gt;::stride0</definition>
+        <argsstring></argsstring>
+        <name>stride0</name>
+        <briefdescription>
+<para>Stride of dim 0 (outer dimension) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a32706e9eb418cd2692131bf658edc942" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::MatrixRef&lt; T &gt;::MatrixRef</definition>
+        <argsstring>()</argsstring>
+        <name>MatrixRef</name>
+        <briefdescription>
+<para>Construct an empty Matrixref. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="38" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_matrix_ref_1a7a77639d333344b4d7c0190b20cdd3aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::MatrixRef&lt; T &gt;::MatrixRef</definition>
+        <argsstring>(ArrayRef&lt; T &gt; arr, size_type stride0)</argsstring>
+        <name>MatrixRef</name>
+        <param>
+          <type><ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>&lt; T &gt;</type>
+          <declname>arr</declname>
+        </param>
+        <param>
+          <type>size_type</type>
+          <declname>stride0</declname>
+        </param>
+        <briefdescription>
+<para>Construct an <ref refid="classat_1_1_matrix_ref" kindref="compound">MatrixRef</ref> from an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> and outer stride. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="41" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="41" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classat_1_1_matrix_ref" kindref="compound">MatrixRef</ref> - Like an <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>, but with an extra recorded strides so that we can easily view it as a multidimensional array.</para><para>Like <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref>, this class does not own the underlying data, it is expected to be used in situations where the data resides in some other buffer.</para><para>This is intended to be trivially copyable, so it should be passed by value.</para><para>For now, 2D only (so the copies are actually cheap, without having to write a <ref refid="classat_1_1_small_vector" kindref="compound">SmallVector</ref> class) and contiguous only (so we can return non-strided <ref refid="classat_1_1_array_ref" kindref="compound">ArrayRef</ref> on index).</para><para>P.S. dimension 0 indexes rows, dimension 1 indexes columns </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/MatrixRef.h" bodystart="23" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classat_1_1_matrix_ref_1ab72c176a363868d1e69333ab7a92898e" prot="private" virt="non-virtual"><scope>at::MatrixRef</scope><name>arr</name></member>
+      <member refid="classat_1_1_matrix_ref_1ac3bbc2eb4d9efd00a18a60cd1b5a7fa2" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>data</name></member>
+      <member refid="classat_1_1_matrix_ref_1a83ace10f58cd93555db7df8251a9ff71" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>empty</name></member>
+      <member refid="classat_1_1_matrix_ref_1a49a778bd320d3e3a6e39b347d982d910" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>equals</name></member>
+      <member refid="classat_1_1_matrix_ref_1a32706e9eb418cd2692131bf658edc942" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>MatrixRef</name></member>
+      <member refid="classat_1_1_matrix_ref_1a7a77639d333344b4d7c0190b20cdd3aa" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>MatrixRef</name></member>
+      <member refid="classat_1_1_matrix_ref_1a9563a3329c449123144e6e31835074e1" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>numel</name></member>
+      <member refid="classat_1_1_matrix_ref_1a3d9cb0e9386fccddaa7a7ca5fb5a0fb6" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>operator=</name></member>
+      <member refid="classat_1_1_matrix_ref_1a429b51aa1798c4e2806581ade0604e04" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>operator=</name></member>
+      <member refid="classat_1_1_matrix_ref_1a86428a9268113cdbb2ccf1fe8020ec82" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>operator[]</name></member>
+      <member refid="classat_1_1_matrix_ref_1abc3c0d28808beb4434b6e03c6d9060c0" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>size</name></member>
+      <member refid="classat_1_1_matrix_ref_1aa471a50ce180ef846908a9389a056ce3" prot="public" virt="non-virtual"><scope>at::MatrixRef</scope><name>size_type</name></member>
+      <member refid="classat_1_1_matrix_ref_1af4b816707e55d63c73e89baa10d6fddd" prot="private" virt="non-virtual"><scope>at::MatrixRef</scope><name>stride0</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

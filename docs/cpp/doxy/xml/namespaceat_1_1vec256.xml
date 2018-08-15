@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceat_1_1vec256" kind="namespace" language="C++">
+    <compoundname>at::vec256</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_1a7064043638063aa17c922b3d756d3601" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename scalar_t</type>
+          </param>
+          <param>
+            <type>typename Op</type>
+          </param>
+        </templateparamlist>
+        <type>scalar_t</type>
+        <definition>scalar_t at::vec256::vec_reduce_all</definition>
+        <argsstring>(const Op &amp;vec_fun, vec256::Vec256&lt; scalar_t &gt; acc_vec, int64_t size)</argsstring>
+        <name>vec_reduce_all</name>
+        <param>
+          <type>const Op &amp;</type>
+          <declname>vec_fun</declname>
+        </param>
+        <param>
+          <type>vec256::Vec256&lt; scalar_t &gt;</type>
+          <declname>acc_vec</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="8" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" bodystart="8" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_1aa2074ba45e277d72257a581b23ef0485" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename scalar_t</type>
+          </param>
+          <param>
+            <type>typename Op</type>
+          </param>
+        </templateparamlist>
+        <type>scalar_t</type>
+        <definition>scalar_t at::vec256::reduce_all</definition>
+        <argsstring>(const Op &amp;vec_fun, scalar_t *data, int64_t size)</argsstring>
+        <name>reduce_all</name>
+        <param>
+          <type>const Op &amp;</type>
+          <declname>vec_fun</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" bodystart="26" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_1acf52ca630b29b831a5689fda6e04134b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename scalar_t</type>
+          </param>
+          <param>
+            <type>typename MapOp</type>
+          </param>
+          <param>
+            <type>typename ReduceOp</type>
+          </param>
+        </templateparamlist>
+        <type>scalar_t</type>
+        <definition>scalar_t at::vec256::map_reduce_all</definition>
+        <argsstring>(const MapOp &amp;map_fun, const ReduceOp &amp;red_fun, scalar_t *data, int64_t size)</argsstring>
+        <name>map_reduce_all</name>
+        <param>
+          <type>const MapOp &amp;</type>
+          <declname>map_fun</declname>
+        </param>
+        <param>
+          <type>const ReduceOp &amp;</type>
+          <declname>red_fun</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="44" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" bodystart="44" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_1afec99b5b6b920b7c3da12d95b4dad679" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename scalar_t</type>
+          </param>
+          <param>
+            <type>typename MapOp</type>
+          </param>
+          <param>
+            <type>typename ReduceOp</type>
+          </param>
+        </templateparamlist>
+        <type>scalar_t</type>
+        <definition>scalar_t at::vec256::map2_reduce_all</definition>
+        <argsstring>(const MapOp &amp;map_fun, const ReduceOp &amp;red_fun, scalar_t *data, scalar_t *data2, int64_t size)</argsstring>
+        <name>map2_reduce_all</name>
+        <param>
+          <type>const MapOp &amp;</type>
+          <declname>map_fun</declname>
+        </param>
+        <param>
+          <type>const ReduceOp &amp;</type>
+          <declname>red_fun</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>data2</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="68" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" bodystart="68" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_1a10f50727fd12981ef79f9fc121f92aa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename scalar_t</type>
+          </param>
+          <param>
+            <type>typename Op</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void at::vec256::map</definition>
+        <argsstring>(const Op &amp;vec_fun, scalar_t *output_data, const scalar_t *input_data, int64_t size)</argsstring>
+        <name>map</name>
+        <param>
+          <type>const Op &amp;</type>
+          <declname>vec_fun</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>output_data</declname>
+        </param>
+        <param>
+          <type>const scalar_t *</type>
+          <declname>input_data</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="99" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" bodystart="99" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_1ad40f09b253331d6d85558c193f595eeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename scalar_t</type>
+          </param>
+          <param>
+            <type>typename Op</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void at::vec256::map2</definition>
+        <argsstring>(const Op &amp;vec_fun, scalar_t *output_data, scalar_t *input_data, scalar_t *input_data2, int64_t size)</argsstring>
+        <name>map2</name>
+        <param>
+          <type>const Op &amp;</type>
+          <declname>vec_fun</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>output_data</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>input_data</declname>
+        </param>
+        <param>
+          <type>scalar_t *</type>
+          <declname>input_data2</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="117" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" bodystart="117" bodyend="137"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h" line="4" column="1"/>
+  </compounddef>
+</doxygen>

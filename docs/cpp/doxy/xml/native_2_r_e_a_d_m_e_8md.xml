@@ -1,0 +1,323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="native_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">ATen<sp/>&quot;native&quot;<sp/>functions<sp/>are<sp/>the<sp/>modern<sp/>mechanism<sp/>for<sp/>adding<sp/>operators<sp/>and</highlight></codeline>
+<codeline><highlight class="normal">functions<sp/>to<sp/>ATen<sp/>(they<sp/>are<sp/>&quot;native&quot;<sp/>in<sp/>contrast<sp/>to<sp/>legacy<sp/>functions,<sp/>which<sp/>are<sp/>bound</highlight></codeline>
+<codeline><highlight class="normal">via<sp/>TH/THC<sp/>cwrap<sp/>metadata).<sp/><sp/>Native<sp/>functions</highlight></codeline>
+<codeline><highlight class="normal">are<sp/>declared<sp/>in<sp/>`native_functions.yaml`<sp/>and<sp/>have<sp/>implementations<sp/>defined</highlight></codeline>
+<codeline><highlight class="normal">in<sp/>one<sp/>of<sp/>the<sp/>`cpp`<sp/>files<sp/>in<sp/>this<sp/>directory.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Like<sp/>all<sp/>ATen<sp/>methods/functions,<sp/>native<sp/>functions<sp/>are<sp/>made<sp/>available</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>both<sp/>ATen&apos;s<sp/>C++<sp/>and<sp/>Python<sp/>APIs.<sp/><sp/>In<sp/>C++,<sp/>they<sp/>are<sp/>made<sp/>available</highlight></codeline>
+<codeline><highlight class="normal">either<sp/>as<sp/>methods<sp/>on<sp/>`Tensor`<sp/>(`t.mymeth()`)<sp/>and<sp/>functions<sp/>in<sp/>the<sp/>ATen</highlight></codeline>
+<codeline><highlight class="normal">namespace<sp/>(`at::myfunc()`).<sp/><sp/>In<sp/>PyTorch,<sp/>they<sp/>are<sp/>made<sp/>available<sp/>as</highlight></codeline>
+<codeline><highlight class="normal">methods<sp/>on<sp/>`Variable`<sp/>or<sp/>as<sp/>functions<sp/>on<sp/>`torch._C._FunctionBase`</highlight></codeline>
+<codeline><highlight class="normal">(it<sp/>is<sp/>the<sp/>user&apos;s<sp/>responsibility<sp/>to<sp/>re-exporting<sp/>these<sp/>functions<sp/>in</highlight></codeline>
+<codeline><highlight class="normal">a<sp/>more<sp/>user-facing<sp/>module.)<sp/><sp/>At<sp/>the<sp/>moment,<sp/>only</highlight></codeline>
+<codeline><highlight class="normal">functions<sp/>which<sp/>ingest<sp/>`Variable`<sp/>are<sp/>made<sp/>available;<sp/>to<sp/>use<sp/>a<sp/>function</highlight></codeline>
+<codeline><highlight class="normal">with<sp/>non-differentiable<sp/>tensors,<sp/>wrap<sp/>your<sp/>tensors<sp/>with<sp/>`Variable`<sp/>before</highlight></codeline>
+<codeline><highlight class="normal">passing<sp/>them<sp/>in.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>rest<sp/>of<sp/>this<sp/>document<sp/>describes<sp/>how<sp/>to<sp/>implement<sp/>an<sp/>ATen<sp/>function.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Registering<sp/>a<sp/>function<sp/>in<sp/>`native_functions.yaml`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Every<sp/>native<sp/>function<sp/>must<sp/>have<sp/>an<sp/>entry<sp/>in</highlight></codeline>
+<codeline><highlight class="normal">`native_functions.yaml`.<sp/><sp/>The<sp/>format<sp/>can<sp/>be<sp/>summarized<sp/>as:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>func:<sp/>func_name(ArgType<sp/>arg0[=default],<sp/>ArgType<sp/>arg1[=default],<sp/>...)<sp/>-&gt;<sp/>ReturnType</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>variants:<sp/>function,<sp/>method</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>dispatch:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CPU:<sp/>func_cpu</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA:<sp/>func_cuda</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Each<sp/>component<sp/>is<sp/>described<sp/>in<sp/>more<sp/>detail<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`func`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>func:<sp/>func_name(ArgType<sp/>arg0[=default],<sp/>ArgType<sp/>arg1[=default],<sp/>...)<sp/>-&gt;<sp/>ReturnType</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`func`<sp/>entry<sp/>is<sp/>a<sp/>string<sp/>describing<sp/>the<sp/>name<sp/>of<sp/>the<sp/>function<sp/>and<sp/>its<sp/>type</highlight></codeline>
+<codeline><highlight class="normal">signature.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Argument<sp/>types.**<sp/>These<sp/>types<sp/>are<sp/>permissible<sp/>as<sp/>ArgType:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`Tensor`.<sp/><sp/>A<sp/>`Tensor`<sp/>argument<sp/>translates<sp/>into<sp/>a<sp/>C++<sp/>argument<sp/>of<sp/>type<sp/>`const<sp/>Tensor&amp;`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>(except<sp/>when<sp/>the<sp/>argument<sp/>is<sp/>&quot;inplace&quot;;<sp/>in<sp/>this<sp/>case,<sp/>it<sp/>is<sp/>simply<sp/>`Tensor&amp;`).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>A<sp/>trailing<sp/>`?`,<sp/>as<sp/>in<sp/>`Tensor?`,<sp/>indicates<sp/>that<sp/>the<sp/>tensor<sp/>argument<sp/>is<sp/>optional</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>and<sp/>may<sp/>be<sp/>omitted<sp/>by<sp/>passing<sp/>an<sp/>undefined<sp/>tensor.<sp/><sp/>When<sp/>a<sp/>function<sp/>takes<sp/>multiple</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`Tensor`<sp/>arguments,<sp/>these<sp/>tensors<sp/>are<sp/>assumed<sp/>to<sp/>be<sp/>the<sp/>same<sp/>type<sp/>(e.g.,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>if<sp/>one<sp/>argument<sp/>is<sp/>a<sp/>`FloatTensor`,<sp/>all<sp/>other<sp/>arguments<sp/>are<sp/>checked</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>to<sp/>be<sp/>`FloatTensor`s.)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Tensors<sp/>of<sp/>specific<sp/>types.<sp/><sp/>At<sp/>the<sp/>moment,<sp/>valid<sp/>type<sp/>names<sp/>are:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`IntegerTensor`<sp/>(a.k.a.<sp/>`LongTensor`)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`BoolTensor`<sp/>(a.k.a.<sp/>`ByteTensor`)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`IndexTensor`<sp/>(a.k.a.<sp/>`IntTensor`)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>These<sp/>type<sp/>names<sp/>were<sp/>inherited<sp/>from<sp/>TH,<sp/>and<sp/>may<sp/>be<sp/>renamed<sp/>soon,<sp/>so</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>don&apos;t<sp/>commit<sp/>them<sp/>to<sp/>memory.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`TensorList`.<sp/><sp/>A<sp/>`TensorList`<sp/>argument<sp/>translates<sp/>into<sp/>a<sp/>C++<sp/>argument<sp/>of<sp/>type<sp/>`ArrayRef&lt;Tensor&gt;`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>(a.k.a.<sp/>`TensorList`)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`IntList`.<sp/><sp/>`IntList`<sp/>accepts<sp/>an<sp/>optional<sp/>length<sp/>specifier,<sp/>e.g.,<sp/>`IntList[2]`,<sp/>which</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>has<sp/>no<sp/>effect<sp/>in<sp/>C++<sp/>but<sp/>extends<sp/>our<sp/>Python<sp/>bindings<sp/>to<sp/>accept<sp/>a<sp/>bare<sp/>number,<sp/>which<sp/>will<sp/>be</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>expanded<sp/>into<sp/>an<sp/>appropriately<sp/>sized<sp/>list<sp/>by<sp/>repeating<sp/>the<sp/>number.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`int64_t`.<sp/>There<sp/>is<sp/>no<sp/>`int`;<sp/>ATen<sp/>policy<sp/>is<sp/>to<sp/>use<sp/>`int64_t`<sp/>in<sp/>the<sp/>API<sp/>anywhere<sp/>you<sp/>would</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>have<sp/>ordinarily<sp/>passed<sp/>an<sp/>`int`<sp/>or<sp/>`size_t`.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`double`.<sp/>There<sp/>is<sp/>no<sp/>`float`;<sp/>ATen<sp/>policy<sp/>is<sp/>to<sp/>use<sp/>`double`<sp/>anywhere<sp/>you<sp/>would<sp/>have<sp/>used<sp/>`float`.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`bool`</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Scalar`.<sp/>`Scalar`<sp/>supports<sp/>binding<sp/>to<sp/>any<sp/>numerical<sp/>types<sp/>from<sp/>Python,<sp/>including<sp/>integral<sp/>types,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>floating<sp/>point<sp/>types,<sp/>and<sp/>zero<sp/>dimensional<sp/>tensors.<sp/>`int64_t`<sp/>and<sp/>`double`<sp/>can<sp/>only<sp/>bind<sp/>to<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>corresponding<sp/>Python<sp/>numerical<sp/>types.<sp/>However,<sp/>you<sp/>probably<sp/>don&apos;t<sp/>want<sp/>to<sp/>use<sp/>`Scalar`.<sp/>It&apos;s</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>really<sp/>used<sp/>for<sp/>binding<sp/>to<sp/>TH/THC<sp/>code<sp/>&quot;real&quot;<sp/>types<sp/>where<sp/>the<sp/>Python<sp/>APIs<sp/>you<sp/>are<sp/>binding<sp/>to<sp/>are</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>actually<sp/>different<sp/>types.<sp/>`double`<sp/>and<sp/>`int64_t`<sp/>argument<sp/>types<sp/>should<sp/>suffice<sp/>for<sp/>most<sp/>algorithms.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Generator*`,<sp/>the<sp/>state<sp/>for<sp/>a<sp/>random<sp/>number<sp/>generator,</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`std::array&lt;bool,N&gt;`<sp/>(where<sp/>N<sp/>is<sp/>`1-4`).<sp/><sp/>NB:<sp/>you<sp/>MUST<sp/>NOT<sp/>put<sp/>a<sp/>space<sp/>after<sp/>the<sp/>comma,<sp/>otherwise</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>this<sp/>argument<sp/>will<sp/>not<sp/>parse<sp/>correctly.<sp/><sp/>(If<sp/>you<sp/>decide<sp/>to<sp/>fix<sp/>this,<sp/>make<sp/>sure<sp/>you<sp/>fix<sp/>the</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>argument<sp/>parser<sp/>both<sp/>in<sp/>ATen<sp/>and<sp/>in<sp/>PyTorch.)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`*`<sp/>is<sp/>a<sp/>special<sp/>sentinel<sp/>argument,<sp/>which<sp/>doesn&apos;t<sp/>translate<sp/>into<sp/>an<sp/>actual</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>argument,<sp/>but<sp/>indicates<sp/>that<sp/>in<sp/>the<sp/>Python<sp/>bindings,<sp/>any<sp/>subsequent<sp/>arguments</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>must<sp/>be<sp/>specified<sp/>as<sp/>keyword<sp/>arguments<sp/>(and<sp/>cannot<sp/>be<sp/>provided<sp/>positionally).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Return<sp/>types.**<sp/>These<sp/>types<sp/>are<sp/>permissible<sp/>as<sp/>ReturnType:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`Tensor`<sp/>and<sp/>`TensorList`,<sp/>which<sp/>translate<sp/>into<sp/>the<sp/>C++<sp/>types<sp/>`Tensor`<sp/>and<sp/>`std::vector&lt;Tensor&gt;`,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>respectively<sp/>(unless<sp/>the<sp/>operation<sp/>is<sp/>in-place,<sp/>in<sp/>which<sp/>case<sp/>the<sp/>return<sp/>type</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>is<sp/>`Tensor&amp;`.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>A<sp/>tuple<sp/>of<sp/>any<sp/>number<sp/>of<sp/>`Tensor`,<sp/>e.g.,<sp/>`(Tensor,<sp/>Tensor)`,<sp/>translating<sp/>into</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>C++<sp/>`std::tuple&lt;Tensor,<sp/>Tensor&gt;`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>need<sp/>a<sp/>type<sp/>that<sp/>is<sp/>not<sp/>listed<sp/>in<sp/>this<sp/>list,<sp/>it<sp/>may<sp/>be<sp/>possible<sp/>to<sp/>extend<sp/>ATen&apos;s</highlight></codeline>
+<codeline><highlight class="normal">code<sp/>generation<sp/>to<sp/>support<sp/>it.<sp/><sp/>ATen&apos;s<sp/>philosophy<sp/>on<sp/>types<sp/>to<sp/>support<sp/>is<sp/>that<sp/>it<sp/>supports</highlight></codeline>
+<codeline><highlight class="normal">only<sp/>simple,<sp/>universal<sp/>types,<sp/>as<sp/>well<sp/>as<sp/>a<sp/>handful<sp/>of<sp/>fundamental<sp/>Tensor<sp/>structures</highlight></codeline>
+<codeline><highlight class="normal">(e.g.,<sp/>`Tensor`<sp/>and<sp/>`Generator*`),<sp/>because<sp/>these<sp/>types<sp/>can<sp/>be<sp/>easily<sp/>ported<sp/>to<sp/>any<sp/>language</highlight></codeline>
+<codeline><highlight class="normal">bound<sp/>to<sp/>ATen<sp/>(in<sp/>practice,<sp/>C++<sp/>and<sp/>Python.)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Argument<sp/>names.**<sp/>Argument<sp/>names<sp/>are<sp/>meaningful;<sp/>downstream<sp/>binding<sp/>code<sp/>may<sp/>make<sp/>use<sp/>of<sp/>the<sp/>specific</highlight></codeline>
+<codeline><highlight class="normal">argument<sp/>name<sp/>you<sp/>provide,<sp/>and<sp/>a<sp/>rename<sp/>of<sp/>an<sp/>argument<sp/>name<sp/>is<sp/>considered<sp/>a<sp/>BC-breaking</highlight></codeline>
+<codeline><highlight class="normal">change<sp/>(e.g.,<sp/>you<sp/>will<sp/>probably<sp/>need<sp/>to<sp/>update<sp/>`tools/autograd/derivatives.yaml`<sp/>at</highlight></codeline>
+<codeline><highlight class="normal">least).<sp/>In<sp/>`native_functions.yaml`,<sp/>if<sp/>your<sp/>function<sp/>(usually<sp/>functions<sp/>named<sp/>with<sp/>&apos;out&apos;<sp/>affix)<sp/>args</highlight></codeline>
+<codeline><highlight class="normal">include<sp/>the<sp/>result<sp/>Tensor,<sp/>you<sp/>need<sp/>to<sp/>call<sp/>the<sp/>argument<sp/>`Tensor<sp/>result`.<sp/>And<sp/>if<sp/>there<sp/>are<sp/>more</highlight></codeline>
+<codeline><highlight class="normal">than<sp/>one<sp/>result<sp/>Tensors,<sp/>you<sp/>need<sp/>to<sp/>name<sp/>the<sp/>args<sp/>`Tensor<sp/>result0,<sp/>Tensor<sp/>result1,<sp/>...`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">TODO:<sp/>Do<sp/>argument<sp/>names<sp/>affect<sp/>Python<sp/>keyword<sp/>arguments?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Defaults.**<sp/>Any<sp/>suffix<sp/>of<sp/>arguments<sp/>can<sp/>have<sp/>a<sp/>default<sp/>value<sp/>defined;</highlight></codeline>
+<codeline><highlight class="normal">these<sp/>default<sp/>values<sp/>translate<sp/>into<sp/>C++/Python<sp/>default<sp/>values<sp/>which</highlight></codeline>
+<codeline><highlight class="normal">are<sp/>applied<sp/>when<sp/>those<sp/>positional<sp/>arguments<sp/>are<sp/>not<sp/>specified.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Here<sp/>are<sp/>the<sp/>supported<sp/>default<sp/>values:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Numbers<sp/>(e.g.,<sp/>`0`<sp/>or<sp/>`5.0`<sp/>for<sp/>`int64_t`,<sp/>`double`<sp/>and<sp/>`IntList`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>with<sp/>an<sp/>explicit<sp/>length<sp/>(e.g.,<sp/>`IntList[2]`)--in<sp/>the<sp/>case<sp/>of<sp/>IntList,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>a<sp/>number<sp/>is<sp/>replicated<sp/>to<sp/>fill<sp/>the<sp/>length<sp/>(e.g.,<sp/>`IntList[2]<sp/>x=2`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>is<sp/>equivalent<sp/>to<sp/>`IntList[2]<sp/>x={2,2}`.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Lists<sp/>of<sp/>numbers<sp/>(e.g.,<sp/>`{0,<sp/>0}`)<sp/>for<sp/>`IntList`.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Booleans<sp/>(e.g.,<sp/>`true`)<sp/>for<sp/>`bool`.</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>Empty<sp/>initializer<sp/>lists<sp/>(e.g.,<sp/>`{}`)<sp/>for<sp/>`Tensor`<sp/>(this<sp/>implicitly<sp/>changes</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>a<sp/>`Tensor`<sp/>argument<sp/>to<sp/>accept<sp/>undefined<sp/>tensors).</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>`nullptr`<sp/>for<sp/>pointer<sp/>types<sp/>(e.g.,<sp/>`Generator*`)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>declarations<sp/>also<sp/>support<sp/>the<sp/>following<sp/>attributes:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`variants`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">variants:<sp/>function,<sp/>method</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Controls<sp/>whether<sp/>Tensor<sp/>method<sp/>(`t.foo()`)<sp/>or<sp/>namespace<sp/>Function<sp/>(`at::foo()`)<sp/>is</highlight></codeline>
+<codeline><highlight class="normal">generated<sp/>as<sp/>a<sp/>result<sp/>of<sp/>this<sp/>declaration.<sp/><sp/>If<sp/>the<sp/>declaration<sp/>is<sp/>a<sp/>method,</highlight></codeline>
+<codeline><highlight class="normal">you<sp/>must<sp/>have<sp/>an<sp/>argument<sp/>`Tensor<sp/>self`<sp/>at<sp/>some<sp/>position<sp/>in<sp/>the<sp/>method;</highlight></codeline>
+<codeline><highlight class="normal">in<sp/>the<sp/>method<sp/>variant<sp/>this<sp/>argument<sp/>will<sp/>be<sp/>elided<sp/>from<sp/>the<sp/>argument</highlight></codeline>
+<codeline><highlight class="normal">list.<sp/><sp/>For<sp/>example,<sp/>given<sp/>the<sp/>declaration<sp/>`where(BoolTensor<sp/>cond,<sp/>Tensor<sp/>self,<sp/>Tensor<sp/>other)`,</highlight></codeline>
+<codeline><highlight class="normal">this<sp/>generates<sp/>the<sp/>function<sp/>`at::where(cond,<sp/>self,<sp/>other)`<sp/>and<sp/>the<sp/>method</highlight></codeline>
+<codeline><highlight class="normal">`self.where(cond,<sp/>other)`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>default,<sp/>ATen<sp/>generates<sp/>both<sp/>function<sp/>and<sp/>method<sp/>variants<sp/>for<sp/>a<sp/>native<sp/>function.</highlight></codeline>
+<codeline><highlight class="normal">Generally,<sp/>the<sp/>function<sp/>variant<sp/>is<sp/>always<sp/>useful;<sp/>however,<sp/>you<sp/>may<sp/>not<sp/>wish</highlight></codeline>
+<codeline><highlight class="normal">to<sp/>generate<sp/>a<sp/>method<sp/>variant.<sp/>Tensor<sp/>operations<sp/>as<sp/>methods<sp/>are<sp/>appropriate<sp/>for<sp/>&quot;core&quot;</highlight></codeline>
+<codeline><highlight class="normal">Tensor<sp/>operations<sp/>(e.g.,<sp/>add,<sp/>sub,<sp/>etc.),<sp/>but<sp/>not<sp/>for<sp/>more<sp/>complicated<sp/>neural<sp/>network</highlight></codeline>
+<codeline><highlight class="normal">layers<sp/>(e.g.,<sp/>`conv2d`)<sp/>and<sp/>internal<sp/>functions<sp/>designed<sp/>specifically<sp/>for<sp/>binding</highlight></codeline>
+<codeline><highlight class="normal">(e.g.,<sp/>`cudnn_convolution`).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`dispatch`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">dispatch:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CPU:<sp/>func_cpu</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CUDA:<sp/>func_cuda</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>specifies<sp/>the<sp/>actual<sp/>name<sp/>of<sp/>the<sp/>function<sp/>you<sp/>want<sp/>to<sp/>dispatch<sp/>to,<sp/>so<sp/>you</highlight></codeline>
+<codeline><highlight class="normal">can<sp/>dispatch<sp/>to<sp/>different<sp/>functions<sp/>depending<sp/>on<sp/>whether<sp/>or<sp/>not<sp/>you<sp/>have<sp/>CPU<sp/>or</highlight></codeline>
+<codeline><highlight class="normal">CUDA<sp/>tensors.<sp/><sp/>Technically,<sp/>it<sp/>is<sp/>also<sp/>possible<sp/>to<sp/>write<sp/>`dispatch:<sp/>func_name`</highlight></codeline>
+<codeline><highlight class="normal">to<sp/>unconditionally<sp/>dispatch<sp/>to<sp/>a<sp/>native<sp/>function<sp/>whose<sp/>name<sp/>is<sp/>different<sp/>than</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>name<sp/>in<sp/>the<sp/>public<sp/>ATen<sp/>API,<sp/>but<sp/>this<sp/>is<sp/>generally<sp/>frowned<sp/>upon<sp/>(just<sp/>name</highlight></codeline>
+<codeline><highlight class="normal">them<sp/>the<sp/>same<sp/>thing!)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>`python_default_init`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">python_default_init:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>argument_name:<sp/>initializing_expression</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>map<sp/>from<sp/>argument<sp/>names<sp/>to<sp/>default<sp/>initializing<sp/>expressions<sp/>written<sp/>in<sp/>C++.<sp/>Such<sp/>default</highlight></codeline>
+<codeline><highlight class="normal">expressions<sp/>will<sp/>only<sp/>be<sp/>used<sp/>in<sp/>Python<sp/>API<sp/>(in<sp/>the<sp/>C++<sp/>API,<sp/>these<sp/>arguments<sp/>are</highlight></codeline>
+<codeline><highlight class="normal">mandatory).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">There<sp/>are<sp/>a<sp/>few<sp/>situations<sp/>where<sp/>you<sp/>might<sp/>like<sp/>to<sp/>use<sp/>this<sp/>functionality:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>want<sp/>a<sp/>default<sp/>value<sp/>which<sp/>is<sp/>fine<sp/>in<sp/>Python<sp/>but<sp/>would<sp/>cause<sp/>ambiguity<sp/>in<sp/>C++.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>For<sp/>example,<sp/>`norm(Tensor<sp/>self,<sp/>real<sp/>p=2,<sp/>int64_t<sp/>dim=1)`<sp/>would<sp/>cause<sp/>ambiguity</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>with<sp/>long<sp/>tensors<sp/>in<sp/>C++.<sp/>Therefore,<sp/>we<sp/>need<sp/>to<sp/>make<sp/>`p=2`<sp/>a<sp/>python<sp/>only<sp/>default</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>initialization<sp/>value.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>want<sp/>a<sp/>value<sp/>to<sp/>default<sp/>to<sp/>the<sp/>same<sp/>value<sp/>as<sp/>another<sp/>argument<sp/>(this<sp/>cannot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>be<sp/>expressed<sp/>in<sp/>C++<sp/>default<sp/>arguments).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>grep<sp/>for<sp/>`python_default_init`,<sp/>you<sp/>can<sp/>find<sp/>examples<sp/>of<sp/>this<sp/>being<sp/>used;</highlight></codeline>
+<codeline><highlight class="normal">in<sp/>general,<sp/>most<sp/>functions<sp/>will<sp/>not<sp/>need<sp/>to<sp/>use<sp/>this.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Writing<sp/>an<sp/>implementation<sp/>in<sp/>C++</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Implementations<sp/>of<sp/>native<sp/>functions<sp/>go<sp/>in<sp/>an<sp/>appropriate<sp/>C++<sp/>file<sp/>in<sp/>the</highlight></codeline>
+<codeline><highlight class="normal">`native/`<sp/>directory<sp/>(they<sp/>are<sp/>organized<sp/>roughly<sp/>by<sp/>topic,<sp/>but<sp/>there<sp/>is<sp/>no</highlight></codeline>
+<codeline><highlight class="normal">semantic<sp/>meaning<sp/>to<sp/>their<sp/>organization<sp/>aside<sp/>for<sp/>the<sp/>`cuda`<sp/>directory,</highlight></codeline>
+<codeline><highlight class="normal">which<sp/>is<sp/>the<sp/>only<sp/>place<sp/>the<sp/>build<sp/>system<sp/>knows<sp/>how<sp/>to<sp/>build<sp/>`cu`<sp/>files.)</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>write<sp/>a<sp/>native<sp/>function,<sp/>you<sp/>only<sp/>need<sp/>to<sp/>write<sp/>a<sp/>C++</highlight></codeline>
+<codeline><highlight class="normal">implementation<sp/>(no<sp/>header<sp/>necessary)<sp/>with<sp/>a<sp/>matching<sp/>signature<sp/>to</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>generated<sp/>header<sp/>from<sp/>the<sp/>ATen<sp/>metadata.<sp/><sp/>There<sp/>are<sp/>many</highlight></codeline>
+<codeline><highlight class="normal">simple<sp/>native<sp/>functions;<sp/>take<sp/>a<sp/>look<sp/>at<sp/>some<sp/>of<sp/>them<sp/>to<sp/>see<sp/>what<sp/>to<sp/>do.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Although,<sp/>for<sp/>the<sp/>most<sp/>part,<sp/>writing<sp/>an<sp/>ATen<sp/>function<sp/>is<sp/>mostly<sp/>writing</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>algorithm<sp/>you<sp/>want<sp/>to<sp/>implement,<sp/>there<sp/>are<sp/>some<sp/>less<sp/>obvious<sp/>details</highlight></codeline>
+<codeline><highlight class="normal">you<sp/>should<sp/>also<sp/>consider.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Will<sp/>your<sp/>function<sp/>be<sp/>automatically<sp/>differentiable?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>are<sp/>writing<sp/>a<sp/>pair<sp/>of<sp/>functions<sp/>`foo`<sp/>and<sp/>`foo_backward`,<sp/>with</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>intent<sp/>that<sp/>`foo_backward`<sp/>implements<sp/>the<sp/>derivative<sp/>of<sp/>`foo`,<sp/>then</highlight></codeline>
+<codeline><highlight class="normal">your<sp/>implementation<sp/>of<sp/>`foo`<sp/>is<sp/>probably<sp/>not<sp/>automatically<sp/>differentiable:</highlight></codeline>
+<codeline><highlight class="normal">it<sp/>might<sp/>make<sp/>use<sp/>of<sp/>functions<sp/>like<sp/>`data_ptr()`<sp/>or<sp/>it<sp/>dispatches<sp/>differently</highlight></codeline>
+<codeline><highlight class="normal">depending<sp/>on<sp/>if<sp/>it&apos;s<sp/>operating<sp/>on<sp/>CPU<sp/>or<sp/>CUDA<sp/>tensors.<sp/><sp/>Once<sp/>you<sp/>write<sp/>these<sp/>two<sp/>functions,</highlight></codeline>
+<codeline><highlight class="normal">you<sp/>will<sp/>have<sp/>to<sp/>write<sp/>an<sp/>entry<sp/>correlating<sp/>them<sp/>together<sp/>in</highlight></codeline>
+<codeline><highlight class="normal">`tools/autograd/derivatives.yaml`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">However,<sp/>in<sp/>some<sp/>situations,<sp/>you<sp/>can<sp/>write<sp/>a<sp/>function<sp/>in<sp/>ATen<sp/>and<sp/>it</highlight></codeline>
+<codeline><highlight class="normal">will<sp/>be<sp/>automatically<sp/>differentiated!<sp/><sp/>This<sp/>can<sp/>be<sp/>the<sp/>case<sp/>if<sp/>the<sp/>function<sp/>implementation</highlight></codeline>
+<codeline><highlight class="normal">only<sp/>calls<sp/>other<sp/>operations<sp/>which<sp/>are<sp/>themselves<sp/>differentiable.<sp/><sp/>In<sp/>this</highlight></codeline>
+<codeline><highlight class="normal">case,<sp/>you<sp/>don&apos;t<sp/>have<sp/>to<sp/>write<sp/>an<sp/>entry<sp/>in<sp/>`tools/autograd/derivatives.yaml`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Can<sp/>it<sp/>handle<sp/>being<sp/>passed<sp/>Variables?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>biggest<sp/>subtlety<sp/>of<sp/>writing<sp/>an<sp/>ATen<sp/>implementation<sp/>is<sp/>the<sp/>fact<sp/>that</highlight></codeline>
+<codeline><highlight class="normal">`Tensor`<sp/>is<sp/>not<sp/>a<sp/>&quot;final&quot;<sp/>class:<sp/>your<sp/>implementation<sp/>may<sp/>be<sp/>passed<sp/>objects</highlight></codeline>
+<codeline><highlight class="normal">which<sp/>inherit<sp/>from<sp/>`Tensor`<sp/>(in<sp/>particular,<sp/>the<sp/>`Variable`<sp/>subclass</highlight></codeline>
+<codeline><highlight class="normal">implements<sp/>automatic<sp/>differentiation<sp/>in<sp/>PyTorch.)<sp/><sp/>This<sp/>has<sp/>some</highlight></codeline>
+<codeline><highlight class="normal">direct<sp/>consequences<sp/>on<sp/>valid<sp/>implementations:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>Never<sp/>create<sp/>a<sp/>`Tensor`<sp/>directly<sp/>(e.g.,<sp/>`at::CPU`<sp/>or<sp/>`at::CUDA`),<sp/>as<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>caller<sp/>will<sp/>be<sp/>expecting<sp/>to<sp/>get<sp/>`Variable`s<sp/>out<sp/>if<sp/>it<sp/>passes<sp/>`Variable`.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Instead,<sp/>create<sp/>tensors<sp/>from<sp/>the<sp/>`type()`<sp/>of<sp/>one<sp/>of<sp/>the<sp/>input<sp/>tensors,<sp/>e.g.,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`input.type().tensor()`<sp/><sp/>or<sp/>`input.type().toScalarType(kByte)`<sp/>if<sp/>you<sp/>need</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>a<sp/>different<sp/>scalar<sp/>type.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>If<sp/>you<sp/>need<sp/>to<sp/>call<sp/>other<sp/>ATen<sp/>functions,<sp/>be<sp/>sure<sp/>to<sp/>qualify<sp/>the<sp/>call</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>with<sp/>`at::`;<sp/>don&apos;t<sp/>call<sp/>them<sp/>unqualified<sp/>(in<sp/>the<sp/>`at::native`<sp/>namespace).</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Using<sp/>the<sp/>qualified<sp/>name<sp/>ensures<sp/>that<sp/>your<sp/>invocation<sp/>gets<sp/>dispatched<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>`Variable`<sp/>(which<sp/>may<sp/>be<sp/>overridden<sp/>to<sp/>behave<sp/>differently<sp/>than</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>simply<sp/>dispatch<sp/>to<sp/>`at::native`).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">These<sp/>are<sp/>not<sp/>hard<sp/>and<sp/>fast<sp/>rules:<sp/>in<sp/>particular,<sp/>if<sp/>you<sp/>explicitly<sp/>define</highlight></codeline>
+<codeline><highlight class="normal">a<sp/>derivative<sp/>for<sp/>a<sp/>function,<sp/>it<sp/>will<sp/>only<sp/>ever<sp/>be<sp/>called<sp/>with<sp/>`Tensor`</highlight></codeline>
+<codeline><highlight class="normal">arguments.<sp/><sp/>However,<sp/>it<sp/>is<sp/>considered<sp/>good<sp/>style<sp/>to<sp/>abide<sp/>by<sp/>these<sp/>rules,</highlight></codeline>
+<codeline><highlight class="normal">since<sp/>code<sp/>written<sp/>in<sp/>this<sp/>style<sp/>is<sp/>more<sp/>robust.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">NB:<sp/>There<sp/>is<sp/>one<sp/>downside<sp/>to<sp/>following<sp/>the<sp/>`at::`<sp/>qualification<sp/>rule,<sp/>which</highlight></codeline>
+<codeline><highlight class="normal">is<sp/>that<sp/>if<sp/>you<sp/>know<sp/>that<sp/>you<sp/>will<sp/>only<sp/>ever<sp/>be<sp/>called<sp/>with<sp/>`Tensor`,<sp/>a</highlight></codeline>
+<codeline><highlight class="normal">direct<sp/>`at::native`<sp/>call<sp/>will<sp/>be<sp/>more<sp/>efficient<sp/>(as<sp/>it<sp/>avoids<sp/>a<sp/>dynamic</highlight></codeline>
+<codeline><highlight class="normal">dispatch).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>How<sp/>to<sp/>handle<sp/>broadcasting?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Unlike<sp/>our<sp/>legacy<sp/>TH<sp/>bindings,<sp/>ATen<sp/>native<sp/>functions<sp/>do<sp/>not<sp/>automatically</highlight></codeline>
+<codeline><highlight class="normal">handle<sp/>broadcasting;<sp/>you<sp/>will<sp/>have<sp/>to<sp/>insert<sp/>the<sp/>necessary<sp/>broadcasting</highlight></codeline>
+<codeline><highlight class="normal">calls<sp/>yourself.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>writing<sp/>broadcasting<sp/>code,<sp/>we<sp/>obey<sp/>the<sp/>convention<sp/>that<sp/>`op`<sp/>is</highlight></codeline>
+<codeline><highlight class="normal">broadcasting,<sp/>while<sp/>`s_op`<sp/>(with<sp/>the<sp/>`s_`<sp/>prefix)<sp/>is<sp/>not<sp/>broadcasting.<sp/><sp/>The</highlight></codeline>
+<codeline><highlight class="normal">relationship<sp/>is<sp/>best<sp/>seen<sp/>by<sp/>an<sp/>example<sp/>of<sp/>how<sp/>you<sp/>would<sp/>implement<sp/>broadcasting</highlight></codeline>
+<codeline><highlight class="normal">addition<sp/>out<sp/>of<sp/>non-broadcasting<sp/>addition:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&lt;ATen/ExpandUtils.h&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tensor<sp/>add(const<sp/>Tensor&amp;<sp/>self,<sp/>const<sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Tensor<sp/>b_self,<sp/>b_other;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>std::tie(b_self,<sp/>b_other)<sp/>=<sp/>expand_outplace(self,<sp/>other,<sp/>&quot;add&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>s_add(b_self,<sp/>b_other);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tensor<sp/>s_add(const<sp/>Tensor&amp;<sp/>self,<sp/>const<sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>non-broadcasting<sp/>implementation<sp/>of<sp/>addition</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>inplace<sp/>operations,<sp/>the<sp/>convention<sp/>looks<sp/>like<sp/>this:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Tensor&amp;<sp/>add_(Tensor&amp;<sp/>self,<sp/>const<sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Tensor<sp/>b_other<sp/>=<sp/>expand_inplace(self,<sp/>other,<sp/>&quot;add_&quot;);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>s_add_(self,<sp/>b_other);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tensor&amp;<sp/>s_add_(Tensor&amp;<sp/>self,<sp/>const<sp/>Tensor&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//<sp/>non-broadcasting<sp/>implementation<sp/>of<sp/>inplace<sp/>addition</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Undefined<sp/>tensor<sp/>conventions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>default,<sp/>`Tensor`<sp/>arguments<sp/>to<sp/>ATen<sp/>functions<sp/>are<sp/>always<sp/>defined,<sp/>unless</highlight></codeline>
+<codeline><highlight class="normal">you<sp/>explicitly<sp/>specified<sp/>that<sp/>an<sp/>undefined<sp/>tensor<sp/>was<sp/>permissible<sp/>by<sp/>writing</highlight></codeline>
+<codeline><highlight class="normal">`Tensor?`<sp/>or<sp/>`Tensor<sp/>x={}`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>rules<sp/>for<sp/>returning<sp/>undefined<sp/>Tensors<sp/>are<sp/>a<sp/>bit<sp/>more<sp/>subtle,<sp/>but<sp/>there</highlight></codeline>
+<codeline><highlight class="normal">is<sp/>only<sp/>one<sp/>case<sp/>you<sp/>have<sp/>to<sp/>remember:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>If<sp/>the<sp/>function<sp/>in<sp/>question<sp/>is<sp/>a<sp/>backward<sp/>function<sp/>which<sp/>accepts<sp/>a</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`std::array&lt;bool,N&gt;<sp/>output_mask`<sp/>argument,<sp/>you<sp/>MUST<sp/>return<sp/>an<sp/>undefined</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>`Tensor`<sp/>at<sp/>every<sp/>tuple<sp/>position<sp/>`i`<sp/>for<sp/>which<sp/>`output_mask[i]`<sp/>is<sp/>false,<sp/>otherwise</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>You<sp/>MUST<sp/>NOT<sp/>return<sp/>an<sp/>undefined<sp/>tensor.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>most<sp/>common<sp/>situations<sp/>where<sp/>you<sp/>might<sp/>be<sp/>tempted<sp/>to<sp/>return<sp/>undefined<sp/>tensors</highlight></codeline>
+<codeline><highlight class="normal">are<sp/>when:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>have<sp/>a<sp/>forward<sp/>function<sp/>that<sp/>may<sp/>return<sp/>a<sp/>buffer<sp/>if<sp/>training<sp/>is<sp/>enabled,<sp/>but<sp/>does<sp/>not</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>return<sp/>the<sp/>buffer<sp/>in<sp/>inference<sp/>mode.<sp/><sp/>In<sp/>this<sp/>case,<sp/>just<sp/>return<sp/>an<sp/>appropriately</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>typed<sp/>zero-size<sp/>tensor.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>You<sp/>have<sp/>a<sp/>backward<sp/>function<sp/>where<sp/>the<sp/>gradient<sp/>for<sp/>an<sp/>input<sp/>is<sp/>zero.<sp/><sp/>In<sp/>this<sp/>case,<sp/>you</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>are<sp/>expected<sp/>to<sp/>create<sp/>a<sp/>zero-filled<sp/>tensor<sp/>of<sp/>appropriate<sp/>size<sp/>to<sp/>return<sp/>for<sp/>this<sp/>input.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>To<sp/>get<sp/>the<sp/>shape,<sp/>it<sp/>may<sp/>be<sp/>helpful<sp/>to<sp/>take<sp/>a<sp/>`TensorGeometry`<sp/>of<sp/>the<sp/>input<sp/>to<sp/>use.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Debugging<sp/>tips</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>build<sp/>ATen<sp/>and<sp/>get<sp/>a<sp/>linker<sp/>error,<sp/>that<sp/>probably<sp/>means<sp/>you<sp/>copy-pasted</highlight></codeline>
+<codeline><highlight class="normal">the<sp/>C++<sp/>definition<sp/>of<sp/>your<sp/>function<sp/>incorrectly.<sp/><sp/>Double<sp/>check<sp/>your<sp/>`Tensor`</highlight></codeline>
+<codeline><highlight class="normal">arguments,<sp/>and<sp/>make<sp/>sure<sp/>you<sp/>wrote<sp/>`const<sp/>Tensor&amp;`<sp/>in<sp/>your<sp/>signature.</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/README.md"/>
+  </compounddef>
+</doxygen>

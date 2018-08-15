@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1_expanding_array" kind="class" language="C++" prot="public">
+    <compoundname>torch::ExpandingArray</compoundname>
+    <includes refid="expanding__array_8h" local="no">expanding_array.h</includes>
+    <templateparamlist>
+      <param>
+        <type>size_t</type>
+        <declname>D</declname>
+        <defname>D</defname>
+      </param>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+        <defval>int64_t</defval>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1_expanding_array_1a4d4d8b3fe895987c7093ec0d84ced7fb" prot="private" static="no" mutable="no">
+        <type>std::array&lt; T, D &gt;</type>
+        <definition>std::array&lt;T, D&gt; torch::ExpandingArray&lt; D, T &gt;::values_</definition>
+        <argsstring></argsstring>
+        <name>values_</name>
+        <briefdescription>
+<para>The backing array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="84" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a8333bd3c295a388278af83dd52897dc7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::ExpandingArray&lt; D, T &gt;::ExpandingArray</definition>
+        <argsstring>(std::initializer_list&lt; T &gt; list)</argsstring>
+        <name>ExpandingArray</name>
+        <param>
+          <type>std::initializer_list&lt; T &gt;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput> from an <computeroutput>initializer_list</computeroutput>. The extent of the lenght is checked against the <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput>&apos;s extent parameter <computeroutput>D</computeroutput> at runtime. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="26" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a886f8d22505482f8ed05729f8cc2da65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::ExpandingArray&lt; D, T &gt;::ExpandingArray</definition>
+        <argsstring>(const std::vector&lt; T &gt; &amp;values)</argsstring>
+        <name>ExpandingArray</name>
+        <param>
+          <type>const std::vector&lt; T &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput> from a <computeroutput>vector</computeroutput>. The extent of the lenght is checked against the <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput>&apos;s extent parameter <computeroutput>D</computeroutput> at runtime. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="32" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1af9f3ac8237237877b6a060a878835336" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::ExpandingArray&lt; D, T &gt;::ExpandingArray</definition>
+        <argsstring>(T single_size)</argsstring>
+        <name>ExpandingArray</name>
+        <param>
+          <type>T</type>
+          <declname>single_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput> from a single value, which is repeated <computeroutput>D</computeroutput> times (where <computeroutput>D</computeroutput> is the extent parameter of the <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput>). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="44" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a96d191caae9fc07003c668c56bfa092c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::ExpandingArray&lt; D, T &gt;::ExpandingArray</definition>
+        <argsstring>(const std::array&lt; T, D &gt; &amp;values)</argsstring>
+        <name>ExpandingArray</name>
+        <param>
+          <type>const std::array&lt; T, D &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput> from a correctly sized <computeroutput>std::array</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="49" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a59184a4948806a73efe3a31460750175" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; T, D &gt; &amp;</type>
+        <definition>std::array&lt;T, D&gt;&amp; torch::ExpandingArray&lt; D, T &gt;::operator*</definition>
+        <argsstring>()</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Accesses the underlying <computeroutput>std::array</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="53" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="53" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a40943dea1ff3eef5a38d6940c346bae1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::array&lt; T, D &gt; &amp;</type>
+        <definition>const std::array&lt;T, D&gt;&amp; torch::ExpandingArray&lt; D, T &gt;::operator*</definition>
+        <argsstring>() const</argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Accesses the underlying <computeroutput>std::array</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a287e2379626c914c19b68a8b28c3c143" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::array&lt; T, D &gt; *</type>
+        <definition>std::array&lt;T, D&gt;* torch::ExpandingArray&lt; D, T &gt;::operator-&gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Accesses the underlying <computeroutput>std::array</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="63" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a2cee2bee2a2b2c1f3e5a3f0a461a24b8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::array&lt; T, D &gt; *</type>
+        <definition>const std::array&lt;T, D&gt;* torch::ExpandingArray&lt; D, T &gt;::operator-&gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Accesses the underlying <computeroutput>std::array</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="68" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a0d7614edc3ff15267d7a88f45e30a333" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::ExpandingArray&lt; D, T &gt;::operator at::ArrayRef&lt; T &gt;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator at::ArrayRef&lt; T &gt;</name>
+        <briefdescription>
+<para>Returns an <computeroutput>ArrayRef</computeroutput> to the underlying <computeroutput>std::array</computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="73" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_expanding_array_1a23af30f28feee350cd5bd100164077c3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t torch::ExpandingArray&lt; D, T &gt;::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Returns the extent of the <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref></computeroutput>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="78" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="78" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A utility class that accepts either a container of <computeroutput>D</computeroutput>-many values, or a single value, which is internally repeated <computeroutput>D</computeroutput> times. This is useful to represent parameters that are multidimensional, but often equally sized in all dimensions. For example, the kernel size of a 2D convolution has an <computeroutput>x</computeroutput> and <computeroutput>y</computeroutput> length, but <computeroutput>x</computeroutput> and <computeroutput>y</computeroutput> are often equal. In such a case you could just pass <computeroutput>3</computeroutput> to an <computeroutput><ref refid="classtorch_1_1_expanding_array" kindref="compound">ExpandingArray</ref>&lt;2&gt;</computeroutput> and it would &quot;expand&quot; to <computeroutput>{3, 3}</computeroutput>. </para>    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/expanding_array.h" bodystart="21" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1_expanding_array_1a8333bd3c295a388278af83dd52897dc7" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>ExpandingArray</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a886f8d22505482f8ed05729f8cc2da65" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>ExpandingArray</name></member>
+      <member refid="classtorch_1_1_expanding_array_1af9f3ac8237237877b6a060a878835336" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>ExpandingArray</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a96d191caae9fc07003c668c56bfa092c" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>ExpandingArray</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a0d7614edc3ff15267d7a88f45e30a333" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>operator at::ArrayRef&lt; T &gt;</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a59184a4948806a73efe3a31460750175" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>operator*</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a40943dea1ff3eef5a38d6940c346bae1" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>operator*</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a287e2379626c914c19b68a8b28c3c143" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>operator-&gt;</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a2cee2bee2a2b2c1f3e5a3f0a461a24b8" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>operator-&gt;</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a23af30f28feee350cd5bd100164077c3" prot="public" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>size</name></member>
+      <member refid="classtorch_1_1_expanding_array_1a4d4d8b3fe895987c7093ec0d84ced7fb" prot="private" virt="non-virtual"><scope>torch::ExpandingArray</scope><name>values_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

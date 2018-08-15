@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structat_1_1_allocator" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>at::Allocator</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structat_1_1_allocator_1a71b77c4c9b87f697812b5f45d2b0cfe6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual at::Allocator::~Allocator</definition>
+        <argsstring>()</argsstring>
+        <name>~Allocator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="77" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_allocator_1a873ea7a6f06eb42dd228bf1b9657283b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classat_1_1_data_ptr" kindref="compound">at::DataPtr</ref></type>
+        <definition>virtual at::DataPtr at::Allocator::allocate</definition>
+        <argsstring>(size_t n) const =0</argsstring>
+        <name>allocate</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_allocator_1ac86b0dc0ec13a6bf93e0d5258a2042b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>DeleterFnPtr</type>
+        <definition>virtual DeleterFnPtr at::Allocator::raw_deleter</definition>
+        <argsstring>() const</argsstring>
+        <name>raw_deleter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="84" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="84" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_allocator_1aae4632b9db196b17b525d6743f242256" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* at::Allocator::raw_allocate</definition>
+        <argsstring>(size_t n)</argsstring>
+        <name>raw_allocate</name>
+        <param>
+          <type>size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="85" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="structat_1_1_allocator_1a74d9a1386adb308cc5aa82c17ca2cf74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::Allocator::raw_deallocate</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>raw_deallocate</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="90" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="90" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Allocator.h" bodystart="76" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structat_1_1_allocator_1a873ea7a6f06eb42dd228bf1b9657283b" prot="public" virt="pure-virtual"><scope>at::Allocator</scope><name>allocate</name></member>
+      <member refid="structat_1_1_allocator_1aae4632b9db196b17b525d6743f242256" prot="public" virt="non-virtual"><scope>at::Allocator</scope><name>raw_allocate</name></member>
+      <member refid="structat_1_1_allocator_1a74d9a1386adb308cc5aa82c17ca2cf74" prot="public" virt="non-virtual"><scope>at::Allocator</scope><name>raw_deallocate</name></member>
+      <member refid="structat_1_1_allocator_1ac86b0dc0ec13a6bf93e0d5258a2042b2" prot="public" virt="virtual"><scope>at::Allocator</scope><name>raw_deleter</name></member>
+      <member refid="structat_1_1_allocator_1a71b77c4c9b87f697812b5f45d2b0cfe6" prot="public" virt="virtual"><scope>at::Allocator</scope><name>~Allocator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

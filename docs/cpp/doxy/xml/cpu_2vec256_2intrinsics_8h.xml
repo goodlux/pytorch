@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="cpu_2vec256_2intrinsics_8h" kind="file" language="C++">
+    <compoundname>intrinsics.h</compoundname>
+    <includedby refid="vec256_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256.h</includedby>
+    <includedby refid="vec256__float_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_float.h</includedby>
+    <includedby refid="vec256__double_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_double.h</includedby>
+    <includedby refid="vec256__int_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_int.h</includedby>
+    <invincdepgraph>
+      <node id="950">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="948">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256.h</label>
+        <link refid="vec256_8h_source"/>
+        <childnode refid="949" relation="include">
+        </childnode>
+        <childnode refid="950" relation="include">
+        </childnode>
+      </node>
+      <node id="949">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h</label>
+        <link refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h_source"/>
+        <childnode refid="950" relation="include">
+        </childnode>
+      </node>
+      <node id="952">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_double.h</label>
+        <link refid="vec256__double_8h_source"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="951">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_float.h</label>
+        <link refid="vec256__float_8h_source"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="953">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/vec256_int.h</label>
+        <link refid="vec256__int_8h_source"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+      </node>
+      <node id="947">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/intrinsics.h</label>
+        <link refid="cpu_2vec256_2intrinsics_8h"/>
+        <childnode refid="948" relation="include">
+        </childnode>
+        <childnode refid="951" relation="include">
+        </childnode>
+        <childnode refid="952" relation="include">
+        </childnode>
+        <childnode refid="953" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Microsoft<sp/>C/C++-compatible<sp/>compiler<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;intrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_MSC_VER<sp/>&lt;=<sp/>1900</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm256_extract_epi64(X,<sp/>Y)<sp/>(_mm_extract_epi64(_mm256_extractf128_si256(X,<sp/>Y<sp/>&gt;&gt;<sp/>1),<sp/>Y<sp/>%<sp/>2))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm256_extract_epi32(X,<sp/>Y)<sp/>(_mm_extract_epi32(_mm256_extractf128_si256(X,<sp/>Y<sp/>&gt;&gt;<sp/>2),<sp/>Y<sp/>%<sp/>4))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm256_extract_epi16(X,<sp/>Y)<sp/>(_mm_extract_epi16(_mm256_extractf128_si256(X,<sp/>Y<sp/>&gt;&gt;<sp/>3),<sp/>Y<sp/>%<sp/>8))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_mm256_extract_epi8(X,<sp/>Y)<sp/>(_mm_extract_epi8(_mm256_extractf128_si256(X,<sp/>Y<sp/>&gt;&gt;<sp/>4),<sp/>Y<sp/>%<sp/>16))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>(defined(__x86_64__)<sp/>||<sp/>defined(__i386__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>x86/x86-64<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;x86intrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__ARM_NEON__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>ARM<sp/>with<sp/>NEON<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arm_neon.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__IWMMXT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>ARM<sp/>with<sp/>WMMX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mmintrin.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>(defined(__GNUC__)<sp/>||<sp/>defined(__xlC__))<sp/>&amp;&amp;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="22"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>(defined(__VEC__)<sp/>||<sp/>defined(__ALTIVEC__))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>XLC<sp/>or<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>PowerPC<sp/>with<sp/>VMX/VSX<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;altivec.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>defined(__SPE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>GCC-compatible<sp/>compiler,<sp/>targeting<sp/>PowerPC<sp/>with<sp/>SPE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spe.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/intrinsics.h"/>
+  </compounddef>
+</doxygen>

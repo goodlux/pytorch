@@ -1,0 +1,892 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_roi_pooling_8cpp" kind="file" language="C++">
+    <compoundname>RoiPooling.cpp</compoundname>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes local="yes">ATen/NativeFunctions.h</includes>
+    <includes local="no">tuple</includes>
+    <incdepgraph>
+      <node id="7245">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="7246" relation="include">
+        </childnode>
+        <childnode refid="7247" relation="include">
+        </childnode>
+        <childnode refid="7248" relation="include">
+        </childnode>
+        <childnode refid="7249" relation="include">
+        </childnode>
+        <childnode refid="7250" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7252" relation="include">
+        </childnode>
+      </node>
+      <node id="7291">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="7241" relation="include">
+        </childnode>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7289" relation="include">
+        </childnode>
+        <childnode refid="7292" relation="include">
+        </childnode>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7250" relation="include">
+        </childnode>
+        <childnode refid="7242" relation="include">
+        </childnode>
+      </node>
+      <node id="7259">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7275" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7250" relation="include">
+        </childnode>
+      </node>
+      <node id="7258">
+        <label>atomic</label>
+      </node>
+      <node id="7237">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/RoiPooling.cpp</label>
+        <link refid="_roi_pooling_8cpp"/>
+        <childnode refid="7238" relation="include">
+        </childnode>
+        <childnode refid="7308" relation="include">
+        </childnode>
+        <childnode refid="7319" relation="include">
+        </childnode>
+      </node>
+      <node id="7250">
+        <label>functional</label>
+      </node>
+      <node id="7296">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7286" relation="include">
+        </childnode>
+        <childnode refid="7239" relation="include">
+        </childnode>
+      </node>
+      <node id="7260">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="7261" relation="include">
+        </childnode>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7271" relation="include">
+        </childnode>
+        <childnode refid="7273" relation="include">
+        </childnode>
+        <childnode refid="7277" relation="include">
+        </childnode>
+      </node>
+      <node id="7272">
+        <label>limits</label>
+      </node>
+      <node id="7280">
+        <label>assert.h</label>
+      </node>
+      <node id="7285">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7261" relation="include">
+        </childnode>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7284" relation="include">
+        </childnode>
+        <childnode refid="7264" relation="include">
+        </childnode>
+        <childnode refid="7256" relation="include">
+        </childnode>
+        <childnode refid="7286" relation="include">
+        </childnode>
+        <childnode refid="7287" relation="include">
+        </childnode>
+      </node>
+      <node id="7267">
+        <label>iterator</label>
+      </node>
+      <node id="7279">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="7280" relation="include">
+        </childnode>
+        <childnode refid="7281" relation="include">
+        </childnode>
+        <childnode refid="7252" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7246" relation="include">
+        </childnode>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7271" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7282" relation="include">
+        </childnode>
+        <childnode refid="7285" relation="include">
+        </childnode>
+      </node>
+      <node id="7299">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="7273">
+        <label>cstdint</label>
+      </node>
+      <node id="7307">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="7281">
+        <label>stdint.h</label>
+      </node>
+      <node id="7318">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="7274">
+        <label>cmath</label>
+      </node>
+      <node id="7249">
+        <label>cassert</label>
+      </node>
+      <node id="7290">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7240" relation="include">
+        </childnode>
+        <childnode refid="7289" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7285" relation="include">
+        </childnode>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7291" relation="include">
+        </childnode>
+        <childnode refid="7297" relation="include">
+        </childnode>
+        <childnode refid="7242" relation="include">
+        </childnode>
+        <childnode refid="7294" relation="include">
+        </childnode>
+        <childnode refid="7273" relation="include">
+        </childnode>
+      </node>
+      <node id="7276">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7266" relation="include">
+        </childnode>
+        <childnode refid="7272" relation="include">
+        </childnode>
+      </node>
+      <node id="7252">
+        <label>stdexcept</label>
+      </node>
+      <node id="7313">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="7279" relation="include">
+        </childnode>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7252" relation="include">
+        </childnode>
+      </node>
+      <node id="7287">
+        <label>numeric</label>
+      </node>
+      <node id="7283">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="7258" relation="include">
+        </childnode>
+        <childnode refid="7242" relation="include">
+        </childnode>
+        <childnode refid="7257" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7245" relation="include">
+        </childnode>
+      </node>
+      <node id="7271">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7272" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7273" relation="include">
+        </childnode>
+        <childnode refid="7252" relation="include">
+        </childnode>
+        <childnode refid="7246" relation="include">
+        </childnode>
+        <childnode refid="7274" relation="include">
+        </childnode>
+        <childnode refid="7275" relation="include">
+        </childnode>
+        <childnode refid="7276" relation="include">
+        </childnode>
+      </node>
+      <node id="7257">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="7258" relation="include">
+        </childnode>
+      </node>
+      <node id="7282">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7284" relation="include">
+        </childnode>
+      </node>
+      <node id="7251">
+        <label>string</label>
+      </node>
+      <node id="7316">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="7262" relation="include">
+        </childnode>
+        <childnode refid="7281" relation="include">
+        </childnode>
+      </node>
+      <node id="7317">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="7259" relation="include">
+        </childnode>
+        <childnode refid="7303" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7310" relation="include">
+        </childnode>
+        <childnode refid="7245" relation="include">
+        </childnode>
+      </node>
+      <node id="7241">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="7242" relation="include">
+        </childnode>
+        <childnode refid="7243" relation="include">
+        </childnode>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7257" relation="include">
+        </childnode>
+        <childnode refid="7259" relation="include">
+        </childnode>
+        <childnode refid="7278" relation="include">
+        </childnode>
+      </node>
+      <node id="7297">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="7309">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="7259" relation="include">
+        </childnode>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7291" relation="include">
+        </childnode>
+        <childnode refid="7253" relation="include">
+        </childnode>
+      </node>
+      <node id="7254">
+        <label>exception</label>
+      </node>
+      <node id="7243">
+        <label>stddef.h</label>
+      </node>
+      <node id="7284">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+      </node>
+      <node id="7315">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7271" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+      </node>
+      <node id="7263">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="7253" relation="include">
+        </childnode>
+      </node>
+      <node id="7298">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="7279" relation="include">
+        </childnode>
+        <childnode refid="7299" relation="include">
+        </childnode>
+      </node>
+      <node id="7255">
+        <label>ostream</label>
+      </node>
+      <node id="7240">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+      </node>
+      <node id="7288">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="7261">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7262" relation="include">
+        </childnode>
+        <childnode refid="7269" relation="include">
+        </childnode>
+        <childnode refid="7267" relation="include">
+        </childnode>
+        <childnode refid="7270" relation="include">
+        </childnode>
+      </node>
+      <node id="7304">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7305" relation="include">
+        </childnode>
+      </node>
+      <node id="7301">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="7239">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="7305">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7256" relation="include">
+        </childnode>
+      </node>
+      <node id="7302">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7281" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+      </node>
+      <node id="7286">
+        <label>typeinfo</label>
+      </node>
+      <node id="7293">
+        <label>cstdio</label>
+      </node>
+      <node id="7319">
+        <label>tuple</label>
+      </node>
+      <node id="7278">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="7242" relation="include">
+        </childnode>
+        <childnode refid="7239" relation="include">
+        </childnode>
+      </node>
+      <node id="7270">
+        <label>vector</label>
+      </node>
+      <node id="7314">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="7311">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="7268">
+        <label>new</label>
+      </node>
+      <node id="7246">
+        <label>utility</label>
+      </node>
+      <node id="7269">
+        <label>array</label>
+      </node>
+      <node id="7256">
+        <label>sstream</label>
+      </node>
+      <node id="7306">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="7279" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7298" relation="include">
+        </childnode>
+        <childnode refid="7289" relation="include">
+        </childnode>
+        <childnode refid="7307" relation="include">
+        </childnode>
+        <childnode refid="7308" relation="include">
+        </childnode>
+        <childnode refid="7309" relation="include">
+        </childnode>
+        <childnode refid="7310" relation="include">
+        </childnode>
+        <childnode refid="7311" relation="include">
+        </childnode>
+      </node>
+      <node id="7308">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="7275">
+        <label>iosfwd</label>
+      </node>
+      <node id="7265">
+        <label>cstdlib</label>
+      </node>
+      <node id="7277">
+        <label>iostream</label>
+      </node>
+      <node id="7253">
+        <label>cstddef</label>
+      </node>
+      <node id="7295">
+        <label>unordered_map</label>
+      </node>
+      <node id="7294">
+        <label>mutex</label>
+      </node>
+      <node id="7238">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7240" relation="include">
+        </childnode>
+        <childnode refid="7241" relation="include">
+        </childnode>
+        <childnode refid="7279" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7289" relation="include">
+        </childnode>
+        <childnode refid="7290" relation="include">
+        </childnode>
+        <childnode refid="7298" relation="include">
+        </childnode>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7259" relation="include">
+        </childnode>
+        <childnode refid="7304" relation="include">
+        </childnode>
+        <childnode refid="7306" relation="include">
+        </childnode>
+        <childnode refid="7312" relation="include">
+        </childnode>
+        <childnode refid="7313" relation="include">
+        </childnode>
+        <childnode refid="7314" relation="include">
+        </childnode>
+        <childnode refid="7315" relation="include">
+        </childnode>
+        <childnode refid="7316" relation="include">
+        </childnode>
+        <childnode refid="7309" relation="include">
+        </childnode>
+        <childnode refid="7310" relation="include">
+        </childnode>
+        <childnode refid="7303" relation="include">
+        </childnode>
+        <childnode refid="7317" relation="include">
+        </childnode>
+        <childnode refid="7318" relation="include">
+        </childnode>
+      </node>
+      <node id="7292">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="7264" relation="include">
+        </childnode>
+        <childnode refid="7293" relation="include">
+        </childnode>
+        <childnode refid="7265" relation="include">
+        </childnode>
+        <childnode refid="7250" relation="include">
+        </childnode>
+        <childnode refid="7242" relation="include">
+        </childnode>
+        <childnode refid="7294" relation="include">
+        </childnode>
+        <childnode refid="7295" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+        <childnode refid="7270" relation="include">
+        </childnode>
+        <childnode refid="7296" relation="include">
+        </childnode>
+        <childnode refid="7239" relation="include">
+        </childnode>
+      </node>
+      <node id="7244">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="7239" relation="include">
+        </childnode>
+        <childnode refid="7245" relation="include">
+        </childnode>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7254" relation="include">
+        </childnode>
+        <childnode refid="7255" relation="include">
+        </childnode>
+        <childnode refid="7256" relation="include">
+        </childnode>
+        <childnode refid="7251" relation="include">
+        </childnode>
+      </node>
+      <node id="7310">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="7290" relation="include">
+        </childnode>
+        <childnode refid="7259" relation="include">
+        </childnode>
+        <childnode refid="7309" relation="include">
+        </childnode>
+        <childnode refid="7303" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7300" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7275" relation="include">
+        </childnode>
+        <childnode refid="7246" relation="include">
+        </childnode>
+      </node>
+      <node id="7300">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="7289" relation="include">
+        </childnode>
+        <childnode refid="7279" relation="include">
+        </childnode>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7301" relation="include">
+        </childnode>
+        <childnode refid="7298" relation="include">
+        </childnode>
+        <childnode refid="7302" relation="include">
+        </childnode>
+        <childnode refid="7282" relation="include">
+        </childnode>
+        <childnode refid="7283" relation="include">
+        </childnode>
+        <childnode refid="7285" relation="include">
+        </childnode>
+        <childnode refid="7259" relation="include">
+        </childnode>
+        <childnode refid="7303" relation="include">
+        </childnode>
+        <childnode refid="7245" relation="include">
+        </childnode>
+      </node>
+      <node id="7247">
+        <label>type_traits</label>
+      </node>
+      <node id="7303">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="7260" relation="include">
+        </childnode>
+        <childnode refid="7244" relation="include">
+        </childnode>
+        <childnode refid="7277" relation="include">
+        </childnode>
+      </node>
+      <node id="7262">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="7263" relation="include">
+        </childnode>
+        <childnode refid="7264" relation="include">
+        </childnode>
+        <childnode refid="7249" relation="include">
+        </childnode>
+        <childnode refid="7253" relation="include">
+        </childnode>
+        <childnode refid="7265" relation="include">
+        </childnode>
+        <childnode refid="7266" relation="include">
+        </childnode>
+        <childnode refid="7248" relation="include">
+        </childnode>
+        <childnode refid="7267" relation="include">
+        </childnode>
+        <childnode refid="7242" relation="include">
+        </childnode>
+        <childnode refid="7268" relation="include">
+        </childnode>
+        <childnode refid="7247" relation="include">
+        </childnode>
+        <childnode refid="7246" relation="include">
+        </childnode>
+        <childnode refid="7239" relation="include">
+        </childnode>
+      </node>
+      <node id="7264">
+        <label>algorithm</label>
+      </node>
+      <node id="7289">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="7281" relation="include">
+        </childnode>
+      </node>
+      <node id="7266">
+        <label>cstring</label>
+      </node>
+      <node id="7242">
+        <label>memory</label>
+      </node>
+      <node id="7248">
+        <label>initializer_list</label>
+      </node>
+      <node id="7312">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="7277" relation="include">
+        </childnode>
+        <childnode refid="7288" relation="include">
+        </childnode>
+        <childnode refid="7279" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1native">at::native</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/NativeFunctions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">native<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">std::tuple&lt;at::Tensor,<sp/>at::Tensor&gt;<sp/>RoiPooling2d_forward_cpu(</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>rois,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>pooledHeight,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>pooledWidth,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>spatialScale)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Input<sp/>is<sp/>the<sp/>output<sp/>of<sp/>the<sp/>last<sp/>convolutional<sp/>layer<sp/>in<sp/>the<sp/>Backbone<sp/>network,<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>it<sp/>should<sp/>be<sp/>in<sp/>the<sp/>format<sp/>of<sp/>NCHW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>AT_CHECK(input.ndimension()<sp/>==<sp/>4,<sp/></highlight><highlight class="stringliteral">&quot;Input<sp/>to<sp/>RoI<sp/>Pooling<sp/>should<sp/>be<sp/>a<sp/>NCHW<sp/>Tensor&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>ROIs<sp/>is<sp/>the<sp/>set<sp/>of<sp/>region<sp/>proposals<sp/>to<sp/>process.<sp/>It<sp/>is<sp/>a<sp/>2D<sp/>Tensor<sp/>where<sp/>the<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>dim<sp/>is<sp/>the<sp/>#<sp/>of<sp/>proposals,<sp/>and<sp/>the<sp/>second<sp/>dim<sp/>is<sp/>the<sp/>proposal<sp/>itself<sp/>in<sp/>the<sp/>form</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>[batch_index<sp/>startW<sp/>startH<sp/>endW<sp/>endH]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>AT_CHECK(rois.ndimension()<sp/>==<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;RoI<sp/>Proposals<sp/>should<sp/>be<sp/>a<sp/>2D<sp/>Tensor,<sp/>(batch_sz<sp/>x<sp/>proposals)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>AT_CHECK(rois.size(1)<sp/>==<sp/>5,<sp/></highlight><highlight class="stringliteral">&quot;Proposals<sp/>should<sp/>be<sp/>of<sp/>the<sp/>form<sp/>[batch_index<sp/>startW<sp/>startH<sp/>endW<sp/>enH]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>proposals<sp/>=<sp/>rois.size(0);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputChannels<sp/>=<sp/>input.size(1);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputHeight<sp/>=<sp/>input.size(2);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputWidth<sp/>=<sp/>input.size(3);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Output<sp/>Tensor<sp/>is<sp/>(num_rois,<sp/>C,<sp/>pooledHeight,<sp/>pooledWidth)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>output<sp/>=<sp/>input.type().tensor({proposals,<sp/>inputChannels,<sp/>pooledHeight,<sp/>pooledWidth});</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>need<sp/>some<sp/>mechanism<sp/>for<sp/>determining<sp/>train<sp/>vs.<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>During<sp/>training,<sp/>we<sp/>need<sp/>to<sp/>store<sp/>the<sp/>argmaxes<sp/>for<sp/>the<sp/>pooling<sp/>operation,<sp/>so</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>argmaxes<sp/>Tensor<sp/>should<sp/>be<sp/>the<sp/>same<sp/>size<sp/>as<sp/>the<sp/>output<sp/>Tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>argmaxes<sp/>=<sp/>input.type().toScalarType(kInt).tensor({proposals,<sp/>inputChannels,<sp/>pooledHeight,<sp/>pooledWidth});</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>AT_CHECK(input.is_contiguous(),<sp/></highlight><highlight class="stringliteral">&quot;input<sp/>must<sp/>be<sp/>contiguous&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/>AT_CHECK(rois.is_contiguous(),<sp/></highlight><highlight class="stringliteral">&quot;rois<sp/>must<sp/>be<sp/>contiguous&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*rawInput<sp/>=<sp/>input.data&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputChannelStride<sp/>=<sp/>inputHeight<sp/>*<sp/>inputWidth;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>inputBatchStride<sp/>=<sp/>inputChannels<sp/>*<sp/>inputChannelStride;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*rawRois<sp/>=<sp/>rois.data&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>roiProposalStride<sp/>=<sp/>rois.size(1);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*rawOutput<sp/>=<sp/>output.data&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*rawArgmaxes<sp/>=<sp/>argmaxes.data&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>outputChannelStride<sp/>=<sp/>pooledHeight<sp/>*<sp/>pooledWidth;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Now<sp/>that<sp/>our<sp/>Tensors<sp/>are<sp/>properly<sp/>sized,<sp/>we<sp/>can<sp/>perform<sp/>the<sp/>pooling<sp/>operation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>iterate<sp/>over<sp/>each<sp/>RoI<sp/>and<sp/>perform<sp/>pooling<sp/>on<sp/>each<sp/>channel<sp/>in<sp/>the<sp/>input,<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>generate<sp/>a<sp/>pooledHeight<sp/>x<sp/>pooledWidth<sp/>output<sp/>for<sp/>each<sp/>RoI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>proposals;<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>n<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(rawRois[0]);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>startWidth<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::round(rawRois[1]<sp/>*<sp/>spatialScale));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>startHeight<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::round(rawRois[2]<sp/>*<sp/>spatialScale));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>endWidth<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::round(rawRois[3]<sp/>*<sp/>spatialScale));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>endHeight<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::round(rawRois[4]<sp/>*<sp/>spatialScale));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>assertions<sp/>for<sp/>valid<sp/>values?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>fix<sp/>malformed<sp/>ROIs??</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>roiHeight<sp/>=<sp/>endHeight<sp/>-<sp/>startHeight;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>roiWidth<sp/>=<sp/>endWidth<sp/>-<sp/>startWidth;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Because<sp/>the<sp/>Region<sp/>of<sp/>Interest<sp/>can<sp/>be<sp/>of<sp/>variable<sp/>size,<sp/>but<sp/>our<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>must<sp/>always<sp/>be<sp/>(pooledHeight<sp/>x<sp/>pooledWidth),<sp/>we<sp/>need<sp/>to<sp/>split<sp/>the<sp/>RoI</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>into<sp/>a<sp/>pooledHeight<sp/>x<sp/>pooledWidth<sp/>grid<sp/>of<sp/>tiles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tileHeight<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(roiHeight)<sp/>/<sp/>static_cast&lt;float&gt;(pooledHeight);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tileWidth<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(roiWidth)<sp/>/<sp/>static_cast&lt;float&gt;(pooledWidth);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>*rawInputBatch<sp/>=<sp/>rawInput<sp/>+<sp/>(n<sp/>*<sp/>inputBatchStride);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>pooling<sp/>for<sp/>each<sp/>of<sp/>the<sp/>(pooledHeight<sp/>x<sp/>pooledWidth)<sp/>tiles<sp/>for<sp/>each</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>channel<sp/>in<sp/>the<sp/>input</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ch<sp/>=<sp/>0;<sp/>ch<sp/>&lt;<sp/>inputChannels;<sp/>++ch)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ph<sp/>=<sp/>0;<sp/>ph<sp/>&lt;<sp/>pooledHeight;<sp/>++ph)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>pw<sp/>=<sp/>0;<sp/>pw<sp/>&lt;<sp/>pooledWidth;<sp/>++pw)<sp/>{</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tileHStart<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int64_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::floor(ph<sp/>*<sp/>tileHeight));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tileWStart<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int64_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::floor(pw<sp/>*<sp/>tileWidth));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tileHEnd<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int64_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::ceil((ph<sp/>+<sp/>1)<sp/>*<sp/>tileHeight));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tileWEnd<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">int64_t</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(std::ceil((pw<sp/>+<sp/>1)<sp/>*<sp/>tileWidth));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>tile<sp/>offsets<sp/>to<sp/>RoI<sp/>offsets,<sp/>and<sp/>clip<sp/>to<sp/>input<sp/>boundaries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tileHStart<sp/>=<sp/>std::min(std::max&lt;int64_t&gt;(tileHStart<sp/>+<sp/>startHeight,<sp/>0),<sp/>inputHeight);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tileWStart<sp/>=<sp/>std::min(std::max&lt;int64_t&gt;(tileWStart<sp/>+<sp/>startWidth,<sp/>0),<sp/>inputWidth);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tileHEnd<sp/>=<sp/>std::min(std::max&lt;int64_t&gt;(tileHEnd<sp/>+<sp/>startHeight,<sp/>0),<sp/>inputHeight);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tileWEnd<sp/>=<sp/>std::min(std::max&lt;int64_t&gt;(tileWEnd<sp/>+<sp/>startWidth,<sp/>0),<sp/>inputWidth);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>poolIndex<sp/>=<sp/>(ph<sp/>*<sp/>pooledWidth)<sp/>+<sp/>pw;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>our<sp/>pooling<sp/>region<sp/>is<sp/>empty,<sp/>we<sp/>set<sp/>the<sp/>output<sp/>to<sp/>0,<sp/>otherwise<sp/>to</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>min<sp/>float<sp/>so<sp/>we<sp/>can<sp/>calculate<sp/>the<sp/>max<sp/>properly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>empty<sp/>=<sp/>tileHStart<sp/>&gt;=<sp/>tileHEnd<sp/>||<sp/>tileWStart<sp/>&gt;=<sp/>tileWEnd;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rawOutput[poolIndex]<sp/>=<sp/>empty<sp/>?<sp/>0<sp/>:<sp/>std::numeric_limits&lt;float&gt;::min();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>to<sp/>-1<sp/>so<sp/>we<sp/>don&apos;t<sp/>try<sp/>to<sp/>backprop<sp/>to<sp/>anywhere</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>make<sp/>optional<sp/>for<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rawArgmaxes[poolIndex]<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>th<sp/>=<sp/>tileHStart;<sp/>th<sp/>&lt;<sp/>tileHEnd;<sp/>++th)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>tw<sp/>=<sp/>tileWStart;<sp/>tw<sp/>&lt;<sp/>tileWEnd;<sp/>++tw)<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>index<sp/>=<sp/>(th<sp/>*<sp/>inputWidth)<sp/>+<sp/>tw;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rawInputBatch[index]<sp/>&gt;<sp/>rawOutput[poolIndex])<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rawOutput[poolIndex]<sp/>=<sp/>rawInputBatch[index];</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>make<sp/>optional<sp/>for<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rawArgmaxes[poolIndex]<sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>raw<sp/>pointers<sp/>by<sp/>channel<sp/>stride</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rawInputBatch<sp/>+=<sp/>inputChannelStride;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rawOutput<sp/>+=<sp/>outputChannelStride;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO:<sp/>make<sp/>optional<sp/>for<sp/>test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>rawArgmaxes<sp/>+=<sp/>outputChannelStride;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Increment<sp/>RoI<sp/>raw<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>rawRois<sp/>+=<sp/>roiProposalStride;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::make_tuple(output,<sp/>argmaxes);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">Tensor<sp/>RoiPooling2d_backward_cpu(</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>input,</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>rois,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>int64_t<sp/>pooledHeight,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>int64_t<sp/>pooledWidth,</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>spatialScale,</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>gradOutput,</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>argmaxes)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(</highlight><highlight class="stringliteral">&quot;not<sp/>implemented&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/RoiPooling.cpp"/>
+  </compounddef>
+</doxygen>

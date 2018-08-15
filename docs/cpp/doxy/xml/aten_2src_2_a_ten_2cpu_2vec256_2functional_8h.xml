@@ -1,0 +1,504 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h" kind="file" language="C++">
+    <compoundname>functional.h</compoundname>
+    <includes refid="vec256_8h" local="yes">vec256.h</includes>
+    <includedby refid="vml_8h" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</includedby>
+    <includedby refid="_soft_max_kernel_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftMaxKernel.cpp</includedby>
+    <incdepgraph>
+      <node id="15528">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="15529" relation="include">
+        </childnode>
+        <childnode refid="15530" relation="include">
+        </childnode>
+        <childnode refid="15531" relation="include">
+        </childnode>
+        <childnode refid="15532" relation="include">
+        </childnode>
+        <childnode refid="15522" relation="include">
+        </childnode>
+        <childnode refid="15533" relation="include">
+        </childnode>
+        <childnode refid="15534" relation="include">
+        </childnode>
+      </node>
+      <node id="15550">
+        <label>atomic</label>
+      </node>
+      <node id="15522">
+        <label>functional</label>
+      </node>
+      <node id="15552">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="15526" relation="include">
+        </childnode>
+        <childnode refid="15525" relation="include">
+        </childnode>
+        <childnode refid="15553" relation="include">
+        </childnode>
+        <childnode refid="15555" relation="include">
+        </childnode>
+        <childnode refid="15558" relation="include">
+        </childnode>
+      </node>
+      <node id="15554">
+        <label>limits</label>
+      </node>
+      <node id="15543">
+        <label>iterator</label>
+      </node>
+      <node id="15524">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="15525" relation="include">
+        </childnode>
+        <childnode refid="15526" relation="include">
+        </childnode>
+        <childnode refid="15527" relation="include">
+        </childnode>
+        <childnode refid="15548" relation="include">
+        </childnode>
+        <childnode refid="15541" relation="include">
+        </childnode>
+        <childnode refid="15538" relation="include">
+        </childnode>
+        <childnode refid="15559" relation="include">
+        </childnode>
+        <childnode refid="15560" relation="include">
+        </childnode>
+      </node>
+      <node id="15520">
+        <label>vec256_base.h</label>
+        <link refid="vec256__base_8h_source"/>
+        <childnode refid="15521" relation="include">
+        </childnode>
+        <childnode refid="15522" relation="include">
+        </childnode>
+        <childnode refid="15523" relation="include">
+        </childnode>
+        <childnode refid="15524" relation="include">
+        </childnode>
+      </node>
+      <node id="15555">
+        <label>cstdint</label>
+      </node>
+      <node id="15523">
+        <label>cmath</label>
+      </node>
+      <node id="15532">
+        <label>cassert</label>
+      </node>
+      <node id="15557">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="15525" relation="include">
+        </childnode>
+        <childnode refid="15521" relation="include">
+        </childnode>
+        <childnode refid="15554" relation="include">
+        </childnode>
+      </node>
+      <node id="15534">
+        <label>stdexcept</label>
+      </node>
+      <node id="15560">
+        <label>numeric</label>
+      </node>
+      <node id="15549">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="15550" relation="include">
+        </childnode>
+        <childnode refid="15544" relation="include">
+        </childnode>
+        <childnode refid="15551" relation="include">
+        </childnode>
+        <childnode refid="15552" relation="include">
+        </childnode>
+        <childnode refid="15528" relation="include">
+        </childnode>
+      </node>
+      <node id="15553">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="15525" relation="include">
+        </childnode>
+        <childnode refid="15554" relation="include">
+        </childnode>
+        <childnode refid="15533" relation="include">
+        </childnode>
+        <childnode refid="15555" relation="include">
+        </childnode>
+        <childnode refid="15534" relation="include">
+        </childnode>
+        <childnode refid="15529" relation="include">
+        </childnode>
+        <childnode refid="15523" relation="include">
+        </childnode>
+        <childnode refid="15556" relation="include">
+        </childnode>
+        <childnode refid="15557" relation="include">
+        </childnode>
+      </node>
+      <node id="15551">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="15550" relation="include">
+        </childnode>
+      </node>
+      <node id="15518">
+        <label>vec256.h</label>
+        <link refid="vec256_8h_source"/>
+        <childnode refid="15519" relation="include">
+        </childnode>
+        <childnode refid="15520" relation="include">
+        </childnode>
+        <childnode refid="15561" relation="include">
+        </childnode>
+        <childnode refid="15562" relation="include">
+        </childnode>
+        <childnode refid="15563" relation="include">
+        </childnode>
+        <childnode refid="15541" relation="include">
+        </childnode>
+        <childnode refid="15535" relation="include">
+        </childnode>
+        <childnode refid="15555" relation="include">
+        </childnode>
+        <childnode refid="15521" relation="include">
+        </childnode>
+        <childnode refid="15558" relation="include">
+        </childnode>
+      </node>
+      <node id="15517">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h</label>
+        <link refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h"/>
+        <childnode refid="15518" relation="include">
+        </childnode>
+      </node>
+      <node id="15533">
+        <label>string</label>
+      </node>
+      <node id="15562">
+        <label>vec256_double.h</label>
+        <link refid="vec256__double_8h_source"/>
+        <childnode refid="15519" relation="include">
+        </childnode>
+        <childnode refid="15520" relation="include">
+        </childnode>
+      </node>
+      <node id="15536">
+        <label>exception</label>
+      </node>
+      <node id="15548">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="15549" relation="include">
+        </childnode>
+      </node>
+      <node id="15540">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="15535" relation="include">
+        </childnode>
+      </node>
+      <node id="15537">
+        <label>ostream</label>
+      </node>
+      <node id="15526">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="15527" relation="include">
+        </childnode>
+        <childnode refid="15539" relation="include">
+        </childnode>
+        <childnode refid="15546" relation="include">
+        </childnode>
+        <childnode refid="15543" relation="include">
+        </childnode>
+        <childnode refid="15547" relation="include">
+        </childnode>
+      </node>
+      <node id="15525">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="15559">
+        <label>typeinfo</label>
+      </node>
+      <node id="15547">
+        <label>vector</label>
+      </node>
+      <node id="15545">
+        <label>new</label>
+      </node>
+      <node id="15529">
+        <label>utility</label>
+      </node>
+      <node id="15546">
+        <label>array</label>
+      </node>
+      <node id="15538">
+        <label>sstream</label>
+      </node>
+      <node id="15561">
+        <label>vec256_float.h</label>
+        <link refid="vec256__float_8h_source"/>
+        <childnode refid="15519" relation="include">
+        </childnode>
+        <childnode refid="15520" relation="include">
+        </childnode>
+      </node>
+      <node id="15563">
+        <label>vec256_int.h</label>
+        <link refid="vec256__int_8h_source"/>
+        <childnode refid="15519" relation="include">
+        </childnode>
+        <childnode refid="15520" relation="include">
+        </childnode>
+      </node>
+      <node id="15556">
+        <label>iosfwd</label>
+      </node>
+      <node id="15542">
+        <label>cstdlib</label>
+      </node>
+      <node id="15558">
+        <label>iostream</label>
+      </node>
+      <node id="15535">
+        <label>cstddef</label>
+      </node>
+      <node id="15519">
+        <label>intrinsics.h</label>
+        <link refid="cpu_2vec256_2intrinsics_8h_source"/>
+      </node>
+      <node id="15527">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="15525" relation="include">
+        </childnode>
+        <childnode refid="15528" relation="include">
+        </childnode>
+        <childnode refid="15535" relation="include">
+        </childnode>
+        <childnode refid="15536" relation="include">
+        </childnode>
+        <childnode refid="15537" relation="include">
+        </childnode>
+        <childnode refid="15538" relation="include">
+        </childnode>
+        <childnode refid="15533" relation="include">
+        </childnode>
+      </node>
+      <node id="15530">
+        <label>type_traits</label>
+      </node>
+      <node id="15539">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="15540" relation="include">
+        </childnode>
+        <childnode refid="15541" relation="include">
+        </childnode>
+        <childnode refid="15532" relation="include">
+        </childnode>
+        <childnode refid="15535" relation="include">
+        </childnode>
+        <childnode refid="15542" relation="include">
+        </childnode>
+        <childnode refid="15521" relation="include">
+        </childnode>
+        <childnode refid="15531" relation="include">
+        </childnode>
+        <childnode refid="15543" relation="include">
+        </childnode>
+        <childnode refid="15544" relation="include">
+        </childnode>
+        <childnode refid="15545" relation="include">
+        </childnode>
+        <childnode refid="15530" relation="include">
+        </childnode>
+        <childnode refid="15529" relation="include">
+        </childnode>
+        <childnode refid="15525" relation="include">
+        </childnode>
+      </node>
+      <node id="15541">
+        <label>algorithm</label>
+      </node>
+      <node id="15521">
+        <label>cstring</label>
+      </node>
+      <node id="15544">
+        <label>memory</label>
+      </node>
+      <node id="15531">
+        <label>initializer_list</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="15565">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="15564">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h</label>
+        <link refid="aten_2src_2_a_ten_2cpu_2vec256_2functional_8h"/>
+        <childnode refid="15565" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <innernamespace refid="namespaceat_1_1vec256">at::vec256</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vec256.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{<sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">vec256<sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>Make<sp/>this<sp/>more<sp/>efficient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Op&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>scalar_t<sp/>vec_reduce_all(</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Op&amp;<sp/>vec_fun,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>vec256::Vec256&lt;scalar_t&gt;<sp/>acc_vec,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>scalar_t<sp/>acc_arr[Vec::size];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>acc_vec.store(acc_arr);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>size;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t<sp/>acc_arr_next[Vec::size];</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_arr_next[0]<sp/>=<sp/>acc_arr[i];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>acc_vec_next<sp/>=<sp/>Vec::loadu(acc_arr_next);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>vec_fun(acc_vec,<sp/>acc_vec_next);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>acc_vec.store(acc_arr);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>acc_arr[0];</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Op&gt;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>scalar_t<sp/>reduce_all(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Op&amp;<sp/>vec_fun,<sp/>scalar_t*<sp/>data,<sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/>Vec::size)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec_reduce_all(vec_fun,<sp/>Vec::loadu(data,<sp/>size),<sp/>size);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>int64_t<sp/>d<sp/>=<sp/>Vec::size;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>Vec<sp/>acc_vec<sp/>=<sp/>Vec::loadu(data);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>d<sp/>&lt;<sp/>size<sp/>-<sp/>(size<sp/>%<sp/>Vec::size);<sp/>d<sp/>+=<sp/>Vec::size)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>vec_fun(acc_vec,<sp/>data_vec);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>-<sp/>d<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>Vec::set(acc_vec,<sp/>vec_fun(acc_vec,<sp/>data_vec),<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec_reduce_all(vec_fun,<sp/>acc_vec,<sp/>Vec::size);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MapOp,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ReduceOp&gt;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>scalar_t<sp/>map_reduce_all(</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MapOp&amp;<sp/>map_fun,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ReduceOp&amp;<sp/>red_fun,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>data,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/>Vec::size)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec_reduce_all(red_fun,<sp/>map_fun(Vec::loadu(data,<sp/>size)),<sp/>size);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>int64_t<sp/>d<sp/>=<sp/>Vec::size;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>Vec<sp/>acc_vec<sp/>=<sp/>map_fun(Vec::loadu(data));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>d<sp/>&lt;<sp/>size<sp/>-<sp/>(size<sp/>%<sp/>Vec::size);<sp/>d<sp/>+=<sp/>Vec::size)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>data_vec<sp/>=<sp/>map_fun(data_vec);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>red_fun(acc_vec,<sp/>data_vec);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>-<sp/>d<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>data_vec<sp/>=<sp/>map_fun(data_vec);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>Vec::set(acc_vec,<sp/>red_fun(acc_vec,<sp/>data_vec),<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec_reduce_all(red_fun,<sp/>acc_vec,<sp/>Vec::size);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>MapOp,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>ReduceOp&gt;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>scalar_t<sp/>map2_reduce_all(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MapOp&amp;<sp/>map_fun,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ReduceOp&amp;<sp/>red_fun,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>data,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>data2,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>&lt;<sp/>Vec::size)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data,<sp/>size);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data2_vec<sp/>=<sp/>Vec::loadu(data2,<sp/>size);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>data_vec<sp/>=<sp/>map_fun(data_vec,<sp/>data2_vec);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec_reduce_all(red_fun,<sp/>data_vec,<sp/>size);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>int64_t<sp/>d<sp/>=<sp/>Vec::size;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>Vec<sp/>acc_vec<sp/>=<sp/>map_fun(Vec::loadu(data),<sp/>Vec::loadu(data2));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>d<sp/>&lt;<sp/>size<sp/>-<sp/>(size<sp/>%<sp/>Vec::size);<sp/>d<sp/>+=<sp/>Vec::size)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data2_vec<sp/>=<sp/>Vec::loadu(data2<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>data_vec<sp/>=<sp/>map_fun(data_vec,<sp/>data2_vec);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>red_fun(acc_vec,<sp/>data_vec);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>-<sp/>d<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data2_vec<sp/>=<sp/>Vec::loadu(data2<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>data_vec<sp/>=<sp/>map_fun(data_vec,<sp/>data2_vec);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>acc_vec<sp/>=<sp/>Vec::set(acc_vec,<sp/>red_fun(acc_vec,<sp/>data_vec),<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec_reduce_all(red_fun,<sp/>acc_vec,<sp/>Vec::size);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Op&gt;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Op&amp;<sp/>vec_fun,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>scalar_t*<sp/>input_data,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>int64_t<sp/>d<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>d<sp/>&lt;<sp/>size<sp/>-<sp/>(size<sp/>%<sp/>Vec::size);<sp/>d<sp/>+=<sp/>Vec::size)<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>output_vec<sp/>=<sp/>vec_fun(Vec::loadu(input_data<sp/>+<sp/>d));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>output_vec.store(output_data<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>-<sp/>d<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>output_vec<sp/>=<sp/>vec_fun(Vec::loadu(input_data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>output_vec.store(output_data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>scalar_t,<sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Op&gt;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>map2(</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Op&amp;<sp/>vec_fun,</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>output_data,</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>scalar_t*<sp/>input_data2,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Vec<sp/>=<sp/>vec256::Vec256&lt;scalar_t&gt;;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>int64_t<sp/>d<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(;<sp/>d<sp/>&lt;<sp/>size<sp/>-<sp/>(size<sp/>%<sp/>Vec::size);<sp/>d<sp/>+=<sp/>Vec::size)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(input_data<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec2<sp/>=<sp/>Vec::loadu(input_data2<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>output_vec<sp/>=<sp/>vec_fun(data_vec,<sp/>data_vec2);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>output_vec.store(output_data<sp/>+<sp/>d);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(size<sp/>-<sp/>d<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec<sp/>=<sp/>Vec::loadu(input_data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>data_vec2<sp/>=<sp/>Vec::loadu(input_data2<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>Vec<sp/>output_vec<sp/>=<sp/>vec_fun(data_vec,<sp/>data_vec2);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>output_vec.store(output_data<sp/>+<sp/>d,<sp/>size<sp/>-<sp/>d);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at::vec256</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vec256/functional.h"/>
+  </compounddef>
+</doxygen>

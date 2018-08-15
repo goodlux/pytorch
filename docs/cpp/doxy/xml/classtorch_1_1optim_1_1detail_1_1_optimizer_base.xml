@@ -1,0 +1,287 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1optim_1_1detail_1_1_optimizer_base" kind="class" language="C++" prot="public">
+    <compoundname>torch::optim::detail::OptimizerBase</compoundname>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_loss_closure_optimizer" prot="public" virt="non-virtual">torch::optim::LossClosureOptimizer</derivedcompoundref>
+    <derivedcompoundref refid="classtorch_1_1optim_1_1_optimizer" prot="public" virt="non-virtual">torch::optim::Optimizer</derivedcompoundref>
+    <includes refid="optimizer_8h" local="no">optimizer.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ae3931245065d22fa16cb775c95c33b01" prot="public" static="no">
+        <type><ref refid="classtorch_1_1detail_1_1_cursor_base" kindref="compound">torch::detail::CursorBase</ref>&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>using torch::optim::detail::OptimizerBase::ParameterCursor =  torch::detail::CursorBase&lt;Tensor&gt;</definition>
+        <argsstring></argsstring>
+        <name>ParameterCursor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="21" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a1bc457f914c49a04e70a7629488df23f" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::optim::detail::OptimizerBase::parameters_</definition>
+        <argsstring></argsstring>
+        <name>parameters_</name>
+        <briefdescription>
+<para>The parameters this optimizer optimizes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="80" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ac095094927b128f97db9a5653cb66807" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::optim::detail::OptimizerBase::OptimizerBase</definition>
+        <argsstring>(std::vector&lt; Tensor &gt; parameters)</argsstring>
+        <name>OptimizerBase</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1optim_1_1_optimizer" kindref="compound">Optimizer</ref></computeroutput> from a vector of parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="24" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/optimizer.cpp" bodystart="13" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a99c883bd29f37597dac940c420474d38" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::optim::detail::OptimizerBase::OptimizerBase</definition>
+        <argsstring>(const ParameterCursor &amp;cursor)</argsstring>
+        <name>OptimizerBase</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1detail_1_1_cursor_base" kindref="compound">ParameterCursor</ref> &amp;</type>
+          <declname>cursor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructs the <computeroutput><ref refid="classtorch_1_1optim_1_1_optimizer" kindref="compound">Optimizer</ref></computeroutput> from a ParameterCursor, such as <computeroutput><ref refid="classtorch_1_1nn_1_1_module_1a8a41bcec40fafbb56a972b4b6ea2b217" kindref="member">nn::Module::parameters()</ref></computeroutput> returns. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="28" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/optimizer.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1aaf3ff0cc2a3a28566bc8c106673af53c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual torch::optim::detail::OptimizerBase::~OptimizerBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~OptimizerBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a35aa4e671083a378e84ead01097854c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::optim::detail::OptimizerBase::add_parameters</definition>
+        <argsstring>(const std::vector&lt; Tensor &gt; &amp;parameters)</argsstring>
+        <name>add_parameters</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt; &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the given vector of parameters to the optimizer&apos;s parameter list. Override this method if you want to modify the way parameters are added to the <computeroutput><ref refid="classtorch_1_1optim_1_1_optimizer" kindref="compound">Optimizer</ref></computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="35" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/optimizer.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a4f0e78d1b05b4f412513e940bb274209" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::optim::detail::OptimizerBase::add_parameters</definition>
+        <argsstring>(const ParameterCursor &amp;cursor)</argsstring>
+        <name>add_parameters</name>
+        <param>
+          <type>const <ref refid="classtorch_1_1detail_1_1_cursor_base" kindref="compound">ParameterCursor</ref> &amp;</type>
+          <declname>cursor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds the <computeroutput>ParameterCursor</computeroutput>&apos;s parameters to the optimizer&apos;s parameter list. NOTE: Calls the <computeroutput>vector&lt;Tensor&gt;</computeroutput> overload of <computeroutput>add_parameters</computeroutput> <ndash/> override that method if you want to modify the behavior of <computeroutput>add_parameters</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="40" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/optimizer.cpp" bodystart="24" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1abfe0f04c0fa9c13efbf09568985ac834" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void torch::optim::detail::OptimizerBase::zero_grad</definition>
+        <argsstring>()</argsstring>
+        <name>zero_grad</name>
+        <briefdescription>
+<para>Zeros out the gradients of all parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/optimizer.cpp" bodystart="30" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a7fc838f1237cdc236ea515dcb30082e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt;Tensor&gt;&amp; torch::optim::detail::OptimizerBase::parameters</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>parameters</name>
+        <briefdescription>
+<para>Provides a reference to the parameters this optimizer holds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1af05d9e4c072611745a8dd8f4ff8f6220" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t torch::optim::detail::OptimizerBase::size</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>Returns the number of parameters referenced by the optimizer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="49" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/src/optim/optimizer.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a08eb2b3fb09eddb7916e790d8e8f4add" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>torch::optim::detail::OptimizerBase::OptimizerBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>OptimizerBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a60e97f95e8f138600b63fa949bcf2b60" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename ParameterContainer</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;Tensor&gt; torch::optim::detail::OptimizerBase::zero_buffers_like</definition>
+        <argsstring>(const ParameterContainer &amp;parameters)</argsstring>
+        <name>zero_buffers_like</name>
+        <param>
+          <type>const ParameterContainer &amp;</type>
+          <declname>parameters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function to construct a vector of zero-d out variables, each the same shape as the variable at the corresponding index in the input container. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="58" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="58" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a2726328360488171de7ccd2085bcae03" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &amp;</type>
+        <definition>Tensor&amp; torch::optim::detail::OptimizerBase::buffer_at</definition>
+        <argsstring>(std::vector&lt; Tensor &gt; &amp;buffers, size_t index)</argsstring>
+        <name>buffer_at</name>
+        <param>
+          <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">Tensor</ref> &gt; &amp;</type>
+          <declname>buffers</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Accesses a buffer at the given index, converts it to the type of the parameter at the corresponding index (a no-op if they match). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="69" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="69" bodyend="77"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Base class for all optimizers, that does not yet define a <computeroutput>step()</computeroutput> mechanism. All it specifies is that optimizers must be supplied with a vector of parameters. It also defines certain methods that all optimizers shall have, such as <computeroutput>zero_grad</computeroutput>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="478">
+        <label>torch::optim::Adagrad</label>
+        <link refid="classtorch_1_1optim_1_1_adagrad"/>
+        <childnode refid="477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="481">
+        <label>torch::optim::SGD</label>
+        <link refid="classtorch_1_1optim_1_1_s_g_d"/>
+        <childnode refid="477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="474">
+        <label>torch::optim::detail::OptimizerBase</label>
+        <link refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base"/>
+      </node>
+      <node id="476">
+        <label>torch::optim::LBFGS</label>
+        <link refid="classtorch_1_1optim_1_1_l_b_f_g_s"/>
+        <childnode refid="475" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="475">
+        <label>torch::optim::LossClosureOptimizer</label>
+        <link refid="classtorch_1_1optim_1_1_loss_closure_optimizer"/>
+        <childnode refid="474" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>torch::optim::RMSprop</label>
+        <link refid="classtorch_1_1optim_1_1_r_m_sprop"/>
+        <childnode refid="477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="479">
+        <label>torch::optim::Adam</label>
+        <link refid="classtorch_1_1optim_1_1_adam"/>
+        <childnode refid="477" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>torch::optim::Optimizer</label>
+        <link refid="classtorch_1_1optim_1_1_optimizer"/>
+        <childnode refid="474" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h" bodystart="19" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a35aa4e671083a378e84ead01097854c1" prot="public" virt="virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a4f0e78d1b05b4f412513e940bb274209" prot="public" virt="virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>add_parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a2726328360488171de7ccd2085bcae03" prot="protected" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>buffer_at</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ac095094927b128f97db9a5653cb66807" prot="public" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a99c883bd29f37597dac940c420474d38" prot="public" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a08eb2b3fb09eddb7916e790d8e8f4add" prot="protected" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>OptimizerBase</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1ae3931245065d22fa16cb775c95c33b01" prot="public" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>ParameterCursor</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a7fc838f1237cdc236ea515dcb30082e4" prot="public" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>parameters</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a1bc457f914c49a04e70a7629488df23f" prot="protected" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>parameters_</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1af05d9e4c072611745a8dd8f4ff8f6220" prot="public" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>size</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1a60e97f95e8f138600b63fa949bcf2b60" prot="protected" virt="non-virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>zero_buffers_like</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1abfe0f04c0fa9c13efbf09568985ac834" prot="public" virt="virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>zero_grad</name></member>
+      <member refid="classtorch_1_1optim_1_1detail_1_1_optimizer_base_1aaf3ff0cc2a3a28566bc8c106673af53c" prot="public" virt="virtual"><scope>torch::optim::detail::OptimizerBase</scope><name>~OptimizerBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

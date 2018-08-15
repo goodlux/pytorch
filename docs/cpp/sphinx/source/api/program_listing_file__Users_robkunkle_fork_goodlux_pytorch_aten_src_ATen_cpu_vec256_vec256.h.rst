@@ -1,0 +1,45 @@
+
+.. _program_listing_file__Users_robkunkle_fork_goodlux_pytorch_aten_src_ATen_cpu_vec256_vec256.h:
+
+Program Listing for File vec256.h
+=================================
+
+- Return to documentation for :ref:`file__Users_robkunkle_fork_goodlux_pytorch_aten_src_ATen_cpu_vec256_vec256.h`
+
+.. code-block:: cpp
+
+   #pragma once
+   
+   #include "intrinsics.h"
+   
+   #include "vec256_base.h"
+   #include "vec256_float.h"
+   #include "vec256_double.h"
+   #include "vec256_int.h"
+   
+   #include <algorithm>
+   #include <cstddef>
+   #include <cstdint>
+   #include <cstring>
+   #include <iostream>
+   
+   namespace at {
+   namespace vec256 {
+   namespace {
+   
+   template <typename T>
+   std::ostream& operator<<(std::ostream& stream, const Vec256<T>& vec) {
+     T buf[Vec256<T>::size];
+     vec.store(buf);
+     stream << "vec[";
+     for (int i = 0; i != Vec256<T>::size; i++) {
+       if (i != 0) {
+         stream << ", ";
+       }
+       stream << buf[i];
+     }
+     stream << "]";
+     return stream;
+   }
+   
+   }}}

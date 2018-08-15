@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_tensor_accessor_base" kind="class" language="C++" prot="public">
+    <compoundname>at::TensorAccessorBase</compoundname>
+    <derivedcompoundref refid="classat_1_1_tensor_accessor" prot="public" virt="non-virtual">at::TensorAccessor&lt; T, N &gt;</derivedcompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>size_t</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classat_1_1_tensor_accessor_base_1a753c82ebe781235e8d2564b4b24f39b1" prot="protected" static="no" mutable="no">
+        <type>T *</type>
+        <definition>T* at::TensorAccessorBase&lt; T, N &gt;::data_</definition>
+        <argsstring></argsstring>
+        <name>data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="25" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_tensor_accessor_base_1ad304b674df0603774c233d9d28aed391" prot="protected" static="no" mutable="no">
+        <type>const int64_t *</type>
+        <definition>const int64_t* at::TensorAccessorBase&lt; T, N &gt;::sizes_</definition>
+        <argsstring></argsstring>
+        <name>sizes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="26" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classat_1_1_tensor_accessor_base_1a6e4163c3dedab2aee5e485c538650f2c" prot="protected" static="no" mutable="no">
+        <type>const int64_t *</type>
+        <definition>const int64_t* at::TensorAccessorBase&lt; T, N &gt;::strides_</definition>
+        <argsstring></argsstring>
+        <name>strides_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="27" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_tensor_accessor_base_1a7839efa356b4c5d115e694c17716ccd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::TensorAccessorBase&lt; T, N &gt;::TensorAccessorBase</definition>
+        <argsstring>(T *data_, const int64_t *sizes_, const int64_t *strides_)</argsstring>
+        <name>TensorAccessorBase</name>
+        <param>
+          <type>T *</type>
+          <declname>data_</declname>
+        </param>
+        <param>
+          <type>const int64_t *</type>
+          <declname>sizes_</declname>
+        </param>
+        <param>
+          <type>const int64_t *</type>
+          <declname>strides_</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="14" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="14" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_tensor_accessor_base_1a53793f032f1667a4a4515bc53f43a153" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+        <definition>IntList at::TensorAccessorBase&lt; T, N &gt;::sizes</definition>
+        <argsstring>()</argsstring>
+        <name>sizes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="16" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_tensor_accessor_base_1a9804e1c496645ba2c10d89050ca8b1de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classat_1_1_array_ref" kindref="compound">IntList</ref></type>
+        <definition>IntList at::TensorAccessorBase&lt; T, N &gt;::strides</definition>
+        <argsstring>()</argsstring>
+        <name>strides</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="19" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_tensor_accessor_base_1ac7b09a900c6eee3533c2c70583ee0984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::TensorAccessorBase&lt; T, N &gt;::stride</definition>
+        <argsstring>(int64_t i)</argsstring>
+        <name>stride</name>
+        <param>
+          <type>int64_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="22" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_tensor_accessor_base_1a1c204cf90e526c96e031313ab0810ed2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int64_t</type>
+        <definition>int64_t at::TensorAccessorBase&lt; T, N &gt;::size</definition>
+        <argsstring>(int64_t i)</argsstring>
+        <name>size</name>
+        <param>
+          <type>int64_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="687">
+        <label>at::TensorAccessorBase&lt; T, N &gt;</label>
+        <link refid="classat_1_1_tensor_accessor_base"/>
+      </node>
+      <node id="688">
+        <label>at::TensorAccessor&lt; T, N &gt;</label>
+        <link refid="classat_1_1_tensor_accessor"/>
+        <childnode refid="687" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="690">
+        <label>T</label>
+      </node>
+      <node id="689">
+        <label>at::TensorAccessorBase&lt; T, N &gt;</label>
+        <link refid="classat_1_1_tensor_accessor_base"/>
+        <childnode refid="690" relation="usage">
+          <edgelabel>data_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" line="12" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorAccessor.h" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classat_1_1_tensor_accessor_base_1a753c82ebe781235e8d2564b4b24f39b1" prot="protected" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>data_</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1a1c204cf90e526c96e031313ab0810ed2" prot="public" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>size</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1a53793f032f1667a4a4515bc53f43a153" prot="public" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>sizes</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1ad304b674df0603774c233d9d28aed391" prot="protected" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>sizes_</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1ac7b09a900c6eee3533c2c70583ee0984" prot="public" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>stride</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1a9804e1c496645ba2c10d89050ca8b1de" prot="public" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>strides</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1a6e4163c3dedab2aee5e485c538650f2c" prot="protected" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>strides_</name></member>
+      <member refid="classat_1_1_tensor_accessor_base_1a7839efa356b4c5d115e694c17716ccd4" prot="public" virt="non-virtual"><scope>at::TensorAccessorBase</scope><name>TensorAccessorBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

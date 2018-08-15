@@ -1,0 +1,374 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="apply__test_8cpp" kind="file" language="C++">
+    <compoundname>apply_test.cpp</compoundname>
+    <includes local="yes">catch.hpp</includes>
+    <includes refid="cuda_8h" local="yes">cuda.h</includes>
+    <includes local="yes">cuda_runtime.h</includes>
+    <includes local="yes">ATen/cuda/detail/TensorInfo.cuh</includes>
+    <incdepgraph>
+      <node id="11884">
+        <label>catch.hpp</label>
+      </node>
+      <node id="11887">
+        <label>cuda_runtime.h</label>
+      </node>
+      <node id="11883">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp</label>
+        <link refid="apply__test_8cpp"/>
+        <childnode refid="11884" relation="include">
+        </childnode>
+        <childnode refid="11885" relation="include">
+        </childnode>
+        <childnode refid="11887" relation="include">
+        </childnode>
+        <childnode refid="11888" relation="include">
+        </childnode>
+      </node>
+      <node id="11888">
+        <label>ATen/cuda/detail/TensorInfo.cuh</label>
+      </node>
+      <node id="11886">
+        <label>cstddef</label>
+      </node>
+      <node id="11885">
+        <label>cuda.h</label>
+        <link refid="cuda_8h_source"/>
+        <childnode refid="11886" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="apply__test_8cpp_1a656eb5868e824d59f489f910db438420" prot="public" static="no">
+        <name>CATCH_CONFIG_MAIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="1" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="apply__test_8cpp_1ab18e7a020006701dafd6243d521ce446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;2D Contiguous&quot;, &quot;Collapses a 2D contiguous tensor to 1D contiguous&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;2D Contiguous&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 2D contiguous tensor to 1D contiguous&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="14" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="14" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1adfda4d03b34f5e3103af620a3d35481a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;3D Contiguous&quot;, &quot;Collapses a 3D contiguous tensor to a 1D contiguous&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;3D Contiguous&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 3D contiguous tensor to a 1D contiguous&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="23" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1ac678e482515bfc1786ecaf114c60b556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;3D Partial Collapse&quot;, &quot;Collapses a 3D noncontiguous tensor to a 2D tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;3D Partial Collapse&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 3D noncontiguous tensor to a 2D tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="32" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="32" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1a0fd2bd9cab864c492abc8dbc8ac4a522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;2D Strided Collapse&quot;, &quot;Collapses a 2D skip contiguous tensor to a 1D skip contiguous tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;2D Strided Collapse&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 2D skip contiguous tensor to a 1D skip contiguous tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="42" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="42" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1a24b445b710b1910c0e78ed85651fc08b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;4D Partial Strided Collapse&quot;, &quot;Collapses a 4D tensor to a 2D tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;4D Partial Strided Collapse&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 4D tensor to a 2D tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="52" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="52" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1a1486d5631dce16380969fb1b455a7d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;Collapsing Zeros and Ones&quot;, &quot;Collapses a 5D tensor to a 1D tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;Collapsing Zeros and Ones&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 5D tensor to a 1D tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="64" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="64" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1a5f34f3b2e4f291f6272baf4a12aead16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;Collapsing to a Point Tensor&quot;, &quot;Collapses a 3D tensor to a point tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;Collapsing to a Point Tensor&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 3D tensor to a point tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="76" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="76" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1afbe4842c59d92ac1befd321ce941800f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;Excluding in a 4D Contiguous&quot;, &quot;Collapses a 4D tensor to a 3D tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;Excluding in a 4D Contiguous&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 4D tensor to a 3D tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="86" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="86" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1a520d39675392f11909179638d06d5f4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;Roving Exclusion&quot;, &quot;Collapses a 4D tensor to a 3D tensor&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;Roving Exclusion&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Collapses a 4D tensor to a 3D tensor&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="100" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="100" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="apply__test_8cpp_1ad9d5dda18e44650ee6cb215f9b13efeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TEST_CASE</definition>
+        <argsstring>(&quot;Invalid Exclusion&quot;, &quot;Attempts to exclude a nonexisting dimension&quot;)</argsstring>
+        <name>TEST_CASE</name>
+        <param>
+          <type>&quot;Invalid Exclusion&quot;</type>
+        </param>
+        <param>
+          <type>&quot;Attempts to exclude a nonexisting dimension&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" line="114" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp" bodystart="114" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#define<sp/>CATCH_CONFIG_MAIN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;catch.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cuda.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cuda_runtime.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/cuda/detail/TensorInfo.cuh&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">Tests<sp/>related<sp/>to<sp/>tensor<sp/>indexing<sp/>and<sp/>applying<sp/>operations.<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_WIN32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;2D<sp/>Contiguous&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>2D<sp/>contiguous<sp/>tensor<sp/>to<sp/>1D<sp/>contiguous&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{4,<sp/>4};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{4,<sp/>1};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>2,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.collapseDims();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(4<sp/>*<sp/>4));</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;3D<sp/>Contiguous&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>3D<sp/>contiguous<sp/>tensor<sp/>to<sp/>a<sp/>1D<sp/>contiguous&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{6,<sp/>3,<sp/>7};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{3<sp/>*<sp/>7,<sp/>7,<sp/>1};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>3,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.collapseDims();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(6<sp/>*<sp/>3<sp/>*<sp/>7));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;3D<sp/>Partial<sp/>Collapse&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>3D<sp/>noncontiguous<sp/>tensor<sp/>to<sp/>a<sp/>2D<sp/>tensor&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{4,<sp/>3,<sp/>2};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{3<sp/>*<sp/>3,<sp/>3,<sp/>1};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>3,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.collapseDims();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(4<sp/>*<sp/>3));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[1]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;2D<sp/>Strided<sp/>Collapse&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>2D<sp/>skip<sp/>contiguous<sp/>tensor<sp/>to<sp/>a<sp/>1D<sp/>skip<sp/>contiguous<sp/>tensor&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{3,<sp/>2};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{2<sp/>*<sp/>2,<sp/>2};</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>2,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.collapseDims();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(3<sp/>*<sp/>2));</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[0]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;4D<sp/>Partial<sp/>Strided<sp/>Collapse&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>4D<sp/>tensor<sp/>to<sp/>a<sp/>2D<sp/>tensor&quot;</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{3,<sp/>6,<sp/>5,<sp/>2};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{6<sp/>*<sp/>22,<sp/>22,<sp/>2<sp/>*<sp/>2,<sp/>2};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>4,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.collapseDims();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(3<sp/>*<sp/>6));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[0]<sp/>==<sp/>22);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[1]<sp/>==<sp/>(5<sp/>*<sp/>2));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[1]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;Collapsing<sp/>Zeros<sp/>and<sp/>Ones&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>5D<sp/>tensor<sp/>to<sp/>a<sp/>1D<sp/>tensor&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{1,<sp/>10,<sp/>1,<sp/>5,<sp/>4};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{4,<sp/>0,<sp/>16,<sp/>0,<sp/>1};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>5,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>ti.collapseDims();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(10<sp/>*<sp/>5));</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[0]<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[1]<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[1]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;Collapsing<sp/>to<sp/>a<sp/>Point<sp/>Tensor&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>3D<sp/>tensor<sp/>to<sp/>a<sp/>point<sp/>tensor&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{1,<sp/>1,<sp/>1};</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{17,<sp/>12,<sp/>3};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>3,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.collapseDims()<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[0]<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;Excluding<sp/>in<sp/>a<sp/>4D<sp/>Contiguous&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>4D<sp/>tensor<sp/>to<sp/>a<sp/>3D<sp/>tensor&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{3,<sp/>6,<sp/>5,<sp/>2};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{6<sp/>*<sp/>22,<sp/>22,<sp/>2<sp/>*<sp/>2,<sp/>2};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>4,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.collapseDims(1)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[0]<sp/>==<sp/>(6<sp/>*<sp/>22));</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[1]<sp/>==<sp/>6);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[1]<sp/>==<sp/>22);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[2]<sp/>==<sp/>(5<sp/>*<sp/>2));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[2]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;Roving<sp/>Exclusion&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Collapses<sp/>a<sp/>4D<sp/>tensor<sp/>to<sp/>a<sp/>3D<sp/>tensor&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{3,<sp/>6,<sp/>5,<sp/>2};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{6<sp/>*<sp/>22,<sp/>22,<sp/>2<sp/>*<sp/>2,<sp/>2};</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>4,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.collapseDims(2)<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.dims<sp/>==<sp/>3);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[0]<sp/>==<sp/>(3<sp/>*<sp/>6));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[0]<sp/>==<sp/>22);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[1]<sp/>==<sp/>5);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[1]<sp/>==<sp/>4);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.sizes[2]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE(ti.strides[2]<sp/>==<sp/>2);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">TEST_CASE(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>Exclusion&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Attempts<sp/>to<sp/>exclude<sp/>a<sp/>nonexisting<sp/>dimension&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizes[]<sp/>=<sp/>{1,<sp/>1,<sp/>1};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>strides[]<sp/>=<sp/>{17,<sp/>12,<sp/>3};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>::at::cuda::detail::TensorInfo&lt;void,<sp/>int&gt;<sp/>ti{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>3,<sp/>sizes,<sp/>strides};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>REQUIRE_THROWS(ti.collapseDims(5));</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_test.cpp"/>
+  </compounddef>
+</doxygen>

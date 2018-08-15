@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="test__assert_8h" kind="file" language="C++">
+    <compoundname>test_assert.h</compoundname>
+    <includes local="no">stdexcept</includes>
+    <includes local="no">stdarg.h</includes>
+    <includedby refid="apply__utils__test_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/apply_utils_test.cpp</includedby>
+    <includedby refid="tbb__init__test_8cpp" local="yes">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/tbb_init_test.cpp</includedby>
+    <incdepgraph>
+      <node id="13016">
+        <label>stdarg.h</label>
+      </node>
+      <node id="13015">
+        <label>stdexcept</label>
+      </node>
+      <node id="13014">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h</label>
+        <link refid="test__assert_8h"/>
+        <childnode refid="13015" relation="include">
+        </childnode>
+        <childnode refid="13016" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="test__assert_8h_1a87f8dfd2a7da6b3e6982440b4df2be36" prot="public" static="no">
+        <name>AT_EXPECT</name>
+        <param><defname>x</defname></param>
+        <param><defname>y</defname></param>
+        <initializer>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="21" column="10" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1a0966b817b229d48e5ffc7feab19a0be6" prot="public" static="no">
+        <name>ASSERT</name>
+        <param><defname>cond</defname></param>
+        <initializer>if (AT_EXPECT(!(cond), 0)) { \
+    barf(&quot;%s:%u: %s: Assertion `%s` failed.&quot;, __FILE__, __LINE__, __func__, #cond); \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="24" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1af61830dc4950b226fa0fac08259d3eed" prot="public" static="no">
+        <name>ASSERTM</name>
+        <param><defname>cond</defname></param>
+        <param><defname>msg</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>if (AT_EXPECT(!(cond), 0)) { \
+    barf(&quot;%s:%u: %s: Assertion `%s` failed: &quot; msg , __FILE__, __LINE__, __func__, #cond,##__VA_ARGS__); \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="31" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1aded94964ba27d06d662931d24706dc8e" prot="public" static="no">
+        <name>TRY_CATCH_ELSE</name>
+        <param><defname>fn</defname></param>
+        <param><defname>catc</defname></param>
+        <param><defname>els</defname></param>
+        <initializer>{                                                             \
+    /* avoid mistakenly passing if els code throws exception*/  \
+    bool _passed = false;                                       \
+    try {                                                       \
+      fn;                                                       \
+      _passed = true;                                           \
+      els;                                                      \
+    } catch (std::runtime_error &amp;e) {                           \
+      ASSERT(!_passed);                                         \
+      catc;                                                     \
+    }                                                           \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="36" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1ae6d0a6b15b832d195cb25d154bc3d901" prot="public" static="no">
+        <name>ASSERT_THROWSM</name>
+        <param><defname>fn</defname></param>
+        <param><defname>message</defname></param>
+        <initializer>TRY_CATCH_ELSE(fn, ASSERT(std::string(e.what()).find(message) != std::string::npos), ASSERT(false))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="50" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1ad8651cf03e575cbdd249442295fa7e6d" prot="public" static="no">
+        <name>ASSERT_THROWS</name>
+        <param><defname>fn</defname></param>
+        <initializer>ASSERT_THROWSM(fn, &quot;&quot;);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="53" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1ab844718ad0c2423fef3dcd98f1b51554" prot="public" static="no">
+        <name>ASSERT_EQUAL</name>
+        <param><defname>t1</defname></param>
+        <param><defname>t2</defname></param>
+        <initializer>ASSERT(t1.equal(t2));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="56" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1adf434fdcae7376e1027cdd4a82ebbdf5" prot="public" static="no">
+        <name>ASSERT_ALLCLOSE</name>
+        <param><defname>t1</defname></param>
+        <param><defname>t2</defname></param>
+        <initializer>ASSERT(t1.is_same_size(t2));    \
+  ASSERT(t1.allclose(t2));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="60" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="test__assert_8h_1a65a11fbc0d59a16d78b58dd5cdb2d8b0" prot="public" static="no">
+        <name>ASSERT_ALLCLOSE_TOLERANCES</name>
+        <param><defname>t1</defname></param>
+        <param><defname>t2</defname></param>
+        <param><defname>atol</defname></param>
+        <param><defname>rtol</defname></param>
+        <initializer>ASSERT(t1.is_same_size(t2));    \
+  ASSERT(t1.allclose(t2, atol, rtol));</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="65" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test__assert_8h_1abfbef72921d2a0485eca1685b416006c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void barf</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>barf</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" line="5" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h" bodystart="5" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdarg.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>barf(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fmt,<sp/>...)<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>msg[2048];</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/>va_list<sp/>args;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/>va_start(args,<sp/>fmt);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>vsnprintf(msg,<sp/>2048,<sp/>fmt,<sp/>args);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>va_end(args);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::runtime_error(msg);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(_MSC_VER)<sp/>&amp;&amp;<sp/>_MSC_VER<sp/>&lt;=<sp/>1900</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__func__<sp/>__FUNCTION__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>||<sp/>defined(__ICL)<sp/>||<sp/>defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_EXPECT(x,<sp/>y)<sp/>(__builtin_expect((x),(y)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_EXPECT(x,<sp/>y)<sp/>(x)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT(cond)<sp/>\</highlight></codeline>
+<codeline lineno="25"><highlight class="preprocessor"><sp/><sp/>if<sp/>(AT_EXPECT(!(cond),<sp/>0))<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="26"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>barf(&quot;%s:%u:<sp/>%s:<sp/>Assertion<sp/>`%s`<sp/>failed.&quot;,<sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#cond);<sp/>\</highlight></codeline>
+<codeline lineno="27"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="comment">//note:<sp/>msg<sp/>must<sp/>be<sp/>a<sp/>string<sp/>literal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//node:<sp/>In,<sp/>##__VA_ARGS<sp/>&apos;##&apos;<sp/>supresses<sp/>the<sp/>comma<sp/>if<sp/>__VA_ARGS__<sp/>is<sp/>empty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERTM(cond,<sp/>msg,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"><sp/><sp/>if<sp/>(AT_EXPECT(!(cond),<sp/>0))<sp/>{<sp/>\</highlight></codeline>
+<codeline lineno="33"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>barf(&quot;%s:%u:<sp/>%s:<sp/>Assertion<sp/>`%s`<sp/>failed:<sp/>&quot;<sp/>msg<sp/>,<sp/>__FILE__,<sp/>__LINE__,<sp/>__func__,<sp/>#cond,##__VA_ARGS__);<sp/>\</highlight></codeline>
+<codeline lineno="34"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRY_CATCH_ELSE(fn,<sp/>catc,<sp/>els)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="37"><highlight class="preprocessor"><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>avoid<sp/>mistakenly<sp/>passing<sp/>if<sp/>els<sp/>code<sp/>throws<sp/>exception*/</highlight><highlight class="preprocessor"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="39"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>bool<sp/>_passed<sp/>=<sp/>false;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="40"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>try<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="41"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>fn;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="42"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>_passed<sp/>=<sp/>true;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="43"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>els;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="44"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/>catch<sp/>(std::runtime_error<sp/>&amp;e)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>ASSERT(!_passed);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>catc;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="48"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT_THROWSM(fn,<sp/>message)<sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"><sp/><sp/>TRY_CATCH_ELSE(fn,<sp/>ASSERT(std::string(e.what()).find(message)<sp/>!=<sp/>std::string::npos),<sp/>ASSERT(false))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT_THROWS(fn)<sp/><sp/>\</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"><sp/><sp/>ASSERT_THROWSM(fn,<sp/>&quot;&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT_EQUAL(t1,<sp/>t2)<sp/>\</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"><sp/><sp/>ASSERT(t1.equal(t2));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="comment">//<sp/>allclose<sp/>broadcasts,<sp/>so<sp/>check<sp/>same<sp/>size<sp/>before<sp/>allclose.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT_ALLCLOSE(t1,<sp/>t2)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="61"><highlight class="preprocessor"><sp/><sp/>ASSERT(t1.is_same_size(t2));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="62"><highlight class="preprocessor"><sp/><sp/>ASSERT(t1.allclose(t2));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>allclose<sp/>broadcasts,<sp/>so<sp/>check<sp/>same<sp/>size<sp/>before<sp/>allclose.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ASSERT_ALLCLOSE_TOLERANCES(t1,<sp/>t2,<sp/>atol,<sp/>rtol)<sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="66"><highlight class="preprocessor"><sp/><sp/>ASSERT(t1.is_same_size(t2));<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="67"><highlight class="preprocessor"><sp/><sp/>ASSERT(t1.allclose(t2,<sp/>atol,<sp/>rtol));</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_assert.h"/>
+  </compounddef>
+</doxygen>

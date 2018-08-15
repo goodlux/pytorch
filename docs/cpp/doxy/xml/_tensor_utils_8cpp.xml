@@ -1,0 +1,985 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_tensor_utils_8cpp" kind="file" language="C++">
+    <compoundname>TensorUtils.cpp</compoundname>
+    <includes refid="_config_8h" local="yes">ATen/Config.h</includes>
+    <includes refid="_tensor_utils_8h" local="yes">ATen/TensorUtils.h</includes>
+    <includes refid="_a_ten_8h" local="yes">ATen/ATen.h</includes>
+    <includes local="no">ostream</includes>
+    <includes local="no">sstream</includes>
+    <incdepgraph>
+      <node id="11761">
+        <label>ATen/optional.h</label>
+        <link refid="optional_8h_source"/>
+        <childnode refid="11749" relation="include">
+        </childnode>
+        <childnode refid="11762" relation="include">
+        </childnode>
+        <childnode refid="11763" relation="include">
+        </childnode>
+        <childnode refid="11764" relation="include">
+        </childnode>
+        <childnode refid="11765" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11747" relation="include">
+        </childnode>
+      </node>
+      <node id="11803">
+        <label>ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="11799" relation="include">
+        </childnode>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11743" relation="include">
+        </childnode>
+        <childnode refid="11804" relation="include">
+        </childnode>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11765" relation="include">
+        </childnode>
+        <childnode refid="11775" relation="include">
+        </childnode>
+      </node>
+      <node id="11792">
+        <label>ATen/Device.h</label>
+        <link refid="_device_8h_source"/>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11755" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11765" relation="include">
+        </childnode>
+      </node>
+      <node id="11782">
+        <label>atomic</label>
+      </node>
+      <node id="11765">
+        <label>functional</label>
+      </node>
+      <node id="11808">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11786" relation="include">
+        </childnode>
+        <childnode refid="11750" relation="include">
+        </childnode>
+      </node>
+      <node id="11758">
+        <label>ATen/ScalarType.h</label>
+        <link refid="_scalar_type_8h_source"/>
+        <childnode refid="11759" relation="include">
+        </childnode>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11751" relation="include">
+        </childnode>
+        <childnode refid="11753" relation="include">
+        </childnode>
+        <childnode refid="11779" relation="include">
+        </childnode>
+      </node>
+      <node id="11752">
+        <label>limits</label>
+      </node>
+      <node id="11746">
+        <label>assert.h</label>
+      </node>
+      <node id="11785">
+        <label>ATen/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2utils_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11759" relation="include">
+        </childnode>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11784" relation="include">
+        </childnode>
+        <childnode refid="11772" relation="include">
+        </childnode>
+        <childnode refid="11769" relation="include">
+        </childnode>
+        <childnode refid="11786" relation="include">
+        </childnode>
+        <childnode refid="11787" relation="include">
+        </childnode>
+      </node>
+      <node id="11774">
+        <label>iterator</label>
+      </node>
+      <node id="11745">
+        <label>ATen/Scalar.h</label>
+        <link refid="_scalar_8h_source"/>
+        <childnode refid="11746" relation="include">
+        </childnode>
+        <childnode refid="11744" relation="include">
+        </childnode>
+        <childnode refid="11747" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11749" relation="include">
+        </childnode>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11751" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11780" relation="include">
+        </childnode>
+        <childnode refid="11785" relation="include">
+        </childnode>
+      </node>
+      <node id="11790">
+        <label>TH/THStorageFunctions.hpp</label>
+      </node>
+      <node id="11753">
+        <label>cstdint</label>
+      </node>
+      <node id="11811">
+        <label>ATen/Deprecated.h</label>
+        <link refid="_deprecated_8h_source"/>
+      </node>
+      <node id="11744">
+        <label>stdint.h</label>
+      </node>
+      <node id="11822">
+        <label>ATen/CUDAGuard.h</label>
+        <link refid="_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="11754">
+        <label>cmath</label>
+      </node>
+      <node id="11764">
+        <label>cassert</label>
+      </node>
+      <node id="11802">
+        <label>ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11798" relation="include">
+        </childnode>
+        <childnode refid="11743" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11785" relation="include">
+        </childnode>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11803" relation="include">
+        </childnode>
+        <childnode refid="11809" relation="include">
+        </childnode>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11806" relation="include">
+        </childnode>
+        <childnode refid="11753" relation="include">
+        </childnode>
+      </node>
+      <node id="11756">
+        <label>Half-inl.h</label>
+        <link refid="_half-inl_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11757" relation="include">
+        </childnode>
+        <childnode refid="11752" relation="include">
+        </childnode>
+      </node>
+      <node id="11747">
+        <label>stdexcept</label>
+      </node>
+      <node id="11817">
+        <label>ATen/TensorOperators.h</label>
+        <link refid="_tensor_operators_8h_source"/>
+        <childnode refid="11745" relation="include">
+        </childnode>
+        <childnode refid="11742" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11747" relation="include">
+        </childnode>
+      </node>
+      <node id="11787">
+        <label>numeric</label>
+      </node>
+      <node id="11781">
+        <label>ATen/TensorImpl.h</label>
+        <link refid="_tensor_impl_8h_source"/>
+        <childnode refid="11782" relation="include">
+        </childnode>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11783" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11761" relation="include">
+        </childnode>
+      </node>
+      <node id="11739">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorUtils.cpp</label>
+        <link refid="_tensor_utils_8cpp"/>
+        <childnode refid="11740" relation="include">
+        </childnode>
+        <childnode refid="11741" relation="include">
+        </childnode>
+        <childnode refid="11797" relation="include">
+        </childnode>
+        <childnode refid="11768" relation="include">
+        </childnode>
+        <childnode refid="11769" relation="include">
+        </childnode>
+      </node>
+      <node id="11783">
+        <label>ATen/Retainable.h</label>
+        <link refid="_retainable_8h_source"/>
+        <childnode refid="11782" relation="include">
+        </childnode>
+      </node>
+      <node id="11751">
+        <label>ATen/Half.h</label>
+        <link refid="_half_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11752" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11753" relation="include">
+        </childnode>
+        <childnode refid="11747" relation="include">
+        </childnode>
+        <childnode refid="11749" relation="include">
+        </childnode>
+        <childnode refid="11754" relation="include">
+        </childnode>
+        <childnode refid="11755" relation="include">
+        </childnode>
+        <childnode refid="11756" relation="include">
+        </childnode>
+      </node>
+      <node id="11780">
+        <label>ATen/TensorBase.h</label>
+        <link refid="_tensor_base_8h_source"/>
+        <childnode refid="11781" relation="include">
+        </childnode>
+        <childnode refid="11784" relation="include">
+        </childnode>
+      </node>
+      <node id="11748">
+        <label>string</label>
+      </node>
+      <node id="11820">
+        <label>ATen/DimVector.h</label>
+        <link refid="_dim_vector_8h_source"/>
+        <childnode refid="11770" relation="include">
+        </childnode>
+        <childnode refid="11744" relation="include">
+        </childnode>
+      </node>
+      <node id="11821">
+        <label>ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11793" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11814" relation="include">
+        </childnode>
+        <childnode refid="11761" relation="include">
+        </childnode>
+      </node>
+      <node id="11740">
+        <label>ATen/Config.h</label>
+        <link refid="_config_8h_source"/>
+      </node>
+      <node id="11799">
+        <label>ATen/Allocator.h</label>
+        <link refid="_allocator_8h_source"/>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11800" relation="include">
+        </childnode>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11783" relation="include">
+        </childnode>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11801" relation="include">
+        </childnode>
+      </node>
+      <node id="11809">
+        <label>ATen/CUDAStream.h</label>
+        <link refid="_c_u_d_a_stream_8h_source"/>
+      </node>
+      <node id="11813">
+        <label>ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11742" relation="include">
+        </childnode>
+        <childnode refid="11803" relation="include">
+        </childnode>
+        <childnode refid="11766" relation="include">
+        </childnode>
+      </node>
+      <node id="11767">
+        <label>exception</label>
+      </node>
+      <node id="11800">
+        <label>stddef.h</label>
+      </node>
+      <node id="11784">
+        <label>ATen/UndefinedTensor.h</label>
+        <link refid="_undefined_tensor_8h_source"/>
+        <childnode refid="11781" relation="include">
+        </childnode>
+      </node>
+      <node id="11819">
+        <label>ATen/Dispatch.h</label>
+        <link refid="_dispatch_8h_source"/>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11751" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+      </node>
+      <node id="11771">
+        <label>AlignOf.h</label>
+        <link refid="_align_of_8h_source"/>
+        <childnode refid="11766" relation="include">
+        </childnode>
+      </node>
+      <node id="11789">
+        <label>ATen/Storage.h</label>
+        <link refid="_storage_8h_source"/>
+        <childnode refid="11745" relation="include">
+        </childnode>
+        <childnode refid="11790" relation="include">
+        </childnode>
+      </node>
+      <node id="11768">
+        <label>ostream</label>
+      </node>
+      <node id="11798">
+        <label>ATen/CPUGeneral.h</label>
+        <link refid="_c_p_u_general_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+      </node>
+      <node id="11795">
+        <label>ATen/Type.h</label>
+      </node>
+      <node id="11759">
+        <label>ATen/ArrayRef.h</label>
+        <link refid="_array_ref_8h_source"/>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11770" relation="include">
+        </childnode>
+        <childnode refid="11777" relation="include">
+        </childnode>
+        <childnode refid="11774" relation="include">
+        </childnode>
+        <childnode refid="11778" relation="include">
+        </childnode>
+      </node>
+      <node id="11794">
+        <label>ATen/TensorGeometry.h</label>
+        <link refid="_tensor_geometry_8h_source"/>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11796" relation="include">
+        </childnode>
+      </node>
+      <node id="11788">
+        <label>ATen/SparseTensorRef.h</label>
+        <link refid="_sparse_tensor_ref_8h_source"/>
+      </node>
+      <node id="11741">
+        <label>ATen/TensorUtils.h</label>
+        <link refid="_tensor_utils_8h_source"/>
+        <childnode refid="11742" relation="include">
+        </childnode>
+        <childnode refid="11794" relation="include">
+        </childnode>
+        <childnode refid="11785" relation="include">
+        </childnode>
+      </node>
+      <node id="11750">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="11796">
+        <label>ATen/WrapDimUtils.h</label>
+        <link refid="_wrap_dim_utils_8h_source"/>
+        <childnode refid="11781" relation="include">
+        </childnode>
+        <childnode refid="11769" relation="include">
+        </childnode>
+      </node>
+      <node id="11791">
+        <label>ATen/TensorAccessor.h</label>
+        <link refid="_tensor_accessor_8h_source"/>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11744" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+      </node>
+      <node id="11786">
+        <label>typeinfo</label>
+      </node>
+      <node id="11805">
+        <label>cstdio</label>
+      </node>
+      <node id="11801">
+        <label>ATen/detail/UniqueVoidPtr.h</label>
+        <link refid="_unique_void_ptr_8h_source"/>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11750" relation="include">
+        </childnode>
+      </node>
+      <node id="11778">
+        <label>vector</label>
+      </node>
+      <node id="11818">
+        <label>ATen/TensorMethods.h</label>
+      </node>
+      <node id="11815">
+        <label>THNN/Reduction.h</label>
+      </node>
+      <node id="11776">
+        <label>new</label>
+      </node>
+      <node id="11749">
+        <label>utility</label>
+      </node>
+      <node id="11777">
+        <label>array</label>
+      </node>
+      <node id="11769">
+        <label>sstream</label>
+      </node>
+      <node id="11810">
+        <label>ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="11745" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11742" relation="include">
+        </childnode>
+        <childnode refid="11789" relation="include">
+        </childnode>
+        <childnode refid="11743" relation="include">
+        </childnode>
+        <childnode refid="11811" relation="include">
+        </childnode>
+        <childnode refid="11812" relation="include">
+        </childnode>
+        <childnode refid="11813" relation="include">
+        </childnode>
+        <childnode refid="11814" relation="include">
+        </childnode>
+        <childnode refid="11815" relation="include">
+        </childnode>
+      </node>
+      <node id="11812">
+        <label>ATen/NativeFunctions.h</label>
+      </node>
+      <node id="11755">
+        <label>iosfwd</label>
+      </node>
+      <node id="11773">
+        <label>cstdlib</label>
+      </node>
+      <node id="11779">
+        <label>iostream</label>
+      </node>
+      <node id="11766">
+        <label>cstddef</label>
+      </node>
+      <node id="11807">
+        <label>unordered_map</label>
+      </node>
+      <node id="11806">
+        <label>mutex</label>
+      </node>
+      <node id="11797">
+        <label>ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11798" relation="include">
+        </childnode>
+        <childnode refid="11799" relation="include">
+        </childnode>
+        <childnode refid="11745" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11743" relation="include">
+        </childnode>
+        <childnode refid="11802" relation="include">
+        </childnode>
+        <childnode refid="11789" relation="include">
+        </childnode>
+        <childnode refid="11742" relation="include">
+        </childnode>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11794" relation="include">
+        </childnode>
+        <childnode refid="11810" relation="include">
+        </childnode>
+        <childnode refid="11816" relation="include">
+        </childnode>
+        <childnode refid="11817" relation="include">
+        </childnode>
+        <childnode refid="11818" relation="include">
+        </childnode>
+        <childnode refid="11819" relation="include">
+        </childnode>
+        <childnode refid="11820" relation="include">
+        </childnode>
+        <childnode refid="11813" relation="include">
+        </childnode>
+        <childnode refid="11814" relation="include">
+        </childnode>
+        <childnode refid="11793" relation="include">
+        </childnode>
+        <childnode refid="11821" relation="include">
+        </childnode>
+        <childnode refid="11822" relation="include">
+        </childnode>
+      </node>
+      <node id="11804">
+        <label>ATen/Registry.h</label>
+        <link refid="_registry_8h_source"/>
+        <childnode refid="11772" relation="include">
+        </childnode>
+        <childnode refid="11805" relation="include">
+        </childnode>
+        <childnode refid="11773" relation="include">
+        </childnode>
+        <childnode refid="11765" relation="include">
+        </childnode>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11806" relation="include">
+        </childnode>
+        <childnode refid="11807" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+        <childnode refid="11778" relation="include">
+        </childnode>
+        <childnode refid="11808" relation="include">
+        </childnode>
+        <childnode refid="11750" relation="include">
+        </childnode>
+      </node>
+      <node id="11760">
+        <label>ATen/Error.h</label>
+        <link refid="_error_8h_source"/>
+        <childnode refid="11750" relation="include">
+        </childnode>
+        <childnode refid="11761" relation="include">
+        </childnode>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11767" relation="include">
+        </childnode>
+        <childnode refid="11768" relation="include">
+        </childnode>
+        <childnode refid="11769" relation="include">
+        </childnode>
+        <childnode refid="11748" relation="include">
+        </childnode>
+      </node>
+      <node id="11814">
+        <label>ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="11802" relation="include">
+        </childnode>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11813" relation="include">
+        </childnode>
+        <childnode refid="11793" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11742" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11755" relation="include">
+        </childnode>
+        <childnode refid="11749" relation="include">
+        </childnode>
+      </node>
+      <node id="11742">
+        <label>ATen/Tensor.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2tensor_8h_source"/>
+        <childnode refid="11743" relation="include">
+        </childnode>
+        <childnode refid="11745" relation="include">
+        </childnode>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11788" relation="include">
+        </childnode>
+        <childnode refid="11789" relation="include">
+        </childnode>
+        <childnode refid="11791" relation="include">
+        </childnode>
+        <childnode refid="11780" relation="include">
+        </childnode>
+        <childnode refid="11781" relation="include">
+        </childnode>
+        <childnode refid="11785" relation="include">
+        </childnode>
+        <childnode refid="11792" relation="include">
+        </childnode>
+        <childnode refid="11793" relation="include">
+        </childnode>
+        <childnode refid="11761" relation="include">
+        </childnode>
+      </node>
+      <node id="11762">
+        <label>type_traits</label>
+      </node>
+      <node id="11793">
+        <label>ATen/Layout.h</label>
+        <link refid="_layout_8h_source"/>
+        <childnode refid="11758" relation="include">
+        </childnode>
+        <childnode refid="11760" relation="include">
+        </childnode>
+        <childnode refid="11779" relation="include">
+        </childnode>
+      </node>
+      <node id="11770">
+        <label>ATen/SmallVector.h</label>
+        <link refid="_small_vector_8h_source"/>
+        <childnode refid="11771" relation="include">
+        </childnode>
+        <childnode refid="11772" relation="include">
+        </childnode>
+        <childnode refid="11764" relation="include">
+        </childnode>
+        <childnode refid="11766" relation="include">
+        </childnode>
+        <childnode refid="11773" relation="include">
+        </childnode>
+        <childnode refid="11757" relation="include">
+        </childnode>
+        <childnode refid="11763" relation="include">
+        </childnode>
+        <childnode refid="11774" relation="include">
+        </childnode>
+        <childnode refid="11775" relation="include">
+        </childnode>
+        <childnode refid="11776" relation="include">
+        </childnode>
+        <childnode refid="11762" relation="include">
+        </childnode>
+        <childnode refid="11749" relation="include">
+        </childnode>
+        <childnode refid="11750" relation="include">
+        </childnode>
+      </node>
+      <node id="11772">
+        <label>algorithm</label>
+      </node>
+      <node id="11743">
+        <label>ATen/Generator.h</label>
+        <link refid="_generator_8h_source"/>
+        <childnode refid="11744" relation="include">
+        </childnode>
+      </node>
+      <node id="11757">
+        <label>cstring</label>
+      </node>
+      <node id="11775">
+        <label>memory</label>
+      </node>
+      <node id="11763">
+        <label>initializer_list</label>
+      </node>
+      <node id="11816">
+        <label>ATen/Formatting.h</label>
+        <link refid="_formatting_8h_source"/>
+        <childnode refid="11779" relation="include">
+        </childnode>
+        <childnode refid="11795" relation="include">
+        </childnode>
+        <childnode refid="11745" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceat">at</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ATen/Config.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/TensorUtils.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;ATen/ATen.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">std::ostream&amp;<sp/>operator&lt;&lt;(std::ostream<sp/>&amp;<sp/>out,<sp/>TensorGeometryArg<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t.pos<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>0<sp/>is<sp/>distinguished;<sp/>it<sp/>usually<sp/>indicates<sp/>&apos;self&apos;<sp/>or<sp/>the<sp/>return</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t.name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;argument<sp/>#&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t.pos<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t.name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkDim(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t,<sp/>int64_t<sp/>dim)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>AT_CHECK(t-&gt;dim()<sp/>==<sp/>dim,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>&quot;</highlight><highlight class="normal">,<sp/>dim,<sp/></highlight><highlight class="stringliteral">&quot;-dimensional<sp/>tensor,<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>t-&gt;dim(),</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;-dimensional<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,</highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkDimRange(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t,<sp/>int64_t<sp/>dim_start,<sp/>int64_t<sp/>dim_end)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;dim()<sp/>&gt;=<sp/>dim_start<sp/>&amp;&amp;<sp/>t-&gt;dim()<sp/>&lt;<sp/>dim_end,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>&quot;</highlight><highlight class="normal">,<sp/>dim_start,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>&quot;</highlight><highlight class="normal">,<sp/>(dim_end<sp/>-<sp/>1),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>dimensions,<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;dim(),<sp/></highlight><highlight class="stringliteral">&quot;-dimensional<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkContiguous(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;is_contiguous(),</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>contiguous<sp/>tensor,<sp/>but<sp/>got<sp/>non-contiguous<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllContiguous(CheckedFrom<sp/>c,<sp/><ref refid="classat_1_1_array_ref" kindref="compound">at::ArrayRef&lt;TensorArg&gt;</ref><sp/>ts)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t<sp/>:<sp/>ts)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!t-&gt;defined())<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>checkContiguous(c,<sp/>t);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSize(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t,<sp/>IntList<sp/>sizes)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>checkDim(c,<sp/>t,<sp/>sizes.<ref refid="classat_1_1_array_ref_1a7b5593a67d764c4c4443e31fa34211e7" kindref="member">size</ref>());</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;sizes().<ref refid="classat_1_1_array_ref_1a0feda741d9a2e73f563a67028827f6fa" kindref="member">equals</ref>(sizes),</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>of<sp/>size<sp/>&quot;</highlight><highlight class="normal">,<sp/>sizes,<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>but<sp/>got<sp/>tensor<sp/>of<sp/>size<sp/>&quot;</highlight><highlight class="normal">,<sp/>t-&gt;sizes(),</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSize(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t,<sp/>int64_t<sp/>dim,<sp/>int64_t<sp/>size)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;size(dim)<sp/>==<sp/>size,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>to<sp/>have<sp/>size<sp/>&quot;</highlight><highlight class="normal">,<sp/>size,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>at<sp/>dimension<sp/>&quot;</highlight><highlight class="normal">,<sp/>dim,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;,<sp/>but<sp/>got<sp/>size<sp/>&quot;</highlight><highlight class="normal">,<sp/>t-&gt;size(dim),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllSame(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;TensorArg&gt;<sp/>tensors,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(*fn)(CheckedFrom,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;))<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg*<sp/>t0<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>t<sp/>:<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!t-&gt;defined())<sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(t0<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>fn(c,<sp/>*t0,<sp/>t);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>t0<sp/>=<sp/>&amp;t;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSameSize(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t2)<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>t1-&gt;sizes().equals(t2-&gt;sizes()),</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>same<sp/>size<sp/>as<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1-&gt;sizes(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>equal<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2-&gt;sizes(),</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllSameSize(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;TensorArg&gt;<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>checkAllSame(c,<sp/>tensors,<sp/>checkSameSize);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkNumel(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t,<sp/>int64_t<sp/>numel)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;numel()<sp/>==<sp/>numel,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>&quot;</highlight><highlight class="normal">,<sp/>numel,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>elements;<sp/>but<sp/>it<sp/>actually<sp/>has<sp/>&quot;</highlight><highlight class="normal">,<sp/>t-&gt;numel(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>elements&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSameNumel(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t2)<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>t1-&gt;numel()<sp/>==<sp/>t2-&gt;numel(),</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1,</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>same<sp/>number<sp/>of<sp/>elements<sp/>as<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2,<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>t1-&gt;numel(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>equal<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2-&gt;numel(),</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllSameNumel(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;TensorArg&gt;<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>checkAllSame(c,<sp/>tensors,<sp/>checkSameNumel);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSameGPU(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t2)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>(t1-&gt;is_cuda())<sp/>||<sp/>!<sp/>(t2-&gt;is_cuda()))<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>oss;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>t1-&gt;is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t1<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>on<sp/>CPU,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>t2-&gt;is_cuda())<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t2<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>is<sp/>on<sp/>CPU,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;but<sp/>expected<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>((!(t1-&gt;is_cuda()<sp/>||<sp/>t2-&gt;is_cuda()))<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;them&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;it&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>be<sp/>on<sp/>GPU<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>c<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>AT_ERROR(oss.str());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>t1-&gt;get_device()<sp/>==<sp/>t2-&gt;get_device(),</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>the<sp/>same<sp/>device<sp/>as<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2,</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>device<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1-&gt;get_device(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>equal<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2-&gt;get_device(),</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllSameGPU(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;TensorArg&gt;<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>checkAllSame(c,<sp/>tensors,<sp/>checkSameGPU);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSameType(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t2)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>t1-&gt;type()<sp/>==<sp/>t2-&gt;type(),</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>the<sp/>same<sp/>type<sp/>as<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1-&gt;toString(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>equal<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2-&gt;toString(),</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkScalarType(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t,<sp/>ScalarType<sp/>ty)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;type().scalarType()<sp/>==<sp/>ty,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>scalar<sp/>type<sp/>&quot;</highlight><highlight class="normal">,<sp/>toString(ty),</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal">,<sp/>t-&gt;toString(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>instead<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkScalarTypes(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t,</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classat_1_1_array_ref" kindref="compound">at::ArrayRef&lt;ScalarType&gt;</ref><sp/>l)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(std::find(l.begin(),<sp/>l.end(),<sp/>t-&gt;type().scalarType())<sp/>==<sp/>l.end())<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::ostringstream<sp/>oss;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>one<sp/>of<sp/>the<sp/>following<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;scalar<sp/>types:<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>ty<sp/>:<sp/>l)<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/>toString(ty);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>got<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>t-&gt;toString()</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>instead<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>c<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>AT_ERROR(oss.str());</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllSameType(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;TensorArg&gt;<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>checkAllSame(c,<sp/>tensors,<sp/>checkSameType);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkSameDim(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorGeometryArg&amp;<sp/>t2)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>t1-&gt;dim()<sp/>==<sp/>t2-&gt;dim(),</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>have<sp/>the<sp/>same<sp/>dimension<sp/>as<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>t2,<sp/></highlight><highlight class="stringliteral">&quot;;<sp/>but<sp/>&quot;</highlight><highlight class="normal">,<sp/>t1-&gt;dim(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>does<sp/>not<sp/>equal<sp/>&quot;</highlight><highlight class="normal">,<sp/>t2-&gt;dim(),</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkDefined(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>t-&gt;defined(),</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>t,<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>be<sp/>non-null,<sp/>but<sp/>it<sp/>was<sp/>undefined<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkAllDefined(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;TensorArg&gt;<sp/>ts)<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NB:<sp/>don&apos;t<sp/>filter<sp/>defined<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>t<sp/>:<sp/>ts)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/>checkDefined(c,<sp/>t);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkBackend(CheckedFrom<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>t,<sp/>Backend<sp/>backend)<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>AT_CHECK(</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>t.type().backend()<sp/>==<sp/>backend,</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Expected<sp/>tensor<sp/>to<sp/>have<sp/>&quot;</highlight><highlight class="normal">,<sp/>toString(backend),</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Backend,<sp/>but<sp/>got<sp/>tensor<sp/>with<sp/>&quot;</highlight><highlight class="normal">,<sp/>toString(t.type().backend()),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Backend<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;(while<sp/>checking<sp/>arguments<sp/>for<sp/>&quot;</highlight><highlight class="normal">,<sp/>c,<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkBackend(CheckedFrom<sp/>c,<sp/>ArrayRef&lt;Tensor&gt;<sp/>tensors,<sp/>at::Backend<sp/>backend)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;t<sp/>:<sp/>tensors)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>checkBackend(c,<sp/>t,<sp/>backend);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>maybe_data_ptr(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Tensor&amp;<sp/>tensor)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tensor.defined()<sp/>?<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)tensor.data_ptr()<sp/>:<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<sp/>maybe_data_ptr(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TensorArg&amp;<sp/>tensor)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tensor-&gt;defined()<sp/>?<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*)tensor-&gt;data_ptr()<sp/>:<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorUtils.cpp"/>
+  </compounddef>
+</doxygen>

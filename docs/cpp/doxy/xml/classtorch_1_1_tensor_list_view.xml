@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classtorch_1_1_tensor_list_view" kind="class" language="C++" prot="public">
+    <compoundname>torch::TensorListView</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classtorch_1_1_tensor_list_view_1add3d7435939019a36fb7ada44bd6f20d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">at::Tensor</ref> &gt;</type>
+        <definition>std::vector&lt;at::Tensor&gt; torch::TensorListView::backing_vector_</definition>
+        <argsstring></argsstring>
+        <name>backing_vector_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="55" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtorch_1_1_tensor_list_view_1a4bde06ec843fedbdaaecb843465c3e0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::TensorListView::TensorListView</definition>
+        <argsstring>(const torch::Tensor &amp;tensor)</argsstring>
+        <name>TensorListView</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref> &amp;</type>
+          <declname>tensor</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classtorch_1_1_tensor_list_view" kindref="compound">TensorListView</ref> from a single element. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="18" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="18" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_tensor_list_view_1a26b705ac1d7cb048ee3aeec4cabeee90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename A</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::TensorListView::TensorListView</definition>
+        <argsstring>(const std::vector&lt; torch::Tensor, A &gt; &amp;vector)</argsstring>
+        <name>TensorListView</name>
+        <param>
+          <type>const std::vector&lt; <ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref>, A &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classtorch_1_1_tensor_list_view" kindref="compound">TensorListView</ref> from a std::vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="23" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_tensor_list_view_1a53837f61164b261680d113c3dce42c53" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::TensorListView::TensorListView</definition>
+        <argsstring>(const std::array&lt; torch::Tensor, N &gt; &amp;array)</argsstring>
+        <name>TensorListView</name>
+        <param>
+          <type>const std::array&lt; <ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref>, N &gt; &amp;</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classtorch_1_1_tensor_list_view" kindref="compound">TensorListView</ref> from a std::array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="30" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_tensor_list_view_1a89362ec6b48df915895a90455c390bd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>size_t</type>
+            <declname>N</declname>
+            <defname>N</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>torch::TensorListView::TensorListView</definition>
+        <argsstring>(const torch::Tensor(&amp;array)[N])</argsstring>
+        <name>TensorListView</name>
+        <param>
+          <type>const <ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref>(&amp;)</type>
+          <declname>array</declname>
+          <array>[N]</array>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classtorch_1_1_tensor_list_view" kindref="compound">TensorListView</ref> from a C array. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="37" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_tensor_list_view_1aa4901531ca2b69ea4a9227ffd989cec9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::TensorListView::TensorListView</definition>
+        <argsstring>(const std::initializer_list&lt; torch::Tensor &gt; &amp;list)</argsstring>
+        <name>TensorListView</name>
+        <param>
+          <type>const std::initializer_list&lt; <ref refid="structat_1_1_tensor" kindref="compound">torch::Tensor</ref> &gt; &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Constructs an <ref refid="classtorch_1_1_tensor_list_view" kindref="compound">TensorListView</ref> from a std::initializer_list. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="43" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classtorch_1_1_tensor_list_view_1adc58b7acee6dded5cf9cdd42e773385d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::TensorListView::operator at::ArrayRef&lt; at::Tensor &gt;</definition>
+        <argsstring>()</argsstring>
+        <name>operator at::ArrayRef&lt; at::Tensor &gt;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Implicitly converts the <computeroutput><ref refid="classtorch_1_1_tensor_list_view" kindref="compound">TensorListView</ref></computeroutput> to an <computeroutput>ArrayRef</computeroutput> of the backing vector. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="50" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="50" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" line="15" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h" bodystart="15" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classtorch_1_1_tensor_list_view_1add3d7435939019a36fb7ada44bd6f20d" prot="private" virt="non-virtual"><scope>torch::TensorListView</scope><name>backing_vector_</name></member>
+      <member refid="classtorch_1_1_tensor_list_view_1adc58b7acee6dded5cf9cdd42e773385d" prot="public" virt="non-virtual"><scope>torch::TensorListView</scope><name>operator at::ArrayRef&lt; at::Tensor &gt;</name></member>
+      <member refid="classtorch_1_1_tensor_list_view_1a4bde06ec843fedbdaaecb843465c3e0d" prot="public" virt="non-virtual"><scope>torch::TensorListView</scope><name>TensorListView</name></member>
+      <member refid="classtorch_1_1_tensor_list_view_1a26b705ac1d7cb048ee3aeec4cabeee90" prot="public" virt="non-virtual"><scope>torch::TensorListView</scope><name>TensorListView</name></member>
+      <member refid="classtorch_1_1_tensor_list_view_1a53837f61164b261680d113c3dce42c53" prot="public" virt="non-virtual"><scope>torch::TensorListView</scope><name>TensorListView</name></member>
+      <member refid="classtorch_1_1_tensor_list_view_1a89362ec6b48df915895a90455c390bd5" prot="public" virt="non-virtual"><scope>torch::TensorListView</scope><name>TensorListView</name></member>
+      <member refid="classtorch_1_1_tensor_list_view_1aa4901531ca2b69ea4a9227ffd989cec9" prot="public" virt="non-virtual"><scope>torch::TensorListView</scope><name>TensorListView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

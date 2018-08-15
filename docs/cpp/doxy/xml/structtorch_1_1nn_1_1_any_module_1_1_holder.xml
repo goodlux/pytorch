@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structtorch_1_1nn_1_1_any_module_1_1_holder" kind="struct" language="C++" prot="private">
+    <compoundname>torch::nn::AnyModule::Holder</compoundname>
+    <basecompoundref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" prot="public" virt="non-virtual">torch::nn::AnyModule::Placeholder</basecompoundref>
+    <innerclass refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1_1_checked_getter" prot="public">torch::nn::AnyModule::Holder::CheckedGetter</innerclass>
+    <innerclass refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1_1_invoke_forward" prot="public">torch::nn::AnyModule::Holder::InvokeForward</innerclass>
+    <templateparamlist>
+      <param>
+        <type>typename ModuleType</type>
+      </param>
+      <param>
+        <type>typename...</type>
+        <declname>ArgumentTypes</declname>
+        <defname>ArgumentTypes</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structtorch_1_1nn_1_1_any_module_1_1_holder_1a7a615b82c9b7651683209db6e7ac088e" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; ModuleType &gt;</type>
+        <definition>std::shared_ptr&lt;ModuleType&gt; torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;::module</definition>
+        <argsstring></argsstring>
+        <name>module</name>
+        <briefdescription>
+<para>The actual concrete module instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="322" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_holder_1a0b510e8c40c4e028b26bd9138a65b22e" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;::Holder</definition>
+        <argsstring>(std::shared_ptr&lt; ModuleType &gt; &amp;&amp;module_)</argsstring>
+        <name>Holder</name>
+        <param>
+          <type>std::shared_ptr&lt; ModuleType &gt; &amp;&amp;</type>
+          <declname>module_</declname>
+        </param>
+        <briefdescription>
+<para>Constructs the <computeroutput>Holder</computeroutput> from a concrete module. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="288" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="288" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_holder_1ae0c9a79218040bfa7e73f0a20ab68bfd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></type>
+        <definition>Value torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;::forward</definition>
+        <argsstring>(std::vector&lt; Value &gt; &amp;&amp;arguments) override</argsstring>
+        <name>forward</name>
+        <param>
+          <type>std::vector&lt; <ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref> &gt; &amp;&amp;</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calls <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" kindref="member">forward()</ref></computeroutput> on the underlying module, casting each <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1_1_value" kindref="compound">Value</ref></computeroutput> in the argument vector to a concrete value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="293" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="293" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_holder_1a29dbf29d918fc6797e852c6077064f49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classtorch_1_1nn_1_1_module" kindref="compound">Module</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Module&gt; torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;::ptr</definition>
+        <argsstring>() override</argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="307" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="307" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_holder_1a3cbcf98b65973347b19d49bba016e3f7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Placeholder&gt; torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;::copy</definition>
+        <argsstring>() const override</argsstring>
+        <name>copy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="311" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="311" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="structtorch_1_1nn_1_1_any_module_1_1_holder_1a8d605d6477294e7a8f99937ee219c43e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder" kindref="compound">Placeholder</ref> &gt;</type>
+        <definition>std::unique_ptr&lt;Placeholder&gt; torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;::clone</definition>
+        <argsstring>(at::optional&lt; Device &gt; device) const override</argsstring>
+        <name>clone</name>
+        <param>
+          <type><ref refid="classat_1_1optional" kindref="compound">at::optional</ref>&lt; <ref refid="structat_1_1_device" kindref="compound">Device</ref> &gt;</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="315" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="315" bodyend="319"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The dynamic type of the object stored in the <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module" kindref="compound">AnyModule</ref></computeroutput>. It contains the concrete instance to which all calls are forwarded. It is parameterized over the concrete type of the module, and the types of the arguments the module takes in its <computeroutput><ref refid="classtorch_1_1nn_1_1_any_module_1ae362218831f4e0274a627189baf09e6d" kindref="member">forward()</ref></computeroutput> method. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="339">
+        <label>torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;</label>
+        <childnode refid="340" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="341">
+        <label>torch::nn::AnyModule::Value::Placeholder</label>
+      </node>
+      <node id="340">
+        <label>torch::nn::AnyModule::Placeholder</label>
+        <link refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder"/>
+        <childnode refid="341" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="342">
+        <label>torch::nn::AnyModule::Holder&lt; ModuleType, ArgumentTypes &gt;</label>
+        <childnode refid="343" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="344">
+        <label>torch::nn::AnyModule::Value::Placeholder</label>
+      </node>
+      <node id="343">
+        <label>torch::nn::AnyModule::Placeholder</label>
+        <link refid="structtorch_1_1nn_1_1_any_module_1_1_placeholder"/>
+        <childnode refid="344" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" line="113" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h" bodystart="113" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1a8d605d6477294e7a8f99937ee219c43e" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>clone</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1a3cbcf98b65973347b19d49bba016e3f7" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>copy</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1ae0c9a79218040bfa7e73f0a20ab68bfd" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>forward</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1a0b510e8c40c4e028b26bd9138a65b22e" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>Holder</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1a7a615b82c9b7651683209db6e7ac088e" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>module</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1afc72f3c240249ab0ec5ff7e2743f4e94" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>Placeholder</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_holder_1a29dbf29d918fc6797e852c6077064f49" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>ptr</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1a373454270986799ed293c58b221cb4c4" prot="public" virt="non-virtual"><scope>torch::nn::AnyModule::Holder</scope><name>type_info</name></member>
+      <member refid="structtorch_1_1nn_1_1_any_module_1_1_value_1_1_placeholder_1a42eaa4d1d7b82a7339c8c6adf178b64b" prot="public" virt="virtual"><scope>torch::nn::AnyModule::Holder</scope><name>~Placeholder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

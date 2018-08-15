@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classat_1_1_small_vector_template_base" kind="class" language="C++" prot="public">
+    <compoundname>at::SmallVectorTemplateBase</compoundname>
+    <basecompoundref refid="classat_1_1_small_vector_template_common" prot="public" virt="non-virtual">at::SmallVectorTemplateCommon&lt; T &gt;</basecompoundref>
+    <includes refid="_small_vector_8h" local="no">SmallVector.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+      <param>
+        <type>bool</type>
+        <declname>isPodLike</declname>
+        <defname>isPodLike</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1a11ad817072c07dfa24b452edfcaa7411" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::SmallVectorTemplateBase</definition>
+        <argsstring>(size_t Size)</argsstring>
+        <name>SmallVectorTemplateBase</name>
+        <param>
+          <type>size_t</type>
+          <declname>Size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="199" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="199" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1adc6c6a92306fa9a284a3567473437ee0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::grow</definition>
+        <argsstring>(size_t MinSize=0)</argsstring>
+        <name>grow</name>
+        <param>
+          <type>size_t</type>
+          <declname>MinSize</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Grow the allocated memory (without initializing new elements), doubling the size of the allocated memory. Guarantees space for at least one more element, or MinSize more elements if specified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="226" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="251" bodyend="275"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1a593ccdd64bda1ae9997f91457d436c9c" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::destroy_range</definition>
+        <argsstring>(T *S, T *E)</argsstring>
+        <name>destroy_range</name>
+        <param>
+          <type>T *</type>
+          <declname>S</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="201" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="201" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1ae5b28a668e51a5206afde69e595d3437" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It1</type>
+          </param>
+          <param>
+            <type>typename It2</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::uninitialized_move</definition>
+        <argsstring>(It1 I, It1 E, It2 Dest)</argsstring>
+        <name>uninitialized_move</name>
+        <param>
+          <type>It1</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>It1</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>It2</type>
+          <declname>Dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Move the range [I, E) into the uninitialized memory starting with &quot;Dest&quot;, constructing elements as needed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="211" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="211" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1af189796d60e105676832d54380f1284a" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename It1</type>
+          </param>
+          <param>
+            <type>typename It2</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::uninitialized_copy</definition>
+        <argsstring>(It1 I, It1 E, It2 Dest)</argsstring>
+        <name>uninitialized_copy</name>
+        <param>
+          <type>It1</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>It1</type>
+          <declname>E</declname>
+        </param>
+        <param>
+          <type>It2</type>
+          <declname>Dest</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Copy the range [I, E) onto the uninitialized memory starting with &quot;Dest&quot;, constructing elements as needed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="219" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="219" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1aaea9df7a5385095ecbf346236452d047" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::push_back</definition>
+        <argsstring>(const T &amp;Elt)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>Elt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="229" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="229" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1adfc0bfa95124e891c0bbdc2204744f11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::push_back</definition>
+        <argsstring>(T &amp;&amp;Elt)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>Elt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="236" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="236" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classat_1_1_small_vector_template_base_1aedc69de36cdf52c8a0c9878a6a366444" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void at::SmallVectorTemplateBase&lt; T, isPodLike &gt;::pop_back</definition>
+        <argsstring>()</argsstring>
+        <name>pop_back</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="243" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="243" bodyend="246"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classat_1_1_small_vector_template_base" kindref="compound">SmallVectorTemplateBase</ref>&lt;isPodLike = false&gt; - This is where we put method implementations that are designed to work with non-POD-like T&apos;s. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="621">
+        <label>at::SmallVectorTemplateBase&lt; T, isPodLike &gt;</label>
+        <link refid="classat_1_1_small_vector_template_base"/>
+        <childnode refid="622" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="622">
+        <label>at::SmallVectorTemplateCommon&lt; T &gt;</label>
+        <link refid="classat_1_1_small_vector_template_common"/>
+        <childnode refid="623" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="623">
+        <label>at::SmallVectorBase</label>
+        <link refid="classat_1_1_small_vector_base"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="624">
+        <label>at::SmallVectorTemplateBase&lt; T, isPodLike &gt;</label>
+        <link refid="classat_1_1_small_vector_template_base"/>
+        <childnode refid="625" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>at::SmallVectorTemplateCommon&lt; T &gt;</label>
+        <link refid="classat_1_1_small_vector_template_common"/>
+        <childnode refid="626" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="626">
+        <label>at::SmallVectorBase</label>
+        <link refid="classat_1_1_small_vector_base"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" line="197" column="1" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/SmallVector.h" bodystart="197" bodyend="247"/>
+    <listofallmembers>
+      <member refid="classat_1_1_small_vector_template_common_1a6b7793fb26512198a274db7c73d9fcf8" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>back</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1af2fb93bb302d7cab177a55858f911ea9" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>back</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a9d396477971897b3628f368129741dd1" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>begin</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1ae4c984b3a4ba993eba89f0260e19e0a8" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>begin</name></member>
+      <member refid="classat_1_1_small_vector_base_1ac7d87982be839c1bd2646b7f631b55f4" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>BeginX</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a82a3c61d858b9f58a551016e539f4f63" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>capacity</name></member>
+      <member refid="classat_1_1_small_vector_base_1a080727fd01500634693cc7f5fb30904e" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>capacity_in_bytes</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a2fafbd6888930d69dbd457d0fe0200a1" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>capacity_ptr</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a25844f1ffb9d2b2857e82ba0fa57f23b" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>capacity_ptr</name></member>
+      <member refid="classat_1_1_small_vector_base_1a1f6b7f7b799d18affcd4f103dda6be82" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>CapacityX</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1ae269eb4f173ec7528351b9f4c2da663d" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>const_iterator</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1aff6e85cbbb30f1d0de96e60d40a66783" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>const_pointer</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a1c6cf85fed4a7787dee826a97f2715a7" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>const_reference</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a50bbe2a780de571d26a74b7d9242fdf8" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>const_reverse_iterator</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a768dfe9aa7c6b564c4e3fb2bc60c62dc" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>data</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a8390706f7405a97fb1608afa74d5689c" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>data</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1a593ccdd64bda1ae9997f91457d436c9c" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>destroy_range</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a4139257e5c28ba8c565fd1cf25393ff9" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>difference_type</name></member>
+      <member refid="classat_1_1_small_vector_base_1a1555255c2500ed31890456bcf0c44630" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>empty</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a3e4a27f3b356e422e7b2530c8140df96" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>end</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a03abac1f865cd1f6fc90866c6d3c4eee" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>end</name></member>
+      <member refid="classat_1_1_small_vector_base_1abf015558c9fc9666d61265ea81a515a9" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>EndX</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a64bb38f0dae1cc70ea1a8a6ffe067e03" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>front</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a4d3c30146e2179d6b3ccb75a497c1fb4" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>front</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1adc6c6a92306fa9a284a3567473437ee0" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>grow</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a1144a1aa0e89a56bca38ba7390581ac7" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>grow_pod</name></member>
+      <member refid="classat_1_1_small_vector_base_1aad0c28f55592d56898e17b082992dc38" prot="protected" virt="non-virtual" ambiguityscope="at::SmallVectorBase::"><scope>at::SmallVectorTemplateBase</scope><name>grow_pod</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a39649612f37cb64162bad134137046d0" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>isSmall</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a55a84f43f919327dbfe1b0c64e52bc6a" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>iterator</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a006d15e51a21d717dc9073ac6683d5c0" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>max_size</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a02cc648a1eca3f87168facf65aab75cd" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>operator[]</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1abf3ae422ca02675132c52e44617b6011" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>operator[]</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a876c0ed74308595095482e8cecbf9c30" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>pointer</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1aedc69de36cdf52c8a0c9878a6a366444" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>pop_back</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1aaea9df7a5385095ecbf346236452d047" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>push_back</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1adfc0bfa95124e891c0bbdc2204744f11" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>push_back</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a316642c64a2c85938c34ed586ae7abd4" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>rbegin</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a8201a6f53f1fa51c13a3c92def3524bc" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>rbegin</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a27d5deeb11704c0a8ecc20055f7b9398" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>reference</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a9dea15cf7f74eedcccc5022152ea5053" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>rend</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a98b9577a560658af687847bd7e5efd2c" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>rend</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a4b7ec9160ac37cb1f9ade21758c43232" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>resetToSmall</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a1ba592283c5a885418a91deeeb32a725" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>reverse_iterator</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a18fe81caaa397653a65dfc574fd4d667" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>setEnd</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a486fa181c8b50dc1c9677afd1038ea88" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>size</name></member>
+      <member refid="classat_1_1_small_vector_base_1ac467c3e17cfe1931b7701af7efceda5c" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>size_in_bytes</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a59feddaafd3d648b1399852f2e5992e8" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>size_type</name></member>
+      <member refid="classat_1_1_small_vector_base_1a6ba6526e921aeab53df52a94a32cd9ec" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>SmallVectorBase</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1a11ad817072c07dfa24b452edfcaa7411" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>SmallVectorTemplateBase</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a0ce99d27ab7880012bc901eb83661cbc" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>SmallVectorTemplateCommon</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1af189796d60e105676832d54380f1284a" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>uninitialized_copy</name></member>
+      <member refid="classat_1_1_small_vector_template_base_1ae5b28a668e51a5206afde69e595d3437" prot="protected" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>uninitialized_move</name></member>
+      <member refid="classat_1_1_small_vector_template_common_1a91e5c1ab3a33f708094e8bbd55943c3b" prot="public" virt="non-virtual"><scope>at::SmallVectorTemplateBase</scope><name>value_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

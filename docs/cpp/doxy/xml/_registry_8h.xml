@@ -1,0 +1,1033 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_registry_8h" kind="file" language="C++">
+    <compoundname>Registry.h</compoundname>
+    <includes local="no">algorithm</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">mutex</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="_backtrace_8h" local="no">ATen/Backtrace.h</includes>
+    <includes refid="_a_ten_general_8h" local="no">ATen/ATenGeneral.h</includes>
+    <includedby refid="_c_u_d_a_hooks_interface_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/CUDAHooksInterface.h</includedby>
+    <includedby refid="_variable_hooks_interface_8h" local="no">/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/VariableHooksInterface.h</includedby>
+    <incdepgraph>
+      <node id="9099">
+        <label>functional</label>
+      </node>
+      <node id="9105">
+        <label>ATen/Backtrace.h</label>
+        <link refid="_backtrace_8h_source"/>
+        <childnode refid="9106" relation="include">
+        </childnode>
+        <childnode refid="9103" relation="include">
+        </childnode>
+        <childnode refid="9107" relation="include">
+        </childnode>
+        <childnode refid="9108" relation="include">
+        </childnode>
+      </node>
+      <node id="9103">
+        <label>string</label>
+      </node>
+      <node id="9108">
+        <label>ATen/ATenGeneral.h</label>
+        <link refid="_a_ten_general_8h_source"/>
+      </node>
+      <node id="9107">
+        <label>typeinfo</label>
+      </node>
+      <node id="9097">
+        <label>cstdio</label>
+      </node>
+      <node id="9104">
+        <label>vector</label>
+      </node>
+      <node id="9098">
+        <label>cstdlib</label>
+      </node>
+      <node id="9106">
+        <label>cstddef</label>
+      </node>
+      <node id="9102">
+        <label>unordered_map</label>
+      </node>
+      <node id="9101">
+        <label>mutex</label>
+      </node>
+      <node id="9095">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h</label>
+        <link refid="_registry_8h"/>
+        <childnode refid="9096" relation="include">
+        </childnode>
+        <childnode refid="9097" relation="include">
+        </childnode>
+        <childnode refid="9098" relation="include">
+        </childnode>
+        <childnode refid="9099" relation="include">
+        </childnode>
+        <childnode refid="9100" relation="include">
+        </childnode>
+        <childnode refid="9101" relation="include">
+        </childnode>
+        <childnode refid="9102" relation="include">
+        </childnode>
+        <childnode refid="9103" relation="include">
+        </childnode>
+        <childnode refid="9104" relation="include">
+        </childnode>
+        <childnode refid="9105" relation="include">
+        </childnode>
+        <childnode refid="9108" relation="include">
+        </childnode>
+      </node>
+      <node id="9096">
+        <label>algorithm</label>
+      </node>
+      <node id="9100">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9110">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/CUDAHooksInterface.h</label>
+        <link refid="_c_u_d_a_hooks_interface_8h_source"/>
+        <childnode refid="9111" relation="include">
+        </childnode>
+        <childnode refid="9168" relation="include">
+        </childnode>
+        <childnode refid="9169" relation="include">
+        </childnode>
+      </node>
+      <node id="9121">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/rnn.h</label>
+        <link refid="rnn_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9146">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/UnaryOpsKernel.h</label>
+        <link refid="_unary_ops_kernel_8h_source"/>
+      </node>
+      <node id="9118">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/torch.h</label>
+        <link refid="torch_8h_source"/>
+      </node>
+      <node id="9135">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2tensor_8h_source"/>
+        <childnode refid="9114" relation="include">
+        </childnode>
+        <childnode refid="9136" relation="include">
+        </childnode>
+        <childnode refid="9138" relation="include">
+        </childnode>
+        <childnode refid="9113" relation="include">
+        </childnode>
+        <childnode refid="9125" relation="include">
+        </childnode>
+        <childnode refid="9115" relation="include">
+        </childnode>
+        <childnode refid="9119" relation="include">
+        </childnode>
+        <childnode refid="9120" relation="include">
+        </childnode>
+        <childnode refid="9122" relation="include">
+        </childnode>
+        <childnode refid="9123" relation="include">
+        </childnode>
+        <childnode refid="9124" relation="include">
+        </childnode>
+        <childnode refid="9121" relation="include">
+        </childnode>
+        <childnode refid="9126" relation="include">
+        </childnode>
+        <childnode refid="9127" relation="include">
+        </childnode>
+        <childnode refid="9139" relation="include">
+        </childnode>
+        <childnode refid="9128" relation="include">
+        </childnode>
+        <childnode refid="9137" relation="include">
+        </childnode>
+        <childnode refid="9134" relation="include">
+        </childnode>
+        <childnode refid="9130" relation="include">
+        </childnode>
+        <childnode refid="9140" relation="include">
+        </childnode>
+        <childnode refid="9118" relation="include">
+        </childnode>
+      </node>
+      <node id="9115">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/batchnorm.h</label>
+        <link refid="batchnorm_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9148">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTUtils.h</label>
+        <link refid="_cu_f_f_t_utils_8h_source"/>
+        <childnode refid="9147" relation="include">
+        </childnode>
+      </node>
+      <node id="9134">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/sgd.h</label>
+        <link refid="sgd_8h_source"/>
+        <childnode refid="9129" relation="include">
+        </childnode>
+      </node>
+      <node id="9137">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/optimizer.h</label>
+        <link refid="optimizer_8h_source"/>
+        <childnode refid="9128" relation="include">
+        </childnode>
+        <childnode refid="9131" relation="include">
+        </childnode>
+        <childnode refid="9132" relation="include">
+        </childnode>
+        <childnode refid="9133" relation="include">
+        </childnode>
+        <childnode refid="9134" relation="include">
+        </childnode>
+        <childnode refid="9129" relation="include">
+        </childnode>
+      </node>
+      <node id="9154">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cpu/vml.h</label>
+        <link refid="vml_8h_source"/>
+      </node>
+      <node id="9160">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TensorDerived.h</label>
+        <link refid="_tensor_derived_8h_source"/>
+      </node>
+      <node id="9111">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Context.h</label>
+        <link refid="_context_8h_source"/>
+        <childnode refid="9112" relation="include">
+        </childnode>
+        <childnode refid="9157" relation="include">
+        </childnode>
+        <childnode refid="9159" relation="include">
+        </childnode>
+        <childnode refid="9160" relation="include">
+        </childnode>
+        <childnode refid="9161" relation="include">
+        </childnode>
+        <childnode refid="9162" relation="include">
+        </childnode>
+        <childnode refid="9167" relation="include">
+        </childnode>
+      </node>
+      <node id="9126">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/sequential.h</label>
+        <link refid="sequential_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9157">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAContext.h</label>
+        <link refid="_c_u_d_a_context_8h_source"/>
+        <childnode refid="9158" relation="include">
+        </childnode>
+        <childnode refid="9141" relation="include">
+        </childnode>
+        <childnode refid="9147" relation="include">
+        </childnode>
+      </node>
+      <node id="9170">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/detail/VariableHooksInterface.h</label>
+        <link refid="_variable_hooks_interface_8h_source"/>
+      </node>
+      <node id="9164">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/OptionsGuard.h</label>
+        <link refid="_options_guard_8h_source"/>
+        <childnode refid="9114" relation="include">
+        </childnode>
+        <childnode refid="9127" relation="include">
+        </childnode>
+        <childnode refid="9112" relation="include">
+        </childnode>
+      </node>
+      <node id="9131">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adam.h</label>
+        <link refid="adam_8h_source"/>
+        <childnode refid="9129" relation="include">
+        </childnode>
+      </node>
+      <node id="9136">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cursor.h</label>
+        <link refid="cursor_8h_source"/>
+        <childnode refid="9113" relation="include">
+        </childnode>
+        <childnode refid="9117" relation="include">
+        </childnode>
+        <childnode refid="9137" relation="include">
+        </childnode>
+      </node>
+      <node id="9169">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DeviceGuard.h</label>
+        <link refid="_device_guard_8h_source"/>
+        <childnode refid="9163" relation="include">
+        </childnode>
+        <childnode refid="9112" relation="include">
+        </childnode>
+        <childnode refid="9158" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9162" relation="include">
+        </childnode>
+      </node>
+      <node id="9138">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/init.h</label>
+        <link refid="init_8h_source"/>
+      </node>
+      <node id="9139">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/pimpl.h</label>
+        <link refid="pimpl_8h_source"/>
+        <childnode refid="9113" relation="include">
+        </childnode>
+        <childnode refid="9125" relation="include">
+        </childnode>
+        <childnode refid="9115" relation="include">
+        </childnode>
+        <childnode refid="9119" relation="include">
+        </childnode>
+        <childnode refid="9120" relation="include">
+        </childnode>
+        <childnode refid="9122" relation="include">
+        </childnode>
+        <childnode refid="9123" relation="include">
+        </childnode>
+        <childnode refid="9124" relation="include">
+        </childnode>
+        <childnode refid="9121" relation="include">
+        </childnode>
+        <childnode refid="9126" relation="include">
+        </childnode>
+        <childnode refid="9127" relation="include">
+        </childnode>
+        <childnode refid="9117" relation="include">
+        </childnode>
+        <childnode refid="9131" relation="include">
+        </childnode>
+        <childnode refid="9134" relation="include">
+        </childnode>
+      </node>
+      <node id="9140">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/tensor_list_view.h</label>
+        <link refid="tensor__list__view_8h_source"/>
+        <childnode refid="9118" relation="include">
+        </childnode>
+      </node>
+      <node id="9113">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/module.h</label>
+        <link refid="module_8h_source"/>
+        <childnode refid="9114" relation="include">
+        </childnode>
+        <childnode refid="9125" relation="include">
+        </childnode>
+        <childnode refid="9124" relation="include">
+        </childnode>
+        <childnode refid="9126" relation="include">
+        </childnode>
+        <childnode refid="9127" relation="include">
+        </childnode>
+        <childnode refid="9117" relation="include">
+        </childnode>
+        <childnode refid="9128" relation="include">
+        </childnode>
+        <childnode refid="9131" relation="include">
+        </childnode>
+        <childnode refid="9132" relation="include">
+        </childnode>
+        <childnode refid="9133" relation="include">
+        </childnode>
+        <childnode refid="9134" relation="include">
+        </childnode>
+      </node>
+      <node id="9116">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules.h</label>
+        <link refid="modules_8h_source"/>
+        <childnode refid="9117" relation="include">
+        </childnode>
+      </node>
+      <node id="9122">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/embedding.h</label>
+        <link refid="embedding_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9158">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/CUDAGuard.h</label>
+        <link refid="cuda_2_c_u_d_a_guard_8h_source"/>
+      </node>
+      <node id="9159">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/StorageDerived.h</label>
+        <link refid="_storage_derived_8h_source"/>
+      </node>
+      <node id="9152">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/TensorTransformations.h</label>
+        <link refid="_tensor_transformations_8h_source"/>
+      </node>
+      <node id="9117">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn.h</label>
+        <link refid="nn_8h_source"/>
+        <childnode refid="9118" relation="include">
+        </childnode>
+      </node>
+      <node id="9147">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cuda/CuFFTPlanCache.h</label>
+        <link refid="_cu_f_f_t_plan_cache_8h_source"/>
+      </node>
+      <node id="9119">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/conv.h</label>
+        <link refid="conv_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9133">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/rmsprop.h</label>
+        <link refid="rmsprop_8h_source"/>
+        <childnode refid="9129" relation="include">
+        </childnode>
+      </node>
+      <node id="9165">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/Functions.h</label>
+        <link refid="aten_2src_2_a_ten_2templates_2_functions_8h_source"/>
+      </node>
+      <node id="9129">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim.h</label>
+        <link refid="optim_8h_source"/>
+        <childnode refid="9130" relation="include">
+        </childnode>
+        <childnode refid="9118" relation="include">
+        </childnode>
+      </node>
+      <node id="9161">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/TypeDerived.h</label>
+        <link refid="_type_derived_8h_source"/>
+      </node>
+      <node id="9156">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/test/test_seed.h</label>
+        <link refid="test__seed_8h_source"/>
+      </node>
+      <node id="9142">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Utils.h</label>
+        <link refid="aten_2src_2_a_ten_2cudnn_2utils_8h_source"/>
+      </node>
+      <node id="9125">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/any.h</label>
+        <link refid="any_8h_source"/>
+        <childnode refid="9126" relation="include">
+        </childnode>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9141">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cudnn/Descriptors.h</label>
+        <link refid="cudnn_2_descriptors_8h_source"/>
+      </node>
+      <node id="9143">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/DLConvertor.h</label>
+        <link refid="_d_l_convertor_8h_source"/>
+      </node>
+      <node id="9151">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/sparse/SparseUtils.h</label>
+        <link refid="_sparse_utils_8h_source"/>
+      </node>
+      <node id="9163">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/build/aten/src/ATen/Functions.h</label>
+        <link refid="build_2aten_2src_2_a_ten_2_functions_8h_source"/>
+        <childnode refid="9112" relation="include">
+        </childnode>
+      </node>
+      <node id="9130">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/serialization.h</label>
+        <link refid="serialization_8h_source"/>
+        <childnode refid="9118" relation="include">
+        </childnode>
+      </node>
+      <node id="9127">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/parallel/data_parallel.h</label>
+        <link refid="data__parallel_8h_source"/>
+      </node>
+      <node id="9155">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/CPUApplyUtils.h</label>
+        <link refid="_c_p_u_apply_utils_8h_source"/>
+      </node>
+      <node id="9128">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/adagrad.h</label>
+        <link refid="adagrad_8h_source"/>
+        <childnode refid="9129" relation="include">
+        </childnode>
+      </node>
+      <node id="9120">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/dropout.h</label>
+        <link refid="dropout_8h_source"/>
+        <childnode refid="9121" relation="include">
+        </childnode>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9144">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/ReduceOpsKernel.h</label>
+        <link refid="_reduce_ops_kernel_8h_source"/>
+      </node>
+      <node id="9149">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/Gesv.h</label>
+        <link refid="_gesv_8h_source"/>
+      </node>
+      <node id="9114">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/cloneable.h</label>
+        <link refid="cloneable_8h_source"/>
+        <childnode refid="9115" relation="include">
+        </childnode>
+        <childnode refid="9119" relation="include">
+        </childnode>
+        <childnode refid="9120" relation="include">
+        </childnode>
+        <childnode refid="9122" relation="include">
+        </childnode>
+        <childnode refid="9123" relation="include">
+        </childnode>
+        <childnode refid="9124" relation="include">
+        </childnode>
+        <childnode refid="9121" relation="include">
+        </childnode>
+        <childnode refid="9117" relation="include">
+        </childnode>
+      </node>
+      <node id="9166">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/templates/NativeFunctions.h</label>
+        <link refid="_native_functions_8h_source"/>
+      </node>
+      <node id="9112">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/ATen.h</label>
+        <link refid="_a_ten_8h_source"/>
+        <childnode refid="9113" relation="include">
+        </childnode>
+        <childnode refid="9121" relation="include">
+        </childnode>
+        <childnode refid="9128" relation="include">
+        </childnode>
+        <childnode refid="9131" relation="include">
+        </childnode>
+        <childnode refid="9132" relation="include">
+        </childnode>
+        <childnode refid="9133" relation="include">
+        </childnode>
+        <childnode refid="9134" relation="include">
+        </childnode>
+        <childnode refid="9135" relation="include">
+        </childnode>
+        <childnode refid="9141" relation="include">
+        </childnode>
+        <childnode refid="9142" relation="include">
+        </childnode>
+        <childnode refid="9143" relation="include">
+        </childnode>
+        <childnode refid="9144" relation="include">
+        </childnode>
+        <childnode refid="9145" relation="include">
+        </childnode>
+        <childnode refid="9146" relation="include">
+        </childnode>
+        <childnode refid="9147" relation="include">
+        </childnode>
+        <childnode refid="9148" relation="include">
+        </childnode>
+        <childnode refid="9149" relation="include">
+        </childnode>
+        <childnode refid="9150" relation="include">
+        </childnode>
+        <childnode refid="9151" relation="include">
+        </childnode>
+        <childnode refid="9152" relation="include">
+        </childnode>
+        <childnode refid="9153" relation="include">
+        </childnode>
+        <childnode refid="9156" relation="include">
+        </childnode>
+      </node>
+      <node id="9109">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h</label>
+        <link refid="_registry_8h"/>
+        <childnode refid="9110" relation="include">
+        </childnode>
+        <childnode refid="9170" relation="include">
+        </childnode>
+      </node>
+      <node id="9123">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/functional.h</label>
+        <link refid="torch_2csrc_2api_2include_2torch_2nn_2modules_2functional_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9162">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/TensorOptions.h</label>
+        <link refid="_tensor_options_8h_source"/>
+        <childnode refid="9114" relation="include">
+        </childnode>
+        <childnode refid="9127" relation="include">
+        </childnode>
+        <childnode refid="9163" relation="include">
+        </childnode>
+        <childnode refid="9112" relation="include">
+        </childnode>
+        <childnode refid="9164" relation="include">
+        </childnode>
+        <childnode refid="9165" relation="include">
+        </childnode>
+        <childnode refid="9166" relation="include">
+        </childnode>
+      </node>
+      <node id="9150">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/LinearAlgebraUtils.h</label>
+        <link refid="_linear_algebra_utils_8h_source"/>
+      </node>
+      <node id="9167">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/UndefinedType.h</label>
+        <link refid="_undefined_type_8h_source"/>
+      </node>
+      <node id="9168">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/cuda/detail/CUDAHooks.h</label>
+        <link refid="_c_u_d_a_hooks_8h_source"/>
+      </node>
+      <node id="9145">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/native/cpu/SoftmaxKernel.h</label>
+        <link refid="_softmax_kernel_8h_source"/>
+      </node>
+      <node id="9124">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/nn/modules/linear.h</label>
+        <link refid="linear_8h_source"/>
+        <childnode refid="9116" relation="include">
+        </childnode>
+      </node>
+      <node id="9153">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Parallel.h</label>
+        <link refid="_parallel_8h_source"/>
+        <childnode refid="9127" relation="include">
+        </childnode>
+        <childnode refid="9154" relation="include">
+        </childnode>
+        <childnode refid="9155" relation="include">
+        </childnode>
+      </node>
+      <node id="9132">
+        <label>/Users/robkunkle/fork/goodlux/pytorch/torch/csrc/api/include/torch/optim/lbfgs.h</label>
+        <link refid="lbfgs_8h_source"/>
+        <childnode refid="9129" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classat_1_1_registry" prot="public">at::Registry</innerclass>
+    <innerclass refid="classat_1_1_registerer" prot="public">at::Registerer</innerclass>
+    <innernamespace refid="namespaceat">at</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_registry_8h_1a37f891a0cce0a8acbdc5af2f23511dad" prot="public" static="no">
+        <name>AT_CONCATENATE_IMPL</name>
+        <param><defname>s1</defname></param>
+        <param><defname>s2</defname></param>
+        <initializer>s1##s2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AT_ANONYMOUS_VARIABLE(str) introduces an identifier starting with str and ending with a number that varies with the line. Pretty much a copy from &apos;folly/Preprocessor.h&apos; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="142" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1a746fca2dafd73f03516f42353fe8511d" prot="public" static="no">
+        <name>AT_CONCATENATE</name>
+        <param><defname>s1</defname></param>
+        <param><defname>s2</defname></param>
+        <initializer>AT_CONCATENATE_IMPL(s1, s2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="143" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1adfde5e870fe90e43a4806f9867857e03" prot="public" static="no">
+        <name>AT_ANONYMOUS_VARIABLE</name>
+        <param><defname>str</defname></param>
+        <initializer>AT_CONCATENATE(str, __LINE__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="147" column="10" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1a577d92b03c502052b2e6981b4355130a" prot="public" static="no">
+        <name>AT_DECLARE_TYPED_REGISTRY</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>SrcType</defname></param>
+        <param><defname>ObjectType</defname></param>
+        <param><defname>PtrType</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_API Registry&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;* RegistryName(); \
+  typedef Registerer&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;        \
+      Registerer##RegistryName; \
+  extern template class Registerer&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AT_DECLARE_TYPED_REGISTRY is a macro that expands to a function declaration, as well as creating a convenient typename for its corresponding registerer. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="156" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1a924bba2131c6391ffa6a362399bb995a" prot="public" static="no">
+        <name>AT_DEFINE_TYPED_REGISTRY</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>SrcType</defname></param>
+        <param><defname>ObjectType</defname></param>
+        <param><defname>PtrType</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>Registry&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;* RegistryName() {    \
+    static Registry&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;* registry = \
+        new Registry&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;();         \
+    return registry;                                                         \
+  } \
+  template class Registerer&lt;SrcType, PtrType&lt;ObjectType&gt;, __VA_ARGS__&gt;;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="163" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1a4cbb561a2f2615656d3104cb02a9b665" prot="public" static="no">
+        <name>AT_REGISTER_TYPED_CREATOR</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>namespace {                                                                 \
+  Registerer##RegistryName AT_ANONYMOUS_VARIABLE(g_##RegistryName)( \
+      key, RegistryName(), __VA_ARGS__);                                      \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="173" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1ad4bec699c4f5c0be9196a2f1ca07d19a" prot="public" static="no">
+        <name>AT_REGISTER_TYPED_CLASS</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>namespace {                                                                 \
+  Registerer##RegistryName AT_ANONYMOUS_VARIABLE(g_##RegistryName)( \
+      key,                                                                    \
+      RegistryName(),                                                         \
+      Registerer##RegistryName::DefaultCreator&lt;__VA_ARGS__&gt;,                  \
+      ::<ref refid="namespaceat_1a9843a10c28d69a5a70cf212c4cda59c4" kindref="member">at::demangle_type</ref>&lt;__VA_ARGS__&gt;());                                           \
+  }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="179" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1ab9472c7951d3a2fb1f1ee15b1347f16b" prot="public" static="no">
+        <name>AT_DECLARE_REGISTRY</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>ObjectType</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_DECLARE_TYPED_REGISTRY(                               \
+      RegistryName, std::string, ObjectType, std::unique_ptr, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="191" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1a55377f68298fb6c5982de19bece70a74" prot="public" static="no">
+        <name>AT_DEFINE_REGISTRY</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>ObjectType</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_DEFINE_TYPED_REGISTRY(                               \
+      RegistryName, std::string, ObjectType, std::unique_ptr, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="195" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1acf9ae0aaedab4e7cc8ca015a5c1da674" prot="public" static="no">
+        <name>AT_DECLARE_SHARED_REGISTRY</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>ObjectType</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_DECLARE_TYPED_REGISTRY(                                      \
+      RegistryName, std::string, ObjectType, std::shared_ptr, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="199" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1ad873a79fa826921043deaca04e5edbfb" prot="public" static="no">
+        <name>AT_DEFINE_SHARED_REGISTRY</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>ObjectType</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_DEFINE_TYPED_REGISTRY(                                      \
+      RegistryName, std::string, ObjectType, std::shared_ptr, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="203" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1adf05cf543e61f3f4ad8ba4a84deafff5" prot="public" static="no">
+        <name>AT_REGISTER_CREATOR</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_REGISTER_TYPED_CREATOR(RegistryName, #key, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="210" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_registry_8h_1ae506d59b2f40e703a65c9fda43e32225" prot="public" static="no">
+        <name>AT_REGISTER_CLASS</name>
+        <param><defname>RegistryName</defname></param>
+        <param><defname>key</defname></param>
+        <param><defname>...</defname></param>
+        <initializer>AT_REGISTER_TYPED_CLASS(RegistryName, #key, __VA_ARGS__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" line="213" column="9" bodyfile="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">//<sp/>NB:<sp/>This<sp/>Registry<sp/>works<sp/>poorly<sp/>when<sp/>you<sp/>have<sp/>other<sp/>namespaces.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Make<sp/>all<sp/>macro<sp/>invocations<sp/>from<sp/>inside<sp/>the<sp/>at<sp/>namespace.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;functional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mutex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/Backtrace.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ATen/ATenGeneral.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceat" kindref="compound">at</ref><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>KeyType&gt;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PrintOffendingKey(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>KeyType&amp;<sp/></highlight><highlight class="comment">/*key*/</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;[key<sp/>type<sp/>printing<sp/>not<sp/>supported]\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;&gt;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PrintOffendingKey(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Offending<sp/>key:<sp/>%s.\n&quot;</highlight><highlight class="normal">,<sp/>key.c_str());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SrcType,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ObjectPtrType,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="47" refid="classat_1_1_registry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AT_API<sp/><ref refid="classat_1_1_registry" kindref="compound">Registry</ref><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::function&lt;ObjectPtrType(Args...)&gt;<sp/>Creator;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1_registry" kindref="compound">Registry</ref>()<sp/>:<sp/>registry_()<sp/>{}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Register(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SrcType&amp;<sp/>key,<sp/>Creator<sp/>creator)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>if<sp/>statement<sp/>below<sp/>is<sp/>essentially<sp/>the<sp/>same<sp/>as<sp/>the<sp/>following<sp/>line:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CHECK_EQ(registry_.count(key),<sp/>0)<sp/>&lt;&lt;<sp/>&quot;Key<sp/>&quot;<sp/>&lt;&lt;<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>&quot;<sp/>registered<sp/>twice.&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>However,<sp/>CHECK_EQ<sp/>depends<sp/>on<sp/>google<sp/>logging,<sp/>and<sp/>since<sp/>registration<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>carried<sp/>out<sp/>at<sp/>static<sp/>initialization<sp/>time,<sp/>we<sp/>do<sp/>not<sp/>want<sp/>to<sp/>have<sp/>an</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>explicit<sp/>dependency<sp/>on<sp/>glog&apos;s<sp/>initialization<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::lock_guard&lt;std::mutex&gt;<sp/>lock(register_mutex_);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(registry_.count(key)<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;Key<sp/>already<sp/>registered.\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>PrintOffendingKey(key);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>std::exit(1);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>registry_[key]<sp/>=<sp/>creator;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Register(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SrcType&amp;<sp/>key,<sp/>Creator<sp/>creator,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>help_msg)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>Register(key,<sp/>creator);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>help_message_[key]<sp/>=<sp/>help_msg;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Has(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SrcType&amp;<sp/>key)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(registry_.count(key)<sp/>!=<sp/>0);<sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>ObjectPtrType<sp/>Create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SrcType&amp;<sp/>key,<sp/>Args...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(registry_.count(key)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Returns<sp/>nullptr<sp/>if<sp/>the<sp/>key<sp/>is<sp/>not<sp/>registered.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>registry_[key](args...);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classat_1_1_registry_1a4e8566fd413f4bcf6c5424a97dec764c" refkind="member"><highlight class="normal"><sp/><sp/>std::vector&lt;SrcType&gt;<sp/><ref refid="classat_1_1_registry_1a4e8566fd413f4bcf6c5424a97dec764c" kindref="member">Keys</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;SrcType&gt;<sp/>keys;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>it<sp/>:<sp/>registry_)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>keys.push_back(it.first);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>keys;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::unordered_map&lt;SrcType,<sp/>std::string&gt;&amp;<sp/>HelpMessage()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>help_message_;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>HelpMessage(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SrcType&amp;<sp/>key)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>help_message_.find(key);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(it<sp/>==<sp/>help_message_.end())<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>it-&gt;second.c_str();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;SrcType,<sp/>Creator&gt;<sp/>registry_;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>std::unordered_map&lt;SrcType,<sp/>std::string&gt;<sp/>help_message_;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/>std::mutex<sp/>register_mutex_;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>Registry(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Registry&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>Registry&amp;<sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Registry&amp;)<sp/>=<sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">SrcType,<sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ObjectPtrType,<sp/></highlight><highlight class="keyword">class</highlight><highlight class="normal">...<sp/>Args&gt;</highlight></codeline>
+<codeline lineno="117" refid="classat_1_1_registerer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">AT_API<sp/><ref refid="classat_1_1_registerer" kindref="compound">Registerer</ref><sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="classat_1_1_registerer" kindref="compound">Registerer</ref>(</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>SrcType&amp;<sp/>key,</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classat_1_1_registry" kindref="compound">Registry&lt;SrcType, ObjectPtrType, Args...&gt;</ref>*<sp/>registry,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>Registry&lt;SrcType,<sp/>ObjectPtrType,<sp/>Args...&gt;::Creator<sp/>creator,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>help_msg<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>registry-&gt;Register(key,<sp/>creator,<sp/>help_msg);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>DerivedType&gt;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>ObjectPtrType<sp/>DefaultCreator(Args...<sp/>args)<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO(jiayq):<sp/>old<sp/>versions<sp/>of<sp/>NVCC<sp/>does<sp/>not<sp/>handle<sp/>make_unique<sp/>well</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>so<sp/>we<sp/>are<sp/>forced<sp/>to<sp/>use<sp/>a<sp/>unique_ptr<sp/>constructor<sp/>here.<sp/>Check<sp/>if<sp/>it<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>fine<sp/>to<sp/>use<sp/>make_unique<sp/>in<sp/>the<sp/>future.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>make_unique&lt;DerivedType&gt;(args...);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ObjectPtrType(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DerivedType(args...));</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="preprocessor">#define<sp/>AT_CONCATENATE_IMPL(s1,<sp/>s2)<sp/>s1##s2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_CONCATENATE(s1,<sp/>s2)<sp/>AT_CONCATENATE_IMPL(s1,<sp/>s2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__COUNTER__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_ANONYMOUS_VARIABLE(str)<sp/>AT_CONCATENATE(str,<sp/>__COUNTER__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_ANONYMOUS_VARIABLE(str)<sp/>AT_CONCATENATE(str,<sp/>__LINE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="preprocessor">#define<sp/>AT_DECLARE_TYPED_REGISTRY(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="156"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RegistryName,<sp/>SrcType,<sp/>ObjectType,<sp/>PtrType,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="157"><highlight class="preprocessor"><sp/><sp/>AT_API<sp/>Registry&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;*<sp/>RegistryName();<sp/>\</highlight></codeline>
+<codeline lineno="158"><highlight class="preprocessor"><sp/><sp/>typedef<sp/>Registerer&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="159"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>Registerer##RegistryName;<sp/>\</highlight></codeline>
+<codeline lineno="160"><highlight class="preprocessor"><sp/><sp/>extern<sp/>template<sp/>class<sp/>Registerer&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_DEFINE_TYPED_REGISTRY(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="163"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>RegistryName,<sp/>SrcType,<sp/>ObjectType,<sp/>PtrType,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="164"><highlight class="preprocessor"><sp/><sp/>Registry&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;*<sp/>RegistryName()<sp/>{<sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="165"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>static<sp/>Registry&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;*<sp/>registry<sp/>=<sp/>\</highlight></codeline>
+<codeline lineno="166"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new<sp/>Registry&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"><sp/><sp/><sp/><sp/>return<sp/>registry;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"><sp/><sp/>}<sp/>\</highlight></codeline>
+<codeline lineno="169"><highlight class="preprocessor"><sp/><sp/>template<sp/>class<sp/>Registerer&lt;SrcType,<sp/>PtrType&lt;ObjectType&gt;,<sp/>__VA_ARGS__&gt;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note(Yangqing):<sp/>The<sp/>__VA_ARGS__<sp/>below<sp/>allows<sp/>one<sp/>to<sp/>specify<sp/>a<sp/>templated</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">//<sp/>creator<sp/>with<sp/>comma<sp/>in<sp/>its<sp/>templated<sp/>arguments.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_REGISTER_TYPED_CREATOR(RegistryName,<sp/>key,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="174"><highlight class="preprocessor"><sp/><sp/>namespace<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="175"><highlight class="preprocessor"><sp/><sp/>Registerer##RegistryName<sp/>AT_ANONYMOUS_VARIABLE(g_##RegistryName)(<sp/>\</highlight></codeline>
+<codeline lineno="176"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>key,<sp/>RegistryName(),<sp/>__VA_ARGS__);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="177"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_REGISTER_TYPED_CLASS(RegistryName,<sp/>key,<sp/>...)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="180"><highlight class="preprocessor"><sp/><sp/>namespace<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="181"><highlight class="preprocessor"><sp/><sp/>Registerer##RegistryName<sp/>AT_ANONYMOUS_VARIABLE(g_##RegistryName)(<sp/>\</highlight></codeline>
+<codeline lineno="182"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>key,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="183"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RegistryName(),<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="184"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>Registerer##RegistryName::DefaultCreator&lt;__VA_ARGS__&gt;,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="185"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>::at::demangle_type&lt;__VA_ARGS__&gt;());<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="186"><highlight class="preprocessor"><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AT_DECLARE_REGISTRY<sp/>and<sp/>AT_DEFINE_REGISTRY<sp/>are<sp/>hard-wired<sp/>to<sp/>use<sp/>std::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="comment">//<sp/>as<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">//<sp/>type,<sp/>because<sp/>that<sp/>is<sp/>the<sp/>most<sp/>commonly<sp/>used<sp/>cases.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_DECLARE_REGISTRY(RegistryName,<sp/>ObjectType,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="192"><highlight class="preprocessor"><sp/><sp/>AT_DECLARE_TYPED_REGISTRY(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="193"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RegistryName,<sp/>std::string,<sp/>ObjectType,<sp/>std::unique_ptr,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_DEFINE_REGISTRY(RegistryName,<sp/>ObjectType,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="196"><highlight class="preprocessor"><sp/><sp/>AT_DEFINE_TYPED_REGISTRY(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="197"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RegistryName,<sp/>std::string,<sp/>ObjectType,<sp/>std::unique_ptr,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_DECLARE_SHARED_REGISTRY(RegistryName,<sp/>ObjectType,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="200"><highlight class="preprocessor"><sp/><sp/>AT_DECLARE_TYPED_REGISTRY(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="201"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RegistryName,<sp/>std::string,<sp/>ObjectType,<sp/>std::shared_ptr,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_DEFINE_SHARED_REGISTRY(RegistryName,<sp/>ObjectType,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="204"><highlight class="preprocessor"><sp/><sp/>AT_DEFINE_TYPED_REGISTRY(<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\</highlight></codeline>
+<codeline lineno="205"><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/>RegistryName,<sp/>std::string,<sp/>ObjectType,<sp/>std::shared_ptr,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/>AT_REGISTER_CREATOR<sp/>and<sp/>AT_REGISTER_CLASS<sp/>are<sp/>hard-wired<sp/>to<sp/>use<sp/>std::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>as<sp/>the<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">//<sp/>type,<sp/>because<sp/>that<sp/>is<sp/>the<sp/>most<sp/>commonly<sp/>used<sp/>cases.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_REGISTER_CREATOR(RegistryName,<sp/>key,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="211"><highlight class="preprocessor"><sp/><sp/>AT_REGISTER_TYPED_CREATOR(RegistryName,<sp/>#key,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AT_REGISTER_CLASS(RegistryName,<sp/>key,<sp/>...)<sp/>\</highlight></codeline>
+<codeline lineno="214"><highlight class="preprocessor"><sp/><sp/>AT_REGISTER_TYPED_CLASS(RegistryName,<sp/>#key,<sp/>__VA_ARGS__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/robkunkle/fork/goodlux/pytorch/aten/src/ATen/Registry.h"/>
+  </compounddef>
+</doxygen>
